@@ -12,11 +12,11 @@
 
 最新状态另见[19:20–19:21晚间GitHub快照](github-status-latest-evening.md)：main/dev、部署等待、实验精确head和PR状态分别记账，不把Actions/check-runs为0当通过。
 
-## 已推送的 39 个实验
+## 已推送的 40 个实验
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
-[离线图片浏览页](gallery/README.md)：固定hub fc701742含39项/39张原始PNG（12/15/12），新增Notebook/Config/Benchmark/Task，并刷新Finder/Waterfall/Workflow/Keyboard/Clipboard五图。当前实际核1440×1100浅色四筛选、九项搜索/完整原图字节/天然尺寸/固定来源/原始尺寸与Esc返回；390×844浅色卡片、深色dialog及空结果/reset、桌面深色另有实测，20项观测/7图已绑定。模板逐字不变；历史35/34/33/29/27证据按固定提交保留，未将截图内实验内容当新产品测试或AT/OS剪贴板验收。
+[离线图片浏览页](gallery/README.md)：39项图片快照，当前40个独立远程实验分支；图片页仍固定hub fc701742的39项/39张原始PNG（12/15/12），新增Notebook/Config/Benchmark/Task，并刷新Finder/Waterfall/Workflow/Keyboard/Clipboard五图。当前实际核1440×1100浅色四筛选、九项搜索/完整原图字节/天然尺寸/固定来源/原始尺寸与Esc返回；390×844浅色卡片、深色dialog及空结果/reset、桌面深色另有实测，20项观测/7图已绑定。模板逐字不变；历史35/34/33/29/27证据按固定提交保留，未将截图内实验内容当新产品测试或AT/OS剪贴板验收。 新增Edge extras尚未纳入图片快照；Finder canvas、Relation reference、Diagnostic locations、Delta values的四个新refresh head也未替换gallery旧图，不将它们混称为同一来源快照。
 
 | 实验与远程分支 | 具体价值 | 发布 revision | 实际图片 | 验证与限制 |
 | --- | --- | --- | --- | --- |
@@ -59,8 +59,9 @@
 | [Config origins](https://github.com/tt-a1i/archify/tree/codex/lab-config-origins/experiments/config-origins) | 区分provider声明、幸存字段与错误归属，解释join的max=20为何未修复整体约束 | `14867942` | [实际来源对照](https://github.com/tt-a1i/archify/blob/codex/lab-config-origins/experiments/config-origins/screenshots/overview.png) | 内容限定固定Figment完整测试；7原件/6源码摘录核对、3静态gate通过/browser未请求；3实图和hover/Escape；未执行Rust/provider或声称配置文件行号 |
 | [Benchmark reading](https://github.com/tt-a1i/archify/tree/codex/lab-benchmark-reading/experiments/benchmark-reading) | 四组median与CI/p/n/~并排，区分中心值变化与上游比较结论 | `7b8258cd` | [实际柱图与邻表](https://github.com/tt-a1i/archify/blob/codex/lab-benchmark-reading/experiments/benchmark-reading/screenshots/overview.png) | 固定benchstat完整old/new/CSV与40值；10事实审计、3静态gate通过/browser未跑、3实图；不重算统计、不称本轮benchmark或版本普遍收益 |
 | [Task occurrences](https://github.com/tt-a1i/archify/tree/codex/lab-task-occurrences/experiments/task-occurrences) | 11打印位置对应10身份，两个compileJava位置定位同一双父节点 | `caffb4aa` | [实际位置与身份页](https://github.com/tt-a1i/archify/blob/codex/lab-task-occurrences/experiments/task-occurrences/screenshots/overview.png) | 固定Gradle完整8文件fixture/14原件/5源码；原生四阶段、解释页三阶段通过但16键盘诊断；5实图/两次pointer定位；未执行Gradle，打印数不当执行数 |
+| [Edge-scoped extras](https://github.com/tt-a1i/archify/tree/codex/lab-edge-extras/experiments/edge-extras) | 同一urllib3沿不同入边extras与显示模式可有不同可见后继；[固定README](https://github.com/tt-a1i/archify/blob/1db953a726b79f135187ee3cd2e12723717c7555/experiments/edge-extras/README.md) | `1db953a7` | [中文解释页](https://github.com/tt-a1i/archify/blob/1db953a726b79f135187ee3cd2e12723717c7555/experiments/edge-extras/output/explanation.html) / [原PNG](https://github.com/tt-a1i/archify/blob/1db953a726b79f135187ee3cd2e12723717c7555/experiments/edge-extras/screenshots/explainer-desktop-light.png) | 基线10b4；固定pipdeptree45c43受控fixture，未执行上游；native四阶段0诊断，Explainer前三阶段通过/28条keyboard失败；6root实图不抵消失败，非安装报告或收益验证 |
 
-这三十三项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
+上述前33项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
 
 GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确远端 head 的 Actions runs/check-runs 均为 0。当前 [CI 配置](https://github.com/tt-a1i/archify/blob/82c7e0f089a02a4d514714adf37dc2061682da5f/.github/workflows/ci.yml) 只对 main/dev push 自动运行，另外支持 PR/manual。这里的实验分支 push 没有提供远端 CI 通过证据；上表测试均按实际本地来源记录。
 
@@ -128,7 +129,9 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 2026-10-25 本次核Keyboard新head `c96e8aa7`、Clipboard新head `0e4a2c71`：远端一致、精确head的Actions runs/check-runs均为0。Clipboard的正常merge提交73fe26dc后，以0e4a2c71补入四份已经核验的生成页；此处绑定最终完整head，未把中间提交称最终交付。总数仍39项。
 
-2026-10-25 本次核Finder canvas `ed04916f33cca4cc6475eada7b4397694426f3f8`、Relation reference `d5691a02f2dd77acd38b827e254249981bc142ee`、Diagnostic locations `b6679399ae688e9a6907e2eca4f222aaa964a975`：固定head的Actions runs/check-runs均为0，不表示候选CI通过，不借用parent dev的成功结果。Delta最终head `a0a9ba77cb59e3e3a97be0713ca626df63a3234d` 已推，精确head亦为Actions runs=0、check-runs=0。已发布仍39项；图片gallery继续固定hub `fc7017426177ad44e213242a2b1756ffba43b9e3`，未跟随这些新head重建。
+2026-10-25 本次核Finder canvas `ed04916f33cca4cc6475eada7b4397694426f3f8`、Relation reference `d5691a02f2dd77acd38b827e254249981bc142ee`、Diagnostic locations `b6679399ae688e9a6907e2eca4f222aaa964a975`：固定head的Actions runs/check-runs均为0，不表示候选CI通过，不借用parent dev的成功结果。Delta最终head `a0a9ba77cb59e3e3a97be0713ca626df63a3234d` 已推，精确head亦为Actions runs=0、check-runs=0。该次刷新完成时已发布39项；图片gallery继续固定hub `fc7017426177ad44e213242a2b1756ffba43b9e3`，未跟随这些新head重建。
+
+2026-10-25 Edge-scoped extras作为第40个独立远程实验分支推送，固定head `1db953a726b79f135187ee3cd2e12723717c7555`，基线10b4；协调者刚核精确head为Actions runs=0、check-runs=0，没有远端CI通过证据。6张root实图、上游受控fixture、native成功与Explainer的28条键盘失败分别记账；未执行pipdeptree或安装环境。
 
 ## 正在推进
 
@@ -140,7 +143,8 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 已有候选刷新 | Waterfall状态 / Finder结果描述 | Waterfall已推68311bb8；Finder已推e219bc5b，独立审查与新基线实图/AX完成；Workflow自环已推9578b8e4，旧证据原字节保留 |
 | 新一轮发现 | Shell / CSS / Notebook / 构建阅读 | 第9轮13个新来源，未增加实现；第10轮12个新来源，Notebook已推2090b0ff，task occurrence已推caffb4aa并补5实图，保留最终16键盘诊断；源码卡审计无确认新缺陷；第11轮配置来源已推14867942 |
 | 新一轮发现 | Benchmark / 语法 / 并发阅读 | 第12轮6新来源，benchstat已推7b8258cd；第13轮语法/并发共4新来源，暂不增实现；第14轮6个新图交互项目，未确认新实施缺口 |
-| 新一轮发现 | 第15轮行为/构建、第16轮条件代码/解析身份 | 研究阶段均0项启动；preview重新打开边界亦不新开修复。后续选定edge-extras做有界的固定fixture解释例，本地进行中，不新增parser或声称生产事故，不计入39已发布 |
+| 新一轮发现 | 第15轮行为/构建、第16轮条件代码/解析身份 | 研究阶段均0项启动；preview重新打开边界亦不新开修复。后续单独选定edge-extras有界固定fixture内容，现已推1db953a7计入第40项；研究原结论不改，不新增parser或声称生产事故 |
+| 新一轮发现 | 第18轮局部阅读 / 第19轮控制与数据阅读 | 两份已完成研究分别保留行注释往返与静态use-chain内容方向；line-notes、static-uses为两个本地进行中实验，均base10b4、仅experiments，不改产品/ZIP，不计入40已发布；第18轮另两报告待作者完成 |
 | 适配器影响盘点 | 15个离线方向对dev10b4 | 静态未见确定格式破坏；五个build helper在更换基线后须更新运行身份记录，旧输入与转换证据继续绑定原版本，不批量刷新 |
 | 已有候选刷新 | Keyboard traversal / Clipboard outcome | 已推c96e8aa7/0e4a2c71；同一task页candidate实际41/41可达，原dev37/41；Clipboard受控API前后及全文恢复已核，CI与真实OS剪贴板另列 |
 | 已有候选刷新 | Relation reference / Finder canvas matches / Diagnostic locations | 已推d5691a02/ed04916f/b6679399；固定dev10b4新Passport、IME/drilldown及来源规则保留，独立复核/实图完成；各自旧证据原字节不变；Delta也已推a0a9ba77，compare/check与非finalize边界另列 |
@@ -223,6 +227,8 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 源码存在、给定宏与实际构建 | [Round 16 conditional code](scouts/round16-conditional-code.md) |
 | 包身份、解析上下文与edge extras | [Round 16 resolution identity](scouts/round16-resolution-identity.md) |
 | Preview重新打开的既有边界 | [Round 16 preview reopen boundary](scouts/round16-preview-reopen-boundary.md) |
+| 本地代码阅读与行注释往返 | [Round 18 local reading](scouts/round18-local-reading-smalltools.md) |
+| 控制路径、数据依赖与实际执行 | [Round 19 control/data reading](scouts/round19-control-data-reading.md) |
 | 15个适配器对新dev的实际影响 | [Round 17 adapter dev impact](scouts/round17-adapter-dev-impact.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
