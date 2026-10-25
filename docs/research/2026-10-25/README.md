@@ -6,7 +6,7 @@
 
 共同实验基线：[dev `82c7e0f0`](https://github.com/tt-a1i/archify/commit/82c7e0f089a02a4d514714adf37dc2061682da5f)，2026-10-25 已重新核对远端仍为该 revision。下面的“已推送”只表示远程实验分支可审查，不能等同于合入、发布或人类验收。
 
-## 已推送的 11 个实验
+## 已推送的 14 个实验
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
@@ -23,8 +23,13 @@
 | [Migration plan](https://github.com/tt-a1i/archify/tree/codex/lab-migration-plan/experiments/migration-plan) | 阅读 pg-schema-diff 已有计划中的顺序、timeout 配置与原始 hazard | `8a4a1cd4` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-migration-plan/experiments/migration-plan/screenshots/migration-plan.png) | 14 tests；render/finalize 通过，自动 browser 未请求；无 SQL/数据库执行，synthetic |
 | [State contract](https://github.com/tt-a1i/archify/tree/codex/lab-state-contract/experiments/state-contract) | 把 robot3-viz flat 数据和显式 sidecar 转为 Lifecycle 与状态×事件声明矩阵 | `cc8c75bc` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-state-contract/experiments/state-contract/screenshots/state-contract.png) | 40 tests；两种产物四阶段通过；rich 语义拒绝，无机器执行，synthetic |
 | [Finder canvas matches](https://github.com/tt-a1i/archify/tree/codex/lab-finder-highlights/experiments/finder-highlights) | 输入查询后，列表与画布同步显示匹配节点，保留既有选择与视图 | `94c165ee` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-finder-highlights/experiments/finder-highlights/screenshots/candidate-api-light.png) | 共享 Viewer；作者最终 browser 60/60、core 19/19、generated/ZIP 一致；独立 browser 17/17；有固定输入浅/深色前后图，无效率计时 |
+| [CI conditions](https://github.com/tt-a1i/archify/tree/codex/lab-ci-conditions/experiments/ci-conditions) | 固定真实 workflow 的 needs、原始 if、隐式 status 门槛与未知矩阵 | `0ec0b834` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-ci-conditions/experiments/ci-conditions/screenshots/overview.png) | 10 tests；三份产物 finalize 四阶段通过；没有运行 CI 或预测 job 结果 |
+| [Plan actions](https://github.com/tt-a1i/archify/tree/codex/lab-plan-actions/experiments/plan-actions) | 分别看两种 replacement 顺序，保留 unknown/sensitive/null 路径与 deferred/complete | `640fa6ff` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-plan-actions/experiments/plan-actions/screenshots/explainer.png) | 16 tests；render/finalize 通过，自动 browser 未请求；synthetic，所有 before/after 值不入产物 |
+| [Recipe stages](https://github.com/tt-a1i/archify/tree/codex/lab-recipe-stages/experiments/recipe-stages) | Just dump 的 priors 只改一值，直观看出同一依赖由 before 移到 after | `10164864` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-recipe-stages/experiments/recipe-stages/screenshots/priors-2.png) | 10 tests；四份产物四阶段通过；固定上游形状的原创 synthetic，没有执行 Just |
 
-这十一项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
+这十四项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
+
+GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确远端 head 的 Actions runs/check-runs 均为 0。当前 [CI 配置](https://github.com/tt-a1i/archify/blob/82c7e0f089a02a4d514714adf37dc2061682da5f/.github/workflows/ci.yml) 只对 main/dev push 自动运行，另外支持 PR/manual。这里的实验分支 push 没有提供远端 CI 通过证据；上表测试均按实际本地来源记录。
 
 ## 图片速览
 
@@ -42,10 +47,9 @@
 
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
-| CI conditions | gha-graph 等；needs、原始 if、隐式 status 门槛与未知矩阵 | 实现和独立复核中；不运行 CI 或求值任意表达式 |
-| Plan actions | terraform-json 等；replacement 顺序及 unknown/sensitive/deferred/complete | 实现和独立复核中；不运行 Terraform 或访问云 |
-| Recipe stages | Just dump；区分前依赖、body、后依赖 | 实现和独立复核中；不执行 recipe 或展开动态表达式 |
-| 后续发现 | 图形导航、跨引用、分享和导出阅读体验 | 第五批持续调研；排除已存在的 Relation/Route/Focus/深链接能力 |
+| Relation reference | Navbuddy/Drawio 小交互；复制当前 pinned 关系的方向、标签和明确 ID | 共享 Viewer 实验中，保留现有 Copy Link，不另写 clipboard helper |
+| Relation return | Navbuddy 的回来源思路；关系列表跳转后单步回来源节点 | 共享 Viewer 实验中；不扩展为 Atlas history/camera 或跨图返回 |
+| 后续发现 | 测试与代码之间的可解释证据关系 | 第六批持续调研；不把 coverage 当正确性或静态关系当实际执行 |
 
 ## 一手调研报告
 
@@ -60,6 +64,7 @@
 | PRLens 与小型专用工具 | [PRLens and small tools](scouts/prlens-smalltools.md) |
 | 协议、状态机与 schema 演化 | [Protocol/schema small tools](scouts/protocol-schema-smalltools.md) |
 | CI、构建与基础设施小工具 | [Build/infra small tools](scouts/build-infra-smalltools.md) |
+| Viewer 阅读交互与明确导出范围 | [Interaction small tools](scouts/interaction-smalltools.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
 报告中的上游声明、局部源码核实、计划中的实验和已经执行的结果分别标注。未推荐方向也保留原因，避免反复研究；没有把上游宣传、星数或作者截图当作 Archify 的效果证明。
