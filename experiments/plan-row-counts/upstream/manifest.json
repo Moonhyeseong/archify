@@ -1,0 +1,39 @@
+{
+  "source": "dalibo/pev2",
+  "commit": "e41d4e8b3006c479f9364d68a5d538d81cb7d110",
+  "license": "PostgreSQL",
+  "classification": "upstream-committed-sample",
+  "executedThisSession": false,
+  "files": [
+    {
+      "path": "example/src/samples.ts",
+      "local": "upstream/samples.ts",
+      "url": "https://github.com/dalibo/pev2/blob/e41d4e8b3006c479f9364d68a5d538d81cb7d110/example/src/samples.ts",
+      "sha256": "04d0fb91aa351457fcd7a4fe71bdfe325668803cdc45338d094d68e35a24e2c2",
+      "bytes": 339763
+    },
+    {
+      "path": "LICENSE",
+      "local": "upstream/LICENSE",
+      "url": "https://github.com/dalibo/pev2/blob/e41d4e8b3006c479f9364d68a5d538d81cb7d110/LICENSE",
+      "sha256": "ab72391524e8bd2985663cd8a927fce2ba5f4a6402a77989519989f6a384fa9c",
+      "bytes": 898
+    }
+  ],
+  "extraction": {
+    "source": "upstream/samples.ts",
+    "constant": "plan_many_ctes",
+    "method": "Verbatim UTF-8 bytes between the unique literal declaration opening backtick and its closing backtick; no eval, TS, SQL or database execution. This body has no backslashes or TS interpolation.",
+    "sourceByteRange": {
+      "startInclusive": 22156,
+      "endExclusive": 89574
+    },
+    "sourceLineRange": {
+      "start": 502,
+      "end": 1958
+    },
+    "output": "upstream/plan_many_ctes.json",
+    "bytes": 67418,
+    "sha256": "a1c79b5782086474c73bd5ad2f7dd3265d73663f9030f5769638a4c2633cf6b4"
+  }
+}

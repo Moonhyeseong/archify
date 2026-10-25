@@ -1,0 +1,15 @@
+{
+  "referenceOnly": true,
+  "postgresReferenceVersion": "18 release source, NOT the sample generation version",
+  "commit": "3d6a828938a5fa0444275d3d2f67b64ec3199eb7",
+  "file": "src/backend/commands/explain.c",
+  "url": "https://github.com/postgres/postgres/blob/3d6a828938a5fa0444275d3d2f67b64ec3199eb7/src/backend/commands/explain.c#L1827-L1857",
+  "fileSha256": "f6f924ba8f570fff6f9be3389b2a7afb070ae1eea737e8e2407f9ceaf0c95215",
+  "fileBytes": 145788,
+  "rules": {
+    "Actual Rows": "instrument tuples divided by nloops, displayed as average per execution",
+    "Actual Loops": "number of loops emitted separately",
+    "Actual time": "averaged per loop; not consumed by this fixed view"
+  },
+  "sampleDatabaseVersion": "unknown"
+}

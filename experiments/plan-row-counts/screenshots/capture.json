@@ -1,0 +1,29 @@
+{
+  "kind": "actual-Chromium-captures",
+  "captures": [
+    {
+      "artifact": "output/explainer.html",
+      "artifactSha256": "93b01fa9523cb1ce71c39772d2447301c116a8a261d35cc7225df1f0f62cc3d6",
+      "screenshot": "screenshots/explainer.png",
+      "capturedAt": "2026-10-25T06:23:37.657Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "deviceScaleFactor": 1
+      }
+    },
+    {
+      "artifact": "output/plan-row-counts.html",
+      "artifactSha256": "18196acf61ad5e7f212ac08290c57ac7b55b76bf2e0caddd2ce88b31f28f6c25",
+      "screenshot": "screenshots/plan-row-counts.png",
+      "capturedAt": "2026-10-25T06:23:37.825Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "deviceScaleFactor": 1
+      }
+    }
+  ],
+  "limitations": "Fixed upstream committed sample; no SQL/database execution, no query tuning or user-efficiency evidence. Derived cumulative rows are approximate and not unique rows.",
+  "estimateLabelUpdate": "Independent native view now also includes parent and outer original estimates beside actual values; these values were already in the explainer table. Original HTML/images/capture preserved in screenshots/before-estimate-labels/."
+}

@@ -1,0 +1,182 @@
+{
+  "kind": "derived-portable-summary",
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "node": "v22.23.3",
+  "upstreamExecution": "not-run",
+  "sqlExecution": "not-run",
+  "databaseAccess": "none",
+  "generalAdapter": "none",
+  "staticAudit": {
+    "sourceExtraction": "pass: exact source bytes; no backslashes/interpolation in selected template body; no eval",
+    "sourceFiles": "pass: original source and license hashes/bytes",
+    "fieldPointers": "pass: three selected records resolve and match source fields",
+    "formula": "pass: reported 3 * 352 = 1056 (approximately cumulative row emissions)",
+    "modelBinding": "pass: full embedded spec equals native JSON; prepared sourceText equals authored draft",
+    "publicHtmlPathScan": "pass: no /Users paths"
+  },
+  "stages": [
+    {
+      "type": "tree",
+      "render": {
+        "command": "node archify/bin/archify.mjs render tree experiments/plan-row-counts/plan-row-counts.tree.json experiments/plan-row-counts/output/plan-row-counts.html",
+        "exitCode": 0
+      },
+      "finalize": {
+        "command": "node archify/bin/archify.mjs finalize tree experiments/plan-row-counts/plan-row-counts.tree.json experiments/plan-row-counts/output/plan-row-counts.html --out-dir <private-receipts> --json",
+        "status": "pass",
+        "gates": {
+          "validate": "pass",
+          "deliver": "pass",
+          "check": "pass",
+          "browser-check": "pass"
+        },
+        "diagnosticCodes": [],
+        "browserCheck": {
+          "requested": true,
+          "ran": true
+        },
+        "visualReview": "not-requested",
+        "rawStdoutSha256": "a0798096f8d86ccb1a737ed066c05c9080683dc242eca8af61a687edc34b3691"
+      }
+    },
+    {
+      "type": "explainer",
+      "render": {
+        "command": "node archify/bin/archify.mjs render explainer experiments/plan-row-counts/plan-row-counts.archify.md experiments/plan-row-counts/output/explainer.html",
+        "exitCode": 0
+      },
+      "finalize": {
+        "command": "node archify/bin/archify.mjs finalize explainer experiments/plan-row-counts/plan-row-counts.archify.md experiments/plan-row-counts/output/explainer.html --out-dir <private-receipts> --json",
+        "status": "pass",
+        "gates": {
+          "validate": "pass",
+          "deliver": "pass",
+          "check": "pass",
+          "browser-check": "not-run"
+        },
+        "diagnosticCodes": [
+          "explainer/writing-qualification"
+        ],
+        "browserCheck": {
+          "requested": false,
+          "ran": false
+        },
+        "visualReview": "not-requested",
+        "rawStdoutSha256": "b6c53f59b72e1a1f4dfe08b719313f9640738de25867d2be6eed134526101564"
+      }
+    }
+  ],
+  "screenshots": {
+    "status": "actual screenshots captured and reviewed by coordinating agent",
+    "capture": "screenshots/capture.json",
+    "humanAcceptance": "not-claimed"
+  },
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "c31f5c218fb8719ba88a00cd6221fbc40448ea2204a9ac2d1cb15eb6f69d2b86",
+      "bytes": 6894
+    },
+    {
+      "path": "evidence.json",
+      "sha256": "b6fc76a45e774d853ddc84ed0cbdfe9a05432aa1cf437c39868a5910ecb34bab",
+      "bytes": 2429
+    },
+    {
+      "path": "field-rules.json",
+      "sha256": "45a97a7cd8109bce9787f23619777ca28c9cf1b77c7ffddef90f44e61530d3b3",
+      "bytes": 739
+    },
+    {
+      "path": "output/explainer.html",
+      "sha256": "93b01fa9523cb1ce71c39772d2447301c116a8a261d35cc7225df1f0f62cc3d6",
+      "bytes": 504359
+    },
+    {
+      "path": "output/plan-row-counts.html",
+      "sha256": "18196acf61ad5e7f212ac08290c57ac7b55b76bf2e0caddd2ce88b31f28f6c25",
+      "bytes": 811482
+    },
+    {
+      "path": "plan-row-counts.archify.md",
+      "sha256": "2608f77571566f85d66f74693580c4de6196585aa1ca9e5a915bffc9fba36551",
+      "bytes": 3564
+    },
+    {
+      "path": "plan-row-counts.tree.json",
+      "sha256": "ca7e4f62e935379c188fcb8cb233c396d2c49f75db0fdccd7ad0040c0cbed4c1",
+      "bytes": 1037
+    },
+    {
+      "path": "screenshots/before-estimate-labels/capture.json",
+      "sha256": "2735691a17041d4a9074fb1d4a4cbb48fcaf7febb9e910a4051298a1fbbf4224",
+      "bytes": 961
+    },
+    {
+      "path": "screenshots/before-estimate-labels/explainer.html",
+      "sha256": "029b0e09d536a05a321959964ebd59b3489c1e5cbe8e3d2013cb05b4ecf3cf50",
+      "bytes": 504223
+    },
+    {
+      "path": "screenshots/before-estimate-labels/explainer.png",
+      "sha256": "df77594291bbb54005c9c43c7564a327d3d575f834bcb760e40f27ac09419e1b",
+      "bytes": 353032
+    },
+    {
+      "path": "screenshots/before-estimate-labels/plan-row-counts.html",
+      "sha256": "af48258196ade9c4e239591fed9e9a6bdd2f0e1fb76ac7f42ce08d63a030b861",
+      "bytes": 811434
+    },
+    {
+      "path": "screenshots/before-estimate-labels/plan-row-counts.png",
+      "sha256": "ebd8db563eb6492c694e02f26066c2649cc732c3382c70d523ab219332e6c121",
+      "bytes": 102565
+    },
+    {
+      "path": "screenshots/capture.json",
+      "sha256": "5eae87f04101ca21a457cc15c7c545bbb37b4cbe0b93366a93bc80556fae400a",
+      "bytes": 1218
+    },
+    {
+      "path": "screenshots/explainer.png",
+      "sha256": "359b5b95f1224e6e731f049220d5f112e73968112ada1a04e77721d2e29e52bc",
+      "bytes": 353480
+    },
+    {
+      "path": "screenshots/plan-row-counts.png",
+      "sha256": "a6973f9afd8f3bd6417877090867265e1e79d8d80574ba4666b94fae55076a3e",
+      "bytes": 104475
+    },
+    {
+      "path": "upstream/LICENSE",
+      "sha256": "ab72391524e8bd2985663cd8a927fce2ba5f4a6402a77989519989f6a384fa9c",
+      "bytes": 898
+    },
+    {
+      "path": "upstream/manifest.json",
+      "sha256": "bde69171a1cead97006867a47dcea06f8e98c05801e376bce4ee21334aa1e43a",
+      "bytes": 1413
+    },
+    {
+      "path": "upstream/plan_many_ctes.json",
+      "sha256": "a1c79b5782086474c73bd5ad2f7dd3265d73663f9030f5769638a4c2633cf6b4",
+      "bytes": 67418
+    },
+    {
+      "path": "upstream/samples.ts",
+      "sha256": "04d0fb91aa351457fcd7a4fe71bdfe325668803cdc45338d094d68e35a24e2c2",
+      "bytes": 339763
+    }
+  ],
+  "presentationHistory": {
+    "change": "Only parent/outer sublabels strengthened to show both estimated/actual rows; original numbers were not wrong.",
+    "before": "screenshots/before-estimate-labels/",
+    "beforeTreeSha256": "af48258196ade9c4e239591fed9e9a6bdd2f0e1fb76ac7f42ce08d63a030b861",
+    "beforeExplainerSha256": "029b0e09d536a05a321959964ebd59b3489c1e5cbe8e3d2013cb05b4ecf3cf50"
+  },
+  "whitespace": {
+    "allStagedFiles": "fail: 54 existing renderer trailing whitespace findings, exclusively in generated HTML including archived before artifacts",
+    "excludingGeneratedHtml": "pass",
+    "generatedBytesChangedToFixWhitespace": false
+  }
+}

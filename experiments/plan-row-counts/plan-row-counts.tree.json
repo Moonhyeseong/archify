@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "diagram_type": "tree",
+  "meta": {
+    "title": "每次 3 行 × 352 次 ≈ 1056 次行输出",
+    "subtitle": "PEV2 committed sample · 仅 Nested Loop 和两个直接输入 · 父→输入表示计划结构，不是行流或执行顺序",
+    "locale": "zh-CN",
+    "output": "plan-row-counts.html",
+    "quality_profile": "standard"
+  },
+  "layout": {
+    "direction": "down",
+    "nodeW": 300,
+    "nodeMaxW": 380,
+    "gapX": 36,
+    "gapY": 60
+  },
+  "nodes": [
+    {
+      "id": "report-a1c79b57-parent",
+      "label": "Nested Loop",
+      "sublabel": "每次估计 528 / actual 1056 行 · loops 1"
+    },
+    {
+      "id": "report-a1c79b57-outer",
+      "label": "Hash Join · Outer",
+      "parent": "report-a1c79b57-parent",
+      "sublabel": "每次估计 176 / actual 352 行 · loops 1"
+    },
+    {
+      "id": "report-a1c79b57-inner",
+      "label": "Index Scan · Inner",
+      "parent": "report-a1c79b57-parent",
+      "sublabel": "每次估计 3 / actual 3 行 · loops 352"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "classification": "upstream-committed-sample",
+  "upstreamCommit": "e41d4e8b3006c479f9364d68a5d538d81cb7d110",
+  "reportPath": "upstream/plan_many_ctes.json",
+  "reportSha256": "a1c79b5782086474c73bd5ad2f7dd3265d73663f9030f5769638a4c2633cf6b4",
+  "reportIdentity": "full report SHA256 + JSON occurrence pointer; no stable cross-plan identity claim",
+  "selection": {
+    "parentPointer": "/0/Plan/Plans/1/Plans/0/Plans/0/Plans/0",
+    "view": "parent and two direct input children only; other descendants/ancestors omitted, not nonexistent"
+  },
+  "unknown": {
+    "databaseVersion": null,
+    "collectionTime": null,
+    "sql": null,
+    "parameters": null,
+    "analyzeAndTimingOptions": null,
+    "originalDatabaseContents": null
+  },
+  "execution": {
+    "upstreamToolExecutedThisSession": false,
+    "sqlExecuted": false,
+    "databaseRead": false
+  },
+  "nodes": [
+    {
+      "authoredNodeId": "report-a1c79b57-parent",
+      "reportPointer": "/0/Plan/Plans/1/Plans/0/Plans/0/Plans/0",
+      "sourceFields": {
+        "Node Type": "Nested Loop",
+        "Parent Relationship": "Outer",
+        "Join Type": "Inner",
+        "Plan Rows": 528,
+        "Actual Rows": 1056,
+        "Actual Loops": 1
+      }
+    },
+    {
+      "authoredNodeId": "report-a1c79b57-outer",
+      "reportPointer": "/0/Plan/Plans/1/Plans/0/Plans/0/Plans/0/Plans/0",
+      "sourceFields": {
+        "Node Type": "Hash Join",
+        "Parent Relationship": "Outer",
+        "Join Type": "Inner",
+        "Plan Rows": 176,
+        "Actual Rows": 352,
+        "Actual Loops": 1
+      }
+    },
+    {
+      "authoredNodeId": "report-a1c79b57-inner",
+      "reportPointer": "/0/Plan/Plans/1/Plans/0/Plans/0/Plans/0/Plans/1",
+      "sourceFields": {
+        "Node Type": "Index Scan",
+        "Parent Relationship": "Inner",
+        "Plan Rows": 3,
+        "Actual Rows": 3,
+        "Actual Loops": 352
+      }
+    }
+  ],
+  "derived": {
+    "from": "/0/Plan/Plans/1/Plans/0/Plans/0/Plans/0/Plans/1",
+    "formula": "reported Actual Rows * reported Actual Loops",
+    "operands": [
+      3,
+      352
+    ],
+    "result": 1056,
+    "display": "approximately 1056 row emissions, derived from displayed average; not unique rows or an estimation error factor"
+  },
+  "excludedInferences": [
+    "exclusive time",
+    "wall-clock timeline",
+    "critical path",
+    "parallel-worker aggregation",
+    "index advice",
+    "global estimation accuracy"
+  ]
+}

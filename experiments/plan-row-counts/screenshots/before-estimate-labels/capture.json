@@ -1,0 +1,28 @@
+{
+  "kind": "actual-Chromium-captures",
+  "captures": [
+    {
+      "artifact": "output/explainer.html",
+      "artifactSha256": "029b0e09d536a05a321959964ebd59b3489c1e5cbe8e3d2013cb05b4ecf3cf50",
+      "screenshot": "screenshots/explainer.png",
+      "capturedAt": "2026-10-25T06:20:50.683Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "deviceScaleFactor": 1
+      }
+    },
+    {
+      "artifact": "output/plan-row-counts.html",
+      "artifactSha256": "af48258196ade9c4e239591fed9e9a6bdd2f0e1fb76ac7f42ce08d63a030b861",
+      "screenshot": "screenshots/plan-row-counts.png",
+      "capturedAt": "2026-10-25T06:20:50.925Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "deviceScaleFactor": 1
+      }
+    }
+  ],
+  "limitations": "Fixed upstream committed sample; no SQL/database execution, no query tuning or user-efficiency evidence. Derived cumulative rows are approximate and not unique rows."
+}
