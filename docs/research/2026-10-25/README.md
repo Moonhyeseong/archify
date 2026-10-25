@@ -8,13 +8,13 @@
 
 同次 GitHub 核对中，#1098 / #1099 分别于 15:36:06 / 15:36:19（台北）合入；最新正式 Release 仍为 [v3.2.0](https://github.com/tt-a1i/archify/releases/tag/v3.2.0)（2026-10-19 发布）。分支更新不等于新版本发布。
 
-2026-10-25 16:18（台北）再次核对：dev 已合入 [#1100](https://github.com/tt-a1i/archify/pull/1100)，推进到 [`67f12389`](https://github.com/tt-a1i/archify/commit/67f12389212c54b3122da60e2813c7f8dab7ab2f)，main 仍为 `51a29177`。这次修改 finalize 的源码范围修复、候选文件保留及相关交付逻辑；Copy identity、CLI reading tour 和进行中的 Clipboard outcome 保留实际冻结的 `3f95f034` 基线，不把既有结果改称新 dev 验证。
+2026-10-25 16:18（台北）再次核对：dev 已合入 [#1100](https://github.com/tt-a1i/archify/pull/1100)，推进到 [`67f12389`](https://github.com/tt-a1i/archify/commit/67f12389212c54b3122da60e2813c7f8dab7ab2f)，main 仍为 `51a29177`。这次修改 finalize 的源码范围修复、候选文件保留及相关交付逻辑；Copy identity、CLI reading tour 和 Clipboard outcome 保留实际冻结的 `3f95f034` 基线，不把既有结果改称新 dev 验证。
 
-## 已推送的 32 个实验
+## 已推送的 33 个实验
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
-[离线图片浏览页](gallery/README.md)：当前固定快照含前 29 项的 29 张原始 PNG，可按分组和关键词筛选、展开完整图；下载 `gallery/index.html` 后可独立打开。固定提交/图片摘要保留在 manifest，桌面与 390px 实际检查见浏览页说明。第 30–32 项的图片见下表独立分支，尚未加入该快照。
+[离线图片浏览页](gallery/README.md)：当前固定快照含前 29 项的 29 张原始 PNG，可按分组和关键词筛选、展开完整图；下载 `gallery/index.html` 后可独立打开。固定提交/图片摘要保留在 manifest，桌面与 390px 实际检查见浏览页说明。第 30–33 项的图片见下表独立分支，尚未加入该快照。
 
 | 实验与远程分支 | 具体价值 | 发布 revision | 实际图片 | 验证与限制 |
 | --- | --- | --- | --- | --- |
@@ -50,8 +50,9 @@
 | [Preview dashed ink](https://github.com/tt-a1i/archify/tree/codex/lab-preview-dashed-ink/experiments/preview-dashed-ink) | Explainer预览的虚线关系文字、线和箭头使用可读颜色，保留节点边框 | `36cc35fb` | [浅色修复后](https://github.com/tt-a1i/archify/blob/codex/lab-preview-dashed-ink/experiments/preview-dashed-ink/screenshots/candidate-light.png) | 3条CSS映射；2browser/56focused、基线失败、候选四阶段及抽包通过；4张实际浅深对照图；4份旧生成物的既有freshness更新单列，不称全模式可访问性验收 |
 | [Copy identity](https://github.com/tt-a1i/archify/tree/codex/lab-copy-identity/experiments/copy-identity) | 内容相等仍可能共享不同对象：别名、浅拷贝、深拷贝的引用对照 | `18d51b89` | [实际引用图](https://github.com/tt-a1i/archify/blob/codex/lab-copy-identity/experiments/copy-identity/screenshots/native.png) | 新dev3f95；标准库独立观察4变量/7list/10引用、6内容检查、两产物四阶段通过；3张实际图；上游教学构造，未运行上游工具/未观察整个heap |
 | [CLI reading tour](https://github.com/tt-a1i/archify/tree/codex/lab-cli-reading-tour/experiments/cli-reading-tour) | 沿真实源码区分三个CLI出口、磁盘JSON、HTTP快照与用户启动 | `1dff88d3` | [实际阅读页](https://github.com/tt-a1i/archify/blob/codex/lab-cli-reading-tour/experiments/cli-reading-tour/screenshots/overview.png) | 新dev3f95；7固定源、11SourceCards、10节点9边；三静态阶段通过/自动browser未请求；实际Walk、hover/Escape及3图；未运行上游服务或scanner |
+| [Clipboard outcome](https://github.com/tt-a1i/archify/tree/codex/lab-clipboard-outcome/experiments/clipboard-outcome) | 复制不可用时保留可选择的内容，恢复后重试不重复包装问题 | `68866954` | [实际失败恢复](https://github.com/tt-a1i/archify/blob/codex/lab-clipboard-outcome/experiments/clipboard-outcome/screenshots/missing-ask-candidate.png) | 基线3f95；8种API边界、邻近32/core19、canonical双ZIP/抽包通过；同一真实PR输入基线/候选三阶段通过；API受控注入实测，未写OS clipboard；自动browser未请求 |
 
-这三十二项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
+这三十三项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
 
 GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确远端 head 的 Actions runs/check-runs 均为 0。当前 [CI 配置](https://github.com/tt-a1i/archify/blob/82c7e0f089a02a4d514714adf37dc2061682da5f/.github/workflows/ci.yml) 只对 main/dev push 自动运行，另外支持 PR/manual。这里的实验分支 push 没有提供远端 CI 通过证据；上表测试均按实际本地来源记录。
 
@@ -69,9 +70,9 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 以下四张直接来自对应分支的实际产物。点击名称查看完整说明；其余实验的图片见上表。
 
-| [Finder：搜索对应画布节点](https://github.com/tt-a1i/archify/tree/codex/lab-finder-highlights/experiments/finder-highlights) | [DBML：键与关系](https://github.com/tt-a1i/archify/tree/codex/lab-dbml-erd/experiments/dbml-erd) |
+| [Finder：搜索对应画布节点](https://github.com/tt-a1i/archify/tree/codex/lab-finder-highlights/experiments/finder-highlights) | [DBML：原四表 synthetic 键与关系](https://github.com/tt-a1i/archify/tree/codex/lab-dbml-erd/experiments/dbml-erd) |
 | --- | --- |
-| <img width="540" alt="Finder：搜索对应画布节点 actual screenshot" src="https://raw.githubusercontent.com/tt-a1i/archify/94c165ee6e5213c67e37a75a0b04496564980801/experiments/finder-highlights/screenshots/candidate-api-light.png"> | <img width="540" alt="DBML：键与关系 actual screenshot" src="https://raw.githubusercontent.com/tt-a1i/archify/feab6ae685692630d6d837622dc7bdcb57a09679/experiments/dbml-erd/screenshots/order-payments.png"> |
+| <img width="540" alt="Finder：搜索对应画布节点 actual screenshot" src="https://raw.githubusercontent.com/tt-a1i/archify/94c165ee6e5213c67e37a75a0b04496564980801/experiments/finder-highlights/screenshots/candidate-api-light.png"> | <img width="540" alt="DBML：原四表 synthetic 键与关系 actual screenshot" src="https://raw.githubusercontent.com/tt-a1i/archify/feab6ae685692630d6d837622dc7bdcb57a09679/experiments/dbml-erd/screenshots/order-payments.png"> |
 
 | [State：声明与未声明](https://github.com/tt-a1i/archify/tree/codex/lab-state-contract/experiments/state-contract) | [Decision：保留异议](https://github.com/tt-a1i/archify/tree/codex/lab-decision-thread/experiments/decision-thread) |
 | --- | --- |
@@ -93,13 +94,15 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 2026-10-25 16:08核对DBML新head `358c77e0`；16:18核对Copy identity `18d51b89` 与CLI reading tour `1dff88d3`，远端head均一致，Actions runs/check-runs均为0。Migration plan的 `b9fe3b9b` 只澄清render/finalize所属产物，旧测试/图片不变。
 
+2026-10-25 16:30:20（台北）核对Clipboard outcome `68866954`：远端head一致，Actions runs/check-runs均为0；受控浏览器API实测与OS clipboard验收分开。
+
 ## 正在推进
 
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
-| 新发现修复 | Explainer复制结果与手工恢复 | Clipboard outcome在新dev3f95独立分支完成实现和真实API边界对照，最终证据/包复核收尾中 |
-| 浏览页更新 | 新增两产品修复及两既有分支证据 | 29项新固定快照已完成真实浏览器检查；历史27版证据保留固定提交链接 |
-| 既有实验补证据 | DBML与Plan actions | DBML继续补上primary key同义写法接受；原拒绝记录保留；完整plan fixture转换证据不变 |
+| 新发现修复 | Explainer复制结果与手工恢复 | Clipboard outcome已推送68866954，来源、基线/候选和实际截图见第33项 |
+| 浏览页更新 | 新增4项及DBML/Migration更新 | 当前29项快照已完成真实浏览器检查；下一版纳入33项，旧版证据继续绑定原提交 |
+| 既有实验补证据 | DBML与Plan actions | DBML已补上primary key同义写法接受；原拒绝记录保留；完整plan fixture转换证据不变 |
 | 已排除的重复实现 | Mutation报告reader | 原viewer已有文件搜索、状态筛选、diff、测试关联和单HTML打包；只保留研究，不另建reader |
 | 新dev影响核对 | 许可声明与finalize源范围修复 | [15:41迁移](base-refresh-1541.md) / [16:18交付逻辑](base-refresh-1618.md)：分别核对实际diff；旧证据保留原身份，新整合按影响验证 |
 | 保留候选 | Notebook别名与派生值的不同stale预期 | 6项目只读报告完成；目前无实际notebook交接任务，暂不扩成converter |
@@ -147,6 +150,7 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 真实入口流程与仓库导读 | [Repository orientation small tools](scouts/repository-orientation-smalltools.md) |
 | 值、对象身份与局部计算解释 | [Visual explanation small tools](scouts/visual-explanation-smalltools.md) |
 | 渐进解释、分叉判断与表达式上下文 | [Adjacent discovery round 3](scouts/adjacent-discovery-round3.md) |
+| 范围比较与条件上下文 | [Code-reading utilities round 4](scouts/code-reading-utilities-round4.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
 报告中的上游声明、局部源码核实、计划中的实验和已经执行的结果分别标注。未推荐方向也保留原因，避免反复研究；没有把上游宣传、星数或作者截图当作 Archify 的效果证明。
