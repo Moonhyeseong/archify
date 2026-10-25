@@ -1,0 +1,40 @@
+{
+  "kind": "actual-Chromium-screenshots",
+  "captures": [
+    {
+      "artifact": "baseline.html",
+      "artifactSha256": "d8715e3e69a5fa03e6a7e0557371b2d516abe012aa7447c977d2cd23c619f8ae",
+      "screenshot": "screenshots/baseline.png",
+      "capturedAt": "2026-10-25T06:09:54.669Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "deviceScaleFactor": 1
+      }
+    },
+    {
+      "artifact": "candidate.html",
+      "artifactSha256": "eef7b2461df217c6e7cae854981925882ba3963a0d4a6f237420fa1f9c6e7395",
+      "screenshot": "screenshots/candidate.png",
+      "capturedAt": "2026-10-25T06:12:15.639Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "deviceScaleFactor": 1
+      }
+    },
+    {
+      "artifact": "lasso.html",
+      "artifactSha256": "f400741e34b4593e9eb0fb62094c5192ac54e0fd4cd4fb4d94f004aa984b5663",
+      "screenshot": "screenshots/lasso.png",
+      "capturedAt": "2026-10-25T06:12:15.847Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "deviceScaleFactor": 1
+      }
+    }
+  ],
+  "limitations": "Fixed upstream educational witness excerpt; no checker run or model binding. Agent visual review is not human acceptance or proof of reading efficiency.",
+  "visibilityRepair": "Closure label/note moved into authored state tag and existing card, leaving the same three positions and three edges. Previous actual outputs/captures preserved in before-loop-visibility/. Baseline output/capture unchanged."
+}

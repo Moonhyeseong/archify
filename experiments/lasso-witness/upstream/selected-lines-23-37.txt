@@ -1,0 +1,15 @@
+-- specification  G (s ->  F r)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 1.1 <-
+    s = TRUE
+    r = TRUE
+    u = FALSE
+    v = FALSE
+  -> State: 1.2 <-
+    s = TRUE
+    r = FALSE
+  -- Loop starts here
+  -> State: 1.3 <-
+    u = TRUE

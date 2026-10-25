@@ -1,0 +1,2081 @@
+-- specification G(((!alarm & !criteria) & X (criteria & !ack_button)) -> X alarm)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 1.1 <-
+    ack_button = TRUE
+    alarm = FALSE
+    criteria = TRUE
+    ack_button_FAULT = FALSE
+    criteria_FAULT = FALSE
+    alarm_FAULT = FALSE
+  -> State: 1.2 <-
+    criteria = FALSE
+  -- Loop starts here
+  -> State: 1.3 <-
+    ack_button = FALSE
+    criteria = TRUE
+  -> State: 1.4 <-
+    ack_button = TRUE
+  -> State: 1.5 <-
+    ack_button = FALSE
+
+-- specification  G (s ->  F r)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 1.1 <-
+    s = TRUE
+    r = TRUE
+    u = FALSE
+    v = FALSE
+  -> State: 1.2 <-
+    s = TRUE
+    r = FALSE
+  -- Loop starts here
+  -> State: 1.3 <-
+    u = TRUE
+
+-- specification  G (p0 ->  F (((f0 | !p0) | p1) | p2))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 4.1 <-
+    p0 = TRUE
+    p1 = TRUE
+    p2 = TRUE
+    f0 = TRUE
+  -- Loop starts here
+  -> State: 4.2 <-
+    p1 = FALSE
+    p2 = FALSE
+    f0 = FALSE
+
+-- specification  G u = 2  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 3.1 <-
+    x = FALSE
+    y = TRUE
+    z = FALSE
+    u = 0
+  -> State: 3.2 <-
+    x = TRUE
+    y = FALSE
+    z = TRUE
+  -> State: 3.3 <-
+    x = FALSE
+    y = TRUE
+    z = FALSE
+-- specification u = 2  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 2.1 <-
+    x = FALSE
+    y = TRUE
+    z = FALSE
+    u = 1
+  -> State: 2.2 <-
+    x = TRUE
+    y = FALSE
+    z = TRUE
+    u = 0
+  -> State: 2.3 <-
+    x = FALSE
+    y = TRUE
+    z = FALSE
+    u = 1
+
+*** This is NuSMV 2.6.0 (compiled on Mon Nov 30 10:05:37 2015)
+*** Enabled addons are: compass
+*** For more information on NuSMV see <http://nusmv.fbk.eu>
+*** or email to <nusmv-users@list.fbk.eu>.
+*** Please report bugs to <Please report bugs to <nusmv-users@fbk.eu>>
+
+*** Copyright (c) 2010-2014, Fondazione Bruno Kessler
+
+*** This version of NuSMV is linked to the CUDD library version 2.4.1
+*** Copyright (c) 1995-2004, Regents of the University of Colorado
+
+*** This version of NuSMV is linked to the MiniSat SAT solver. 
+*** See http://minisat.se/MiniSat.html
+*** Copyright (c) 2003-2006, Niklas Een, Niklas Sorensson
+*** Copyright (c) 2007-2010, Niklas Sorensson
+
+-- specification !( X ( X ( X ((x | y) | z))))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 1.1 <-
+    x = TRUE
+    y = TRUE
+    z = TRUE
+  -> State: 1.2 <-
+    y = FALSE
+    z = FALSE
+  -> State: 1.3 <-
+    x = FALSE
+  -> State: 1.4 <-
+    x = TRUE
+    y = TRUE
+    z = TRUE
+
+-- specification !(!z U !(!(!y U !( X u = 0))))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 1.1 <-
+    x = TRUE
+    y = TRUE
+    z = TRUE
+    u = 0
+  -> State: 1.2 <-
+    x = FALSE
+    z = FALSE
+    u = 1
+  -> State: 1.3 <-
+    x = TRUE
+    z = TRUE
+    u = 0
+
+-- specification  G ( X ( X ( X ((FALSE | ( G ( G ( F x)) & (TRUE U ( X ( F y))))) | (z & !(!z U !z))))))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 2.1 <-
+    x = TRUE
+    y = TRUE
+    z = FALSE
+  -> State: 2.2 <-
+    y = FALSE
+    z = TRUE
+  -> State: 2.3 <-
+    z = FALSE
+  -> State: 2.4 <-
+  -> State: 2.5 <-
+    x = FALSE
+  -> State: 2.6 <-
+    z = TRUE
+  -- Loop starts here
+  -> State: 2.7 <-
+    y = TRUE
+  -> State: 2.8 <-
+
+-- specification  X ( G ((user_floor_button[8] | user_cabin_button[8]) -> ( F on_floor[8] & door_open[8])))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 36.1 <-
+    user_floor_button[8] = FALSE
+    user_cabin_button[8] = FALSE
+    on_floor[8] = FALSE
+    door_open[8] = FALSE
+    elevator_pos = 0
+    up = FALSE
+    down = FALSE
+    button[0] = FALSE
+    call[0] = FALSE
+    button[1] = FALSE
+    call[1] = FALSE
+    button[2] = FALSE
+    call[2] = FALSE
+    button[3] = FALSE
+    call[3] = FALSE
+    button[4] = FALSE
+    call[4] = FALSE
+    button[5] = FALSE
+    call[5] = FALSE
+    button[6] = FALSE
+    call[6] = FALSE
+    button[7] = FALSE
+    call[7] = FALSE
+    button[8] = FALSE
+    call[8] = FALSE
+    door_closed[0] = FALSE
+    on_floor[0] = FALSE
+    door_closed[1] = FALSE
+    on_floor[1] = FALSE
+    door_closed[2] = FALSE
+    on_floor[2] = FALSE
+    door_closed[3] = FALSE
+    on_floor[3] = FALSE
+    door_closed[4] = FALSE
+    on_floor[4] = FALSE
+    door_closed[5] = FALSE
+    on_floor[5] = FALSE
+    door_closed[6] = FALSE
+    on_floor[6] = FALSE
+    door_closed[7] = FALSE
+    on_floor[7] = FALSE
+    door_closed[8] = FALSE
+    door_open[0] = FALSE
+    user_floor_button[0] = FALSE
+    user_cabin_button[0] = FALSE
+    door_open[1] = FALSE
+    user_floor_button[1] = FALSE
+    user_cabin_button[1] = FALSE
+    door_open[2] = FALSE
+    user_floor_button[2] = FALSE
+    user_cabin_button[2] = FALSE
+    door_open[3] = FALSE
+    user_floor_button[3] = FALSE
+    user_cabin_button[3] = FALSE
+    door_open[4] = FALSE
+    user_floor_button[4] = FALSE
+    user_cabin_button[4] = FALSE
+    door_open[5] = FALSE
+    user_floor_button[5] = FALSE
+    user_cabin_button[5] = FALSE
+    door_open[6] = FALSE
+    user_floor_button[6] = FALSE
+    user_cabin_button[6] = FALSE
+    door_open[7] = FALSE
+    user_floor_button[7] = FALSE
+    user_cabin_button[7] = FALSE
+    door_state[0] = d_closed
+    door_state[1] = d_closed
+    door_state[2] = d_closed
+    door_state[3] = d_closed
+    door_state[4] = d_closed
+    door_state[5] = d_closed
+    door_state[6] = d_closed
+    door_state[7] = d_closed
+    door_state[8] = d_closed
+    open[0] = FALSE
+    open[1] = FALSE
+    open[2] = FALSE
+    open[3] = FALSE
+    open[4] = FALSE
+    open[5] = FALSE
+    open[6] = FALSE
+    open[7] = FALSE
+    open[8] = FALSE
+    door_timer = 0
+    _plant.elevator_pos3 = 0
+    _plant.elevator_pos2 = 0
+    _plant.elevator_pos1 = 0
+    _controller.need_stop = TRUE
+    _controller.on_some_floor = TRUE
+    _controller.is_requested = TRUE
+    _controller.call8 = TRUE
+    _controller.call7 = TRUE
+    _controller.call6 = TRUE
+    _controller.call5 = TRUE
+    _controller.call4 = TRUE
+    _controller.call3 = TRUE
+    _controller.call2 = TRUE
+    _controller.call1 = TRUE
+    _controller.call0 = TRUE
+  -> State: 36.2 <-
+    user_floor_button[8] = TRUE
+    user_cabin_button[8] = TRUE
+    button[0] = TRUE
+    call[0] = TRUE
+    button[1] = TRUE
+    call[1] = TRUE
+    button[2] = TRUE
+    call[2] = TRUE
+    button[3] = TRUE
+    call[3] = TRUE
+    button[4] = TRUE
+    call[4] = TRUE
+    button[5] = TRUE
+    call[5] = TRUE
+    button[6] = TRUE
+    call[6] = TRUE
+    button[7] = TRUE
+    call[7] = TRUE
+    button[8] = TRUE
+    call[8] = TRUE
+    door_closed[0] = TRUE
+    on_floor[0] = TRUE
+    door_closed[1] = TRUE
+    door_closed[2] = TRUE
+    door_closed[3] = TRUE
+    door_closed[4] = TRUE
+    door_closed[5] = TRUE
+    door_closed[6] = TRUE
+    door_closed[7] = TRUE
+    door_closed[8] = TRUE
+    user_floor_button[0] = TRUE
+    user_cabin_button[0] = TRUE
+    user_floor_button[1] = TRUE
+    user_cabin_button[1] = TRUE
+    user_floor_button[2] = TRUE
+    user_cabin_button[2] = TRUE
+    user_floor_button[3] = TRUE
+    user_cabin_button[3] = TRUE
+    user_floor_button[4] = TRUE
+    user_cabin_button[4] = TRUE
+    user_floor_button[5] = TRUE
+    user_cabin_button[5] = TRUE
+    user_floor_button[6] = TRUE
+    user_cabin_button[6] = TRUE
+    user_floor_button[7] = TRUE
+    user_cabin_button[7] = TRUE
+    open[0] = TRUE
+    door_timer = 4
+  -- Loop starts here
+  -> State: 36.3 <-
+    user_floor_button[8] = FALSE
+    user_cabin_button[8] = FALSE
+    door_closed[0] = FALSE
+    user_floor_button[0] = FALSE
+    user_cabin_button[0] = FALSE
+    user_floor_button[1] = FALSE
+    user_cabin_button[1] = FALSE
+    user_floor_button[2] = FALSE
+    user_cabin_button[2] = FALSE
+    user_floor_button[3] = FALSE
+    user_cabin_button[3] = FALSE
+    user_floor_button[4] = FALSE
+    user_cabin_button[4] = FALSE
+    user_floor_button[5] = FALSE
+    user_cabin_button[5] = FALSE
+    user_floor_button[6] = FALSE
+    user_cabin_button[6] = FALSE
+    user_floor_button[7] = FALSE
+    user_cabin_button[7] = FALSE
+    door_state[0] = d_opening
+    door_timer = 3
+    _controller.call0 = FALSE
+  -> State: 36.4 <-
+    button[0] = FALSE
+    call[0] = FALSE
+    door_open[0] = TRUE
+    door_state[0] = d_open
+    door_timer = 2
+  -> State: 36.5 <-
+    door_timer = 1
+  -> State: 36.6 <-
+    open[0] = FALSE
+    door_timer = 0
+    _controller.call0 = TRUE
+  -> State: 36.7 <-
+    button[0] = TRUE
+    call[0] = TRUE
+    door_open[0] = FALSE
+    user_floor_button[0] = TRUE
+    user_cabin_button[0] = TRUE
+    door_state[0] = d_closing
+    open[0] = TRUE
+    door_timer = 4
+  -> State: 36.8 <-
+    user_floor_button[0] = FALSE
+    user_cabin_button[0] = FALSE
+    door_state[0] = d_opening
+    door_timer = 3
+
+
+-- specification  X ( G (!door_open[6] ->  X (door_open[6] ->  X (door_open[6] &  X !door_open[6]))))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 16.1 <-
+    door_open[6] = FALSE
+    door_state[6] = d_closed
+    open[6] = FALSE
+    on_floor[6] = FALSE
+    button[6] = FALSE
+    call[6] = FALSE
+    door_timer = 0
+    elevator_pos = 0
+    user_floor_button[6] = FALSE
+    user_cabin_button[6] = FALSE
+    open[0] = FALSE
+    on_floor[0] = FALSE
+    button[0] = FALSE
+    call[0] = FALSE
+    open[1] = FALSE
+    on_floor[1] = FALSE
+    button[1] = FALSE
+    call[1] = FALSE
+    open[2] = FALSE
+    on_floor[2] = FALSE
+    button[2] = FALSE
+    call[2] = FALSE
+    open[3] = FALSE
+    on_floor[3] = FALSE
+    button[3] = FALSE
+    call[3] = FALSE
+    open[4] = FALSE
+    on_floor[4] = FALSE
+    button[4] = FALSE
+    call[4] = FALSE
+    open[5] = FALSE
+    on_floor[5] = FALSE
+    button[5] = FALSE
+    call[5] = FALSE
+    open[7] = FALSE
+    on_floor[7] = FALSE
+    button[7] = FALSE
+    call[7] = FALSE
+    open[8] = FALSE
+    on_floor[8] = FALSE
+    button[8] = FALSE
+    call[8] = FALSE
+    up = FALSE
+    down = FALSE
+    door_open[0] = FALSE
+    user_floor_button[0] = FALSE
+    user_cabin_button[0] = FALSE
+    door_open[1] = FALSE
+    user_floor_button[1] = FALSE
+    user_cabin_button[1] = FALSE
+    door_open[2] = FALSE
+    user_floor_button[2] = FALSE
+    user_cabin_button[2] = FALSE
+    door_open[3] = FALSE
+    user_floor_button[3] = FALSE
+    user_cabin_button[3] = FALSE
+    door_open[4] = FALSE
+    user_floor_button[4] = FALSE
+    user_cabin_button[4] = FALSE
+    door_open[5] = FALSE
+    user_floor_button[5] = FALSE
+    user_cabin_button[5] = FALSE
+    door_open[7] = FALSE
+    user_floor_button[7] = FALSE
+    user_cabin_button[7] = FALSE
+    door_open[8] = FALSE
+    user_floor_button[8] = FALSE
+    user_cabin_button[8] = FALSE
+    door_closed[0] = FALSE
+    door_closed[1] = FALSE
+    door_closed[2] = FALSE
+    door_closed[3] = FALSE
+    door_closed[4] = FALSE
+    door_closed[5] = FALSE
+    door_closed[6] = FALSE
+    door_closed[7] = FALSE
+    door_closed[8] = FALSE
+    door_state[0] = d_closed
+    door_state[1] = d_closed
+    door_state[2] = d_closed
+    door_state[3] = d_closed
+    door_state[4] = d_closed
+    door_state[5] = d_closed
+    door_state[7] = d_closed
+    door_state[8] = d_closed
+    _plant.elevator_pos3 = 0
+    _plant.elevator_pos2 = 0
+    _plant.elevator_pos1 = 0
+    _controller.need_stop = FALSE
+    _controller.on_some_floor = TRUE
+    _controller.is_requested = TRUE
+    _controller.call8 = TRUE
+    _controller.call7 = TRUE
+    _controller.call6 = TRUE
+    _controller.call5 = FALSE
+    _controller.call4 = FALSE
+    _controller.call3 = FALSE
+    _controller.call2 = FALSE
+    _controller.call1 = FALSE
+    _controller.call0 = FALSE
+  -> State: 16.2 <-
+    button[6] = TRUE
+    call[6] = TRUE
+    user_floor_button[6] = TRUE
+    user_cabin_button[6] = TRUE
+    on_floor[0] = TRUE
+    button[7] = TRUE
+    call[7] = TRUE
+    button[8] = TRUE
+    call[8] = TRUE
+    up = TRUE
+    user_floor_button[7] = TRUE
+    user_cabin_button[7] = TRUE
+    user_floor_button[8] = TRUE
+    user_cabin_button[8] = TRUE
+    door_closed[0] = TRUE
+    door_closed[1] = TRUE
+    door_closed[2] = TRUE
+    door_closed[3] = TRUE
+    door_closed[4] = TRUE
+    door_closed[5] = TRUE
+    door_closed[6] = TRUE
+    door_closed[7] = TRUE
+    door_closed[8] = TRUE
+    _plant.elevator_pos3 = 1
+    _plant.elevator_pos2 = 1
+    _plant.elevator_pos1 = 1
+    _controller.on_some_floor = FALSE
+    _controller.call0 = TRUE
+  -> State: 16.3 <-
+    elevator_pos = 1
+    on_floor[0] = FALSE
+    button[0] = TRUE
+    call[0] = TRUE
+    user_floor_button[0] = TRUE
+    user_cabin_button[0] = TRUE
+    _plant.elevator_pos3 = 2
+    _plant.elevator_pos2 = 2
+    _plant.elevator_pos1 = 2
+  -> State: 16.4 <-
+    elevator_pos = 2
+    _plant.elevator_pos3 = 3
+    _plant.elevator_pos2 = 3
+    _plant.elevator_pos1 = 3
+    _controller.on_some_floor = TRUE
+  -> State: 16.5 <-
+    elevator_pos = 3
+    on_floor[1] = TRUE
+    _plant.elevator_pos3 = 4
+    _plant.elevator_pos2 = 4
+    _plant.elevator_pos1 = 4
+    _controller.on_some_floor = FALSE
+    _controller.call1 = TRUE
+  -> State: 16.6 <-
+    elevator_pos = 4
+    on_floor[1] = FALSE
+    button[1] = TRUE
+    call[1] = TRUE
+    user_floor_button[1] = TRUE
+    user_cabin_button[1] = TRUE
+    _plant.elevator_pos3 = 5
+    _plant.elevator_pos2 = 5
+    _plant.elevator_pos1 = 5
+  -> State: 16.7 <-
+    elevator_pos = 5
+    _plant.elevator_pos3 = 6
+    _plant.elevator_pos2 = 6
+    _plant.elevator_pos1 = 6
+    _controller.on_some_floor = TRUE
+  -> State: 16.8 <-
+    elevator_pos = 6
+    on_floor[2] = TRUE
+    _plant.elevator_pos3 = 7
+    _plant.elevator_pos2 = 7
+    _plant.elevator_pos1 = 7
+    _controller.on_some_floor = FALSE
+    _controller.call2 = TRUE
+  -> State: 16.9 <-
+    elevator_pos = 7
+    on_floor[2] = FALSE
+    button[2] = TRUE
+    call[2] = TRUE
+    user_floor_button[2] = TRUE
+    user_cabin_button[2] = TRUE
+    _plant.elevator_pos3 = 8
+    _plant.elevator_pos2 = 8
+    _plant.elevator_pos1 = 8
+  -> State: 16.10 <-
+    elevator_pos = 8
+    _plant.elevator_pos3 = 9
+    _plant.elevator_pos2 = 9
+    _plant.elevator_pos1 = 9
+    _controller.on_some_floor = TRUE
+  -> State: 16.11 <-
+    elevator_pos = 9
+    on_floor[3] = TRUE
+    _plant.elevator_pos3 = 10
+    _plant.elevator_pos2 = 10
+    _plant.elevator_pos1 = 10
+    _controller.on_some_floor = FALSE
+    _controller.call3 = TRUE
+  -> State: 16.12 <-
+    elevator_pos = 10
+    on_floor[3] = FALSE
+    button[3] = TRUE
+    call[3] = TRUE
+    user_floor_button[3] = TRUE
+    user_cabin_button[3] = TRUE
+    _plant.elevator_pos3 = 11
+    _plant.elevator_pos2 = 11
+    _plant.elevator_pos1 = 11
+  -> State: 16.13 <-
+    elevator_pos = 11
+    _plant.elevator_pos3 = 12
+    _plant.elevator_pos2 = 12
+    _plant.elevator_pos1 = 12
+    _controller.on_some_floor = TRUE
+  -> State: 16.14 <-
+    elevator_pos = 12
+    on_floor[4] = TRUE
+    _plant.elevator_pos3 = 13
+    _plant.elevator_pos2 = 13
+    _plant.elevator_pos1 = 13
+    _controller.on_some_floor = FALSE
+    _controller.call4 = TRUE
+  -> State: 16.15 <-
+    elevator_pos = 13
+    on_floor[4] = FALSE
+    button[4] = TRUE
+    call[4] = TRUE
+    user_floor_button[4] = TRUE
+    user_cabin_button[4] = TRUE
+    _plant.elevator_pos3 = 14
+    _plant.elevator_pos2 = 14
+    _plant.elevator_pos1 = 14
+  -> State: 16.16 <-
+    elevator_pos = 14
+    _plant.elevator_pos3 = 15
+    _plant.elevator_pos2 = 15
+    _plant.elevator_pos1 = 15
+    _controller.on_some_floor = TRUE
+  -> State: 16.17 <-
+    elevator_pos = 15
+    on_floor[5] = TRUE
+    _plant.elevator_pos3 = 16
+    _plant.elevator_pos2 = 16
+    _plant.elevator_pos1 = 16
+    _controller.on_some_floor = FALSE
+    _controller.call5 = TRUE
+  -> State: 16.18 <-
+    elevator_pos = 16
+    on_floor[5] = FALSE
+    button[5] = TRUE
+    call[5] = TRUE
+    user_floor_button[5] = TRUE
+    user_cabin_button[5] = TRUE
+    _plant.elevator_pos3 = 17
+    _plant.elevator_pos2 = 17
+    _plant.elevator_pos1 = 17
+  -> State: 16.19 <-
+    elevator_pos = 17
+    _plant.elevator_pos3 = 18
+    _plant.elevator_pos2 = 18
+    _plant.elevator_pos1 = 18
+    _controller.need_stop = TRUE
+    _controller.on_some_floor = TRUE
+  -> State: 16.20 <-
+    open[6] = TRUE
+    on_floor[6] = TRUE
+    door_timer = 4
+    elevator_pos = 18
+    up = FALSE
+  -> State: 16.21 <-
+    door_state[6] = d_opening
+    door_timer = 3
+    door_closed[6] = FALSE
+    _controller.call6 = FALSE
+  -> State: 16.22 <-
+    door_open[6] = TRUE
+    door_state[6] = d_open
+    button[6] = FALSE
+    call[6] = FALSE
+    door_timer = 2
+    user_floor_button[6] = FALSE
+    user_cabin_button[6] = FALSE
+    user_floor_button[0] = FALSE
+    user_cabin_button[0] = FALSE
+    user_floor_button[1] = FALSE
+    user_cabin_button[1] = FALSE
+    user_floor_button[2] = FALSE
+    user_cabin_button[2] = FALSE
+    user_floor_button[3] = FALSE
+    user_cabin_button[3] = FALSE
+    user_floor_button[4] = FALSE
+    user_cabin_button[4] = FALSE
+    user_floor_button[5] = FALSE
+    user_cabin_button[5] = FALSE
+    user_floor_button[7] = FALSE
+    user_cabin_button[7] = FALSE
+    user_floor_button[8] = FALSE
+    user_cabin_button[8] = FALSE
+  -> State: 16.23 <-
+    door_timer = 1
+  -> State: 16.24 <-
+    open[6] = FALSE
+    door_timer = 0
+  -> State: 16.25 <-
+    door_open[6] = FALSE
+    door_state[6] = d_closing
+    _controller.need_stop = FALSE
+  -- Loop starts here
+  -> State: 16.26 <-
+    door_state[6] = d_closed
+    up = TRUE
+    door_closed[6] = TRUE
+    _plant.elevator_pos3 = 19
+    _plant.elevator_pos2 = 19
+    _plant.elevator_pos1 = 19
+    _controller.on_some_floor = FALSE
+  -> State: 16.27 <-
+    on_floor[6] = FALSE
+    elevator_pos = 19
+    _plant.elevator_pos3 = 20
+    _plant.elevator_pos2 = 20
+    _plant.elevator_pos1 = 20
+  -> State: 16.28 <-
+    elevator_pos = 20
+    _plant.elevator_pos3 = 21
+    _plant.elevator_pos2 = 21
+    _plant.elevator_pos1 = 21
+    _controller.need_stop = TRUE
+    _controller.on_some_floor = TRUE
+  -> State: 16.29 <-
+    door_timer = 4
+    elevator_pos = 21
+    open[7] = TRUE
+    on_floor[7] = TRUE
+    up = FALSE
+  -> State: 16.30 <-
+    door_timer = 3
+    door_closed[7] = FALSE
+    door_state[7] = d_opening
+    _controller.call7 = FALSE
+  -> State: 16.31 <-
+    door_timer = 2
+    button[7] = FALSE
+    call[7] = FALSE
+    door_open[7] = TRUE
+    door_state[7] = d_open
+  -> State: 16.32 <-
+    door_timer = 1
+  -> State: 16.33 <-
+    door_timer = 0
+    open[7] = FALSE
+  -> State: 16.34 <-
+    door_open[7] = FALSE
+    door_state[7] = d_closing
+    _controller.need_stop = FALSE
+  -> State: 16.35 <-
+    up = TRUE
+    door_closed[7] = TRUE
+    door_state[7] = d_closed
+    _plant.elevator_pos3 = 22
+    _plant.elevator_pos2 = 22
+    _plant.elevator_pos1 = 22
+    _controller.on_some_floor = FALSE
+  -> State: 16.36 <-
+    elevator_pos = 22
+    on_floor[7] = FALSE
+    _plant.elevator_pos3 = 23
+    _plant.elevator_pos2 = 23
+    _plant.elevator_pos1 = 23
+  -> State: 16.37 <-
+    elevator_pos = 23
+    _plant.elevator_pos3 = 24
+    _plant.elevator_pos2 = 24
+    _plant.elevator_pos1 = 24
+    _controller.need_stop = TRUE
+    _controller.on_some_floor = TRUE
+  -> State: 16.38 <-
+    door_timer = 4
+    elevator_pos = 24
+    open[8] = TRUE
+    on_floor[8] = TRUE
+    up = FALSE
+  -> State: 16.39 <-
+    door_timer = 3
+    door_closed[8] = FALSE
+    door_state[8] = d_opening
+    _controller.call8 = FALSE
+  -> State: 16.40 <-
+    door_timer = 2
+    button[8] = FALSE
+    call[8] = FALSE
+    door_open[8] = TRUE
+    door_state[8] = d_open
+  -> State: 16.41 <-
+    door_timer = 1
+  -> State: 16.42 <-
+    door_timer = 0
+    open[8] = FALSE
+  -> State: 16.43 <-
+    door_open[8] = FALSE
+    door_state[8] = d_closing
+    _controller.need_stop = FALSE
+  -> State: 16.44 <-
+    down = TRUE
+    door_closed[8] = TRUE
+    door_state[8] = d_closed
+    _plant.elevator_pos3 = 23
+    _plant.elevator_pos2 = 23
+    _plant.elevator_pos1 = 23
+    _controller.on_some_floor = FALSE
+  -> State: 16.45 <-
+    elevator_pos = 23
+    on_floor[8] = FALSE
+    _plant.elevator_pos3 = 22
+    _plant.elevator_pos2 = 22
+    _plant.elevator_pos1 = 22
+  -> State: 16.46 <-
+    elevator_pos = 22
+    _plant.elevator_pos3 = 21
+    _plant.elevator_pos2 = 21
+    _plant.elevator_pos1 = 21
+    _controller.on_some_floor = TRUE
+  -> State: 16.47 <-
+    elevator_pos = 21
+    on_floor[7] = TRUE
+    _plant.elevator_pos3 = 20
+    _plant.elevator_pos2 = 20
+    _plant.elevator_pos1 = 20
+    _controller.on_some_floor = FALSE
+    _controller.call8 = TRUE
+    _controller.call7 = TRUE
+  -> State: 16.48 <-
+    elevator_pos = 20
+    on_floor[7] = FALSE
+    button[7] = TRUE
+    call[7] = TRUE
+    button[8] = TRUE
+    call[8] = TRUE
+    user_floor_button[7] = TRUE
+    user_cabin_button[7] = TRUE
+    user_floor_button[8] = TRUE
+    user_cabin_button[8] = TRUE
+    _plant.elevator_pos3 = 19
+    _plant.elevator_pos2 = 19
+    _plant.elevator_pos1 = 19
+  -> State: 16.49 <-
+    elevator_pos = 19
+    user_floor_button[7] = FALSE
+    user_cabin_button[7] = FALSE
+    user_floor_button[8] = FALSE
+    user_cabin_button[8] = FALSE
+    _plant.elevator_pos3 = 18
+    _plant.elevator_pos2 = 18
+    _plant.elevator_pos1 = 18
+    _controller.on_some_floor = TRUE
+  -> State: 16.50 <-
+    on_floor[6] = TRUE
+    elevator_pos = 18
+    up = TRUE
+    down = FALSE
+    _plant.elevator_pos3 = 19
+    _plant.elevator_pos2 = 19
+    _plant.elevator_pos1 = 19
+
+-- specification  X ( G (!door_open[8] ->  X (door_open[8] ->  X (door_open[8] &  X (door_open[8] &  X !door_open[8])))))  is true
+-- specification  X ( G (door_open[1] ->  X ((!door_open[1] & (user_floor_button[1] | user_cabin_button[1])) ->  X ( X door_open[1]))))  is true
+    
+-- specification  G (plant.CONT_ButtonPressed0 ->  F (((plant.CONT_CarAtFloor0 | !plant.CONT_ButtonPressed0) | plant.CONT_ButtonPressed1) | plant.CONT_ButtonPressed2))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 4.1 <-
+    DoMotorUp = FALSE
+    DoMotorDown = FALSE
+    DoOpenDoor0 = FALSE
+    DoOpenDoor1 = FALSE
+    DoOpenDoor2 = FALSE
+    NoDirChange = FALSE
+    plant.output_ButtonPressed0 = 1
+    plant.output_ButtonPressed1 = 1
+    plant.output_ButtonPressed2 = 1
+    plant.output_PanelButtonPressed0 = 0
+    plant.output_PanelButtonPressed1 = 0
+    plant.output_PanelButtonPressed2 = 0
+    plant.output_CarAtFloor0 = 1
+    plant.output_CarAtFloor1 = 0
+    plant.output_CarAtFloor2 = 0
+    plant.output_DoorClosed0 = 1
+    plant.output_DoorClosed1 = 1
+    plant.output_DoorClosed2 = 1
+    plant.output_Position = 4
+    plant.CONT_ButtonPressed0 = TRUE
+    plant.CONT_ButtonPressed1 = TRUE
+    plant.CONT_ButtonPressed2 = TRUE
+    plant.CONT_PanelButtonPressed0 = FALSE
+    plant.CONT_PanelButtonPressed1 = FALSE
+    plant.CONT_PanelButtonPressed2 = FALSE
+    plant.CONT_CarAtFloor0 = TRUE
+    plant.CONT_CarAtFloor1 = FALSE
+    plant.CONT_CarAtFloor2 = FALSE
+    plant.CONT_DoorClosed0 = TRUE
+    plant.CONT_DoorClosed1 = TRUE
+    plant.CONT_DoorClosed2 = TRUE
+    plant.CONT_Position = 419
+    plant.loop_executed = FALSE
+    need_stop = TRUE
+    is_requested = TRUE
+    plant.unsupported = FALSE
+  -> State: 4.2 <-
+    DoMotorUp = TRUE
+    plant.output_ButtonPressed0 = 0
+    plant.CONT_ButtonPressed0 = FALSE
+    need_stop = FALSE
+  -> State: 4.3 <-
+    DoMotorUp = FALSE
+    plant.output_ButtonPressed1 = 0
+    plant.output_ButtonPressed2 = 0
+    plant.output_CarAtFloor0 = 0
+    plant.output_Position = 3
+    plant.CONT_ButtonPressed1 = FALSE
+    plant.CONT_ButtonPressed2 = FALSE
+    plant.CONT_CarAtFloor0 = FALSE
+    plant.CONT_Position = 227
+    is_requested = FALSE
+  -> State: 4.4 <-
+    plant.output_ButtonPressed0 = 1
+    plant.CONT_ButtonPressed0 = TRUE
+    is_requested = TRUE
+  -- Loop starts here
+  -> State: 4.5 <-
+    plant.loop_executed = TRUE
+  -> State: 4.6 <-
+-- specification  G (plant.CONT_ButtonPressed1 ->  F (((plant.CONT_CarAtFloor1 | !plant.CONT_ButtonPressed1) | plant.CONT_ButtonPressed0) | plant.CONT_ButtonPressed2))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 5.1 <-
+    DoMotorUp = FALSE
+    DoMotorDown = FALSE
+    DoOpenDoor0 = FALSE
+    DoOpenDoor1 = FALSE
+    DoOpenDoor2 = FALSE
+    NoDirChange = FALSE
+    plant.output_ButtonPressed0 = 1
+    plant.output_ButtonPressed1 = 1
+    plant.output_ButtonPressed2 = 1
+    plant.output_PanelButtonPressed0 = 0
+    plant.output_PanelButtonPressed1 = 0
+    plant.output_PanelButtonPressed2 = 0
+    plant.output_CarAtFloor0 = 1
+    plant.output_CarAtFloor1 = 0
+    plant.output_CarAtFloor2 = 0
+    plant.output_DoorClosed0 = 1
+    plant.output_DoorClosed1 = 1
+    plant.output_DoorClosed2 = 1
+    plant.output_Position = 4
+    plant.CONT_ButtonPressed0 = TRUE
+    plant.CONT_ButtonPressed1 = TRUE
+    plant.CONT_ButtonPressed2 = TRUE
+    plant.CONT_PanelButtonPressed0 = FALSE
+    plant.CONT_PanelButtonPressed1 = FALSE
+    plant.CONT_PanelButtonPressed2 = FALSE
+    plant.CONT_CarAtFloor0 = TRUE
+    plant.CONT_CarAtFloor1 = FALSE
+    plant.CONT_CarAtFloor2 = FALSE
+    plant.CONT_DoorClosed0 = TRUE
+    plant.CONT_DoorClosed1 = TRUE
+    plant.CONT_DoorClosed2 = TRUE
+    plant.CONT_Position = 419
+    plant.loop_executed = FALSE
+    need_stop = TRUE
+    is_requested = TRUE
+    plant.unsupported = FALSE
+  -> State: 5.2 <-
+    DoOpenDoor0 = TRUE
+    plant.loop_executed = TRUE
+  -> State: 5.3 <-
+    DoOpenDoor0 = FALSE
+    plant.output_ButtonPressed0 = 0
+    plant.output_ButtonPressed2 = 0
+    plant.output_DoorClosed0 = 0
+    plant.CONT_ButtonPressed0 = FALSE
+    plant.CONT_ButtonPressed2 = FALSE
+    plant.CONT_DoorClosed0 = FALSE
+    plant.loop_executed = FALSE
+  -- Loop starts here
+  -> State: 5.4 <-
+    plant.loop_executed = TRUE
+  -> State: 5.5 <-
+-- specification  G (plant.CONT_ButtonPressed2 ->  F (((plant.CONT_CarAtFloor2 | !plant.CONT_ButtonPressed2) | plant.CONT_ButtonPressed0) | plant.CONT_ButtonPressed1))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 6.1 <-
+    DoMotorUp = FALSE
+    DoMotorDown = FALSE
+    DoOpenDoor0 = FALSE
+    DoOpenDoor1 = FALSE
+    DoOpenDoor2 = FALSE
+    NoDirChange = FALSE
+    plant.output_ButtonPressed0 = 1
+    plant.output_ButtonPressed1 = 1
+    plant.output_ButtonPressed2 = 1
+    plant.output_PanelButtonPressed0 = 0
+    plant.output_PanelButtonPressed1 = 0
+    plant.output_PanelButtonPressed2 = 0
+    plant.output_CarAtFloor0 = 1
+    plant.output_CarAtFloor1 = 0
+    plant.output_CarAtFloor2 = 0
+    plant.output_DoorClosed0 = 1
+    plant.output_DoorClosed1 = 1
+    plant.output_DoorClosed2 = 1
+    plant.output_Position = 4
+    plant.CONT_ButtonPressed0 = TRUE
+    plant.CONT_ButtonPressed1 = TRUE
+    plant.CONT_ButtonPressed2 = TRUE
+    plant.CONT_PanelButtonPressed0 = FALSE
+    plant.CONT_PanelButtonPressed1 = FALSE
+    plant.CONT_PanelButtonPressed2 = FALSE
+    plant.CONT_CarAtFloor0 = TRUE
+    plant.CONT_CarAtFloor1 = FALSE
+    plant.CONT_CarAtFloor2 = FALSE
+    plant.CONT_DoorClosed0 = TRUE
+    plant.CONT_DoorClosed1 = TRUE
+    plant.CONT_DoorClosed2 = TRUE
+    plant.CONT_Position = 419
+    plant.loop_executed = FALSE
+    need_stop = TRUE
+    is_requested = TRUE
+    plant.unsupported = FALSE
+  -> State: 6.2 <-
+    DoOpenDoor0 = TRUE
+    plant.loop_executed = TRUE
+  -> State: 6.3 <-
+    DoOpenDoor0 = FALSE
+    plant.output_ButtonPressed0 = 0
+    plant.output_ButtonPressed1 = 0
+    plant.output_DoorClosed0 = 0
+    plant.CONT_ButtonPressed0 = FALSE
+    plant.CONT_ButtonPressed1 = FALSE
+    plant.CONT_DoorClosed0 = FALSE
+    plant.loop_executed = FALSE
+  -- Loop starts here
+  -> State: 6.4 <-
+    plant.loop_executed = TRUE
+  -> State: 6.5 <-
+
+
+-- specification  G (plant.CONT_ButtonPressed0 ->  F plant.CONT_CarAtFloor0)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 1.1 <-
+    DoMotorUp = FALSE
+    DoMotorDown = FALSE
+    DoOpenDoor0 = FALSE
+    DoOpenDoor1 = FALSE
+    DoOpenDoor2 = FALSE
+    NoDirChange = FALSE
+    plant.output_ButtonPressed0 = 1
+    plant.output_ButtonPressed1 = 1
+    plant.output_ButtonPressed2 = 1
+    plant.output_PanelButtonPressed0 = 0
+    plant.output_PanelButtonPressed1 = 0
+    plant.output_PanelButtonPressed2 = 0
+    plant.output_CarAtFloor0 = 1
+    plant.output_CarAtFloor1 = 0
+    plant.output_CarAtFloor2 = 0
+    plant.output_DoorClosed0 = 1
+    plant.output_DoorClosed1 = 1
+    plant.output_DoorClosed2 = 1
+    plant.output_Position = 4
+    plant.CONT_ButtonPressed0 = TRUE
+    plant.CONT_ButtonPressed1 = TRUE
+    plant.CONT_ButtonPressed2 = TRUE
+    plant.CONT_PanelButtonPressed0 = FALSE
+    plant.CONT_PanelButtonPressed1 = FALSE
+    plant.CONT_PanelButtonPressed2 = FALSE
+    plant.CONT_CarAtFloor0 = TRUE
+    plant.CONT_CarAtFloor1 = FALSE
+    plant.CONT_CarAtFloor2 = FALSE
+    plant.CONT_DoorClosed0 = TRUE
+    plant.CONT_DoorClosed1 = TRUE
+    plant.CONT_DoorClosed2 = TRUE
+    plant.CONT_Position = 419
+    plant.loop_executed = FALSE
+    need_stop = TRUE
+    is_requested = TRUE
+    plant.unsupported = FALSE
+  -> State: 1.2 <-
+    DoMotorUp = TRUE
+    plant.output_ButtonPressed0 = 0
+    plant.CONT_ButtonPressed0 = FALSE
+    need_stop = FALSE
+  -> State: 1.3 <-
+    plant.output_ButtonPressed0 = 1
+    plant.output_CarAtFloor0 = 0
+    plant.output_Position = 3
+    plant.CONT_ButtonPressed0 = TRUE
+    plant.CONT_CarAtFloor0 = FALSE
+    plant.CONT_Position = 227
+  -> State: 1.4 <-
+    plant.output_ButtonPressed0 = 0
+    plant.CONT_ButtonPressed0 = FALSE
+  -> State: 1.5 <-
+    plant.output_ButtonPressed1 = 0
+    plant.output_CarAtFloor1 = 1
+    plant.output_Position = 2
+    plant.CONT_ButtonPressed1 = FALSE
+    plant.CONT_CarAtFloor1 = TRUE
+    plant.CONT_Position = 225
+  -- Loop starts here
+  -> State: 1.6 <-
+    plant.output_ButtonPressed1 = 1
+    plant.output_CarAtFloor1 = 0
+    plant.output_Position = 1
+    plant.CONT_ButtonPressed1 = TRUE
+    plant.CONT_CarAtFloor1 = FALSE
+    plant.CONT_Position = 101
+  -> State: 1.7 <-
+    DoMotorUp = FALSE
+    DoMotorDown = TRUE
+    plant.output_ButtonPressed2 = 0
+    plant.output_CarAtFloor2 = 1
+    plant.output_Position = 0
+    plant.CONT_ButtonPressed2 = FALSE
+    plant.CONT_CarAtFloor2 = TRUE
+    plant.CONT_Position = 30
+  -> State: 1.8 <-
+    plant.output_ButtonPressed2 = 1
+    plant.output_CarAtFloor2 = 0
+    plant.output_Position = 1
+    plant.CONT_ButtonPressed2 = TRUE
+    plant.CONT_CarAtFloor2 = FALSE
+    plant.CONT_Position = 101
+  -> State: 1.9 <-
+    DoMotorUp = TRUE
+    DoMotorDown = FALSE
+    plant.output_ButtonPressed1 = 0
+    plant.output_CarAtFloor1 = 1
+    plant.output_Position = 2
+    plant.CONT_ButtonPressed1 = FALSE
+    plant.CONT_CarAtFloor1 = TRUE
+    plant.CONT_Position = 225
+  -> State: 1.10 <-
+    plant.output_ButtonPressed1 = 1
+    plant.output_CarAtFloor1 = 0
+    plant.output_Position = 1
+    plant.CONT_ButtonPressed1 = TRUE
+    plant.CONT_CarAtFloor1 = FALSE
+    plant.CONT_Position = 101
+-- specification  G (plant.CONT_ButtonPressed1 ->  F plant.CONT_CarAtFloor1)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 2.1 <-
+    DoMotorUp = FALSE
+    DoMotorDown = FALSE
+    DoOpenDoor0 = FALSE
+    DoOpenDoor1 = FALSE
+    DoOpenDoor2 = FALSE
+    NoDirChange = FALSE
+    plant.output_ButtonPressed0 = 1
+    plant.output_ButtonPressed1 = 1
+    plant.output_ButtonPressed2 = 1
+    plant.output_PanelButtonPressed0 = 0
+    plant.output_PanelButtonPressed1 = 0
+    plant.output_PanelButtonPressed2 = 0
+    plant.output_CarAtFloor0 = 1
+    plant.output_CarAtFloor1 = 0
+    plant.output_CarAtFloor2 = 0
+    plant.output_DoorClosed0 = 1
+    plant.output_DoorClosed1 = 1
+    plant.output_DoorClosed2 = 1
+    plant.output_Position = 4
+    plant.CONT_ButtonPressed0 = TRUE
+    plant.CONT_ButtonPressed1 = TRUE
+    plant.CONT_ButtonPressed2 = TRUE
+    plant.CONT_PanelButtonPressed0 = FALSE
+    plant.CONT_PanelButtonPressed1 = FALSE
+    plant.CONT_PanelButtonPressed2 = FALSE
+    plant.CONT_CarAtFloor0 = TRUE
+    plant.CONT_CarAtFloor1 = FALSE
+    plant.CONT_CarAtFloor2 = FALSE
+    plant.CONT_DoorClosed0 = TRUE
+    plant.CONT_DoorClosed1 = TRUE
+    plant.CONT_DoorClosed2 = TRUE
+    plant.CONT_Position = 419
+    plant.loop_executed = FALSE
+    need_stop = TRUE
+    is_requested = TRUE
+    plant.unsupported = FALSE
+  -> State: 2.2 <-
+    DoMotorUp = TRUE
+    plant.output_ButtonPressed0 = 0
+    plant.CONT_ButtonPressed0 = FALSE
+    need_stop = FALSE
+  -> State: 2.3 <-
+    plant.output_ButtonPressed0 = 1
+    plant.output_ButtonPressed1 = 0
+    plant.output_CarAtFloor0 = 0
+    plant.output_Position = 3
+    plant.CONT_ButtonPressed0 = TRUE
+    plant.CONT_ButtonPressed1 = FALSE
+    plant.CONT_CarAtFloor0 = FALSE
+    plant.CONT_Position = 227
+  -> State: 2.4 <-
+    DoMotorUp = FALSE
+    plant.output_ButtonPressed0 = 0
+    plant.output_ButtonPressed2 = 0
+    plant.CONT_ButtonPressed0 = FALSE
+    plant.CONT_ButtonPressed2 = FALSE
+    is_requested = FALSE
+  -- Loop starts here
+  -> State: 2.5 <-
+    plant.output_ButtonPressed0 = 1
+    plant.output_ButtonPressed2 = 1
+    plant.CONT_ButtonPressed0 = TRUE
+    plant.CONT_ButtonPressed2 = TRUE
+    is_requested = TRUE
+  -> State: 2.6 <-
+    plant.output_ButtonPressed2 = 0
+    plant.CONT_ButtonPressed2 = FALSE
+  -> State: 2.7 <-
+    plant.output_ButtonPressed2 = 1
+    plant.CONT_ButtonPressed2 = TRUE
+-- specification  G (plant.CONT_ButtonPressed2 ->  F plant.CONT_CarAtFloor2)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 3.1 <-
+    DoMotorUp = FALSE
+    DoMotorDown = FALSE
+    DoOpenDoor0 = FALSE
+    DoOpenDoor1 = FALSE
+    DoOpenDoor2 = FALSE
+    NoDirChange = FALSE
+    plant.output_ButtonPressed0 = 1
+    plant.output_ButtonPressed1 = 1
+    plant.output_ButtonPressed2 = 1
+    plant.output_PanelButtonPressed0 = 0
+    plant.output_PanelButtonPressed1 = 0
+    plant.output_PanelButtonPressed2 = 0
+    plant.output_CarAtFloor0 = 1
+    plant.output_CarAtFloor1 = 0
+    plant.output_CarAtFloor2 = 0
+    plant.output_DoorClosed0 = 1
+    plant.output_DoorClosed1 = 1
+    plant.output_DoorClosed2 = 1
+    plant.output_Position = 4
+    plant.CONT_ButtonPressed0 = TRUE
+    plant.CONT_ButtonPressed1 = TRUE
+    plant.CONT_ButtonPressed2 = TRUE
+    plant.CONT_PanelButtonPressed0 = FALSE
+    plant.CONT_PanelButtonPressed1 = FALSE
+    plant.CONT_PanelButtonPressed2 = FALSE
+    plant.CONT_CarAtFloor0 = TRUE
+    plant.CONT_CarAtFloor1 = FALSE
+    plant.CONT_CarAtFloor2 = FALSE
+    plant.CONT_DoorClosed0 = TRUE
+    plant.CONT_DoorClosed1 = TRUE
+    plant.CONT_DoorClosed2 = TRUE
+    plant.CONT_Position = 419
+    plant.loop_executed = FALSE
+    need_stop = TRUE
+    is_requested = TRUE
+    plant.unsupported = FALSE
+  -> State: 3.2 <-
+    DoMotorUp = TRUE
+    plant.output_ButtonPressed0 = 0
+    plant.CONT_ButtonPressed0 = FALSE
+    need_stop = FALSE
+  -> State: 3.3 <-
+    plant.output_ButtonPressed0 = 1
+    plant.output_ButtonPressed2 = 0
+    plant.output_CarAtFloor0 = 0
+    plant.output_Position = 3
+    plant.CONT_ButtonPressed0 = TRUE
+    plant.CONT_ButtonPressed2 = FALSE
+    plant.CONT_CarAtFloor0 = FALSE
+    plant.CONT_Position = 227
+  -> State: 3.4 <-
+    DoMotorUp = FALSE
+    DoMotorDown = TRUE
+    plant.output_ButtonPressed1 = 0
+    plant.output_CarAtFloor1 = 1
+    plant.output_Position = 2
+    plant.CONT_ButtonPressed1 = FALSE
+    plant.CONT_CarAtFloor1 = TRUE
+    plant.CONT_Position = 225
+  -- Loop starts here
+  -> State: 3.5 <-
+    plant.output_ButtonPressed1 = 1
+    plant.output_CarAtFloor1 = 0
+    plant.output_Position = 3
+    plant.CONT_ButtonPressed1 = TRUE
+    plant.CONT_CarAtFloor1 = FALSE
+    plant.CONT_Position = 227
+  -> State: 3.6 <-
+    DoMotorUp = TRUE
+    DoMotorDown = FALSE
+    plant.output_ButtonPressed0 = 0
+    plant.output_CarAtFloor0 = 1
+    plant.output_Position = 4
+    plant.CONT_ButtonPressed0 = FALSE
+    plant.CONT_CarAtFloor0 = TRUE
+    plant.CONT_Position = 419
+  -> State: 3.7 <-
+    plant.output_ButtonPressed0 = 1
+    plant.output_CarAtFloor0 = 0
+    plant.output_Position = 3
+    plant.CONT_ButtonPressed0 = TRUE
+    plant.CONT_CarAtFloor0 = FALSE
+    plant.CONT_Position = 227
+  -> State: 3.8 <-
+    DoMotorUp = FALSE
+    DoMotorDown = TRUE
+    plant.output_ButtonPressed1 = 0
+    plant.output_CarAtFloor1 = 1
+    plant.output_Position = 2
+    plant.CONT_ButtonPressed1 = FALSE
+    plant.CONT_CarAtFloor1 = TRUE
+    plant.CONT_Position = 225
+  -> State: 3.9 <-
+    plant.output_ButtonPressed1 = 1
+    plant.output_CarAtFloor1 = 0
+    plant.output_Position = 3
+    plant.CONT_ButtonPressed1 = TRUE
+    plant.CONT_CarAtFloor1 = FALSE
+    plant.CONT_Position = 227
+
+-- specification !( F ( G DoMotorDown))  is true
+
+-- specification !( F ( G DoMotorUp))  is true
+
+-- specification (( G ( F r[-1][2]) xor r[1][4]) xnor b)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 6.1 <-
+    x = 0
+    y = -8
+    z = -1
+    b = TRUE
+    r[-1][2] = FALSE
+    r[-1][3] = FALSE
+    r[-1][4] = FALSE
+    r[0][2] = FALSE
+    r[0][3] = FALSE
+    r[0][4] = FALSE
+    r[1][2] = FALSE
+    r[1][3] = FALSE
+    r[1][4] = TRUE
+  -> State: 6.2 <-
+    b = FALSE
+    r[-1][2] = TRUE
+    r[1][4] = FALSE
+  -> State: 6.3 <-
+    b = TRUE
+    r[-1][2] = FALSE
+    r[1][4] = TRUE
+
+-- specification  G (y ->  O x)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 2.1 <-
+    x = FALSE
+    y = TRUE
+    z = FALSE
+    u = 0
+  -> State: 2.2 <-
+    x = TRUE
+    y = FALSE
+    z = TRUE
+  -- Loop starts here
+  -> State: 2.3 <-
+    z = FALSE
+  -> State: 2.4 <-
+-- specification  G (y ->  Y x)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 3.1 <-
+    x = FALSE
+    y = TRUE
+    z = FALSE
+    u = 0
+  -- Loop starts here
+  -> State: 3.2 <-
+    y = FALSE
+    z = TRUE
+  -> State: 3.3 <-
+    x = TRUE
+  -> State: 3.4 <-
+    x = FALSE
+    y = TRUE
+    z = FALSE
+  -> State: 3.5 <-
+    y = FALSE
+    z = TRUE
+-- specification  G (y ->  Z x)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 4.1 <-
+    x = FALSE
+    y = TRUE
+    z = FALSE
+    u = 0
+  -> State: 4.2 <-
+    z = TRUE
+  -- Loop starts here
+  -> State: 4.3 <-
+    x = TRUE
+    y = FALSE
+  -> State: 4.4 <-
+    x = FALSE
+    y = TRUE
+    z = FALSE
+  -> State: 4.5 <-
+    x = TRUE
+    y = FALSE
+    z = TRUE
+-- specification  G (y ->  H x)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 5.1 <-
+    x = TRUE
+    y = TRUE
+    z = FALSE
+    u = 0
+  -> State: 5.2 <-
+    x = FALSE
+  -- Loop starts here
+  -> State: 5.3 <-
+    y = FALSE
+    z = TRUE
+  -> State: 5.4 <-
+    x = TRUE
+  -> State: 5.5 <-
+    z = FALSE
+  -> State: 5.6 <-
+    x = FALSE
+    z = TRUE
+-- specification (y ->  H ( Y x))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 1.1 <-
+    x = FALSE
+    y = TRUE
+    z = FALSE
+    u = 0
+  -- Loop starts here
+  -> State: 1.2 <-
+    y = FALSE
+    z = TRUE
+  -> State: 1.3 <-
+    x = TRUE
+  -> State: 1.4 <-
+    x = FALSE
+    y = TRUE
+    z = FALSE
+  -> State: 1.5 <-
+    y = FALSE
+    z = TRUE
+
+-- specification (y ->  H ( Y ( Z x)))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 1.1 <-
+    x = FALSE
+    y = TRUE
+    z = FALSE
+    u = 0
+  -- Loop starts here
+  -> State: 1.2 <-
+    y = FALSE
+    z = TRUE
+  -> State: 1.3 <-
+    x = TRUE
+  -> State: 1.4 <-
+    x = FALSE
+    y = TRUE
+    z = FALSE
+  -> State: 1.5 <-
+    y = FALSE
+    z = TRUE
+
+-- specification (y ->  O ( H ( Y ( Z x))))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 1.1 <-
+    x = FALSE
+    y = TRUE
+    z = FALSE
+    u = 0
+  -- Loop starts here
+  -> State: 1.2 <-
+    y = FALSE
+    z = TRUE
+  -> State: 1.3 <-
+    x = TRUE
+  -> State: 1.4 <-
+    x = FALSE
+    y = TRUE
+    z = FALSE
+  -> State: 1.5 <-
+    y = FALSE
+    z = TRUE
+
+-- specification  G ( X (y ->  O ( H ( Y ( Z x)))))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 6.1 <-
+    x = FALSE
+    y = TRUE
+    z = FALSE
+    u = 0
+  -- Loop starts here
+  -> State: 6.2 <-
+    z = TRUE
+  -> State: 6.3 <-
+    x = TRUE
+  -> State: 6.4 <-
+    x = FALSE
+    z = FALSE
+  -> State: 6.5 <-
+    z = TRUE
+-- specification  G ( X ((x & y) ->  Z ( H ( O ( Y x)))))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 7.1 <-
+    x = FALSE
+    y = TRUE
+    z = FALSE
+    u = 0
+  -> State: 7.2 <-
+    x = TRUE
+    z = TRUE
+  -> State: 7.3 <-
+    z = FALSE
+  -- Loop starts here
+  -> State: 7.4 <-
+  -> State: 7.5 <-
+
+
+*** This is NuSMV 2.6.0 (compiled on Mon Nov 30 10:05:37 2015)
+*** Enabled addons are: compass
+*** For more information on NuSMV see <http://nusmv.fbk.eu>
+*** or email to <nusmv-users@list.fbk.eu>.
+*** Please report bugs to <Please report bugs to <nusmv-users@fbk.eu>>
+
+*** Copyright (c) 2010-2014, Fondazione Bruno Kessler
+
+*** This version of NuSMV is linked to the CUDD library version 2.4.1
+*** Copyright (c) 1995-2004, Regents of the University of Colorado
+
+*** This version of NuSMV is linked to the MiniSat SAT solver. 
+*** See http://minisat.se/MiniSat.html
+*** Copyright (c) 2003-2006, Niklas Een, Niklas Sorensson
+*** Copyright (c) 2007-2010, Niklas Sorensson
+
+
+-- specification  X (y ->  O ( H ( Y ( Z x))))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 1.1 <-
+    x = FALSE
+    y = TRUE
+    z = FALSE
+    u = 0
+  -- Loop starts here
+  -> State: 1.2 <-
+    z = TRUE
+  -> State: 1.3 <-
+    x = TRUE
+  -> State: 1.4 <-
+    x = FALSE
+    z = FALSE
+  -> State: 1.5 <-
+    z = TRUE
+
+-- specification  X ( Y ( X ( Z u < 5)))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 1.1 <-
+    x = FALSE
+    y = TRUE
+    z = FALSE
+    u = 7
+  -- Loop starts here
+  -> State: 1.2 <-
+    y = FALSE
+    z = TRUE
+    u = 3
+  -> State: 1.3 <-
+    x = TRUE
+  -> State: 1.4 <-
+    z = FALSE
+    u = 7
+  -> State: 1.5 <-
+    x = FALSE
+    z = TRUE
+    u = 3
+
+-- specification  G ( X (y ->  O ( H ( Y ( Z x)))))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 6.1 <-
+    x = FALSE
+    y = TRUE
+    z = FALSE
+    u = 0
+  -- Loop starts here
+  -> State: 6.2 <-
+    z = TRUE
+  -> State: 6.3 <-
+    x = TRUE
+  -> State: 6.4 <-
+    x = FALSE
+    z = FALSE
+  -> State: 6.5 <-
+    z = TRUE
+
+
+*** This is NuSMV 2.6.0 (compiled on Mon Nov 30 10:05:37 2015)
+*** Enabled addons are: compass
+*** For more information on NuSMV see <http://nusmv.fbk.eu>
+*** or email to <nusmv-users@list.fbk.eu>.
+*** Please report bugs to <Please report bugs to <nusmv-users@fbk.eu>>
+
+*** Copyright (c) 2010-2014, Fondazione Bruno Kessler
+
+*** This version of NuSMV is linked to the CUDD library version 2.4.1
+*** Copyright (c) 1995-2004, Regents of the University of Colorado
+
+*** This version of NuSMV is linked to the MiniSat SAT solver. 
+*** See http://minisat.se/MiniSat.html
+*** Copyright (c) 2003-2006, Niklas Een, Niklas Sorensson
+*** Copyright (c) 2007-2010, Niklas Sorensson
+
+-- no counterexample found with bound 0
+-- specification (TRUE U ( X y))    is false
+-- as demonstrated by the following execution sequence
+Trace Description: BMC Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 1.1 <-
+    y = FALSE
+  -> State: 1.2 <-
+
+
+-- no counterexample found with bound 0
+-- no counterexample found with bound 1
+-- specification  G ( X ( X ( X (( G x &  F ( X y)) | (z & !(!z U !z))))))    is false
+-- as demonstrated by the following execution sequence
+Trace Description: BMC Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 1.1 <-
+    x = TRUE
+    y = TRUE
+    z = TRUE
+  -> State: 1.2 <-
+    x = FALSE
+    z = FALSE
+  -> State: 1.3 <-
+    x = TRUE
+    z = TRUE
+  
+-- no counterexample found with bound 0
+-- no counterexample found with bound 1
+-- specification  G ( X ( X ( X ((FALSE | ( G ( G ( F x)) & (TRUE U ( X ( F y))))) | (z & !(!z U !z))))))    is false
+-- as demonstrated by the following execution sequence
+Trace Description: BMC Counterexample 
+Trace Type: Counterexample 
+  -> State: 2.1 <-
+    x = TRUE
+    y = TRUE
+    z = FALSE
+    u = 0
+  -- Loop starts here
+  -> State: 2.2 <-
+    y = FALSE
+  -> State: 2.3 <-
+-- no counterexample found with bound 0
+-- specification !( X ( X ( X ((x | y) | z))))    is false
+-- as demonstrated by the following execution sequence
+Trace Description: BMC Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 1.1 <-
+    x = FALSE
+    y = TRUE
+    z = TRUE
+    u = 0
+  -> State: 1.2 <-
+-- specification u.v.w = 2    is false
+-- as demonstrated by the following execution sequence
+Trace Description: BMC Counterexample 
+Trace Type: Counterexample 
+  -> State: 3.1 <-
+    x = FALSE
+    y = TRUE
+    z = FALSE
+    u.v.w = 0
+-- specification  G u.v.w = 2    is false
+-- as demonstrated by the following execution sequence
+Trace Description: BMC Counterexample 
+Trace Type: Counterexample 
+  -> State: 4.1 <-
+    x = FALSE
+    y = TRUE
+    z = FALSE
+    u.v.w = 0
+
+-- specification (((( X x != -(-9) | b) | x = 0) | (6 >= z U ( G ( X (x * 2 + 2 / y) - z < 10 * x)))) | 5 mod 2 >= 3)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 4.1 <-
+    x = 1
+    y = -8
+    z = -1
+    b = FALSE
+  -> State: 4.2 <-
+    x = 9
+  -> State: 4.3 <-
+    x = 0
+    y = -7
+    z = 0
+  -> State: 4.4 <-
+    x = 1
+    y = -8
+    z = -1
+-- specification ((b | x = 0) | (6 >= z U ( G ( X (x * 2 + 2 / y) - z < 10 * x))))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 3.1 <-
+    x = 1
+    y = -8
+    z = -1
+    b = FALSE
+  -> State: 3.2 <-
+    x = 0
+    y = -7
+    z = 0
+  -> State: 3.3 <-
+    x = 1
+    y = -8
+    z = -1
+-- specification  G ( X (x * 2 + 2 / y) - z < 10 * x)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 2.1 <-
+    x = 0
+    y = -8
+    z = -1
+    b = FALSE
+  -> State: 2.2 <-
+-- specification x + 2 < 10  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 1.1 <-
+    x = 9
+    y = -8
+    z = -1
+    b = FALSE
+  -> State: 1.2 <-
+  
+-- specification (FALSE | (TRUE & FALSE))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 1.1 <-
+    b = FALSE
+
+-- specification FALSE  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 1.1 <-
+    x = 0
+    y = -8
+    z = -1
+    b = FALSE
+
+-- specification ((b xor b) xor b)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 2.1 <-
+    x = 0
+    y = -8
+    z = -1
+    b = FALSE
+    r[-1][2] = FALSE
+    r[-1][3] = FALSE
+    r[-1][4] = FALSE
+    r[0][2] = FALSE
+    r[0][3] = FALSE
+    r[0][4] = FALSE
+    r[1][2] = FALSE
+    r[1][3] = FALSE
+    r[1][4] = FALSE
+  -> State: 2.2 <-
+-- specification ((b <-> b) <-> b)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 3.1 <-
+    x = 0
+    y = -8
+    z = -1
+    b = FALSE
+    r[-1][2] = FALSE
+    r[-1][3] = FALSE
+    r[-1][4] = FALSE
+    r[0][2] = FALSE
+    r[0][3] = FALSE
+    r[0][4] = FALSE
+    r[1][2] = FALSE
+    r[1][3] = FALSE
+    r[1][4] = FALSE
+  -> State: 3.2 <-
+
+-- specification ((b xnor b) xnor b)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 1.1 <-
+    x = 0
+    y = -8
+    z = -1
+    b = FALSE
+    r[-1][2] = FALSE
+    r[-1][3] = FALSE
+    r[-1][4] = FALSE
+    r[0][2] = FALSE
+    r[0][3] = FALSE
+    r[0][4] = FALSE
+    r[1][2] = FALSE
+    r[1][3] = FALSE
+    r[1][4] = FALSE
+  -> State: 1.2 <-
+
+-- specification (b = b) = b  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 1.1 <-
+    x = 0
+    y = -8
+    z = -1
+    b = FALSE
+    r[-1][2] = FALSE
+    r[-1][3] = FALSE
+    r[-1][4] = FALSE
+    r[0][2] = FALSE
+    r[0][3] = FALSE
+    r[0][4] = FALSE
+    r[1][2] = FALSE
+    r[1][3] = FALSE
+    r[1][4] = FALSE
+  -> State: 1.2 <-
+
+
+-- specification  (b ? b : y >= z)   is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 1.1 <-
+    x = 0
+    y = -8
+    z = -1
+    b = FALSE
+    r[-1][2] = FALSE
+    r[-1][3] = FALSE
+    r[-1][4] = FALSE
+    r[0][2] = FALSE
+    r[0][3] = FALSE
+    r[0][4] = FALSE
+    r[1][2] = FALSE
+    r[1][3] = FALSE
+    r[1][4] = FALSE
+  -> State: 1.2 <-
+
+-- specification  F ( (b ? (y < 2 -> !b) : y >= z)  <-> TRUE)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 3.1 <-
+    x = 0
+    y = -8
+    z = -1
+    b = FALSE
+    r[-1][2] = FALSE
+    r[-1][3] = FALSE
+    r[-1][4] = FALSE
+    r[0][2] = FALSE
+    r[0][3] = FALSE
+    r[0][4] = FALSE
+    r[1][2] = FALSE
+    r[1][3] = FALSE
+    r[1][4] = FALSE
+  -> State: 3.2 <-
+
+-- specification  F  (b ? TRUE : FALSE)   is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 1.1 <-
+    x = 0
+    y = -8
+    z = -1
+    b = FALSE
+    r[-1][2] = FALSE
+    r[-1][3] = FALSE
+    r[-1][4] = FALSE
+    r[0][2] = FALSE
+    r[0][3] = FALSE
+    r[0][4] = FALSE
+    r[1][2] = FALSE
+    r[1][3] = FALSE
+    r[1][4] = FALSE
+  -> State: 1.2 <-
+
+-- specification (b | x = 0)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 1.1 <-
+    x = 1
+    y = -8
+    z = -1
+    b = FALSE
+    r[-1][2] = FALSE
+    r[-1][3] = FALSE
+    r[-1][4] = FALSE
+    r[0][2] = FALSE
+    r[0][3] = FALSE
+    r[0][4] = FALSE
+    r[1][2] = FALSE
+    r[1][3] = FALSE
+    r[1][4] = FALSE
+  -> State: 1.2 <-
+
+-- specification !b  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 5.1 <-
+    x = 0
+    y = -8
+    z = -1
+    b = TRUE
+    r[-1][2] = FALSE
+    r[-1][3] = FALSE
+    r[-1][4] = FALSE
+    r[0][2] = FALSE
+    r[0][3] = FALSE
+    r[0][4] = FALSE
+    r[1][2] = FALSE
+    r[1][3] = FALSE
+    r[1][4] = FALSE
+  -> State: 5.2 <-
+-- specification !( F  (((r[0][2] <-> b) -> !b) ? x + 1 : x * y)  < -2)  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 8.1 <-
+    x = 3
+    y = -8
+    z = -1
+    b = TRUE
+    r[-1][2] = FALSE
+    r[-1][3] = FALSE
+    r[-1][4] = FALSE
+    r[0][2] = TRUE
+    r[0][3] = FALSE
+    r[0][4] = FALSE
+    r[1][2] = FALSE
+    r[1][3] = FALSE
+    r[1][4] = FALSE
+  -- Loop starts here
+  -> State: 8.2 <-
+    r[0][2] = FALSE
+  -> State: 8.3 <-
+-- specification (!( G b) -> (!b -> b))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -> State: 3.1 <-
+    x = 0
+    y = -8
+    z = -1
+    b = FALSE
+    r[-1][2] = FALSE
+    r[-1][3] = FALSE
+    r[-1][4] = FALSE
+    r[0][2] = FALSE
+    r[0][3] = FALSE
+    r[0][4] = FALSE
+    r[1][2] = FALSE
+    r[1][3] = FALSE
+    r[1][4] = FALSE
+  -- Loop starts here
+  -> State: 3.2 <-
+    b = TRUE
+  -> State: 3.3 <-
+-- specification  (b ? 2 : 5)  > 8  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 3.1 <-
+    x = 0
+    y = -8
+    z = -1
+    b = FALSE
+    r[-1][2] = FALSE
+    r[-1][3] = FALSE
+    r[-1][4] = FALSE
+    r[0][2] = FALSE
+    r[0][3] = FALSE
+    r[0][4] = FALSE
+    r[1][2] = FALSE
+    r[1][3] = FALSE
+    r[1][4] = FALSE
+  -> State: 3.2 <-
+-- specification  (b ?  (!b ? 2 : 3)  : 1)  > 4  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 2.1 <-
+    x = 0
+    y = -8
+    z = -1
+    b = FALSE
+    r[-1][2] = FALSE
+    r[-1][3] = FALSE
+    r[-1][4] = FALSE
+    r[0][2] = FALSE
+    r[0][3] = FALSE
+    r[0][4] = FALSE
+    r[1][2] = FALSE
+    r[1][3] = FALSE
+    r[1][4] = FALSE
+  -> State: 2.2 <-
+
+-- specification (z V (y V ( X u = 0)))  is false
+-- as demonstrated by the following execution sequence
+Trace Description: LTL Counterexample 
+Trace Type: Counterexample 
+  -- Loop starts here
+  -> State: 1.1 <-
+    x = TRUE
+    y = TRUE
+    z = TRUE
+    u = 0
+  -> State: 1.2 <-
+    x = FALSE
+    z = FALSE
+    u = 1
+  -> State: 1.3 <-
+    x = TRUE
+    z = TRUE
+    u = 0

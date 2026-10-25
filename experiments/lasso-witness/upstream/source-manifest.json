@@ -1,0 +1,38 @@
+{
+  "repository": "igor-buzhinsky/nusmv_counterexample_visualizer",
+  "revision": "521fb9a1261c921519abb60a2b98c5c2cd5b321f",
+  "files": [
+    {
+      "sourcePath": "example-input.txt",
+      "localPath": "upstream/example-input.txt",
+      "bytes": 55043,
+      "sha256": "449c0607d964769e503cd57628fb81edd660b2bfc65f89ed343e96b144dc19ee"
+    },
+    {
+      "sourcePath": "LICENSE",
+      "localPath": "upstream/LICENSE",
+      "bytes": 1071,
+      "sha256": "6b218edd7a0460637c8d5e6ac8e090c56e97673c3ad90e5c13c0e8415f5def8d"
+    },
+    {
+      "sourcePath": "src/nusmv_counterexample_visualizer/Reader.java",
+      "localPath": "upstream/Reader.java",
+      "bytes": 6331,
+      "sha256": "766e05dfa22aae9eb14febf3a4ff409a01daf10a1f78cfafdfb0570d4e67a537"
+    },
+    {
+      "sourcePath": "src/nusmv_counterexample_visualizer/Counterexample.java",
+      "localPath": "upstream/Counterexample.java",
+      "bytes": 13317,
+      "sha256": "531697377752724142c7dd5ed822e8d11b776cc6473c95c8880f9e43d62ec71f"
+    }
+  ],
+  "selection": {
+    "path": "upstream/selected-lines-23-37.txt",
+    "source": "upstream/example-input.txt",
+    "firstLine": 23,
+    "lastLine": 37,
+    "bytes": 337,
+    "sha256": "bbb08046f14913f5877c72147a69a729ec78b22e8aef63ade3dec4a19cde30fa"
+  }
+}

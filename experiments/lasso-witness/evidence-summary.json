@@ -1,0 +1,349 @@
+{
+  "kind": "portable-derived-experiment-evidence",
+  "baseRevision": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "upstreamRevision": "521fb9a1261c921519abb60a2b98c5c2cd5b321f",
+  "scope": "authored same-source lasso reading comparison; no checker/parser/LTL evaluation",
+  "sources": [
+    {
+      "path": "README.md",
+      "bytes": 6892,
+      "sha256": "82ef3ec2daa27f58a8234606836ee5f6b8da35c5e8927ae9040e21444c9dc720"
+    },
+    {
+      "path": "audit.mjs",
+      "bytes": 3447,
+      "sha256": "4218efbfb9b5eb1685e9eb2b9363c9f08620ec572c0bfbdda118820289cf2968"
+    },
+    {
+      "path": "baseline.archify.md",
+      "bytes": 2101,
+      "sha256": "f281b35afa80b7c6d8a79f25b725ba5b2baee5c0fa00e5354bf7075bfa802c86"
+    },
+    {
+      "path": "candidate.archify.md",
+      "bytes": 2411,
+      "sha256": "b5843f708f776838d8d14ebf1bca8e28b35e0a47dc0564d69882327987c855f9"
+    },
+    {
+      "path": "lasso.lifecycle.json",
+      "bytes": 2060,
+      "sha256": "27b411728bffa2693ea2fe7e3f9ec62c70a1ad5ef70f68adff59b67a6ba52882"
+    },
+    {
+      "path": "upstream/Counterexample.java",
+      "bytes": 13317,
+      "sha256": "531697377752724142c7dd5ed822e8d11b776cc6473c95c8880f9e43d62ec71f"
+    },
+    {
+      "path": "upstream/LICENSE",
+      "bytes": 1071,
+      "sha256": "6b218edd7a0460637c8d5e6ac8e090c56e97673c3ad90e5c13c0e8415f5def8d"
+    },
+    {
+      "path": "upstream/Reader.java",
+      "bytes": 6331,
+      "sha256": "766e05dfa22aae9eb14febf3a4ff409a01daf10a1f78cfafdfb0570d4e67a537"
+    },
+    {
+      "path": "upstream/example-input.txt",
+      "bytes": 55043,
+      "sha256": "449c0607d964769e503cd57628fb81edd660b2bfc65f89ed343e96b144dc19ee"
+    },
+    {
+      "path": "upstream/selected-lines-23-37.txt",
+      "bytes": 337,
+      "sha256": "bbb08046f14913f5877c72147a69a729ec78b22e8aef63ade3dec4a19cde30fa"
+    },
+    {
+      "path": "upstream/source-manifest.json",
+      "bytes": 1273,
+      "sha256": "74021cadf2b58acd864a7d32abf71105a17204c7489f1eb6da5f0f36643372c9"
+    }
+  ],
+  "publicRender": [
+    {
+      "type": "lifecycle",
+      "exitCode": 0
+    },
+    {
+      "type": "explainer",
+      "exitCode": 0
+    }
+  ],
+  "finalizes": [
+    {
+      "artifact": {
+        "path": "lasso.html",
+        "bytes": 809530,
+        "sha256": "f400741e34b4593e9eb0fb62094c5192ac54e0fd4cd4fb4d94f004aa984b5663"
+      },
+      "specificationSha256": "27b411728bffa2693ea2fe7e3f9ec62c70a1ad5ef70f68adff59b67a6ba52882",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "status": "pass",
+      "diagnostics": [],
+      "browserCheck": {
+        "requested": true,
+        "ran": true
+      },
+      "visualReview": "not-requested"
+    },
+    {
+      "artifact": {
+        "path": "baseline.html",
+        "bytes": 130582,
+        "sha256": "d8715e3e69a5fa03e6a7e0557371b2d516abe012aa7447c977d2cd23c619f8ae"
+      },
+      "specificationSha256": "f281b35afa80b7c6d8a79f25b725ba5b2baee5c0fa00e5354bf7075bfa802c86",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "status": "pass",
+      "diagnostics": [],
+      "browserCheck": {
+        "requested": true,
+        "ran": true
+      },
+      "visualReview": "not-requested"
+    },
+    {
+      "artifact": {
+        "path": "candidate.html",
+        "bytes": 487742,
+        "sha256": "eef7b2461df217c6e7cae854981925882ba3963a0d4a6f237420fa1f9c6e7395"
+      },
+      "specificationSha256": "b5843f708f776838d8d14ebf1bca8e28b35e0a47dc0564d69882327987c855f9",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "status": "pass",
+      "diagnostics": [],
+      "browserCheck": {
+        "requested": true,
+        "ran": true
+      },
+      "visualReview": "not-requested"
+    }
+  ],
+  "focusedAudit": {
+    "ok": true,
+    "checks": [
+      "four frozen upstream files match recorded bytes and SHA-256",
+      "both pages retain exact selected source bytes",
+      "paired raw-patch tables match, and 1.3 has only reported u=TRUE",
+      "three positions only; closure targets original 1.3 and is labelled a convention",
+      "Explainer freezes the exact standalone native JSON, without a second topology",
+      "all three public HTML artifacts contain no local absolute paths"
+    ]
+  },
+  "failures": [
+    {
+      "candidate": "first-draft.workflow.json",
+      "sha256": "c0305d575c3b2aa3f9bfaff045439a5f7a8631f4cb484ea487ffd057d3f3aa48",
+      "bytes": 2732,
+      "status": "fail",
+      "failedStage": "validate",
+      "gates": {
+        "validate": "fail",
+        "deliver": "not-run",
+        "check": "not-run",
+        "browser-check": "not-run"
+      },
+      "diagnostics": [
+        {
+          "code": "workflow/route-preset-conflict",
+          "message": "Workflow edge \"lasso-closure\" cannot satisfy route preset \"outside-right\": candidate violates perpendicular endpoint-side direction."
+        }
+      ]
+    },
+    {
+      "candidate": "repair1.workflow.json",
+      "sha256": "c9ee6cf35c3a561ff7da67b681cddcbf20dc2f3751531beeebb09bcb2d09a970",
+      "bytes": 2991,
+      "status": "fail",
+      "failedStage": "validate",
+      "gates": {
+        "validate": "fail",
+        "deliver": "not-run",
+        "check": "not-run",
+        "browser-check": "not-run"
+      },
+      "diagnostics": [
+        {
+          "code": "schema/type",
+          "message": "/edges/2/via/0 (id/label: \"lasso-closure\") must be array"
+        },
+        {
+          "code": "schema/type",
+          "message": "/edges/2/via/1 (id/label: \"lasso-closure\") must be array"
+        },
+        {
+          "code": "schema/type",
+          "message": "/edges/2/via/2 (id/label: \"lasso-closure\") must be array"
+        },
+        {
+          "code": "schema/type",
+          "message": "/edges/2/labelAt (id/label: \"lasso-closure\") must be array"
+        }
+      ]
+    },
+    {
+      "candidate": "repair2.workflow.json",
+      "sha256": "8de56aa2ddb590b829adbed299c9e953abf02d69d9780fc991f9732aa4b827ed",
+      "bytes": 2951,
+      "status": "fail",
+      "failedStage": "validate",
+      "gates": {
+        "validate": "fail",
+        "deliver": "not-run",
+        "check": "not-run",
+        "browser-check": "not-run"
+      },
+      "diagnostics": [
+        {
+          "code": "workflow/explicit-pin-conflict",
+          "message": "Workflow edge \"lasso-closure\" has explicit geometry that violates node clearance."
+        }
+      ]
+    },
+    {
+      "candidate": "abandoned-fourth-notation-node",
+      "status": "fail",
+      "failedStage": "browser-check",
+      "diagnosticCodes": [
+        "explainer/browser-diagram-fit",
+        "explainer/browser-diagram-text",
+        "explainer/browser-readability"
+      ],
+      "disposition": "rejected extra entity; not delivered"
+    }
+  ],
+  "supersededAutomationPasses": [
+    {
+      "run": "native-lifecycle",
+      "status": "pass",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "specificationSha256": "c6ae0838c83222fbc687dc9d70b1cc42b82c0e4d182f63c0615dfadf65d965ea",
+      "disposition": "superseded after actual screenshot found self-loop masked by label/note"
+    },
+    {
+      "run": "candidate-lifecycle",
+      "status": "pass",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "specificationSha256": "e8f8e386acdf450cd220673d8b12b1eef9532307c2b70c9b847de00269648d19",
+      "disposition": "superseded after actual screenshot found self-loop masked by label/note"
+    }
+  ],
+  "rawReceipts": "retained outside checkout; local paths omitted",
+  "visualEvidence": {
+    "before": "before-loop-visibility/screenshots/capture.json",
+    "current": "screenshots/capture.json",
+    "status": "coordinator and author inspected current actual screenshots; complete loop arc visible; baseline unchanged",
+    "captureBindingsVerified": true,
+    "limitations": "Agent visual review only; no human acceptance or reader-efficiency claim",
+    "currentFiles": [
+      {
+        "path": "screenshots/baseline.png",
+        "bytes": 177507,
+        "sha256": "0a9676734cb14af14c6789a2ae6ca035b20931505f27148aa8d5f7b37676ecbc"
+      },
+      {
+        "path": "screenshots/candidate.png",
+        "bytes": 219597,
+        "sha256": "df98a4ff162f8f3b171c396f23cf0e7380af72992722a8359691ad374e599ae4"
+      },
+      {
+        "path": "screenshots/lasso.png",
+        "bytes": 167842,
+        "sha256": "bb2fecfdcd079ff1b0b2e975af4491cdf9682d4c6274e7a014fdc8b9170efb35"
+      },
+      {
+        "path": "screenshots/capture.json",
+        "bytes": 1508,
+        "sha256": "d293fa70b896f2b195861c17843dd8effa45fc7de926741056b511d93f6e63a7"
+      }
+    ],
+    "beforeFiles": [
+      {
+        "path": "before-loop-visibility/baseline.archify.md",
+        "bytes": 2101,
+        "sha256": "f281b35afa80b7c6d8a79f25b725ba5b2baee5c0fa00e5354bf7075bfa802c86"
+      },
+      {
+        "path": "before-loop-visibility/baseline.html",
+        "bytes": 130582,
+        "sha256": "d8715e3e69a5fa03e6a7e0557371b2d516abe012aa7447c977d2cd23c619f8ae"
+      },
+      {
+        "path": "before-loop-visibility/candidate.archify.md",
+        "bytes": 2363,
+        "sha256": "e8f8e386acdf450cd220673d8b12b1eef9532307c2b70c9b847de00269648d19"
+      },
+      {
+        "path": "before-loop-visibility/candidate.html",
+        "bytes": 489231,
+        "sha256": "905bdde15d8c2f56041d668335f6100a2533a48cd5d6695830075d3159b6d932"
+      },
+      {
+        "path": "before-loop-visibility/lasso.html",
+        "bytes": 810071,
+        "sha256": "f61c7ca87eec0ecd1a2d2797981ee25efc20083614034c563fef8ce8af1859bb"
+      },
+      {
+        "path": "before-loop-visibility/lasso.lifecycle.json",
+        "bytes": 2127,
+        "sha256": "c6ae0838c83222fbc687dc9d70b1cc42b82c0e4d182f63c0615dfadf65d965ea"
+      },
+      {
+        "path": "before-loop-visibility/screenshots/baseline.png",
+        "bytes": 177507,
+        "sha256": "0a9676734cb14af14c6789a2ae6ca035b20931505f27148aa8d5f7b37676ecbc"
+      },
+      {
+        "path": "before-loop-visibility/screenshots/candidate.png",
+        "bytes": 222500,
+        "sha256": "0000c8b83d9b4d9c029df090c40824f751242b93e4ba1902fc6b9051be8aae79"
+      },
+      {
+        "path": "before-loop-visibility/screenshots/capture.json",
+        "bytes": 1259,
+        "sha256": "028d075ceab7dab4699ca650243cd850fb8617422d4dc8a749bd10d8114ae5b4"
+      },
+      {
+        "path": "before-loop-visibility/screenshots/lasso.png",
+        "bytes": 169097,
+        "sha256": "48e3269aabe96434fcdcb1e39a2d7d482615e96012b42e8c3a8867bfd6569847"
+      }
+    ]
+  },
+  "limitations": [
+    "No upstream program or checker run",
+    "No model/checker-version/command/fairness binding",
+    "Loop closure is an infinite-suffix convention, not a reported action or observed event",
+    "No reader timing, user validation, cross-platform or remote CI conclusion"
+  ],
+  "whitespace": {
+    "authoredOutsideLiteralFences": "pass",
+    "sourceAndGeneratedBytes": "preserved, including upstream trailing spaces"
+  }
+}

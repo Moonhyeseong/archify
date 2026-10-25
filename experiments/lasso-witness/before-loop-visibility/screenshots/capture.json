@@ -1,0 +1,39 @@
+{
+  "kind": "actual-Chromium-screenshots",
+  "captures": [
+    {
+      "artifact": "baseline.html",
+      "artifactSha256": "d8715e3e69a5fa03e6a7e0557371b2d516abe012aa7447c977d2cd23c619f8ae",
+      "screenshot": "screenshots/baseline.png",
+      "capturedAt": "2026-10-25T06:09:54.669Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "deviceScaleFactor": 1
+      }
+    },
+    {
+      "artifact": "candidate.html",
+      "artifactSha256": "905bdde15d8c2f56041d668335f6100a2533a48cd5d6695830075d3159b6d932",
+      "screenshot": "screenshots/candidate.png",
+      "capturedAt": "2026-10-25T06:09:54.893Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "deviceScaleFactor": 1
+      }
+    },
+    {
+      "artifact": "lasso.html",
+      "artifactSha256": "f61c7ca87eec0ecd1a2d2797981ee25efc20083614034c563fef8ce8af1859bb",
+      "screenshot": "screenshots/lasso.png",
+      "capturedAt": "2026-10-25T06:09:55.308Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "deviceScaleFactor": 1
+      }
+    }
+  ],
+  "limitations": "Fixed upstream educational witness excerpt; no checker run or model binding. Agent visual review is not human acceptance or proof of reading efficiency."
+}
