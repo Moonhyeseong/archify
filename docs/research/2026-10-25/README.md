@@ -6,7 +6,7 @@
 
 共同实验基线：[dev `82c7e0f0`](https://github.com/tt-a1i/archify/commit/82c7e0f089a02a4d514714adf37dc2061682da5f)，2026-10-25 已重新核对远端仍为该 revision。下面的“已推送”只表示远程实验分支可审查，不能等同于合入、发布或人类验收。
 
-## 已推送的 15 个实验
+## 已推送的 17 个实验
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
@@ -27,10 +27,14 @@
 | [Plan actions](https://github.com/tt-a1i/archify/tree/codex/lab-plan-actions/experiments/plan-actions) | 分别看两种 replacement 顺序，保留 unknown/sensitive/null 路径与 deferred/complete | `640fa6ff` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-plan-actions/experiments/plan-actions/screenshots/explainer.png) | 16 tests；render/finalize 通过，自动 browser 未请求；synthetic，所有 before/after 值不入产物 |
 | [Recipe stages](https://github.com/tt-a1i/archify/tree/codex/lab-recipe-stages/experiments/recipe-stages) | Just dump 的 priors 只改一值，直观看出同一依赖由 before 移到 after | `10164864` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-recipe-stages/experiments/recipe-stages/screenshots/priors-2.png) | 10 tests；四份产物四阶段通过；固定上游形状的原创 synthetic，没有执行 Just |
 | [Relation reference](https://github.com/tt-a1i/archify/tree/codex/lab-relation-reference/experiments/relation-reference) | 复制当前 pinned 关系的原始方向、标签、节点 ID 与明确身份，便于准确引用 | `6d7cd594` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-relation-reference/experiments/relation-reference/screenshots/candidate-light.png) | 共享 Viewer；focused 62/62，最后 Focus 16/16，core 19/19、generated/ZIP 一致；独立复核；真实 OS clipboard 与用户收益未验证 |
+| [Test context map](https://github.com/tt-a1i/archify/tree/codex/lab-test-context-map/experiments/test-context-map) | 精确 context 映射到选择源码行，保留空标签、未知、缺失、排除和不可用 | `c02a74fd` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-test-context-map/experiments/test-context-map/screenshots/matrix.png) | 18 tests；render/finalize 通过，自动 browser 未请求；synthetic，sidecar revision 是声明，非源码/运行验证 |
+| [Test failure map](https://github.com/tt-a1i/archify/tree/codex/lab-test-failure-map/experiments/test-failure-map) | 分开 setup/call/teardown 与 collection，显示真实提供的行号和缺少的定义文件 | `82af4896` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-test-failure-map/experiments/test-failure-map/screenshots/setup.png) | 10 tests；四页四阶段通过；synthetic，不运行 pytest；继承定义路径反例已修，完整投影独立保留 |
 
-这十五项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
+这十七项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
 
 GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确远端 head 的 Actions runs/check-runs 均为 0。当前 [CI 配置](https://github.com/tt-a1i/archify/blob/82c7e0f089a02a4d514714adf37dc2061682da5f/.github/workflows/ci.yml) 只对 main/dev push 自动运行，另外支持 PR/manual。这里的实验分支 push 没有提供远端 CI 通过证据；上表测试均按实际本地来源记录。
+
+2026-10-25 13:17（台北）再次核实，main/dev 仍为 `25cf3708` / `82c7e0f0`；新增 CI conditions、Plan actions、Recipe stages、Relation reference 与未推荐 Relation return 的精确 head 也均为 Actions runs=0、check-runs=0。两个测试证据分支的远端 head 已验证，尚未单独查询远端检查；本地证据与远端 CI 始终分开。
 
 ## 图片速览
 
@@ -54,9 +58,9 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
-| Test failure map | pytest-json-report；分别展示阶段结果与真正提供的位置证据 | 独立审查修正中：nodeid 路径不能冒充继承测试的定义文件 |
-| Test context map | coverage.py 完整 context label 与显式 sidecar 的行×测试上下文矩阵 | 实现与独立审查中；不按 pipe 拆身份，不推断测试结果或正确性 |
-| 后续发现 | 小众源码导航、图比较和阅读交互 | 第七批两路持续搜索；不设星数门槛，不为数量增加功能 |
+| Delta values | XFlow 等图比较机制；选中既有 exact row 时直接读 receipt 已提供的旧→新值 | 独立 Delta shell 实现/审查中；不增加 diff 算法，不推断未保留字段或 missing/empty 区别 |
+| Source question tour | CodeTour、Quicker 等源码阅读机制；同题同代码的文件顺序/问题顺序对照 | 零共享代码的 authored Explainer 示例中；复用 source preview，与 #1015 控件工作区分 |
+| 后续发现 | 小众代码理解与图阅读项目 | 第七批新增 20 个一手来源；持续搜索，不设星数门槛，不为数量增加功能 |
 
 ## 一手调研报告
 
@@ -73,6 +77,8 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | CI、构建与基础设施小工具 | [Build/infra small tools](scouts/build-infra-smalltools.md) |
 | Viewer 阅读交互与明确导出范围 | [Interaction small tools](scouts/interaction-smalltools.md) |
 | 测试结果、上下文与代码证据 | [Test/code evidence small tools](scouts/test-code-evidence-smalltools.md) |
+| 源码导航、上下文和问题导览 | [Source navigation small tools](scouts/source-navigation-smalltools.md) |
+| 图差异、事实对照与视觉比较 | [Graph comparison small tools](scouts/graph-comparison-smalltools.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
 报告中的上游声明、局部源码核实、计划中的实验和已经执行的结果分别标注。未推荐方向也保留原因，避免反复研究；没有把上游宣传、星数或作者截图当作 Archify 的效果证明。
