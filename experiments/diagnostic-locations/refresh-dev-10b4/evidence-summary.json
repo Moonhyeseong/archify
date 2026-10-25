@@ -1,0 +1,242 @@
+{
+  "kind": "derived-refresh-evidence-summary",
+  "note": "Projection of actual local CLI/test/package evidence. Raw machine outputs include local paths and remain outside checkout; portable diagnostics and preview state are explicitly derived.",
+  "identity": {
+    "oldHead": "67328d7de5cdf7bd894bfb526682cff9fdc2d10b",
+    "dev": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+    "devConfirmedBy": [
+      "local origin/dev",
+      "git ls-remote origin refs/heads/dev"
+    ],
+    "merge": "normal git merge --no-commit --no-ff origin/dev",
+    "conflict": "archify.zip only; rebuilt from merged source",
+    "commitCreatedByImplementationAgent": false
+  },
+  "valueAssessment": "Current dev CLI/shared/preview text still omits supplied subjects. Existing real same-message diagnostics remain indistinguishable. Candidate projects existing scalar locations, preserving JSON, literal rendering, redaction and incomplete-install doctor. No new diagnostic rules.",
+  "historicalFiles": {
+    "count": 18,
+    "allByteIdentical": true,
+    "inventory": {
+      "live-preview.mjs": "99408095687acafe1479871dc83c7e91cd73f1acf388cd3cc81d3d4f3f0f1def",
+      "browser-probe.mjs": "2bfd9b4cb7ba6556d401abb90496b4228c4c653922abbc94ac8cc9fcd251b689",
+      "README.md": "2036cee9f70fe8fa6ebde81af32095ffe43cc5fddac166da6bf5904cd799d273",
+      "screenshots/capture.json": "6815a0931466a1c159a3fa7ace6f6490bf34ecc728171305519d2e203e63c0a1",
+      "screenshots/comparison.png": "921b87d8e461357d0a397de229c4475831032bbcc8c68d9005f82e6f1e17e1b1",
+      "screenshots/live-preview-verified.png": "167e99f73b2183a47081e6bc74aed5bb24f8103bbac20d9d858472a4d1c51c0e",
+      "screenshots/live-preview-needs-fix.png": "96db9c539d559d94517be8d3fb380b3a0302989e074dd60ac6d549b2046da94b",
+      "evidence/checks-summary.json": "129701c96ae93b8d1cec3cc73ba5b31b7f2d01881fabb4f17b2c4b75ee10cf4a",
+      "evidence/after.stderr.txt": "af489a738c5a9c1871795929d62d0be328a38d6f223a755425e87b4053a20c18",
+      "evidence/before.stderr.txt": "ceb797f6c29bd1b1d972b875c3b45967b81e37cb4455b74861b5a316b39d3679",
+      "evidence/comparison.portable-summary.json": "8f0175737578e85580fd22a2d477dc6b41af7fd33ae14ca5f02630943dc0548c",
+      "evidence/comparison.html": "7db6fe8910bb095b4de7c2acca3517d415f4083faff9cbbb10ff82b0870b1d7f",
+      "evidence/zip-summary.json": "7c57b30c378c66ce650afe2e8edfda066259973b2af7e5f502ed9989fb9c6513",
+      "evidence/browser-probe.json": "af5e1ac5618da01c62cc7b423e1427ecb953e5ebe8ee23711d509f505863d056",
+      "evidence/binding-summary.json": "735e124f048f969c240fcf719abea197039631d31cd5cb6678eeea446d9bb6bb",
+      "evidence/comparison.archify.md": "3e6ab7843990a57db299a766f4ce14be82b3cab1c29b03cf9759b806c9e905f5",
+      "evidence/diagnostics.portable.json": "52c6921dbfc24a990056a90cde6d99ea29bc761f2ed95d8037fe42f080c7d3bd",
+      "fixtures/repeated-labels.archify.md": "fc47419405dd0f47be7e8ce6caebfc6974fd3979f0023759ef82ba9c4a722aec"
+    }
+  },
+  "files": {
+    "archify/bin/archify.mjs": {
+      "bytes": 293341,
+      "sha256": "817a2e477a24b4f88596fb7ce5ac23f712de358e54f1938eaa67a767a5ba2d62"
+    },
+    "archify/bin/preview.mjs": {
+      "bytes": 37045,
+      "sha256": "4ff7bd807522a02451b37f1882a971be80d33e139b117dd4b97a592177038950"
+    },
+    "archify/renderers/shared/diagnostics.mjs": {
+      "bytes": 9431,
+      "sha256": "91a7a4c9acb800a9977d290569cfe4859499f528a524e4d99885550b1d477221"
+    },
+    "test/diagnostic-locations.test.mjs": {
+      "bytes": 6564,
+      "sha256": "140191fb48ca6676b1f3ffc355071115efe2d3de325d8211c8f7bc3032e9eb7d"
+    }
+  },
+  "fixture": {
+    "bytes": 646,
+    "sha256": "fc47419405dd0f47be7e8ce6caebfc6974fd3979f0023759ef82ba9c4a722aec"
+  },
+  "publicCli": {
+    "records": [
+      {
+        "side": "base",
+        "mode": "text",
+        "status": 1,
+        "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderrSha256": "ceb797f6c29bd1b1d972b875c3b45967b81e37cb4455b74861b5a316b39d3679"
+      },
+      {
+        "side": "base",
+        "mode": "json",
+        "status": 1,
+        "stdoutSha256": "f466eb0bd30ddd1fc8066fb79d315421d42297fbcf047029d1a79cb167d42415",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "side": "candidate",
+        "mode": "text",
+        "status": 1,
+        "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderrSha256": "af489a738c5a9c1871795929d62d0be328a38d6f223a755425e87b4053a20c18"
+      },
+      {
+        "side": "candidate",
+        "mode": "json",
+        "status": 1,
+        "stdoutSha256": "f466eb0bd30ddd1fc8066fb79d315421d42297fbcf047029d1a79cb167d42415",
+        "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "sameFixtureAbsolutePath": true,
+    "sameInputBytes": true,
+    "jsonBytesEqual": true,
+    "diagnosticsCount": 3,
+    "identicalMessages": true,
+    "lines": [
+      13,
+      14,
+      15
+    ],
+    "baseLocationHeadsAbsent": true,
+    "candidateLocationHeadsPresent": true
+  },
+  "comparison": {
+    "input": {
+      "bytes": 2820,
+      "sha256": "9ce2430a39cb5e8df683a2ce8a567a8da5d3040b4e30065b79809ff21b03d26d"
+    },
+    "html": {
+      "bytes": 151318,
+      "sha256": "4ac38240359f488ebb28bd887696de46ca6b3b6c6ff90b9f8a81bc1d6abca91b"
+    },
+    "quality": "standard",
+    "gates": {
+      "validate": "pass",
+      "deliver": "pass",
+      "check": "pass",
+      "browser-check": "not-run"
+    },
+    "diagnostics": []
+  },
+  "tests": {
+    "diagnosticAndRenderer": {
+      "pass": 29,
+      "fail": 0,
+      "skip": 0
+    },
+    "previewLastGoodAndChecker": {
+      "pass": 2,
+      "fail": 0,
+      "skip": 0
+    },
+    "core": {
+      "pass": 19,
+      "fail": 0,
+      "skip": 0
+    },
+    "generated": "pass",
+    "headlessChromeLiteralProbe": {
+      "checks": {
+        "line13": true,
+        "line14": true,
+        "indexZero": true,
+        "literalHtml": true,
+        "escapedLineSeparator": true,
+        "noElement": true,
+        "noExecution": true
+      },
+      "pass": true,
+      "diagnosticTextSha256": "d3eed14ace92b399658431a64f92b794da8455d498dc611af034e9a20c476b0a"
+    },
+    "extractedPackageSmoke": "pass",
+    "extractedDiagnosticCli": {
+      "kind": "actual-extracted-package-cli-check",
+      "version": "3.2.1-dev.1",
+      "results": [
+        {
+          "mode": "text",
+          "exitCode": 1,
+          "stdoutExactCandidate": true,
+          "stderrExactCandidate": true
+        },
+        {
+          "mode": "json",
+          "exitCode": 1,
+          "stdoutExactCandidate": true,
+          "stderrExactCandidate": true
+        }
+      ],
+      "dependencyInstall": false
+    }
+  },
+  "zip": {
+    "entries": 235,
+    "inventoryEqualToDev": true,
+    "changedEntries": [
+      "archify/bin/archify.mjs",
+      "archify/bin/preview.mjs",
+      "archify/renderers/shared/diagnostics.mjs"
+    ],
+    "changedSourcesExact": true,
+    "crcPass": true,
+    "sha256": "c8a86faae3858fecd2b0e34085b9b1ca2417831145f27cdb624a7f50717caab2",
+    "bytes": 6988530,
+    "doubleBuildEqual": true
+  },
+  "nativePreview": {
+    "stateProjection": "preview-state.portable.json",
+    "controlledInputVariants": [
+      "fixtures/tree-initial.json",
+      "fixtures/tree-invalid.json"
+    ],
+    "status": "needs-fix",
+    "lastVerifiedRevision": 1,
+    "newGeneration": 2,
+    "actualLastVerifiedArtifactHashMatches": true,
+    "rootEgo": {
+      "captureBindings": "capture-metadata.json",
+      "runner": "root-owned new runner only",
+      "lateOpen": "generation2 needs-fix serverrev1 but no mounted client frame",
+      "restore": "same valid input while open: generation2 verified rev1",
+      "invalidAgain": "generation3 needs-fix, mounted rev1 retained",
+      "correction": "native-corrected.derived.json is corrected derived record; original annotation retained outside checkout"
+    }
+  },
+  "toolchain": {
+    "node": "22.23.2",
+    "zlib": "1.3.1-e00f703",
+    "platform": "darwin-arm64",
+    "rootParse5": "pre-existing dependency link retained untouched",
+    "rendererDependencyReuse": "temporary link to existing same-lock dependency entries; removed after generated checks",
+    "installation": false
+  },
+  "failuresRetained": {
+    "generatedInitial": "missing simple-icons before temporary reuse; failed log retained, final rerun passed",
+    "preparationGuard": "initial setup stopped when it found pre-existing root node_modules; it was preserved",
+    "comparisonInitial": "attempt ran before authored input existed; failed receipt retained; correct complete input then finalized"
+  },
+  "notClaimed": [
+    "full repository suite",
+    "Windows execution",
+    "hosted CI on merged revision",
+    "AT or human acceptance",
+    "live installation",
+    "new diagnostic detection rules"
+  ],
+  "actualComparisonBrowser": {
+    "viewport": [
+      1440,
+      1000
+    ],
+    "fullPagePixels": [
+      1440,
+      1406
+    ],
+    "threeRowsAndBothStderrExact": true,
+    "rootViewedFourPngs": true,
+    "bindings": "capture-metadata.json"
+  }
+}

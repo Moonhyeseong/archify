@@ -1,0 +1,20 @@
+{
+  "title": "Repair the location already present in the diagnostic · Archify",
+  "theme": "light",
+  "table": [
+    "EntryLine and columnExisting JSON pathComponent",
+    "diagnostic 113:1/panels/0/blocks/1/rows/2/idcomparison",
+    "diagnostic 214:1/panels/0/blocks/1/rows/3/idcomparison",
+    "diagnostic 315:1/panels/0/blocks/1/rows/4/idcomparison"
+  ],
+  "code": [
+    "Explainer draft is invalid.\n[explainer/duplicate-id] This identity is already used. Use an explicit distinct ID. Fix: Use a valid form, for example: id=request-path-branch.\n[explainer/duplicate-id] This identity is already used. Use an explicit distinct ID. Fix: Use a valid form, for example: id=request-path-branch.\n[explainer/duplicate-id] This identity is already used. Use an explicit distinct ID. Fix: Use a valid form, for example: id=request-path-branch.",
+    "Explainer draft is invalid.\n[explainer/duplicate-id] (line 13, column 1, path \"/panels/0/blocks/1/rows/2/id\", component \"comparison\", panelId \"changes\") This identity is already used. Use an explicit distinct ID. Fix: Use a valid form, for example: id=request-path-branch.\n[explainer/duplicate-id] (line 14, column 1, path \"/panels/0/blocks/1/rows/3/id\", component \"comparison\", panelId \"changes\") This identity is already used. Use an explicit distinct ID. Fix: Use a valid form, for example: id=request-path-branch.\n[explainer/duplicate-id] (line 15, column 1, path \"/panels/0/blocks/1/rows/4/id\", component \"comparison\", panelId \"changes\") This identity is already used. Use an explicit distinct ID. Fix: Use a valid form, for example: id=request-path-branch."
+  ],
+  "viewport": [
+    1440,
+    1000
+  ],
+  "scrollWidth": 1440,
+  "scrollHeight": 1406
+}

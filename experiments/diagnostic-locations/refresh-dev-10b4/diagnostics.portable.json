@@ -1,0 +1,63 @@
+{
+  "kind": "derived-diagnostics-projection",
+  "note": "Only subject.input omitted; original JSON kept outside checkout. Not an original CLI receipt.",
+  "diagnostics": [
+    {
+      "code": "explainer/duplicate-id",
+      "severity": "error",
+      "message": "This identity is already used. Use an explicit distinct ID.",
+      "evidence": {
+        "reason": "This identity is already used. Use an explicit distinct ID.",
+        "example": "id=request-path-branch"
+      },
+      "supportedFixes": [
+        "Use a valid form, for example: id=request-path-branch"
+      ],
+      "subject": {
+        "line": 13,
+        "column": 1,
+        "component": "comparison",
+        "path": "/panels/0/blocks/1/rows/2/id",
+        "panelId": "changes"
+      }
+    },
+    {
+      "code": "explainer/duplicate-id",
+      "severity": "error",
+      "message": "This identity is already used. Use an explicit distinct ID.",
+      "evidence": {
+        "reason": "This identity is already used. Use an explicit distinct ID.",
+        "example": "id=request-path-branch"
+      },
+      "supportedFixes": [
+        "Use a valid form, for example: id=request-path-branch"
+      ],
+      "subject": {
+        "line": 14,
+        "column": 1,
+        "component": "comparison",
+        "path": "/panels/0/blocks/1/rows/3/id",
+        "panelId": "changes"
+      }
+    },
+    {
+      "code": "explainer/duplicate-id",
+      "severity": "error",
+      "message": "This identity is already used. Use an explicit distinct ID.",
+      "evidence": {
+        "reason": "This identity is already used. Use an explicit distinct ID.",
+        "example": "id=request-path-branch"
+      },
+      "supportedFixes": [
+        "Use a valid form, for example: id=request-path-branch"
+      ],
+      "subject": {
+        "line": 15,
+        "column": 1,
+        "component": "comparison",
+        "path": "/panels/0/blocks/1/rows/4/id",
+        "panelId": "changes"
+      }
+    }
+  ]
+}

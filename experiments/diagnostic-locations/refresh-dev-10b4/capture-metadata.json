@@ -1,0 +1,158 @@
+{
+  "kind": "derived-actual-browser-capture-bindings",
+  "note": "Binds root actual comparison/native observations and preserved PNG bytes. Root and implementation agent viewed four images. PNG mtime is file write time, not an independent capture clock. Original annotation error stays outside checkout; corrected record is explicitly derived.",
+  "productIdentity": {
+    "oldHead": "67328d7de5cdf7bd894bfb526682cff9fdc2d10b",
+    "mergedDev": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0"
+  },
+  "comparisonHtml": {
+    "path": "comparison.html",
+    "bytes": 151318,
+    "sha256": "4ac38240359f488ebb28bd887696de46ca6b3b6c6ff90b9f8a81bc1d6abca91b"
+  },
+  "comparison": {
+    "viewport": [
+      1440,
+      1000
+    ],
+    "theme": "light",
+    "tableRows13_14_15Exact": true,
+    "twoCodeBlocksExactActualStderrAfterRemovingFinalLf": true,
+    "documentHeight": 1406
+  },
+  "nativeRunner": {
+    "owner": "root",
+    "pid": 35621,
+    "loopbackPort": 53540,
+    "stoppedByRoot": "SIGINT",
+    "initialLateOpen": {
+      "generation": 2,
+      "status": "needs-fix",
+      "serverRevision": 1,
+      "serverHasLastVerified": true,
+      "clientFrameSrc": null,
+      "knownSeparateBoundary": [
+        "https://github.com/tt-a1i/archify/issues/927",
+        "https://github.com/tt-a1i/archify/issues/930",
+        "https://github.com/tt-a1i/archify/issues/991"
+      ]
+    },
+    "sameValidInputRestoredWhilePageOpen": {
+      "generation": 2,
+      "status": "verified",
+      "revision": 1
+    },
+    "invalidAgain": {
+      "generation": 3,
+      "status": "needs-fix",
+      "revision": 1,
+      "retainedMountedFrame": true
+    },
+    "lastVerified": {
+      "sha256": "6a4e412993e731b02694f0945d4067bfd0cc3e611d5d9a46ae44a75385d9783a",
+      "bytes": 854346,
+      "checksPassed": 9,
+      "checkCount": 9,
+      "compositionProfile": "standard",
+      "compositionStatus": "pass"
+    },
+    "themeObservation": "dark native preview shell; retained diagram light, as captured"
+  },
+  "records": [
+    {
+      "path": "observations/comparison.json",
+      "kind": "root-observation-record",
+      "bytes": 1727,
+      "sha256": "14b0f3e4183f94dcdbfe72898d2718f1b30a34dfcd95a06fbd1196ce8095c53c",
+      "byteCopied": true
+    },
+    {
+      "path": "observations/late-open.json",
+      "kind": "root-observation-record",
+      "bytes": 1668,
+      "sha256": "d0d7d60f997e561300942fcdd0ff2446cfa4c4defb6b083af32c8c4f58433a6c",
+      "byteCopied": true
+    },
+    {
+      "path": "observations/restored-response.json",
+      "kind": "original-safe-server-response",
+      "bytes": 282,
+      "sha256": "8afc22ce6210aaf2f894d1f0564d54ca85ccd68795ad322023bcc5e120d1e3aa",
+      "byteCopied": true
+    },
+    {
+      "path": "observations/native-corrected.derived.json",
+      "kind": "corrected-derived-observation-record",
+      "bytes": 2156,
+      "sha256": "92fc043650649baf6e6ac81495750ad360066660294aa5599f2c259abc6b9c83",
+      "byteCopied": true
+    },
+    {
+      "path": "observations/initial-server-response.json",
+      "kind": "original-safe-server-response",
+      "bytes": 760,
+      "sha256": "75dfba738d1dfec75f78cc948df8d86fee5325f38500925d603a1f6d2c81ac26",
+      "byteCopied": true
+    }
+  ],
+  "pictures": [
+    {
+      "path": "screenshots/comparison-overview-light.png",
+      "bytes": 174774,
+      "sha256": "ef8acac2c2917b9c6b77e77f6b5b433f958d6f9bf2736657543867651c38b288",
+      "pixelWidth": 1440,
+      "pixelHeight": 1000,
+      "writtenAtFromFileMtime": "2026-10-25T11:45:10.683326+00:00",
+      "rootViewed": true,
+      "implementationAgentViewed": true
+    },
+    {
+      "path": "screenshots/comparison-full-light.png",
+      "bytes": 233130,
+      "sha256": "e2041ea634f7117ad39d079b5ebc50a1583b00b98c2e1811cd961315c2f155a7",
+      "pixelWidth": 1440,
+      "pixelHeight": 1406,
+      "writtenAtFromFileMtime": "2026-10-25T11:45:10.763469+00:00",
+      "rootViewed": true,
+      "implementationAgentViewed": true
+    },
+    {
+      "path": "screenshots/late-open-no-mounted-revision.png",
+      "bytes": 223309,
+      "sha256": "f3b9fe6a10382f6bb05e64e3584a69d9b407d5ef6db517258501162cad85d429",
+      "pixelWidth": 1440,
+      "pixelHeight": 1000,
+      "writtenAtFromFileMtime": "2026-10-25T11:42:10.035550+00:00",
+      "rootViewed": true,
+      "implementationAgentViewed": true
+    },
+    {
+      "path": "screenshots/native-needs-fix-retains-verified.png",
+      "bytes": 77142,
+      "sha256": "96db9c539d559d94517be8d3fb380b3a0302989e074dd60ac6d549b2046da94b",
+      "pixelWidth": 1440,
+      "pixelHeight": 1000,
+      "writtenAtFromFileMtime": "2026-10-25T11:44:48.812514+00:00",
+      "rootViewed": true,
+      "implementationAgentViewed": true
+    }
+  ],
+  "annotationCorrection": {
+    "incorrectOriginalSha256": "69a58c47f9aa2fc73c1ee2c4a1d9d4f04756fcd8a935eaef1c0da3c15d8c1359",
+    "originalRetainedOutsideCheckout": true,
+    "uiAndResponseUnchanged": true,
+    "correctedNoteOnly": "Actual generation 2 restored then generation 3 failed, not guessed 3/4."
+  },
+  "attemptsPreserved": [
+    "Previous agent preview port50738 refused connection; no browser success claimed.",
+    "First button CSS locator matched zero because the real disclosure control is summary; interaction then used the actual control.",
+    "Late-open client had no mounted revision despite server lastVerified; separately known boundary, not fixed here."
+  ],
+  "notClaimed": [
+    "OS clipboard or Copy diagnostic action",
+    "assistive technology acceptance",
+    "full browser-check gate",
+    "late-open restoration fix",
+    "hosted CI on merged candidate"
+  ]
+}

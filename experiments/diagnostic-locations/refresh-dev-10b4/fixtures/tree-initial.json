@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "diagram_type": "tree",
+  "meta": {
+    "title": "Last verified tree",
+    "output": "tree.html"
+  },
+  "nodes": [
+    {
+      "id": "root",
+      "label": "Dispatch"
+    },
+    {
+      "id": "worker",
+      "label": "Worker",
+      "parent": "root"
+    }
+  ]
+}

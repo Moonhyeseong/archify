@@ -1,0 +1,31 @@
+{
+  "kind": "derived-preview-state-projection",
+  "note": "Actual controlled native Tree preview state. Input variants accompany this projection; original runtime descriptor stays outside checkout.",
+  "status": "needs-fix",
+  "generation": 2,
+  "revision": 1,
+  "lastVerified": {
+    "sha256": "6a4e412993e731b02694f0945d4067bfd0cc3e611d5d9a46ae44a75385d9783a",
+    "bytes": 854346,
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "standard",
+    "compositionStatus": "pass"
+  },
+  "failure": {
+    "stage": "render",
+    "message": "Tree structure validation failed:\n- Node \"worker\" names parent \"missing-parent\", which is not declared.\n[tree/missing-parent] (path \"/nodes/1/parent\", nodeId \"worker\") Node \"worker\" names parent \"missing-parent\", which is not declared. Fix: Declare a node with id \"missing-parent\".; Point parent at an existing node.; Remove parent to make this the root.."
+  },
+  "inputVariants": {
+    "tree-initial.json": {
+      "bytes": 289,
+      "sha256": "641ca48743e82d33a10ff5dcfe6431afc8d5d274b2c4420c2476b4bef489ce43"
+    },
+    "tree-invalid.json": {
+      "bytes": 299,
+      "sha256": "17afd8de86a476345916e03f341df4a4c3b13e18c1d09b2880890da81c1c819a"
+    }
+  },
+  "actualArtifactMatchesLastVerified": true,
+  "browserAcceptance": "pending-root"
+}

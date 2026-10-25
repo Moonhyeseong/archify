@@ -1,0 +1,35 @@
+{
+  "note": "Root-owned runner opened after generation 2 with server revision 1; initial client had no mounted artifact. Restoring the same already-verified input while the page was open showed revision 1; reintroducing missing-parent then reached generation 3 needs-fix while retaining the mounted revision 1. This is not late-open restoration.",
+  "ui": {
+    "text": "ARCHIFY PREVIEW\nView diagnostic\nGeneration 3 · render\n\nTree structure validation failed:\n- Node \"worker\" names parent \"missing-parent\", which is not declared.\n[tree/missing-parent] (path \"/nodes/1/parent\", nodeId \"worker\") Node \"worker\" names parent \"missing-parent\", which is not declared. Fix: Declare a node with id \"missing-parent\".; Point parent at an existing node.; Remove parent to make this the root..\nCopy diagnostic\nNeeds fix · showing rev 1",
+    "frameSrc": "/artifact.html?revision=1&sha=6a4e412993e7",
+    "viewport": [
+      1440,
+      1000
+    ],
+    "detailsOpen": true,
+    "width": 1440
+  },
+  "response": {
+    "schemaVersion": 1,
+    "status": "needs-fix",
+    "generation": 3,
+    "revision": 1,
+    "lastVerified": {
+      "sha256": "6a4e412993e731b02694f0945d4067bfd0cc3e611d5d9a46ae44a75385d9783a",
+      "bytes": 854346,
+      "checksPassed": 9,
+      "checkCount": 9,
+      "compositionProfile": "standard",
+      "compositionStatus": "pass"
+    },
+    "failure": {
+      "stage": "render",
+      "message": "Tree structure validation failed:\n- Node \"worker\" names parent \"missing-parent\", which is not declared.\n[tree/missing-parent] (path \"/nodes/1/parent\", nodeId \"worker\") Node \"worker\" names parent \"missing-parent\", which is not declared. Fix: Declare a node with id \"missing-parent\".; Point parent at an existing node.; Remove parent to make this the root.."
+    }
+  },
+  "annotationCorrection": {
+    "sourceSha256": "69a58c47f9aa2fc73c1ee2c4a1d9d4f04756fcd8a935eaef1c0da3c15d8c1359",
+    "reason": "Original annotation guessed generation 3/4. Actual JSON records show restored generation 2, then failed generation 3. Original file retained outside repository; all observation fields below unchanged."
+  }
+}
