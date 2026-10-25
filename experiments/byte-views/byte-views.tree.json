@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "diagram_type": "tree",
+  "meta": {
+    "title": "IHDR：25 字节，四种重叠 bit 解释",
+    "subtitle": "IHDR → 四字段：存储分解；type → 四 flags：重读同一存储，不增加字节。所有区间为原文件起点的半开区间。",
+    "locale": "zh-CN",
+    "output": "experiments/byte-views/byte-views.html",
+    "quality_profile": "showcase"
+  },
+  "layout": {
+    "direction": "down"
+  },
+  "nodes": [
+    {
+      "id": "ihdr",
+      "label": "IHDR · 25 B",
+      "sublabel": "存储字段分解 [8,33)"
+    },
+    {
+      "id": "length",
+      "parent": "ihdr",
+      "label": "length · 4 B",
+      "sublabel": "[8,12) · 值为 13"
+    },
+    {
+      "id": "type",
+      "parent": "ihdr",
+      "label": "type · 4 B",
+      "sublabel": "[12,16) · IHDR"
+    },
+    {
+      "id": "data",
+      "parent": "ihdr",
+      "label": "data · 13 B",
+      "sublabel": "[16,29)"
+    },
+    {
+      "id": "crc",
+      "parent": "ihdr",
+      "label": "CRC · 4 B",
+      "sublabel": "[29,33) · 仅观察存储值"
+    },
+    {
+      "id": "ancillary",
+      "parent": "type",
+      "label": "ancillary = false",
+      "sublabel": "解释视图 · bit [98,99)"
+    },
+    {
+      "id": "private",
+      "parent": "type",
+      "label": "private = false",
+      "sublabel": "解释视图 · bit [106,107)"
+    },
+    {
+      "id": "reserved",
+      "parent": "type",
+      "label": "reserved = false",
+      "sublabel": "解释视图 · bit [114,115)"
+    },
+    {
+      "id": "safe_to_copy",
+      "parent": "type",
+      "label": "safe_to_copy = false",
+      "sublabel": "解释视图 · bit [122,123)"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "存储与解释",
+      "items": [
+        "只对 length、type、data、CRC 求和：4 + 4 + 13 + 4 = 25 B。",
+        "四个 flag 各读取 type 内的一位；不构成新存储。树的节点数不是字节数。"
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "固定输入与证据边界",
+      "items": [
+        "完整 PNG 为 97 B；本图只展开 IHDR [8,33)，另有 72 B 未展开。",
+        "上游 golden 是既有期望；本轮只运行标准库固定字节观察，未运行 fq 或 GraphicsMagick。",
+        "bit offset = byte offset × 8 + 从最高位起算的索引。CRC 未重算，未解码像素。"
+      ]
+    }
+  ]
+}

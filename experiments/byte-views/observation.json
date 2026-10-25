@@ -1,0 +1,100 @@
+{
+  "kind": "independent fixed-byte observation; upstream fq/GraphicsMagick not run",
+  "fileSHA256": "508a58c0563252e935d3a0112131f236c81a4db2e161deb203659f0ca1d8cf39",
+  "fileBytes": 97,
+  "coordinates": {
+    "origin": "original PNG file byte 0",
+    "interval": "half-open [start,stop)",
+    "bitOffset": "8 * byte offset + MSB-first bit index (0..7)"
+  },
+  "selectedByteRange": [
+    8,
+    33
+  ],
+  "selectedBytes": 25,
+  "outsideSelectedBytes": 72,
+  "physicalFields": [
+    {
+      "field": "length",
+      "byteRange": [
+        8,
+        12
+      ],
+      "bytes": 4,
+      "hex": "0000000d"
+    },
+    {
+      "field": "type",
+      "byteRange": [
+        12,
+        16
+      ],
+      "bytes": 4,
+      "hex": "49484452"
+    },
+    {
+      "field": "data",
+      "byteRange": [
+        16,
+        29
+      ],
+      "bytes": 13,
+      "hex": "00000004000000040203000000"
+    },
+    {
+      "field": "crc",
+      "byteRange": [
+        29,
+        33
+      ],
+      "bytes": 4,
+      "hex": "d49f76ed"
+    }
+  ],
+  "lengthValueBigEndian": 13,
+  "typeASCII": "IHDR",
+  "interpretations": [
+    {
+      "name": "ancillary",
+      "bitRange": [
+        98,
+        99
+      ],
+      "sourceByte": 12,
+      "msbIndex": 2,
+      "value": false
+    },
+    {
+      "name": "private",
+      "bitRange": [
+        106,
+        107
+      ],
+      "sourceByte": 13,
+      "msbIndex": 2,
+      "value": false
+    },
+    {
+      "name": "reserved",
+      "bitRange": [
+        114,
+        115
+      ],
+      "sourceByte": 14,
+      "msbIndex": 2,
+      "value": false
+    },
+    {
+      "name": "safe_to_copy",
+      "bitRange": [
+        122,
+        123
+      ],
+      "sourceByte": 15,
+      "msbIndex": 2,
+      "value": false
+    }
+  ],
+  "crcScope": "stored bytes observed only; CRC not recalculated",
+  "imageScope": "no decompression, pixel decode or PNG conformance validation"
+}

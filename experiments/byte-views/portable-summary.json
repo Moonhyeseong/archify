@@ -1,0 +1,199 @@
+{
+  "kind": "derived portable evidence summary, not raw delivery/finalize receipts",
+  "base": "67f12389212c54b3122da60e2813c7f8dab7ab2f",
+  "source": "fixed fq revision in upstream/source-manifest.json",
+  "observation": {
+    "command": "python3 experiments/byte-views/observe.py",
+    "exitCode": 0,
+    "stdoutSHA256": "a9b3e2a99d8abb429e1bb98eba2d63300d72075ec6db85feaf4cd9c13b091ee1",
+    "scope": "original stdlib fixed-byte observation, no fq/GraphicsMagick execution"
+  },
+  "audit": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 experiments/byte-views/audit.py",
+    "exitCode": 0,
+    "checks": 8
+  },
+  "publicRender": {
+    "firstAttempt": "render tree <spec> <output> --json rejected: Unknown render option \"--json\". Error observed in tool output before receipt generation; this is a derived error record, not a preserved raw stderr file.",
+    "correctedCommand": "node archify/bin/archify.mjs render tree experiments/byte-views/byte-views.tree.json <temporary-output.html>",
+    "correctedExitCode": 0
+  },
+  "finalize": [
+    {
+      "type": "tree",
+      "rawStdoutSHA256": "d9a7d2f44e6a5b8390c2702a18c25fe65b35f460df51650a1e1c8fce223ed23c",
+      "status": "pass",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "specification": {
+        "sha256": "f9ddb2f61ca168224f1548c7f5f542802f9246d3223a797eb892642a2d4fd46b",
+        "bytes": 2390
+      },
+      "artifact": {
+        "sha256": "91ed002e5d4306949955332d4041c14555c9a248ca019cebc60f0fe16f6157f6",
+        "bytes": 843248
+      },
+      "diagnosticCount": 0,
+      "updateNoticeRequired": false,
+      "visualReview": "not-requested"
+    },
+    {
+      "type": "explainer",
+      "rawStdoutSHA256": "491c09c8cf1443daa0f19c6d4f89de15aca0e92fb6b2d066151eef5e57c73480",
+      "status": "pass",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "not-run"
+      },
+      "specification": {
+        "sha256": "9680866d98d3b2157610c4289935c85e52df033763d309dfa1c49ae1a27f936e",
+        "bytes": 2528
+      },
+      "artifact": {
+        "sha256": "c05930ec080571f3bedf3a12070a815b771febe9a5542a48d2dff8e61b63e305",
+        "bytes": 559322
+      },
+      "diagnosticCount": 0,
+      "updateNoticeRequired": false,
+      "visualReview": "not-requested"
+    }
+  ],
+  "rawReceipts": "outside checkout; public summary deliberately omits private absolute paths",
+  "visualEvidence": {
+    "kind": "root actual Ego Chromium capture and agent visual inspection, separate from finalize",
+    "capture": "screenshots/capture.json",
+    "captureSHA256": "2e7817bb803fd498120a141e5ba4174a79106807217337640bc83a0b13f49093",
+    "images": 4,
+    "rootVisuallyInspected": true,
+    "sourceCard": "metadata only; hover visible, Escape hidden; no code excerpt and external link not opened",
+    "nativePNGDimensions": [
+      1440,
+      1580
+    ],
+    "nativeDOMDocumentHeight": 1652,
+    "limits": "No screen-reader, cross-browser, human acceptance or learning-benefit validation; no upstream fq/GraphicsMagick execution"
+  },
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 6588,
+      "sha256": "1f77200cfe73f4cf216501bd0fa48cc7f387adbd108ea9ebc9fb7682591129b2"
+    },
+    {
+      "path": "audit-result.json",
+      "bytes": 671,
+      "sha256": "c5ed114e0e6807f067f47c3663dd5d6c764b285d90b5a6117d56a52c0f301ea2"
+    },
+    {
+      "path": "audit.py",
+      "bytes": 2714,
+      "sha256": "ab048b3bcfcfcfc3481b64e23fac9c098986d898ddfbbb82c1a030c948c943c4"
+    },
+    {
+      "path": "byte-views.html",
+      "bytes": 843248,
+      "sha256": "91ed002e5d4306949955332d4041c14555c9a248ca019cebc60f0fe16f6157f6"
+    },
+    {
+      "path": "byte-views.tree.json",
+      "bytes": 2390,
+      "sha256": "f9ddb2f61ca168224f1548c7f5f542802f9246d3223a797eb892642a2d4fd46b"
+    },
+    {
+      "path": "dedupe.json",
+      "bytes": 11177,
+      "sha256": "ac38fbd80cd2d444caa4edb2e14937be04d81baa4d07f3dd85514f720e8e57c0"
+    },
+    {
+      "path": "explainer.archify.md",
+      "bytes": 2528,
+      "sha256": "9680866d98d3b2157610c4289935c85e52df033763d309dfa1c49ae1a27f936e"
+    },
+    {
+      "path": "explainer.html",
+      "bytes": 559322,
+      "sha256": "c05930ec080571f3bedf3a12070a815b771febe9a5542a48d2dff8e61b63e305"
+    },
+    {
+      "path": "observation.json",
+      "bytes": 1892,
+      "sha256": "a9b3e2a99d8abb429e1bb98eba2d63300d72075ec6db85feaf4cd9c13b091ee1"
+    },
+    {
+      "path": "observe.py",
+      "bytes": 2000,
+      "sha256": "36b9e708173c79c0c6091b48de9f418fc689833c55b4638b13450622e65966f4"
+    },
+    {
+      "path": "screenshots/capture.json",
+      "bytes": 7891,
+      "sha256": "2e7817bb803fd498120a141e5ba4174a79106807217337640bc83a0b13f49093"
+    },
+    {
+      "path": "screenshots/explainer-full.png",
+      "bytes": 294183,
+      "sha256": "d7686ffa0075eee46e489578be266ba7509039ed3676c200f969c00760a44f7c"
+    },
+    {
+      "path": "screenshots/explainer-overview.png",
+      "bytes": 126665,
+      "sha256": "a87a179d4327192c753ef697ae5d4aff83a33dc20e354436abbea260af65b42f"
+    },
+    {
+      "path": "screenshots/source-card.png",
+      "bytes": 137752,
+      "sha256": "5a09c90fe9eab0fcbcafcba57415320b0c5e430c8fec65e7f3d3c8ac5afb282c"
+    },
+    {
+      "path": "screenshots/tree.png",
+      "bytes": 211251,
+      "sha256": "7afe1577b83503e9e0c15ceafdbadc4b19d00a68403b4eb01437ccb8352833c4"
+    },
+    {
+      "path": "upstream/LICENSE",
+      "bytes": 1156,
+      "sha256": "e9c956407024c7e18fcec3a9bef7a8e687ed5c74719bdf968f66ecb0d6e28cfa"
+    },
+    {
+      "path": "upstream/format/png/png.go",
+      "bytes": 6138,
+      "sha256": "812b9b5eb2f81a4ad71fbc12c222e7abd112f2e6a1bf0e99b0c8f540bf23c124"
+    },
+    {
+      "path": "upstream/format/png/testdata/4x4_palette.fqtest",
+      "bytes": 6808,
+      "sha256": "fa371aa307933d647567c4c511118f38c00c4322948eb78461fa8b862c2a23c0"
+    },
+    {
+      "path": "upstream/format/png/testdata/4x4_palette.png",
+      "bytes": 97,
+      "sha256": "508a58c0563252e935d3a0112131f236c81a4db2e161deb203659f0ca1d8cf39"
+    },
+    {
+      "path": "upstream/internal/mathx/num.go",
+      "bytes": 2138,
+      "sha256": "193093d81a0edcc646016bb460b30263155f36daad0053e0a9bd8034bc2bdc0d"
+    },
+    {
+      "path": "upstream/pkg/interp/decode.go",
+      "bytes": 19039,
+      "sha256": "4113727f337c39d12f214f109424a4bb56c509eb4de16cb00268f27039b5b042"
+    },
+    {
+      "path": "upstream/pkg/interp/decode.jq",
+      "bytes": 2927,
+      "sha256": "b4df2a7431a39312928feeeef9421b9bec22976dd4c3b8be92153034ccdda78c"
+    },
+    {
+      "path": "upstream/source-manifest.json",
+      "bytes": 1586,
+      "sha256": "b61d047960b8e8690b0d2b1ca5f93d5201c367071bb922e87aff4c8e1d9e123b"
+    }
+  ]
+}

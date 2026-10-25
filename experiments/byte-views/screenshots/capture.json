@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 1,
+  "kind": "derived browser evidence summary",
+  "pathBase": "experiments/byte-views",
+  "captureTool": "ego-browser Chrome, existing TaskSpace 4 / p1",
+  "artifacts": [
+    {
+      "path": "explainer.html",
+      "bytes": 559322,
+      "sha256": "c05930ec080571f3bedf3a12070a815b771febe9a5542a48d2dff8e61b63e305"
+    },
+    {
+      "path": "byte-views.html",
+      "bytes": 843248,
+      "sha256": "91ed002e5d4306949955332d4041c14555c9a248ca019cebc60f0fe16f6157f6"
+    }
+  ],
+  "images": [
+    {
+      "path": "screenshots/explainer-overview.png",
+      "bytes": 126665,
+      "sha256": "a87a179d4327192c753ef697ae5d4aff83a33dc20e354436abbea260af65b42f",
+      "pngDimensions": {
+        "width": 1440,
+        "height": 1100
+      },
+      "viewportBeforeCapture": {
+        "width": 1440,
+        "height": 1100
+      },
+      "fullPage": false,
+      "artifact": "explainer.html",
+      "theme": "light",
+      "style": "Clean",
+      "rootVisuallyInspected": true,
+      "sourceModifiedAtUtc": "2026-10-25T09:21:36.186512+00:00"
+    },
+    {
+      "path": "screenshots/explainer-full.png",
+      "bytes": 294183,
+      "sha256": "d7686ffa0075eee46e489578be266ba7509039ed3676c200f969c00760a44f7c",
+      "pngDimensions": {
+        "width": 1440,
+        "height": 2131
+      },
+      "viewportBeforeCapture": {
+        "width": 1440,
+        "height": 1100
+      },
+      "fullPage": true,
+      "artifact": "explainer.html",
+      "theme": "light",
+      "style": "Clean",
+      "rootVisuallyInspected": true,
+      "sourceModifiedAtUtc": "2026-10-25T09:21:36.287322+00:00"
+    },
+    {
+      "path": "screenshots/source-card.png",
+      "bytes": 137752,
+      "sha256": "5a09c90fe9eab0fcbcafcba57415320b0c5e430c8fec65e7f3d3c8ac5afb282c",
+      "pngDimensions": {
+        "width": 1440,
+        "height": 1100
+      },
+      "viewportBeforeCapture": {
+        "width": 1440,
+        "height": 1100
+      },
+      "fullPage": false,
+      "artifact": "explainer.html",
+      "theme": "light",
+      "style": "Clean",
+      "rootVisuallyInspected": true,
+      "sourceModifiedAtUtc": "2026-10-25T09:22:15.591436+00:00"
+    },
+    {
+      "path": "screenshots/tree.png",
+      "bytes": 211251,
+      "sha256": "7afe1577b83503e9e0c15ceafdbadc4b19d00a68403b4eb01437ccb8352833c4",
+      "pngDimensions": {
+        "width": 1440,
+        "height": 1580
+      },
+      "viewportBeforeCapture": {
+        "width": 1440,
+        "height": 1100
+      },
+      "fullPage": true,
+      "artifact": "byte-views.html",
+      "theme": "light",
+      "style": "Classic / Still",
+      "rootVisuallyInspected": true,
+      "sourceModifiedAtUtc": "2026-10-25T09:22:50.683424+00:00"
+    }
+  ],
+  "rawChecks": [
+    {
+      "rawFileBasename": "explainer-checks.json",
+      "bytes": 1704,
+      "sha256": "c1822c88e3cd34e1a4628a6d633aa636aad6c9c3a0cb97961be3d12721696ff7",
+      "observations": {
+        "observedAt": "2026-10-25T09:21:36.287Z",
+        "title": "四个 flags 为什么不增加 IHDR 长度？ · Archify",
+        "width": 1440,
+        "height": 1100,
+        "documentHeight": 2131,
+        "tables": [
+          [
+            [
+              "存储字段",
+              "原文件 byte 区间",
+              "大小",
+              "固定输入观察"
+            ],
+            [
+              "length",
+              "[8,12)",
+              "4 B",
+              "00 00 00 0d，大端值 13"
+            ],
+            [
+              "type",
+              "[12,16)",
+              "4 B",
+              "49 48 44 52，ASCII IHDR"
+            ],
+            [
+              "data",
+              "[16,29)",
+              "13 B",
+              "仅记录原字节，不解码像素"
+            ],
+            [
+              "CRC",
+              "[29,33)",
+              "4 B",
+              "d4 9f 76 ed，本轮不重算"
+            ],
+            [
+              "合计",
+              "[8,33)",
+              "25 B",
+              "其余 72 B 保留在完整输入，未展开"
+            ]
+          ],
+          [
+            [
+              "解释名",
+              "原文件 bit 区间",
+              "所在 byte",
+              "MSB 起算索引",
+              "值"
+            ],
+            [
+              "ancillary",
+              "[98,99)",
+              "12",
+              "2",
+              "false"
+            ],
+            [
+              "private",
+              "[106,107)",
+              "13",
+              "2",
+              "false"
+            ],
+            [
+              "reserved",
+              "[114,115)",
+              "14",
+              "2",
+              "false"
+            ],
+            [
+              "safe_to_copy",
+              "[122,123)",
+              "15",
+              "2",
+              "false"
+            ]
+          ]
+        ],
+        "headings": [
+          "结论",
+          "哪些是存储，哪些是解释？",
+          "25 字节怎样对账？",
+          "四位具体在哪里？",
+          "来源",
+          "",
+          "追问"
+        ],
+        "sourceAnchors": [
+          {
+            "text": "1",
+            "href": "#source-decoder"
+          }
+        ]
+      }
+    },
+    {
+      "rawFileBasename": "source-card-checks.json",
+      "bytes": 324,
+      "sha256": "3c16781bb601fdc63f08f4da69b1bbd8e29939d3fb5498ba5c0313b82e1ab4c5",
+      "observations": {
+        "observedAt": "2026-10-25T09:22:15.591Z",
+        "visible": true,
+        "text": "fq decoder：回退 32 bits 后重读 flags\ngithub.com\n1\n打开原文 ↗",
+        "links": [
+          "https://github.com/wader/fq/blob/b3645a5ee7ab64316117f2bf9dd0abf63a1a9f1a/format/png/png.go#L87-L102"
+        ],
+        "afterEscape": {
+          "hidden": true
+        }
+      }
+    },
+    {
+      "rawFileBasename": "native-checks.json",
+      "bytes": 975,
+      "sha256": "2e70d5359b147cec908bd7399fc5cd29786a5d472d7a83f132adbb04f51e645e",
+      "observations": {
+        "observedAt": "2026-10-25T09:22:50.683Z",
+        "title": "IHDR：25 字节，四种重叠 bit 解释",
+        "width": 1440,
+        "height": 1100,
+        "documentHeight": 1652,
+        "theme": "light",
+        "bodyBackground": "rgb(244, 245, 247)",
+        "svgText": [
+          "IHDR · 25 B",
+          "存储字段分解 [8,33)",
+          "length · 4 B",
+          "[8,12) · 值为 13",
+          "type · 4 B",
+          "[12,16) · IHDR",
+          "data · 13 B",
+          "[16,29)",
+          "CRC · 4 B",
+          "[29,33) · 仅观察存储值",
+          "ancillary = false",
+          "解释视图 · bit [98,99)",
+          "private = false",
+          "解释视图 · bit [106,107)",
+          "reserved = false",
+          "解释视图 · bit [114,115)",
+          "safe_to_copy = false",
+          "解释视图 · bit [122,123)",
+          "8",
+          "4",
+          "全部展开"
+        ],
+        "controls": [
+          "当前视觉风格：经典。选择视觉风格",
+          "视觉风格",
+          "恢复动效",
+          "矢量与动效",
+          "100% · 再次放大以显示标签和注释。重置图表视图"
+        ]
+      }
+    }
+  ],
+  "checked": [
+    "IHDR physical fields sum to 25 bytes; four false flags are interpretation views within type",
+    "Full native tree and Explainer readable at the recorded viewport",
+    "Source citation hover opens metadata-only card at fixed upstream decoder URL; Escape hides it"
+  ],
+  "limits": [
+    "Browser interaction is separate from Explainer finalize, whose browser-check was not requested",
+    "Source card contains citation metadata, not a code excerpt; external link was not opened",
+    "No fq or GraphicsMagick execution, CRC validation, decompression, screen-reader or human acceptance",
+    "PNG full-page dimensions are read from image bytes; they need not equal the before-capture viewport"
+  ]
+}

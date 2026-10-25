@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "scope": "fixed-input factual/artifact audit; no fq, CRC, image decoder or browser execution",
+  "checks": [
+    "complete upstream files bound to manifest bytes/SHA256",
+    "recorded observation equals current fixed-byte observation",
+    "independent struct header and physical partition",
+    "case-bit masks agree and overlap type, not extra storage",
+    "complete golden retains expected original ranges and generator command",
+    "tree has exactly physical field branches and nested interpretation views",
+    "explainer embeds the same single native Tree spec",
+    "frozen native HTML retains authored names and no private paths"
+  ]
+}

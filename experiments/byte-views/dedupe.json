@@ -1,0 +1,288 @@
+{
+  "date": "2026-10-25",
+  "queries": [
+    {
+      "query": "repo:tt-a1i/archify is:open PNG",
+      "totalCount": 48,
+      "incompleteResults": false,
+      "results": [
+        {
+          "number": 974,
+          "title": "[Proposal]: Add CLI command to export standalone PNG / image (headless raster export)",
+          "url": "https://github.com/tt-a1i/archify/issues/974"
+        },
+        {
+          "number": 1024,
+          "title": "[Bug]: Viewer export filenames drop non-Latin diagram titles (every zh/ko/ru export is \"diagram.png\")",
+          "url": "https://github.com/tt-a1i/archify/issues/1024"
+        },
+        {
+          "number": 180,
+          "title": "Add 'Full diagram page' export: title + diagram + cards in one PNG, without viewer chrome",
+          "url": "https://github.com/tt-a1i/archify/pull/180"
+        },
+        {
+          "number": 179,
+          "title": "Add a 'Full diagram page' export: title + diagram + cards in one PNG, without viewer chrome",
+          "url": "https://github.com/tt-a1i/archify/issues/179"
+        },
+        {
+          "number": 1015,
+          "title": "feat(explainer): improve visual hierarchy, KPI deltas, code focus, and interactive details",
+          "url": "https://github.com/tt-a1i/archify/pull/1015"
+        },
+        {
+          "number": 1081,
+          "title": "Add llms.txt install brief and contributors wall",
+          "url": "https://github.com/tt-a1i/archify/pull/1081"
+        },
+        {
+          "number": 563,
+          "title": "feat(icons): add monitoring and alert role symbols",
+          "url": "https://github.com/tt-a1i/archify/pull/563"
+        },
+        {
+          "number": 234,
+          "title": "Retire Share Card exports and keep Copy diagram only",
+          "url": "https://github.com/tt-a1i/archify/pull/234"
+        },
+        {
+          "number": 1044,
+          "title": "feat(compare): read Architecture snapshots from two Git refs",
+          "url": "https://github.com/tt-a1i/archify/issues/1044"
+        },
+        {
+          "number": 212,
+          "title": "Add Termio to sponsors",
+          "url": "https://github.com/tt-a1i/archify/pull/212"
+        },
+        {
+          "number": 578,
+          "title": "feat(architecture): add bounded typography scale",
+          "url": "https://github.com/tt-a1i/archify/pull/578"
+        },
+        {
+          "number": 241,
+          "title": "No CLI path to an SVG \u2014 `deliver` produces the HTML viewer, and SVG export lives inside it",
+          "url": "https://github.com/tt-a1i/archify/issues/241"
+        },
+        {
+          "number": 733,
+          "title": "Viewer exports do nothing when the HTML is hosted as a claude.ai Artifact",
+          "url": "https://github.com/tt-a1i/archify/issues/733"
+        },
+        {
+          "number": 1010,
+          "title": "feat(render): \u5728\u6e32\u67d3\u4ea7\u7269\u9875\u9762\u5185\u5448\u73b0\u66f4\u65b0\u63d0\u793a\u4e0e\u5b89\u88c5\u7248\u672c\uff08update notice inside the artifact\uff09",
+          "url": "https://github.com/tt-a1i/archify/issues/1010"
+        },
+        {
+          "number": 917,
+          "title": "docs: expand README discovery and previews to all ten released diagram types",
+          "url": "https://github.com/tt-a1i/archify/issues/917"
+        },
+        {
+          "number": 229,
+          "title": "[Change] Retire Share Card exports and keep Copy diagram only",
+          "url": "https://github.com/tt-a1i/archify/issues/229"
+        },
+        {
+          "number": 606,
+          "title": "docs(references): document brand URL as the network trust boundary",
+          "url": "https://github.com/tt-a1i/archify/pull/606"
+        },
+        {
+          "number": 649,
+          "title": "feat(workflow): add configurable typography with measured layout",
+          "url": "https://github.com/tt-a1i/archify/pull/649"
+        },
+        {
+          "number": 998,
+          "title": "Code analysis Main branch",
+          "url": "https://github.com/tt-a1i/archify/pull/998"
+        },
+        {
+          "number": 616,
+          "title": "workflow with explicit meta.viewBox gets no vertical-scroll contract \u2014 tall swimlane diagrams always fail containment",
+          "url": "https://github.com/tt-a1i/archify/issues/616"
+        },
+        {
+          "number": 804,
+          "title": "docs(authoring): explain measured viewport height budgets",
+          "url": "https://github.com/tt-a1i/archify/pull/804"
+        },
+        {
+          "number": 478,
+          "title": "feat: extend adaptive canvas and large-world browsing to five diagram types",
+          "url": "https://github.com/tt-a1i/archify/pull/478"
+        },
+        {
+          "number": 225,
+          "title": "fix(viewer): stabilize relationship exploration",
+          "url": "https://github.com/tt-a1i/archify/pull/225"
+        },
+        {
+          "number": 571,
+          "title": "feat(sequence): support self-messages",
+          "url": "https://github.com/tt-a1i/archify/pull/571"
+        },
+        {
+          "number": 1001,
+          "title": "fix(viewer): camera viewport follows the container, not the narrower SVG box",
+          "url": "https://github.com/tt-a1i/archify/pull/1001"
+        },
+        {
+          "number": 1069,
+          "title": "docs: add standalone Explainer baseline evidence for #1068",
+          "url": "https://github.com/tt-a1i/archify/pull/1069"
+        },
+        {
+          "number": 382,
+          "title": "perf(template): drop backdrop-blur and filter transitions so viewer stays smooth",
+          "url": "https://github.com/tt-a1i/archify/pull/382"
+        },
+        {
+          "number": 546,
+          "title": "Feature request: icon-first node rendering mode + broader/pinned icon support (no AWS/cloud-provider icons in bundled library)",
+          "url": "https://github.com/tt-a1i/archify/issues/546"
+        },
+        {
+          "number": 329,
+          "title": "feat(viewer): add pointer-anchored wheel zoom",
+          "url": "https://github.com/tt-a1i/archify/pull/329"
+        },
+        {
+          "number": 1060,
+          "title": "[Bug]: Explainer delivery/finalize sidecars overwrite local JSON dependencies",
+          "url": "https://github.com/tt-a1i/archify/issues/1060"
+        },
+        {
+          "number": 281,
+          "title": "feat: cross-diagram drilldown navigation (href / drilldowns / parentHref)",
+          "url": "https://github.com/tt-a1i/archify/pull/281"
+        },
+        {
+          "number": 72,
+          "title": "feat(drawio): export Archify diagrams as editable draw.io files",
+          "url": "https://github.com/tt-a1i/archify/pull/72"
+        },
+        {
+          "number": 473,
+          "title": "feat(viewer): add a fifth Blossom visual preset",
+          "url": "https://github.com/tt-a1i/archify/pull/473"
+        },
+        {
+          "number": 452,
+          "title": "Feature request \u2014 author-ordered relationships: highlight a node's outgoing calls in call order",
+          "url": "https://github.com/tt-a1i/archify/issues/452"
+        },
+        {
+          "number": 317,
+          "title": "feat(architecture): allow connections to named boundaries",
+          "url": "https://github.com/tt-a1i/archify/pull/317"
+        },
+        {
+          "number": 564,
+          "title": "[Bug]: Sequence segment headings are obscured by participant headers without a diagnostic",
+          "url": "https://github.com/tt-a1i/archify/issues/564"
+        },
+        {
+          "number": 1102,
+          "title": "Integrate reviewed maintenance fixes and Viewer contracts into dev",
+          "url": "https://github.com/tt-a1i/archify/pull/1102"
+        },
+        {
+          "number": 732,
+          "title": "feat(viewer): add GIF motion export alongside WebM",
+          "url": "https://github.com/tt-a1i/archify/pull/732"
+        },
+        {
+          "number": 729,
+          "title": "feat(i18n): complete the French example catalog",
+          "url": "https://github.com/tt-a1i/archify/pull/729"
+        },
+        {
+          "number": 1039,
+          "title": "fix(viewer): keep non-Latin letters in export filenames",
+          "url": "https://github.com/tt-a1i/archify/pull/1039"
+        },
+        {
+          "number": 328,
+          "title": "Add archify export svg for a standalone, styled SVG",
+          "url": "https://github.com/tt-a1i/archify/pull/328"
+        },
+        {
+          "number": 895,
+          "title": "feat: add processor architecture components",
+          "url": "https://github.com/tt-a1i/archify/pull/895"
+        },
+        {
+          "number": 172,
+          "title": "fix(architecture): prefer straight routes over unnecessary Port Spread doglegs",
+          "url": "https://github.com/tt-a1i/archify/pull/172"
+        },
+        {
+          "number": 477,
+          "title": "feat(canvas): \u4e94\u7c7b\u56fe\u5185\u5bb9\u81ea\u9002\u5e94\u753b\u5e03\u4e0e\u5927\u56fe\u6d4f\u89c8\uff08\u7531 Workflow \u8bd5\u70b9\u6269\u5c55\uff09",
+          "url": "https://github.com/tt-a1i/archify/issues/477"
+        },
+        {
+          "number": 398,
+          "title": "feat(viewer): authored node explanations in the semantic passport",
+          "url": "https://github.com/tt-a1i/archify/pull/398"
+        },
+        {
+          "number": 874,
+          "title": "fix(viewer): save exports through Artifact host",
+          "url": "https://github.com/tt-a1i/archify/pull/874"
+        },
+        {
+          "number": 272,
+          "title": "feat: add standalone SVG delivery",
+          "url": "https://github.com/tt-a1i/archify/pull/272"
+        },
+        {
+          "number": 838,
+          "title": "fix(workflow): offer a member-preserving group placement for blocked routes",
+          "url": "https://github.com/tt-a1i/archify/pull/838"
+        }
+      ]
+    },
+    {
+      "query": "repo:tt-a1i/archify is:open IHDR",
+      "totalCount": 0,
+      "incompleteResults": false,
+      "results": []
+    },
+    {
+      "query": "repo:tt-a1i/archify is:open \"byte range\"",
+      "totalCount": 3,
+      "incompleteResults": false,
+      "results": [
+        {
+          "number": 282,
+          "title": "[Feature][Architecture] Add an authored typography scale for wide presentation diagrams",
+          "url": "https://github.com/tt-a1i/archify/issues/282"
+        },
+        {
+          "number": 602,
+          "title": "[Bug]: Brand capture accepts incomplete WebP chunks and missing image data",
+          "url": "https://github.com/tt-a1i/archify/issues/602"
+        },
+        {
+          "number": 605,
+          "title": "fix(brands): validate WebP container image data",
+          "url": "https://github.com/tt-a1i/archify/pull/605"
+        }
+      ]
+    },
+    {
+      "query": "repo:tt-a1i/archify is:open \"bit field\"",
+      "totalCount": 0,
+      "incompleteResults": false,
+      "results": []
+    }
+  ],
+  "scope": "Open issues and PR search, not proof of exhaustive absence",
+  "relevant": "#602/#605 concern WebP brand container acceptance; #974 PNG export. No same IHDR range interpretation example identified in these results."
+}

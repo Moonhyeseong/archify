@@ -1,0 +1,46 @@
+{
+  "repository": "https://github.com/wader/fq",
+  "revision": "b3645a5ee7ab64316117f2bf9dd0abf63a1a9f1a",
+  "license": "MIT; complete upstream LICENSE retained",
+  "fixtureOrigin": {
+    "firstAddedCommit": "bfc977b810b01246e242f1082f111e3196db7cfa",
+    "evidence": "Complete golden first line contains GraphicsMagick built-in gradient command; PNG and golden introduced together. No original-generation execution or exclusive ownership/public-domain claim."
+  },
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1156,
+      "sha256": "e9c956407024c7e18fcec3a9bef7a8e687ed5c74719bdf968f66ecb0d6e28cfa"
+    },
+    {
+      "path": "format/png/testdata/4x4_palette.png",
+      "bytes": 97,
+      "sha256": "508a58c0563252e935d3a0112131f236c81a4db2e161deb203659f0ca1d8cf39"
+    },
+    {
+      "path": "format/png/testdata/4x4_palette.fqtest",
+      "bytes": 6808,
+      "sha256": "fa371aa307933d647567c4c511118f38c00c4322948eb78461fa8b862c2a23c0"
+    },
+    {
+      "path": "format/png/png.go",
+      "bytes": 6138,
+      "sha256": "812b9b5eb2f81a4ad71fbc12c222e7abd112f2e6a1bf0e99b0c8f540bf23c124"
+    },
+    {
+      "path": "pkg/interp/decode.go",
+      "bytes": 19039,
+      "sha256": "4113727f337c39d12f214f109424a4bb56c509eb4de16cb00268f27039b5b042"
+    },
+    {
+      "path": "pkg/interp/decode.jq",
+      "bytes": 2927,
+      "sha256": "b4df2a7431a39312928feeeef9421b9bec22976dd4c3b8be92153034ccdda78c"
+    },
+    {
+      "path": "internal/mathx/num.go",
+      "bytes": 2138,
+      "sha256": "193093d81a0edcc646016bb460b30263155f36daad0053e0a9bd8034bc2bdc0d"
+    }
+  ]
+}
