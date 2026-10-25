@@ -18,7 +18,7 @@
 | [Dependency map](https://github.com/tt-a1i/archify/tree/codex/lab-dependency-map/experiments/dependency-map) | 把 dependency-cruiser 已有报告变成局部原生图，保留未解析与视图外账目 | `2be2ab55` | [官方样例](https://github.com/tt-a1i/archify/blob/codex/lab-dependency-map/experiments/dependency-map/screenshots/official.png) | 6 tests；两图 finalize 四阶段通过；synthetic 的三条绕行建议仍保留 |
 | [Trace waterfall](https://github.com/tt-a1i/archify/tree/codex/lab-trace-waterfall/experiments/trace-waterfall) | 把真实采集的 Chrome X 格式操作区间变成可分享瀑布图 | `8e65f150` | [真实采集](https://github.com/tt-a1i/archify/blob/codex/lab-trace-waterfall/experiments/trace-waterfall/screenshots/workload.png) | 9 tests；四阶段通过；仅 X 子集，不推断调用树或关键路径 |
 | [Markdown outline](https://github.com/tt-a1i/archify/tree/codex/lab-markdown-outline/experiments/markdown-outline) | 标题与源行号直接转原生 Tree，保留文档层级 | `3f156e97` | [原生 PNG 导出](https://github.com/tt-a1i/archify/blob/codex/lab-markdown-outline/experiments/markdown-outline/screenshots/contributing-export.png) | 8 tests；三样例四阶段通过；公开 CONTRIBUTING.md 17 节点，受限 Markdown 子集 |
-| [DBML ERD](https://github.com/tt-a1i/archify/tree/codex/lab-dbml-erd/experiments/dbml-erd) | 从严格 DBML 子集保留键、关系方向和可空性 | `feab6ae6` | [4 表示例](https://github.com/tt-a1i/archify/blob/codex/lab-dbml-erd/experiments/dbml-erd/screenshots/order-payments.png) | 39 tests；四阶段通过；原创 synthetic，未验证完整 DBML 或真实数据库 |
+| [DBML ERD](https://github.com/tt-a1i/archify/tree/codex/lab-dbml-erd/experiments/dbml-erd) | 从严格 DBML 子集保留键、关系方向和可空性 | `d0472cc3` | [4 表示例](https://github.com/tt-a1i/archify/blob/codex/lab-dbml-erd/experiments/dbml-erd/screenshots/order-payments.png) | 原39 tests/四阶段证据复用；原创synthetic；新增两完整官方fixture均明确拒绝且无输出，保留约束缺口，未扩parser/执行数据库 |
 | [Change coupling](https://github.com/tt-a1i/archify/tree/codex/lab-change-coupling/experiments/change-coupling) | 解释 Code Maat CSV 的对称共变分数及原始计数 | `44dc5cbc` | [原生证据图](https://github.com/tt-a1i/archify/blob/codex/lab-change-coupling/experiments/change-coupling/screenshots/coupling.png) | 13 tests；render/finalize 通过，自动 browser 未请求；synthetic，非调用或因果网络 |
 | [Payload delta](https://github.com/tt-a1i/archify/tree/codex/lab-payload-delta/experiments/payload-delta) | 借鉴 PR Lens；把明确提供的 JSON 样本差异放在调用旁，区分 null、missing、类型和数组身份 | `823e8705` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-payload-delta/experiments/payload-delta/screenshots/review.png) | 10 tests；render/finalize 通过，单独 Explainer browser 通过；保留一条段落长度建议，不推断 schema 兼容性 |
 | [Decision thread](https://github.com/tt-a1i/archify/tree/codex/lab-decision-thread/experiments/decision-thread) | 保留异议、撤回与单方决定；决定不会抹掉尚未解决的异议 | `bdbdf9a9` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-decision-thread/experiments/decision-thread/screenshots/sequence.png) | 8 tests；两种产物四阶段通过；原创虚构对话，颜色图例已修正，不推断群体共识 |
@@ -80,9 +80,8 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
-| 后续发现 | 并发程序的锁等待、持有与死锁证据 | 持续固定来源调研，不按星数筛选 |
-| 既有实验补证据 | DBML ERD、Plan actions | 查找完整公开上游输入，先验证现有适配合同，不静默删减不支持内容 |
-| 既有失败诊断 | Task review map 的键盘遍历诊断 | 定位真实交互缺陷、输入问题或gate误报；保留现有失败证据 |
+| 新发现修复 | Explainer键盘遍历与diff行号 | 两个独立分支实施中：原生Tab停点使检查过早结束、三位行号被折行；均由实际产物复现 |
+| 既有实验补证据 | Plan actions官方完整fixture | 原文转换通过，真实图片已查看，独立证据复核收尾；DBML两原文拒绝已推送 |
 | 已排除的重复实现 | Mutation报告reader | 原viewer已有文件搜索、状态筛选、diff、测试关联和单HTML打包；只保留研究，不另建reader |
 | 保留候选 | Notebook别名与派生值的不同stale预期 | 6项目只读报告完成；目前无实际notebook交接任务，暂不扩成converter |
 
@@ -122,6 +121,7 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 静态代码路径与步骤位置 | [Codeflow evidence small tools](scouts/codeflow-evidence-smalltools.md) |
 | 语法树、冲突与失败位置 | [Grammar reading small tools](scouts/grammar-reading-smalltools.md) |
 | 增量构建、缓存与失效传播 | [Rebuild evidence small tools](scouts/rebuild-evidence-smalltools.md) |
+| 并发程序的锁序与等待证据 | [Concurrency evidence small tools](scouts/concurrency-evidence-smalltools.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
 报告中的上游声明、局部源码核实、计划中的实验和已经执行的结果分别标注。未推荐方向也保留原因，避免反复研究；没有把上游宣传、星数或作者截图当作 Archify 的效果证明。
