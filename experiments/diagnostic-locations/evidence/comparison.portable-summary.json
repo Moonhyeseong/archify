@@ -1,0 +1,28 @@
+{
+  "ok": true,
+  "status": "pass",
+  "quality": "showcase",
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReview": "not-requested",
+  "kind": "portable-summary-not-original-receipt",
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "command": "node archify/bin/archify.mjs finalize explainer experiments/diagnostic-locations/evidence/comparison.archify.md experiments/diagnostic-locations/evidence/comparison.html --browser-check --json",
+  "note": "Actual finalize stdout transcribed without local filesystem paths; original retained outside checkout.",
+  "specification": {
+    "sha256": "3e6ab7843990a57db299a766f4ce14be82b3cab1c29b03cf9759b806c9e905f5",
+    "bytes": 2668
+  },
+  "artifact": {
+    "sha256": "7db6fe8910bb095b4de7c2acca3517d415f4083faff9cbbb10ff82b0870b1d7f",
+    "bytes": 130157
+  }
+}

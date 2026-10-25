@@ -1,0 +1,65 @@
+{
+  "kind": "portable-derived-diagnostics-not-raw-receipt",
+  "rawStdoutSha256": "7080ab4d82f17b59b0cb730039d3fd29b7c75169546764d340ba37b34345703f",
+  "inputSha256": "fc47419405dd0f47be7e8ce6caebfc6974fd3979f0023759ef82ba9c4a722aec",
+  "diagnostics": [
+    {
+      "code": "explainer/duplicate-id",
+      "severity": "error",
+      "message": "This identity is already used. Use an explicit distinct ID.",
+      "evidence": {
+        "reason": "This identity is already used. Use an explicit distinct ID.",
+        "example": "id=request-path-branch"
+      },
+      "supportedFixes": [
+        "Use a valid form, for example: id=request-path-branch"
+      ],
+      "subject": {
+        "line": 13,
+        "column": 1,
+        "component": "comparison",
+        "path": "/panels/0/blocks/1/rows/2/id",
+        "panelId": "changes"
+      }
+    },
+    {
+      "code": "explainer/duplicate-id",
+      "severity": "error",
+      "message": "This identity is already used. Use an explicit distinct ID.",
+      "evidence": {
+        "reason": "This identity is already used. Use an explicit distinct ID.",
+        "example": "id=request-path-branch"
+      },
+      "supportedFixes": [
+        "Use a valid form, for example: id=request-path-branch"
+      ],
+      "subject": {
+        "line": 14,
+        "column": 1,
+        "component": "comparison",
+        "path": "/panels/0/blocks/1/rows/3/id",
+        "panelId": "changes"
+      }
+    },
+    {
+      "code": "explainer/duplicate-id",
+      "severity": "error",
+      "message": "This identity is already used. Use an explicit distinct ID.",
+      "evidence": {
+        "reason": "This identity is already used. Use an explicit distinct ID.",
+        "example": "id=request-path-branch"
+      },
+      "supportedFixes": [
+        "Use a valid form, for example: id=request-path-branch"
+      ],
+      "subject": {
+        "line": 15,
+        "column": 1,
+        "component": "comparison",
+        "path": "/panels/0/blocks/1/rows/4/id",
+        "panelId": "changes"
+      }
+    }
+  ],
+  "note": "Only machine receipt subject.input and other outer local paths omitted; raw stdout retained outside checkout."
+}

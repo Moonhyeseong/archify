@@ -2790,8 +2790,26 @@ function formatDiagnostics(error, diagnostics = []) {
   return [
     error,
     ...diagnostics.map((entry) => {
+      // Project supplied scalar locations only. Do not infer spans, source files,
+      // or missing coordinates; keep values on one literal terminal/UI line.
+      const location = ['line', 'column', 'path', 'component', 'node', 'nodeId', 'id', 'block', 'index', 'panelId']
+        .flatMap((key) => {
+          const value = entry.subject?.[key];
+          if (key === 'line' || key === 'column') {
+            if (!Number.isSafeInteger(value) || value < 1) return [];
+          } else if (key === 'block' || key === 'index') {
+            if ((typeof value !== 'string' || value.length === 0)
+              && (!Number.isSafeInteger(value) || value < 0)) return [];
+          } else if (typeof value !== 'string' || value.length === 0) return [];
+          const literal = typeof value === 'string'
+            ? JSON.stringify(value).replace(/[\u007f-\u009f\u2028\u2029\u202a-\u202e\u2066-\u2069]/g,
+              (character) => `\\u${character.charCodeAt(0).toString(16).padStart(4, '0')}`)
+            : String(value);
+          return [`${key} ${literal}`];
+        }).join(', ');
+      const where = location ? ` (${location})` : '';
       const fix = entry.supportedFixes?.length ? ` Fix: ${entry.supportedFixes.join('; ')}.` : '';
-      return `[${entry.code}] ${entry.message}${fix}`;
+      return `[${entry.code}]${where} ${entry.message}${fix}`;
     }),
   ].join('\n');
 }

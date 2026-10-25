@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url';
 import { openLoopbackUrl } from './open-artifact.mjs';
 import { resolveOutputPath } from '../renderers/shared/output-path.mjs';
 import { sameLocation } from '../renderers/shared/path-semantics.mjs';
+import { formatDiagnostics } from '../renderers/shared/diagnostics.mjs';
 import {
   captureAtomicOutput,
   captureRegularFileBinding,
@@ -162,6 +163,12 @@ function redactDiagnostic(value, paths) {
   for (const [absolutePath, replacement] of paths) {
     if (!absolutePath) continue;
     text = text.split(absolutePath).join(replacement);
+    // Location heads quote values as JSON literals. Preserve redaction for
+    // escaped Windows separators and control characters as well as raw paths.
+    const quotedPath = JSON.stringify(absolutePath).slice(1, -1)
+      .replace(/[\u007f-\u009f\u2028\u2029\u202a-\u202e\u2066-\u2069]/g,
+        (character) => `\\u${character.charCodeAt(0).toString(16).padStart(4, '0')}`);
+    text = text.split(quotedPath).join(replacement);
   }
   return text;
 }
@@ -599,10 +606,7 @@ export async function startPreview(options) {
   function publishFailure(receipt, stdout, stderr, candidatePath, snapshotPath) {
     const repairDetails = receipt?.diagnostics
       ?.slice(0, 12)
-      .map((entry) => {
-        const fix = entry.supportedFixes?.length ? `\nFix: ${entry.supportedFixes.join('; ')}` : '';
-        return `[${entry.code}] ${entry.message}${fix}`;
-      }) || [];
+      .map((entry) => formatDiagnostics('', [entry]).trimStart()) || [];
     const checkerDetails = receipt?.checker?.checks
       ?.filter((check) => !check.ok)
       .flatMap((check) => check.details || [])

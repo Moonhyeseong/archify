@@ -1,0 +1,78 @@
+{
+  "kind": "actual-root-browser-capture",
+  "capturedAt": "2026-10-25T05:36:15.459619+00:00",
+  "browser": "Ego Lite / Chromium",
+  "viewport": {
+    "width": 1440,
+    "height": 1000,
+    "deviceScaleFactor": 1
+  },
+  "images": [
+    {
+      "file": "experiments/diagnostic-locations/screenshots/comparison.png",
+      "sha256": "921b87d8e461357d0a397de229c4475831032bbcc8c68d9005f82e6f1e17e1b1",
+      "bytes": 221269,
+      "width": 1440,
+      "height": 1340
+    },
+    {
+      "file": "experiments/diagnostic-locations/screenshots/live-preview-needs-fix.png",
+      "sha256": "96db9c539d559d94517be8d3fb380b3a0302989e074dd60ac6d549b2046da94b",
+      "bytes": 77142,
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "file": "experiments/diagnostic-locations/screenshots/live-preview-verified.png",
+      "sha256": "167e99f73b2183a47081e6bc74aed5bb24f8103bbac20d9d858472a4d1c51c0e",
+      "bytes": 48657,
+      "width": 1440,
+      "height": 1000
+    }
+  ],
+  "bindings": [
+    {
+      "file": "archify/bin/archify.mjs",
+      "sha256": "4b5ef197187e5373cc154df9d4f0900b4613dc4fc9b61dfb5cfa08e818e8f8ff",
+      "bytes": 290520
+    },
+    {
+      "file": "archify/bin/preview.mjs",
+      "sha256": "a94b88e9e21c7bd65d4f378e3f8c228160508afbef29350c689ff0a03a41b962",
+      "bytes": 36943
+    },
+    {
+      "file": "archify/renderers/shared/diagnostics.mjs",
+      "sha256": "91a7a4c9acb800a9977d290569cfe4859499f528a524e4d99885550b1d477221",
+      "bytes": 9431
+    },
+    {
+      "file": "experiments/diagnostic-locations/live-preview.mjs",
+      "sha256": "99408095687acafe1479871dc83c7e91cd73f1acf388cd3cc81d3d4f3f0f1def",
+      "bytes": 1577
+    },
+    {
+      "file": "experiments/diagnostic-locations/evidence/comparison.html",
+      "sha256": "7db6fe8910bb095b4de7c2acca3517d415f4083faff9cbbb10ff82b0870b1d7f",
+      "bytes": 130157
+    },
+    {
+      "file": "experiments/diagnostic-locations/fixtures/repeated-labels.archify.md",
+      "sha256": "fc47419405dd0f47be7e8ce6caebfc6974fd3979f0023759ef82ba9c4a722aec",
+      "bytes": 646
+    }
+  ],
+  "continuousPreviewObservation": [
+    "Fresh client initially arrived after a failed generation and had no verified revision; this was not treated as last-good recovery.",
+    "With the same client connected, changing worker.parent to root displayed Verified rev 1 and Dispatch → Worker.",
+    "Changing only worker.parent back to missing-parent, without restarting server or navigating the client, displayed Needs fix · showing rev 1 and retained Dispatch → Worker.",
+    "Opening View diagnostic showed the supplied path /nodes/1/parent and nodeId worker.",
+    "The owned preview process was stopped after capture."
+  ],
+  "independentReview": {
+    "newFocusedTests": 6,
+    "result": "pass",
+    "scope": "Location preservation, scalar/zero/control handling, unmodified JSON, actual preview refresh, portable evidence and archive source parity."
+  },
+  "limitations": "Actual browser observations and screenshot inspection by Codex; no human acceptance, complete visual audit, cross-platform check or remote CI claim. Runtime URLs, process IDs and local input paths are intentionally omitted."
+}

@@ -1,0 +1,16 @@
+{
+  "kind": "actual-comparison-binding",
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "inputSha256": "fc47419405dd0f47be7e8ce6caebfc6974fd3979f0023759ef82ba9c4a722aec",
+  "jsonStdoutIdentical": true,
+  "commands": "public validate explainer; same absolute input path and bytes; baseline source copied from HEAD and candidate local source",
+  "beforeTextSha256": "ceb797f6c29bd1b1d972b875c3b45967b81e37cb4455b74861b5a316b39d3679",
+  "afterTextSha256": "af489a738c5a9c1871795929d62d0be328a38d6f223a755425e87b4053a20c18",
+  "jsonStdoutRawSha256": "7080ab4d82f17b59b0cb730039d3fd29b7c75169546764d340ba37b34345703f",
+  "exitCodes": {
+    "beforeText": 1,
+    "afterText": 1,
+    "beforeJson": 1,
+    "afterJson": 1
+  }
+}

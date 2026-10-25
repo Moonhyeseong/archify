@@ -1,0 +1,15 @@
+{
+  "kind": "actual-headless-preview-browser-probe",
+  "browser": "Chrome via existing product CDP helper",
+  "checks": {
+    "line13": true,
+    "line14": true,
+    "indexZero": true,
+    "literalHtml": true,
+    "escapedLineSeparator": true,
+    "noElement": true,
+    "noExecution": true
+  },
+  "pass": true,
+  "diagnosticText": "Generation 1 · prepare\n\nControlled browser literal probe\n[probe/location] (line 13, column 1, path \"/rows/0/id\", node \"<img src=x onerror=\\\"globalThis.__diagnosticInjected=true\\\">\\n@directive\\u2028tail\", index 0) Same literal message\n[probe/location] (line 14, column 1, path \"/rows/1/id\", node \"<img src=x onerror=\\\"globalThis.__diagnosticInjected=true\\\">\\n@directive\\u2028tail\", index 0) Same literal message"
+}
