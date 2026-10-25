@@ -43,6 +43,8 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 2026-10-25 13:37（台北），main/dev未变；Test context map旧head `c02a74fd`、Test failure map旧head `82af4896`、Delta values `4c35456b`、Source question tour `94d6a4d0`、Diagnostic locations `67328d7d`的精确head也均为Actions runs=0、check-runs=0。之后两个测试分支分别补实跑证据到`9d6b4e3a` / `bb5e7bdb`，远端head已核对；新提交未单独查询CI，不沿用旧head作为新CI结论。
 
+2026-10-25 13:56（台北）增量核对：main/dev仍未变；Finder result descriptions `5b7701c1` 与 Delivery witness `f2aa251e` 两个精确远端head同样都是Actions runs=0、check-runs=0。
+
 ## 图片速览
 
 以下四张直接来自对应分支的实际产物。点击名称查看完整说明；其余实验的图片见上表。
