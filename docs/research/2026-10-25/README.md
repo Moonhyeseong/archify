@@ -6,7 +6,7 @@
 
 共同实验基线：[dev `82c7e0f0`](https://github.com/tt-a1i/archify/commit/82c7e0f089a02a4d514714adf37dc2061682da5f)，2026-10-25 已重新核对远端仍为该 revision。下面的“已推送”只表示远程实验分支可审查，不能等同于合入、发布或人类验收。
 
-## 已推送的 28 个实验
+## 已推送的 29 个实验
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
@@ -42,8 +42,9 @@
 | [Workflow self-loop](https://github.com/tt-a1i/archify/tree/codex/lab-workflow-self-loop/experiments/workflow-self-loop) | 同一节点同时作为起点和终点，正确外绕回接不再被误拒 | `eb299b15` | [实际回环](https://github.com/tt-a1i/archify/blob/codex/lab-workflow-self-loop/experiments/workflow-self-loop/screenshots/explicit-loop.png) | 局部compiler；145focused/core、独立8、四旧例逐字一致、ZIP/抽包四阶段通过；必要折返守卫，既有auto候选也可用，未扩搜索 |
 | [Plan row counts](https://github.com/tt-a1i/archify/tree/codex/lab-plan-row-counts/experiments/plan-row-counts) | 每次平均3行×352循环≈1056次输出，保留局部估计差异 | `91e2ffad` | [实际解释页](https://github.com/tt-a1i/archify/blob/codex/lab-plan-row-counts/experiments/plan-row-counts/screenshots/explainer.png) | 零共享代码；固定PEV2样例3节点；Tree四阶段、Explainer三阶段通过/自动browser未跑；非SQL执行/unique rows/调优证明 |
 | [Diff line numbers](https://github.com/tt-a1i/archify/tree/codex/lab-diff-line-numbers/experiments/diff-line-numbers) | diff行号保持完整单行，长代码仍可横向滚动 | `88b0dcb0` | [1280px修复后](https://github.com/tt-a1i/archify/blob/codex/lab-diff-line-numbers/experiments/diff-line-numbers/screenshots/candidate-1280-light.png) | 单条CSS；25focused/19core/generated、canonical双ZIP、1280/390浅深8组DOM对照通过；30拆行→0；4实际前后图；完整browsergate未跑，未修改键盘检查 |
+| [Keyboard traversal](https://github.com/tt-a1i/archify/tree/codex/lab-keyboard-traversal/experiments/keyboard-traversal) | 纳入实际Tab额外停点，末尾可达控件不再因过早停止被误报 | `d9308631` | [实际第65步到达footer](https://github.com/tt-a1i/archify/blob/codex/lab-keyboard-traversal/experiments/keyboard-traversal/screenshots/tab-65-footer.png) | 最终focused11、v3算法整file19复用、core19、canonical双ZIP/抽包通过；固定HTML四视口均50/50且0诊断；iframe/date/trap/无限焦点边界保留；非PR验收 |
 
-这二十八项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
+这二十九项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
 
 GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确远端 head 的 Actions runs/check-runs 均为 0。当前 [CI 配置](https://github.com/tt-a1i/archify/blob/82c7e0f089a02a4d514714adf37dc2061682da5f/.github/workflows/ci.yml) 只对 main/dev push 自动运行，另外支持 PR/manual。这里的实验分支 push 没有提供远端 CI 通过证据；上表测试均按实际本地来源记录。
 
@@ -79,11 +80,14 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 2026-10-25 14:56（台北）核对DBML新head `d0472cc3`、Plan actions新head `729d3a03`；15:03核对Diff line numbers `88b0dcb0`：远端head均吻合，Actions runs/check-runs均为0。本地验证不替代远端CI。
 
+2026-10-25 15:26（台北）核对Keyboard traversal `d9308631`：远端head吻合，Actions runs/check-runs均为0；本地浏览器观察与远端CI分别记录。
+
 ## 正在推进
 
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
-| 新发现修复 | Explainer键盘遍历 | 保留原生/动态Tab停点的有界遍历，独立review补iframe/shadow边界；行号独立修复已推送 |
+| 新发现修复 | Explainer静态预览的dashed关系可读性 | 已确认同主题关系文字被映为边框色，局部label/path/marker修复实施中，保留节点边框与其他variant |
+| 浏览页更新 | 新增两产品修复及两既有分支证据 | 准备29项新固定快照；当前已发布浏览页仍明确为27项历史快照 |
 | 既有实验补证据 | DBML与Plan actions | 两项补证据均已推送：官方DBML明确拒绝；完整plan fixture转换通过；各自边界见README |
 | 已排除的重复实现 | Mutation报告reader | 原viewer已有文件搜索、状态筛选、diff、测试关联和单HTML打包；只保留研究，不另建reader |
 | 保留候选 | Notebook别名与派生值的不同stale预期 | 6项目只读报告完成；目前无实际notebook交接任务，暂不扩成converter |
@@ -126,6 +130,7 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 增量构建、缓存与失效传播 | [Rebuild evidence small tools](scouts/rebuild-evidence-smalltools.md) |
 | 并发程序的锁序与等待证据 | [Concurrency evidence small tools](scouts/concurrency-evidence-smalltools.md) |
 | 编译器优化备注、位置与采样来源 | [Compiler remarks small tools](scouts/compiler-remarks-smalltools.md) |
+| 字段offset、padding与对象布局 | [Data layout small tools](scouts/data-layout-smalltools.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
 报告中的上游声明、局部源码核实、计划中的实验和已经执行的结果分别标注。未推荐方向也保留原因，避免反复研究；没有把上游宣传、星数或作者截图当作 Archify 的效果证明。
