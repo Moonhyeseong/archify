@@ -12,11 +12,11 @@
 
 最新状态另见[19:20–19:21晚间GitHub快照](github-status-latest-evening.md)：main/dev、部署等待、实验精确head和PR状态分别记账，不把Actions/check-runs为0当通过。
 
-## 已推送的 40 个实验
+## 已推送的 42 个实验
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
-[离线图片浏览页](gallery/README.md)：39项图片快照，当前40个独立远程实验分支；图片页仍固定hub fc701742的39项/39张原始PNG（12/15/12），新增Notebook/Config/Benchmark/Task，并刷新Finder/Waterfall/Workflow/Keyboard/Clipboard五图。当前实际核1440×1100浅色四筛选、九项搜索/完整原图字节/天然尺寸/固定来源/原始尺寸与Esc返回；390×844浅色卡片、深色dialog及空结果/reset、桌面深色另有实测，20项观测/7图已绑定。模板逐字不变；历史35/34/33/29/27证据按固定提交保留，未将截图内实验内容当新产品测试或AT/OS剪贴板验收。 新增Edge extras尚未纳入图片快照；Finder canvas、Relation reference、Diagnostic locations、Delta values的四个新refresh head也未替换gallery旧图，不将它们混称为同一来源快照。
+[离线图片浏览页](gallery/README.md)：39项图片快照，当前42个独立远程实验分支；图片页仍固定hub fc701742的39项/39张原始PNG（12/15/12），新增Notebook/Config/Benchmark/Task，并刷新Finder/Waterfall/Workflow/Keyboard/Clipboard五图。当前实际核1440×1100浅色四筛选、九项搜索/完整原图字节/天然尺寸/固定来源/原始尺寸与Esc返回；390×844浅色卡片、深色dialog及空结果/reset、桌面深色另有实测，20项观测/7图已绑定。模板逐字不变；历史35/34/33/29/27证据按固定提交保留，未将截图内实验内容当新产品测试或AT/OS剪贴板验收。 新增Edge extras、Line notes和Static uses三项尚未纳入图片快照；Finder canvas、Relation reference、Diagnostic locations、Delta values的四个新refresh head也未替换gallery旧图，不将它们混称为同一来源快照。
 
 | 实验与远程分支 | 具体价值 | 发布 revision | 实际图片 | 验证与限制 |
 | --- | --- | --- | --- | --- |
@@ -60,6 +60,8 @@
 | [Benchmark reading](https://github.com/tt-a1i/archify/tree/codex/lab-benchmark-reading/experiments/benchmark-reading) | 四组median与CI/p/n/~并排，区分中心值变化与上游比较结论 | `7b8258cd` | [实际柱图与邻表](https://github.com/tt-a1i/archify/blob/codex/lab-benchmark-reading/experiments/benchmark-reading/screenshots/overview.png) | 固定benchstat完整old/new/CSV与40值；10事实审计、3静态gate通过/browser未跑、3实图；不重算统计、不称本轮benchmark或版本普遍收益 |
 | [Task occurrences](https://github.com/tt-a1i/archify/tree/codex/lab-task-occurrences/experiments/task-occurrences) | 11打印位置对应10身份，两个compileJava位置定位同一双父节点 | `caffb4aa` | [实际位置与身份页](https://github.com/tt-a1i/archify/blob/codex/lab-task-occurrences/experiments/task-occurrences/screenshots/overview.png) | 固定Gradle完整8文件fixture/14原件/5源码；原生四阶段、解释页三阶段通过但16键盘诊断；5实图/两次pointer定位；未执行Gradle，打印数不当执行数 |
 | [Edge-scoped extras](https://github.com/tt-a1i/archify/tree/codex/lab-edge-extras/experiments/edge-extras) | 同一urllib3沿不同入边extras与显示模式可有不同可见后继；[固定README](https://github.com/tt-a1i/archify/blob/1db953a726b79f135187ee3cd2e12723717c7555/experiments/edge-extras/README.md) | `1db953a7` | [中文解释页](https://github.com/tt-a1i/archify/blob/1db953a726b79f135187ee3cd2e12723717c7555/experiments/edge-extras/output/explanation.html) / [原PNG](https://github.com/tt-a1i/archify/blob/1db953a726b79f135187ee3cd2e12723717c7555/experiments/edge-extras/screenshots/explainer-desktop-light.png) | 基线10b4；固定pipdeptree45c43受控fixture，未执行上游；native四阶段0诊断，Explainer前三阶段通过/28条keyboard失败；6root实图不抵消失败，非安装报告或收益验证 |
+| [Line notes](https://github.com/tt-a1i/archify/tree/codex/lab-line-notes/experiments/line-notes) | 固定源码行→作者解释→同片段原行往返；相同源码两处不串跳；[固定README](https://github.com/tt-a1i/archify/blob/079d562915a701f8c76b6479e59622432f81ee79/experiments/line-notes/README.md) | `079d5629` | [页面](https://github.com/tt-a1i/archify/blob/079d562915a701f8c76b6479e59622432f81ee79/experiments/line-notes/candidate.html) / [原PNG](https://github.com/tt-a1i/archify/blob/079d562915a701f8c76b6479e59622432f81ee79/experiments/line-notes/screenshots/candidate-desktop-light.png) | 基线10b4，仅experiments后处理原型；源1965B逐字不变；baseline三阶段通过/4footer键盘失败；候选独立审计、5负例、作者四视口与root5图；非normal finalize或strict provenance，非OS clipboard/AT |
+| [Static uses](https://github.com/tt-a1i/archify/tree/codex/lab-static-uses/experiments/static-uses) | 7节点8use边解释Beniget模块定义根的局部静态投影，不是执行分支；[固定README](https://github.com/tt-a1i/archify/blob/7be0711da68d8db0dafaefef0b64894665f8609f/experiments/static-uses/README.md) | `7be0711d` | [页面](https://github.com/tt-a1i/archify/blob/7be0711da68d8db0dafaefef0b64894665f8609f/experiments/static-uses/explainer.html) / [原PNG](https://github.com/tt-a1i/archify/blob/7be0711da68d8db0dafaefef0b64894665f8609f/experiments/static-uses/screenshots/overview-light.png) | 基线10b4；固定官方fixture，未执行上游；native四阶段0诊断/页面三阶段通过且browser未请求，14事实审计/root4图；URL来源元数据非verified snippet，非完整AST/运行trace |
 
 上述前33项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
 
@@ -133,6 +135,8 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 2026-10-25 Edge-scoped extras作为第40个独立远程实验分支推送，固定head `1db953a726b79f135187ee3cd2e12723717c7555`，基线10b4；协调者刚核精确head为Actions runs=0、check-runs=0，没有远端CI通过证据。6张root实图、上游受控fixture、native成功与Explainer的28条键盘失败分别记账；未执行pipdeptree或安装环境。
 
+2026-10-25 Line notes `079d562915a701f8c76b6479e59622432f81ee79` 与Static uses `7be0711da68d8db0dafaefef0b64894665f8609f` 已推送，协调者刚核精确head的Actions runs/check-runs均为0；不把无CI记录称通过。当前42个独立远程分支，gallery仍为固定fc701742的39项快照，未重建或纳入新增三项/四个后续refresh的新图。
+
 ## 正在推进
 
 | 方向 | 来源与目标 | 状态 |
@@ -144,8 +148,10 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 新一轮发现 | Shell / CSS / Notebook / 构建阅读 | 第9轮13个新来源，未增加实现；第10轮12个新来源，Notebook已推2090b0ff，task occurrence已推caffb4aa并补5实图，保留最终16键盘诊断；源码卡审计无确认新缺陷；第11轮配置来源已推14867942 |
 | 新一轮发现 | Benchmark / 语法 / 并发阅读 | 第12轮6新来源，benchstat已推7b8258cd；第13轮语法/并发共4新来源，暂不增实现；第14轮6个新图交互项目，未确认新实施缺口 |
 | 新一轮发现 | 第15轮行为/构建、第16轮条件代码/解析身份 | 研究阶段均0项启动；preview重新打开边界亦不新开修复。后续单独选定edge-extras有界固定fixture内容，现已推1db953a7计入第40项；研究原结论不改，不新增parser或声称生产事故 |
-| 新一轮发现 | 第18轮局部阅读 / 第19轮控制与数据阅读 | 第18轮局部阅读、结构差异、小图交互三报告及第19轮控制/数据报告已完成；line-notes、static-uses为两个本地进行中实验，均base10b4、仅experiments，不改产品/ZIP，不计入40已发布；结构差异报告最多保留一个Hintful内容候选，未称已实施或验证 |
-| 本地产品原型 | spatial-focus屏内空间方向浏览 | 已新建base10b4并实施中的独立原型；只让屏内完整可见的语义node用plain Arrow移动DOM focus，排除Tree，不改选择/hash/camera。小图交互研究阶段最多保留此一个候选，不宣称实现已验，不计入40已发布 |
+| 新一轮发现 | 第18轮局部阅读 / 第19轮控制与数据阅读 | 第18轮局部阅读、结构差异、小图交互三报告及第19轮控制/数据报告已完成；line-notes与static-uses已作为第41/42项推送，均base10b4且仅experiments；后处理原型与静态内容投影各自验证范围见上表，不改产品/ZIP |
+| 本地产品原型 | spatial-focus屏内空间方向浏览 | 独立base10b4原型进行中；仅屏内完整可见语义node的plain Arrow移动DOM focus，Tree排除，不选中/hash/camera；Route endpoint模式发现真实按键回归，修guard后重生成并再审，未称已验，不计入42已发布 |
+| 本地内容实验 | hintful-stages | 已新建base10b4，仅内容进行中；named intermediate是patch声明的中间态，不是第三个Git commit或运行观察，invalid另列；不计入42已发布 |
+| 只读研究 | Round20 | 仍在进行中，未填写结论或验收结果 |
 | 适配器影响盘点 | 15个离线方向对dev10b4 | 静态未见确定格式破坏；五个build helper在更换基线后须更新运行身份记录，旧输入与转换证据继续绑定原版本，不批量刷新 |
 | 已有候选刷新 | Keyboard traversal / Clipboard outcome | 已推c96e8aa7/0e4a2c71；同一task页candidate实际41/41可达，原dev37/41；Clipboard受控API前后及全文恢复已核，CI与真实OS剪贴板另列 |
 | 已有候选刷新 | Relation reference / Finder canvas matches / Diagnostic locations | 已推d5691a02/ed04916f/b6679399；固定dev10b4新Passport、IME/drilldown及来源规则保留，独立复核/实图完成；各自旧证据原字节不变；Delta也已推a0a9ba77，compare/check与非finalize边界另列 |
