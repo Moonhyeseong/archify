@@ -1,0 +1,435 @@
+{
+  "kind": "derived-portable-evidence-summary",
+  "scope": "Refresh existing diff-gutter nowrap on merged dev; no new feature, input, tests, clipboard, parser, Viewer or gate changes. Raw private receipts retained outside checkout; this is a selected summary, not an unmodified original receipt.",
+  "revision": {
+    "historicalCandidate": "88b0dcb069d89657798e5f1208a90bb2b768fe98",
+    "mergedDev": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+    "candidateIdentity": "Uncommitted merge worktree: HEAD remains historicalCandidate; MERGE_HEAD is mergedDev. Final source/ZIP and artifact hashes below identify this candidate; no claim of a committed new head.",
+    "mergeConflicts": [
+      "archify.zip"
+    ],
+    "resolution": "Rebuilt canonical ZIP twice from merged current source; byte-identical outputs, no prior ZIP chosen."
+  },
+  "input": {
+    "path": "../input.explainer.json",
+    "sha256": "060fe0536b626f480ec3fa3f3bf81f3a41ad0bb76f640db362dc5a8f095dc3d1",
+    "bytes": 29652,
+    "source": "../source.json",
+    "prCodeExecuted": false,
+    "meaning": "Complete unchanged public PR1097 authored-layout input; independent Codex statements, ZIP unresolved remains; no source ref implies a test execution."
+  },
+  "software": {
+    "packageVersion": "3.2.1-dev.1",
+    "license": "Apache-2.0",
+    "readerCss": {
+      "sha256": "c411d46dac27af6923c326c574a660cd208875b60e6381142a534f438629db44",
+      "bytes": 47268
+    },
+    "baseReaderCssSha256": "1f2a0b589b39f08af36012e9fadad79a7939ec8c52e2e0cb53018d9431aee1fd",
+    "node": "22.23.2",
+    "zlib": "1.3.1-e00f703"
+  },
+  "comparison": {
+    "onlyExactNowrapReplacement": true,
+    "candidateOccurrences": 1,
+    "inputByteEqualToHistorical": true,
+    "sameCompleteHtmlApartFromCss": true
+  },
+  "finalize": {
+    "base": {
+      "exitCode": 0,
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "not-run"
+      },
+      "browserCheck": {
+        "requested": false,
+        "ran": false
+      },
+      "artifact": {
+        "sha256": "d3e375d0483c4edb727528ba75f8937ea07bd6be64a83b33daae9c12157d8185",
+        "bytes": 663044
+      },
+      "diagnosticCounts": {
+        "warning": 7
+      },
+      "warningCodes": {
+        "explainer/writing-qualification": 2,
+        "explainer/writing-light-verb": 2,
+        "explainer/writing-sentence-length": 3
+      }
+    },
+    "candidate": {
+      "exitCode": 0,
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "not-run"
+      },
+      "browserCheck": {
+        "requested": false,
+        "ran": false
+      },
+      "artifact": {
+        "sha256": "d5e7bcf2686be0af50eee96601a53100918cee6210b4b99fa3fb2b09ed6c4904",
+        "bytes": 663063
+      },
+      "diagnosticCounts": {
+        "warning": 7
+      },
+      "warningCodes": {
+        "explainer/writing-qualification": 2,
+        "explainer/writing-light-verb": 2,
+        "explainer/writing-sentence-length": 3
+      }
+    }
+  },
+  "focusedDom": {
+    "status": "pass",
+    "arms": 8,
+    "viewports": [
+      1280,
+      390
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "perArmNumbers": 65,
+    "baseBrokenPerArm": 30,
+    "candidateBrokenPerArm": 0,
+    "localHorizontalScrollTailReachable": true,
+    "literalRowsEqual": true,
+    "fullBrowserGate": "not requested/not run; focused Chrome geometry check is separate, unrelated prior keyboard-gate failure is not claimed fixed."
+  },
+  "tests": {
+    "focused": {
+      "files": [
+        "test/explainer-diff.test.mjs",
+        "test/explainer-renderer.test.mjs"
+      ],
+      "passed": 25,
+      "failed": 0,
+      "skipped": 0
+    },
+    "core": {
+      "passed": 19,
+      "failed": 0,
+      "skipped": 0
+    },
+    "generated": {
+      "status": "pass",
+      "doesNotCheckDocsCasesFreshness": true
+    }
+  },
+  "package": {
+    "sha256": "3f1e569d885a42b21afc1ddf8c106398ed4e857ec60f984ac3155dfc31b2c392",
+    "bytes": 6987380,
+    "twoCanonicalBuildsByteIdentical": true,
+    "allMembersCrcPass": true,
+    "readerCssExact": true,
+    "unpackedFinalize": {
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "not-run"
+      },
+      "browserCheck": {
+        "requested": false,
+        "ran": false
+      },
+      "sameOutputLocationHtmlMatchesSource": true,
+      "diagnosticWarnings": 7
+    },
+    "initialOtherLocationProbe": "Initial unpacked finalize to temporary output directory passed but artifact differs only by relative diagnostic input paths; preserved privately, not claimed byte-identical or published. Same-location probe removes that location confound.",
+    "liveInstall": "not requested/not performed"
+  },
+  "historicalFilesUnchanged": {
+    "base.html": {
+      "sha256": "fb9adc6e3df97f540016c0fb5d04ee4d0b1a696c067590777995af8b37ec24d1",
+      "bytes": 625241
+    },
+    "browser-observations.json": {
+      "sha256": "a01dbd9aaff37588bb35f58a9e199d7f0baac699ed029f4ccce47108a8622b52",
+      "bytes": 129206
+    },
+    "candidate.html": {
+      "sha256": "7f4a7c9aae063c88be84b0aa1c93550f6fd4445f766bcbe974044165fd79b5fb",
+      "bytes": 625260
+    },
+    "check-browser.mjs": {
+      "sha256": "2632e5cfd5097c400431ab05f7f53981bc32e1c4ca983ebb7357f6998611d835",
+      "bytes": 5842
+    },
+    "evidence.json": {
+      "sha256": "d8eaa646dd864c9d93bf09e5dda68089c04bfba847da5417e131357f71a762b3",
+      "bytes": 6880
+    },
+    "input.explainer.json": {
+      "sha256": "060fe0536b626f480ec3fa3f3bf81f3a41ad0bb76f640db362dc5a8f095dc3d1",
+      "bytes": 29652
+    },
+    "ledger.md": {
+      "sha256": "5f4db50da40a4a18b31b4e45feae6eaba7a370f54d378f1a7777280272c069d7",
+      "bytes": 1523
+    },
+    "screenshots/base-1280-light.png": {
+      "sha256": "7809a3b96b47f77825f6b251f9eb8952dbdbadfe2479029cd4ece24e94d32799",
+      "bytes": 169851
+    },
+    "screenshots/base-390-light.png": {
+      "sha256": "b0bc7ac5c165326b0da21e1ab2c301db6d9924881c154ba54e3fb065beb53c56",
+      "bytes": 79336
+    },
+    "screenshots/candidate-1280-light.png": {
+      "sha256": "0debc5e3a5364c9e83850c098581b7dd18cacea7503166050a291f8f6ff56cec",
+      "bytes": 215893
+    },
+    "screenshots/candidate-390-light.png": {
+      "sha256": "9919dbf49da00e5d6ac9509d283bd895c8f23bdfd61fef1a3cd8e1c49164d378",
+      "bytes": 87220
+    },
+    "screenshots/capture.json": {
+      "sha256": "72be585a8b1feba9f0b9f81e1bfadf13d9491e0bfbaf4cffe37a65233a51c267",
+      "bytes": 2945
+    },
+    "source.json": {
+      "sha256": "2937ddcc439475960d132fbb712d08b5c51b0fb491a7577555ee089f43755d71",
+      "bytes": 1639
+    }
+  },
+  "docsCases": {
+    "decision": "Do not refresh four tracked historical pages in this gutter-only candidate; generated checks do not cover their freshness and these pages are not claimed to carry candidate CSS.",
+    "reuseBoundary": "Read-only archived-dev fresh render evidence from source-keyboard author used only to identify pre-existing staleness, not this branch test pass. Same MD, standard, original relative output, no extra --repo-root.",
+    "files": [
+      {
+        "path": "docs/cases/explainer/finalize-delivery.html",
+        "trackedDevSha256": "f5e8b38535039ffced65502d87534019909c31c43fac86425351804f10aeced6",
+        "trackedBytesPreserved": true,
+        "archivedDevFreshGenerated": {
+          "sha256": "4bb04fbb8a3eb18a366becfdf3eeefd5465391a7442534654d12cf5e35d64007",
+          "bytes": 575232
+        },
+        "trackedEqualsFresh": false
+      },
+      {
+        "path": "docs/cases/explainer/first-rental.html",
+        "trackedDevSha256": "62e6aecbcb5f5ec62f65c375e6e47c8e71355558eedeefbb825aecd9bdaa5206",
+        "trackedBytesPreserved": true,
+        "archivedDevFreshGenerated": {
+          "sha256": "f6610871f386a5c4de7a846bdde74fbaf5f59000fcc8861a91d7aa8e0254c69a",
+          "bytes": 560027
+        },
+        "trackedEqualsFresh": false
+      },
+      {
+        "path": "docs/cases/explainer/p99-tail-latency.html",
+        "trackedDevSha256": "f2657385d7c4971975726ce56e14cb62ac0f97e5ebed72dc05b0a15dc07ee0cb",
+        "trackedBytesPreserved": true,
+        "archivedDevFreshGenerated": {
+          "sha256": "a3d2ce8a0ba48ada31d2ce6f0c01593a4c8044286ad573f5e99e79d320cc14bb",
+          "bytes": 558505
+        },
+        "trackedEqualsFresh": false
+      },
+      {
+        "path": "docs/cases/explainer/tls-first-visit.html",
+        "trackedDevSha256": "dbd57bee0bb12ed83df184fb11c425155d968c711e9f0a07ddd47c7dd254eff1",
+        "trackedBytesPreserved": true,
+        "archivedDevFreshGenerated": {
+          "sha256": "9266f1d5212d4f1c0936629403277ed132741357ea9fcaa4335345c2af10b659",
+          "bytes": 560251
+        },
+        "trackedEqualsFresh": false
+      }
+    ]
+  },
+  "privateRawFiles": {
+    "base-stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "base.delivery.json": {
+      "sha256": "abc352fc464adf7a8b5b198c35766c6b024fb6769dfb96144632bc3244ccfdf0",
+      "bytes": 1004
+    },
+    "base-stdout.json": {
+      "sha256": "481594b05084b10a0e302ad80661b5da6b249907d90ec3909c20211596d6d7c3",
+      "bytes": 5773
+    },
+    "package-same-location-stdout.json": {
+      "sha256": "40e604ba13b88673b3ae17990e5b2e9caa67704162ce18a76dd1e6c7a9771661",
+      "bytes": 5834
+    },
+    "candidate-stdout.json": {
+      "sha256": "da6f7a9770a77a113b08802b42c9acf935a05366bf5a1c841be4e15ae9158f02",
+      "bytes": 5798
+    },
+    "focused.tap": {
+      "sha256": "f1e0b45fe1b50c47756c30e6ed86c66634a1e5a1add61bcd5c1a2f6b97d7de01",
+      "bytes": 6279
+    },
+    "zip-first.log": {
+      "sha256": "d5c742d4011847f6b4114c50f9ab0bfaba8c7cd20cfcf8e2ea8800aa2cd0c708",
+      "bytes": 110
+    },
+    "package-stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "generated.log": {
+      "sha256": "ee4c27df0506412458b1cdcf7107c03312b190727c64e9fc3e98e5c38169094c",
+      "bytes": 4647
+    },
+    "package-same-location.delivery.json": {
+      "sha256": "02e178959b3ce528469ac07b68c2f89e21169521f67c3586e78ca9cf54a6df20",
+      "bytes": 1013
+    },
+    "candidate-stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "package-same-location-stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "package-stdout.json": {
+      "sha256": "8b4337c31f9cd81aca9c920ca92db75c0c79d5c36271d54fcf972ff843cc8a64",
+      "bytes": 5740
+    },
+    "package-render.delivery.json": {
+      "sha256": "9ee68a6137607e2ec3f4496fc3718532cc951fe31bd51eb6b5d63edac088b6f9",
+      "bytes": 953
+    },
+    "browser-stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "zip-second.log": {
+      "sha256": "934f0e3832211a2cf7cf67d738d8426b6adbf3e923dfc118eb3c1857232795c2",
+      "bytes": 112
+    },
+    "browser.json": {
+      "sha256": "0720d4045fc583987012f703e9427b798079c158cc7e618e5daba71e07e174de",
+      "bytes": 232621
+    },
+    "core.tap": {
+      "sha256": "2c2b6d86ca7fad370679aa886784e28ae88b9b2eb145fa8c197b86297af656fb",
+      "bytes": 4275
+    },
+    "candidate.delivery.json": {
+      "sha256": "5521b50633dea427a4429e52c04024cb8ca141f3d29c0dd5f03f1e106c2e876b",
+      "bytes": 1009
+    },
+    "base-receipts/base.finalize-summary.json": {
+      "sha256": "3bd7d26f6a527f422862f1c4ba33775581c65f05677f7243fae7e0f18045c1e5",
+      "bytes": 7218
+    },
+    "base-receipts/base.finalize.json": {
+      "sha256": "505f3faf3d9f80a55c6b4cfddd964918af7652402c4050c6b5e1469dae6ae8f0",
+      "bytes": 25030
+    },
+    "candidate-receipts/candidate.finalize-summary.json": {
+      "sha256": "c30972bb8e01e0d538c1d000785b6d52ab22d98947e19eb728d4762707dac787",
+      "bytes": 7243
+    },
+    "candidate-receipts/candidate.finalize.json": {
+      "sha256": "fe471e73308682b0f6ca9c95593cf901ebb36d95c89c401e37f511491d9ef9a1",
+      "bytes": 25113
+    },
+    "package-receipts/package-render.finalize-summary.json": {
+      "sha256": "92d521fe141ac5ebff24d023627812811ec75a14b1fb924929f05cd0437b4bcd",
+      "bytes": 7185
+    },
+    "package-receipts/package-render.finalize.json": {
+      "sha256": "524529cc6f6c44454545ae9395c386a64d612a3e852d7f10da45f9c585a5cd4c",
+      "bytes": 24698
+    },
+    "package-same-location-receipts/package-check.finalize-summary.json": {
+      "sha256": "e001d794ef986167a150ee86788e50fdaffedb65f09266c71be37c4dbb6b273d",
+      "bytes": 7279
+    },
+    "package-same-location-receipts/package-check.finalize.json": {
+      "sha256": "419b753a28d63d80df9840e5a7885fdcdb38c7c92d01953a0f6c5fe4b3de6a8b",
+      "bytes": 25124
+    }
+  },
+  "publicFiles": {
+    "browser-observations.json": {
+      "sha256": "29d72fb20ada2e23bc20977d2e5d84f941d72b84d0a43df1cd6b6ea20a2f8936",
+      "bytes": 89513
+    },
+    "base.html": {
+      "sha256": "d3e375d0483c4edb727528ba75f8937ea07bd6be64a83b33daae9c12157d8185",
+      "bytes": 663044
+    },
+    "README.md": {
+      "sha256": "d45dc781793e18b6229ec6cb640ef386bd3280c4aa5c194e63e381f7f82e63dd",
+      "bytes": 5220
+    },
+    "candidate.html": {
+      "sha256": "d5e7bcf2686be0af50eee96601a53100918cee6210b4b99fa3fb2b09ed6c4904",
+      "bytes": 663063
+    },
+    "ledger.md": {
+      "sha256": "30479ab2fce4070691639b87d9a1ef8241d25d063b9e8a863c40c58dbbc8b679",
+      "bytes": 1712
+    },
+    "screenshots/base-1280-light.png": {
+      "sha256": "d168ee49a16e4fea64587c1e75aa1b405f223919ee4cb99ab71669951a7d3471",
+      "bytes": 169724
+    },
+    "screenshots/candidate-390-light.png": {
+      "sha256": "9919dbf49da00e5d6ac9509d283bd895c8f23bdfd61fef1a3cd8e1c49164d378",
+      "bytes": 87220
+    },
+    "screenshots/capture.json": {
+      "sha256": "351c63f8dd2d4327bcebf3b46cb9671462a01aa998e73048c18b01e03c773aab",
+      "bytes": 6317
+    },
+    "screenshots/base-390-light.png": {
+      "sha256": "b0bc7ac5c165326b0da21e1ab2c301db6d9924881c154ba54e3fb065beb53c56",
+      "bytes": 79336
+    },
+    "screenshots/candidate-1280-light.png": {
+      "sha256": "0debc5e3a5364c9e83850c098581b7dd18cacea7503166050a291f8f6ff56cec",
+      "bytes": 215893
+    }
+  },
+  "screenshots": {
+    "status": "captured and individually viewed by root",
+    "capture": {
+      "sha256": "351c63f8dd2d4327bcebf3b46cb9671462a01aa998e73048c18b01e03c773aab",
+      "bytes": 6317
+    },
+    "images": {
+      "base-1280-light.png": {
+        "sha256": "d168ee49a16e4fea64587c1e75aa1b405f223919ee4cb99ab71669951a7d3471",
+        "bytes": 169724
+      },
+      "candidate-390-light.png": {
+        "sha256": "9919dbf49da00e5d6ac9509d283bd895c8f23bdfd61fef1a3cd8e1c49164d378",
+        "bytes": 87220
+      },
+      "base-390-light.png": {
+        "sha256": "b0bc7ac5c165326b0da21e1ab2c301db6d9924881c154ba54e3fb065beb53c56",
+        "bytes": 79336
+      },
+      "candidate-1280-light.png": {
+        "sha256": "0debc5e3a5364c9e83850c098581b7dd18cacea7503166050a291f8f6ff56cec",
+        "bytes": 215893
+      }
+    },
+    "rawObservation": {
+      "sha256": "e8bb69f5bfe7381990110a56eae59ed5bcc76e5e75c1fd5c9ac3633d18bf5dd8",
+      "bytes": 3193
+    },
+    "bindingCheckedByThisAgent": true,
+    "browserOperatedByThisAgent": false,
+    "meaning": "Same anchor, natural document-end clamp retained; light screenshots, separate two-theme DOM evidence, no keyboard-gate/AT/touch/user acceptance claim."
+  }
+}

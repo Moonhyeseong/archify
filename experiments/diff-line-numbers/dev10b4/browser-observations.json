@@ -1,0 +1,3820 @@
+{
+  "kind": "derived-focused-dom-summary",
+  "sourceStdout": {
+    "sha256": "0720d4045fc583987012f703e9427b798079c158cc7e618e5daba71e07e174de",
+    "bytes": 232621
+  },
+  "status": "pass",
+  "meaning": "Expected base wrap reproduced; candidate line numbers are complete; authored code/text and horizontal reachability retained.",
+  "runs": [
+    {
+      "name": "base",
+      "artifact": "base.html",
+      "artifactSha256": "d3e375d0483c4edb727528ba75f8937ea07bd6be64a83b33daae9c12157d8185",
+      "width": 1280,
+      "theme": "light",
+      "pageScrollWidth": 1280,
+      "longCode": {
+        "characters": 497,
+        "lineBoxes": 1,
+        "scrollWidth": 3679,
+        "clientWidth": 1172,
+        "scrollLeft": 2507,
+        "tailInsidePort": true
+      },
+      "numberCount": 65,
+      "brokenNumbers": 30,
+      "allNumbersInsideCell": true,
+      "numbers": [
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "21",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "22",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "23",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "24",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "25",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "21",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "22",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "23",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "24",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "25",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "35",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "36",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "37",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "38",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "39",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "40",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "41",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "87",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "88",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "89",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "90",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "91",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "92",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "93",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "94",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "95",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "96",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "97",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "98",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "99",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "100",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "102",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "103",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "104",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "105",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "106",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "107",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "108",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "110",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "111",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "112",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "113",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "114",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "115",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "116",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "117",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "118",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "99",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "100",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "102",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "103",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "104",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "105",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "106",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        }
+      ]
+    },
+    {
+      "name": "base",
+      "artifact": "base.html",
+      "artifactSha256": "d3e375d0483c4edb727528ba75f8937ea07bd6be64a83b33daae9c12157d8185",
+      "width": 1280,
+      "theme": "dark",
+      "pageScrollWidth": 1280,
+      "longCode": {
+        "characters": 497,
+        "lineBoxes": 1,
+        "scrollWidth": 3679,
+        "clientWidth": 1172,
+        "scrollLeft": 2507,
+        "tailInsidePort": true
+      },
+      "numberCount": 65,
+      "brokenNumbers": 30,
+      "allNumbersInsideCell": true,
+      "numbers": [
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "21",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "22",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "23",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "24",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "25",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "21",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "22",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "23",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "24",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "25",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "35",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "36",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "37",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "38",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "39",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "40",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "41",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "87",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "88",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "89",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "90",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "91",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "92",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "93",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "94",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "95",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "96",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "97",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "98",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "99",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "100",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "102",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "103",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "104",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "105",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "106",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "107",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "108",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "110",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "111",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "112",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "113",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "114",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "115",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "116",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "117",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "118",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "99",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "100",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "102",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "103",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "104",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "105",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "106",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        }
+      ]
+    },
+    {
+      "name": "base",
+      "artifact": "base.html",
+      "artifactSha256": "d3e375d0483c4edb727528ba75f8937ea07bd6be64a83b33daae9c12157d8185",
+      "width": 390,
+      "theme": "light",
+      "pageScrollWidth": 390,
+      "longCode": {
+        "characters": 497,
+        "lineBoxes": 1,
+        "scrollWidth": 3679,
+        "clientWidth": 330,
+        "scrollLeft": 3349,
+        "tailInsidePort": true
+      },
+      "numberCount": 65,
+      "brokenNumbers": 30,
+      "allNumbersInsideCell": true,
+      "numbers": [
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "21",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "22",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "23",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "24",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "25",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "21",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "22",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "23",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "24",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "25",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "35",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "36",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "37",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "38",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "39",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "40",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "41",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "87",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "88",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "89",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "90",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "91",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "92",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "93",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "94",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "95",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "96",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "97",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "98",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "99",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "100",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "102",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "103",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "104",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "105",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "106",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "107",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "108",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "110",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "111",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "112",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "113",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "114",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "115",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "116",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "117",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "118",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "99",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "100",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "102",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "103",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "104",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "105",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "106",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        }
+      ]
+    },
+    {
+      "name": "base",
+      "artifact": "base.html",
+      "artifactSha256": "d3e375d0483c4edb727528ba75f8937ea07bd6be64a83b33daae9c12157d8185",
+      "width": 390,
+      "theme": "dark",
+      "pageScrollWidth": 390,
+      "longCode": {
+        "characters": 497,
+        "lineBoxes": 1,
+        "scrollWidth": 3679,
+        "clientWidth": 330,
+        "scrollLeft": 3349,
+        "tailInsidePort": true
+      },
+      "numberCount": 65,
+      "brokenNumbers": 30,
+      "allNumbersInsideCell": true,
+      "numbers": [
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "21",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "22",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "23",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "24",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "25",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "21",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "22",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "23",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "24",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "25",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "35",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "36",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "37",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "38",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "39",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "40",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "41",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "87",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "88",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "89",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "90",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "91",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "92",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "93",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "94",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "95",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "96",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "97",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "98",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "99",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "100",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "102",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "103",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "104",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "105",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "106",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "107",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "108",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "110",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "111",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "112",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "113",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "114",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "115",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "116",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "117",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "118",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "99",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "100",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "102",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "103",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "104",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "105",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "106",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 2,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        }
+      ]
+    },
+    {
+      "name": "candidate",
+      "artifact": "candidate.html",
+      "artifactSha256": "d5e7bcf2686be0af50eee96601a53100918cee6210b4b99fa3fb2b09ed6c4904",
+      "width": 1280,
+      "theme": "light",
+      "pageScrollWidth": 1280,
+      "longCode": {
+        "characters": 497,
+        "lineBoxes": 1,
+        "scrollWidth": 3684,
+        "clientWidth": 1172,
+        "scrollLeft": 2512,
+        "tailInsidePort": true
+      },
+      "numberCount": 65,
+      "brokenNumbers": 0,
+      "allNumbersInsideCell": true,
+      "numbers": [
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "21",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "22",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "23",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "24",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "25",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "21",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "22",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "23",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "24",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "25",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "35",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "36",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "37",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "38",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "39",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "40",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "41",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "87",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "88",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "89",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "90",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "91",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "92",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "93",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "94",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "95",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "96",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "97",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "98",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "99",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "100",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "102",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "103",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "104",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "105",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "106",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "107",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "108",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "110",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "111",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "112",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "113",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "114",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "115",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "116",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "117",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "118",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 1,
+          "cellWidth": 38.1875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "99",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "100",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "102",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "103",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "104",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "105",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "106",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 1,
+          "cellWidth": 38.1875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        }
+      ]
+    },
+    {
+      "name": "candidate",
+      "artifact": "candidate.html",
+      "artifactSha256": "d5e7bcf2686be0af50eee96601a53100918cee6210b4b99fa3fb2b09ed6c4904",
+      "width": 1280,
+      "theme": "dark",
+      "pageScrollWidth": 1280,
+      "longCode": {
+        "characters": 497,
+        "lineBoxes": 1,
+        "scrollWidth": 3684,
+        "clientWidth": 1172,
+        "scrollLeft": 2512,
+        "tailInsidePort": true
+      },
+      "numberCount": 65,
+      "brokenNumbers": 0,
+      "allNumbersInsideCell": true,
+      "numbers": [
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "21",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "22",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "23",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "24",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "25",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "21",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "22",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "23",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "24",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "25",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "35",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "36",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "37",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "38",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "39",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "40",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "41",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "87",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "88",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "89",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "90",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "91",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "92",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "93",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "94",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "95",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "96",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "97",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "98",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "99",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "100",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "102",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "103",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "104",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "105",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "106",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "107",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "108",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "110",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "111",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "112",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "113",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "114",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "115",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "116",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "117",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "118",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 1,
+          "cellWidth": 38.1875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "99",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "100",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "102",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "103",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "104",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "105",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "106",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 1,
+          "cellWidth": 38.1875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        }
+      ]
+    },
+    {
+      "name": "candidate",
+      "artifact": "candidate.html",
+      "artifactSha256": "d5e7bcf2686be0af50eee96601a53100918cee6210b4b99fa3fb2b09ed6c4904",
+      "width": 390,
+      "theme": "light",
+      "pageScrollWidth": 390,
+      "longCode": {
+        "characters": 497,
+        "lineBoxes": 1,
+        "scrollWidth": 3684,
+        "clientWidth": 330,
+        "scrollLeft": 3354,
+        "tailInsidePort": true
+      },
+      "numberCount": 65,
+      "brokenNumbers": 0,
+      "allNumbersInsideCell": true,
+      "numbers": [
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "21",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "22",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "23",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "24",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "25",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "21",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "22",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "23",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "24",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "25",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "35",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "36",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "37",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "38",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "39",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "40",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "41",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "87",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "88",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "89",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "90",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "91",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "92",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "93",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "94",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "95",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "96",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "97",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "98",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "99",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "100",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "102",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "103",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "104",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "105",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "106",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "107",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "108",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "110",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "111",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "112",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "113",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "114",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "115",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "116",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "117",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "118",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 1,
+          "cellWidth": 38.1875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "99",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "100",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "102",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "103",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "104",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "105",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "106",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 1,
+          "cellWidth": 38.1875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        }
+      ]
+    },
+    {
+      "name": "candidate",
+      "artifact": "candidate.html",
+      "artifactSha256": "d5e7bcf2686be0af50eee96601a53100918cee6210b4b99fa3fb2b09ed6c4904",
+      "width": 390,
+      "theme": "dark",
+      "pageScrollWidth": 390,
+      "longCode": {
+        "characters": 497,
+        "lineBoxes": 1,
+        "scrollWidth": 3684,
+        "clientWidth": 330,
+        "scrollLeft": 3354,
+        "tailInsidePort": true
+      },
+      "numberCount": 65,
+      "brokenNumbers": 0,
+      "allNumbersInsideCell": true,
+      "numbers": [
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "21",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "22",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "23",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "24",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "25",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "20",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "21",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "22",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "23",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "24",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "25",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "35",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "36",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "37",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "38",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "39",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "40",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "41",
+          "lineBoxes": 1,
+          "cellWidth": 36,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "87",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "88",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "89",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "90",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "91",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "92",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "93",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "94",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "95",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "96",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "97",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "98",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "99",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "100",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "102",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "103",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "104",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "105",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "106",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "107",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "108",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "110",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "111",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "112",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "113",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "114",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "115",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "116",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "117",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "118",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 1,
+          "cellWidth": 38.1875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "99",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 14.453125,
+          "insideCell": true
+        },
+        {
+          "text": "100",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "102",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "103",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "104",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "105",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "106",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "101",
+          "lineBoxes": 1,
+          "cellWidth": 38.1875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        },
+        {
+          "text": "109",
+          "lineBoxes": 1,
+          "cellWidth": 38.6875,
+          "textWidth": 21.6875,
+          "insideCell": true
+        }
+      ]
+    }
+  ],
+  "pairedRowsEqual": "Asserted by unchanged check-browser.mjs against all old/new line identities and literal code in each viewport/theme; row text omitted from this derived summary."
+}

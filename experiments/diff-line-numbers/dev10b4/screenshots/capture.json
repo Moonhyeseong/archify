@@ -1,0 +1,275 @@
+{
+  "kind": "derived real-browser capture summary",
+  "pathBase": "experiments/diff-line-numbers/dev10b4",
+  "artifacts": [
+    {
+      "path": "base.html",
+      "bytes": 663044,
+      "sha256": "d3e375d0483c4edb727528ba75f8937ea07bd6be64a83b33daae9c12157d8185"
+    },
+    {
+      "path": "candidate.html",
+      "bytes": 663063,
+      "sha256": "d5e7bcf2686be0af50eee96601a53100918cee6210b4b99fa3fb2b09ed6c4904"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "screenshots/base-1280-light.png",
+      "bytes": 169724,
+      "sha256": "d168ee49a16e4fea64587c1e75aa1b405f223919ee4cb99ab71669951a7d3471",
+      "pngDimensions": [
+        1280,
+        1000
+      ],
+      "viewportCssPixels": [
+        1280,
+        1000
+      ],
+      "artifact": "base.html",
+      "theme": "light",
+      "rootViewed": true,
+      "sourceModifiedAtUtc": "2026-10-25T10:05:21.546987+00:00"
+    },
+    {
+      "path": "screenshots/candidate-1280-light.png",
+      "bytes": 215893,
+      "sha256": "0debc5e3a5364c9e83850c098581b7dd18cacea7503166050a291f8f6ff56cec",
+      "pngDimensions": [
+        1280,
+        1000
+      ],
+      "viewportCssPixels": [
+        1280,
+        1000
+      ],
+      "artifact": "candidate.html",
+      "theme": "light",
+      "rootViewed": true,
+      "sourceModifiedAtUtc": "2026-10-25T10:05:21.907729+00:00"
+    },
+    {
+      "path": "screenshots/base-390-light.png",
+      "bytes": 79336,
+      "sha256": "b0bc7ac5c165326b0da21e1ab2c301db6d9924881c154ba54e3fb065beb53c56",
+      "pngDimensions": [
+        390,
+        844
+      ],
+      "viewportCssPixels": [
+        390,
+        844
+      ],
+      "artifact": "base.html",
+      "theme": "light",
+      "rootViewed": true,
+      "sourceModifiedAtUtc": "2026-10-25T10:05:22.211943+00:00"
+    },
+    {
+      "path": "screenshots/candidate-390-light.png",
+      "bytes": 87220,
+      "sha256": "9919dbf49da00e5d6ac9509d283bd895c8f23bdfd61fef1a3cd8e1c49164d378",
+      "pngDimensions": [
+        390,
+        844
+      ],
+      "viewportCssPixels": [
+        390,
+        844
+      ],
+      "artifact": "candidate.html",
+      "theme": "light",
+      "rootViewed": true,
+      "sourceModifiedAtUtc": "2026-10-25T10:05:22.522010+00:00"
+    }
+  ],
+  "rawObservation": {
+    "basename": "capture-checks.json",
+    "bytes": 3193,
+    "sha256": "e8bb69f5bfe7381990110a56eae59ed5bcc76e5e75c1fd5c9ac3633d18bf5dd8"
+  },
+  "observations": {
+    "observedAt": "2026-10-25T10:05:22.522Z",
+    "checks": [
+      {
+        "name": "base-1280-light",
+        "width": 1280,
+        "height": 1000,
+        "scrollWidth": 1280,
+        "scrollY": 6462.5,
+        "theme": "light",
+        "anchorY": 129.2734375,
+        "numbers": [
+          {
+            "text": "99",
+            "rects": 1
+          },
+          {
+            "text": "100",
+            "rects": 2
+          },
+          {
+            "text": "101",
+            "rects": 2
+          },
+          {
+            "text": "102",
+            "rects": 2
+          },
+          {
+            "text": "103",
+            "rects": 2
+          },
+          {
+            "text": "104",
+            "rects": 2
+          },
+          {
+            "text": "105",
+            "rects": 2
+          },
+          {
+            "text": "106",
+            "rects": 2
+          }
+        ]
+      },
+      {
+        "name": "candidate-1280-light",
+        "width": 1280,
+        "height": 1000,
+        "scrollWidth": 1280,
+        "scrollY": 5850.5,
+        "theme": "light",
+        "anchorY": 313.2734375,
+        "numbers": [
+          {
+            "text": "99",
+            "rects": 1
+          },
+          {
+            "text": "100",
+            "rects": 1
+          },
+          {
+            "text": "101",
+            "rects": 1
+          },
+          {
+            "text": "102",
+            "rects": 1
+          },
+          {
+            "text": "103",
+            "rects": 1
+          },
+          {
+            "text": "104",
+            "rects": 1
+          },
+          {
+            "text": "105",
+            "rects": 1
+          },
+          {
+            "text": "106",
+            "rects": 1
+          }
+        ]
+      },
+      {
+        "name": "base-390-light",
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "scrollY": 8415,
+        "theme": "light",
+        "anchorY": 0.2109375,
+        "numbers": [
+          {
+            "text": "99",
+            "rects": 1
+          },
+          {
+            "text": "100",
+            "rects": 2
+          },
+          {
+            "text": "101",
+            "rects": 2
+          },
+          {
+            "text": "102",
+            "rects": 2
+          },
+          {
+            "text": "103",
+            "rects": 2
+          },
+          {
+            "text": "104",
+            "rects": 2
+          },
+          {
+            "text": "105",
+            "rects": 2
+          },
+          {
+            "text": "106",
+            "rects": 2
+          }
+        ]
+      },
+      {
+        "name": "candidate-390-light",
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "scrollY": 7987,
+        "theme": "light",
+        "anchorY": -0.15625,
+        "numbers": [
+          {
+            "text": "99",
+            "rects": 1
+          },
+          {
+            "text": "100",
+            "rects": 1
+          },
+          {
+            "text": "101",
+            "rects": 1
+          },
+          {
+            "text": "102",
+            "rects": 1
+          },
+          {
+            "text": "103",
+            "rects": 1
+          },
+          {
+            "text": "104",
+            "rects": 1
+          },
+          {
+            "text": "105",
+            "rects": 1
+          },
+          {
+            "text": "106",
+            "rects": 1
+          }
+        ]
+      }
+    ],
+    "procedure": "Same diff-await-close-0 scrollIntoView target; document-end clamp is retained, no crop/edit."
+  },
+  "limits": [
+    "Only light screenshots; separate author DOM measurement covers dark",
+    "Same scrollIntoView anchor with natural end-of-document clamp, no image editing",
+    "Not a full keyboard-gate, touch-device, assistive-technology or human acceptance result",
+    "Original PR ZIP unresolved and the seven writing warnings remain outside this CSS fix"
+  ]
+}

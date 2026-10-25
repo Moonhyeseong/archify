@@ -65,3 +65,12 @@ node scripts/run-tests.mjs --require-files \
 | ![390px基线行号折行](screenshots/base-390-light.png) | ![390px候选行号完整且代码仍可横滚](screenshots/candidate-390-light.png) |
 
 这四张图片是浅色的实际阅读观察；浅深两主题的数字几何及横滚测量见 focused DOM 观测，不拿浅色截图代替深色图片。原 Task review map 的完整键盘 gate 问题不在本次修复内。
+
+
+## 合入 dev 10b4 后的同输入刷新
+
+上文页面、25/19测试、截图与evidence均保留其82c7/88b历史身份，原字节未覆盖。新比较在 [dev10b4](dev10b4/README.md)：将固定dev `10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0` 合入本实验分支后，仍仅增加diff行号的nowrap，保留新dev的软件许可与维护行为。canonical ZIP冲突用当前源码正常双构建解决。完整PR1097输入仍为原字节，未执行其中代码或把未解析安装包变成验证通过。
+
+新两页移除唯一nowrap后逐字相等；8臂实际DOM仍为每臂65行号、基线30折行→候选0折行，代码横滚保持。25 focused、19 core、generated通过，均0skip；两页finalize的validate/deliver/check通过，各保留7个相同writing warnings，完整browser-check未请求。公开摘要是外置raw收据的派生记录，不能称零诊断或全浏览器验收。
+
+本轮不顺带刷新四份docs/cases Explainer历史HTML；generated检查不覆盖它们的freshness，也不声称这些旧页面体现候选CSS。已读同dev原参数fresh-render证据，仅用于辨认既有stale差异，未冒充本分支测试结果。
