@@ -1,0 +1,593 @@
+{
+  "kind": "derived root browser evidence; raw records outside checkout, local artifact URLs omitted",
+  "pathBase": "experiments/source-keyboard",
+  "browser": "Ego Chromium, TaskSpace4/p1, CSS viewport1440x1100; no physical AT or human acceptance",
+  "artifacts": [
+    {
+      "path": "base/tour.html",
+      "bytes": 697086,
+      "sha256": "947c4a479f7a9cc4c36aec045411d5d9e8e6eca8be496ecfb274984ca13a5c5e"
+    },
+    {
+      "path": "candidate/tour.html",
+      "bytes": 697058,
+      "sha256": "0d8449e3cf9198aadb776442decc498fc6007c7e883cff974b48534e075eac60"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "screenshots/base-hover.png",
+      "bytes": 297014,
+      "sha256": "55780c69f811e97483bc1eb57e133d771798af8893c19c3b1c83a8c7a4c3da38",
+      "pngDimensions": [
+        1440,
+        1100
+      ],
+      "viewportCssPixels": [
+        1440,
+        1100
+      ],
+      "artifact": "base/tour.html",
+      "theme": "light",
+      "style": "Clean; native Classic/Still when Viewer open",
+      "rootViewed": true,
+      "sourceModifiedAtUtc": "2026-10-25T09:47:22.719007+00:00"
+    },
+    {
+      "path": "screenshots/base-keyboard.png",
+      "bytes": 224411,
+      "sha256": "7ad92338f6a92f308f2f8ff2d9fdeae3e20409a5f542e06d4b5b5baffb2040f5",
+      "pngDimensions": [
+        1440,
+        1100
+      ],
+      "viewportCssPixels": [
+        1440,
+        1100
+      ],
+      "artifact": "base/tour.html",
+      "theme": "light",
+      "style": "Clean; native Classic/Still when Viewer open",
+      "rootViewed": true,
+      "sourceModifiedAtUtc": "2026-10-25T09:47:24.880297+00:00"
+    },
+    {
+      "path": "screenshots/base-response-focus.png",
+      "bytes": 296464,
+      "sha256": "7ef88073970028983df3cb2d8142e71653d58ab77246e7e6b223f754da3e15d3",
+      "pngDimensions": [
+        1440,
+        1100
+      ],
+      "viewportCssPixels": [
+        1440,
+        1100
+      ],
+      "artifact": "base/tour.html",
+      "theme": "light",
+      "style": "Clean; native Classic/Still when Viewer open",
+      "rootViewed": true,
+      "sourceModifiedAtUtc": "2026-10-25T09:49:40.059410+00:00"
+    },
+    {
+      "path": "screenshots/candidate-response-focus.png",
+      "bytes": 296459,
+      "sha256": "bfa965b29cef94b871b6df29795427d2bdbae62ebd951d04ee9268bc3d278de5",
+      "pngDimensions": [
+        1440,
+        1100
+      ],
+      "viewportCssPixels": [
+        1440,
+        1100
+      ],
+      "artifact": "candidate/tour.html",
+      "theme": "light",
+      "style": "Clean; native Classic/Still when Viewer open",
+      "rootViewed": true,
+      "sourceModifiedAtUtc": "2026-10-25T09:54:07.254971+00:00"
+    },
+    {
+      "path": "screenshots/candidate-enter-viewer.png",
+      "bytes": 180979,
+      "sha256": "7eefcfb975016eaf11c4d17581715a70c50c1846421cd2a2e20ac9c86fc99dcd",
+      "pngDimensions": [
+        1440,
+        1100
+      ],
+      "viewportCssPixels": [
+        1440,
+        1100
+      ],
+      "artifact": "candidate/tour.html",
+      "theme": "light",
+      "style": "Clean; native Classic/Still when Viewer open",
+      "rootViewed": true,
+      "sourceModifiedAtUtc": "2026-10-25T09:54:09.778858+00:00"
+    }
+  ],
+  "rawRecords": [
+    {
+      "rawBasename": "base-checks.json",
+      "bytes": 1872,
+      "sha256": "644203be29108a718b160bcef174b8e8931bd5002ac4dcc96e651ba4e4cc9b5f",
+      "derivedObservations": {
+        "observedAt": "2026-10-25T09:47:24.880Z",
+        "hover": {
+          "visible": true,
+          "text": "serve：先编码字符串，handler只发送快照packages/cli/src/index.ts:84–9884async function serve(codemap: unknown, port: number) {85  const codemapJson = JSON.stringify(codemap, null, 2);86 87  // Prefer the visualizer bundled inside this package (published installs);88  // fall back to the monorepo layout for development.89  const bundled = resolve(import.meta.dirname ?? \".\", \"visualizer\");90  const devFallback = resolve(import.meta.dirname ?? \".\", \"../../visualizer/dist\");91  const visualizerDir = existsSync(join(bundled, \"index.html\")) ? bundled : devFallback;92  const hasVisualizer = existsSync(join(visualizerDir, \"index.html\"));93 94  const server = createServer(async (req, res) => {95    if (req.url === \"/codemap.json\") {96      res.writeHead(200, { \"Content-Type\": \"application/json\" });97      res.end(codemapJson);…固定在 a373526打开原文 ↗",
+          "sourceLink": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/cli/src/index.ts#L84-L98",
+          "sourceOnlyNodeCount": 10,
+          "tabbableNodes": 0
+        },
+        "afterTab": {
+          "tag": "g",
+          "text": "scan返回codemap · CLI：scan之后判断模式\n          \n          \n          \n            \n          \n          scan返回codemap",
+          "nodeId": "scan",
+          "role": null,
+          "sourceCardHidden": false,
+          "viewport": {
+            "width": 1440,
+            "height": 1100
+          },
+          "theme": "light"
+        },
+        "procedure": "Pointer hover response; Escape and pointer out; focus existing Explore button, then actual Tab. No programmatic focus on preview nodes.",
+        "driverCorrection": "First theme selector data-theme matched zero and stopped before capture; inspected DOM, used observed data-theme-choice. Not a product failure."
+      }
+    },
+    {
+      "rawBasename": "base-activation.json",
+      "bytes": 6350,
+      "sha256": "91181375384eea366b17542d5df94312a5d9eb2eaf8d6daf970729851b217604",
+      "derivedObservations": {
+        "observedAt": "2026-10-25T09:49:40.210Z",
+        "trace": [
+          {
+            "tag": "g",
+            "nodeId": "scan",
+            "text": "scan返回codemap · CLI：scan之后判断模式\n          \n          \n          \n      ",
+            "href": null
+          },
+          {
+            "tag": "A",
+            "nodeId": null,
+            "text": "打开原文 ↗",
+            "href": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/cli/src/index.ts#L47-L60"
+          },
+          {
+            "tag": "g",
+            "nodeId": "json-mode",
+            "text": "--json？ · CLI：scan之后判断模式\n          \n          \n          \n            ",
+            "href": null
+          },
+          {
+            "tag": "A",
+            "nodeId": null,
+            "text": "打开原文 ↗",
+            "href": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/cli/src/index.ts#L62-L66"
+          },
+          {
+            "tag": "g",
+            "nodeId": "stdout-return",
+            "text": "打印JSON并return · CLI：scan之后判断模式\n          \n          \n          \n      ",
+            "href": null
+          },
+          {
+            "tag": "A",
+            "nodeId": null,
+            "text": "打开原文 ↗",
+            "href": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/cli/src/index.ts#L62-L66"
+          },
+          {
+            "tag": "g",
+            "nodeId": "file-write",
+            "text": "writeCodeMap · CLI：scan之后判断模式\n          \n          \n          \n       ",
+            "href": null
+          },
+          {
+            "tag": "A",
+            "nodeId": null,
+            "text": "打开原文 ↗",
+            "href": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/cli/src/index.ts#L68-L80"
+          },
+          {
+            "tag": "g",
+            "nodeId": "no-serve-mode",
+            "text": "--no-serve？ · CLI：scan之后判断模式\n          \n          \n          \n        ",
+            "href": null
+          },
+          {
+            "tag": "A",
+            "nodeId": null,
+            "text": "打开原文 ↗",
+            "href": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/cli/src/index.ts#L68-L80"
+          },
+          {
+            "tag": "g",
+            "nodeId": "file-return",
+            "text": "写完并return · CLI：scan之后判断模式\n          \n          \n          \n          ",
+            "href": null
+          },
+          {
+            "tag": "A",
+            "nodeId": null,
+            "text": "打开原文 ↗",
+            "href": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/cli/src/index.ts#L68-L80"
+          },
+          {
+            "tag": "g",
+            "nodeId": "snapshot",
+            "text": "serve准备快照 · 正常服务：内存响应\n          \n          \n          \n            \n  ",
+            "href": null
+          },
+          {
+            "tag": "A",
+            "nodeId": null,
+            "text": "打开原文 ↗",
+            "href": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/cli/src/index.ts#L84-L98"
+          },
+          {
+            "tag": "g",
+            "nodeId": "response",
+            "text": "HTTP发送快照 · 正常服务：内存响应\n          \n          \n          \n            \n   ",
+            "href": null
+          }
+        ],
+        "focused": {
+          "nodeId": "response",
+          "role": null,
+          "tabindex": null,
+          "focusVisible": true,
+          "filter": "drop-shadow(rgba(0, 0, 0, 0) 0px 0px 0px)",
+          "outline": "rgb(44, 48, 56) none 3px",
+          "cardVisible": true,
+          "text": "serve：先编码字符串，handler只发送快照packages/cli/src/index.ts:84–9884async function serve(codemap: unknown, port: number) {85  const codemapJson = JSON.stringify(codemap, null, 2);86 87  // Prefer the visualizer bundled inside this package (published installs);88  // fall back to the monorepo layout for development.89  const bundled = resolve(import.meta.dirname ?? \".\", \"visualizer\");90  const devFallback = resolve(import.meta.dirname ?? \".\", \"../../visualizer/dist\");91  const visualizerDir = existsSync(join(bundled, \"index.html\")) ? bundled : devFallback;92  const hasVisualizer = existsSync(join(visualizerDir, \"index.html\"));93 94  const server = createServer(async (req, res) => {95    if (req.url === \"/codemap.json\") {96      res.writeHead(200, { \"Content-Type\": \"application/json\" });97      res.end(codemapJson);…固定在 a373526打开原文 ↗",
+          "sourceLink": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/cli/src/index.ts#L84-L98",
+          "dialogs": [
+            {
+              "id": "diagram-dialog",
+              "open": false
+            },
+            {
+              "id": "",
+              "open": false
+            }
+          ],
+          "scrollY": 0
+        },
+        "axNodes": [
+          {
+            "ignored": false,
+            "role": "group",
+            "name": "聚焦HTTP发送快照，正常服务：内存响应",
+            "properties": [
+              {
+                "name": "focusable",
+                "value": {
+                  "type": "booleanOrUndefined",
+                  "value": true
+                }
+              },
+              {
+                "name": "focused",
+                "value": {
+                  "type": "booleanOrUndefined",
+                  "value": true
+                }
+              }
+            ],
+            "backendDOMNodeId": 8027
+          },
+          {
+            "ignored": false,
+            "role": "link",
+            "name": "HTTP发送快照",
+            "properties": [
+              {
+                "name": "focusable",
+                "value": {
+                  "type": "booleanOrUndefined",
+                  "value": true
+                }
+              },
+              {
+                "name": "url",
+                "value": {
+                  "type": "string",
+                  "value": "[local artifact URL omitted from derived summary]"
+                }
+              }
+            ],
+            "backendDOMNodeId": 8166
+          },
+          {
+            "ignored": false,
+            "role": "StaticText",
+            "name": "HTTP发送快照",
+            "properties": [],
+            "backendDOMNodeId": 7635
+          },
+          {
+            "ignored": false,
+            "role": "StaticText",
+            "name": "HTTP发送快照",
+            "properties": [],
+            "backendDOMNodeId": 7546
+          }
+        ],
+        "enter": {
+          "openDialogs": [],
+          "nodeId": "response",
+          "scrollY": 0
+        },
+        "space": {
+          "openDialogs": [],
+          "nodeId": "response",
+          "scrollY": 283.5
+        },
+        "procedure": "Continued actual Tab from prior scan focus through card links; no programmatic preview-node focus. Enter then Space on response."
+      }
+    },
+    {
+      "rawBasename": "candidate-keyboard.json",
+      "bytes": 5410,
+      "sha256": "62022640305a73996e4e065a0f4b3b34a53c7eb89e36170b827b5d5af4ece522",
+      "derivedObservations": {
+        "observedAt": "2026-10-25T09:54:09.779Z",
+        "trace": [
+          {
+            "tag": "g",
+            "nodeId": "scan",
+            "text": "scan返回codemap · CLI：scan之后判断模式\n          \n          \n          \n      ",
+            "href": null
+          },
+          {
+            "tag": "A",
+            "nodeId": null,
+            "text": "打开原文 ↗",
+            "href": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/cli/src/index.ts#L47-L60"
+          },
+          {
+            "tag": "g",
+            "nodeId": "json-mode",
+            "text": "--json？ · CLI：scan之后判断模式\n          \n          \n          \n            ",
+            "href": null
+          },
+          {
+            "tag": "A",
+            "nodeId": null,
+            "text": "打开原文 ↗",
+            "href": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/cli/src/index.ts#L62-L66"
+          },
+          {
+            "tag": "g",
+            "nodeId": "stdout-return",
+            "text": "打印JSON并return · CLI：scan之后判断模式\n          \n          \n          \n      ",
+            "href": null
+          },
+          {
+            "tag": "A",
+            "nodeId": null,
+            "text": "打开原文 ↗",
+            "href": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/cli/src/index.ts#L62-L66"
+          },
+          {
+            "tag": "g",
+            "nodeId": "file-write",
+            "text": "writeCodeMap · CLI：scan之后判断模式\n          \n          \n          \n       ",
+            "href": null
+          },
+          {
+            "tag": "A",
+            "nodeId": null,
+            "text": "打开原文 ↗",
+            "href": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/cli/src/index.ts#L68-L80"
+          },
+          {
+            "tag": "g",
+            "nodeId": "no-serve-mode",
+            "text": "--no-serve？ · CLI：scan之后判断模式\n          \n          \n          \n        ",
+            "href": null
+          },
+          {
+            "tag": "A",
+            "nodeId": null,
+            "text": "打开原文 ↗",
+            "href": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/cli/src/index.ts#L68-L80"
+          },
+          {
+            "tag": "g",
+            "nodeId": "file-return",
+            "text": "写完并return · CLI：scan之后判断模式\n          \n          \n          \n          ",
+            "href": null
+          },
+          {
+            "tag": "A",
+            "nodeId": null,
+            "text": "打开原文 ↗",
+            "href": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/cli/src/index.ts#L68-L80"
+          },
+          {
+            "tag": "g",
+            "nodeId": "snapshot",
+            "text": "serve准备快照 · 正常服务：内存响应\n          \n          \n          \n            \n  ",
+            "href": null
+          },
+          {
+            "tag": "A",
+            "nodeId": null,
+            "text": "打开原文 ↗",
+            "href": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/cli/src/index.ts#L84-L98"
+          },
+          {
+            "tag": "g",
+            "nodeId": "response",
+            "text": "HTTP发送快照 · 正常服务：内存响应\n          \n          \n          \n            \n   ",
+            "href": null
+          }
+        ],
+        "focused": {
+          "nodeId": "response",
+          "role": "button",
+          "tabindex": "0",
+          "focusVisible": true,
+          "cardVisible": true,
+          "sourceLink": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/cli/src/index.ts#L84-L98",
+          "scrollY": 0
+        },
+        "axNodes": [
+          {
+            "ignored": false,
+            "role": "button",
+            "name": "HTTP发送快照",
+            "properties": [
+              {
+                "name": "focusable",
+                "value": {
+                  "type": "booleanOrUndefined",
+                  "value": true
+                }
+              },
+              {
+                "name": "focused",
+                "value": {
+                  "type": "booleanOrUndefined",
+                  "value": true
+                }
+              }
+            ]
+          },
+          {
+            "ignored": false,
+            "role": "link",
+            "name": "HTTP发送快照",
+            "properties": [
+              {
+                "name": "focusable",
+                "value": {
+                  "type": "booleanOrUndefined",
+                  "value": true
+                }
+              },
+              {
+                "name": "url",
+                "value": {
+                  "type": "string",
+                  "value": "[local artifact URL omitted from derived summary]"
+                }
+              }
+            ]
+          },
+          {
+            "ignored": false,
+            "role": "StaticText",
+            "name": "HTTP发送快照",
+            "properties": []
+          },
+          {
+            "ignored": false,
+            "role": "StaticText",
+            "name": "HTTP发送快照",
+            "properties": []
+          }
+        ],
+        "cardTab": {
+          "tag": "A",
+          "href": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/cli/src/index.ts#L84-L98",
+          "insideCard": true
+        },
+        "cardBack": {
+          "nodeId": "response"
+        },
+        "escape": {
+          "nodeId": "response",
+          "cardHidden": true
+        },
+        "afterEscapeTab": {
+          "nodeId": "browser-data",
+          "tag": "g"
+        },
+        "beforeEnter": {
+          "nodeId": "response",
+          "scrollY": 0
+        },
+        "enter": {
+          "open": true,
+          "nativeFocus": {
+            "nodes": [
+              "response"
+            ],
+            "edges": [
+              "response-to-browser-data-1",
+              "snapshot-to-response-1"
+            ],
+            "active": "response"
+          },
+          "scrollY": 0
+        }
+      }
+    },
+    {
+      "rawBasename": "candidate-activation.json",
+      "bytes": 759,
+      "sha256": "1be9947cd912d06509b4d6bc7610de16d9af8848dde5ddf48856bf0443983930",
+      "derivedObservations": {
+        "observedAt": "2026-10-25T09:55:09.005Z",
+        "returned": {
+          "nodeId": "response",
+          "scrollY": 0,
+          "cardHidden": false
+        },
+        "space": {
+          "open": true,
+          "nativeFocus": {
+            "nodes": [
+              "response"
+            ],
+            "edges": [
+              "response-to-browser-data-1",
+              "snapshot-to-response-1"
+            ],
+            "active": "response"
+          },
+          "scrollY": 0
+        },
+        "escape": {
+          "nodeId": "response",
+          "open": false
+        },
+        "pointer": {
+          "open": true,
+          "nativeFocus": {
+            "nodes": [
+              "response"
+            ],
+            "edges": [
+              "response-to-browser-data-1",
+              "snapshot-to-response-1"
+            ],
+            "active": "response"
+          }
+        },
+        "pointerReturn": {
+          "nodeId": "response",
+          "cardVisible": true
+        }
+      }
+    }
+  ],
+  "findings": [
+    "Both base and candidate support actual sequential Tab to response and source-card reading; existing focus-visible shadow is retained",
+    "Base actual AX response role is group; Enter opens no dialog and Space scrolls without opening it",
+    "Candidate actual AX response role is button; Enter and Space open native Viewer focused on response; close returns to response",
+    "Candidate card Tab/ShiftTab/Escape return and next Tab to browser-data work; pointer still opens same native node, close now returns to the node"
+  ],
+  "limits": [
+    "Initial static inference of Tab inaccessibility was disproved and withdrawn",
+    "Initial outline-only visibility assertion was too narrow; no focus styling change is claimed",
+    "Initial root theme selector matched zero and was corrected after DOM inspection before capture",
+    "No external source link was opened; no Walkthrough code was run; source code content unchanged",
+    "Controlled Chromium mouse/keyboard observations do not prove screen-reader or cross-browser acceptance"
+  ]
+}

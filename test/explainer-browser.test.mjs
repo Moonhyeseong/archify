@@ -32,6 +32,64 @@ test('formal renderer retains keyboard navigation, static reading and print mode
 });
 test.after(()=>fs.rmSync(dir,{recursive:true,force:true}));
 
+test('source-only nodes in the frozen CLI tour have equivalent keyboard and pointer handoffs',{skip:!chrome},async t=>{
+ const {renderExplainer}=await import('../archify/explainer/render.mjs');
+ const page=unpackPageBundle(JSON.parse(fs.readFileSync(new URL('../experiments/source-keyboard/base/prepared-page.json',import.meta.url),'utf8')));
+ const file=artifact('source-only-tour',renderExplainer(page.document,{...page,preparedBundle:page}));
+ const browser=new ChromeVisualBrowser(chrome),node='#cli-paths [data-node-id="response"]';
+ const value=expression=>pageValue(browser,expression);
+ const press=async(key,shift=false)=>{for(const type of ['keyDown','keyUp'])await browser.cdp.send('Input.dispatchKeyEvent',{type,key,code:key===' '?'Space':key,windowsVirtualKeyCode:key==='Escape'?27:key===' '?32:key==='Tab'?9:13,modifiers:shift?8:0,...(key==='Enter'&&type==='keyDown'?{text:'\r',unmodifiedText:'\r'}:{})},await browser.sessionPromise);await value('new Promise(resolve=>setTimeout(resolve,0))');};
+ const identity=()=>value(`(()=>{const e=document.activeElement;return e?.dataset.nodeId||e?.getAttribute('href')||e?.outerHTML?.slice(0,160)})()`);
+ const closeNative=async()=>{
+  await value(`(()=>{window.__sourceClose=new Promise(resolve=>{document.querySelector('#diagram-dialog').addEventListener('close',()=>resolve(true),{once:true});});})()`);
+  await keyboardActivate(browser,'[data-close-diagram]');await value('window.__sourceClose');
+  assert.equal(await value(`document.activeElement===document.querySelector(${JSON.stringify(node)})`),true,'native close returns to the actual invoking node');
+ };
+ const nativeTarget=async()=>{let found;for(let i=0;i<40;i++){found=await inspectNativeViewer(browser);if(found.available&&found.nodes.includes('response'))break;await new Promise(resolve=>setTimeout(resolve,50));}assert.deepEqual(found.nodes,['response']);};
+ try {
+  await inspectPublicHtml(browser,{artifactPath:file,width:1440,height:1100,keyboard:false});
+  await value(`window.__sourceErrors=[];addEventListener('error',event=>window.__sourceErrors.push(event.message));`);
+  // The first node is reached by a real Tab from an ordinary preceding control, not node.focus().
+  await keyboardActivate(browser,'#cli-paths [data-open-diagram]','Tab');
+  assert.equal(await identity(),'scan','Tab enters the first source-only node');
+  for(let i=0;i<30&&await identity()!=='response';i++)await press('Tab');
+  assert.equal(await identity(),'response','real sequential Tab reaches the source-only response node');
+  const shown=await value(`(()=>{const e=document.activeElement,c=document.querySelector('.source-card');return {visible:!c.hidden,location:c.querySelector('.source-where').textContent,pin:c.querySelector('.source-pin').textContent,href:c.querySelector('a').href,tag:e.tagName,tabIndex:e.tabIndex,role:e.getAttribute('role'),focusVisible:e.matches(':focus-visible')}})()`);
+  assert.equal(shown.visible,true);assert.equal(shown.focusVisible,true,'real keyboard focus preserves the existing native focus-visible feedback');
+  assert.match(shown.location,/packages\/cli\/src\/index.ts:84–98/);assert.match(shown.pin,/a373526/);
+  assert.equal(shown.href,page.preparedSources.sources['http-snapshot'].url);
+  const ax=await browser.cdp.send('Accessibility.getFullAXTree',{},await browser.sessionPromise);
+  await t.test('actual accessible action',()=>assert.ok(ax.nodes.some(n=>!n.ignored&&n.role?.value==='button'&&n.name?.value==='HTTP发送快照'),'the actual AX tree exposes the named node action'));
+  await press('Tab');assert.equal(await identity(),new URL(shown.href).href);
+  await press('Tab',true);assert.equal(await identity(),'response');
+  await press('Tab');await press('Tab');const next=await identity();assert.notEqual(next,'response');assert.notEqual(next,shown.href);
+  await keyboardActivate(browser,node,'Tab');await press('Escape');assert.equal(await identity(),'response');
+  assert.equal(await value('document.querySelector(".source-card").hidden'),true);
+  await press('Tab');assert.equal(await identity(),next,'after Escape Tab resumes the document without reopening the card');
+  for(const key of ['Enter',' '])await t.test(`native activation ${key===' '?'Space':key}`,async()=>{
+   const before=await value(`(()=>{const e=document.querySelector(${JSON.stringify(node)});e.scrollIntoView({block:'center'});e.focus();return scrollY;})()`);
+   await press(key);await nativeTarget();
+   if(key===' ')assert.equal(await value('scrollY'),before,'Space activates the button without scrolling the page');
+   await closeNative();
+  });
+  // The same real node retains the pointer action. Becoming focusable intentionally returns here rather than Explore.
+  await value(`document.querySelector(${JSON.stringify(node)}).scrollIntoView({block:'center'})`);
+  const bounds=await value(`(()=>{const r=document.querySelector(${JSON.stringify(node)}).getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2}})()`);
+  await browser.cdp.send('Input.dispatchMouseEvent',{type:'mouseMoved',...bounds},await browser.sessionPromise);
+  assert.equal(await value('!document.querySelector(".source-card").hidden'),true);
+  for(const type of ['mousePressed','mouseReleased'])await browser.cdp.send('Input.dispatchMouseEvent',{type,...bounds,button:'left',clickCount:1},await browser.sessionPromise);
+  await nativeTarget();await closeNative();
+  assert.deepEqual(await value('window.__sourceErrors'),[],'activation does not dispatch twice or escape as a page error');
+  // Compatibility: same node with both source and an existing paragraph preserves both card links and description.
+  page.document.panels.find(p=>p.id==='read-the-flow').blocks.find(b=>b.id==='cli-paths').nodeBlocks={response:'prose-564d4725bf00'};
+  const mixed=artifact('source-and-block-tour',renderExplainer(page.document,{...page,preparedBundle:page}));
+  await browser.resetPage();await inspectPublicHtml(browser,{artifactPath:mixed,width:1440,height:1100,keyboard:false});
+  await keyboardActivate(browser,node,'Tab');
+  const both=await value(`(()=>{const e=document.querySelector(${JSON.stringify(node)}),c=document.querySelector('.source-card');return {description:e.getAttribute('aria-describedby'),links:[...c.querySelectorAll('a')].map(a=>a.getAttribute('href')),pin:c.querySelector('.source-pin').textContent}})()`);
+  assert.equal(both.description,'prose-564d4725bf00');assert.deepEqual(both.links,['#prose-564d4725bf00',shown.href]);assert.match(both.pin,/a373526/);
+ }finally{await browser.close();}
+});
+
 test('retry layout and referenced node explanations remain readable and keyboard accessible after a prose edit',{skip:!chrome},async()=>{
  const {renderExplainer}=await import('../archify/explainer/render.mjs');
  const {compileExplainerDiagram,prepareExplainerDiagrams}=await import('../archify/explainer/diagrams.mjs');

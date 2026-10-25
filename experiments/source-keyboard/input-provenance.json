@@ -1,0 +1,72 @@
+{
+  "kind": "frozen-input-provenance",
+  "originalExperimentCommit": "1dff88d331679319442277a4ffc7cd3637bccee2",
+  "originalArchifyBase": "3f95f0349c8276db71509ca239461b6fe9d00f9f",
+  "newArchifyBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "upstream": {
+    "repo": "kyooosukedn/walkthrough",
+    "revision": "a373526c92bd1d4c3953370b9a57f19e4fb15d08",
+    "license": "MIT",
+    "executed": false
+  },
+  "originalHtmlSha256": "7814b929dd002ea2b1083575899cf0739ce83effd84488251cf85addb7bce190",
+  "sourceOnlyMappings": 10,
+  "pinnedSources": 11,
+  "files": [
+    {
+      "path": "input/.gitattributes",
+      "bytes": 16,
+      "sha256": "e8de51f40e73a262bbd8959a4230e3dce0b2b15ad68a19888750b7fc26593cf3"
+    },
+    {
+      "path": "input/cli-reading-tour.archify.md",
+      "bytes": 6754,
+      "sha256": "5eec8481a740baec23a8898d6f4885315c5f327551aa156592d25afbf789275d"
+    },
+    {
+      "path": "input/frozen-page.json",
+      "bytes": 453813,
+      "sha256": "d5dac413ab85c44e2323c839818be42d73b9af66f6028b8f2a0446e30848a0fe"
+    },
+    {
+      "path": "input/source/LICENSE",
+      "bytes": 1071,
+      "sha256": "ab38918f782845f71ae56421e8cfc629b31a53701f8b5087eaa36788b6a4b37b"
+    },
+    {
+      "path": "input/source/manifest.json",
+      "bytes": 2801,
+      "sha256": "4f377b8aec60db32b2184131f97ac52a243a9266e18e940b6e6ec7c4c4784edb"
+    },
+    {
+      "path": "input/source/packages/cli/package.json",
+      "bytes": 1185,
+      "sha256": "32a3c1c1c0004e73a8eb6a8e9a66a7ba5a2a7563d31260e6564e48d1700c19b6"
+    },
+    {
+      "path": "input/source/packages/cli/src/index.ts",
+      "bytes": 6084,
+      "sha256": "eaedcca0d16b6b24e31139d70d574f3e600f0a4264e849d8b7ac8c047b747ae8"
+    },
+    {
+      "path": "input/source/packages/scanner/src/output/json.ts",
+      "bytes": 316,
+      "sha256": "d47cbb5586d044826920c6d9e026ddebc70b2283f02ce45a42a35c8fc24b5d10"
+    },
+    {
+      "path": "input/source/packages/visualizer/src/App.tsx",
+      "bytes": 5265,
+      "sha256": "5b212aa1cf0e6c2df7bcad10d3fd5aa4151a3cce3107a39329d0d5d775d411c2"
+    },
+    {
+      "path": "input/source/packages/visualizer/src/data/context.tsx",
+      "bytes": 1205,
+      "sha256": "623c43ae534749ab1a2a5b669fe8db956d540c8b4c79742c5d2dc4731d712fdd"
+    },
+    {
+      "path": "input/source/packages/visualizer/src/data/loader.ts",
+      "bytes": 1838,
+      "sha256": "86eda68d14a3b35b65e300c7a455684af5142ec1bda69dbf50f127b71d74f9ee"
+    }
+  ]
+}

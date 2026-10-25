@@ -643,12 +643,10 @@
         node.classList.add('has-source');
         node.addEventListener('mouseenter',()=>show(node,id || '',blockId)); node.addEventListener('mouseleave',hide);
         node.addEventListener('focus',()=>show(node,id || '',blockId)); node.addEventListener('blur',hide);
-        if (blockId) {
-          node.setAttribute('tabindex','0'); node.setAttribute('role','button');
-          node.setAttribute('aria-label',node.getAttribute('data-node-label') || node.dataset.nodeId);
-          node.setAttribute('aria-describedby',blockId);
-          node.addEventListener('keydown',event=>{ if (event.key==='Enter'||event.key===' ') { event.preventDefault(); node.dispatchEvent(new MouseEvent('click',{bubbles:true})); } });
-        }
+        node.setAttribute('tabindex','0'); node.setAttribute('role','button');
+        node.setAttribute('aria-label',node.getAttribute('data-node-label') || node.dataset.nodeId);
+        if (blockId) node.setAttribute('aria-describedby',blockId);
+        node.addEventListener('keydown',event=>{ if (event.key==='Enter'||event.key===' ') { event.preventDefault(); node.dispatchEvent(new MouseEvent('click',{bubbles:true})); } });
       });
     });
     document.addEventListener('keydown',event=>{

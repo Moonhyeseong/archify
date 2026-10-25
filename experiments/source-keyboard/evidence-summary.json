@@ -1,0 +1,385 @@
+{
+  "kind": "derived-evidence-summary",
+  "version": 1,
+  "note": "Projection of actual command logs, source comparisons and root browser records; original stdout/receipts remain outside checkout. Not an original CLI receipt.",
+  "baseline": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "scope": "Explicit source-only node action semantics and Enter/Space native activation; no new Tab reachability or focus styling claim.",
+  "withdrawnInferences": [
+    "No tabindex does not imply no real Tab reachability in Chromium SVG with focus listeners. Both pages were actually Tab reachable.",
+    "Outline-only visibility assertion was too narrow; native focus-visible drop-shadow was already present. No CSS change."
+  ],
+  "pair": {
+    "base": {
+      "bytes": 697086,
+      "sha256": "947c4a479f7a9cc4c36aec045411d5d9e8e6eca8be496ecfb274984ca13a5c5e"
+    },
+    "candidate": {
+      "bytes": 697058,
+      "sha256": "0d8449e3cf9198aadb776442decc498fc6007c7e883cff974b48534e075eac60"
+    },
+    "newBaseGeneratedFromCurrentRuntime": true,
+    "resourcesReusedByCandidate": true,
+    "preparedBundlesEqual": true,
+    "exactFullReaderReplacementOnly": true,
+    "originalHistoricalHtmlSha256": "7814b929dd002ea2b1083575899cf0739ce83effd84488251cf85addb7bce190"
+  },
+  "source": {
+    "reader": {
+      "path": "archify/explainer/reader.js",
+      "bytes": 54002,
+      "sha256": "95557094fea2199f14fcb690a3ece94cea071d7d6561b09cfb6114fe5ce85d1a"
+    },
+    "test": {
+      "path": "test/explainer-browser.test.mjs",
+      "bytes": 44467,
+      "sha256": "8da85b43710ce8e54cde00be27e945ac1ac6ed17b30c105eb9274313193b9501"
+    },
+    "baseProbeTest": {
+      "source": "archived base tree plus scoped new test before final post-activation error collection assertion",
+      "bytes": 44246,
+      "sha256": "6c7a6ac1841d0d19474e7560bbff96513fbf8bd571b37a6b5f3a6eed9e54cfdc"
+    },
+    "cssChanged": false,
+    "schemaChanged": false,
+    "viewerOrAtlasChanged": false
+  },
+  "checks": {
+    "candidateFinalBrowserSelection": {
+      "pass": 6,
+      "fail": 0,
+      "skip": 0,
+      "coverage": "New source-only AX action/Enter/Space leaves plus existing paragraph reuse and native exact-focus tests",
+      "rawLog": {
+        "bytes": 1353,
+        "sha256": "754f6a3de45ca5497cad381b4dde2bebfad51d1517ef17b960f418dd26208e40"
+      }
+    },
+    "baseComparison": {
+      "pass": 0,
+      "fail": 4,
+      "leafFailures": [
+        "actual accessible action",
+        "native activation Enter",
+        "native activation Space"
+      ],
+      "parentAlsoFailsBecause": "Old pointer close returns Explore; candidate contract explicitly returns node. Not claimed as separate old defect.",
+      "realTabAndCardPrefixPassed": true,
+      "rawLog": {
+        "bytes": 4866,
+        "sha256": "2fd8f64cfe5df1066918f5c4c93cd77fe507103db27343b985c653fca5c2211d"
+      }
+    },
+    "renderer": {
+      "pass": 15,
+      "fail": 0,
+      "skip": 0,
+      "rawLog": {
+        "bytes": 3929,
+        "sha256": "588b3ea6eb677f192ac91f651aac483fe869733071ca6de28e73d4e5fad2dbeb"
+      }
+    },
+    "core": {
+      "pass": 19,
+      "fail": 0,
+      "skip": 0,
+      "rawLog": {
+        "bytes": 4287,
+        "sha256": "c2c2f97526e88270051ec680a242e4219e6d0ffb859541dc3909315a8281050a"
+      }
+    },
+    "generated": {
+      "status": "pass",
+      "rawLog": {
+        "bytes": 3949,
+        "sha256": "bb70dcac75a592d93188ff958103eb35725863e64b803e92477fb13d57568dd0"
+      }
+    },
+    "extractedPackageSmoke": {
+      "status": "pass",
+      "host": "darwin",
+      "rawLog": {
+        "bytes": 267,
+        "sha256": "d63fbf4186f3f42ad5e0b13d696c100b2adcbf6998bed25bdb2c950a89ee50fe"
+      }
+    },
+    "pairFinalize": "not-run",
+    "pairWholePageBrowserGate": "not-run",
+    "fullRepositoryTests": "not-run",
+    "hostedCI": "not-run",
+    "earlyFailuresRetained": [
+      "Overly narrow outline assertion in base/candidate exploratory probes; corrected after inspecting existing filter feedback.",
+      "Test harness awaited its listener-installation Promise before close action, causing CDP timeout; fixed harness, not product.",
+      "Root initial theme selector zero-match corrected before final captures.",
+      "Docs baseline replay initially added repo-root and changed optional source material; rejected and returned to original same parameters."
+    ]
+  },
+  "package": {
+    "path": "archify.zip",
+    "bytes": 6987367,
+    "sha256": "531124ef47c6e37bc5a91a9bb014e208476cc717eabdbd42f88ec10515675c4e",
+    "node": "22.23.2",
+    "zlib": "1.3.1-e00f703",
+    "repeatBuildByteIdentical": true,
+    "entryCount": 235,
+    "inventoryEqualsThisBase": true,
+    "crcPass": true,
+    "changedEntries": [
+      "archify/explainer/reader.js"
+    ],
+    "embeddedReaderEqualsCurrentSource": true
+  },
+  "generatedDocs": {
+    "previousTrackedDiffIncludesExistingRuntimeFreshness": true,
+    "normalCommand": "node <runtime>/archify/bin/archify.mjs deliver explainer docs/cases/explainer/NAME.archify.md docs/cases/explainer/NAME.html --quality standard --json",
+    "repoRootAdded": false,
+    "beforeAfter": [
+      {
+        "name": "finalize-delivery",
+        "exitCode": 0,
+        "beforeSha256": "f5e8b38535039ffced65502d87534019909c31c43fac86425351804f10aeced6",
+        "afterSha256": "db511dc231bc01c2af379b1cbbb676911b1b0142ca15a989a95fa4f5716c46b7"
+      },
+      {
+        "name": "first-rental",
+        "exitCode": 0,
+        "beforeSha256": "62e6aecbcb5f5ec62f65c375e6e47c8e71355558eedeefbb825aecd9bdaa5206",
+        "afterSha256": "cc813a8ab623a49eaa1c04633264aaf1a9ce68cb4af6e4f3cbed4dc10b8dd791"
+      },
+      {
+        "name": "p99-tail-latency",
+        "exitCode": 0,
+        "beforeSha256": "f2657385d7c4971975726ce56e14cb62ac0f97e5ebed72dc05b0a15dc07ee0cb",
+        "afterSha256": "2ac19255984780873a8bc35509b21032a1ff27b44864773596ae4c9cb1bc0964"
+      },
+      {
+        "name": "tls-first-visit",
+        "exitCode": 0,
+        "beforeSha256": "dbd57bee0bb12ed83df184fb11c425155d968c711e9f0a07ddd47c7dd254eff1",
+        "afterSha256": "b35f6504c144383db0157956a67e649b3107932b15040d801c81565bc8425811"
+      }
+    ],
+    "semanticComparisons": [
+      {
+        "name": "finalize-delivery",
+        "qualityBefore": "standard",
+        "qualityAfter": "standard",
+        "sourceText": true,
+        "document": true,
+        "diagrams": {
+          "finalize-gates": {
+            "spec": true,
+            "svg": true
+          }
+        }
+      },
+      {
+        "name": "first-rental",
+        "qualityBefore": "standard",
+        "qualityAfter": "standard",
+        "sourceText": true,
+        "document": true,
+        "diagrams": {
+          "rent-flow": {
+            "spec": true,
+            "svg": true
+          }
+        }
+      },
+      {
+        "name": "p99-tail-latency",
+        "qualityBefore": "standard",
+        "qualityAfter": "standard",
+        "sourceText": true,
+        "document": true,
+        "diagrams": {
+          "p99-triage": {
+            "spec": true,
+            "svg": true
+          }
+        }
+      },
+      {
+        "name": "tls-first-visit",
+        "qualityBefore": "standard",
+        "qualityAfter": "standard",
+        "sourceText": true,
+        "document": true,
+        "diagrams": {
+          "tls-visit": {
+            "spec": true,
+            "svg": true
+          }
+        }
+      }
+    ],
+    "archivedBaseGeneratedComparisons": [
+      {
+        "name": "finalize-delivery",
+        "archivedBaseGeneratedSha256": "4bb04fbb8a3eb18a366becfdf3eeefd5465391a7442534654d12cf5e35d64007",
+        "candidateGeneratedSha256": "db511dc231bc01c2af379b1cbbb676911b1b0142ca15a989a95fa4f5716c46b7",
+        "candidateBytesUnchanged": true,
+        "onlyExactReaderReplacementDiff": true,
+        "previousTrackedDiffIncludesPreexistingRuntimeFreshness": true
+      },
+      {
+        "name": "first-rental",
+        "archivedBaseGeneratedSha256": "f6610871f386a5c4de7a846bdde74fbaf5f59000fcc8861a91d7aa8e0254c69a",
+        "candidateGeneratedSha256": "cc813a8ab623a49eaa1c04633264aaf1a9ce68cb4af6e4f3cbed4dc10b8dd791",
+        "candidateBytesUnchanged": true,
+        "onlyExactReaderReplacementDiff": true,
+        "previousTrackedDiffIncludesPreexistingRuntimeFreshness": true
+      },
+      {
+        "name": "p99-tail-latency",
+        "archivedBaseGeneratedSha256": "a3d2ce8a0ba48ada31d2ce6f0c01593a4c8044286ad573f5e99e79d320cc14bb",
+        "candidateGeneratedSha256": "2ac19255984780873a8bc35509b21032a1ff27b44864773596ae4c9cb1bc0964",
+        "candidateBytesUnchanged": true,
+        "onlyExactReaderReplacementDiff": true,
+        "previousTrackedDiffIncludesPreexistingRuntimeFreshness": true
+      },
+      {
+        "name": "tls-first-visit",
+        "archivedBaseGeneratedSha256": "9266f1d5212d4f1c0936629403277ed132741357ea9fcaa4335345c2af10b659",
+        "candidateGeneratedSha256": "b35f6504c144383db0157956a67e649b3107932b15040d801c81565bc8425811",
+        "candidateBytesUnchanged": true,
+        "onlyExactReaderReplacementDiff": true,
+        "previousTrackedDiffIncludesPreexistingRuntimeFreshness": true
+      }
+    ],
+    "rawCopiedInputsUnchanged": true,
+    "htmlManuallyEdited": false
+  },
+  "rootBrowser": {
+    "capturePath": "screenshots/capture.json",
+    "capture": {
+      "bytes": 21938,
+      "sha256": "f505fdfcb346ba0eab13d5d16e7efd091d657fe07e4133e0876ab5879ca01d89"
+    },
+    "scope": "Actual Ego keyboard/mouse and AX observations plus five agent-viewed PNGs. File URLs omitted. Not physical assistive technology, cross-browser, human acceptance or efficiency validation.",
+    "mouseReturnCompatibilityChange": "Pointer opens the same native response; closing now returns to the newly focusable actual node rather than Explore.",
+    "rawRecordsVerifiedInCapture": true
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 10135,
+      "sha256": "adb0c92819c00d086c1746926d068e9c61029f57cd71f30d162f5acd61379db9"
+    },
+    {
+      "path": "base/prepared-page.json",
+      "bytes": 464425,
+      "sha256": "2c19f376b9de89901b209e510f6b3c6b39f75acc1381a23afc356050d281a854"
+    },
+    {
+      "path": "base/tour.html",
+      "bytes": 697086,
+      "sha256": "947c4a479f7a9cc4c36aec045411d5d9e8e6eca8be496ecfb274984ca13a5c5e"
+    },
+    {
+      "path": "candidate/prepared-page.json",
+      "bytes": 464425,
+      "sha256": "2c19f376b9de89901b209e510f6b3c6b39f75acc1381a23afc356050d281a854"
+    },
+    {
+      "path": "candidate/tour.html",
+      "bytes": 697058,
+      "sha256": "0d8449e3cf9198aadb776442decc498fc6007c7e883cff974b48534e075eac60"
+    },
+    {
+      "path": "generate.mjs",
+      "bytes": 1405,
+      "sha256": "b3c3750bb30fb1ce7993db1d2aaac686848f17ced38aa9c65c774484164221cb"
+    },
+    {
+      "path": "input/.gitattributes",
+      "bytes": 16,
+      "sha256": "e8de51f40e73a262bbd8959a4230e3dce0b2b15ad68a19888750b7fc26593cf3"
+    },
+    {
+      "path": "input/cli-reading-tour.archify.md",
+      "bytes": 6754,
+      "sha256": "5eec8481a740baec23a8898d6f4885315c5f327551aa156592d25afbf789275d"
+    },
+    {
+      "path": "input/frozen-page.json",
+      "bytes": 453813,
+      "sha256": "d5dac413ab85c44e2323c839818be42d73b9af66f6028b8f2a0446e30848a0fe"
+    },
+    {
+      "path": "input/source/LICENSE",
+      "bytes": 1071,
+      "sha256": "ab38918f782845f71ae56421e8cfc629b31a53701f8b5087eaa36788b6a4b37b"
+    },
+    {
+      "path": "input/source/manifest.json",
+      "bytes": 2801,
+      "sha256": "4f377b8aec60db32b2184131f97ac52a243a9266e18e940b6e6ec7c4c4784edb"
+    },
+    {
+      "path": "input/source/packages/cli/package.json",
+      "bytes": 1185,
+      "sha256": "32a3c1c1c0004e73a8eb6a8e9a66a7ba5a2a7563d31260e6564e48d1700c19b6"
+    },
+    {
+      "path": "input/source/packages/cli/src/index.ts",
+      "bytes": 6084,
+      "sha256": "eaedcca0d16b6b24e31139d70d574f3e600f0a4264e849d8b7ac8c047b747ae8"
+    },
+    {
+      "path": "input/source/packages/scanner/src/output/json.ts",
+      "bytes": 316,
+      "sha256": "d47cbb5586d044826920c6d9e026ddebc70b2283f02ce45a42a35c8fc24b5d10"
+    },
+    {
+      "path": "input/source/packages/visualizer/src/App.tsx",
+      "bytes": 5265,
+      "sha256": "5b212aa1cf0e6c2df7bcad10d3fd5aa4151a3cce3107a39329d0d5d775d411c2"
+    },
+    {
+      "path": "input/source/packages/visualizer/src/data/context.tsx",
+      "bytes": 1205,
+      "sha256": "623c43ae534749ab1a2a5b669fe8db956d540c8b4c79742c5d2dc4731d712fdd"
+    },
+    {
+      "path": "input/source/packages/visualizer/src/data/loader.ts",
+      "bytes": 1838,
+      "sha256": "86eda68d14a3b35b65e300c7a455684af5142ec1bda69dbf50f127b71d74f9ee"
+    },
+    {
+      "path": "input-provenance.json",
+      "bytes": 2448,
+      "sha256": "483ecfdc6488b3153e49988e9237e2a03582d65f0467e35919e26be6975d952a"
+    },
+    {
+      "path": "screenshots/base-hover.png",
+      "bytes": 297014,
+      "sha256": "55780c69f811e97483bc1eb57e133d771798af8893c19c3b1c83a8c7a4c3da38"
+    },
+    {
+      "path": "screenshots/base-keyboard.png",
+      "bytes": 224411,
+      "sha256": "7ad92338f6a92f308f2f8ff2d9fdeae3e20409a5f542e06d4b5b5baffb2040f5"
+    },
+    {
+      "path": "screenshots/base-response-focus.png",
+      "bytes": 296464,
+      "sha256": "7ef88073970028983df3cb2d8142e71653d58ab77246e7e6b223f754da3e15d3"
+    },
+    {
+      "path": "screenshots/candidate-enter-viewer.png",
+      "bytes": 180979,
+      "sha256": "7eefcfb975016eaf11c4d17581715a70c50c1846421cd2a2e20ac9c86fc99dcd"
+    },
+    {
+      "path": "screenshots/candidate-response-focus.png",
+      "bytes": 296459,
+      "sha256": "bfa965b29cef94b871b6df29795427d2bdbae62ebd951d04ee9268bc3d278de5"
+    },
+    {
+      "path": "screenshots/capture.json",
+      "bytes": 21938,
+      "sha256": "f505fdfcb346ba0eab13d5d16e7efd091d657fe07e4133e0876ab5879ca01d89"
+    }
+  ],
+  "environmentCleanup": "Temporary dependency links unlinked; actual shared dependency directories preserved. No lock changes or global install."
+}

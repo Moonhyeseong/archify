@@ -1,0 +1,59 @@
+{
+  "classification": "fixed-upstream-source-reading; not an upstream program run",
+  "repository": "https://github.com/kyooosukedn/walkthrough",
+  "commit": "a373526c92bd1d4c3953370b9a57f19e4fb15d08",
+  "license": "MIT",
+  "upstreamExecuted": false,
+  "archifyBase": "3f95f0349c8276db71509ca239461b6fe9d00f9f",
+  "files": [
+    {
+      "path": "LICENSE",
+      "local": "source/LICENSE",
+      "url": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/LICENSE",
+      "bytes": 1071,
+      "sha256": "ab38918f782845f71ae56421e8cfc629b31a53701f8b5087eaa36788b6a4b37b"
+    },
+    {
+      "path": "packages/cli/package.json",
+      "local": "source/packages/cli/package.json",
+      "url": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/cli/package.json",
+      "bytes": 1185,
+      "sha256": "32a3c1c1c0004e73a8eb6a8e9a66a7ba5a2a7563d31260e6564e48d1700c19b6"
+    },
+    {
+      "path": "packages/cli/src/index.ts",
+      "local": "source/packages/cli/src/index.ts",
+      "url": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/cli/src/index.ts",
+      "bytes": 6084,
+      "sha256": "eaedcca0d16b6b24e31139d70d574f3e600f0a4264e849d8b7ac8c047b747ae8"
+    },
+    {
+      "path": "packages/scanner/src/output/json.ts",
+      "local": "source/packages/scanner/src/output/json.ts",
+      "url": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/scanner/src/output/json.ts",
+      "bytes": 316,
+      "sha256": "d47cbb5586d044826920c6d9e026ddebc70b2283f02ce45a42a35c8fc24b5d10"
+    },
+    {
+      "path": "packages/visualizer/src/data/loader.ts",
+      "local": "source/packages/visualizer/src/data/loader.ts",
+      "url": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/visualizer/src/data/loader.ts",
+      "bytes": 1838,
+      "sha256": "86eda68d14a3b35b65e300c7a455684af5142ec1bda69dbf50f127b71d74f9ee"
+    },
+    {
+      "path": "packages/visualizer/src/data/context.tsx",
+      "local": "source/packages/visualizer/src/data/context.tsx",
+      "url": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/visualizer/src/data/context.tsx",
+      "bytes": 1205,
+      "sha256": "623c43ae534749ab1a2a5b669fe8db956d540c8b4c79742c5d2dc4731d712fdd"
+    },
+    {
+      "path": "packages/visualizer/src/App.tsx",
+      "local": "source/packages/visualizer/src/App.tsx",
+      "url": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/visualizer/src/App.tsx",
+      "bytes": 5265,
+      "sha256": "5b212aa1cf0e6c2df7bcad10d3fd5aa4151a3cce3107a39329d0d5d775d411c2"
+    }
+  ]
+}

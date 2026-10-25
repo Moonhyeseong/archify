@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {unpackPageBundle} from '../../archify/explainer/page-bundle.mjs';
+import {renderExplainer} from '../../archify/explainer/render.mjs';
+import {prepareExplainerDiagrams} from '../../archify/explainer/diagrams.mjs';
+const [out,reuse,...extra]=process.argv.slice(2);
+if(!out||extra.length)throw Error('Usage: node generate.mjs <fresh-output-dir> [frozen-new-base-bundle.json]');
+const file=reuse||new URL('./input/frozen-page.json',import.meta.url);
+const page=unpackPageBundle(JSON.parse(fs.readFileSync(file,'utf8')));
+if(!reuse)page.preparedDiagrams=await prepareExplainerDiagrams(page.document,{quality:'showcase',baseDir:process.cwd()});
+const html=renderExplainer(page.document,{...page,preparedBundle:page});
+const frozen=JSON.parse(html.match(/<script type="application\/json" id="archify-explainer-prepared">([\s\S]*?)<\/script>/)[1]);
+fs.mkdirSync(out);
+fs.writeFileSync(path.join(out,'tour.html'),html,{flag:'wx'});
+fs.writeFileSync(path.join(out,'prepared-page.json'),JSON.stringify(frozen)+'\n',{flag:'wx'});
+const sourceOnlyNodeCount=page.document.panels.flatMap(panel=>panel.blocks).filter(block=>block.type==='diagram').reduce((n,block)=>n+Object.keys(block.nodeSources||{}).filter(id=>!Object.hasOwn(block.nodeBlocks||{},id)).length,0);
+console.log(JSON.stringify({ok:true,sourceOnlyNodeCount,reusedNewBaseResources:!!reuse}));
