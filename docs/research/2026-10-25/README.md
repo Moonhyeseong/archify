@@ -14,7 +14,7 @@
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
-[离线图片浏览页](gallery/README.md)：当前固定快照含 33 项的 33 张原始 PNG，可按分组和关键词筛选、展开完整图；下载 `gallery/index.html` 后可独立打开。固定提交/图片摘要保留在 manifest，桌面与 390px 实际检查见浏览页说明。四个新增项及 DBML/Migration 更新已纳入，历史快照按固定提交保留。
+[离线图片浏览页](gallery/README.md)：当前固定快照含 33 项的 33 张原始 PNG，可按分组和关键词筛选、展开完整图；下载 `gallery/index.html` 后可独立打开。固定提交/图片摘要保留在 manifest，桌面与 390px 实际检查见浏览页说明。四个新增项及 DBML/Migration 更新已纳入，历史快照按固定提交保留。该固定快照的State仍是旧synthetic图；最新官方fixture实导出图片见下表独立分支。
 
 | 实验与远程分支 | 具体价值 | 发布 revision | 实际图片 | 验证与限制 |
 | --- | --- | --- | --- | --- |
@@ -27,7 +27,7 @@
 | [Payload delta](https://github.com/tt-a1i/archify/tree/codex/lab-payload-delta/experiments/payload-delta) | 借鉴 PR Lens；把明确提供的 JSON 样本差异放在调用旁，区分 null、missing、类型和数组身份 | `823e8705` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-payload-delta/experiments/payload-delta/screenshots/review.png) | 10 tests；render/finalize 通过，单独 Explainer browser 通过；保留一条段落长度建议，不推断 schema 兼容性 |
 | [Decision thread](https://github.com/tt-a1i/archify/tree/codex/lab-decision-thread/experiments/decision-thread) | 保留异议、撤回与单方决定；决定不会抹掉尚未解决的异议 | `bdbdf9a9` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-decision-thread/experiments/decision-thread/screenshots/sequence.png) | 8 tests；两种产物四阶段通过；原创虚构对话，颜色图例已修正，不推断群体共识 |
 | [Migration plan](https://github.com/tt-a1i/archify/tree/codex/lab-migration-plan/experiments/migration-plan) | 阅读 pg-schema-diff 已有计划中的顺序、timeout 配置与原始 hazard | `b9fe3b9b` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-migration-plan/experiments/migration-plan/screenshots/migration-plan.png) | 14 tests；Workflow仅render，Explainer finalize通过/browser未请求；无 SQL/数据库执行，synthetic；新提交仅澄清文案 |
-| [State contract](https://github.com/tt-a1i/archify/tree/codex/lab-state-contract/experiments/state-contract) | 把 robot3-viz flat 数据和显式 sidecar 转为 Lifecycle 与状态×事件声明矩阵 | `cc8c75bc` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-state-contract/experiments/state-contract/screenshots/state-contract.png) | 40 tests；两种产物四阶段通过；rich 语义拒绝，无机器执行，synthetic |
+| [State contract](https://github.com/tt-a1i/archify/tree/codex/lab-state-contract/experiments/state-contract) | 固定官方机器定义实导出，再核两个观察到的toggle声明 | `f7269e09` | [官方fixture实导出](https://github.com/tt-a1i/archify/blob/codex/lab-state-contract/experiments/state-contract/measured/screenshots/explainer-overview.png) | 补证基线67f；40focused、原版getDAG实导出2状态2边、两页四阶段通过；2declared/0undeclared仅观察事件集；没有运行事件/回调；旧synthetic/rich拒绝记录保留 |
 | [Finder canvas matches](https://github.com/tt-a1i/archify/tree/codex/lab-finder-highlights/experiments/finder-highlights) | 输入查询后，列表与画布同步显示匹配节点，保留既有选择与视图 | `94c165ee` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-finder-highlights/experiments/finder-highlights/screenshots/candidate-api-light.png) | 共享 Viewer；作者最终 browser 60/60、core 19/19、generated/ZIP 一致；独立 browser 17/17；有固定输入浅/深色前后图，无效率计时 |
 | [CI conditions](https://github.com/tt-a1i/archify/tree/codex/lab-ci-conditions/experiments/ci-conditions) | 固定真实 workflow 的 needs、原始 if、隐式 status 门槛与未知矩阵 | `0ec0b834` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-ci-conditions/experiments/ci-conditions/screenshots/overview.png) | 10 tests；三份产物 finalize 四阶段通过；没有运行 CI 或预测 job 结果 |
 | [Plan actions](https://github.com/tt-a1i/archify/tree/codex/lab-plan-actions/experiments/plan-actions) | 分别看两种 replacement 顺序，保留 unknown/sensitive/null 路径与 deferred/complete | `729d3a03` | [官方完整fixture](https://github.com/tt-a1i/archify/blob/codex/lab-plan-actions/experiments/plan-actions/upstream-example/screenshots/explainer.png) | 原16tests复用；官方1资源delete→create完整输入通过，Workflow render/Explainer三阶段通过；before/after值不入输出模型，native字节扫描保留一处静态注释普通词重合；未执行Terraform |
@@ -98,12 +98,16 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 2026-10-25 16:35的[GitHub状态与查重](github-status-1635.md)确认main/dev未再变；dev精确head CI成功，main测试完成但部署仍等待。新draft #1103与#1102的已有工作已列入下一轮查重，不把它们当成dev已合入能力。
 
+2026-10-25 16:50–16:53再次核main/dev未变；PR #1102 head `98efbfcb`已转非draft但仍OPEN未合入，精确head Actions CI成功、CodeRabbit尚pending。相对先前`3b5b16c0`只改n8n图JSON/HTML，不与当前State/Recipe补证源码交叉。
+
+2026-10-25 17:02:57核State contract新head `f7269e09`：已纳固定dev67f，远端head一致，Actions runs/check-runs均为0；本地真实导出与两产物四阶段通过分开记账。
+
 ## 正在推进
 
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
 | 新一轮发现 | 代码导航、图阅读、差异比较 | 第5轮报告完成：按实际源码/fixture与PR1102、1103排重，本轮0新增实现；没有独立收益证据的机制保留研究 |
-| 既有实验真实输出 | Recipe stages / State contract | 评估固定官方工具的隔离导出；当前历史synthetic身份保持，未预填成功 |
+| 既有实验真实输出 | Recipe stages / State contract | State官方fixture实导出已推f7269e09；Recipe的官方test有效输入dump接受、自然完整示例拒绝，产物/图片收尾中；历史synthetic不改称实跑 |
 | 新发现修复 | Explainer复制结果与手工恢复 | Clipboard outcome已推送68866954，来源、基线/候选和实际截图见第33项 |
 | 浏览页更新 | 新增4项及DBML/Migration更新 | 33项快照已完成静态独立重建与浅深色/390px真实浏览器检查，旧版证据继续绑定原提交 |
 | 既有实验补证据 | DBML与Plan actions | DBML已补上primary key同义写法接受；原拒绝记录保留；完整plan fixture转换证据不变 |
