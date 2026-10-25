@@ -78,7 +78,9 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
-| 后续发现 | 组件身份/SBOM、mutation testing结果阅读 | 两路固定来源调研，先核真实fixture与新增价值，不按星数筛选 |
+| 后续发现 | 静态代码路径、语法解析阅读、增量构建解释 | 三路固定来源调研，先核真实fixture与新增价值，不按星数筛选 |
+| 审阅入口 | 27项真实图片的离线浏览页 | 正在检查搜索、分组、完整图片与窄屏阅读 |
+| 测试证据候选 | Mutation的Survived与NoCoverage | 已核固定report与字段合同；继续对照原viewer，尚未决定增加reader |
 | 保留候选 | Notebook别名与派生值的不同stale预期 | 6项目只读报告完成；目前无实际notebook交接任务，暂不扩成converter |
 
 ## 一手调研报告
@@ -112,6 +114,7 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 模型检查反例、位置与循环闭合 | [Model witness small tools](scouts/model-witness-smalltools.md) |
 | SQL查询计划与统计口径 | [Query plan small tools](scouts/query-plan-smalltools.md) |
 | Notebook别名、物化值与stale证据 | [Notebook evidence small tools](scouts/notebook-evidence-smalltools.md) |
+| 组件身份、包坐标与出现位置 | [Component identity small tools](scouts/component-identity-smalltools.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
 报告中的上游声明、局部源码核实、计划中的实验和已经执行的结果分别标注。未推荐方向也保留原因，避免反复研究；没有把上游宣传、星数或作者截图当作 Archify 的效果证明。
