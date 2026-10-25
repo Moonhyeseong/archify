@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "kind": "derived root browser capture summary, not delivery/finalize receipts",
+  "pathBase": "experiments/benchmark-reading",
+  "tool": "root Ego Chromium using existing space",
+  "artifact": {
+    "path": "explainer.html",
+    "bytes": 179658,
+    "sha256": "5fef64b839c282f7f7059e3e85fecdbf01a3e75373e009972d3f68a5e2b02181"
+  },
+  "inputs": [
+    {
+      "path": "upstream/cmd/benchstat/testdata/old.txt",
+      "bytes": 1397,
+      "sha256": "db60f533bc3496b52bbe654c7b4acac8c0b5da141bc5f0cbf1d44978954eee00"
+    },
+    {
+      "path": "upstream/cmd/benchstat/testdata/new.txt",
+      "bytes": 1598,
+      "sha256": "0200be7b5bc8cb0e5edf22051d41895385fc248145db25fb7e646dfed8089ea0"
+    },
+    {
+      "path": "upstream/cmd/benchstat/testdata/csvOldNew.stdout",
+      "bytes": 357,
+      "sha256": "935a065791e15d41e4ceb1b10e5766af9891dc3cd20e11eebcbb5d61fee85fc6"
+    }
+  ],
+  "images": [
+    {
+      "path": "screenshots/overview.png",
+      "bytes": 236850,
+      "sha256": "5d74a6d1693e0677f64c4b59c7b1d535a6815db4834b82fa9748dfc96c124771",
+      "pngDimensions": {
+        "width": 1440,
+        "height": 1100
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "fullPage": false,
+      "artifact": "explainer.html",
+      "theme": "light",
+      "rootVisuallyInspected": true
+    },
+    {
+      "path": "screenshots/full.png",
+      "bytes": 365726,
+      "sha256": "5c3ba9d152617d9232f593e879dc8a99c0737ca16c707b618dc9f6f196a01dd9",
+      "pngDimensions": {
+        "width": 1440,
+        "height": 2043
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "fullPage": true,
+      "artifact": "explainer.html",
+      "theme": "light",
+      "rootVisuallyInspected": true
+    },
+    {
+      "path": "screenshots/source-card.png",
+      "bytes": 248043,
+      "sha256": "153130988be0d7d526c9b6c1aa6af1be498774889ee6d45968f2857b92d233e3",
+      "pngDimensions": {
+        "width": 1440,
+        "height": 1100
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "fullPage": false,
+      "artifact": "explainer.html",
+      "theme": "light",
+      "rootVisuallyInspected": true
+    }
+  ],
+  "rootObservation": {
+    "path": "screenshots/browser-checks.json",
+    "bytes": 3646,
+    "sha256": "18a7dc878e3092bd0282c0267e2b115453efc9bdcce8466fca0927ea0a9dfbe8",
+    "provenance": "exact bytes copied from root checks.json; no private paths found"
+  },
+  "observations": [
+    "overview displays four median bars and full two-row CI/p/n/tilde table together",
+    "DOM retains four point labels, microseconds/op unit and all forty original ns/op values",
+    "pointer hover on source-oracle displays metadata-only fixed GitHub CSV URL; Escape closed the card; external site not opened"
+  ],
+  "limits": [
+    "actual browser checks cover these observed content/source-card actions, not the full Explainer browser gate",
+    "finalize browser-check remains not-run; no screen-reader, human or learning-benefit acceptance",
+    "source card is metadata, not code excerpt or upstream statistical execution",
+    "no preset/motion state claim beyond the recorded light theme/viewport",
+    "chart label in root DOM record is null; no accessible-name or AT claim"
+  ]
+}

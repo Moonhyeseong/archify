@@ -1,0 +1,58 @@
+{
+  "repository": "https://github.com/golang/perf",
+  "revision": "be2c69fb417e05de5fec05c732911f4c5f172606",
+  "license": "BSD-3-Clause; complete LICENSE retained",
+  "fixtureNature": "committed example data selected by upstream for significant/nonsignificant cases; not a new benchmark run",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1453,
+      "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad"
+    },
+    {
+      "path": "cmd/benchstat/testdata/old.txt",
+      "bytes": 1397,
+      "sha256": "db60f533bc3496b52bbe654c7b4acac8c0b5da141bc5f0cbf1d44978954eee00"
+    },
+    {
+      "path": "cmd/benchstat/testdata/new.txt",
+      "bytes": 1598,
+      "sha256": "0200be7b5bc8cb0e5edf22051d41895385fc248145db25fb7e646dfed8089ea0"
+    },
+    {
+      "path": "cmd/benchstat/testdata/csvOldNew.stdout",
+      "bytes": 357,
+      "sha256": "935a065791e15d41e4ceb1b10e5766af9891dc3cd20e11eebcbb5d61fee85fc6"
+    },
+    {
+      "path": "cmd/benchstat/main.go",
+      "bytes": 23342,
+      "sha256": "b43e6f48691e2b298afe8a8ebe79d70d179522192c4bb39d0d372ccd6db213c1"
+    },
+    {
+      "path": "cmd/benchstat/main_test.go",
+      "bytes": 3564,
+      "sha256": "81504743cbcefba2cceaa669e935363fefddd3466be76e1a263ecac4641d37ed"
+    },
+    {
+      "path": "cmd/benchstat/internal/benchtab/builder.go",
+      "bytes": 11261,
+      "sha256": "614d23fa3883dcfe2e6fee6e4e0909ad0d31a7c29bcb149dbc811bc7d68ffe48"
+    },
+    {
+      "path": "cmd/benchstat/internal/benchtab/table.go",
+      "bytes": 11390,
+      "sha256": "b25024c07bfcda0dbbbafbae8e130bde1ff5e4ed9d75e6d234a6fe48fdb31603"
+    },
+    {
+      "path": "benchmath/anone.go",
+      "bytes": 4011,
+      "sha256": "822f6c6a58dff0e8b0dad23f75697f0f0508fdcb8014cb1d0740492b9c255b2c"
+    },
+    {
+      "path": "benchmath/sample.go",
+      "bytes": 5984,
+      "sha256": "585a63e82e65122669fa9621ade061f18d29b90b9c2cc4ecf45478f7db2bf8c5"
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "kind": "derived portable evidence summary, not original receipts",
+  "base": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "sourceManifest": "upstream/source-manifest.json",
+  "observation": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 experiments/benchmark-reading/observe.py",
+    "exitCode": 0,
+    "rawStdout": {
+      "bytes": 15068,
+      "sha256": "76c1736c280d654851eacafa899076108451a72d77a64558d9e66eb145bd7631"
+    },
+    "scope": "descriptive centers/record counts/unit conversion, no statistics or benchmark run"
+  },
+  "audit": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 experiments/benchmark-reading/audit.py",
+    "exitCode": 0,
+    "checks": 10,
+    "rawStdout": {
+      "bytes": 784,
+      "sha256": "bd65e05764f97347c58a5f944d0f569ff1efaf62c113e3baf66e6a254a83cedb"
+    }
+  },
+  "publicRender": {
+    "command": "node archify/bin/archify.mjs render explainer experiments/benchmark-reading/explainer.archify.md <temporary-output.html>",
+    "exitCode": 0,
+    "rawStdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "firstDelivery": {
+    "status": "pass",
+    "gates": {
+      "validate": "pass",
+      "deliver": "pass",
+      "check": "pass",
+      "browser-check": "not-run"
+    },
+    "rawStdout": {
+      "bytes": 1884,
+      "sha256": "34949b24f6d843d976a11e2c420e1b163a5ea60621c18bb24de9965a8ada982f"
+    },
+    "warningCodes": [
+      "explainer/writing-qualification"
+    ],
+    "artifact": {
+      "sha256": "362c48b2bed182a6677dfa2349903c316ae70e9ecd44d2f0d4f2f235bde8532d",
+      "bytes": 180612
+    },
+    "specification": {
+      "sha256": "367349a6722f17b05b9fa60d6f35510c29ee0cd5174ecd55cdd268a55a8ea24f",
+      "bytes": 4278
+    },
+    "change": "one prose wording qualification removed; numeric data unchanged",
+    "preserved": "complete first input/artifact/receipts outside checkout"
+  },
+  "finalize": {
+    "rawStdout": {
+      "bytes": 1313,
+      "sha256": "49b427c9dc7c27fdad68a02e24581b0b66f974c629a48b530e1950a8fc5b5a3b"
+    },
+    "status": "pass",
+    "gates": {
+      "validate": "pass",
+      "deliver": "pass",
+      "check": "pass",
+      "browser-check": "not-run"
+    },
+    "artifact": {
+      "sha256": "5fef64b839c282f7f7059e3e85fecdbf01a3e75373e009972d3f68a5e2b02181",
+      "bytes": 179658
+    },
+    "specification": {
+      "sha256": "f66dcca31852e9ef1e78ffd9f85d07265f15a7a0ff6dafba1b555cbfe3f9453b",
+      "bytes": 4278
+    },
+    "diagnosticCount": 0,
+    "updateNoticeRequired": false,
+    "visualReview": "not-requested"
+  },
+  "visualEvidence": {
+    "kind": "root actual Ego Chromium checks and agent visual inspection; separate from finalize",
+    "captureSummary": "screenshots/capture-summary.json",
+    "captureSummarySHA256": "098f33864255eb9e7c55da7dd1fdb89c7c99a626b65c15041ed35863101d981c",
+    "rootRawObservation": "screenshots/browser-checks.json",
+    "rootRawObservationSHA256": "18a7dc878e3092bd0282c0267e2b115453efc9bdcce8466fca0927ea0a9dfbe8",
+    "images": 3,
+    "rootVisuallyInspected": true,
+    "scope": "four median labels/unit, full two-row CI/p/n/tilde, forty saved values, metadata-only fixed oracle citation hover/Escape",
+    "limits": "not full Explainer browser gate/AT or human acceptance; no upstream statistics or benchmark rerun"
+  },
+  "rawReceipts": "outside checkout; private paths omitted in this explicitly derived summary",
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 7338,
+      "sha256": "371f0b6965b7badbb2417b09bd503afc5796540c8da6f6973b68032573b7d515"
+    },
+    {
+      "path": "audit-result.json",
+      "bytes": 784,
+      "sha256": "bd65e05764f97347c58a5f944d0f569ff1efaf62c113e3baf66e6a254a83cedb"
+    },
+    {
+      "path": "audit.py",
+      "bytes": 4017,
+      "sha256": "18d9b564eff8b4492e2fb3224c5d57d224b23586f2bd094d97e32e489197abc4"
+    },
+    {
+      "path": "explainer.archify.md",
+      "bytes": 4278,
+      "sha256": "f66dcca31852e9ef1e78ffd9f85d07265f15a7a0ff6dafba1b555cbfe3f9453b"
+    },
+    {
+      "path": "explainer.html",
+      "bytes": 179658,
+      "sha256": "5fef64b839c282f7f7059e3e85fecdbf01a3e75373e009972d3f68a5e2b02181"
+    },
+    {
+      "path": "medians.csv",
+      "bytes": 49,
+      "sha256": "bdee469fbd35f0b0a65e54e484b4b57614f0fd95dbc80d32a601e131722edf1f"
+    },
+    {
+      "path": "observation.json",
+      "bytes": 15068,
+      "sha256": "76c1736c280d654851eacafa899076108451a72d77a64558d9e66eb145bd7631"
+    },
+    {
+      "path": "observe.py",
+      "bytes": 4217,
+      "sha256": "c7b8686f6457cf39a797cb06c8ee657b621f2aae5c27e4039246f36e0acae62b"
+    },
+    {
+      "path": "screenshots/browser-checks.json",
+      "bytes": 3646,
+      "sha256": "18a7dc878e3092bd0282c0267e2b115453efc9bdcce8466fca0927ea0a9dfbe8"
+    },
+    {
+      "path": "screenshots/capture-summary.json",
+      "bytes": 3309,
+      "sha256": "098f33864255eb9e7c55da7dd1fdb89c7c99a626b65c15041ed35863101d981c"
+    },
+    {
+      "path": "screenshots/full.png",
+      "bytes": 365726,
+      "sha256": "5c3ba9d152617d9232f593e879dc8a99c0737ca16c707b618dc9f6f196a01dd9"
+    },
+    {
+      "path": "screenshots/overview.png",
+      "bytes": 236850,
+      "sha256": "5d74a6d1693e0677f64c4b59c7b1d535a6815db4834b82fa9748dfc96c124771"
+    },
+    {
+      "path": "screenshots/source-card.png",
+      "bytes": 248043,
+      "sha256": "153130988be0d7d526c9b6c1aa6af1be498774889ee6d45968f2857b92d233e3"
+    },
+    {
+      "path": "upstream/LICENSE",
+      "bytes": 1453,
+      "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad"
+    },
+    {
+      "path": "upstream/benchmath/anone.go",
+      "bytes": 4011,
+      "sha256": "822f6c6a58dff0e8b0dad23f75697f0f0508fdcb8014cb1d0740492b9c255b2c"
+    },
+    {
+      "path": "upstream/benchmath/sample.go",
+      "bytes": 5984,
+      "sha256": "585a63e82e65122669fa9621ade061f18d29b90b9c2cc4ecf45478f7db2bf8c5"
+    },
+    {
+      "path": "upstream/cmd/benchstat/internal/benchtab/builder.go",
+      "bytes": 11261,
+      "sha256": "614d23fa3883dcfe2e6fee6e4e0909ad0d31a7c29bcb149dbc811bc7d68ffe48"
+    },
+    {
+      "path": "upstream/cmd/benchstat/internal/benchtab/table.go",
+      "bytes": 11390,
+      "sha256": "b25024c07bfcda0dbbbafbae8e130bde1ff5e4ed9d75e6d234a6fe48fdb31603"
+    },
+    {
+      "path": "upstream/cmd/benchstat/main.go",
+      "bytes": 23342,
+      "sha256": "b43e6f48691e2b298afe8a8ebe79d70d179522192c4bb39d0d372ccd6db213c1"
+    },
+    {
+      "path": "upstream/cmd/benchstat/main_test.go",
+      "bytes": 3564,
+      "sha256": "81504743cbcefba2cceaa669e935363fefddd3466be76e1a263ecac4641d37ed"
+    },
+    {
+      "path": "upstream/cmd/benchstat/testdata/csvOldNew.stdout",
+      "bytes": 357,
+      "sha256": "935a065791e15d41e4ceb1b10e5766af9891dc3cd20e11eebcbb5d61fee85fc6"
+    },
+    {
+      "path": "upstream/cmd/benchstat/testdata/new.txt",
+      "bytes": 1598,
+      "sha256": "0200be7b5bc8cb0e5edf22051d41895385fc248145db25fb7e646dfed8089ea0"
+    },
+    {
+      "path": "upstream/cmd/benchstat/testdata/old.txt",
+      "bytes": 1397,
+      "sha256": "db60f533bc3496b52bbe654c7b4acac8c0b5da141bc5f0cbf1d44978954eee00"
+    },
+    {
+      "path": "upstream/source-manifest.json",
+      "bytes": 1936,
+      "sha256": "ceecbc5457369cd76a687fbac991ddef5ff4ac9f84eae7e1ccbc2461bb692513"
+    }
+  ]
+}

@@ -1,0 +1,508 @@
+{
+  "kind": "original stdlib fixed-input descriptive observation; no benchmark or benchstat execution",
+  "files": [
+    {
+      "path": "upstream/cmd/benchstat/testdata/old.txt",
+      "bytes": 1397,
+      "sha256": "db60f533bc3496b52bbe654c7b4acac8c0b5da141bc5f0cbf1d44978954eee00"
+    },
+    {
+      "path": "upstream/cmd/benchstat/testdata/new.txt",
+      "bytes": 1598,
+      "sha256": "0200be7b5bc8cb0e5edf22051d41895385fc248145db25fb7e646dfed8089ea0"
+    },
+    {
+      "path": "upstream/cmd/benchstat/testdata/csvOldNew.stdout",
+      "bytes": 357,
+      "sha256": "935a065791e15d41e4ceb1b10e5766af9891dc3cd20e11eebcbb5d61fee85fc6"
+    }
+  ],
+  "rawObservations": [
+    {
+      "sourceFile": "old.txt",
+      "line": 4,
+      "format": "json",
+      "benchmark": "BenchmarkEncode/format=json-48",
+      "iterations": 690848,
+      "nsPerOp": 1726,
+      "rawResultLine": "BenchmarkEncode/format=json-48         \t  690848\t      1726 ns/op"
+    },
+    {
+      "sourceFile": "old.txt",
+      "line": 5,
+      "format": "json",
+      "benchmark": "BenchmarkEncode/format=json-48",
+      "iterations": 684861,
+      "nsPerOp": 1723,
+      "rawResultLine": "BenchmarkEncode/format=json-48         \t  684861\t      1723 ns/op"
+    },
+    {
+      "sourceFile": "old.txt",
+      "line": 6,
+      "format": "json",
+      "benchmark": "BenchmarkEncode/format=json-48",
+      "iterations": 693285,
+      "nsPerOp": 1707,
+      "rawResultLine": "BenchmarkEncode/format=json-48         \t  693285\t      1707 ns/op"
+    },
+    {
+      "sourceFile": "old.txt",
+      "line": 7,
+      "format": "json",
+      "benchmark": "BenchmarkEncode/format=json-48",
+      "iterations": 677692,
+      "nsPerOp": 1707,
+      "rawResultLine": "BenchmarkEncode/format=json-48         \t  677692\t      1707 ns/op"
+    },
+    {
+      "sourceFile": "old.txt",
+      "line": 8,
+      "format": "json",
+      "benchmark": "BenchmarkEncode/format=json-48",
+      "iterations": 692130,
+      "nsPerOp": 1713,
+      "rawResultLine": "BenchmarkEncode/format=json-48         \t  692130\t      1713 ns/op"
+    },
+    {
+      "sourceFile": "old.txt",
+      "line": 9,
+      "format": "json",
+      "benchmark": "BenchmarkEncode/format=json-48",
+      "iterations": 684164,
+      "nsPerOp": 1729,
+      "rawResultLine": "BenchmarkEncode/format=json-48         \t  684164\t      1729 ns/op"
+    },
+    {
+      "sourceFile": "old.txt",
+      "line": 10,
+      "format": "json",
+      "benchmark": "BenchmarkEncode/format=json-48",
+      "iterations": 682500,
+      "nsPerOp": 1736,
+      "rawResultLine": "BenchmarkEncode/format=json-48         \t  682500\t      1736 ns/op"
+    },
+    {
+      "sourceFile": "old.txt",
+      "line": 11,
+      "format": "json",
+      "benchmark": "BenchmarkEncode/format=json-48",
+      "iterations": 677509,
+      "nsPerOp": 1707,
+      "rawResultLine": "BenchmarkEncode/format=json-48         \t  677509\t      1707 ns/op"
+    },
+    {
+      "sourceFile": "old.txt",
+      "line": 12,
+      "format": "json",
+      "benchmark": "BenchmarkEncode/format=json-48",
+      "iterations": 687295,
+      "nsPerOp": 1705,
+      "rawResultLine": "BenchmarkEncode/format=json-48         \t  687295\t      1705 ns/op"
+    },
+    {
+      "sourceFile": "old.txt",
+      "line": 13,
+      "format": "json",
+      "benchmark": "BenchmarkEncode/format=json-48",
+      "iterations": 695533,
+      "nsPerOp": 1774,
+      "rawResultLine": "BenchmarkEncode/format=json-48         \t  695533\t      1774 ns/op"
+    },
+    {
+      "sourceFile": "old.txt",
+      "line": 14,
+      "format": "gob",
+      "benchmark": "BenchmarkEncode/format=gob-48",
+      "iterations": 372699,
+      "nsPerOp": 3069,
+      "rawResultLine": "BenchmarkEncode/format=gob-48          \t  372699\t      3069 ns/op"
+    },
+    {
+      "sourceFile": "old.txt",
+      "line": 15,
+      "format": "gob",
+      "benchmark": "BenchmarkEncode/format=gob-48",
+      "iterations": 394740,
+      "nsPerOp": 3075,
+      "rawResultLine": "BenchmarkEncode/format=gob-48          \t  394740\t      3075 ns/op"
+    },
+    {
+      "sourceFile": "old.txt",
+      "line": 16,
+      "format": "gob",
+      "benchmark": "BenchmarkEncode/format=gob-48",
+      "iterations": 391335,
+      "nsPerOp": 3069,
+      "rawResultLine": "BenchmarkEncode/format=gob-48          \t  391335\t      3069 ns/op"
+    },
+    {
+      "sourceFile": "old.txt",
+      "line": 17,
+      "format": "gob",
+      "benchmark": "BenchmarkEncode/format=gob-48",
+      "iterations": 383588,
+      "nsPerOp": 3067,
+      "rawResultLine": "BenchmarkEncode/format=gob-48          \t  383588\t      3067 ns/op"
+    },
+    {
+      "sourceFile": "old.txt",
+      "line": 18,
+      "format": "gob",
+      "benchmark": "BenchmarkEncode/format=gob-48",
+      "iterations": 385885,
+      "nsPerOp": 3207,
+      "rawResultLine": "BenchmarkEncode/format=gob-48          \t  385885\t      3207 ns/op"
+    },
+    {
+      "sourceFile": "old.txt",
+      "line": 19,
+      "format": "gob",
+      "benchmark": "BenchmarkEncode/format=gob-48",
+      "iterations": 389970,
+      "nsPerOp": 3064,
+      "rawResultLine": "BenchmarkEncode/format=gob-48          \t  389970\t      3064 ns/op"
+    },
+    {
+      "sourceFile": "old.txt",
+      "line": 20,
+      "format": "gob",
+      "benchmark": "BenchmarkEncode/format=gob-48",
+      "iterations": 393361,
+      "nsPerOp": 3064,
+      "rawResultLine": "BenchmarkEncode/format=gob-48          \t  393361\t      3064 ns/op"
+    },
+    {
+      "sourceFile": "old.txt",
+      "line": 21,
+      "format": "gob",
+      "benchmark": "BenchmarkEncode/format=gob-48",
+      "iterations": 393882,
+      "nsPerOp": 3058,
+      "rawResultLine": "BenchmarkEncode/format=gob-48          \t  393882\t      3058 ns/op"
+    },
+    {
+      "sourceFile": "old.txt",
+      "line": 22,
+      "format": "gob",
+      "benchmark": "BenchmarkEncode/format=gob-48",
+      "iterations": 396171,
+      "nsPerOp": 3059,
+      "rawResultLine": "BenchmarkEncode/format=gob-48          \t  396171\t      3059 ns/op"
+    },
+    {
+      "sourceFile": "old.txt",
+      "line": 23,
+      "format": "gob",
+      "benchmark": "BenchmarkEncode/format=gob-48",
+      "iterations": 397812,
+      "nsPerOp": 3062,
+      "rawResultLine": "BenchmarkEncode/format=gob-48          \t  397812\t      3062 ns/op"
+    },
+    {
+      "sourceFile": "new.txt",
+      "line": 8,
+      "format": "json",
+      "benchmark": "BenchmarkEncode/format=json-48",
+      "iterations": 714387,
+      "nsPerOp": 1423,
+      "rawResultLine": "BenchmarkEncode/format=json-48         \t  714387\t      1423 ns/op"
+    },
+    {
+      "sourceFile": "new.txt",
+      "line": 9,
+      "format": "json",
+      "benchmark": "BenchmarkEncode/format=json-48",
+      "iterations": 845445,
+      "nsPerOp": 1416,
+      "rawResultLine": "BenchmarkEncode/format=json-48         \t  845445\t      1416 ns/op"
+    },
+    {
+      "sourceFile": "new.txt",
+      "line": 10,
+      "format": "json",
+      "benchmark": "BenchmarkEncode/format=json-48",
+      "iterations": 815714,
+      "nsPerOp": 1411,
+      "rawResultLine": "BenchmarkEncode/format=json-48         \t  815714\t      1411 ns/op"
+    },
+    {
+      "sourceFile": "new.txt",
+      "line": 11,
+      "format": "json",
+      "benchmark": "BenchmarkEncode/format=json-48",
+      "iterations": 828824,
+      "nsPerOp": 1413,
+      "rawResultLine": "BenchmarkEncode/format=json-48         \t  828824\t      1413 ns/op"
+    },
+    {
+      "sourceFile": "new.txt",
+      "line": 12,
+      "format": "json",
+      "benchmark": "BenchmarkEncode/format=json-48",
+      "iterations": 834070,
+      "nsPerOp": 1412,
+      "rawResultLine": "BenchmarkEncode/format=json-48         \t  834070\t      1412 ns/op"
+    },
+    {
+      "sourceFile": "new.txt",
+      "line": 13,
+      "format": "json",
+      "benchmark": "BenchmarkEncode/format=json-48",
+      "iterations": 828123,
+      "nsPerOp": 1426,
+      "rawResultLine": "BenchmarkEncode/format=json-48         \t  828123\t      1426 ns/op"
+    },
+    {
+      "sourceFile": "new.txt",
+      "line": 14,
+      "format": "json",
+      "benchmark": "BenchmarkEncode/format=json-48",
+      "iterations": 834493,
+      "nsPerOp": 1422,
+      "rawResultLine": "BenchmarkEncode/format=json-48         \t  834493\t      1422 ns/op"
+    },
+    {
+      "sourceFile": "new.txt",
+      "line": 15,
+      "format": "json",
+      "benchmark": "BenchmarkEncode/format=json-48",
+      "iterations": 838406,
+      "nsPerOp": 1424,
+      "rawResultLine": "BenchmarkEncode/format=json-48         \t  838406\t      1424 ns/op"
+    },
+    {
+      "sourceFile": "new.txt",
+      "line": 16,
+      "format": "json",
+      "benchmark": "BenchmarkEncode/format=json-48",
+      "iterations": 836227,
+      "nsPerOp": 1447,
+      "rawResultLine": "BenchmarkEncode/format=json-48         \t  836227\t      1447 ns/op"
+    },
+    {
+      "sourceFile": "new.txt",
+      "line": 17,
+      "format": "json",
+      "benchmark": "BenchmarkEncode/format=json-48",
+      "iterations": 830835,
+      "nsPerOp": 1425,
+      "rawResultLine": "BenchmarkEncode/format=json-48         \t  830835\t      1425 ns/op"
+    },
+    {
+      "sourceFile": "new.txt",
+      "line": 18,
+      "format": "gob",
+      "benchmark": "BenchmarkEncode/format=gob-48",
+      "iterations": 394441,
+      "nsPerOp": 3075,
+      "rawResultLine": "BenchmarkEncode/format=gob-48          \t  394441\t      3075 ns/op"
+    },
+    {
+      "sourceFile": "new.txt",
+      "line": 19,
+      "format": "gob",
+      "benchmark": "BenchmarkEncode/format=gob-48",
+      "iterations": 393207,
+      "nsPerOp": 3065,
+      "rawResultLine": "BenchmarkEncode/format=gob-48          \t  393207\t      3065 ns/op"
+    },
+    {
+      "sourceFile": "new.txt",
+      "line": 20,
+      "format": "gob",
+      "benchmark": "BenchmarkEncode/format=gob-48",
+      "iterations": 392374,
+      "nsPerOp": 3059,
+      "rawResultLine": "BenchmarkEncode/format=gob-48          \t  392374\t      3059 ns/op"
+    },
+    {
+      "sourceFile": "new.txt",
+      "line": 21,
+      "format": "gob",
+      "benchmark": "BenchmarkEncode/format=gob-48",
+      "iterations": 396037,
+      "nsPerOp": 3065,
+      "rawResultLine": "BenchmarkEncode/format=gob-48          \t  396037\t      3065 ns/op"
+    },
+    {
+      "sourceFile": "new.txt",
+      "line": 22,
+      "format": "gob",
+      "benchmark": "BenchmarkEncode/format=gob-48",
+      "iterations": 393255,
+      "nsPerOp": 3060,
+      "rawResultLine": "BenchmarkEncode/format=gob-48          \t  393255\t      3060 ns/op"
+    },
+    {
+      "sourceFile": "new.txt",
+      "line": 23,
+      "format": "gob",
+      "benchmark": "BenchmarkEncode/format=gob-48",
+      "iterations": 382629,
+      "nsPerOp": 3081,
+      "rawResultLine": "BenchmarkEncode/format=gob-48          \t  382629\t      3081 ns/op"
+    },
+    {
+      "sourceFile": "new.txt",
+      "line": 24,
+      "format": "gob",
+      "benchmark": "BenchmarkEncode/format=gob-48",
+      "iterations": 389558,
+      "nsPerOp": 3186,
+      "rawResultLine": "BenchmarkEncode/format=gob-48          \t  389558\t      3186 ns/op"
+    },
+    {
+      "sourceFile": "new.txt",
+      "line": 25,
+      "format": "gob",
+      "benchmark": "BenchmarkEncode/format=gob-48",
+      "iterations": 392668,
+      "nsPerOp": 3135,
+      "rawResultLine": "BenchmarkEncode/format=gob-48          \t  392668\t      3135 ns/op"
+    },
+    {
+      "sourceFile": "new.txt",
+      "line": 26,
+      "format": "gob",
+      "benchmark": "BenchmarkEncode/format=gob-48",
+      "iterations": 392313,
+      "nsPerOp": 3087,
+      "rawResultLine": "BenchmarkEncode/format=gob-48          \t  392313\t      3087 ns/op"
+    },
+    {
+      "sourceFile": "new.txt",
+      "line": 27,
+      "format": "gob",
+      "benchmark": "BenchmarkEncode/format=gob-48",
+      "iterations": 394274,
+      "nsPerOp": 3062,
+      "rawResultLine": "BenchmarkEncode/format=gob-48          \t  394274\t      3062 ns/op"
+    }
+  ],
+  "groups": [
+    {
+      "format": "json",
+      "descriptiveGroups": {
+        "old.txt": {
+          "records": 10,
+          "valuesNsPerOp": [
+            1726,
+            1723,
+            1707,
+            1707,
+            1713,
+            1729,
+            1736,
+            1707,
+            1705,
+            1774
+          ],
+          "medianNsPerOp": 1718.0,
+          "medianMicrosecondsPerOp": 1.718
+        },
+        "new.txt": {
+          "records": 10,
+          "valuesNsPerOp": [
+            1423,
+            1416,
+            1411,
+            1413,
+            1412,
+            1426,
+            1422,
+            1424,
+            1447,
+            1425
+          ],
+          "medianNsPerOp": 1422.5,
+          "medianMicrosecondsPerOp": 1.4225
+        }
+      },
+      "upstreamExpectedCSVRow": [
+        "Encode/format=json-48",
+        "1.7180000000000001e-06",
+        "1%",
+        "1.4225000000000001e-06",
+        "1%",
+        "-17.20%",
+        "p=0.000 n=10"
+      ],
+      "oracleSource": "committed csvOldNew.stdout, not generated this run"
+    },
+    {
+      "format": "gob",
+      "descriptiveGroups": {
+        "old.txt": {
+          "records": 10,
+          "valuesNsPerOp": [
+            3069,
+            3075,
+            3069,
+            3067,
+            3207,
+            3064,
+            3064,
+            3058,
+            3059,
+            3062
+          ],
+          "medianNsPerOp": 3065.5,
+          "medianMicrosecondsPerOp": 3.0655
+        },
+        "new.txt": {
+          "records": 10,
+          "valuesNsPerOp": [
+            3075,
+            3065,
+            3059,
+            3065,
+            3060,
+            3081,
+            3186,
+            3135,
+            3087,
+            3062
+          ],
+          "medianNsPerOp": 3070.0,
+          "medianMicrosecondsPerOp": 3.07
+        }
+      },
+      "upstreamExpectedCSVRow": [
+        "Encode/format=gob-48",
+        "3.0655e-06",
+        "0%",
+        "3.0700000000000003e-06",
+        "2%",
+        "~",
+        "p=0.446 n=10"
+      ],
+      "oracleSource": "committed csvOldNew.stdout, not generated this run"
+    }
+  ],
+  "upstreamGeomeanCSVRow": [
+    "geomean",
+    "2.294891936453654e-06",
+    "",
+    "2.089754770302007e-06",
+    "",
+    "-8.94%",
+    ""
+  ],
+  "historicalScope": {
+    "json": "old Go1.16 / new Go1.17",
+    "gob": "old Go1.17 / new Go1.17",
+    "source": "new.txt first three lines, upstream description not independently verified environment"
+  },
+  "layers": {
+    "nsPerOp": "saved raw result-line metric already per operation, not total elapsed time",
+    "iterations": "saved work iteration count per result line, not sample count",
+    "medianMicrosecondsPerOp": "this-round descriptive median and ns-to-us unit conversion",
+    "CI_p_n_delta_geomean": "upstream expected output only; not statistical computation in this run"
+  },
+  "limits": [
+    "not independent-sample or causal proof",
+    "no p/CI/Mann-Whitney/geomean recomputation",
+    "gob tilde does not establish equivalence",
+    "rounded p=0.000 is not zero; CI 0% is not zero uncertainty"
+  ]
+}

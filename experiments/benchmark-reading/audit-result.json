@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "scope": "fixed facts and rendered-content audit; no benchmark, stats inference or browser run",
+  "checks": [
+    "complete upstream bytes and digests retained",
+    "recorded independent descriptive observation matches fixed inputs",
+    "40 result records, 10 per format/file, iterations kept separate",
+    "four chart numbers agree with descriptive medians in microseconds",
+    "rendered comparison table preserves both CI/p/n/delta rows",
+    "actual rendered table retains all forty saved ns/op values",
+    "frozen chart dependency matches exact CSV bytes/SHA",
+    "rendered existing bar chart has four correct point labels and unit",
+    "historical version and geomean caution retained",
+    "rounding/tilde boundaries and no personal paths"
+  ]
+}
