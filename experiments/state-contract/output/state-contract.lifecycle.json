@@ -1,0 +1,53 @@
+{
+  "schema_version": 3,
+  "diagram_type": "lifecycle",
+  "meta": {
+    "title": "Declared state transitions",
+    "output": "state-contract.lifecycle.html",
+    "subtitle": "Static export only · reading order is not a success path",
+    "locale": "en",
+    "animation": "none",
+    "visual_preset": "blueprint"
+  },
+  "mainPath": [
+    "state-11",
+    "state-27"
+  ],
+  "states": [
+    {
+      "id": "state-11",
+      "type": "start",
+      "label": "Off"
+    },
+    {
+      "id": "state-27",
+      "type": "neutral",
+      "label": "On"
+    }
+  ],
+  "transitions": [
+    {
+      "id": "event-1",
+      "from": "state-11",
+      "to": "state-27",
+      "label": "toggle"
+    },
+    {
+      "id": "event-2",
+      "from": "state-27",
+      "to": "state-11",
+      "label": "toggle"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "amber",
+      "title": "Static declarations only",
+      "items": [
+        "Initial state comes from the supplied sidecar: numeric ID 11.",
+        "Reading order uses declared edges. It does not mean business success or runtime reachability.",
+        "No machine, guard, reducer, invocation or side effect was executed."
+      ]
+    }
+  ]
+}

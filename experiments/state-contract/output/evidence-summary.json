@@ -1,0 +1,148 @@
+{
+  "kind": "portable-experiment-summary",
+  "notice": "Explicitly a structured portable summary, NOT an original Archify receipt. Original receipts are preserved unchanged outside the checkout.",
+  "date": "2026-10-25",
+  "baseCommit": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "node": "v22.23.3",
+  "inputProvenance": "Original synthetic toggle/reset data in the upstream R3Dag shape; no upstream machine executed.",
+  "upstream": {
+    "repository": "https://github.com/jbreckmckye/robot3-viz",
+    "commit": "5e931694734445b3cd91d20dfc916901035f31c8",
+    "license": "BSD-2-Clause",
+    "shapeSources": [
+      "src/types/dag.ts",
+      "src/lib/dag.ts",
+      "src/lib/nodes.ts"
+    ]
+  },
+  "files": [
+    {
+      "path": "experiments/state-contract/state-contract.mjs",
+      "sha256": "c246be9cea683c624c4f461099084d2b6da3cc6f81652bbdabc9b968fd466e17",
+      "bytes": 12025,
+      "testedSha256": "aea240814661226e099115a16e6c1e8d88ec41101a20814bc0294c78a9fdeffa",
+      "postTestChange": "Removed spaces on one empty source line before commit; behavior unchanged, previous test/render evidence reused."
+    },
+    {
+      "path": "experiments/state-contract/state-contract.test.mjs",
+      "sha256": "baf91ebe37c94523599becac2f6f19e79d72729637b0cee522f23a2c1937839f",
+      "bytes": 11356
+    },
+    {
+      "path": "experiments/state-contract/fixtures/toggle.export.json",
+      "sha256": "49fbd661d3a104aec2417093dcd56e10d5876170310ce4c300511748715bb4f2",
+      "bytes": 270
+    },
+    {
+      "path": "experiments/state-contract/fixtures/toggle.sidecar.json",
+      "sha256": "dd1493c926c640dedb9f15a928a064757958e9eabbed5269c621858e32a3853a",
+      "bytes": 66
+    },
+    {
+      "path": "experiments/state-contract/output/state-contract.lifecycle.html",
+      "sha256": "97d71cae77688af0115794d017065917acead830dfa46b8116a0a3ea41df8c55",
+      "bytes": 806762
+    },
+    {
+      "path": "experiments/state-contract/output/state-contract.matrix.json",
+      "sha256": "75d85d71e0dd8522e83080daa15917e52a76ca985fa300ba389dba94150f19b9",
+      "bytes": 1108
+    },
+    {
+      "path": "experiments/state-contract/output/state-contract.html",
+      "sha256": "7a9fcb310a08c05bec2692c3d1e17fb5787cd000da741c007b87ceea35af4d00",
+      "bytes": 473134
+    },
+    {
+      "path": "experiments/state-contract/output/state-contract.archify.md",
+      "sha256": "8731b8bb49c6648168e0744a0258d5a44abb1c7b8a5f57991622d319182c01ab",
+      "bytes": 1385
+    },
+    {
+      "path": "experiments/state-contract/output/state-contract.lifecycle.json",
+      "sha256": "9074c706fe3d9aa346777c9712f9ffdc28134073a3283a94f1873db4ff08d0f5",
+      "bytes": 1171
+    }
+  ],
+  "verification": {
+    "tests": {
+      "pass": 40,
+      "fail": 0,
+      "skipped": 0
+    },
+    "publicRender": {
+      "lifecycle": "pass",
+      "explainer": "pass",
+      "quality": "showcase"
+    },
+    "publicFinalize": {
+      "lifecycle": {
+        "ok": true,
+        "status": "pass",
+        "stages": {
+          "validate": {
+            "status": "pass",
+            "exitCode": 0
+          },
+          "deliver": {
+            "status": "pass",
+            "exitCode": 0
+          },
+          "check": {
+            "status": "pass",
+            "exitCode": 0
+          },
+          "browser-check": {
+            "status": "pass",
+            "exitCode": 0
+          }
+        },
+        "diagnostics": [],
+        "browserCheck": {
+          "requested": true,
+          "ran": true
+        },
+        "visualReview": "not-requested",
+        "rawReceiptSha256": "31a924a478186f3e3ba2d04d5c5aedffc489e8010ded393249ddde676477063b"
+      },
+      "explainer": {
+        "ok": true,
+        "status": "pass",
+        "stages": {
+          "validate": {
+            "status": "pass",
+            "exitCode": 0
+          },
+          "deliver": {
+            "status": "pass",
+            "exitCode": 0
+          },
+          "check": {
+            "status": "pass",
+            "exitCode": 0
+          },
+          "browser-check": {
+            "status": "pass",
+            "exitCode": 0
+          }
+        },
+        "diagnostics": [],
+        "browserCheck": {
+          "requested": true,
+          "ran": true
+        },
+        "visualReview": "not-requested",
+        "rawReceiptSha256": "01064aae85f5d49f6b6eb3bc000f8c44b20aef72c1c49ee5f41fcb4fd890012f"
+      }
+    },
+    "screenshots": "Main agent capture pending; no human visual acceptance claimed."
+  },
+  "commands": [
+    "node --test experiments/state-contract/state-contract.test.mjs",
+    "node experiments/state-contract/state-contract.mjs experiments/state-contract/fixtures/toggle.export.json experiments/state-contract/fixtures/toggle.sidecar.json <fresh-output-directory>",
+    "node archify/bin/archify.mjs render lifecycle <output>/state-contract.lifecycle.json <output>/state-contract.lifecycle.html --quality showcase",
+    "node archify/bin/archify.mjs render explainer <output>/state-contract.archify.md <output>/state-contract.html --quality showcase",
+    "node archify/bin/archify.mjs finalize lifecycle <output>/state-contract.lifecycle.json <output>/state-contract.lifecycle.html --receipt <external-evidence>/lifecycle.finalize.json --out-dir <external-evidence>/lifecycle --quality showcase --json",
+    "node archify/bin/archify.mjs finalize explainer <output>/state-contract.archify.md <output>/state-contract.html --receipt <external-evidence>/explainer.finalize.json --out-dir <external-evidence>/explainer --browser-check --quality showcase --json"
+  ]
+}

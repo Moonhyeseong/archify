@@ -1,0 +1,57 @@
+{
+  "initialState": 11,
+  "expectedEvents": [
+    "toggle",
+    "reset"
+  ],
+  "rows": [
+    {
+      "stateId": 11,
+      "stateLabel": "Off",
+      "cells": [
+        {
+          "event": "toggle",
+          "status": "declared",
+          "transitions": [
+            {
+              "edgeIndex": 0,
+              "to": 27
+            }
+          ]
+        },
+        {
+          "event": "reset",
+          "status": "undeclared",
+          "transitions": []
+        }
+      ]
+    },
+    {
+      "stateId": 27,
+      "stateLabel": "On",
+      "cells": [
+        {
+          "event": "toggle",
+          "status": "declared",
+          "transitions": [
+            {
+              "edgeIndex": 1,
+              "to": 11
+            }
+          ]
+        },
+        {
+          "event": "reset",
+          "status": "undeclared",
+          "transitions": []
+        }
+      ]
+    }
+  ],
+  "eventsOutsideExpected": [],
+  "totals": {
+    "declared": 2,
+    "undeclared": 2
+  },
+  "scope": "Declared/undeclared refer only to the supplied flat export; neither denotes runtime acceptance, failure or success."
+}

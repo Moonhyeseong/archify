@@ -1,0 +1,10 @@
+{
+  "nodes": [
+    { "kind": "state", "label": "Off", "id": 11 },
+    { "kind": "state", "label": "On", "id": 27 }
+  ],
+  "edges": [
+    { "from": 11, "to": 27, "kind": "event", "label": "toggle" },
+    { "from": 27, "to": 11, "kind": "event", "label": "toggle" }
+  ]
+}

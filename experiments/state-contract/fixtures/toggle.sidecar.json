@@ -1,0 +1,4 @@
+{
+  "initialState": 11,
+  "expectedEvents": ["toggle", "reset"]
+}

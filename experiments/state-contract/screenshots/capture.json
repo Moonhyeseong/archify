@@ -1,0 +1,46 @@
+{
+  "kind": "agent-browser-screenshot-summary",
+  "capturedAt": "2026-10-25T04:57:24.019954+00:00",
+  "method": "Actual Ego Lite browser screenshots; no compositing or image generation",
+  "images": [
+    {
+      "source": "../output/state-contract.html",
+      "sourceSha256": "7a9fcb310a08c05bec2692c3d1e17fb5787cd000da741c007b87ceea35af4d00",
+      "image": "state-contract.png",
+      "imageSha256": "4eabc581daf5382b2323660e71b93c63bbcc85976b47d8d43c6a9a08fa14b5c6",
+      "imagePixels": {
+        "width": 1440,
+        "height": 1193
+      },
+      "viewportCssPixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "deviceScaleFactor": 1,
+      "theme": "light",
+      "preset": "Clean",
+      "fullPage": true
+    },
+    {
+      "source": "../output/state-contract.lifecycle.html",
+      "sourceSha256": "97d71cae77688af0115794d017065917acead830dfa46b8116a0a3ea41df8c55",
+      "image": "lifecycle.png",
+      "imageSha256": "40a62953c0d9051282c27b82585f867d2085b002553a9cee1ee622be8e24a639",
+      "imagePixels": {
+        "width": 1440,
+        "height": 1237
+      },
+      "viewportCssPixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "deviceScaleFactor": 1,
+      "theme": "light",
+      "preset": "Blueprint",
+      "fullPage": true
+    }
+  ],
+  "agentVisualReview": "Both toggle directions are visible, and the matrix retains two reset cells as undeclared. The initial-state note identifies the sidecar source. No machine was run.",
+  "humanAcceptance": "pending",
+  "limits": "Screenshots establish the shown artifact only; they do not establish upstream execution, production validity or measured user benefit."
+}
