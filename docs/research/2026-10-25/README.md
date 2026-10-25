@@ -6,7 +6,7 @@
 
 共同实验基线：[dev `82c7e0f0`](https://github.com/tt-a1i/archify/commit/82c7e0f089a02a4d514714adf37dc2061682da5f)，2026-10-25 已重新核对远端仍为该 revision。下面的“已推送”只表示远程实验分支可审查，不能等同于合入、发布或人类验收。
 
-## 已推送的 20 个实验
+## 已推送的 21 个实验
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
@@ -32,8 +32,9 @@
 | [Delta values](https://github.com/tt-a1i/archify/tree/codex/lab-delta-values/experiments/delta-values) | 选中既有 exact row 直接读取 SQL→SQL tx、orders→fraud 等 receipt 事实 | `4c35456b` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-delta-values/experiments/delta-values/screenshots/candidate-persist-order-light.png) | 独立 Delta shell；67 Node tests、5 browser + 独立5、generated/ZIP通过；真实窄屏横滚缺陷已修并保留旧图；不扩 diff 合同 |
 | [Source question tour](https://github.com/tt-a1i/archify/tree/codex/lab-source-question-tour/experiments/source-question-tour) | 同5段固定源码按文件/4个问题组织，解释源码版本与Escape条件 | `94d6a4d0` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-source-question-tour/experiments/source-question-tour/screenshots/question-first-overview.png) | 零共享代码；两页finalize通过，自动browser未跑；源码逐字/摘要一致，root实际hover/Tab/Escape与原生图跳转；无效率结论 |
 | [Diagnostic locations](https://github.com/tt-a1i/archify/tree/codex/lab-diagnostic-locations/experiments/diagnostic-locations) | 同文诊断显示已有行号/节点/路径，preview保留旧图并指出坏输入 | `67328d7d` | [实际连续预览](https://github.com/tt-a1i/archify/blob/codex/lab-diagnostic-locations/experiments/diagnostic-locations/screenshots/live-preview-needs-fix.png) | 29诊断、19core、2preview、7真实Chrome检查；独立6；JSON字节不变，双ZIP一致；同一浏览器验证rev1→needs-fix |
+| [Finder result descriptions](https://github.com/tt-a1i/archify/tree/codex/lab-finder-context/experiments/finder-context) | 8个同名搜索结果通过既有ID/类型/耗时说明获得不同可访问描述 | `5b7701c1` | [实际UI与AX证据](https://github.com/tt-a1i/archify/tree/codex/lab-finder-context/experiments/finder-context/screenshots) | 13browser/toolbar、19core、2generatedfocused、golden/ZIP通过；8条实际AX与键盘选择核实；非VoiceOver/NVDA接受 |
 
-这二十项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
+这二十一项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
 
 GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确远端 head 的 Actions runs/check-runs 均为 0。当前 [CI 配置](https://github.com/tt-a1i/archify/blob/82c7e0f089a02a4d514714adf37dc2061682da5f/.github/workflows/ci.yml) 只对 main/dev push 自动运行，另外支持 PR/manual。这里的实验分支 push 没有提供远端 CI 通过证据；上表测试均按实际本地来源记录。
 
@@ -65,8 +66,7 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
-| Finder result descriptions | 现有可见meta关联到按钮description | 原有measured Waterfall八个同名结果真实AX复现；候选8条描述与键盘选中已实测，生成/包与独立review收尾中 |
-| Delivery witness | Moirae官方模拟fixture中同消息同t的两次deliver | 用现有Sequence/Explainer保留seq、dup与原patch，零共享代码；来源和表达独立审查中 |
+| Delivery witness | Moirae官方模拟fixture中同消息同t的两次deliver | 用现有Sequence/Explainer保留seq、dup与原patch，零共享代码；root截图发现自动图例误称主路径请求，改为一致中性投递样式后再验 |
 | 后续发现 | 源码证据、键盘阅读与执行步骤可视化 | 局部上下文与profile阅读调研已发布，未发现立即实施的缺口；新一轮继续寻找具体机制 |
 
 ## 一手调研报告
@@ -94,6 +94,7 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 符号、调用点与来源证据 | [Symbol evidence small tools](scouts/symbol-evidence-smalltools.md) |
 | 图的可访问性、身份与键盘阅读 | [Accessible graph small tools](scouts/accessible-graph-smalltools.md) |
 | 执行步骤、消息投递与逻辑顺序 | [Execution reading small tools](scouts/execution-reading-smalltools.md) |
+| 数据血缘与变换证据 | [Lineage evidence small tools](scouts/lineage-evidence-smalltools.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
 报告中的上游声明、局部源码核实、计划中的实验和已经执行的结果分别标注。未推荐方向也保留原因，避免反复研究；没有把上游宣传、星数或作者截图当作 Archify 的效果证明。
