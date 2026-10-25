@@ -1,0 +1,192 @@
+[
+  {
+    "action": "mobile-task-card",
+    "theme": "light",
+    "viewport": [
+      390,
+      844
+    ],
+    "width": 390,
+    "count": "显示 1 / 39 项",
+    "visible": [
+      "task-occurrences"
+    ],
+    "dialog": false,
+    "dialogBox": {
+      "x": 0,
+      "width": 0
+    },
+    "focus": "query"
+  },
+  {
+    "action": "mobile-dark-dialog",
+    "theme": "dark",
+    "viewport": [
+      390,
+      844
+    ],
+    "width": 390,
+    "count": "显示 1 / 39 项",
+    "visible": [
+      "task-occurrences"
+    ],
+    "dialog": true,
+    "dialogBox": {
+      "x": 8,
+      "width": 374
+    },
+    "focus": "close-image"
+  },
+  {
+    "action": "mobile-escape",
+    "theme": "dark",
+    "viewport": [
+      390,
+      844
+    ],
+    "width": 390,
+    "count": "显示 1 / 39 项",
+    "visible": [
+      "task-occurrences"
+    ],
+    "dialog": false,
+    "dialogBox": {
+      "x": 0,
+      "width": 0
+    },
+    "focus": "",
+    "returnId": "task-occurrences"
+  },
+  {
+    "action": "empty-search",
+    "theme": "dark",
+    "viewport": [
+      390,
+      844
+    ],
+    "width": 390,
+    "count": "显示 0 / 39 项",
+    "visible": [],
+    "dialog": false,
+    "dialogBox": {
+      "x": 0,
+      "width": 0
+    },
+    "focus": "query",
+    "emptyVisible": true
+  },
+  {
+    "action": "reset",
+    "theme": "dark",
+    "viewport": [
+      390,
+      844
+    ],
+    "width": 390,
+    "count": "显示 39 / 39 项",
+    "visible": [
+      "finder-highlights",
+      "relation-reference",
+      "delta-values",
+      "diagnostic-locations",
+      "finder-context",
+      "waterfall-status",
+      "workflow-self-loop",
+      "diff-line-numbers",
+      "keyboard-traversal",
+      "preview-dashed-ink",
+      "clipboard-outcome",
+      "source-keyboard",
+      "task-review-map",
+      "dependency-map",
+      "trace-waterfall",
+      "markdown-outline",
+      "dbml-erd",
+      "change-coupling",
+      "payload-delta",
+      "decision-thread",
+      "migration-plan",
+      "state-contract",
+      "ci-conditions",
+      "plan-actions",
+      "recipe-stages",
+      "test-context-map",
+      "test-failure-map",
+      "source-question-tour",
+      "delivery-witness",
+      "retained-size",
+      "lasso-witness",
+      "plan-row-counts",
+      "copy-identity",
+      "cli-reading-tour",
+      "byte-views",
+      "notebook-occurrences",
+      "config-origins",
+      "benchmark-reading",
+      "task-occurrences"
+    ],
+    "dialog": false,
+    "dialogBox": {
+      "x": 0,
+      "width": 0
+    },
+    "focus": "query"
+  },
+  {
+    "action": "desktop-dark",
+    "theme": "dark",
+    "viewport": [
+      1440,
+      1100
+    ],
+    "width": 1440,
+    "count": "显示 39 / 39 项",
+    "visible": [
+      "finder-highlights",
+      "relation-reference",
+      "delta-values",
+      "diagnostic-locations",
+      "finder-context",
+      "waterfall-status",
+      "workflow-self-loop",
+      "diff-line-numbers",
+      "keyboard-traversal",
+      "preview-dashed-ink",
+      "clipboard-outcome",
+      "source-keyboard",
+      "task-review-map",
+      "dependency-map",
+      "trace-waterfall",
+      "markdown-outline",
+      "dbml-erd",
+      "change-coupling",
+      "payload-delta",
+      "decision-thread",
+      "migration-plan",
+      "state-contract",
+      "ci-conditions",
+      "plan-actions",
+      "recipe-stages",
+      "test-context-map",
+      "test-failure-map",
+      "source-question-tour",
+      "delivery-witness",
+      "retained-size",
+      "lasso-witness",
+      "plan-row-counts",
+      "copy-identity",
+      "cli-reading-tour",
+      "byte-views",
+      "notebook-occurrences",
+      "config-origins",
+      "benchmark-reading",
+      "task-occurrences"
+    ],
+    "dialog": false,
+    "dialogBox": {
+      "x": 0,
+      "width": 0
+    },
+    "focus": "query"
+  }
+]

@@ -10,11 +10,13 @@
 
 2026-10-25 16:18（台北）再次核对：dev 已合入 [#1100](https://github.com/tt-a1i/archify/pull/1100)，推进到 [`67f12389`](https://github.com/tt-a1i/archify/commit/67f12389212c54b3122da60e2813c7f8dab7ab2f)，main 仍为 `51a29177`。这次修改 finalize 的源码范围修复、候选文件保留及相关交付逻辑；Copy identity、CLI reading tour 和 Clipboard outcome 保留实际冻结的 `3f95f034` 基线，不把既有结果改称新 dev 验证。
 
+最新状态另见[19:20–19:21晚间GitHub快照](github-status-latest-evening.md)：main/dev、部署等待、实验精确head和PR状态分别记账，不把Actions/check-runs为0当通过。
+
 ## 已推送的 39 个实验
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
-[离线图片浏览页](gallery/README.md)：当前固定快照含35项的35张原始PNG（12/15/8），新增Source keyboard activation，并更新Diff/Preview为固定dev10b4实图；固定提交和图片摘要见manifest。当前1440×1100浅色已实际核数量、三项搜索/完整图/固定来源与Esc返回，四张截图已查看。模板与34版逐字相同，390px及深色UI观测明确复用固定34版历史，未称本轮重测；历史34/33/29/27快照及各自证据继续按固定提交保留。
+[离线图片浏览页](gallery/README.md)：固定hub fc701742含39项/39张原始PNG（12/15/12），新增Notebook/Config/Benchmark/Task，并刷新Finder/Waterfall/Workflow/Keyboard/Clipboard五图。当前实际核1440×1100浅色四筛选、九项搜索/完整原图字节/天然尺寸/固定来源/原始尺寸与Esc返回；390×844浅色卡片、深色dialog及空结果/reset、桌面深色另有实测，20项观测/7图已绑定。模板逐字不变；历史35/34/33/29/27证据按固定提交保留，未将截图内实验内容当新产品测试或AT/OS剪贴板验收。
 
 | 实验与远程分支 | 具体价值 | 发布 revision | 实际图片 | 验证与限制 |
 | --- | --- | --- | --- | --- |
@@ -140,7 +142,7 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 已有候选刷新 | Relation reference / Finder canvas matches | 正在按新Passport/IME/drilldown合同整合固定dev10b4；各自独立，保留旧输入与原证据 |
 | 既有实验真实输出 | Recipe stages / State contract | State官方fixture实导出已推f7269e09；Recipe官方test有效输入dump已推062dee5d，自然完整示例拒绝并保留；历史synthetic不改称实跑 |
 | 新发现修复 | Explainer复制结果与手工恢复 | Clipboard outcome已推送68866954，来源、基线/候选和实际截图见第33项 |
-| 浏览页更新 | 35项固定实验图片 | c23d585c已发布：35原图，当前11项观测/4新截图，390px和深色明确复用34同模板历史；固定来源与限制保留 |
+| 浏览页更新 | 39项固定实验图片 | 39原图/12-15-12已静态核验；当前20实际观测/7图覆盖桌面浅深与390px卡片/dialog，旧35版c23d585c及更早历史按固定链接保留；本目录保留本轮冻结证据 |
 | 既有实验补证据 | DBML与Plan actions | DBML已补上primary key同义写法接受；原拒绝记录保留；完整plan fixture转换证据不变 |
 | 已排除的重复实现 | Mutation报告reader | 原viewer已有文件搜索、状态筛选、diff、测试关联和单HTML打包；只保留研究，不另建reader |
 | 新dev影响核对 | 许可声明与finalize源范围修复 | [15:41迁移](base-refresh-1541.md) / [16:18交付逻辑](base-refresh-1618.md)：分别核对实际diff；旧证据保留原身份，新整合按影响验证 |

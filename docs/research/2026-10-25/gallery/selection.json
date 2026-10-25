@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "https://github.com/tt-a1i/archify",
-  "hubCommit": "8353da8e412c3a87956a37eb675cf3e34eb29888",
+  "hubCommit": "fc7017426177ad44e213242a2b1756ffba43b9e3",
   "hubPath": "docs/research/2026-10-25/README.md",
   "visualSourcePaths": [
     "website/src/styles/site.css",
@@ -225,13 +225,13 @@
     },
     {
       "id": "finder-context",
-      "commit": "5b7701c170dabf5d204f3d220ebdb9d39fe178d2",
+      "commit": "e219bc5ba4fdf90f653c2fae7eadcc1ceeeda942",
       "branch": "codex/lab-finder-context",
       "directory": "experiments/finder-context",
       "group": "product",
-      "inputKind": "既有 measured 图",
-      "imagePath": "experiments/finder-context/screenshots/candidate-finder.png",
-      "imageCaption": "可见元信息成为同名结果的可访问描述。"
+      "inputKind": "既有 measured 输入 / dev10b4 AX 对照",
+      "imagePath": "experiments/finder-context/refresh-dev-10b4/screenshots/candidate-finder.png",
+      "imageCaption": "新 dev 同名结果 UI 保持原样；8 个可访问描述来自实际 AX 记录，图片本身不证明发声或 AT 验收。"
     },
     {
       "id": "delivery-witness",
@@ -245,13 +245,13 @@
     },
     {
       "id": "waterfall-status",
-      "commit": "e20acd6d6c0083f6b6ddecaf7bb250becfbca228",
+      "commit": "68311bb8461ddd4086af6f2e41ce60e9e6f7f5d4",
       "branch": "codex/lab-waterfall-status",
       "directory": "experiments/waterfall-status",
       "group": "product",
-      "inputKind": "原创构造反例",
-      "imagePath": "experiments/waterfall-status/screenshots/overview.png",
-      "imageCaption": "显式 error / cancelled 在行尾成为文字。"
+      "inputKind": "原创构造 / dev10b4 状态文本",
+      "imagePath": "experiments/waterfall-status/refresh-dev-10b4/screenshots/candidate-light.png",
+      "imageCaption": "新 dev 同一构造输入显示 Error / Cancelled；时间比例不是成功率，非真实操作记录。"
     },
     {
       "id": "retained-size",
@@ -275,13 +275,13 @@
     },
     {
       "id": "workflow-self-loop",
-      "commit": "eb299b1568327fb77ce7e8a6dcaab610e2b6af0c",
+      "commit": "9578b8e4f2daf71b383704921d4df9cef19b8d13",
       "branch": "codex/lab-workflow-self-loop",
       "directory": "experiments/workflow-self-loop",
       "group": "product",
-      "inputKind": "原创几何回归输入",
-      "imagePath": "experiments/workflow-self-loop/screenshots/explicit-loop.png",
-      "imageCaption": "同一节点离开与回接的外绕 self-loop。"
+      "inputKind": "原创几何回归 / dev10b4 对照",
+      "imagePath": "experiments/workflow-self-loop/refresh-dev-10b4/screenshots/candidate-light.png",
+      "imageCaption": "候选保留原始合法自环 pins；新 dev 基线验证失败且没有 HTML，不伪造 before 图。"
     },
     {
       "id": "plan-row-counts",
@@ -305,13 +305,13 @@
     },
     {
       "id": "keyboard-traversal",
-      "commit": "d930863147cd6adfb5d4275f011c06caf4b24f92",
+      "commit": "c96e8aa74ff5e309cdab07a1b70d0242f33bed75",
       "branch": "codex/lab-keyboard-traversal",
       "directory": "experiments/keyboard-traversal",
       "group": "product",
-      "inputKind": "固定 HTML / 门禁测量",
-      "imagePath": "experiments/keyboard-traversal/screenshots/tab-65-footer.png",
-      "imageCaption": "同一 HTML 真实 Tab65 到 footer；没有视觉改版，原 mapping false / ZIP 未解析不变。"
+      "inputKind": "同一固定 HTML / dev10b4 Tab 测量",
+      "imagePath": "experiments/keyboard-traversal/refresh-dev-10b4/screenshots/task-footer-tab.png",
+      "imageCaption": "同页真实 Tab 到尾，没有视觉改版；root task47/PR63 与 checker48/64 分列，不回写 Task 实验的16条失败。"
     },
     {
       "id": "preview-dashed-ink",
@@ -345,13 +345,13 @@
     },
     {
       "id": "clipboard-outcome",
-      "commit": "68866954a19cfe3b6599f3c27ff3cb10427f7d44",
+      "commit": "0e4a2c71c9550905004d20bbadb3b33d6bd85f3d",
       "branch": "codex/lab-clipboard-outcome",
       "directory": "experiments/clipboard-outcome",
       "group": "product",
-      "inputKind": "受控 API 注入 / 既有 PR 输入",
-      "imagePath": "experiments/clipboard-outcome/screenshots/missing-ask-candidate.png",
-      "imageCaption": "API 缺失时保留完整消息供手工恢复；未写 OS 剪贴板。"
+      "inputKind": "受控 API 注入 / dev10b4 同输入",
+      "imagePath": "experiments/clipboard-outcome/refresh-dev-10b4/screenshots/candidate-missing-ask.png",
+      "imageCaption": "受控缺失 API 时保留完整消息供手工恢复；未写 OS 剪贴板，两页三阶段及同7条写作 warnings，自动 browser 未请求。"
     },
     {
       "id": "byte-views",
@@ -372,6 +372,46 @@
       "inputKind": "真实 CLI tour / 键盘动作对照",
       "imagePath": "experiments/source-keyboard/screenshots/candidate-enter-viewer.png",
       "imageCaption": "同一 CLI tour 节点用 Enter 打开已有原生图并聚焦 response；Tab 可达和焦点样式原本已存在。"
+    },
+    {
+      "id": "notebook-occurrences",
+      "commit": "2090b0ff144b7bc3425d52821655f659858f5d6a",
+      "branch": "codex/lab-notebook-occurrences",
+      "directory": "experiments/notebook-occurrences",
+      "group": "content",
+      "inputKind": "固定 nbdime 完整 fixture",
+      "imagePath": "experiments/notebook-occurrences/screenshots/explainer-overview.png",
+      "imageCaption": "六个 cell 按位置保留：source 改变与保存 output 改变分列；没有运行 notebook 或推断执行依赖。"
+    },
+    {
+      "id": "config-origins",
+      "commit": "14867942a81542c1ce1b0d4aae38c6e7b9ddddef",
+      "branch": "codex/lab-config-origins",
+      "directory": "experiments/config-origins",
+      "group": "content",
+      "inputKind": "固定 Figment 完整测试",
+      "imagePath": "experiments/config-origins/screenshots/overview.png",
+      "imageCaption": "provider 声明、幸存字段与整体错误归属分开；join 的 max=20 没有修复该测试约束，未运行 Rust。"
+    },
+    {
+      "id": "benchmark-reading",
+      "commit": "7b8258cdc3f7bc2d9c6a0277feaa5d31b1a70686",
+      "branch": "codex/lab-benchmark-reading",
+      "directory": "experiments/benchmark-reading",
+      "group": "content",
+      "inputKind": "固定 benchstat example / golden",
+      "imagePath": "experiments/benchmark-reading/screenshots/overview.png",
+      "imageCaption": "四个 median 与 CI/p/n/~ 邻表；上游历史材料，未重跑统计或 benchmark，不声称普遍性能收益。"
+    },
+    {
+      "id": "task-occurrences",
+      "commit": "caffb4aabb13b04a77bb9475866ad65465d79b20",
+      "branch": "codex/lab-task-occurrences",
+      "directory": "experiments/task-occurrences",
+      "group": "content",
+      "inputKind": "固定 Gradle fixture / expected",
+      "imagePath": "experiments/task-occurrences/screenshots/overview.png",
+      "imageCaption": "11 个打印位置对应 10 个身份；两处 compileJava 共用目标，打印次数不是执行次数；解释页仍有 16 条键盘诊断。"
     }
   ],
   "deferred": {

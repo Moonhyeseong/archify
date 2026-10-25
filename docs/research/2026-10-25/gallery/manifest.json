@@ -5,12 +5,12 @@
   "repository": "https://github.com/tt-a1i/archify",
   "hub": {
     "path": "docs/research/2026-10-25/README.md",
-    "commit": "8353da8e412c3a87956a37eb675cf3e34eb29888",
-    "sha256": "ef5206f7146c96db527a0469bda657f9e0de17788def652a62797baa146078e0",
-    "bytes": 38027,
-    "gitBlob": "038990f062ad1570d2d7cd77d208a968281eac94"
+    "commit": "fc7017426177ad44e213242a2b1756ffba43b9e3",
+    "sha256": "ba6e66583068f145d538eff6053e39f1b14015dfbdb6280d4abcf94949d6983e",
+    "bytes": 43726,
+    "gitBlob": "b93dbc2df48aafc91a055aacf7f068fa21bf02d8"
   },
-  "policy": "35 published experiments from the fixed hub. Original PNG bytes only; card previews are CSS crops. No network request, analytics, dependency or experiment execution. Branch publication is not merge, release, CI success or human acceptance.",
+  "policy": "39 published experiments from the fixed hub. Original PNG bytes only; card previews are CSS crops. No network request, analytics, dependency or experiment execution. Branch publication is not merge, release, CI success or human acceptance.",
   "groups": {
     "product": {
       "label": "产品交互",
@@ -28,21 +28,21 @@
   "visualSources": [
     {
       "path": "website/src/styles/site.css",
-      "commit": "8353da8e412c3a87956a37eb675cf3e34eb29888",
+      "commit": "fc7017426177ad44e213242a2b1756ffba43b9e3",
       "sha256": "4a79d3c00465cc93d2fdfe602c5d870523ae6ee033e3f75e61481585f86f89e4",
       "bytes": 15945,
       "gitBlob": "49c84bb5900a5eb98b057e9af76bbc1066c8d0b5"
     },
     {
       "path": "website/src/styles/index.css",
-      "commit": "8353da8e412c3a87956a37eb675cf3e34eb29888",
+      "commit": "fc7017426177ad44e213242a2b1756ffba43b9e3",
       "sha256": "f3aaf38823b91e63d08cf1e521ea606331be580a86e20cc9e2cadab38c1bd0fe",
       "bytes": 59111,
       "gitBlob": "e076e38179140bac537a75efaca75c356350a8a2"
     },
     {
       "path": "website/src/styles/gallery.css",
-      "commit": "8353da8e412c3a87956a37eb675cf3e34eb29888",
+      "commit": "fc7017426177ad44e213242a2b1756ffba43b9e3",
       "sha256": "a1c896cab6ca6f99baedb6d8d6a608e97e719b02bb763494bd58e3461f8c9eb1",
       "bytes": 23691,
       "gitBlob": "36adfa4eda35c948b0f07bd9fe144beb8ac66656"
@@ -751,38 +751,38 @@
     },
     {
       "id": "finder-context",
-      "commit": "5b7701c170dabf5d204f3d220ebdb9d39fe178d2",
+      "commit": "e219bc5ba4fdf90f653c2fae7eadcc1ceeeda942",
       "branch": "codex/lab-finder-context",
       "directory": "experiments/finder-context",
       "group": "product",
-      "inputKind": "既有 measured 图",
-      "imagePath": "experiments/finder-context/screenshots/candidate-finder.png",
-      "imageCaption": "可见元信息成为同名结果的可访问描述。",
+      "inputKind": "既有 measured 输入 / dev10b4 AX 对照",
+      "imagePath": "experiments/finder-context/refresh-dev-10b4/screenshots/candidate-finder.png",
+      "imageCaption": "新 dev 同名结果 UI 保持原样；8 个可访问描述来自实际 AX 记录，图片本身不证明发声或 AT 验收。",
       "title": "Finder result descriptions",
-      "value": "8个同名搜索结果通过既有ID/类型/耗时说明获得不同可访问描述",
-      "limits": "13browser/toolbar、19core、2generatedfocused、golden/ZIP通过；8条实际AX与键盘选择核实；非VoiceOver/NVDA接受",
+      "value": "8个同名结果使用既有ID/类型/耗时作为可访问描述",
+      "limits": "基线10b4；26browser/focus、19core、4generated及golden通过；31产物正常重生成、其余历史单列；235项ZIP与精确抽包四阶段；实际8AX及键盘选择、3图；非真人AT",
       "readme": {
         "path": "experiments/finder-context/README.md",
-        "commit": "5b7701c170dabf5d204f3d220ebdb9d39fe178d2",
-        "sha256": "26036c4dfdee2ff332b09036ce8f6dc66f0c4592c00a4c3d496d4882eae024b0",
-        "bytes": 7619,
-        "gitBlob": "db4749fad3667dae2865a24b87aa245010307110"
+        "commit": "e219bc5ba4fdf90f653c2fae7eadcc1ceeeda942",
+        "sha256": "27cf28271645684a7afe98c724b0fff27000e4a23fada1ecbed17ec14003af4c",
+        "bytes": 8158,
+        "gitBlob": "45c498144d1a01fea7a1b12f11ef522960813553"
       },
       "image": {
-        "path": "experiments/finder-context/screenshots/candidate-finder.png",
-        "commit": "5b7701c170dabf5d204f3d220ebdb9d39fe178d2",
-        "sha256": "4412671f8e86472937e6f512c2e9381611876fa1c18f0454dccdd8c76aa1cb84",
-        "bytes": 182866,
-        "gitBlob": "5d99d23f878785fe33544c8d8c4e29ee2a3a6df8",
+        "path": "experiments/finder-context/refresh-dev-10b4/screenshots/candidate-finder.png",
+        "commit": "e219bc5ba4fdf90f653c2fae7eadcc1ceeeda942",
+        "sha256": "0d81e2c6dc9ea25898f71610fbe4d859fccb879c775bb7905ad5b1e70ec06ddd",
+        "bytes": 182852,
+        "gitBlob": "54b3ff2049c4ea34ab1723391b1b7a24ca2bd8dd",
         "width": 1440,
         "height": 1000,
         "mime": "image/png",
-        "caption": "可见元信息成为同名结果的可访问描述。",
+        "caption": "新 dev 同名结果 UI 保持原样；8 个可访问描述来自实际 AX 记录，图片本身不证明发声或 AT 验收。",
         "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
       },
-      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/5b7701c170dabf5d204f3d220ebdb9d39fe178d2/experiments/finder-context",
+      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/e219bc5ba4fdf90f653c2fae7eadcc1ceeeda942/experiments/finder-context",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-finder-context/experiments/finder-context",
-      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/5b7701c170dabf5d204f3d220ebdb9d39fe178d2/experiments/finder-context/screenshots/candidate-finder.png"
+      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/e219bc5ba4fdf90f653c2fae7eadcc1ceeeda942/experiments/finder-context/refresh-dev-10b4/screenshots/candidate-finder.png"
     },
     {
       "id": "delivery-witness",
@@ -821,38 +821,38 @@
     },
     {
       "id": "waterfall-status",
-      "commit": "e20acd6d6c0083f6b6ddecaf7bb250becfbca228",
+      "commit": "68311bb8461ddd4086af6f2e41ce60e9e6f7f5d4",
       "branch": "codex/lab-waterfall-status",
       "directory": "experiments/waterfall-status",
       "group": "product",
-      "inputKind": "原创构造反例",
-      "imagePath": "experiments/waterfall-status/screenshots/overview.png",
-      "imageCaption": "显式 error / cancelled 在行尾成为文字。",
+      "inputKind": "原创构造 / dev10b4 状态文本",
+      "imagePath": "experiments/waterfall-status/refresh-dev-10b4/screenshots/candidate-light.png",
+      "imageCaption": "新 dev 同一构造输入显示 Error / Cancelled；时间比例不是成功率，非真实操作记录。",
       "title": "Waterfall status text",
       "value": "已提供error/cancelled同时显示在行尾、节点说明和可访问名称",
-      "limits": "局部renderer；34focused/core、2产物四阶段、ZIP/package通过；两个旧例byte-identical；实际AX/Passport/浅深色；构造输入，非真人AT",
+      "limits": "基线10b4；34focused/core，XML初缺依赖后单独3pass；原生/精确ZIP四阶段；无状态两例相同；7真实图/DOM与AX分列；构造输入、非真人AT",
       "readme": {
         "path": "experiments/waterfall-status/README.md",
-        "commit": "e20acd6d6c0083f6b6ddecaf7bb250becfbca228",
-        "sha256": "2a6c86a1d6fe430fa4fb582fec487cf53b1939438d0634099cb77ae36d8a11fe",
-        "bytes": 9128,
-        "gitBlob": "377373d94869753366e8f94cfe456b72d5415aed"
+        "commit": "68311bb8461ddd4086af6f2e41ce60e9e6f7f5d4",
+        "sha256": "1bdefc3a1f8665233f15ddad63ac53582b8acaa69e0bbbe0135cc71fa1e8eeeb",
+        "bytes": 9707,
+        "gitBlob": "ac21b0ab92ad6b10fb497c7ce943cfd5fc983f78"
       },
       "image": {
-        "path": "experiments/waterfall-status/screenshots/overview.png",
-        "commit": "e20acd6d6c0083f6b6ddecaf7bb250becfbca228",
-        "sha256": "15cec88ac2f9268eea9e9aacddd1e88cefc91a57336038cb2acb57537dfad5a3",
-        "bytes": 79605,
-        "gitBlob": "7ab3e472022e506908983001b4251067c21bfe4b",
+        "path": "experiments/waterfall-status/refresh-dev-10b4/screenshots/candidate-light.png",
+        "commit": "68311bb8461ddd4086af6f2e41ce60e9e6f7f5d4",
+        "sha256": "d149f17fc7e478573091723b5d00fcec2f24ca7febb4554c79e094299b12d409",
+        "bytes": 80162,
+        "gitBlob": "841f557dd515f12502e1b687a2327a339be59f51",
         "width": 1440,
         "height": 1000,
         "mime": "image/png",
-        "caption": "显式 error / cancelled 在行尾成为文字。",
+        "caption": "新 dev 同一构造输入显示 Error / Cancelled；时间比例不是成功率，非真实操作记录。",
         "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
       },
-      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/e20acd6d6c0083f6b6ddecaf7bb250becfbca228/experiments/waterfall-status",
+      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/68311bb8461ddd4086af6f2e41ce60e9e6f7f5d4/experiments/waterfall-status",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-waterfall-status/experiments/waterfall-status",
-      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/e20acd6d6c0083f6b6ddecaf7bb250becfbca228/experiments/waterfall-status/screenshots/overview.png"
+      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/68311bb8461ddd4086af6f2e41ce60e9e6f7f5d4/experiments/waterfall-status/refresh-dev-10b4/screenshots/candidate-light.png"
     },
     {
       "id": "retained-size",
@@ -926,38 +926,38 @@
     },
     {
       "id": "workflow-self-loop",
-      "commit": "eb299b1568327fb77ce7e8a6dcaab610e2b6af0c",
+      "commit": "9578b8e4f2daf71b383704921d4df9cef19b8d13",
       "branch": "codex/lab-workflow-self-loop",
       "directory": "experiments/workflow-self-loop",
       "group": "product",
-      "inputKind": "原创几何回归输入",
-      "imagePath": "experiments/workflow-self-loop/screenshots/explicit-loop.png",
-      "imageCaption": "同一节点离开与回接的外绕 self-loop。",
+      "inputKind": "原创几何回归 / dev10b4 对照",
+      "imagePath": "experiments/workflow-self-loop/refresh-dev-10b4/screenshots/candidate-light.png",
+      "imageCaption": "候选保留原始合法自环 pins；新 dev 基线验证失败且没有 HTML，不伪造 before 图。",
       "title": "Workflow self-loop",
-      "value": "同一节点同时作为起点和终点，正确外绕回接不再被误拒",
-      "limits": "局部compiler；145focused/core、独立8、四旧例逐字一致、ZIP/抽包四阶段通过；必要折返守卫，既有auto候选也可用，未扩搜索",
+      "value": "同节点双端接触保留合法自环，仍拒绝中段碰撞及立即折返",
+      "limits": "基线10b4真实拒绝且无HTML；候选/精确ZIP四阶段0诊断、148focused、4generated通过；4shipped SVG/receipt相同；3实图；构造几何回归，不称运行trace或作者节时",
       "readme": {
         "path": "experiments/workflow-self-loop/README.md",
-        "commit": "eb299b1568327fb77ce7e8a6dcaab610e2b6af0c",
+        "commit": "9578b8e4f2daf71b383704921d4df9cef19b8d13",
         "sha256": "d70529387790372e2c177a90ee4d2eb934f134e184450a7f25db9b52c4861b15",
         "bytes": 8098,
         "gitBlob": "d8cea864e4343dea8914b063df8bf9b332619a70"
       },
       "image": {
-        "path": "experiments/workflow-self-loop/screenshots/explicit-loop.png",
-        "commit": "eb299b1568327fb77ce7e8a6dcaab610e2b6af0c",
-        "sha256": "c48a3d0d70cc76623fd9fdd18ee7f31766f49593d0d88caf8c73730165243028",
-        "bytes": 41189,
-        "gitBlob": "f928a317c845a58a87fb45078c05c6d2109cfbdc",
+        "path": "experiments/workflow-self-loop/refresh-dev-10b4/screenshots/candidate-light.png",
+        "commit": "9578b8e4f2daf71b383704921d4df9cef19b8d13",
+        "sha256": "bf431d202ddcd601556d1d49332e20a3585fa27ba632a06e9f5df0983f1e1a1d",
+        "bytes": 44188,
+        "gitBlob": "8ef904ec044924987724682ec09b1adeb0e8dafc",
         "width": 1440,
         "height": 1000,
         "mime": "image/png",
-        "caption": "同一节点离开与回接的外绕 self-loop。",
+        "caption": "候选保留原始合法自环 pins；新 dev 基线验证失败且没有 HTML，不伪造 before 图。",
         "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
       },
-      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/eb299b1568327fb77ce7e8a6dcaab610e2b6af0c/experiments/workflow-self-loop",
+      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/9578b8e4f2daf71b383704921d4df9cef19b8d13/experiments/workflow-self-loop",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-workflow-self-loop/experiments/workflow-self-loop",
-      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/eb299b1568327fb77ce7e8a6dcaab610e2b6af0c/experiments/workflow-self-loop/screenshots/explicit-loop.png"
+      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/9578b8e4f2daf71b383704921d4df9cef19b8d13/experiments/workflow-self-loop/refresh-dev-10b4/screenshots/candidate-light.png"
     },
     {
       "id": "plan-row-counts",
@@ -1031,38 +1031,38 @@
     },
     {
       "id": "keyboard-traversal",
-      "commit": "d930863147cd6adfb5d4275f011c06caf4b24f92",
+      "commit": "c96e8aa74ff5e309cdab07a1b70d0242f33bed75",
       "branch": "codex/lab-keyboard-traversal",
       "directory": "experiments/keyboard-traversal",
       "group": "product",
-      "inputKind": "固定 HTML / 门禁测量",
-      "imagePath": "experiments/keyboard-traversal/screenshots/tab-65-footer.png",
-      "imageCaption": "同一 HTML 真实 Tab65 到 footer；没有视觉改版，原 mapping false / ZIP 未解析不变。",
+      "inputKind": "同一固定 HTML / dev10b4 Tab 测量",
+      "imagePath": "experiments/keyboard-traversal/refresh-dev-10b4/screenshots/task-footer-tab.png",
+      "imageCaption": "同页真实 Tab 到尾，没有视觉改版；root task47/PR63 与 checker48/64 分列，不回写 Task 实验的16条失败。",
       "title": "Keyboard traversal",
-      "value": "纳入实际Tab额外停点，末尾可达控件不再因过早停止被误报",
-      "limits": "最终focused11、v3算法整file19复用、core19、canonical双ZIP/抽包通过；固定HTML四视口均50/50且0诊断；iframe/date/trap/无限焦点边界保留；非PR验收",
+      "value": "QA按真实DOM身份继续Tab，避免原生滚动区和动态来源卡导致提前停止误报",
+      "limits": "同页PR30→0/task16→0诊断；19browser/19core/4checks、235项ZIP及正负例；root实际47/63 Tab与checker48/64步分列；不改HTML、不代表原PR/Gradle执行或AT",
       "readme": {
         "path": "experiments/keyboard-traversal/README.md",
-        "commit": "d930863147cd6adfb5d4275f011c06caf4b24f92",
+        "commit": "c96e8aa74ff5e309cdab07a1b70d0242f33bed75",
         "sha256": "640a37dd60a5436ab11eec474645a67aa27a239f074c00c917736f17cab816f7",
         "bytes": 7530,
         "gitBlob": "2ee98f3d7a3044510a9cb39e409170e5509d9792"
       },
       "image": {
-        "path": "experiments/keyboard-traversal/screenshots/tab-65-footer.png",
-        "commit": "d930863147cd6adfb5d4275f011c06caf4b24f92",
-        "sha256": "60fe988a4ea6b6b273a82cfad6465a911eed1d979fccbf4283f37e3724016535",
-        "bytes": 170185,
-        "gitBlob": "55bead9aefd0edc8797dd416e46f0f8277105637",
-        "width": 1280,
-        "height": 1000,
+        "path": "experiments/keyboard-traversal/refresh-dev-10b4/screenshots/task-footer-tab.png",
+        "commit": "c96e8aa74ff5e309cdab07a1b70d0242f33bed75",
+        "sha256": "3a92c04ac869dc1e6d3fb37deda6db491b6f2ca7090ea9398a8de592d6e4c6ee",
+        "bytes": 154222,
+        "gitBlob": "e3e80a9f0dae1b21c8e971e5c51f2825dacf7a9d",
+        "width": 1440,
+        "height": 900,
         "mime": "image/png",
-        "caption": "同一 HTML 真实 Tab65 到 footer；没有视觉改版，原 mapping false / ZIP 未解析不变。",
+        "caption": "同页真实 Tab 到尾，没有视觉改版；root task47/PR63 与 checker48/64 分列，不回写 Task 实验的16条失败。",
         "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
       },
-      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/d930863147cd6adfb5d4275f011c06caf4b24f92/experiments/keyboard-traversal",
+      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/c96e8aa74ff5e309cdab07a1b70d0242f33bed75/experiments/keyboard-traversal",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-keyboard-traversal/experiments/keyboard-traversal",
-      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/d930863147cd6adfb5d4275f011c06caf4b24f92/experiments/keyboard-traversal/screenshots/tab-65-footer.png"
+      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/c96e8aa74ff5e309cdab07a1b70d0242f33bed75/experiments/keyboard-traversal/refresh-dev-10b4/screenshots/task-footer-tab.png"
     },
     {
       "id": "preview-dashed-ink",
@@ -1171,38 +1171,38 @@
     },
     {
       "id": "clipboard-outcome",
-      "commit": "68866954a19cfe3b6599f3c27ff3cb10427f7d44",
+      "commit": "0e4a2c71c9550905004d20bbadb3b33d6bd85f3d",
       "branch": "codex/lab-clipboard-outcome",
       "directory": "experiments/clipboard-outcome",
       "group": "product",
-      "inputKind": "受控 API 注入 / 既有 PR 输入",
-      "imagePath": "experiments/clipboard-outcome/screenshots/missing-ask-candidate.png",
-      "imageCaption": "API 缺失时保留完整消息供手工恢复；未写 OS 剪贴板。",
+      "inputKind": "受控 API 注入 / dev10b4 同输入",
+      "imagePath": "experiments/clipboard-outcome/refresh-dev-10b4/screenshots/candidate-missing-ask.png",
+      "imageCaption": "受控缺失 API 时保留完整消息供手工恢复；未写 OS 剪贴板，两页三阶段及同7条写作 warnings，自动 browser 未请求。",
       "title": "Clipboard outcome",
-      "value": "复制不可用时保留可选择的内容，恢复后重试不重复包装问题",
-      "limits": "基线3f95；8种API边界、邻近32/core19、canonical双ZIP/抽包通过；同一真实PR输入基线/候选三阶段通过；API受控注入实测，未写OS clipboard；自动browser未请求",
+      "value": "复制API缺失/拒绝不误报成功，完整追问保留可手工复制，编辑全文后重试不再包装",
+      "limits": "基线10b4；8叶场景、32邻近/19core/generated/235ZIP+解包smoke；4docs正常刷新；3实图与受控API缺失/拒绝/恢复exact；静态3gate同7warnings/browser未跑，非OSclipboard/AT",
       "readme": {
         "path": "experiments/clipboard-outcome/README.md",
-        "commit": "68866954a19cfe3b6599f3c27ff3cb10427f7d44",
+        "commit": "0e4a2c71c9550905004d20bbadb3b33d6bd85f3d",
         "sha256": "5a41eaca0d7cf5cc5992d3343769bd81a7a68dc67110b03380e1f21027dbfe6b",
         "bytes": 6942,
         "gitBlob": "5a89bf5c18213afdfb29d9e32f53662fe057c009"
       },
       "image": {
-        "path": "experiments/clipboard-outcome/screenshots/missing-ask-candidate.png",
-        "commit": "68866954a19cfe3b6599f3c27ff3cb10427f7d44",
-        "sha256": "071e0e1919089bbd1145025085edd0d950eb62cfd4c2d639aeee2963393fe201",
-        "bytes": 284229,
-        "gitBlob": "c09adb28c56816c2cb90171edb5a68434f2013db",
+        "path": "experiments/clipboard-outcome/refresh-dev-10b4/screenshots/candidate-missing-ask.png",
+        "commit": "0e4a2c71c9550905004d20bbadb3b33d6bd85f3d",
+        "sha256": "e9ee025bf2d31da8fc52aa87449201a0e8737b2e415f8ea66b442c0a3e7e0c36",
+        "bytes": 268598,
+        "gitBlob": "b67a4f8973b9788e03cc2fd4b990918158958d44",
         "width": 1280,
         "height": 1000,
         "mime": "image/png",
-        "caption": "API 缺失时保留完整消息供手工恢复；未写 OS 剪贴板。",
+        "caption": "受控缺失 API 时保留完整消息供手工恢复；未写 OS 剪贴板，两页三阶段及同7条写作 warnings，自动 browser 未请求。",
         "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
       },
-      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/68866954a19cfe3b6599f3c27ff3cb10427f7d44/experiments/clipboard-outcome",
+      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/0e4a2c71c9550905004d20bbadb3b33d6bd85f3d/experiments/clipboard-outcome",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-clipboard-outcome/experiments/clipboard-outcome",
-      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/68866954a19cfe3b6599f3c27ff3cb10427f7d44/experiments/clipboard-outcome/screenshots/missing-ask-candidate.png"
+      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/0e4a2c71c9550905004d20bbadb3b33d6bd85f3d/experiments/clipboard-outcome/refresh-dev-10b4/screenshots/candidate-missing-ask.png"
     },
     {
       "id": "byte-views",
@@ -1273,6 +1273,146 @@
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/d81830d34fdd698992b39913eb3fa3cd55d66a32/experiments/source-keyboard",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-source-keyboard/experiments/source-keyboard",
       "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/d81830d34fdd698992b39913eb3fa3cd55d66a32/experiments/source-keyboard/screenshots/candidate-enter-viewer.png"
+    },
+    {
+      "id": "notebook-occurrences",
+      "commit": "2090b0ff144b7bc3425d52821655f659858f5d6a",
+      "branch": "codex/lab-notebook-occurrences",
+      "directory": "experiments/notebook-occurrences",
+      "group": "content",
+      "inputKind": "固定 nbdime 完整 fixture",
+      "imagePath": "experiments/notebook-occurrences/screenshots/explainer-overview.png",
+      "imageCaption": "六个 cell 按位置保留：source 改变与保存 output 改变分列；没有运行 notebook 或推断执行依赖。",
+      "title": "Notebook occurrences",
+      "value": "六个重复文本cell按位置保留，分清源码改变与保存输出改变",
+      "limits": "内容限定固定nbdime三完整fixture；11事实审计，Tree四阶段/Explainer三阶段且browser未跑；4真实图/DOM字段核实；无kernel/nbdime执行、稳定ID或因果推断",
+      "readme": {
+        "path": "experiments/notebook-occurrences/README.md",
+        "commit": "2090b0ff144b7bc3425d52821655f659858f5d6a",
+        "sha256": "16c537bb400dd0c6c2dc7efdef52a95a0e72c6f196024a6eb8683037731006dc",
+        "bytes": 8226,
+        "gitBlob": "affabba1df8e5862a1263646eb6020d9e24a37e9"
+      },
+      "image": {
+        "path": "experiments/notebook-occurrences/screenshots/explainer-overview.png",
+        "commit": "2090b0ff144b7bc3425d52821655f659858f5d6a",
+        "sha256": "24db235f847663e50468b1f9eae4595629408416a10f30811649e6bca7199137",
+        "bytes": 186253,
+        "gitBlob": "cffbc14603e5e2a835a8f26b5db48744eb92c4d2",
+        "width": 1440,
+        "height": 1100,
+        "mime": "image/png",
+        "caption": "六个 cell 按位置保留：source 改变与保存 output 改变分列；没有运行 notebook 或推断执行依赖。",
+        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+      },
+      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/2090b0ff144b7bc3425d52821655f659858f5d6a/experiments/notebook-occurrences",
+      "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-notebook-occurrences/experiments/notebook-occurrences",
+      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/2090b0ff144b7bc3425d52821655f659858f5d6a/experiments/notebook-occurrences/screenshots/explainer-overview.png"
+    },
+    {
+      "id": "config-origins",
+      "commit": "14867942a81542c1ce1b0d4aae38c6e7b9ddddef",
+      "branch": "codex/lab-config-origins",
+      "directory": "experiments/config-origins",
+      "group": "content",
+      "inputKind": "固定 Figment 完整测试",
+      "imagePath": "experiments/config-origins/screenshots/overview.png",
+      "imageCaption": "provider 声明、幸存字段与整体错误归属分开；join 的 max=20 没有修复该测试约束，未运行 Rust。",
+      "title": "Config origins",
+      "value": "区分provider声明、幸存字段与错误归属，解释join的max=20为何未修复整体约束",
+      "limits": "内容限定固定Figment完整测试；7原件/6源码摘录核对、3静态gate通过/browser未请求；3实图和hover/Escape；未执行Rust/provider或声称配置文件行号",
+      "readme": {
+        "path": "experiments/config-origins/README.md",
+        "commit": "14867942a81542c1ce1b0d4aae38c6e7b9ddddef",
+        "sha256": "4a5a12cbf62197f61b90271463ffe545e6b8094a837bc870c9e5af0e7415539e",
+        "bytes": 5727,
+        "gitBlob": "74d26e1eeda3dd3e45d5fc056744fda82016bf6a"
+      },
+      "image": {
+        "path": "experiments/config-origins/screenshots/overview.png",
+        "commit": "14867942a81542c1ce1b0d4aae38c6e7b9ddddef",
+        "sha256": "e21dbb3239569af1e01b8eb33760ffa9dd0afc017c68bb286436c8b4bb42c7b6",
+        "bytes": 201111,
+        "gitBlob": "f9ea7c6e3263f18891e8a5f1279889c488b7e125",
+        "width": 1440,
+        "height": 1100,
+        "mime": "image/png",
+        "caption": "provider 声明、幸存字段与整体错误归属分开；join 的 max=20 没有修复该测试约束，未运行 Rust。",
+        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+      },
+      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/14867942a81542c1ce1b0d4aae38c6e7b9ddddef/experiments/config-origins",
+      "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-config-origins/experiments/config-origins",
+      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/14867942a81542c1ce1b0d4aae38c6e7b9ddddef/experiments/config-origins/screenshots/overview.png"
+    },
+    {
+      "id": "benchmark-reading",
+      "commit": "7b8258cdc3f7bc2d9c6a0277feaa5d31b1a70686",
+      "branch": "codex/lab-benchmark-reading",
+      "directory": "experiments/benchmark-reading",
+      "group": "content",
+      "inputKind": "固定 benchstat example / golden",
+      "imagePath": "experiments/benchmark-reading/screenshots/overview.png",
+      "imageCaption": "四个 median 与 CI/p/n/~ 邻表；上游历史材料，未重跑统计或 benchmark，不声称普遍性能收益。",
+      "title": "Benchmark reading",
+      "value": "四组median与CI/p/n/~并排，区分中心值变化与上游比较结论",
+      "limits": "固定benchstat完整old/new/CSV与40值；10事实审计、3静态gate通过/browser未跑、3实图；不重算统计、不称本轮benchmark或版本普遍收益",
+      "readme": {
+        "path": "experiments/benchmark-reading/README.md",
+        "commit": "7b8258cdc3f7bc2d9c6a0277feaa5d31b1a70686",
+        "sha256": "371f0b6965b7badbb2417b09bd503afc5796540c8da6f6973b68032573b7d515",
+        "bytes": 7338,
+        "gitBlob": "e6e0b10840b8932a710510b7a43e02c1edab13d0"
+      },
+      "image": {
+        "path": "experiments/benchmark-reading/screenshots/overview.png",
+        "commit": "7b8258cdc3f7bc2d9c6a0277feaa5d31b1a70686",
+        "sha256": "5d74a6d1693e0677f64c4b59c7b1d535a6815db4834b82fa9748dfc96c124771",
+        "bytes": 236850,
+        "gitBlob": "0b7d16dbefd16adea991c67a5ea1fec3fd127933",
+        "width": 1440,
+        "height": 1100,
+        "mime": "image/png",
+        "caption": "四个 median 与 CI/p/n/~ 邻表；上游历史材料，未重跑统计或 benchmark，不声称普遍性能收益。",
+        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+      },
+      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/7b8258cdc3f7bc2d9c6a0277feaa5d31b1a70686/experiments/benchmark-reading",
+      "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-benchmark-reading/experiments/benchmark-reading",
+      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/7b8258cdc3f7bc2d9c6a0277feaa5d31b1a70686/experiments/benchmark-reading/screenshots/overview.png"
+    },
+    {
+      "id": "task-occurrences",
+      "commit": "caffb4aabb13b04a77bb9475866ad65465d79b20",
+      "branch": "codex/lab-task-occurrences",
+      "directory": "experiments/task-occurrences",
+      "group": "content",
+      "inputKind": "固定 Gradle fixture / expected",
+      "imagePath": "experiments/task-occurrences/screenshots/overview.png",
+      "imageCaption": "11 个打印位置对应 10 个身份；两处 compileJava 共用目标，打印次数不是执行次数；解释页仍有 16 条键盘诊断。",
+      "title": "Task occurrences",
+      "value": "11打印位置对应10身份，两个compileJava位置定位同一双父节点",
+      "limits": "固定Gradle完整8文件fixture/14原件/5源码；原生四阶段、解释页三阶段通过但16键盘诊断；5实图/两次pointer定位；未执行Gradle，打印数不当执行数",
+      "readme": {
+        "path": "experiments/task-occurrences/README.md",
+        "commit": "caffb4aabb13b04a77bb9475866ad65465d79b20",
+        "sha256": "064f47046bac485a40ad043032ba3ed40b16dc105f060c6a4ec719dc87109d04",
+        "bytes": 8762,
+        "gitBlob": "5d90a6d04ae564ff9058943149e8f9168a65ec50"
+      },
+      "image": {
+        "path": "experiments/task-occurrences/screenshots/overview.png",
+        "commit": "caffb4aabb13b04a77bb9475866ad65465d79b20",
+        "sha256": "f7b2378b674a63375fe892b2f69121ca509fc7c9b4441458dc99c96e0151b36c",
+        "bytes": 168552,
+        "gitBlob": "55cc7fc7f8f49bc16dc3cd290e0806684febea53",
+        "width": 1440,
+        "height": 1100,
+        "mime": "image/png",
+        "caption": "11 个打印位置对应 10 个身份；两处 compileJava 共用目标，打印次数不是执行次数；解释页仍有 16 条键盘诊断。",
+        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+      },
+      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/caffb4aabb13b04a77bb9475866ad65465d79b20/experiments/task-occurrences",
+      "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-task-occurrences/experiments/task-occurrences",
+      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/caffb4aabb13b04a77bb9475866ad65465d79b20/experiments/task-occurrences/screenshots/overview.png"
     }
   ],
   "deferred": {
@@ -1283,13 +1423,13 @@
     "reason": "既有 Incoming 行已能一步回到来源；兼容测试通过没有证明额外 Back 按钮更好用。暂不引入额外状态，不计入已发布数量。"
   },
   "summary": {
-    "experiments": 35,
-    "images": 35,
-    "pngBytes": 7880446,
+    "experiments": 39,
+    "images": 39,
+    "pngBytes": 8645160,
     "groupCounts": {
       "product": 12,
       "offline": 15,
-      "content": 8
+      "content": 12
     },
     "deferredCountedAsPublished": false
   }

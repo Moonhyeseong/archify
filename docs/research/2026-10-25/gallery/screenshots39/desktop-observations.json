@@ -1,0 +1,516 @@
+[
+  {
+    "action": "filter",
+    "filter": "product",
+    "count": "显示 12 / 39 项",
+    "visible": [
+      "finder-highlights",
+      "relation-reference",
+      "delta-values",
+      "diagnostic-locations",
+      "finder-context",
+      "waterfall-status",
+      "workflow-self-loop",
+      "diff-line-numbers",
+      "keyboard-traversal",
+      "preview-dashed-ink",
+      "clipboard-outcome",
+      "source-keyboard"
+    ],
+    "theme": "light",
+    "viewport": [
+      1440,
+      1100
+    ],
+    "pageWidth": 1440
+  },
+  {
+    "action": "filter",
+    "filter": "offline",
+    "count": "显示 15 / 39 项",
+    "visible": [
+      "task-review-map",
+      "dependency-map",
+      "trace-waterfall",
+      "markdown-outline",
+      "dbml-erd",
+      "change-coupling",
+      "payload-delta",
+      "decision-thread",
+      "migration-plan",
+      "state-contract",
+      "ci-conditions",
+      "plan-actions",
+      "recipe-stages",
+      "test-context-map",
+      "test-failure-map"
+    ],
+    "theme": "light",
+    "viewport": [
+      1440,
+      1100
+    ],
+    "pageWidth": 1440
+  },
+  {
+    "action": "filter",
+    "filter": "content",
+    "count": "显示 12 / 39 项",
+    "visible": [
+      "source-question-tour",
+      "delivery-witness",
+      "retained-size",
+      "lasso-witness",
+      "plan-row-counts",
+      "copy-identity",
+      "cli-reading-tour",
+      "byte-views",
+      "notebook-occurrences",
+      "config-origins",
+      "benchmark-reading",
+      "task-occurrences"
+    ],
+    "theme": "light",
+    "viewport": [
+      1440,
+      1100
+    ],
+    "pageWidth": 1440
+  },
+  {
+    "action": "filter",
+    "filter": "all",
+    "count": "显示 39 / 39 项",
+    "visible": [
+      "finder-highlights",
+      "relation-reference",
+      "delta-values",
+      "diagnostic-locations",
+      "finder-context",
+      "waterfall-status",
+      "workflow-self-loop",
+      "diff-line-numbers",
+      "keyboard-traversal",
+      "preview-dashed-ink",
+      "clipboard-outcome",
+      "source-keyboard",
+      "task-review-map",
+      "dependency-map",
+      "trace-waterfall",
+      "markdown-outline",
+      "dbml-erd",
+      "change-coupling",
+      "payload-delta",
+      "decision-thread",
+      "migration-plan",
+      "state-contract",
+      "ci-conditions",
+      "plan-actions",
+      "recipe-stages",
+      "test-context-map",
+      "test-failure-map",
+      "source-question-tour",
+      "delivery-witness",
+      "retained-size",
+      "lasso-witness",
+      "plan-row-counts",
+      "copy-identity",
+      "cli-reading-tour",
+      "byte-views",
+      "notebook-occurrences",
+      "config-origins",
+      "benchmark-reading",
+      "task-occurrences"
+    ],
+    "theme": "light",
+    "viewport": [
+      1440,
+      1100
+    ],
+    "pageWidth": 1440
+  },
+  {
+    "action": "search-and-original-image",
+    "id": "notebook-occurrences",
+    "result": {
+      "count": "显示 1 / 39 项",
+      "visible": [
+        "notebook-occurrences"
+      ],
+      "theme": "light",
+      "viewport": [
+        1440,
+        1100
+      ],
+      "pageWidth": 1440
+    },
+    "detail": {
+      "title": "Notebook occurrences",
+      "description": "六个 cell 按位置保留：source 改变与保存 output 改变分列；没有运行 notebook 或推断执行依赖。 · 1440 × 1100 px · 原 PNG 未编辑",
+      "hash": "SHA-256 24db235f847663e50468b1f9eae4595629408416a10f30811649e6bca7199137",
+      "source": "https://github.com/tt-a1i/archify/blob/2090b0ff144b7bc3425d52821655f659858f5d6a/experiments/notebook-occurrences/screenshots/explainer-overview.png",
+      "naturalWidth": 1440,
+      "naturalHeight": 1100,
+      "focus": "close-image",
+      "actualSha256": "24db235f847663e50468b1f9eae4595629408416a10f30811649e6bca7199137"
+    },
+    "original": {
+      "pressed": "true",
+      "mode": "true",
+      "width": 1440,
+      "naturalWidth": 1440
+    },
+    "returned": {
+      "closed": true,
+      "focusId": "notebook-occurrences",
+      "focusClass": "image-open"
+    }
+  },
+  {
+    "action": "search-and-original-image",
+    "id": "config-origins",
+    "result": {
+      "count": "显示 1 / 39 项",
+      "visible": [
+        "config-origins"
+      ],
+      "theme": "light",
+      "viewport": [
+        1440,
+        1100
+      ],
+      "pageWidth": 1440
+    },
+    "detail": {
+      "title": "Config origins",
+      "description": "provider 声明、幸存字段与整体错误归属分开；join 的 max=20 没有修复该测试约束，未运行 Rust。 · 1440 × 1100 px · 原 PNG 未编辑",
+      "hash": "SHA-256 e21dbb3239569af1e01b8eb33760ffa9dd0afc017c68bb286436c8b4bb42c7b6",
+      "source": "https://github.com/tt-a1i/archify/blob/14867942a81542c1ce1b0d4aae38c6e7b9ddddef/experiments/config-origins/screenshots/overview.png",
+      "naturalWidth": 1440,
+      "naturalHeight": 1100,
+      "focus": "close-image",
+      "actualSha256": "e21dbb3239569af1e01b8eb33760ffa9dd0afc017c68bb286436c8b4bb42c7b6"
+    },
+    "original": {
+      "pressed": "true",
+      "mode": "true",
+      "width": 1440,
+      "naturalWidth": 1440
+    },
+    "returned": {
+      "closed": true,
+      "focusId": "config-origins",
+      "focusClass": "image-open"
+    }
+  },
+  {
+    "action": "search-and-original-image",
+    "id": "benchmark-reading",
+    "result": {
+      "count": "显示 1 / 39 项",
+      "visible": [
+        "benchmark-reading"
+      ],
+      "theme": "light",
+      "viewport": [
+        1440,
+        1100
+      ],
+      "pageWidth": 1440
+    },
+    "detail": {
+      "title": "Benchmark reading",
+      "description": "四个 median 与 CI/p/n/~ 邻表；上游历史材料，未重跑统计或 benchmark，不声称普遍性能收益。 · 1440 × 1100 px · 原 PNG 未编辑",
+      "hash": "SHA-256 5d74a6d1693e0677f64c4b59c7b1d535a6815db4834b82fa9748dfc96c124771",
+      "source": "https://github.com/tt-a1i/archify/blob/7b8258cdc3f7bc2d9c6a0277feaa5d31b1a70686/experiments/benchmark-reading/screenshots/overview.png",
+      "naturalWidth": 1440,
+      "naturalHeight": 1100,
+      "focus": "close-image",
+      "actualSha256": "5d74a6d1693e0677f64c4b59c7b1d535a6815db4834b82fa9748dfc96c124771"
+    },
+    "original": {
+      "pressed": "true",
+      "mode": "true",
+      "width": 1440,
+      "naturalWidth": 1440
+    },
+    "returned": {
+      "closed": true,
+      "focusId": "benchmark-reading",
+      "focusClass": "image-open"
+    }
+  },
+  {
+    "action": "search-and-original-image",
+    "id": "task-occurrences",
+    "result": {
+      "count": "显示 1 / 39 项",
+      "visible": [
+        "task-occurrences"
+      ],
+      "theme": "light",
+      "viewport": [
+        1440,
+        1100
+      ],
+      "pageWidth": 1440
+    },
+    "detail": {
+      "title": "Task occurrences",
+      "description": "11 个打印位置对应 10 个身份；两处 compileJava 共用目标，打印次数不是执行次数；解释页仍有 16 条键盘诊断。 · 1440 × 1100 px · 原 PNG 未编辑",
+      "hash": "SHA-256 f7b2378b674a63375fe892b2f69121ca509fc7c9b4441458dc99c96e0151b36c",
+      "source": "https://github.com/tt-a1i/archify/blob/caffb4aabb13b04a77bb9475866ad65465d79b20/experiments/task-occurrences/screenshots/overview.png",
+      "naturalWidth": 1440,
+      "naturalHeight": 1100,
+      "focus": "close-image",
+      "actualSha256": "f7b2378b674a63375fe892b2f69121ca509fc7c9b4441458dc99c96e0151b36c"
+    },
+    "original": {
+      "pressed": "true",
+      "mode": "true",
+      "width": 1440,
+      "naturalWidth": 1440
+    },
+    "returned": {
+      "closed": true,
+      "focusId": "task-occurrences",
+      "focusClass": "image-open"
+    }
+  },
+  {
+    "action": "search-and-original-image",
+    "id": "finder-context",
+    "result": {
+      "count": "显示 1 / 39 项",
+      "visible": [
+        "finder-context"
+      ],
+      "theme": "light",
+      "viewport": [
+        1440,
+        1100
+      ],
+      "pageWidth": 1440
+    },
+    "detail": {
+      "title": "Finder result descriptions",
+      "description": "新 dev 同名结果 UI 保持原样；8 个可访问描述来自实际 AX 记录，图片本身不证明发声或 AT 验收。 · 1440 × 1000 px · 原 PNG 未编辑",
+      "hash": "SHA-256 0d81e2c6dc9ea25898f71610fbe4d859fccb879c775bb7905ad5b1e70ec06ddd",
+      "source": "https://github.com/tt-a1i/archify/blob/e219bc5ba4fdf90f653c2fae7eadcc1ceeeda942/experiments/finder-context/refresh-dev-10b4/screenshots/candidate-finder.png",
+      "naturalWidth": 1440,
+      "naturalHeight": 1000,
+      "focus": "close-image",
+      "actualSha256": "0d81e2c6dc9ea25898f71610fbe4d859fccb879c775bb7905ad5b1e70ec06ddd"
+    },
+    "original": {
+      "pressed": "true",
+      "mode": "true",
+      "width": 1440,
+      "naturalWidth": 1440
+    },
+    "returned": {
+      "closed": true,
+      "focusId": "finder-context",
+      "focusClass": "image-open"
+    }
+  },
+  {
+    "action": "search-and-original-image",
+    "id": "waterfall-status",
+    "result": {
+      "count": "显示 1 / 39 项",
+      "visible": [
+        "waterfall-status"
+      ],
+      "theme": "light",
+      "viewport": [
+        1440,
+        1100
+      ],
+      "pageWidth": 1440
+    },
+    "detail": {
+      "title": "Waterfall status text",
+      "description": "新 dev 同一构造输入显示 Error / Cancelled；时间比例不是成功率，非真实操作记录。 · 1440 × 1000 px · 原 PNG 未编辑",
+      "hash": "SHA-256 d149f17fc7e478573091723b5d00fcec2f24ca7febb4554c79e094299b12d409",
+      "source": "https://github.com/tt-a1i/archify/blob/68311bb8461ddd4086af6f2e41ce60e9e6f7f5d4/experiments/waterfall-status/refresh-dev-10b4/screenshots/candidate-light.png",
+      "naturalWidth": 1440,
+      "naturalHeight": 1000,
+      "focus": "close-image",
+      "actualSha256": "d149f17fc7e478573091723b5d00fcec2f24ca7febb4554c79e094299b12d409"
+    },
+    "original": {
+      "pressed": "true",
+      "mode": "true",
+      "width": 1440,
+      "naturalWidth": 1440
+    },
+    "returned": {
+      "closed": true,
+      "focusId": "waterfall-status",
+      "focusClass": "image-open"
+    }
+  },
+  {
+    "action": "search-and-original-image",
+    "id": "workflow-self-loop",
+    "result": {
+      "count": "显示 1 / 39 项",
+      "visible": [
+        "workflow-self-loop"
+      ],
+      "theme": "light",
+      "viewport": [
+        1440,
+        1100
+      ],
+      "pageWidth": 1440
+    },
+    "detail": {
+      "title": "Workflow self-loop",
+      "description": "候选保留原始合法自环 pins；新 dev 基线验证失败且没有 HTML，不伪造 before 图。 · 1440 × 1000 px · 原 PNG 未编辑",
+      "hash": "SHA-256 bf431d202ddcd601556d1d49332e20a3585fa27ba632a06e9f5df0983f1e1a1d",
+      "source": "https://github.com/tt-a1i/archify/blob/9578b8e4f2daf71b383704921d4df9cef19b8d13/experiments/workflow-self-loop/refresh-dev-10b4/screenshots/candidate-light.png",
+      "naturalWidth": 1440,
+      "naturalHeight": 1000,
+      "focus": "close-image",
+      "actualSha256": "bf431d202ddcd601556d1d49332e20a3585fa27ba632a06e9f5df0983f1e1a1d"
+    },
+    "original": {
+      "pressed": "true",
+      "mode": "true",
+      "width": 1440,
+      "naturalWidth": 1440
+    },
+    "returned": {
+      "closed": true,
+      "focusId": "workflow-self-loop",
+      "focusClass": "image-open"
+    }
+  },
+  {
+    "action": "search-and-original-image",
+    "id": "keyboard-traversal",
+    "result": {
+      "count": "显示 1 / 39 项",
+      "visible": [
+        "keyboard-traversal"
+      ],
+      "theme": "light",
+      "viewport": [
+        1440,
+        1100
+      ],
+      "pageWidth": 1440
+    },
+    "detail": {
+      "title": "Keyboard traversal",
+      "description": "同页真实 Tab 到尾，没有视觉改版；root task47/PR63 与 checker48/64 分列，不回写 Task 实验的16条失败。 · 1440 × 900 px · 原 PNG 未编辑",
+      "hash": "SHA-256 3a92c04ac869dc1e6d3fb37deda6db491b6f2ca7090ea9398a8de592d6e4c6ee",
+      "source": "https://github.com/tt-a1i/archify/blob/c96e8aa74ff5e309cdab07a1b70d0242f33bed75/experiments/keyboard-traversal/refresh-dev-10b4/screenshots/task-footer-tab.png",
+      "naturalWidth": 1440,
+      "naturalHeight": 900,
+      "focus": "close-image",
+      "actualSha256": "3a92c04ac869dc1e6d3fb37deda6db491b6f2ca7090ea9398a8de592d6e4c6ee"
+    },
+    "original": {
+      "pressed": "true",
+      "mode": "true",
+      "width": 1440,
+      "naturalWidth": 1440
+    },
+    "returned": {
+      "closed": true,
+      "focusId": "keyboard-traversal",
+      "focusClass": "image-open"
+    }
+  },
+  {
+    "action": "search-and-original-image",
+    "id": "clipboard-outcome",
+    "result": {
+      "count": "显示 1 / 39 项",
+      "visible": [
+        "clipboard-outcome"
+      ],
+      "theme": "light",
+      "viewport": [
+        1440,
+        1100
+      ],
+      "pageWidth": 1440
+    },
+    "detail": {
+      "title": "Clipboard outcome",
+      "description": "受控缺失 API 时保留完整消息供手工恢复；未写 OS 剪贴板，两页三阶段及同7条写作 warnings，自动 browser 未请求。 · 1280 × 1000 px · 原 PNG 未编辑",
+      "hash": "SHA-256 e9ee025bf2d31da8fc52aa87449201a0e8737b2e415f8ea66b442c0a3e7e0c36",
+      "source": "https://github.com/tt-a1i/archify/blob/0e4a2c71c9550905004d20bbadb3b33d6bd85f3d/experiments/clipboard-outcome/refresh-dev-10b4/screenshots/candidate-missing-ask.png",
+      "naturalWidth": 1280,
+      "naturalHeight": 1000,
+      "focus": "close-image",
+      "actualSha256": "e9ee025bf2d31da8fc52aa87449201a0e8737b2e415f8ea66b442c0a3e7e0c36"
+    },
+    "original": {
+      "pressed": "true",
+      "mode": "true",
+      "width": 1280,
+      "naturalWidth": 1280
+    },
+    "returned": {
+      "closed": true,
+      "focusId": "clipboard-outcome",
+      "focusClass": "image-open"
+    }
+  },
+  {
+    "action": "clear-query",
+    "count": "显示 39 / 39 项",
+    "visible": [
+      "finder-highlights",
+      "relation-reference",
+      "delta-values",
+      "diagnostic-locations",
+      "finder-context",
+      "waterfall-status",
+      "workflow-self-loop",
+      "diff-line-numbers",
+      "keyboard-traversal",
+      "preview-dashed-ink",
+      "clipboard-outcome",
+      "source-keyboard",
+      "task-review-map",
+      "dependency-map",
+      "trace-waterfall",
+      "markdown-outline",
+      "dbml-erd",
+      "change-coupling",
+      "payload-delta",
+      "decision-thread",
+      "migration-plan",
+      "state-contract",
+      "ci-conditions",
+      "plan-actions",
+      "recipe-stages",
+      "test-context-map",
+      "test-failure-map",
+      "source-question-tour",
+      "delivery-witness",
+      "retained-size",
+      "lasso-witness",
+      "plan-row-counts",
+      "copy-identity",
+      "cli-reading-tour",
+      "byte-views",
+      "notebook-occurrences",
+      "config-origins",
+      "benchmark-reading",
+      "task-occurrences"
+    ],
+    "theme": "light",
+    "viewport": [
+      1440,
+      1100
+    ],
+    "pageWidth": 1440
+  }
+]

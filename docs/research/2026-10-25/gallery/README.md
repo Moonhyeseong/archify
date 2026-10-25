@@ -27,23 +27,54 @@ python3 docs/research/2026-10-25/gallery/verify.py --node '<node-executable>'
 
 各实验自己的失败与未运行阶段保留在卡片及固定来源中。例如 Task review map 的 ZIP unresolved 和键盘遍历失败，不会因为有截图而变为通过。
 
-## 当前 35 版的静态绑定
+## 当前 39 版的静态绑定
 
-本次固定 hub 为 `8353da8e412c3a87956a37eb675cf3e34eb29888`：35 项 / 35 张原始 PNG，实际分组为 12 / 15 / 8。新增 Source keyboard activation：同一真实 CLI tour 节点的 Enter/Space 执行已有鼠标开原图动作，AX 提供 button 语义；Tab 可达和焦点样式原本已存在，不将其称为本次新增收益。该实验的配对页没有宣称经过本轮 finalize 或完整 browser gate。
+本次固定 hub 为 [`fc7017426177ad44e213242a2b1756ffba43b9e3`](https://github.com/tt-a1i/archify/blob/fc7017426177ad44e213242a2b1756ffba43b9e3/docs/research/2026-10-25/README.md)：39 项 / 39 张原始 PNG，实际分组为 **12 产品交互 / 15 离线适配 / 12 内容示例**。Relation return 仍为暂缓，不计入已发布数。
 
-Diff line numbers 与 Preview dashed ink 主图更新为固定 dev10b4 上同输入对照，仍分别只改变行号 nowrap 与三项颜色映射。Diff 的完整 browser gate 未跑；Preview 的候选及精确解包四阶段通过。两分支四份旧 docs 的保留范围各见固定 README，不把历史页写成当前刷新结果。其余 32 张既有主图的 PNG bytes/Git blob 与 34 版相同；此前各输入来源与未运行阶段边界保持。
+本版新增 Notebook occurrences、Config origins、Benchmark reading 和 Task occurrences 四个固定来源内容例，分别区分 source/保存 output、provider 声明/幸存字段/错误归属、median/上游比较结论，以及打印位置/任务身份。它们是上游已提交 fixture、测试或 golden 的阅读内容，不是本轮上游程序执行或真实用户工作负载。Task 的解释页仍有 **16 条键盘诊断**；Notebook、Config 和 Benchmark 的 Explainer 自动 browser 阶段未运行，截图不补成完整 gate 通过。
 
-当前 `index.html` SHA-256：`888daa609c7f877751a5cbe08970308a213e2910157a1dc9d5a6693b594fab88`；manifest SHA-256：`d9acc39e1b4f36c8c5ca1e71dbd733a2548a19a9766bb2e24edca322cb13c91d`。35 项固定 HEAD、origin 跟踪、README 与 PNG Git blob/原字节全部核对；卡片、过滤按钮和分组数量一致，嵌图解码 SHA、固定链接与 JS 语法核验通过。HTML 为 10,598,360 bytes，35 张原 PNG 共 7,880,446 bytes，没有远程资源引用。
+Finder、Waterfall、Workflow、Keyboard 与 Clipboard 五项主图更新到固定 dev10b4 刷新证据：
 
-协调 Agent 已对当前 35 版在 **1440×1100 浅色**实际检查 35/12/15/8 筛选、Source keyboard / Diff / Preview 三项关键词各一个结果、完整原图的尺寸/固定提交/SHA、三次 Esc 返回 opener，以及清空后 35 项和页面宽度 1440（无横向溢出）。四张新 PNG 均已实际查看；[browser-evidence.json](browser-evidence.json) 绑定当前 HTML/manifest、11 项原始观测、模板与四图 SHA/bytes/尺寸。独立 Agent 隔离重建三份静态派生产物逐字一致。
+- Finder 的可见 UI 本来相同，8 个 description 改善由实际 AX 记录证明；图片不证明发声或真人 AT 验收。
+- Waterfall 是构造输入中给定 Error/Cancelled 的文字显示，不是实际操作成功率；首次 XML 缺依赖与后续单独 3 pass 分开保留。
+- Workflow 保留原始合法自环 pins；基线真实验证失败且没有 HTML，不虚构 before 图或运行 trace。
+- Keyboard 对同一 HTML 继续真实 Tab 到末尾，没有视觉改版。root 的 task47/PR63 与 checker 的48/64属于不同起点/动作，分别记账；这次 checker 结果不回写 Task 内容实验原有16条失败。
+- Clipboard 以受控 API 缺失展示完整消息保留；未写 OS clipboard。两页三阶段通过且各保留7条写作 warnings，整体自动 browser 未请求。
 
-模板与固定 34 版逐字相同，SHA-256 `bc7d0445a2c11578de09b89afb0a3f57e468d8923dbfcc1d98978b203b7f5ce9`。本轮没有重测 390px、深色、原始尺寸 End 滚动、精细 modal Tab 遍历或空结果；390px/深色 UI 观测明确复用下列历史 34 版，不称为当前 35 版实测。外链只核对未打开，未执行各实验 HTML；鼠标/键盘与 CSS 视口模拟不代表实体触屏、读屏器或人类验收。实验自己的失败、未运行阶段与拒绝边界仍保持。
+其余30项主图保持历史选择；实验输入、失败与未运行边界仍以各固定 README 为准。当前卡片的价值与限制直接读取固定 hub 表格，不将分支已发布解释为合入、release、CI 通过或人类接受；未出现的 CI 检查不当作通过。
 
-![35项桌面浅色浏览页](screenshots/desktop-light.png)
+一次正常 build 与静态 verify 已完成。39 项的 HEAD、origin 跟踪、README 与 PNG Git blob/原字节全部核对；卡片、过滤按钮和分组数量一致，嵌图解码 SHA、固定链接与 JS 语法核验通过。HTML 为 **11,628,628 bytes**，39 张原 PNG 共 **8,645,160 bytes**，没有远程资源引用。
 
-![Source keyboard实验完整原图](screenshots/source-keyboard-dialog.png)
+- `index.html` SHA-256：`f884139c70fb99c2d290d1cbc24613d5d35adbab99d5eed5c12cb36f5eec9fd7`
+- `manifest.json` SHA-256：`dffc5cb30f9fbefae49a31b440b44df685c961849e7103416ab11b75b1164785`
 
-[Diff 完整图](screenshots/diff-line-numbers-dialog.png) · [Preview 完整图](screenshots/preview-dashed-ink-dialog.png)
+模板与历史35版逐字相同，SHA-256 `bc7d0445a2c11578de09b89afb0a3f57e468d8923dbfcc1d98978b203b7f5ce9`。本次未修改 builder、verify 或模板。
+
+## 当前39版的实际浏览器观察
+
+协调 Agent 已在 Ego / Chromium 实际操作当前冻结 HTML，并逐张查看7张原PNG。[browser-evidence.json](browser-evidence.json) 绑定 HTML、manifest、verification、selection、模板、README、20项原始观测和7图的SHA/bytes/尺寸；摘要是派生记录，不是delivery receipt。[桌面14项观测](screenshots39/desktop-observations.json)与[响应式6项观测](screenshots39/responsive-observations.json)为原字节安全副本。
+
+1440×1100浅色实际核对四个筛选39/12/15/12；四个新增与五个刷新项目各搜索为1/39，并逐项打开完整图，核实际data bytes摘要等于UI摘要、天然尺寸与固定GitHub来源。九次切到原始尺寸后，实际图片宽度等于天然宽度；九次Escape均关闭dialog并返回原opener。清空后恢复39项，页面宽度1440。
+
+390×844浅色实看Task卡片；深色dialog宽374px、x=8，页面宽390，Escape回Task opener。空结果为0/39，reset回39且焦点在query。随后桌面深色宽度1440、显示39项。这些是本版实际观测，不挪用旧版移动/深色结果。
+
+![39项桌面浅色](screenshots39/overview-desktop-light.png)
+
+| Task完整图 | Benchmark完整图 |
+| --- | --- |
+| ![Task完整原PNG与边界说明](screenshots39/task-occurrences-dialog.png) | ![Benchmark完整原PNG与边界说明](screenshots39/benchmark-reading-dialog.png) |
+
+[Clipboard完整图](screenshots39/clipboard-outcome-dialog.png) · [390px浅色Task卡](screenshots39/task-mobile-light.png) · [390px深色dialog](screenshots39/task-mobile-dark-dialog.png) · [桌面深色](screenshots39/overview-desktop-dark.png)。旧35版截图原文件未删除或覆盖，继续按下节固定历史链接阅读。
+
+本轮没有执行各实验HTML、外链导航、OS clipboard、读屏器或真人验收；dialog里展示的是原PNG，不是重新测试嵌套的产品。未重测原始尺寸End滚动或精细modal Tab遍历，不把Escape返回opener写成完整焦点陷阱验收；CSS视口模拟不代表实体触屏。实验自己的失败/未运行阶段保持，例如Task的16条键盘诊断不因gallery能打开截图而转为通过。
+
+## 历史 35 版浏览器检查
+
+固定 [35版提交 `c23d585c`](https://github.com/tt-a1i/archify/tree/c23d585c6a5aead61ca30198b1fcbecc5fe8595d/docs/research/2026-10-25/gallery) 的 hub 为 `8353da8e412c3a87956a37eb675cf3e34eb29888`，HTML SHA-256 为 `888daa609c7f877751a5cbe08970308a213e2910157a1dc9d5a6693b594fab88`，manifest 为 `d9acc39e1b4f36c8c5ca1e71dbd733a2548a19a9766bb2e24edca322cb13c91d`。当时为35项/35图、分组12/15/8；独立 Agent 隔离重建三份静态派生产物逐字一致。
+
+协调 Agent 当时在1440×1100浅色实际检查35/12/15/8筛选、Source keyboard / Diff / Preview三项关键词各一个结果、完整原图尺寸/固定提交/SHA、三次Esc返回opener，以及清空后35项和页面宽度1440无横向溢出。四张图已实际查看。该轮没有重测390px、深色、原始尺寸End滚动、精细modal Tab遍历或空结果；390px/深色只引用更早34版历史观测，既不是35版重测，也不是当前39版结果。
+
+[35版浏览器摘要](https://github.com/tt-a1i/archify/blob/c23d585c6a5aead61ca30198b1fcbecc5fe8595d/docs/research/2026-10-25/gallery/browser-evidence.json) · [桌面图](https://github.com/tt-a1i/archify/blob/c23d585c6a5aead61ca30198b1fcbecc5fe8595d/docs/research/2026-10-25/gallery/screenshots/desktop-light.png) · [Source keyboard完整图](https://github.com/tt-a1i/archify/blob/c23d585c6a5aead61ca30198b1fcbecc5fe8595d/docs/research/2026-10-25/gallery/screenshots/source-keyboard-dialog.png) · [Diff完整图](https://github.com/tt-a1i/archify/blob/c23d585c6a5aead61ca30198b1fcbecc5fe8595d/docs/research/2026-10-25/gallery/screenshots/diff-line-numbers-dialog.png) · [Preview完整图](https://github.com/tt-a1i/archify/blob/c23d585c6a5aead61ca30198b1fcbecc5fe8595d/docs/research/2026-10-25/gallery/screenshots/preview-dashed-ink-dialog.png)。外链当时只核对未打开，未执行各实验HTML；视口模拟不代表实体触屏、读屏器或人类验收。旧截图即使本目录后续替换，其原字节仍由这些固定历史链接保留。
 
 ## 历史 34 版浏览器检查
 

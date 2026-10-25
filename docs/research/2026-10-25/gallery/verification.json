@@ -1,14 +1,14 @@
 {
   "kind": "static-byte-and-syntax-verification",
-  "htmlSha256": "888daa609c7f877751a5cbe08970308a213e2910157a1dc9d5a6693b594fab88",
-  "manifestSha256": "d9acc39e1b4f36c8c5ca1e71dbd733a2548a19a9766bb2e24edca322cb13c91d",
-  "htmlBytes": 10598360,
-  "experiments": 35,
-  "originalPngs": 35,
+  "htmlSha256": "f884139c70fb99c2d290d1cbc24613d5d35adbab99d5eed5c12cb36f5eec9fd7",
+  "manifestSha256": "dffc5cb30f9fbefae49a31b440b44df685c961849e7103416ab11b75b1164785",
+  "htmlBytes": 11628628,
+  "experiments": 39,
+  "originalPngs": 39,
   "groupCounts": {
     "product": 12,
     "offline": 15,
-    "content": 8
+    "content": 12
   },
   "filterCountsMatchActualCards": true,
   "allEmbeddedPngHashesMatchManifest": true,
