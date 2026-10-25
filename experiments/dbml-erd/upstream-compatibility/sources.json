@@ -1,0 +1,55 @@
+{
+  "kind": "fixed upstream data provenance; copied files retain their Apache-2.0 license",
+  "repository": "https://github.com/holistics/dbml",
+  "commit": "0c34d8514ae7ebb457549531ef4fa5dab839c4fa",
+  "license": {
+    "file": "LICENSE.Apache-2.0",
+    "url": "https://github.com/holistics/dbml/blob/0c34d8514ae7ebb457549531ef4fa5dab839c4fa/LICENSE",
+    "bytes": 11358,
+    "sha256": "45fc81806b99adde47bc9085247697788d3f786c6b5304021113d1f44d0e8486"
+  },
+  "inputs": [
+    {
+      "file": "simple-table.dbml",
+      "path": "dbml-playground/public/examples/basic/simple-table.dbml",
+      "purpose": "Official DBML Playground basic users-table example; not a production database.",
+      "blockingSemantics": [
+        {
+          "location": "3: username varchar [not null]",
+          "reason": "Bare varchar is outside the current parameterized-type grammar; non-PK/non-FK NOT NULL also has no native ERD attribute field."
+        },
+        {
+          "location": "4: email varchar [unique]",
+          "reason": "Bare varchar is outside the current parameterized-type grammar. The unique key itself is representable."
+        },
+        {
+          "location": "5: created_at timestamp [default: `now()`]",
+          "reason": "Default expressions are rejected; native ERD attributes have no default-value field. The expression must not be executed or silently omitted."
+        }
+      ],
+      "url": "https://github.com/holistics/dbml/blob/0c34d8514ae7ebb457549531ef4fa5dab839c4fa/dbml-playground/public/examples/basic/simple-table.dbml",
+      "bytes": 127,
+      "sha256": "1b80c6c2db701eaeed7994ee610c84a7dd2d90601e2cb810e90bab9c406a26bc"
+    },
+    {
+      "file": "primary_key.in.dbml",
+      "path": "packages/dbml-parse/__tests__/snapshots/interpreter/input/primary_key.in.dbml",
+      "purpose": "Complete official interpreter regression fixture for primary-key spelling; one table/one field, not a production schema.",
+      "blockingSemantics": [
+        {
+          "location": "2: id int [primary key]",
+          "reason": "Only pk is accepted; the official primary key synonym is outside this adapter grammar. This is the sole blocker in this complete file."
+        }
+      ],
+      "url": "https://github.com/holistics/dbml/blob/0c34d8514ae7ebb457549531ef4fa5dab839c4fa/packages/dbml-parse/__tests__/snapshots/interpreter/input/primary_key.in.dbml",
+      "bytes": 36,
+      "sha256": "6ecee8c55da3a78b6693a93863ae68af937afbb293586bfe5f0ff1e58771d756"
+    }
+  ],
+  "scope": "Complete, byte-identical upstream files. No source extraction, upstream execution, SQL execution or parser expansion.",
+  "inspectionBasis": "blockingSemantics are a manual full-file contract assessment, not additional diagnostics emitted by the first-error reader.",
+  "contractReferences": {
+    "officialSettings": "https://github.com/holistics/dbml/blob/0c34d8514ae7ebb457549531ef4fa5dab839c4fa/dbml-homepage/docs/docs.md#L116-L134",
+    "nativeAttributes": "archify/schemas/erd.schema.json:187-229"
+  }
+}

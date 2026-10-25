@@ -95,6 +95,19 @@ node archify/bin/archify.mjs finalize erd "$DBML_LAB_RUN_DIR/order-payments.erd.
 
 最初 finalize 因缺少 `meta.output` 失败，修正为相对输出后重跑通过；失败原始记录也保留在 checkout 外，不把首次尝试写成成功。
 
+## 官方完整输入的拒绝证据：与 synthetic 成功分开
+
+本轮新增两个**未修改、未截取的完整官方文件**，固定于 `holistics/dbml@0c34d8514ae7ebb457549531ef4fa5dab839c4fa`，保留 [Apache-2.0 许可](upstream-compatibility/LICENSE.Apache-2.0)；[来源、精确 bytes/SHA-256 与全部阻塞语义](upstream-compatibility/sources.json) 可核对原文。它们分别是官方 Playground 基础例和解释器回归 fixture，均不是生产数据库或真实用户采用的证据。
+
+| 完整输入 | reader 实际结果 | 完整文件的合同边界（人工逐项核查） |
+| --- | --- | --- |
+| [simple-table.dbml](upstream-compatibility/simple-table.dbml)，127 bytes | exit 1，`dbml/unsupported-token`，5:34；没有创建输出 | 两个裸 `varchar` 不在类型语法内；非 PK/FK 的 `username [not null]` 没有原生属性字段承载；`created_at` 的 ``default: `now()` `` 也没有原生默认值字段，不能执行或静默丢弃。 |
+| [primary_key.in.dbml](upstream-compatibility/primary_key.in.dbml)，36 bytes | exit 1，`dbml/unsupported-setting`，2:13；没有创建输出 | 唯一阻塞是官方 `primary key` 同义拼写，当前只收 `pk`；本轮未扩大 grammar，也未用改写后的输入冒充原文通过。 |
+
+[实际 CLI 执行的 portable 摘要](upstream-compatibility/rejection-summary.json) 记录 adapter 源码 hash、输入 hash、exit、首个诊断和输出不存在的观察，以及未修改 stdout/stderr 的 hash；原始含本机路径的日志留在 checkout 外。reader 只报首个失败，上表其余阻塞来自完整原文与现有合同的核查，不能当作 reader 已聚合报告。裸类型/同义拼写即使补上，也无法解决基础例的 NOT NULL/default 表达缺口，因此本轮保留拒绝、不改 adapter 或原生 schema。
+
+既有订单/支付图仍只证明原创 synthetic 样本成功；这两个官方输入均没有生成 JSON/HTML 或失败伪图，也没有进入 render/finalize。探索时另查看了 371 份混合测试/示例文件，这不是生产支持率调查，其文件不随本目录复制。复现时对上述任一文件运行现有 `dbml-to-erd.mjs <完整输入> <新的临时输出路径>` 即可；预期非零退出，原始 stderr 同样应保留在 checkout 外。本轮只补证据，未重跑已通过的 39 项测试。
+
 ## 成本与下一步边界
 
 依 `test-value` 选择了公共转换结果和失败写出保护，不做 source-string assertions 或布局快照。Focused simplification survey 覆盖 CLI → tokenizer/parser → native JSON → public renderer：一个文件承接转换，不建图模型缓存、插件注册层或 runtime 依赖；没有有价值的进一步删除。未修改 vendored Skills。

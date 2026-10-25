@@ -1,0 +1,79 @@
+{
+  "kind": "portable projection of actual CLI executions; not the original stderr or a native renderer receipt",
+  "adapterRevision": "feab6ae685692630d6d837622dc7bdcb57a09679",
+  "adapterSource": {
+    "path": "experiments/dbml-erd/dbml-to-erd.mjs",
+    "bytes": 12869,
+    "sha256": "f1d5024ad1e434855c84d5332bbab4b94b8c403bc23bc661d9e341c6b94d015e"
+  },
+  "node": "v22.23.3",
+  "rawLogsRetainedOutsideCheckout": true,
+  "rawProcessRecord": {
+    "bytes": 2688,
+    "sha256": "00636811627970aca3fef8a991c36a997ce1ee4aa6dfe4d3c8399cd585bc58f7"
+  },
+  "results": [
+    {
+      "input": "simple-table.dbml",
+      "bytes": 127,
+      "sha256": "1b80c6c2db701eaeed7994ee610c84a7dd2d90601e2cb810e90bab9c406a26bc",
+      "command": "node experiments/dbml-erd/dbml-to-erd.mjs experiments/dbml-erd/upstream-compatibility/simple-table.dbml <fresh-temporary-output.erd.json>",
+      "exitCode": 1,
+      "signal": null,
+      "outputCreated": false,
+      "diagnosticProjection": [
+        {
+          "code": "dbml/unsupported-token",
+          "severity": "error",
+          "message": "dbml/unsupported-token at 5:34: Unsupported character \"`\"; quoted names, strings, expressions and optionality operators are outside this subset.",
+          "line": 5,
+          "column": 34,
+          "supportedFixes": [
+            "Use only the documented Table/column/short Ref subset; see experiments/dbml-erd/README.md."
+          ]
+        }
+      ],
+      "originalSubjectOmitted": "Raw subject.path is an absolute local input path; it remains only in the unmodified external stderr log.",
+      "rawStdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rawStderr": {
+        "bytes": 525,
+        "sha256": "f2b4e9ce11727262fe253cd06c41c45521f555fcbbc0362cfd3d8313759948de"
+      }
+    },
+    {
+      "input": "primary_key.in.dbml",
+      "bytes": 36,
+      "sha256": "6ecee8c55da3a78b6693a93863ae68af937afbb293586bfe5f0ff1e58771d756",
+      "command": "node experiments/dbml-erd/dbml-to-erd.mjs experiments/dbml-erd/upstream-compatibility/primary_key.in.dbml <fresh-temporary-output.erd.json>",
+      "exitCode": 1,
+      "signal": null,
+      "outputCreated": false,
+      "diagnosticProjection": [
+        {
+          "code": "dbml/unsupported-setting",
+          "severity": "error",
+          "message": "dbml/unsupported-setting at 2:13: Unsupported column setting primary.",
+          "line": 2,
+          "column": 13,
+          "supportedFixes": [
+            "Use only the documented Table/column/short Ref subset; see experiments/dbml-erd/README.md."
+          ]
+        }
+      ],
+      "originalSubjectOmitted": "Raw subject.path is an absolute local input path; it remains only in the unmodified external stderr log.",
+      "rawStdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "rawStderr": {
+        "bytes": 452,
+        "sha256": "fbb8c6627a0710e4c9eba55ff93f25b8dea28e206f20f259612ba9de2041b5d3"
+      }
+    }
+  ],
+  "conclusion": "Both complete unmodified upstream inputs were rejected before JSON output. No renderer/finalize or failure image was generated. Existing synthetic success is separate.",
+  "counterfactual": "No rewritten or normalized input is included as acceptance evidence."
+}
