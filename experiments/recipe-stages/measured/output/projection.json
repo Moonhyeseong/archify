@@ -1,0 +1,70 @@
+{
+  "format": "recipe-stages-lab/1",
+  "upstreamCommit": "d6fee036379c531369dc37f67f8d4640f6bf1e2d",
+  "selected": {
+    "namepath": "b",
+    "module": "",
+    "priors": 1,
+    "dependencies": [
+      {
+        "index": 0,
+        "stage": "before",
+        "recipe": "a",
+        "qualified": "a",
+        "arguments": [],
+        "star": null,
+        "expansion": "no-arguments"
+      },
+      {
+        "index": 1,
+        "stage": "after",
+        "recipe": "c",
+        "qualified": "c",
+        "arguments": [],
+        "star": null,
+        "expansion": "no-arguments"
+      }
+    ],
+    "body": [],
+    "parameters": []
+  },
+  "before": [
+    {
+      "index": 0,
+      "stage": "before",
+      "recipe": "a",
+      "qualified": "a",
+      "arguments": [],
+      "star": null,
+      "expansion": "no-arguments"
+    }
+  ],
+  "after": [
+    {
+      "index": 1,
+      "stage": "after",
+      "recipe": "c",
+      "qualified": "c",
+      "arguments": [],
+      "star": null,
+      "expansion": "no-arguments"
+    }
+  ],
+  "inventory": [
+    "a",
+    "b",
+    "c"
+  ],
+  "coverage": {
+    "sourceRecipes": "unknown: disabled_recipes omitted by Just serialization",
+    "absentModules": "unknown: absent_modules omitted by Just serialization",
+    "execution": "not-run",
+    "expressions": "not-evaluated",
+    "dependentBodies": "not-expanded",
+    "schedulingWithinGroups": "not-modeled",
+    "invocationArguments": "not-expanded",
+    "inspectedDumpRecipes": 3,
+    "inspectedDumpModules": 1
+  },
+  "inputSha256": "d928f2c42de9caa3024b4d3e213de523b2bcbd605e1ec39de00783d2d4bd1664"
+}

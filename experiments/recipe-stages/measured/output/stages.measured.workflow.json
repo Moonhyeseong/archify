@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Recipe stages: b",
+    "subtitle": "priors=1; frozen dump; no execution",
+    "output": "stages.html",
+    "animation": "none",
+    "legend": {
+      "entries": {
+        "backend": {
+          "label": "Recipe phase"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "recipe",
+      "label": "Declared phase grouping; no order inferred within each group"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "before",
+      "lane": "recipe",
+      "col": 0,
+      "type": "backend",
+      "label": "Before body: 1 calls",
+      "width": 200,
+      "height": 84
+    },
+    {
+      "id": "body",
+      "lane": "recipe",
+      "col": 1,
+      "type": "backend",
+      "label": "b",
+      "width": 200,
+      "height": 84
+    },
+    {
+      "id": "after",
+      "lane": "recipe",
+      "col": 2,
+      "type": "backend",
+      "label": "After body: 1 calls",
+      "width": 200,
+      "height": 84
+    }
+  ],
+  "edges": [
+    {
+      "from": "before",
+      "to": "body",
+      "label": "phase boundary"
+    },
+    {
+      "from": "body",
+      "to": "after",
+      "label": "phase boundary"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "Before body: qualified calls",
+      "items": [
+        "a"
+      ]
+    },
+    {
+      "dot": "orange",
+      "title": "After body: qualified calls",
+      "items": [
+        "c"
+      ]
+    },
+    {
+      "dot": "orange",
+      "title": "Coverage is bounded",
+      "items": [
+        "Dump recipes only; disabled recipes unknown",
+        "No Just, shell, env or backtick evaluation",
+        "Group membership only, not a runtime trace"
+      ]
+    }
+  ]
+}

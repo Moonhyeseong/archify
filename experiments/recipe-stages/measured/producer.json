@@ -1,0 +1,25 @@
+{
+  "kind": "actual isolated official release tool identity; executable not included in this bundle",
+  "release": "1.59.0",
+  "releaseUrl": "https://github.com/casey/just/releases/tag/1.59.0",
+  "annotatedTagObject": "86955cf7350674082802c8e886f36769537e0d22",
+  "releaseSourceCommit": "2638e9c0941edb1f409da7426fa7842887656973",
+  "observedVersionStdout": "just 1.59.0\n",
+  "asset": {
+    "url": "https://github.com/casey/just/releases/download/1.59.0/just-1.59.0-aarch64-apple-darwin.tar.gz",
+    "sha256": "6574cea774ed4cae12e24b6aa11857de33e80dab4667cf628fd5840df96a2a9d",
+    "bytes": 2174952
+  },
+  "officialChecksumManifest": {
+    "local": "source/SHA256SUMS",
+    "sha256": "5eba6040689c90f4ccd54def70691487a778d25111c372edfbdfa373ea54c36d",
+    "bytes": 1184
+  },
+  "binary": {
+    "sha256": "dd760b653ab24afb6e11bb4c2de423f75085d2eea751f8e1d51058074052ecdd",
+    "bytes": 5171888
+  },
+  "adapterContractCommit": "d6fee036379c531369dc37f67f8d4640f6bf1e2d",
+  "identityBoundary": "The actual producer is the fixed release, not the later adapter contract commit. Their source identities are kept separate.",
+  "executionScope": "Only --version and explicit --dump --dump-format json in an isolated temporary working directory. No recipe name passed to Just, no --evaluate, global installation or recipe execution."
+}

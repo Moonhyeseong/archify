@@ -4,6 +4,8 @@ Read an existing, frozen Just JSON dump and show one recipe's **before dependenc
 
 Two original synthetic fixtures differ in exactly one value: `recipes.release.priors` is 2 versus 1. `api::check` therefore moves from before the body to after it. `web::check`, `api::check`, and root `check` remain distinct identities. The diagrams use three aggregate phase nodes and two phase-boundary arrows: **no edge or runtime order is invented between the two priors**. The grouping also makes no concurrency claim.
 
+The original source and verification sections below describe the historical synthetic snapshot at `101648642a6ccae67b82a9a48bc4507c3b8a627a`; its inputs, generated source documents, HTML, summary and screenshots retain their exact bytes. A separate [measured supplement](measured/README.md) now records a real official Just dump and a complete natural-example refusal. That capture invokes Just only in dump mode; the adapter itself still only reads supplied JSON.
+
 | Fixture | Native Workflow | Explainer |
 | --- | --- | --- |
 | priors = 2 | [stages](example-priors-2/stages.html) | [review](example-priors-2/review.html) |
@@ -71,3 +73,11 @@ At the same viewport, changing only priors from 2 to 1 changes the before/after 
 Capture settings and current HTML/image hashes are in [capture.json](screenshots/capture.json). Images were captured and inspected by the coordinating agent; human acceptance remains pending. No measured reader-efficiency benefit is claimed.
 
 AI assistance: Codex and GPT-6.1 Sol subagents performed research, implementation, focused validation, independent review and documentation. This branch is an experiment awaiting repository-owner acceptance.
+
+## Actual tool-export supplement
+
+[Measured evidence](measured/README.md) uses verified temporary Just **1.59.0**, release source `2638e9c0941edb1f409da7426fa7842887656973`, distinct from adapter contract commit `d6fee036379c531369dc37f67f8d4640f6bf1e2d`. The complete official test literal is preserved as 39 bytes; applying its owning harness's unindent yields the 16-byte effective input. Just dumped that input without running recipes; the unchanged parser accepts `b` with `a` before, an empty body, and `c` after. The complete natural `cross-platform.just` also dumped successfully but remains refused for assignments.
+
+The published dump is explicitly a **location-removed derived copy**, not the original export: only `/source` changes. Raw/derived adapter Workflow and direct-review outputs are byte-identical; their projections differ only in the correct complete-input SHA. The new measured view uses a separate authored `Recipe phase` legend override; the direct adapter JSON/draft are retained. No default legend, parser, producer schema or old artifact was changed. Only the generic generated provenance paragraph was made source-neutral.
+
+After merging dev `67f12389212c54b3122da60e2813c7f8dab7ab2f` at `52fc4fdc80aac291acb37e851176b926f3c99ae3`, the original 10 focused tests pass with zero skips; both measured finalizes pass all four stages, with Explainer browser-check explicitly requested. Actual coordinating-agent images and machine gates are recorded separately. No recipe, expression evaluation, global installation, shared-product change, ZIP rebuild or user-benefit claim is part of this supplement.

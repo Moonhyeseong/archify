@@ -1,0 +1,46 @@
+{
+  "kind": "derived portable projection, NOT an original renderer receipt",
+  "rawReceipt": {
+    "sha256": "d1975ae4049099810228113e4ba534ba7ec055789766d7e2581e3d79ed8531c6",
+    "bytes": 757318
+  },
+  "softwareBase": "67f12389212c54b3122da60e2813c7f8dab7ab2f",
+  "ok": true,
+  "status": "pass",
+  "type": "explainer",
+  "quality": "showcase",
+  "specification": {
+    "path": "output/review.measured.archify.md",
+    "sha256": "87616bf977216aea8bcb2b30ef9dde3d6e51596d16a998cd35e68a778698f046",
+    "bytes": 3527
+  },
+  "artifact": {
+    "path": "output/review.html",
+    "sha256": "e560d3af8f4150fe040c2127ecba357582730fe1c98a18a520b925e54a4d303e",
+    "bytes": 527896
+  },
+  "stages": {
+    "validate": {
+      "status": "pass",
+      "exitCode": 0
+    },
+    "deliver": {
+      "status": "pass",
+      "exitCode": 0
+    },
+    "check": {
+      "status": "pass",
+      "exitCode": 0
+    },
+    "browser-check": {
+      "status": "pass",
+      "exitCode": 0
+    }
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "diagnostics": [],
+  "visualReview": "not-requested"
+}

@@ -1,0 +1,52 @@
+{
+  "kind": "official test extraction/effective-input provenance; not an original independent Justfile",
+  "sourceCommit": "d6fee036379c531369dc37f67f8d4640f6bf1e2d",
+  "sourceFile": "tests/json.rs",
+  "sourceSha256": "68a186de0072858c06b040effd0d88fbb7d0cf69bd8c837fdd8d9bb3d9837de6",
+  "literalContentRange": {
+    "startByte": 11548,
+    "endByteExclusive": 11587,
+    "start": {
+      "line": 601,
+      "column": 6
+    },
+    "end": {
+      "line": 605,
+      "column": 5
+    }
+  },
+  "originalLiteral": {
+    "bytes": 39,
+    "sha256": "736f0e33ac382925a10a5f27f83fa3ed6a8c042c6643c3eb77979f00c4d2b1e1",
+    "local": "inputs/priors-original-literal.just"
+  },
+  "effectiveInput": {
+    "bytes": 16,
+    "sha256": "42ab8afbe107c6d7b6874523b614b918a72b277a2d72e3797d2545d9e183aae8",
+    "local": "source/priors-official-effective.just"
+  },
+  "owningSources": {
+    "tests/test.rs": {
+      "sha256": "094c988334c8ffd823428e7faef60a33c86e9173892b16397bbce199f7be551f",
+      "bytes": 8434
+    },
+    "src/unindent.rs": {
+      "sha256": "6afc3962fde6b851752b1f79e76bc619cf9f7e081442c476db841c160106243a",
+      "bytes": 2661
+    }
+  },
+  "transformation": "Fixed official harness unindent: remove leading/trailing blank lines and common indentation, preserve nonblank line content and newline. No recipe, dependency or body edited.",
+  "sourceLocal": "source/upstream/tests/json.rs",
+  "originalCaptureTransformScriptSHA256": "8e751e4aac873006b77b016466ea0d2b301218aba7b812da9bbf78c67f299cea",
+  "reproductionScripts": {
+    "extract-official-literal.py": {
+      "sha256": "f83e737a4cdfc092040605106af83d46bfd6aac12491b9710457a81681a558c0",
+      "bytes": 371
+    },
+    "unindent-official-test.py": {
+      "sha256": "0da5eb1cd954b3f5f24c0f35caf4f86bb4cf11deed0fd3edd2cea2b8304a1d87",
+      "bytes": 837
+    }
+  },
+  "reproductionObservation": "Published scripts reproduce the 39-byte literal and 16-byte effective input exactly in fresh temporary paths. Exclusive output creation was added to the publication helpers; input-content transformation is unchanged."
+}

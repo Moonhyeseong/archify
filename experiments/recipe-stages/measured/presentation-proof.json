@@ -1,0 +1,39 @@
+{
+  "kind": "authored display-label override using the existing Workflow legend contract; not an adapter/renderer/parser change",
+  "directAdapterJson": {
+    "path": "output/stages.workflow.json",
+    "sha256": "54ca452fdf01ca6dddd991bc8e7188a0b2ea8dd8419791dd22f9096fa5258fdd",
+    "bytes": 1584
+  },
+  "presentationJson": {
+    "path": "output/stages.measured.workflow.json",
+    "sha256": "8ba3fc551ed5ae386d99343ab74b4c862a234cecead199d9cbf692c1743f4bf2",
+    "bytes": 1699
+  },
+  "actualChangedJsonPaths": [
+    "/meta/legend"
+  ],
+  "authoredValue": {
+    "entries": {
+      "backend": {
+        "label": "Recipe phase"
+      }
+    }
+  },
+  "allOtherJsonFieldsExactlyEqual": true,
+  "topologyAndNodeFieldsChanged": false,
+  "standaloneAndEmbeddedUseSamePresentationSpec": true,
+  "directAdapterDraft": {
+    "path": "output/review.archify.md",
+    "sha256": "03800327b4e05ad6b31f1a8841595f5baca689b8d08bc62aa321a9e2d2ada3a3",
+    "bytes": 2405
+  },
+  "authoredExplainerSource": {
+    "path": "output/review.measured.archify.md",
+    "sha256": "87616bf977216aea8bcb2b30ef9dde3d6e51596d16a998cd35e68a778698f046",
+    "bytes": 3527
+  },
+  "authoredMarkdownChanges": "Direct draft prefix retained except its diagram source points to the presentation JSON. Only measured provenance/display-override prose is appended.",
+  "appendedTextSHA256": "31c5c048de6576a28e2fdf729f006cf64a3511c1a573bc5e4abaf41b21d3c865",
+  "firstVersion": "First two HTMLs/receipts passed machine checks but had the default Agent logic legend. Original bytes remain outside checkout; coordinator requested this truthful Recipe phase override."
+}

@@ -1,0 +1,211 @@
+{
+  "kind": "coordinator browser observations and unedited screenshot bindings; derived summary",
+  "pathBase": "experiments/recipe-stages/measured",
+  "html": [
+    {
+      "path": "output/review.html",
+      "sha256": "e560d3af8f4150fe040c2127ecba357582730fe1c98a18a520b925e54a4d303e"
+    },
+    {
+      "path": "output/stages.html",
+      "sha256": "ca9e37832aba791af928f578ef81df2c822d524af00455ce3e8ebf2a2bb61405"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "screenshots/explainer-overview.png",
+      "sha256": "16b0197eedabc78f6fe65d0b1433b80cb462a32f81bfd8618553394699b0fa37",
+      "bytes": 154768,
+      "imagePixels": [
+        1440,
+        1100
+      ],
+      "viewportCssPixelsBeforeCapture": [
+        1440,
+        1100
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "theme": "light",
+      "style": "Clean",
+      "writtenAtFromFileMtime": "2026-10-25T09:08:36.011912+00:00",
+      "rootViewed": true
+    },
+    {
+      "path": "screenshots/explainer-full.png",
+      "sha256": "bb6eb280075a6102d819bbf1719d36755e4e9ad916d0bdcb967981ef3491657d",
+      "bytes": 334356,
+      "imagePixels": [
+        1440,
+        2301
+      ],
+      "viewportCssPixelsBeforeCapture": [
+        1440,
+        1100
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "theme": "light",
+      "style": "Clean",
+      "writtenAtFromFileMtime": "2026-10-25T09:08:36.155132+00:00",
+      "rootViewed": true
+    },
+    {
+      "path": "screenshots/workflow.png",
+      "sha256": "e50d5c76dc995baf798df6adc22c40040463b10a26b44040621a61fd7672c00b",
+      "bytes": 84222,
+      "imagePixels": [
+        1440,
+        1100
+      ],
+      "viewportCssPixelsBeforeCapture": [
+        1440,
+        1100
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "theme": "light",
+      "style": "Classic",
+      "writtenAtFromFileMtime": "2026-10-25T09:08:55.212405+00:00",
+      "rootViewed": true
+    }
+  ],
+  "observedAt": [
+    "2026-10-25T09:08:36.155Z",
+    "2026-10-25T09:08:55.212Z"
+  ],
+  "observations": {
+    "explainer": {
+      "observedAt": "2026-10-25T09:08:36.155Z",
+      "title": "What changes when priors is 1? · Archify",
+      "width": 1440,
+      "height": 1100,
+      "documentHeight": 2311,
+      "tableRows": [
+        [
+          [
+            "Entry",
+            "Stage",
+            "Qualified identity",
+            "Raw dependency recipe",
+            "Arguments",
+            "Star",
+            "Expansion"
+          ],
+          [
+            "dependency-0",
+            "before",
+            "a",
+            "a",
+            "[]",
+            "null",
+            "no-arguments"
+          ],
+          [
+            "dependency-1",
+            "after",
+            "c",
+            "c",
+            "[]",
+            "null",
+            "no-arguments"
+          ]
+        ],
+        [
+          [
+            "Record",
+            "Identity and scope"
+          ],
+          [
+            "Producer",
+            "Official Just 1.59.0 release, source commit 2638e9c0941edb1f409da7426fa7842887656973"
+          ],
+          [
+            "Fixture",
+            "Official test literal: 39 bytes; upstream harness unindent yields the 16-byte effective input"
+          ],
+          [
+            "Contract",
+            "Adapter schema checked against d6fee036379c531369dc37f67f8d4640f6bf1e2d; this is not the binary producer commit"
+          ],
+          [
+            "Published copy",
+            "Derived from raw dump by replacing only its machine source location; not an original export"
+          ],
+          [
+            "Scope",
+            "Declared phase grouping; no recipe execution, scheduler trace or production acceptance"
+          ]
+        ]
+      ],
+      "headings": [
+        "结论",
+        "Where does the recipe body sit?",
+        "Which dependency is in each group?",
+        "What is known and what remains unexpanded?",
+        "Preserve the selected dependency projection",
+        "Which dumped recipe identities remain distinct?",
+        "Where did this measured input come from?",
+        "来源",
+        "",
+        "追问"
+      ],
+      "svgText": [
+        "01 / Declared phase grouping; no order inferred within each group",
+        "Before body: 1 calls",
+        "b",
+        "After body: 1 calls",
+        "phase boundary",
+        "phase boundary",
+        "Legend",
+        "Recipe phase"
+      ],
+      "sourceLinks": [
+        "https://github.com/tt-a1i/archify"
+      ],
+      "provenance": true
+    },
+    "native": {
+      "observedAt": "2026-10-25T09:08:55.212Z",
+      "title": "Recipe stages: b Diagram",
+      "width": 1440,
+      "height": 1100,
+      "documentHeight": 1100,
+      "theme": "light",
+      "bodyBackground": "rgb(244, 245, 247)",
+      "texts": [
+        "01 / Declared phase grouping; no order inferred within each group",
+        "Before body: 1 calls",
+        "b",
+        "After body: 1 calls",
+        "phase boundary",
+        "phase boundary",
+        "Legend",
+        "Recipe phase",
+        "3"
+      ],
+      "controls": [
+        "Visual style: Classic. Choose visual style",
+        "Visual style",
+        "Resume motion",
+        "Vector and motion",
+        "100% · Zoom in again to reveal tags and annotations. Reset diagram view"
+      ]
+    }
+  },
+  "rawBindings": [
+    {
+      "name": "explainer-checks.json",
+      "sha256": "28cc9fd720c55cd3bb6d65a5a48abe881e4e5f19bdbecf46172b8fbba1037a7d"
+    },
+    {
+      "name": "native-checks.json",
+      "sha256": "b6dec1d2e06bdd7e56cf3650917b6115fc1e000eb6e29f4a09705fcc2e515453"
+    }
+  ],
+  "limits": [
+    "Actual Chromium screenshots and DOM observations, distinct from automatic finalize browser gates.",
+    "No recipe execution, upstream browser interaction, external link opening, physical touch, assistive technology or human acceptance exercised.",
+    "Full-page PNG dimensions are separate from the viewport set before capture."
+  ]
+}

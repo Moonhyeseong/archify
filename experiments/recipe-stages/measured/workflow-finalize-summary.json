@@ -1,0 +1,46 @@
+{
+  "kind": "derived portable projection, NOT an original renderer receipt",
+  "rawReceipt": {
+    "sha256": "b923cbc4794ff1f4bcb0f02e87864479251602c28a17ce303db7faa1c7cd837a",
+    "bytes": 40563
+  },
+  "softwareBase": "67f12389212c54b3122da60e2813c7f8dab7ab2f",
+  "ok": true,
+  "status": "pass",
+  "type": "workflow",
+  "quality": "showcase",
+  "specification": {
+    "path": "output/stages.measured.workflow.json",
+    "sha256": "8ba3fc551ed5ae386d99343ab74b4c862a234cecead199d9cbf692c1743f4bf2",
+    "bytes": 1699
+  },
+  "artifact": {
+    "path": "output/stages.html",
+    "sha256": "ca9e37832aba791af928f578ef81df2c822d524af00455ce3e8ebf2a2bb61405",
+    "bytes": 832247
+  },
+  "stages": {
+    "validate": {
+      "status": "pass",
+      "exitCode": 0
+    },
+    "deliver": {
+      "status": "pass",
+      "exitCode": 0
+    },
+    "check": {
+      "status": "pass",
+      "exitCode": 0
+    },
+    "browser-check": {
+      "status": "pass",
+      "exitCode": 0
+    }
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "diagnostics": [],
+  "visualReview": "not-requested"
+}

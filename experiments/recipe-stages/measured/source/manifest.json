@@ -1,0 +1,49 @@
+{
+  "kind": "fixed complete upstream source files; no upstream test suite executed",
+  "repository": "https://github.com/casey/just",
+  "commit": "d6fee036379c531369dc37f67f8d4640f6bf1e2d",
+  "license": "CC0-1.0; original complete LICENSE retained",
+  "files": {
+    "LICENSE": {
+      "local": "source/upstream/LICENSE",
+      "bytes": 7048,
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "gitBlob": "0e259d42c996742e9e3cba14c677129b2c1b6311",
+      "url": "https://github.com/casey/just/blob/d6fee036379c531369dc37f67f8d4640f6bf1e2d/LICENSE"
+    },
+    "tests/test.rs": {
+      "local": "source/upstream/tests/test.rs",
+      "bytes": 8434,
+      "sha256": "094c988334c8ffd823428e7faef60a33c86e9173892b16397bbce199f7be551f",
+      "gitBlob": "fb47f70db5f53cf6ec622f65e6268e7992555c05",
+      "url": "https://github.com/casey/just/blob/d6fee036379c531369dc37f67f8d4640f6bf1e2d/tests/test.rs"
+    },
+    "tests/json.rs": {
+      "local": "source/upstream/tests/json.rs",
+      "bytes": 31215,
+      "sha256": "68a186de0072858c06b040effd0d88fbb7d0cf69bd8c837fdd8d9bb3d9837de6",
+      "gitBlob": "df952a1219d2929e3007009e553bebe92ab57ba3",
+      "url": "https://github.com/casey/just/blob/d6fee036379c531369dc37f67f8d4640f6bf1e2d/tests/json.rs"
+    },
+    "examples/cross-platform.just": {
+      "local": "source/upstream/examples/cross-platform.just",
+      "bytes": 796,
+      "sha256": "8ae7ca40a0cd079aa8b007dcfbd47b5508aa524528c80cd6ffea915bc799156d",
+      "gitBlob": "4617d418daa2c6091413c208ffed29b02d2714c0",
+      "url": "https://github.com/casey/just/blob/d6fee036379c531369dc37f67f8d4640f6bf1e2d/examples/cross-platform.just"
+    },
+    "src/unindent.rs": {
+      "local": "source/upstream/src/unindent.rs",
+      "bytes": 2661,
+      "sha256": "6afc3962fde6b851752b1f79e76bc619cf9f7e081442c476db841c160106243a",
+      "gitBlob": "c27673b233e9cfa62eaf9469d94b9bdecccee8cb",
+      "url": "https://github.com/casey/just/blob/d6fee036379c531369dc37f67f8d4640f6bf1e2d/src/unindent.rs"
+    }
+  },
+  "fixtureClassifications": {
+    "cross-platform.just": "Complete natural upstream example, not this-session Python environment setup or a production workload",
+    "priors-original-literal.just": "Exact 39-byte content between the fixed Rust string delimiters; not yet the harness effective Justfile",
+    "priors-official-effective.just": "Official-test effective input after the owning harness unindent; 16 bytes, empty recipe bodies; not an independent natural project file"
+  },
+  "owningHarness": "tests/test.rs passes the string through unindent before writing; src/unindent.rs defines the transform"
+}

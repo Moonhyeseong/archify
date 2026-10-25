@@ -1,0 +1,63 @@
+{
+  "kind": "actual official complete natural-example dump followed by current adapter refusal; no accepted graph",
+  "source": {
+    "path": "source/upstream/examples/cross-platform.just",
+    "sha256": "8ae7ca40a0cd079aa8b007dcfbd47b5508aa524528c80cd6ffea915bc799156d",
+    "bytes": 796,
+    "commit": "d6fee036379c531369dc37f67f8d4640f6bf1e2d"
+  },
+  "producerReleaseCommit": "2638e9c0941edb1f409da7426fa7842887656973",
+  "dump": {
+    "command": "<verified temporary just 1.59.0> --justfile cross-platform.just --dump --dump-format json",
+    "cwd": "isolated temporary directory holding the complete unchanged example",
+    "exitCode": 0,
+    "rawStdout": {
+      "sha256": "d6066b7a313c7cc94cd50a1926d2251cec194ce82b8621257c2d9aed167cc397",
+      "bytes": 2719
+    },
+    "rawStderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "privateRawRetainedOutsideCheckout": true
+  },
+  "adapter": {
+    "command": "node experiments/recipe-stages/convert.mjs <private original natural dump.json> upgrade-deps <fresh real output directory>",
+    "exitCode": 1,
+    "stderr": "Aliases and assignments are unsupported; provide a narrower frozen dump",
+    "outputCreated": false,
+    "rawStdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "rawStderr": {
+      "sha256": "470e1094d324709bfdcc2f25125519828e6a4e350b945804faec9ec78a7227eb",
+      "bytes": 72
+    }
+  },
+  "observedSelectedRecipe": {
+    "name": "upgrade-deps",
+    "priors": 0,
+    "dependencies": [
+      "bootstrap"
+    ],
+    "interpretation": "The supplied declaration puts bootstrap after the body; no recipe was executed."
+  },
+  "firstRefusalOnly": "Three assignments are present. This records the existing refusal; it does not claim exhaustive validation of all remaining constructs.",
+  "machineLocationPointers": [
+    "/source"
+  ],
+  "officialCodeSuffixPointersNotSanitized": [
+    "/assignments/python/value/2/2",
+    "/assignments/python/value/2/3",
+    "/recipes/bootstrap/body/2/1",
+    "/recipes/upgrade-deps/body/0/1"
+  ],
+  "notRun": [
+    "recipes",
+    "Python environment setup",
+    "pip",
+    "expressions",
+    "render/finalize for this rejected natural input"
+  ]
+}

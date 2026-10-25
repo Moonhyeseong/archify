@@ -1,0 +1,52 @@
+{
+  "kind": "location-removed DERIVED dump and unchanged-adapter output comparison; not an original Just export",
+  "originalRawDumpSHA256": "1ae6e99a5a0add3eef22999a0c1243fd2f4c0a567ec3d92e906476e38e9ff0b9",
+  "originalRawDumpBytes": 1359,
+  "derivedDump": {
+    "path": "inputs/official-test-effective.derived-dump.json",
+    "sha256": "d928f2c42de9caa3024b4d3e213de523b2bcbd605e1ec39de00783d2d4bd1664",
+    "bytes": 1319
+  },
+  "changes": [
+    {
+      "jsonPointer": "/source",
+      "originalValueKind": "Machine absolute source location retained only in private raw",
+      "originalValueSHA256": "129883511bc3c46d0c520a9f98ccf003a872e4c5b03b153651c39a8fa3fd5dfa",
+      "derivedValue": "source/priors-official-effective.just"
+    }
+  ],
+  "otherParsedValuesChanged": false,
+  "rawOriginalModified": false,
+  "script": {
+    "path": "derive-location-copy.py",
+    "sha256": "bd2c4169b75090aa015e655b5b2d177629b3ab10bff47cc76f5fb0b0e74a3591"
+  },
+  "outputs": [
+    {
+      "file": "stages.workflow.json",
+      "byteIdentical": true,
+      "rawInputOutputSHA256": "54ca452fdf01ca6dddd991bc8e7188a0b2ea8dd8419791dd22f9096fa5258fdd",
+      "derivedInputOutputSHA256": "54ca452fdf01ca6dddd991bc8e7188a0b2ea8dd8419791dd22f9096fa5258fdd"
+    },
+    {
+      "file": "review.archify.md",
+      "byteIdentical": true,
+      "rawInputOutputSHA256": "03800327b4e05ad6b31f1a8841595f5baca689b8d08bc62aa321a9e2d2ada3a3",
+      "derivedInputOutputSHA256": "03800327b4e05ad6b31f1a8841595f5baca689b8d08bc62aa321a9e2d2ada3a3"
+    },
+    {
+      "file": "projection.json",
+      "byteIdentical": false,
+      "rawInputOutputSHA256": "f41114dd70c57f8f9d409dc8e0cc56200fd2bd7e47d3affde7740b57dde0e97b",
+      "derivedInputOutputSHA256": "8ca2bc1a6b866ebe3ddec53f11f0d830bec66b5a58de2e0d4f6161b955c7d607"
+    }
+  ],
+  "projectionDifferencePointers": [
+    "/inputSha256"
+  ],
+  "remainingProjectionExactlyEqual": true,
+  "inputHashPolicy": "Each projection retains the SHA-256 of the actual complete input it consumed. No provenance hash overwritten to force equality.",
+  "sourceFieldUse": "convert.mjs validates Module.source as string plus general bounds; it is not used in the semantic projection.",
+  "rawProjectionSHA256": "f41114dd70c57f8f9d409dc8e0cc56200fd2bd7e47d3affde7740b57dde0e97b",
+  "rawArtifactsRetainedOutsideCheckout": true
+}
