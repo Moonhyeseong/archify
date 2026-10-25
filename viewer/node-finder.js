@@ -86,6 +86,10 @@
         return Array.prototype.slice.call(results.querySelectorAll('.node-finder-result'));
       }
 
+      function clearMatches() {
+        items.forEach(function (item) { item.node.removeAttribute('data-finder-match'); });
+      }
+
       function resolveContext(options) {
         var requested = options && options.context ? options.context : null;
         if (!requested && Archify.routeProbe && typeof Archify.routeProbe.finderContext === 'function') {
@@ -137,6 +141,12 @@
         query = (query || '').trim().toLowerCase();
         var available = availableItems();
         visibleItems = available.filter(function (item) { return !query || item.search.indexOf(query) !== -1; });
+        // Search is a temporary reading cue, independent of selection and
+        // camera state. Endpoint pickers retain their Route-owned emphasis.
+        clearMatches();
+        if (!panel.hidden && context.kind === 'focus' && query) {
+          visibleItems.forEach(function (item) { item.node.setAttribute('data-finder-match', ''); });
+        }
         results.textContent = '';
         visibleItems.forEach(function (item) {
           var button = document.createElement('button');
@@ -202,6 +212,7 @@
         options = options || {};
         var routeContext = context.kind.indexOf('route-') === 0;
         panel.hidden = true;
+        clearMatches();
         trigger.setAttribute('aria-expanded', 'false');
         input.value = '';
         if (routeContext && Archify.routeProbe && typeof Archify.routeProbe.finderClosed === 'function') {

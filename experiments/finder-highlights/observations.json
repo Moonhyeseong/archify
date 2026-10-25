@@ -1,0 +1,1260 @@
+{
+  "finder": [
+    {
+      "scenario": "architecture-closed",
+      "open": false,
+      "context": "focus",
+      "count": 10,
+      "expanded": "false",
+      "panelContext": "focus",
+      "title": "Find a node",
+      "query": "",
+      "placeholder": "Search labels or IDs",
+      "empty": true,
+      "status": "10 nodes",
+      "results": [
+        {
+          "id": "users",
+          "badge": "1 link",
+          "aria": "Focus Users, 1 related connection"
+        },
+        {
+          "id": "auth",
+          "badge": "1 link",
+          "aria": "Focus Auth Provider, 1 related connection"
+        },
+        {
+          "id": "cdn",
+          "badge": "3 links",
+          "aria": "Focus CloudFront, 3 related connections"
+        },
+        {
+          "id": "lb",
+          "badge": "2 links",
+          "aria": "Focus Load Balancer, 2 related connections"
+        },
+        {
+          "id": "api",
+          "badge": "5 links",
+          "aria": "Focus API Server, 5 related connections"
+        },
+        {
+          "id": "cache",
+          "badge": "1 link",
+          "aria": "Focus Redis, 1 related connection"
+        },
+        {
+          "id": "db",
+          "badge": "1 link",
+          "aria": "Focus PostgreSQL, 1 related connection"
+        },
+        {
+          "id": "s3",
+          "badge": "1 link",
+          "aria": "Focus S3, 1 related connection"
+        },
+        {
+          "id": "queue",
+          "badge": "2 links",
+          "aria": "Focus SQS, 2 related connections"
+        },
+        {
+          "id": "worker",
+          "badge": "1 link",
+          "aria": "Focus Worker, 1 related connection"
+        }
+      ],
+      "matches": [],
+      "activeId": "btn-node-finder",
+      "activeNode": null,
+      "focus": null,
+      "route": null,
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "dark-matches-API",
+      "open": true,
+      "context": "focus",
+      "count": 12,
+      "expanded": "true",
+      "panelContext": "focus",
+      "title": "Find a node",
+      "query": "API",
+      "placeholder": "Search labels or IDs",
+      "empty": true,
+      "status": "3 of 12 nodes",
+      "results": [
+        {
+          "id": "gateway",
+          "badge": "3 links",
+          "aria": "Focus API Gateway, 3 related connections"
+        },
+        {
+          "id": "api_a",
+          "badge": "3 links",
+          "aria": "Focus API Pods / AZ-a, 3 related connections"
+        },
+        {
+          "id": "api_b",
+          "badge": "3 links",
+          "aria": "Focus API Pods / AZ-b, 3 related connections"
+        }
+      ],
+      "matches": [
+        "gateway",
+        "api_a",
+        "api_b"
+      ],
+      "activeId": "node-finder-input",
+      "activeNode": null,
+      "focus": null,
+      "route": null,
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "dark-matches-platform",
+      "open": true,
+      "context": "focus",
+      "count": 12,
+      "expanded": "true",
+      "panelContext": "focus",
+      "title": "Find a node",
+      "query": "platform",
+      "placeholder": "Search labels or IDs",
+      "empty": true,
+      "status": "3 of 12 nodes",
+      "results": [
+        {
+          "id": "gateway",
+          "badge": "3 links",
+          "aria": "Focus API Gateway, 3 related connections"
+        },
+        {
+          "id": "redis",
+          "badge": "1 link",
+          "aria": "Focus Redis, 1 related connection"
+        },
+        {
+          "id": "events",
+          "badge": "3 links",
+          "aria": "Focus Event Bus, 3 related connections"
+        }
+      ],
+      "matches": [
+        "gateway",
+        "redis",
+        "events"
+      ],
+      "activeId": "node-finder-input",
+      "activeNode": null,
+      "focus": null,
+      "route": null,
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "dark-zero",
+      "open": true,
+      "context": "focus",
+      "count": 12,
+      "expanded": "true",
+      "panelContext": "focus",
+      "title": "Find a node",
+      "query": "no-matching-node",
+      "placeholder": "Search labels or IDs",
+      "empty": false,
+      "status": "0 of 12 nodes",
+      "results": [],
+      "matches": [],
+      "activeId": "node-finder-input",
+      "activeNode": null,
+      "focus": null,
+      "route": null,
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "dark-cleared",
+      "open": true,
+      "context": "focus",
+      "count": 12,
+      "expanded": "true",
+      "panelContext": "focus",
+      "title": "Find a node",
+      "query": "",
+      "placeholder": "Search labels or IDs",
+      "empty": true,
+      "status": "12 nodes",
+      "results": [
+        {
+          "id": "clients",
+          "badge": "1 link",
+          "aria": "Focus Customers, 1 related connection"
+        },
+        {
+          "id": "edge",
+          "badge": "2 links",
+          "aria": "Focus Global Edge, 2 related connections"
+        },
+        {
+          "id": "gateway",
+          "badge": "3 links",
+          "aria": "Focus API Gateway, 3 related connections"
+        },
+        {
+          "id": "api_a",
+          "badge": "3 links",
+          "aria": "Focus API Pods / AZ-a, 3 related connections"
+        },
+        {
+          "id": "api_b",
+          "badge": "3 links",
+          "aria": "Focus API Pods / AZ-b, 3 related connections"
+        },
+        {
+          "id": "redis",
+          "badge": "1 link",
+          "aria": "Focus Redis, 1 related connection"
+        },
+        {
+          "id": "postgres",
+          "badge": "2 links",
+          "aria": "Focus PostgreSQL, 2 related connections"
+        },
+        {
+          "id": "events",
+          "badge": "3 links",
+          "aria": "Focus Event Bus, 3 related connections"
+        },
+        {
+          "id": "worker",
+          "badge": "3 links",
+          "aria": "Focus Workers, 3 related connections"
+        },
+        {
+          "id": "replica",
+          "badge": "1 link",
+          "aria": "Focus DR Replica, 1 related connection"
+        },
+        {
+          "id": "audit",
+          "badge": "1 link",
+          "aria": "Focus Audit Archive, 1 related connection"
+        },
+        {
+          "id": "observability",
+          "badge": "1 link",
+          "aria": "Focus Observability, 1 related connection"
+        }
+      ],
+      "matches": [],
+      "activeId": "node-finder-input",
+      "activeNode": null,
+      "focus": null,
+      "route": null,
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "dark-composition",
+      "open": true,
+      "context": "focus",
+      "count": 12,
+      "expanded": "true",
+      "panelContext": "focus",
+      "title": "Find a node",
+      "query": "API",
+      "placeholder": "Search labels or IDs",
+      "empty": true,
+      "status": "3 of 12 nodes",
+      "results": [
+        {
+          "id": "gateway",
+          "badge": "3 links",
+          "aria": "Focus API Gateway, 3 related connections"
+        },
+        {
+          "id": "api_a",
+          "badge": "3 links",
+          "aria": "Focus API Pods / AZ-a, 3 related connections"
+        },
+        {
+          "id": "api_b",
+          "badge": "3 links",
+          "aria": "Focus API Pods / AZ-b, 3 related connections"
+        }
+      ],
+      "matches": [
+        "gateway",
+        "api_a",
+        "api_b"
+      ],
+      "activeId": "node-finder-input",
+      "activeNode": null,
+      "focus": null,
+      "route": null,
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "dark-closed",
+      "open": false,
+      "context": "focus",
+      "count": 12,
+      "expanded": "false",
+      "panelContext": "focus",
+      "title": "Find a node",
+      "query": "",
+      "placeholder": "Search labels or IDs",
+      "empty": true,
+      "status": "3 of 12 nodes",
+      "results": [
+        {
+          "id": "gateway",
+          "badge": "3 links",
+          "aria": "Focus API Gateway, 3 related connections"
+        },
+        {
+          "id": "api_a",
+          "badge": "3 links",
+          "aria": "Focus API Pods / AZ-a, 3 related connections"
+        },
+        {
+          "id": "api_b",
+          "badge": "3 links",
+          "aria": "Focus API Pods / AZ-b, 3 related connections"
+        }
+      ],
+      "matches": [],
+      "activeId": "btn-node-finder",
+      "activeNode": null,
+      "focus": null,
+      "route": null,
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "dark-outside",
+      "open": false,
+      "context": "focus",
+      "count": 12,
+      "expanded": "false",
+      "panelContext": "focus",
+      "title": "Find a node",
+      "query": "",
+      "placeholder": "Search labels or IDs",
+      "empty": true,
+      "status": "3 of 12 nodes",
+      "results": [
+        {
+          "id": "gateway",
+          "badge": "3 links",
+          "aria": "Focus API Gateway, 3 related connections"
+        },
+        {
+          "id": "redis",
+          "badge": "1 link",
+          "aria": "Focus Redis, 1 related connection"
+        },
+        {
+          "id": "events",
+          "badge": "3 links",
+          "aria": "Focus Event Bus, 3 related connections"
+        }
+      ],
+      "matches": [],
+      "activeId": "",
+      "activeNode": null,
+      "focus": null,
+      "route": null,
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "dark-retained-focus",
+      "open": true,
+      "context": "focus",
+      "count": 12,
+      "expanded": "true",
+      "panelContext": "focus",
+      "title": "Find a node",
+      "query": "platform",
+      "placeholder": "Search labels or IDs",
+      "empty": true,
+      "status": "3 of 12 nodes",
+      "results": [
+        {
+          "id": "gateway",
+          "badge": "3 links",
+          "aria": "Focus API Gateway, 3 related connections"
+        },
+        {
+          "id": "redis",
+          "badge": "1 link",
+          "aria": "Focus Redis, 1 related connection"
+        },
+        {
+          "id": "events",
+          "badge": "3 links",
+          "aria": "Focus Event Bus, 3 related connections"
+        }
+      ],
+      "matches": [
+        "gateway",
+        "redis",
+        "events"
+      ],
+      "activeId": "node-finder-input",
+      "activeNode": null,
+      "focus": "api_a",
+      "route": null,
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "dark-selected",
+      "open": false,
+      "context": "focus",
+      "count": 12,
+      "expanded": "false",
+      "panelContext": "focus",
+      "title": "Find a node",
+      "query": "",
+      "placeholder": "Search labels or IDs",
+      "empty": true,
+      "status": "3 of 12 nodes",
+      "results": [
+        {
+          "id": "gateway",
+          "badge": "3 links",
+          "aria": "Focus API Gateway, 3 related connections"
+        },
+        {
+          "id": "redis",
+          "badge": "1 link",
+          "aria": "Focus Redis, 1 related connection"
+        },
+        {
+          "id": "events",
+          "badge": "3 links",
+          "aria": "Focus Event Bus, 3 related connections"
+        }
+      ],
+      "matches": [],
+      "activeId": "node-redis",
+      "activeNode": "redis",
+      "focus": "redis",
+      "route": null,
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "light-matches-API",
+      "open": true,
+      "context": "focus",
+      "count": 12,
+      "expanded": "true",
+      "panelContext": "focus",
+      "title": "Find a node",
+      "query": "API",
+      "placeholder": "Search labels or IDs",
+      "empty": true,
+      "status": "3 of 12 nodes",
+      "results": [
+        {
+          "id": "gateway",
+          "badge": "3 links",
+          "aria": "Focus API Gateway, 3 related connections"
+        },
+        {
+          "id": "api_a",
+          "badge": "3 links",
+          "aria": "Focus API Pods / AZ-a, 3 related connections"
+        },
+        {
+          "id": "api_b",
+          "badge": "3 links",
+          "aria": "Focus API Pods / AZ-b, 3 related connections"
+        }
+      ],
+      "matches": [
+        "gateway",
+        "api_a",
+        "api_b"
+      ],
+      "activeId": "node-finder-input",
+      "activeNode": null,
+      "focus": null,
+      "route": null,
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "light-matches-platform",
+      "open": true,
+      "context": "focus",
+      "count": 12,
+      "expanded": "true",
+      "panelContext": "focus",
+      "title": "Find a node",
+      "query": "platform",
+      "placeholder": "Search labels or IDs",
+      "empty": true,
+      "status": "3 of 12 nodes",
+      "results": [
+        {
+          "id": "gateway",
+          "badge": "3 links",
+          "aria": "Focus API Gateway, 3 related connections"
+        },
+        {
+          "id": "redis",
+          "badge": "1 link",
+          "aria": "Focus Redis, 1 related connection"
+        },
+        {
+          "id": "events",
+          "badge": "3 links",
+          "aria": "Focus Event Bus, 3 related connections"
+        }
+      ],
+      "matches": [
+        "gateway",
+        "redis",
+        "events"
+      ],
+      "activeId": "node-finder-input",
+      "activeNode": null,
+      "focus": null,
+      "route": null,
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "light-zero",
+      "open": true,
+      "context": "focus",
+      "count": 12,
+      "expanded": "true",
+      "panelContext": "focus",
+      "title": "Find a node",
+      "query": "no-matching-node",
+      "placeholder": "Search labels or IDs",
+      "empty": false,
+      "status": "0 of 12 nodes",
+      "results": [],
+      "matches": [],
+      "activeId": "node-finder-input",
+      "activeNode": null,
+      "focus": null,
+      "route": null,
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "light-cleared",
+      "open": true,
+      "context": "focus",
+      "count": 12,
+      "expanded": "true",
+      "panelContext": "focus",
+      "title": "Find a node",
+      "query": "",
+      "placeholder": "Search labels or IDs",
+      "empty": true,
+      "status": "12 nodes",
+      "results": [
+        {
+          "id": "clients",
+          "badge": "1 link",
+          "aria": "Focus Customers, 1 related connection"
+        },
+        {
+          "id": "edge",
+          "badge": "2 links",
+          "aria": "Focus Global Edge, 2 related connections"
+        },
+        {
+          "id": "gateway",
+          "badge": "3 links",
+          "aria": "Focus API Gateway, 3 related connections"
+        },
+        {
+          "id": "api_a",
+          "badge": "3 links",
+          "aria": "Focus API Pods / AZ-a, 3 related connections"
+        },
+        {
+          "id": "api_b",
+          "badge": "3 links",
+          "aria": "Focus API Pods / AZ-b, 3 related connections"
+        },
+        {
+          "id": "redis",
+          "badge": "1 link",
+          "aria": "Focus Redis, 1 related connection"
+        },
+        {
+          "id": "postgres",
+          "badge": "2 links",
+          "aria": "Focus PostgreSQL, 2 related connections"
+        },
+        {
+          "id": "events",
+          "badge": "3 links",
+          "aria": "Focus Event Bus, 3 related connections"
+        },
+        {
+          "id": "worker",
+          "badge": "3 links",
+          "aria": "Focus Workers, 3 related connections"
+        },
+        {
+          "id": "replica",
+          "badge": "1 link",
+          "aria": "Focus DR Replica, 1 related connection"
+        },
+        {
+          "id": "audit",
+          "badge": "1 link",
+          "aria": "Focus Audit Archive, 1 related connection"
+        },
+        {
+          "id": "observability",
+          "badge": "1 link",
+          "aria": "Focus Observability, 1 related connection"
+        }
+      ],
+      "matches": [],
+      "activeId": "node-finder-input",
+      "activeNode": null,
+      "focus": null,
+      "route": null,
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "light-composition",
+      "open": true,
+      "context": "focus",
+      "count": 12,
+      "expanded": "true",
+      "panelContext": "focus",
+      "title": "Find a node",
+      "query": "API",
+      "placeholder": "Search labels or IDs",
+      "empty": true,
+      "status": "3 of 12 nodes",
+      "results": [
+        {
+          "id": "gateway",
+          "badge": "3 links",
+          "aria": "Focus API Gateway, 3 related connections"
+        },
+        {
+          "id": "api_a",
+          "badge": "3 links",
+          "aria": "Focus API Pods / AZ-a, 3 related connections"
+        },
+        {
+          "id": "api_b",
+          "badge": "3 links",
+          "aria": "Focus API Pods / AZ-b, 3 related connections"
+        }
+      ],
+      "matches": [
+        "gateway",
+        "api_a",
+        "api_b"
+      ],
+      "activeId": "node-finder-input",
+      "activeNode": null,
+      "focus": null,
+      "route": null,
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "light-closed",
+      "open": false,
+      "context": "focus",
+      "count": 12,
+      "expanded": "false",
+      "panelContext": "focus",
+      "title": "Find a node",
+      "query": "",
+      "placeholder": "Search labels or IDs",
+      "empty": true,
+      "status": "3 of 12 nodes",
+      "results": [
+        {
+          "id": "gateway",
+          "badge": "3 links",
+          "aria": "Focus API Gateway, 3 related connections"
+        },
+        {
+          "id": "api_a",
+          "badge": "3 links",
+          "aria": "Focus API Pods / AZ-a, 3 related connections"
+        },
+        {
+          "id": "api_b",
+          "badge": "3 links",
+          "aria": "Focus API Pods / AZ-b, 3 related connections"
+        }
+      ],
+      "matches": [],
+      "activeId": "btn-node-finder",
+      "activeNode": null,
+      "focus": null,
+      "route": null,
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "light-outside",
+      "open": false,
+      "context": "focus",
+      "count": 12,
+      "expanded": "false",
+      "panelContext": "focus",
+      "title": "Find a node",
+      "query": "",
+      "placeholder": "Search labels or IDs",
+      "empty": true,
+      "status": "3 of 12 nodes",
+      "results": [
+        {
+          "id": "gateway",
+          "badge": "3 links",
+          "aria": "Focus API Gateway, 3 related connections"
+        },
+        {
+          "id": "redis",
+          "badge": "1 link",
+          "aria": "Focus Redis, 1 related connection"
+        },
+        {
+          "id": "events",
+          "badge": "3 links",
+          "aria": "Focus Event Bus, 3 related connections"
+        }
+      ],
+      "matches": [],
+      "activeId": "",
+      "activeNode": null,
+      "focus": null,
+      "route": null,
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "light-retained-focus",
+      "open": true,
+      "context": "focus",
+      "count": 12,
+      "expanded": "true",
+      "panelContext": "focus",
+      "title": "Find a node",
+      "query": "platform",
+      "placeholder": "Search labels or IDs",
+      "empty": true,
+      "status": "3 of 12 nodes",
+      "results": [
+        {
+          "id": "gateway",
+          "badge": "3 links",
+          "aria": "Focus API Gateway, 3 related connections"
+        },
+        {
+          "id": "redis",
+          "badge": "1 link",
+          "aria": "Focus Redis, 1 related connection"
+        },
+        {
+          "id": "events",
+          "badge": "3 links",
+          "aria": "Focus Event Bus, 3 related connections"
+        }
+      ],
+      "matches": [
+        "gateway",
+        "redis",
+        "events"
+      ],
+      "activeId": "node-finder-input",
+      "activeNode": null,
+      "focus": "api_a",
+      "route": null,
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "light-selected",
+      "open": false,
+      "context": "focus",
+      "count": 12,
+      "expanded": "false",
+      "panelContext": "focus",
+      "title": "Find a node",
+      "query": "",
+      "placeholder": "Search labels or IDs",
+      "empty": true,
+      "status": "3 of 12 nodes",
+      "results": [
+        {
+          "id": "gateway",
+          "badge": "3 links",
+          "aria": "Focus API Gateway, 3 related connections"
+        },
+        {
+          "id": "redis",
+          "badge": "1 link",
+          "aria": "Focus Redis, 1 related connection"
+        },
+        {
+          "id": "events",
+          "badge": "3 links",
+          "aria": "Focus Event Bus, 3 related connections"
+        }
+      ],
+      "matches": [],
+      "activeId": "node-redis",
+      "activeNode": "redis",
+      "focus": "redis",
+      "route": null,
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "route-source",
+      "open": true,
+      "context": "route-source",
+      "count": 10,
+      "expanded": "true",
+      "panelContext": "route-source",
+      "title": "Choose route start",
+      "query": "",
+      "placeholder": "Search route sources",
+      "empty": true,
+      "status": "6 route sources",
+      "results": [
+        {
+          "id": "users",
+          "badge": "start",
+          "aria": "Choose Users as route start"
+        },
+        {
+          "id": "auth",
+          "badge": "start",
+          "aria": "Choose Auth Provider as route start"
+        },
+        {
+          "id": "cdn",
+          "badge": "start",
+          "aria": "Choose CloudFront as route start"
+        },
+        {
+          "id": "lb",
+          "badge": "start",
+          "aria": "Choose Load Balancer as route start"
+        },
+        {
+          "id": "api",
+          "badge": "start",
+          "aria": "Choose API Server as route start"
+        },
+        {
+          "id": "queue",
+          "badge": "start",
+          "aria": "Choose SQS as route start"
+        }
+      ],
+      "matches": [],
+      "activeId": "node-finder-input",
+      "activeNode": null,
+      "focus": null,
+      "route": "source",
+      "routeFinder": "true",
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "route-source-cancel",
+      "open": false,
+      "context": "route-source",
+      "count": 10,
+      "expanded": "false",
+      "panelContext": "route-source",
+      "title": "Choose route start",
+      "query": "",
+      "placeholder": "Search route sources",
+      "empty": true,
+      "status": "6 route sources",
+      "results": [
+        {
+          "id": "users",
+          "badge": "start",
+          "aria": "Choose Users as route start"
+        },
+        {
+          "id": "auth",
+          "badge": "start",
+          "aria": "Choose Auth Provider as route start"
+        },
+        {
+          "id": "cdn",
+          "badge": "start",
+          "aria": "Choose CloudFront as route start"
+        },
+        {
+          "id": "lb",
+          "badge": "start",
+          "aria": "Choose Load Balancer as route start"
+        },
+        {
+          "id": "api",
+          "badge": "start",
+          "aria": "Choose API Server as route start"
+        },
+        {
+          "id": "queue",
+          "badge": "start",
+          "aria": "Choose SQS as route start"
+        }
+      ],
+      "matches": [],
+      "activeId": "route-probe-find",
+      "activeNode": null,
+      "focus": null,
+      "route": "source",
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "route-source-selected",
+      "open": false,
+      "context": "route-source",
+      "count": 10,
+      "expanded": "false",
+      "panelContext": "route-source",
+      "title": "Choose route start",
+      "query": "",
+      "placeholder": "Search route sources",
+      "empty": true,
+      "status": "1 of 6 route sources",
+      "results": [
+        {
+          "id": "users",
+          "badge": "start",
+          "aria": "Choose Users as route start"
+        }
+      ],
+      "matches": [],
+      "activeId": "node-users",
+      "activeNode": "users",
+      "focus": null,
+      "route": "target",
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "route-target",
+      "open": true,
+      "context": "route-target",
+      "count": 10,
+      "expanded": "true",
+      "panelContext": "route-target",
+      "title": "Destination from Users",
+      "query": "",
+      "placeholder": "Search reachable destinations",
+      "empty": true,
+      "status": "8 reachable destinations",
+      "results": [
+        {
+          "id": "cdn",
+          "badge": "1 hop",
+          "aria": "Choose CloudFront as route destination, 1 hop"
+        },
+        {
+          "id": "lb",
+          "badge": "2 hops",
+          "aria": "Choose Load Balancer as route destination, 2 hops"
+        },
+        {
+          "id": "api",
+          "badge": "3 hops",
+          "aria": "Choose API Server as route destination, 3 hops"
+        },
+        {
+          "id": "cache",
+          "badge": "4 hops",
+          "aria": "Choose Redis as route destination, 4 hops"
+        },
+        {
+          "id": "db",
+          "badge": "4 hops",
+          "aria": "Choose PostgreSQL as route destination, 4 hops"
+        },
+        {
+          "id": "s3",
+          "badge": "2 hops",
+          "aria": "Choose S3 as route destination, 2 hops"
+        },
+        {
+          "id": "queue",
+          "badge": "4 hops",
+          "aria": "Choose SQS as route destination, 4 hops"
+        },
+        {
+          "id": "worker",
+          "badge": "5 hops",
+          "aria": "Choose Worker as route destination, 5 hops"
+        }
+      ],
+      "matches": [],
+      "activeId": "node-finder-input",
+      "activeNode": null,
+      "focus": null,
+      "route": "target",
+      "routeFinder": "true",
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "route-target-cancel",
+      "open": false,
+      "context": "route-target",
+      "count": 10,
+      "expanded": "false",
+      "panelContext": "route-target",
+      "title": "Destination from Users",
+      "query": "",
+      "placeholder": "Search reachable destinations",
+      "empty": true,
+      "status": "8 reachable destinations",
+      "results": [
+        {
+          "id": "cdn",
+          "badge": "1 hop",
+          "aria": "Choose CloudFront as route destination, 1 hop"
+        },
+        {
+          "id": "lb",
+          "badge": "2 hops",
+          "aria": "Choose Load Balancer as route destination, 2 hops"
+        },
+        {
+          "id": "api",
+          "badge": "3 hops",
+          "aria": "Choose API Server as route destination, 3 hops"
+        },
+        {
+          "id": "cache",
+          "badge": "4 hops",
+          "aria": "Choose Redis as route destination, 4 hops"
+        },
+        {
+          "id": "db",
+          "badge": "4 hops",
+          "aria": "Choose PostgreSQL as route destination, 4 hops"
+        },
+        {
+          "id": "s3",
+          "badge": "2 hops",
+          "aria": "Choose S3 as route destination, 2 hops"
+        },
+        {
+          "id": "queue",
+          "badge": "4 hops",
+          "aria": "Choose SQS as route destination, 4 hops"
+        },
+        {
+          "id": "worker",
+          "badge": "5 hops",
+          "aria": "Choose Worker as route destination, 5 hops"
+        }
+      ],
+      "matches": [],
+      "activeId": "route-probe-find",
+      "activeNode": null,
+      "focus": null,
+      "route": "target",
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "route-result",
+      "open": false,
+      "context": "route-target",
+      "count": 10,
+      "expanded": "false",
+      "panelContext": "route-target",
+      "title": "Destination from Users",
+      "query": "",
+      "placeholder": "Search reachable destinations",
+      "empty": true,
+      "status": "1 of 8 reachable destinations",
+      "results": [
+        {
+          "id": "db",
+          "badge": "4 hops",
+          "aria": "Choose PostgreSQL as route destination, 4 hops"
+        }
+      ],
+      "matches": [],
+      "activeId": "node-db",
+      "activeNode": "db",
+      "focus": null,
+      "route": "result",
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "route-empty-target",
+      "open": true,
+      "context": "route-target",
+      "count": 10,
+      "expanded": "true",
+      "panelContext": "route-target",
+      "title": "Destination from PostgreSQL",
+      "query": "",
+      "placeholder": "Search reachable destinations",
+      "empty": false,
+      "status": "0 reachable destinations",
+      "results": [],
+      "matches": [],
+      "activeId": "node-finder-input",
+      "activeNode": null,
+      "focus": null,
+      "route": "target",
+      "routeFinder": "true",
+      "errors": [],
+      "external": []
+    },
+    {
+      "scenario": "route-cleared-default",
+      "open": true,
+      "context": "focus",
+      "count": 10,
+      "expanded": "true",
+      "panelContext": "focus",
+      "title": "Find a node",
+      "query": "",
+      "placeholder": "Search labels or IDs",
+      "empty": true,
+      "status": "10 nodes",
+      "results": [
+        {
+          "id": "users",
+          "badge": "1 link",
+          "aria": "Focus Users, 1 related connection"
+        },
+        {
+          "id": "auth",
+          "badge": "1 link",
+          "aria": "Focus Auth Provider, 1 related connection"
+        },
+        {
+          "id": "cdn",
+          "badge": "3 links",
+          "aria": "Focus CloudFront, 3 related connections"
+        },
+        {
+          "id": "lb",
+          "badge": "2 links",
+          "aria": "Focus Load Balancer, 2 related connections"
+        },
+        {
+          "id": "api",
+          "badge": "5 links",
+          "aria": "Focus API Server, 5 related connections"
+        },
+        {
+          "id": "cache",
+          "badge": "1 link",
+          "aria": "Focus Redis, 1 related connection"
+        },
+        {
+          "id": "db",
+          "badge": "1 link",
+          "aria": "Focus PostgreSQL, 1 related connection"
+        },
+        {
+          "id": "s3",
+          "badge": "1 link",
+          "aria": "Focus S3, 1 related connection"
+        },
+        {
+          "id": "queue",
+          "badge": "2 links",
+          "aria": "Focus SQS, 2 related connections"
+        },
+        {
+          "id": "worker",
+          "badge": "1 link",
+          "aria": "Focus Worker, 1 related connection"
+        }
+      ],
+      "matches": [],
+      "activeId": "node-finder-input",
+      "activeNode": null,
+      "focus": "api",
+      "route": null,
+      "routeFinder": null,
+      "errors": [],
+      "external": []
+    }
+  ],
+  "exports": [
+    {
+      "label": "active-finder",
+      "liveUnchanged": true,
+      "transientCount": 0,
+      "geometry": "0 0 1080 588",
+      "liveGeometry": "0 0 1080 588",
+      "rootClean": true,
+      "resources": [],
+      "errors": []
+    },
+    {
+      "label": "finder-png-dark",
+      "same": true,
+      "matches": 1,
+      "liveUnchanged": true,
+      "errors": []
+    },
+    {
+      "label": "finder-png-light",
+      "same": true,
+      "matches": 1,
+      "liveUnchanged": true,
+      "errors": []
+    }
+  ]
+}

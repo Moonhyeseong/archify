@@ -4161,6 +4161,12 @@ svg [data-node-id]:focus-visible {
   filter: drop-shadow(0 0 7px var(--frontend-stroke));
   outline: none;
 }
+/* Finder matches are temporary outlines, separate from focus and relationship
+   emphasis. Keep authored colors, opacity, geometry and camera unchanged. */
+svg [data-node-id][data-finder-match] {
+  outline: 2px solid var(--frontend-stroke);
+  outline-offset: 4px;
+}
 svg [data-legend-kind][role="button"] { cursor: pointer; }
 svg [data-legend-kind]:focus { outline: none; }
 svg [data-legend-hit] {

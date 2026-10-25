@@ -1,0 +1,82 @@
+{
+  "kind": "agent-browser-screenshot-summary",
+  "capturedAt": "2026-10-25T04:57:24.024878+00:00",
+  "method": "Actual Ego Lite browser screenshots; no compositing or image generation",
+  "images": [
+    {
+      "source": "../base.html",
+      "sourceSha256": "3ee797c5806a5aeda056eae8e20d4f8e8fc2c1258de5f9194f7ba5aa10bdec7c",
+      "image": "base-api-light.png",
+      "imageSha256": "063c6b79990dcad052936c98a097b22a421890b317d89833ae4e34e980f748e6",
+      "imagePixels": {
+        "width": 1440,
+        "height": 900
+      },
+      "viewportCssPixels": {
+        "width": 1440,
+        "height": 900
+      },
+      "deviceScaleFactor": 1,
+      "theme": "light",
+      "preset": "Blueprint",
+      "fullPage": false
+    },
+    {
+      "source": "../candidate.html",
+      "sourceSha256": "0bd5874060be8d881b62a8a2072c4c78ce47b872836a1d36387dd90f0f836c84",
+      "image": "candidate-api-light.png",
+      "imageSha256": "a65846b41a45869d37e8c9cb28da5f2e4eb0b39ed945b3a72455e6546159f836",
+      "imagePixels": {
+        "width": 1440,
+        "height": 900
+      },
+      "viewportCssPixels": {
+        "width": 1440,
+        "height": 900
+      },
+      "deviceScaleFactor": 1,
+      "theme": "light",
+      "preset": "Blueprint",
+      "fullPage": false
+    },
+    {
+      "source": "../base.html",
+      "sourceSha256": "3ee797c5806a5aeda056eae8e20d4f8e8fc2c1258de5f9194f7ba5aa10bdec7c",
+      "image": "base-platform-dark.png",
+      "imageSha256": "90ca5c16c0db942d72946271271bee0cd48622ceb71ee65d44d1af394a32e702",
+      "imagePixels": {
+        "width": 1440,
+        "height": 900
+      },
+      "viewportCssPixels": {
+        "width": 1440,
+        "height": 900
+      },
+      "deviceScaleFactor": 1,
+      "theme": "dark",
+      "preset": "Blueprint",
+      "fullPage": false
+    },
+    {
+      "source": "../candidate.html",
+      "sourceSha256": "0bd5874060be8d881b62a8a2072c4c78ce47b872836a1d36387dd90f0f836c84",
+      "image": "candidate-platform-dark.png",
+      "imageSha256": "f49e1555216fd3c19b5fd8b7980bd57c91339ee086d95580c0263ee0beacc4d7",
+      "imagePixels": {
+        "width": 1440,
+        "height": 900
+      },
+      "viewportCssPixels": {
+        "width": 1440,
+        "height": 900
+      },
+      "deviceScaleFactor": 1,
+      "theme": "dark",
+      "preset": "Blueprint",
+      "fullPage": false
+    }
+  ],
+  "agentVisualReview": "Fixed 1440x900 comparisons show outlines on API gateway and both API pods in light mode, and gateway/Redis/Event Bus for platform in dark mode. Labels and authored colors remain readable. Root also observed zero match markers after an absent query and after closing Finder. No node-location timing study was performed.",
+  "humanAcceptance": "pending",
+  "limits": "Screenshots establish the shown artifact only; they do not establish upstream execution, production validity or measured user benefit."
+}

@@ -37,6 +37,9 @@ test('Finder preserves search, keyboard, contextual Route selection and cleanup'
     execFileSync(process.execPath, [path.join(skillRoot, `renderers/${mode}/render-${mode}.mjs`),
       path.join(skillRoot, 'examples', example), files[mode]]);
   }
+  files.production = path.join(scratch, 'production.html');
+  execFileSync(process.execPath, [path.join(skillRoot, 'renderers/architecture/render-architecture.mjs'),
+    path.join(skillRoot, 'examples/production-deployment.architecture.json'), files.production]);
   // A controlled metadata fixture exercises the Finder's input boundary;
   // repository verification and brand rendering have their own tests.
   files.metadata = path.join(scratch, 'metadata.html');
@@ -111,6 +114,7 @@ test('Finder preserves search, keyboard, contextual Route selection and cleanup'
         query:input.value, placeholder:input.placeholder, empty:document.getElementById('node-finder-empty').hidden,
         status:document.getElementById('node-finder-status').textContent,
         results:[...panel.querySelectorAll('.node-finder-result')].map(el=>({id:el.dataset.nodeId,badge:el.querySelector('em').textContent,aria:el.getAttribute('aria-label')})),
+        matches:[...document.querySelectorAll('.diagram-container svg [data-finder-match]')].map(el=>el.dataset.nodeId),
         activeId:document.activeElement.id, activeNode:document.activeElement.getAttribute('data-node-id'),
         focus:Archify.focus.active(), route:Archify.routeProbe.active(),
         routeFinder:document.getElementById('route-probe').getAttribute('data-finder-open'),
@@ -118,6 +122,8 @@ test('Finder preserves search, keyboard, contextual Route selection and cleanup'
         external:performance.getEntriesByType('resource').map(e=>e.name).filter(n=>/^https?:/.test(n))};
     })()`);
     assert.deepEqual(value.errors, [], scenario); assert.deepEqual(value.external, [], scenario);
+    assert.deepEqual(value.matches, value.open && value.context === 'focus' && value.query.trim()
+      ? value.results.map(item => item.id) : [], scenario + ': canvas matches mirror the ordinary query');
     records.push({ scenario, ...value });
     return value;
   }
@@ -138,6 +144,42 @@ test('Finder preserves search, keyboard, contextual Route selection and cleanup'
         await key('Escape', 'Escape', 27);
         assert.equal((await snapshot(mode + '-closed')).activeId, 'btn-node-finder');
       }
+    }
+  });
+
+  await t.test('query outlines preserve selection, camera and hash; clearing and closing restore the canvas', async () => {
+    for (const theme of ['dark', 'light']) {
+      await load('production', { theme, reduced: true });
+      await click('#btn-node-finder'); await opened();
+      const unchanged = () => run(`({focus:Archify.focus.active(),camera:Archify.view.state(),hash:location.hash})`);
+      const before = await unchanged();
+      for (const [query, expected] of [['API', ['gateway', 'api_a', 'api_b']], ['platform', ['gateway', 'redis', 'events']]]) {
+        await search(query);
+        const state = await snapshot(theme + '-matches-' + query);
+        assert.deepEqual(ids(state), expected);
+        assert.deepEqual(await unchanged(), before);
+        assert.equal(await run(`getComputedStyle(document.querySelector('.diagram-container svg [data-finder-match]')).outlineStyle`), 'solid');
+      }
+      await search('no-matching-node');
+      assert.deepEqual((await snapshot(theme + '-zero')).matches, []);
+      await search('API'); await search('');
+      assert.deepEqual((await snapshot(theme + '-cleared')).matches, []);
+      await search('API');
+      await run(`(() => {const input=document.getElementById('node-finder-input');input.dispatchEvent(new CompositionEvent('compositionstart',{bubbles:true}));input.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',isComposing:true,keyCode:229,bubbles:true,cancelable:true}));input.dispatchEvent(new CompositionEvent('compositionend',{bubbles:true}));})()`);
+      assert.deepEqual(await unchanged(), before);
+      assert.equal((await snapshot(theme + '-composition')).open, true);
+      await key('Escape', 'Escape', 27);
+      assert.deepEqual((await snapshot(theme + '-closed')).matches, []);
+      await click('#btn-node-finder'); await opened(); await search('platform'); await click('h1');
+      assert.deepEqual((await snapshot(theme + '-outside')).matches, []);
+      // A reader's existing focus is retained while its independent query cue is shown.
+      await run(`Archify.focus.set('api_a', {toggle:false,updateUrl:false}); Archify.finder.open()`); await opened();
+      const focused = await unchanged();
+      await search('platform'); await snapshot(theme + '-retained-focus');
+      assert.deepEqual(await unchanged(), focused);
+      await click('.node-finder-result[data-node-id="redis"]');
+      const selected = await snapshot(theme + '-selected');
+      assert.equal(selected.focus, 'redis'); assert.equal(selected.open, false);
     }
   });
 

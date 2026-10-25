@@ -4330,6 +4330,12 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
       filter: drop-shadow(0 0 7px var(--frontend-stroke));
       outline: none;
     }
+    /* Finder matches are temporary outlines, separate from focus and relationship
+       emphasis. Keep authored colors, opacity, geometry and camera unchanged. */
+    svg [data-node-id][data-finder-match] {
+      outline: 2px solid var(--frontend-stroke);
+      outline-offset: 4px;
+    }
     svg [data-legend-kind][role="button"] { cursor: pointer; }
     svg [data-legend-kind]:focus { outline: none; }
     svg [data-legend-hit] {
@@ -6127,6 +6133,9 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
           el.removeAttribute('data-source-evidence-count');
           el.removeAttribute('data-source-evidence-original-label');
         });
+        Array.prototype.forEach.call(clone.querySelectorAll('[data-finder-match]'), function (el) {
+          el.removeAttribute('data-finder-match');
+        });
         Array.prototype.forEach.call(clone.querySelectorAll('[data-focus-match], [data-focus-selected]'), function (el) {
           el.removeAttribute('data-focus-match');
           el.removeAttribute('data-focus-selected');
@@ -6214,7 +6223,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
           !clone.hasAttribute('data-tree-any-collapsed') &&
           !clone.style.getPropertyValue('transform') &&
           !clone.style.getPropertyValue('clip-path') &&
-          clone.querySelectorAll('[data-ambient-flow-overlay], [data-reader-legend-corner], [data-focus-match], [data-focus-selected], [data-reach-match], [data-reach-origin], [data-reach-depth], [data-semantic-lens-overlay], [data-lens-match], [data-lens-selected], [data-lens-peer], [data-legend-bridge], [data-legend-kind], [data-legend-bridge-runtime], [data-legend-count], [data-legend-zero], [data-legend-selected], [data-legend-preview-match], [data-legend-preview-selected], [data-legend-preview-peer], [data-relationship-hit-overlay], [data-relationship-pulse-overlay], [data-relationship-preview], [data-relationship-preview-node], [data-relationship-preview-source], [data-relationship-preview-target], [data-intent-trace-overlay], [data-intent-trace-match], [data-intent-trace-selected], [data-route-probe-overlay], [data-route-journey-overlay], [data-route-match], [data-route-start], [data-route-end], [data-route-step], [data-route-candidate], [data-route-journey-state], [data-route-journey-current], [data-share-route-match], [data-share-route-step], [data-share-route-start], [data-share-route-end], [data-share-route-middle], [data-share-reach-match], [data-share-reach-origin], [data-share-reach-depth], [data-source-evidence-beacon], [data-source-evidence-count], [data-source-evidence-original-label], [data-detail], [data-detail-anchor], [data-tree-hidden], [data-tree-collapsed]').length === 0;
+          clone.querySelectorAll('[data-finder-match], [data-ambient-flow-overlay], [data-reader-legend-corner], [data-focus-match], [data-focus-selected], [data-reach-match], [data-reach-origin], [data-reach-depth], [data-semantic-lens-overlay], [data-lens-match], [data-lens-selected], [data-lens-peer], [data-legend-bridge], [data-legend-kind], [data-legend-bridge-runtime], [data-legend-count], [data-legend-zero], [data-legend-selected], [data-legend-preview-match], [data-legend-preview-selected], [data-legend-preview-peer], [data-relationship-hit-overlay], [data-relationship-pulse-overlay], [data-relationship-preview], [data-relationship-preview-node], [data-relationship-preview-source], [data-relationship-preview-target], [data-intent-trace-overlay], [data-intent-trace-match], [data-intent-trace-selected], [data-route-probe-overlay], [data-route-journey-overlay], [data-route-match], [data-route-start], [data-route-end], [data-route-step], [data-route-candidate], [data-route-journey-state], [data-route-journey-current], [data-share-route-match], [data-share-route-step], [data-share-route-start], [data-share-route-end], [data-share-route-middle], [data-share-reach-match], [data-share-reach-origin], [data-share-reach-depth], [data-source-evidence-beacon], [data-source-evidence-count], [data-source-evidence-original-label], [data-detail], [data-detail-anchor], [data-tree-hidden], [data-tree-collapsed]').length === 0;
       }
 
 
@@ -12654,6 +12663,10 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         return Array.prototype.slice.call(results.querySelectorAll('.node-finder-result'));
       }
 
+      function clearMatches() {
+        items.forEach(function (item) { item.node.removeAttribute('data-finder-match'); });
+      }
+
       function resolveContext(options) {
         var requested = options && options.context ? options.context : null;
         if (!requested && Archify.routeProbe && typeof Archify.routeProbe.finderContext === 'function') {
@@ -12705,6 +12718,12 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         query = (query || '').trim().toLowerCase();
         var available = availableItems();
         visibleItems = available.filter(function (item) { return !query || item.search.indexOf(query) !== -1; });
+        // Search is a temporary reading cue, independent of selection and
+        // camera state. Endpoint pickers retain their Route-owned emphasis.
+        clearMatches();
+        if (!panel.hidden && context.kind === 'focus' && query) {
+          visibleItems.forEach(function (item) { item.node.setAttribute('data-finder-match', ''); });
+        }
         results.textContent = '';
         visibleItems.forEach(function (item) {
           var button = document.createElement('button');
@@ -12770,6 +12789,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         options = options || {};
         var routeContext = context.kind.indexOf('route-') === 0;
         panel.hidden = true;
+        clearMatches();
         trigger.setAttribute('aria-expanded', 'false');
         input.value = '';
         if (routeContext && Archify.routeProbe && typeof Archify.routeProbe.finderClosed === 'function') {

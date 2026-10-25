@@ -1,0 +1,68 @@
+{
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "candidate": "uncommitted experiment; see source digests",
+  "toolchain": {
+    "node": "22.23.2",
+    "zlib": "1.3.1-e00f703",
+    "browser": "Google Chrome 152.0.7977.169 extended",
+    "platform": "darwin-arm64"
+  },
+  "sha256": {
+    "archify/examples/production-deployment.architecture.json": "610a5614667e8f108bdcf1769c9d7af5c3ce0fb62be3ea50550b10eb752e4bda",
+    "experiments/finder-highlights/base.html": "3ee797c5806a5aeda056eae8e20d4f8e8fc2c1258de5f9194f7ba5aa10bdec7c",
+    "experiments/finder-highlights/candidate.html": "0bd5874060be8d881b62a8a2072c4c78ce47b872836a1d36387dd90f0f836c84",
+    "archify.zip": "3f434f112ec1ccc8a1b70d4be28adc141f029d77f955f64177254485b731a3bf",
+    "viewer/node-finder.js": "2be28cdc0b60536bfaa7b78cdfd30e4bc126c73515dbdaaaa0b6fed52d9ea4b9",
+    "viewer/viewer.css": "21143f893ed348e21831089c2c3e13b6a28813e33ab6f82548a6b14603a09cd1",
+    "viewer/export-cleanup.js": "8adfce53d96ca798f9210a38f80c0b85e4286218d182b239a93393b053bc1aaf"
+  },
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "preset": "blueprint",
+  "motion": "Still for screenshots; browser query checks use reduced motion",
+  "limits": [
+    "No human task timing or reader acceptance",
+    "No merge, release, deployment or live installation",
+    "Screenshots are captured separately by the parent review session"
+  ],
+  "verification": {
+    "initialFocused": {
+      "passed": 327,
+      "failed": 0,
+      "skipped": 0,
+      "scope": [
+        "finder-browser",
+        "export-cleanup-browser",
+        "generate-viewer"
+      ],
+      "note": "before the additional PNG byte comparison"
+    },
+    "finalBrowser": {
+      "passed": 60,
+      "failed": 0,
+      "skipped": 0,
+      "scope": [
+        "finder-browser",
+        "export-cleanup-browser",
+        "focus-browser",
+        "route-probe-browser",
+        "semantic-lens-browser",
+        "desktop-reader-browser"
+      ]
+    },
+    "coreSmoke": {
+      "passed": 19,
+      "failed": 0,
+      "skipped": 0
+    },
+    "generated": "passed",
+    "canonicalZipFreshness": "second tracked-source build byte-identical",
+    "diffCheck": "passed"
+  }
+}

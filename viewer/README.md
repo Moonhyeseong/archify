@@ -550,6 +550,11 @@ position. Its interface is `open`, `close`, `toggle`, `select`, `isOpen`,
   input placeholder, list ARIA, result children, empty-state visibility and
   status text. Route Probe owns its `data-finder-open` attribute through
   `finderOpening`/`finderClosed`. Existing HTML/CSS remain in the template.
+  A non-empty ordinary query marks exactly its visible result nodes with
+  `data-finder-match` for a temporary canvas outline. It preserves selection,
+  camera and URL state; clearing, closing or changing context removes the cue.
+  Route endpoint lists do not add these markers. Export Cleanup removes them
+  from canonical SVG and raster exports.
 - Input ArrowDown enters results and Enter selects the first visible result;
   result arrows wrap and Home/End move to the endpoints. Escape prevents default
   and stops propagation before closing. Outside clicks close without restoring

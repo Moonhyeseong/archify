@@ -85,7 +85,7 @@ test('Export cleanup preserves canonical artifacts and live interaction state', 
       if (!blob) throw new Error('Export did not produce SVG');
       const text = await blob.text();
       const root = new DOMParser().parseFromString(text, 'image/svg+xml').documentElement;
-      const transient = root.querySelectorAll('[data-focus-selected], [data-reach-match], [data-lens-selected], [data-intent-trace-overlay], [data-route-probe-overlay], [data-route-journey-overlay], [data-source-evidence-beacon], [data-relationship-hit-overlay]');
+      const transient = root.querySelectorAll('[data-finder-match], [data-focus-selected], [data-reach-match], [data-lens-selected], [data-intent-trace-overlay], [data-route-probe-overlay], [data-route-journey-overlay], [data-source-evidence-beacon], [data-relationship-hit-overlay]');
       return { text, liveUnchanged: before === after, transientCount: transient.length,
         geometry: root.getAttribute('viewBox'), liveGeometry: svg.getAttribute('viewBox'),
         rootClean: !['data-view-scale', 'data-focus-active', 'data-reach-active', 'data-route-active', 'data-lens-active', 'data-share-route', 'data-share-reach'].some(a => root.hasAttribute(a)),
@@ -172,6 +172,7 @@ test('Export cleanup preserves canonical artifacts and live interaction state', 
     const pristine = await exported('interaction-pristine');
     const actions = {
       zoom: `Archify.view.zoomIn();`,
+      finder: `Archify.finder.open(); const input=document.getElementById('node-finder-input'); input.value='API'; input.dispatchEvent(new Event('input',{bubbles:true})); if (!document.querySelector('.diagram-container svg [data-finder-match]')) throw new Error('Finder matches missing');`,
       focus: `if (!Archify.focus.set('api', { toggle: false, updateUrl: false })) throw new Error('focus failed');`,
       preview: `if (!Archify.intentTrace.show('api')) throw new Error('preview failed');`,
       lens: `Archify.semanticLens.select('backend'); if (!Archify.semanticLens.active()) throw new Error('lens failed');`,
@@ -235,6 +236,47 @@ test('Export cleanup preserves canonical artifacts and live interaction state', 
         const { data, ...observation } = result;
         records.push({ label, ...observation });
       }
+    }
+  });
+
+  await t.test('active Finder outlines leave canonical PNG bytes unchanged in both themes', async () => {
+    for (const theme of ['dark', 'light']) {
+      await load(files.architecture, theme, true);
+      const result = await evaluate(`(async () => {
+        async function pngDigest() {
+          const svg = document.querySelector('.diagram-container > svg');
+          const before = svg.outerHTML;
+          const original = URL.createObjectURL;
+          let blob;
+          URL.createObjectURL = function (value) {
+            if (value.type === 'image/png') blob = value;
+            return original.call(URL, value);
+          };
+          let synchronousUnchanged;
+          try {
+            const pending = Archify.exportMenu.run('png');
+            synchronousUnchanged = before === svg.outerHTML;
+            await pending;
+          }
+          finally { URL.createObjectURL = original; }
+          if (!blob) throw new Error('Missing PNG export');
+          const hash = await crypto.subtle.digest('SHA-256', await blob.arrayBuffer());
+          return {hash:[...new Uint8Array(hash)].map(n => n.toString(16).padStart(2, '0')).join(''),synchronousUnchanged};
+        }
+        const pristine = await pngDigest();
+        Archify.finder.open();
+        const input = document.getElementById('node-finder-input');
+        input.value = 'API Server'; input.dispatchEvent(new Event('input', {bubbles:true}));
+        const svg = document.querySelector('.diagram-container > svg');
+        const matches = svg.querySelectorAll('[data-finder-match]').length;
+        const active = await pngDigest();
+        // Download's synthetic anchor click can close Finder via the normal
+        // outside-click handler. The synchronous clone operation must not.
+        return {same:pristine.hash === active.hash, matches,
+          liveUnchanged:active.synchronousUnchanged, errors:exportTestErrors};
+      })()`, true);
+      assert.deepEqual(result, {same:true,matches:1,liveUnchanged:true,errors:[]});
+      records.push({label:'finder-png-' + theme,...result});
     }
   });
 
