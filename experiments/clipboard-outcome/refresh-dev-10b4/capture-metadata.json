@@ -1,0 +1,73 @@
+{
+  "kind": "derived-http-browser-capture-bindings",
+  "note": "Binds preserved root HTTP PNGs and derived observation projection to frozen artifacts. Original raw records remain outside checkout; PNG mtime is file write time, not an independent capture clock.",
+  "artifacts": {
+    "base": {
+      "path": "base/review.html",
+      "sha256": "ebd2616a4dc7049d5a27181b7b1d58e0d90df4bec75acc8ef7d74f19fa100427",
+      "bytes": 663050
+    },
+    "candidate": {
+      "path": "candidate/review.html",
+      "sha256": "286ac77f5b3759fa87b7e44456e26f72142f4bf740c782190c856a9d9abe5603",
+      "bytes": 663611
+    }
+  },
+  "observationProjection": {
+    "path": "browser-observations.json",
+    "sha256": "e1218755d20972639f6882d6c23dfe328cd9bd69ceb9fb4f4664a180a0c1e634",
+    "bytes": 2263
+  },
+  "conditions": {
+    "viewport": {
+      "width": 1280,
+      "height": 1000
+    },
+    "theme": "light",
+    "transport": "loopback HTTP",
+    "origin": "http://127.0.0.1:56453",
+    "servedBytesEqualFrozenArtifacts": "reported and checked by root",
+    "api": "controlled missing API, rejection and resolved stubs",
+    "actualOsClipboardWrite": false
+  },
+  "pictures": [
+    {
+      "path": "screenshots/base-missing-ask.png",
+      "sha256": "5e1ff5787adaab3290952091f4a9b011b92883c5f25a7cdf55df4cb5199dda64",
+      "bytes": 232905,
+      "pixelWidth": 1280,
+      "pixelHeight": 1000,
+      "writtenAtFromFileMtime": "2026-10-25T11:11:38.355664+00:00",
+      "rootViewed": true,
+      "implementationAgentViewed": true
+    },
+    {
+      "path": "screenshots/candidate-missing-code.png",
+      "sha256": "5f7cf01b55c719b3cfa47e884b6ab1178b91546949cbd1888fba6614d3a8a166",
+      "bytes": 249321,
+      "pixelWidth": 1280,
+      "pixelHeight": 1000,
+      "writtenAtFromFileMtime": "2026-10-25T11:11:43.631480+00:00",
+      "rootViewed": true,
+      "implementationAgentViewed": true
+    },
+    {
+      "path": "screenshots/candidate-missing-ask.png",
+      "sha256": "e9ee025bf2d31da8fc52aa87449201a0e8737b2e415f8ea66b442c0a3e7e0c36",
+      "bytes": 268598,
+      "pixelWidth": 1280,
+      "pixelHeight": 1000,
+      "writtenAtFromFileMtime": "2026-10-25T11:11:47.523958+00:00",
+      "rootViewed": true,
+      "implementationAgentViewed": true
+    }
+  ],
+  "excludedAttempt": "Initial file URL driver attempt was stopped before final screenshots; its records and images stay outside checkout and are not published here.",
+  "notClaimed": [
+    "assistive technology acceptance",
+    "real OS clipboard or permission acceptance",
+    "full artifact browser-check gate",
+    "hosted CI on refreshed merge",
+    "production or user benefit"
+  ]
+}

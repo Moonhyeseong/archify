@@ -1,0 +1,76 @@
+{
+  "kind": "derived-browser-observation-projection",
+  "note": "Safe projection of root HTTP observations. Original raw JSON stays outside checkout; this is not a redacted original receipt. Full copied messages are omitted; exactness is checked against the raw records.",
+  "rawBindings": [
+    {
+      "record": "missing-checks.json",
+      "bytes": 1371,
+      "sha256": "23961c655612f5af871747ccdb5f606c3616a2c6de4cc0c6bf94f92521cd8f19"
+    },
+    {
+      "record": "retry-checks.json",
+      "bytes": 1769,
+      "sha256": "50d440be344159dca01982d16ca4dd4f073b0960c8f61de2a381f2af55e195f1"
+    }
+  ],
+  "missingRecordedAt": "2026-10-25T11:11:31.089Z",
+  "retryRecordedAt": "2026-10-25T11:12:43.349Z",
+  "missing": {
+    "base": {
+      "code": {
+        "button": "已复制",
+        "toast": "",
+        "calls": 0
+      },
+      "ask": {
+        "open": false,
+        "calls": 0,
+        "toast": "已复制，粘贴给 agent 即可"
+      }
+    },
+    "candidate": {
+      "code": {
+        "button": "复制",
+        "toast": "复制失败，请选中代码后手工复制。",
+        "calls": 0
+      },
+      "ask": {
+        "open": true,
+        "calls": 0,
+        "toast": "复制失败，请手工复制已选中的完整消息。",
+        "focused": true,
+        "selection": {
+          "start": 0,
+          "end": 114,
+          "length": 114
+        },
+        "fullMessageLength": 114,
+        "fullMessageSha256": "b0534edf67713b4dbf1c44687200a1a770aa607095eaf33dea5ed3e68fb3b748"
+      }
+    }
+  },
+  "retry": {
+    "editedFullMessageLength": 125,
+    "editedFullMessageSha256": "0c950506dadbf9f5779bbddac9da00458b477d445ea8cc4c19486c2df1a25088",
+    "rejected": {
+      "open": true,
+      "focused": true,
+      "selection": {
+        "start": 0,
+        "end": 125,
+        "length": 125
+      },
+      "callCount": 1,
+      "firstCallExactEditedMessage": true,
+      "retainedTextExactEditedMessage": true
+    },
+    "recovered": {
+      "open": false,
+      "callCount": 2,
+      "secondCallExactEditedMessage": true,
+      "toast": "已复制，粘贴给 agent 即可"
+    },
+    "counterMeaning": "Cumulative within retry sequence: rejected write is call 1; resolved write is call 2."
+  },
+  "actualOsClipboardWrite": false
+}
