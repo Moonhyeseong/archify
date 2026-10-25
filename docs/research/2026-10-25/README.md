@@ -10,7 +10,7 @@
 
 2026-10-25 16:18（台北）再次核对：dev 已合入 [#1100](https://github.com/tt-a1i/archify/pull/1100)，推进到 [`67f12389`](https://github.com/tt-a1i/archify/commit/67f12389212c54b3122da60e2813c7f8dab7ab2f)，main 仍为 `51a29177`。这次修改 finalize 的源码范围修复、候选文件保留及相关交付逻辑；Copy identity、CLI reading tour 和 Clipboard outcome 保留实际冻结的 `3f95f034` 基线，不把既有结果改称新 dev 验证。
 
-## 已推送的 33 个实验
+## 已推送的 34 个实验
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
@@ -51,6 +51,7 @@
 | [Copy identity](https://github.com/tt-a1i/archify/tree/codex/lab-copy-identity/experiments/copy-identity) | 内容相等仍可能共享不同对象：别名、浅拷贝、深拷贝的引用对照 | `18d51b89` | [实际引用图](https://github.com/tt-a1i/archify/blob/codex/lab-copy-identity/experiments/copy-identity/screenshots/native.png) | 新dev3f95；标准库独立观察4变量/7list/10引用、6内容检查、两产物四阶段通过；3张实际图；上游教学构造，未运行上游工具/未观察整个heap |
 | [CLI reading tour](https://github.com/tt-a1i/archify/tree/codex/lab-cli-reading-tour/experiments/cli-reading-tour) | 沿真实源码区分三个CLI出口、磁盘JSON、HTTP快照与用户启动 | `1dff88d3` | [实际阅读页](https://github.com/tt-a1i/archify/blob/codex/lab-cli-reading-tour/experiments/cli-reading-tour/screenshots/overview.png) | 新dev3f95；7固定源、11SourceCards、10节点9边；三静态阶段通过/自动browser未请求；实际Walk、hover/Escape及3图；未运行上游服务或scanner |
 | [Clipboard outcome](https://github.com/tt-a1i/archify/tree/codex/lab-clipboard-outcome/experiments/clipboard-outcome) | 复制不可用时保留可选择的内容，恢复后重试不重复包装问题 | `68866954` | [实际失败恢复](https://github.com/tt-a1i/archify/blob/codex/lab-clipboard-outcome/experiments/clipboard-outcome/screenshots/missing-ask-candidate.png) | 基线3f95；8种API边界、邻近32/core19、canonical双ZIP/抽包通过；同一真实PR输入基线/候选三阶段通过；API受控注入实测，未写OS clipboard；自动browser未请求 |
+| [Byte views](https://github.com/tt-a1i/archify/tree/codex/lab-byte-views/experiments/byte-views) | 分清IHDR的25B物理字段与已有type内的4个bit解释，避免重复求和 | `b844ecb2` | [实际解释页](https://github.com/tt-a1i/archify/blob/codex/lab-byte-views/experiments/byte-views/screenshots/explainer-overview.png) | 固定67f；完整97B官方fixture/golden、独立字节观察8事实检查；Tree四阶段/Explainer三静态阶段通过，root四图及citation hover/Escape；未运行fq/CRC/解压 |
 
 这三十三项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
 
@@ -74,9 +75,9 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | --- | --- |
 | <img width="540" alt="Finder：搜索对应画布节点 actual screenshot" src="https://raw.githubusercontent.com/tt-a1i/archify/94c165ee6e5213c67e37a75a0b04496564980801/experiments/finder-highlights/screenshots/candidate-api-light.png"> | <img width="540" alt="DBML：原四表 synthetic 键与关系 actual screenshot" src="https://raw.githubusercontent.com/tt-a1i/archify/feab6ae685692630d6d837622dc7bdcb57a09679/experiments/dbml-erd/screenshots/order-payments.png"> |
 
-| [State：声明与未声明](https://github.com/tt-a1i/archify/tree/codex/lab-state-contract/experiments/state-contract) | [Decision：保留异议](https://github.com/tt-a1i/archify/tree/codex/lab-decision-thread/experiments/decision-thread) |
+| [State：官方fixture实导出](https://github.com/tt-a1i/archify/tree/codex/lab-state-contract/experiments/state-contract) | [Decision：保留异议](https://github.com/tt-a1i/archify/tree/codex/lab-decision-thread/experiments/decision-thread) |
 | --- | --- |
-| <img width="540" alt="State：声明与未声明 actual screenshot" src="https://raw.githubusercontent.com/tt-a1i/archify/cc8c75bc15484098bf64aead799a34870981ccac/experiments/state-contract/screenshots/state-contract.png"> | <img width="540" alt="Decision：保留异议 actual screenshot" src="https://raw.githubusercontent.com/tt-a1i/archify/bdbdf9a9b5b97c556c5f85547279021b7446a05c/experiments/decision-thread/screenshots/sequence.png"> |
+| <img width="540" alt="State：官方fixture实导出 actual screenshot" src="https://raw.githubusercontent.com/tt-a1i/archify/f7269e096ac1891b434842cf7e16b9ffdd54cdf6/experiments/state-contract/measured/screenshots/explainer-overview.png"> | <img width="540" alt="Decision：保留异议 actual screenshot" src="https://raw.githubusercontent.com/tt-a1i/archify/bdbdf9a9b5b97c556c5f85547279021b7446a05c/experiments/decision-thread/screenshots/sequence.png"> |
 
 ## 保留证据但暂不推荐的原型
 
@@ -104,15 +105,17 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 2026-10-25 17:17:13核Recipe stages新head `062dee5d`：已纳固定dev67f，远端head一致，Actions runs/check-runs均为0。17:15重新核GitHub main/dev仍为51a29177/67f12389。
 
+2026-10-25 17:30:01核Byte views新head `b844ecb2`：远端head一致，Actions runs/check-runs均为0。该产物和截图仍绑定67f；17:29核GitHub dev已推进到 `10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0`（#1102合入），main仍51a29177，后续新实验从新dev开始；[范围核对](base-refresh-1731.md)记录Viewer/Explainer/finalize影响与精确dev CI。已有分支产物不因此自动获得新dev验证。
+
 ## 正在推进
 
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
-| 新内容实验 | fq字节区间与位解释视图 | byte-views在最新已核dev67f独立分支实现中；完整97B官方fixture/golden，不新建binary parser；尚未推送或计入33项 |
-| 新一轮发现 | 代码导航、图阅读、差异比较 | 第5轮报告完成：按实际源码/fixture与PR1102、1103排重，本轮0新增实现；没有独立收益证据的机制保留研究 |
+| 新内容实验 | fq字节区间与位解释视图 | byte-views已推b844ecb2，计入第34项；完整97B官方fixture/golden与四张真实截图，冻结67f基线 |
+| 新一轮发现 | 调试回放与图内标注阅读 | 第7轮继续寻找小型项目；按新dev已合入#1102和未合入#1103排重，没有独立收益证据的机制保留研究 |
 | 既有实验真实输出 | Recipe stages / State contract | State官方fixture实导出已推f7269e09；Recipe官方test有效输入dump已推062dee5d，自然完整示例拒绝并保留；历史synthetic不改称实跑 |
 | 新发现修复 | Explainer复制结果与手工恢复 | Clipboard outcome已推送68866954，来源、基线/候选和实际截图见第33项 |
-| 浏览页更新 | 新增4项及DBML/Migration更新 | 33项快照已完成静态独立重建与浅深色/390px真实浏览器检查，旧版证据继续绑定原提交 |
+| 浏览页更新 | 第34项及State/Recipe真实导出图片 | 当前可审查快照仍为33项；下一版将加入Byte views并替换State/Recipe主图，旧版证据继续绑定原提交 |
 | 既有实验补证据 | DBML与Plan actions | DBML已补上primary key同义写法接受；原拒绝记录保留；完整plan fixture转换证据不变 |
 | 已排除的重复实现 | Mutation报告reader | 原viewer已有文件搜索、状态筛选、diff、测试关联和单HTML打包；只保留研究，不另建reader |
 | 新dev影响核对 | 许可声明与finalize源范围修复 | [15:41迁移](base-refresh-1541.md) / [16:18交付逻辑](base-refresh-1618.md)：分别核对实际diff；旧证据保留原身份，新整合按影响验证 |
