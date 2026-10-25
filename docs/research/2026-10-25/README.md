@@ -6,7 +6,7 @@
 
 共同实验基线：[dev `82c7e0f0`](https://github.com/tt-a1i/archify/commit/82c7e0f089a02a4d514714adf37dc2061682da5f)，2026-10-25 已重新核对远端仍为该 revision。下面的“已推送”只表示远程实验分支可审查，不能等同于合入、发布或人类验收。
 
-## 已推送的 22 个实验
+## 已推送的 24 个实验
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
@@ -34,8 +34,10 @@
 | [Diagnostic locations](https://github.com/tt-a1i/archify/tree/codex/lab-diagnostic-locations/experiments/diagnostic-locations) | 同文诊断显示已有行号/节点/路径，preview保留旧图并指出坏输入 | `67328d7d` | [实际连续预览](https://github.com/tt-a1i/archify/blob/codex/lab-diagnostic-locations/experiments/diagnostic-locations/screenshots/live-preview-needs-fix.png) | 29诊断、19core、2preview、7真实Chrome检查；独立6；JSON字节不变，双ZIP一致；同一浏览器验证rev1→needs-fix |
 | [Finder result descriptions](https://github.com/tt-a1i/archify/tree/codex/lab-finder-context/experiments/finder-context) | 8个同名搜索结果通过既有ID/类型/耗时说明获得不同可访问描述 | `5b7701c1` | [实际UI与AX证据](https://github.com/tt-a1i/archify/tree/codex/lab-finder-context/experiments/finder-context/screenshots) | 13browser/toolbar、19core、2generatedfocused、golden/ZIP通过；8条实际AX与键盘选择核实；非VoiceOver/NVDA接受 |
 | [Delivery witness](https://github.com/tt-a1i/archify/tree/codex/lab-delivery-witness/experiments/delivery-witness) | 同msgId、同t的两次投递保留seq/dup与原始patch，不以时间去重 | `f2aa251e` | [实际证据页](https://github.com/tt-a1i/archify/blob/codex/lab-delivery-witness/experiments/delivery-witness/screenshots/witness.png) | 零共享代码；固定官方模拟fixture选段；2页四阶段通过，独立源/语义复核；小字与错误图例已修，旧图保留；非本次运行/用户收益 |
+| [Waterfall status text](https://github.com/tt-a1i/archify/tree/codex/lab-waterfall-status/experiments/waterfall-status) | 已提供error/cancelled同时显示在行尾、节点说明和可访问名称 | `e20acd6d` | [实际前后图](https://github.com/tt-a1i/archify/tree/codex/lab-waterfall-status/experiments/waterfall-status) | 局部renderer；34focused/core、2产物四阶段、ZIP/package通过；两个旧例byte-identical；实际AX/Passport/浅深色；构造输入，非真人AT |
+| [Retained size](https://github.com/tt-a1i/archify/tree/codex/lab-retained-size/experiments/retained-size) | Twiggy自身165B+直接支配子项4B=保留169B，避免跨层重复计数 | `a0c76fc8` | [实际解释页](https://github.com/tt-a1i/archify/blob/codex/lab-retained-size/experiments/retained-size/screenshots/explanation.png) | 零共享代码；固定上游golden；Tree四阶段、Explainer三阶段通过/自动browser未跑；单一模型绑定已修，旧图保留；非删减实测 |
 
-这二十二项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
+这二十四项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
 
 GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确远端 head 的 Actions runs/check-runs 均为 0。当前 [CI 配置](https://github.com/tt-a1i/archify/blob/82c7e0f089a02a4d514714adf37dc2061682da5f/.github/workflows/ci.yml) 只对 main/dev push 自动运行，另外支持 PR/manual。这里的实验分支 push 没有提供远端 CI 通过证据；上表测试均按实际本地来源记录。
 
@@ -69,10 +71,9 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
-| Waterfall状态文字 | 已提供error/cancelled只在颜色及全局图例体现 | 构造反例已实测；局部renderer候选已生成，独立复核与实际AX/Passport检查中 |
-| Retained size解释页 | Twiggy官方golden中的165B自身与169B保留子树 | 用原生Tree/Explainer制作固定来源样例，不引入二进制分析器 |
 | Lasso witness阅读对照 | 上游既有三位置反例，前缀与明确循环入口 | 准备原文表与原生图的内容级对照；不执行checker或添加parser |
 | 后续实证 | Task review map应用于固定Archify PR | 只读核实是否能增补真实改动审阅证据 |
+| 后续发现 | SQL查询计划、估计/实际行数与循环计量 | 新一轮固定来源调研，先去重；不运行数据库 |
 
 ## 一手调研报告
 
