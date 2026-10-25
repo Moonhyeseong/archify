@@ -1,0 +1,312 @@
+{
+  "adapter": "test-context-map/1",
+  "kind": "provided-report",
+  "contracts": {
+    "coverage": {
+      "repository": "https://github.com/coveragepy/coveragepy",
+      "commit": "0e4f752b455bbf26fdad32ac29948d067c87dd62",
+      "file": "coverage/jsonreport.py",
+      "license": "Apache-2.0"
+    },
+    "pytestCov": {
+      "repository": "https://github.com/pytest-dev/pytest-cov",
+      "commit": "a8cb1260170754f2aff9022cfd252c488098e813",
+      "file": "src/pytest_cov/plugin.py",
+      "license": "MIT"
+    }
+  },
+  "reportSha256": "97d6ac1c596ae5562a41e4e42710256bc9ee4af94b313dec4f13d4b6fdcfb359",
+  "reportBinding": {
+    "sha256": "97d6ac1c596ae5562a41e4e42710256bc9ee4af94b313dec4f13d4b6fdcfb359",
+    "runId": "controlled-canonical-context-run",
+    "sourceRevision": "da7d35c8a47be49eda2c57ce5bf7dbe3ba1512c9",
+    "exporterVersion": "7.17.1a0.dev1"
+  },
+  "selectionBinding": {
+    "reportSha256": "97d6ac1c596ae5562a41e4e42710256bc9ee4af94b313dec4f13d4b6fdcfb359",
+    "runId": "controlled-canonical-context-run",
+    "sourceRevision": "da7d35c8a47be49eda2c57ce5bf7dbe3ba1512c9"
+  },
+  "bindingStatus": "matching sidecar claims; no source or run independently verified",
+  "sourceStatus": "not-verified",
+  "testResults": "not-consumed; no pass/fail inference",
+  "collectionFilters": [
+    "Actual controlled fixture only: --cov=domain; pytest -k parameterized; --cov-context=test.",
+    "Source-binding note, not a filter: sourceRevision is SHA1 of the original fixture manifest content, NOT a Git commit.",
+    "Only raw observed context labels are used; no labels manufactured for the second parameter case."
+  ],
+  "selectedLineCount": 7,
+  "selectedFileCount": 1,
+  "reportFileCount": 1,
+  "contextGroups": [
+    {
+      "id": "T1",
+      "testId": "tests/test_cases.py::test_parameterized[a|b]",
+      "phase": "run",
+      "contexts": [
+        "tests/test_cases.py::test_parameterized[a|b]|run"
+      ]
+    },
+    {
+      "id": "T2",
+      "testId": "tests/test_cases.py::test_parameterized[a|b]",
+      "phase": "teardown",
+      "contexts": [
+        "tests/test_cases.py::test_parameterized[a|b]|teardown"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "line-1",
+      "fileId": "F1",
+      "sourcePath": "domain.py",
+      "line": 5,
+      "states": [
+        "mapped"
+      ],
+      "labels": [
+        "tests/test_cases.py::test_parameterized[a|b]|run"
+      ],
+      "mapped": [
+        "T1"
+      ],
+      "unknownLabels": [],
+      "unattributedEmpty": false,
+      "sourceStatus": "not-verified",
+      "provenance": {
+        "reportPath": "domain.py",
+        "contextLookupPointer": "/files/domain.py/contexts/5",
+        "contextLookupPath": [
+          "files",
+          "domain.py",
+          "contexts",
+          "5"
+        ],
+        "contextLookupPresent": true,
+        "reportSha256": "97d6ac1c596ae5562a41e4e42710256bc9ee4af94b313dec4f13d4b6fdcfb359",
+        "classificationEvidence": [
+          {
+            "pointer": "/files/domain.py/executed_lines/2",
+            "value": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "line-2",
+      "fileId": "F1",
+      "sourcePath": "domain.py",
+      "line": 2,
+      "states": [
+        "unattributed"
+      ],
+      "labels": [
+        ""
+      ],
+      "mapped": [],
+      "unknownLabels": [],
+      "unattributedEmpty": true,
+      "sourceStatus": "not-verified",
+      "provenance": {
+        "reportPath": "domain.py",
+        "contextLookupPointer": "/files/domain.py/contexts/2",
+        "contextLookupPath": [
+          "files",
+          "domain.py",
+          "contexts",
+          "2"
+        ],
+        "contextLookupPresent": true,
+        "reportSha256": "97d6ac1c596ae5562a41e4e42710256bc9ee4af94b313dec4f13d4b6fdcfb359",
+        "classificationEvidence": [
+          {
+            "pointer": "/files/domain.py/executed_lines/0",
+            "value": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "line-3",
+      "fileId": "F1",
+      "sourcePath": "domain.py",
+      "line": 8,
+      "states": [
+        "unknown"
+      ],
+      "labels": [
+        "tests/test_cases.py::test_parameterized[a|b]|setup"
+      ],
+      "mapped": [],
+      "unknownLabels": [
+        "tests/test_cases.py::test_parameterized[a|b]|setup"
+      ],
+      "unattributedEmpty": false,
+      "sourceStatus": "not-verified",
+      "provenance": {
+        "reportPath": "domain.py",
+        "contextLookupPointer": "/files/domain.py/contexts/8",
+        "contextLookupPath": [
+          "files",
+          "domain.py",
+          "contexts",
+          "8"
+        ],
+        "contextLookupPresent": true,
+        "reportSha256": "97d6ac1c596ae5562a41e4e42710256bc9ee4af94b313dec4f13d4b6fdcfb359",
+        "classificationEvidence": [
+          {
+            "pointer": "/files/domain.py/executed_lines/4",
+            "value": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": "line-4",
+      "fileId": "F1",
+      "sourcePath": "domain.py",
+      "line": 13,
+      "states": [
+        "missing"
+      ],
+      "labels": [],
+      "mapped": [],
+      "unknownLabels": [],
+      "unattributedEmpty": false,
+      "sourceStatus": "not-verified",
+      "provenance": {
+        "reportPath": "domain.py",
+        "contextLookupPointer": "/files/domain.py/contexts/13",
+        "contextLookupPath": [
+          "files",
+          "domain.py",
+          "contexts",
+          "13"
+        ],
+        "contextLookupPresent": false,
+        "reportSha256": "97d6ac1c596ae5562a41e4e42710256bc9ee4af94b313dec4f13d4b6fdcfb359",
+        "classificationEvidence": [
+          {
+            "pointer": "/files/domain.py/missing_lines/0",
+            "value": 13
+          }
+        ]
+      },
+      "reason": "reported missing; no test selection inferred"
+    },
+    {
+      "id": "line-5",
+      "fileId": "F1",
+      "sourcePath": "domain.py",
+      "line": 15,
+      "states": [
+        "excluded"
+      ],
+      "labels": [],
+      "mapped": [],
+      "unknownLabels": [],
+      "unattributedEmpty": false,
+      "sourceStatus": "not-verified",
+      "provenance": {
+        "reportPath": "domain.py",
+        "contextLookupPointer": "/files/domain.py/contexts/15",
+        "contextLookupPath": [
+          "files",
+          "domain.py",
+          "contexts",
+          "15"
+        ],
+        "contextLookupPresent": true,
+        "reportSha256": "97d6ac1c596ae5562a41e4e42710256bc9ee4af94b313dec4f13d4b6fdcfb359",
+        "classificationEvidence": [
+          {
+            "pointer": "/files/domain.py/excluded_lines/0",
+            "value": 15
+          }
+        ]
+      },
+      "reason": "reported excluded; not attributed to test columns"
+    },
+    {
+      "id": "line-6",
+      "fileId": "F1",
+      "sourcePath": "domain.py",
+      "line": 99,
+      "states": [
+        "unavailable"
+      ],
+      "labels": [],
+      "mapped": [],
+      "unknownLabels": [],
+      "unattributedEmpty": false,
+      "sourceStatus": "not-verified",
+      "provenance": {
+        "reportPath": "domain.py",
+        "contextLookupPointer": "/files/domain.py/contexts/99",
+        "contextLookupPath": [
+          "files",
+          "domain.py",
+          "contexts",
+          "99"
+        ],
+        "contextLookupPresent": false,
+        "reportSha256": "97d6ac1c596ae5562a41e4e42710256bc9ee4af94b313dec4f13d4b6fdcfb359",
+        "classificationEvidence": [
+          {
+            "pointer": "/files/domain.py/executed_lines",
+            "containsSelectedLine": false
+          },
+          {
+            "pointer": "/files/domain.py/missing_lines",
+            "containsSelectedLine": false
+          },
+          {
+            "pointer": "/files/domain.py/excluded_lines",
+            "containsSelectedLine": false
+          }
+        ]
+      },
+      "reason": "line not classified by reported line sets"
+    },
+    {
+      "id": "line-7",
+      "fileId": "F1",
+      "sourcePath": "domain.py",
+      "line": 9,
+      "states": [
+        "mapped"
+      ],
+      "labels": [
+        "tests/test_cases.py::test_parameterized[a|b]|teardown"
+      ],
+      "mapped": [
+        "T2"
+      ],
+      "unknownLabels": [],
+      "unattributedEmpty": false,
+      "sourceStatus": "not-verified",
+      "provenance": {
+        "reportPath": "domain.py",
+        "contextLookupPointer": "/files/domain.py/contexts/9",
+        "contextLookupPath": [
+          "files",
+          "domain.py",
+          "contexts",
+          "9"
+        ],
+        "contextLookupPresent": true,
+        "reportSha256": "97d6ac1c596ae5562a41e4e42710256bc9ee4af94b313dec4f13d4b6fdcfb359",
+        "classificationEvidence": [
+          {
+            "pointer": "/files/domain.py/executed_lines/5",
+            "value": 9
+          }
+        ]
+      }
+    }
+  ],
+  "coverage": "Explicit selected rows only; no coverage percentage, test ranking, automatic selection or correctness conclusion. File keys are data and are never opened.",
+  "sidecarSha256": "6d1ac2a4b2ad897fea06f26930adfc727dfc7a390889aa139d2cf90b7aec61ae"
+}

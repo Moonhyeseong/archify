@@ -1,0 +1,101 @@
+{
+  "classification": "Actual exporter observations selected from original raw JSON, not an original raw report",
+  "runs": [
+    {
+      "run": "canonical-context",
+      "rawPytestSha256": "06575c06cb8ef063c62d7c4860760feb6ca4093ef8be7874c63e3afdad2d45d1",
+      "exitcode": 0,
+      "tests": [
+        {
+          "nodeid": "tests/test_cases.py::test_parameterized[a|b]",
+          "reportedOutcome": "passed",
+          "stages": {
+            "setup": "passed",
+            "call": "passed",
+            "teardown": "passed"
+          }
+        },
+        {
+          "nodeid": "tests/test_cases.py::test_parameterized[two]",
+          "reportedOutcome": "passed",
+          "stages": {
+            "setup": "passed",
+            "call": "passed",
+            "teardown": "passed"
+          }
+        }
+      ],
+      "collectorOutcomes": [
+        {
+          "nodeid": "",
+          "outcome": "passed"
+        },
+        {
+          "nodeid": "tests/test_cases.py",
+          "outcome": "passed"
+        }
+      ]
+    },
+    {
+      "run": "canonical-phase-failures",
+      "rawPytestSha256": "01bb5a0df0ab73a5654c7b3d85ea858b25eed9f4c2fa6659e96ec4098a87adfc",
+      "exitcode": 1,
+      "tests": [
+        {
+          "nodeid": "tests/test_cases.py::test_setup_failure",
+          "reportedOutcome": "error",
+          "stages": {
+            "setup": "failed",
+            "teardown": "passed"
+          }
+        },
+        {
+          "nodeid": "tests/test_cases.py::test_call_failure",
+          "reportedOutcome": "failed",
+          "stages": {
+            "setup": "passed",
+            "call": "failed",
+            "teardown": "passed"
+          }
+        },
+        {
+          "nodeid": "tests/test_cases.py::test_teardown_failure",
+          "reportedOutcome": "error",
+          "stages": {
+            "setup": "passed",
+            "call": "passed",
+            "teardown": "failed"
+          }
+        }
+      ],
+      "collectorOutcomes": [
+        {
+          "nodeid": "",
+          "outcome": "passed"
+        },
+        {
+          "nodeid": "tests/test_cases.py",
+          "outcome": "passed"
+        }
+      ]
+    },
+    {
+      "run": "canonical-collection-failure",
+      "rawPytestSha256": "faebb64e473bf51b3283a22202db162ef9aea7825a9ecc828dbb853b5af399d1",
+      "exitcode": 2,
+      "tests": [],
+      "collectorOutcomes": [
+        {
+          "nodeid": "",
+          "outcome": "passed"
+        },
+        {
+          "nodeid": "tests/test_collection_failure.py",
+          "outcome": "failed"
+        }
+      ]
+    }
+  ],
+  "selection": "Only nodeid, reported outcome and phase outcomes are selected here; raw reports including root/environment remain outside repository. Context reader does not consume these test outcomes.",
+  "coverageObservationLimit": "Both parameterized cases reported passed, but recorded context labels identify only a|b; no cause or missing context is inferred."
+}

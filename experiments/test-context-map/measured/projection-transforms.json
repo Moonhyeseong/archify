@@ -1,0 +1,48 @@
+{
+  "reports": [
+    {
+      "name": "contexts",
+      "rawFile": "canonical-context.coverage.json",
+      "rawSha256": "e4a6322659fe5f493f1a66bf9b045a30bfe5c902bed154940b0a1a7152dadd07",
+      "projectedFile": "inputs/contexts.consumed.json",
+      "projectedSha256": "97d6ac1c596ae5562a41e4e42710256bc9ee4af94b313dec4f13d4b6fdcfb359",
+      "classification": "actual-run consumed-field projection; original controlled fixture",
+      "transforms": [
+        {
+          "operation": "omit-subtree",
+          "pointer": "/totals",
+          "reason": "not consumed by context reader"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/meta/timestamp",
+          "reason": "not consumed; timestamp/branch settings remain in raw report"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/meta/branch_coverage",
+          "reason": "not consumed; timestamp/branch settings remain in raw report"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/files/domain.py/summary",
+          "reason": "summary/regions/branches not consumed; no line/context observations altered"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/files/domain.py/functions",
+          "reason": "summary/regions/branches not consumed; no line/context observations altered"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/files/domain.py/classes",
+          "reason": "summary/regions/branches not consumed; no line/context observations altered"
+        }
+      ],
+      "lineSetsAndContextLabelsUnchanged": true
+    }
+  ],
+  "selectionPolicy": "7 explicitly chosen source locations demonstrate observed mapped/empty/unmapped plus reported missing/excluded/unavailable. The setup label is intentionally not in contextMap; exact run/teardown labels are mapped, not pipe-parsed.",
+  "observationLimit": "pytest reports both parameter variants passed, but this coverage export lists contexts only for a|b. Cause not determined; no absence-as-nonexecution claim.",
+  "sourceBinding": "SHA-1 of original fixture-source-manifest.json bytes. Content identity only, NOT a Git commit or verified source revision."
+}

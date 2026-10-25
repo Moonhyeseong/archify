@@ -1,0 +1,86 @@
+{
+  "classification": "actual-run consumed-field projection",
+  "projectType": "Original controlled pure-arithmetic fixture; not a user project or user-value experiment",
+  "python": "3.14.8",
+  "versions": {
+    "packaging": "26.3",
+    "Pygments": "2.21.0",
+    "pytest-cov": "7.1.0",
+    "pytest-json-report": "1.5.0",
+    "iniconfig": "2.3.1",
+    "pytest-metadata": "3.1.1",
+    "pip": "26.2.1",
+    "pluggy": "1.7.0",
+    "pytest": "8.4.2",
+    "coverage": "7.17.1a0.dev1"
+  },
+  "upstreamSources": [
+    {
+      "name": "pytest-json-report",
+      "repository": "https://github.com/numirias/pytest-json-report",
+      "commit": "c6f0bc93a174770e04b965e459d339a880005e78",
+      "sha256": "286515e0c38eebf04792e735d50e673f29aa6b1fd2bccfdc47dfb09b553f5bfd"
+    },
+    {
+      "name": "coveragepy",
+      "repository": "https://github.com/coveragepy/coveragepy",
+      "commit": "0e4f752b455bbf26fdad32ac29948d067c87dd62",
+      "sha256": "fdd09525a0852acdd1efe2f1cad252372c0654df1ecd342a113f54b08114b680"
+    },
+    {
+      "name": "pytest-cov",
+      "repository": "https://github.com/pytest-dev/pytest-cov",
+      "commit": "a8cb1260170754f2aff9022cfd252c488098e813",
+      "sha256": "c7b487bd5533774202a908430a3418a64c4b843faf674ec1d5100aba8cdf29f7"
+    }
+  ],
+  "installedSourceFileChecks": [
+    {
+      "distribution": "coverage",
+      "sourceFile": "coverage/jsonreport.py",
+      "sourceSha256": "f774c2168669ccf7ebaadd45ae9b9e7cd3ddfc6ce44b2a7e1e5c2b15293e3a3d",
+      "installedSha256": "f774c2168669ccf7ebaadd45ae9b9e7cd3ddfc6ce44b2a7e1e5c2b15293e3a3d",
+      "exactBytesMatch": true
+    },
+    {
+      "distribution": "pytest-cov",
+      "sourceFile": "src/pytest_cov/plugin.py",
+      "sourceSha256": "80b41687781bd9b3d63e8f72e21a81a2fb66577a5dff82c2f0813c21b8ee82d9",
+      "installedSha256": "80b41687781bd9b3d63e8f72e21a81a2fb66577a5dff82c2f0813c21b8ee82d9",
+      "exactBytesMatch": true
+    },
+    {
+      "distribution": "pytest-json-report",
+      "sourceFile": "pytest_jsonreport/plugin.py",
+      "sourceSha256": "0e72b5dca9cddfceea60d770b3dfc38422c135495f64a7837b2b82f83cb2bf18",
+      "installedSha256": "0e72b5dca9cddfceea60d770b3dfc38422c135495f64a7837b2b82f83cb2bf18",
+      "exactBytesMatch": true
+    },
+    {
+      "distribution": "pytest",
+      "sourceFile": "src/_pytest/main.py",
+      "sourceSha256": "1cfc8743fd192849d2309353de3eb8b42dcd83801e1d11b1169dbc75198333d7",
+      "installedSha256": "1cfc8743fd192849d2309353de3eb8b42dcd83801e1d11b1169dbc75198333d7",
+      "exactBytesMatch": true
+    }
+  ],
+  "fixtureManifestSha256": "69c0b61d040f5cc3381f1206190455b737c3358745105854b5a3b6eb16712767",
+  "fixtureSourceContentTokenSha1": "da7d35c8a47be49eda2c57ce5bf7dbe3ba1512c9",
+  "sourceTokenMeaning": "SHA-1 of original fixture-source-manifest.json bytes. Content identity only, NOT a Git commit or verified source revision.",
+  "upstreamExecution": true,
+  "readerExecution": "Reader only consumes files; it does not itself run pytest/coverage.",
+  "pytestSource": {
+    "version": "8.4.2",
+    "repository": "https://github.com/pytest-dev/pytest",
+    "sourceTag": "8.4.2",
+    "sourceCommit": "bfae4224fd554d3d7f2c277a4cc092b6ec6af3ae",
+    "license": "MIT",
+    "wheelHashEvidence": "package-artifacts.json"
+  },
+  "licenses": {
+    "pytest": "MIT",
+    "pytest-json-report": "MIT",
+    "pytest-cov": "MIT",
+    "coverage.py": "Apache-2.0"
+  }
+}

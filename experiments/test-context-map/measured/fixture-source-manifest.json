@@ -1,0 +1,35 @@
+{
+  "kind": "Original controlled fixture, actually executed by fixed upstream tools; not a user project",
+  "files": [
+    {
+      "path": ".coveragerc",
+      "sha256": "a2767e910f4d5360a70539ee8434b38f0f4b253c04a536a76bc026e6683a3acc"
+    },
+    {
+      "path": ".coveragerc-static",
+      "sha256": "37aeb864725b3019a8969b97bfdded1ceb035cf4f78dd063b801133be0c289db"
+    },
+    {
+      "path": "domain.py",
+      "sha256": "125e8837e9d1fbc6dc96e819d4eb224d4f7f47b96753f3020a068fb551434c3c"
+    },
+    {
+      "path": "pytest.ini",
+      "sha256": "8250d20f42b419af40706490ead78aabab9feba93eab09a3f626e3de5256e1f4"
+    },
+    {
+      "path": "tests/conftest.py",
+      "sha256": "6197ba345b266decc20b93026332d73e01766e3a3c2b8dc8d2c75f7ce51e993d"
+    },
+    {
+      "path": "tests/test_cases.py",
+      "sha256": "0568e0be1e2ab78ad1c0b6bd4a454cd3e9de87591de79c79614b09f5995c6a86"
+    },
+    {
+      "path": "tests/test_collection_failure.py",
+      "sha256": "8365df9482bd7817ff09eff9bac7976dd6ba98a963257042d1da9b10704acc02"
+    }
+  ],
+  "sourceRevision": null,
+  "sourceRevisionNote": "Temporary fixture is not a Git checkout and no commit was created. File SHA-256 hashes are the source identity."
+}

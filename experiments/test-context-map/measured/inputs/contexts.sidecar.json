@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "kind": "provided-report",
+  "classification": "redacted",
+  "sourceRevisionMeaning": "SHA-1 of original fixture-source-manifest.json bytes. Content identity only, NOT a Git commit or verified source revision.",
+  "reportBinding": {
+    "sha256": "97d6ac1c596ae5562a41e4e42710256bc9ee4af94b313dec4f13d4b6fdcfb359",
+    "runId": "controlled-canonical-context-run",
+    "sourceRevision": "da7d35c8a47be49eda2c57ce5bf7dbe3ba1512c9",
+    "exporterVersion": "7.17.1a0.dev1",
+    "collectionFilters": [
+      "Actual controlled fixture only: --cov=domain; pytest -k parameterized; --cov-context=test.",
+      "Source-binding note, not a filter: sourceRevision is SHA1 of the original fixture manifest content, NOT a Git commit.",
+      "Only raw observed context labels are used; no labels manufactured for the second parameter case."
+    ]
+  },
+  "selectionBinding": {
+    "reportSha256": "97d6ac1c596ae5562a41e4e42710256bc9ee4af94b313dec4f13d4b6fdcfb359",
+    "runId": "controlled-canonical-context-run",
+    "sourceRevision": "da7d35c8a47be49eda2c57ce5bf7dbe3ba1512c9"
+  },
+  "fileMap": [
+    {
+      "reportPath": "domain.py",
+      "sourcePath": "domain.py"
+    }
+  ],
+  "selections": [
+    {
+      "sourcePath": "domain.py",
+      "lines": [
+        5,
+        2,
+        8,
+        13,
+        15,
+        99,
+        9
+      ]
+    }
+  ],
+  "contextMap": [
+    {
+      "context": "tests/test_cases.py::test_parameterized[a|b]|run",
+      "testId": "tests/test_cases.py::test_parameterized[a|b]",
+      "phase": "run"
+    },
+    {
+      "context": "tests/test_cases.py::test_parameterized[a|b]|teardown",
+      "testId": "tests/test_cases.py::test_parameterized[a|b]",
+      "phase": "teardown"
+    }
+  ]
+}

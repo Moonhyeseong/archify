@@ -1,0 +1,33 @@
+{
+  "kind": "actual-browser-capture-summary",
+  "captureTool": "ego-browser",
+  "viewportCss": [
+    1440,
+    1000
+  ],
+  "deviceScaleFactor": 1,
+  "fullPage": true,
+  "images": [
+    {
+      "image": "matrix.png",
+      "sha256": "317895eb497ae28b9b5e6c4401001502d23e2565adc70d1a9b7c3838434f5f33",
+      "width": 1440,
+      "height": 1783,
+      "source": "../observations/matrix.html",
+      "sourceSha256": "a86b293de73f0121e9f2b8f39e736fc0db862666fd76326f443955f351667ea0",
+      "capturedAtUtc": "2026-10-25T05:37:57.169Z"
+    },
+    {
+      "image": "selection.png",
+      "sha256": "e285d304abe2f2307f7cc2f6a33aadd1bc9bcfe23c8993b1484a1565d84288ae",
+      "width": 1440,
+      "height": 1351,
+      "source": "../observations/selection.html",
+      "sourceSha256": "a1291ab10cd3fa0abe6ab93792884bd5736904e1def6451ece7a90d5a8bca521",
+      "capturedAtUtc": "2026-10-25T05:38:00.403Z"
+    }
+  ],
+  "browserCheck": "not-requested; screenshots are separate actual browser evidence",
+  "humanAcceptance": "pending",
+  "agentVisualReview": "Coordinator viewed both actual screenshots: supplied phase/context observations and omitted/unknown boundaries remain readable. No human acceptance or diagnosis-time benefit established."
+}

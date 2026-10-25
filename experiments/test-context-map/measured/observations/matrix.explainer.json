@@ -1,0 +1,371 @@
+{
+  "schema_version": 1,
+  "diagram_type": "explainer",
+  "meta": {
+    "id": "test-context-map",
+    "title": "Test contexts × selected source lines",
+    "locale": "en"
+  },
+  "answer": {
+    "summary": "Read only the explicitly selected line observations; test outcomes and source correctness remain unknown.",
+    "reasons": [
+      "Exact supplied context mappings preserve test ID and phase.",
+      "Empty and unknown context labels remain different.",
+      "Missing, excluded and unavailable never become zero coverage or failed tests."
+    ],
+    "scope": "7 selected lines · 2 mapped test/phase columns · source not verified · no automatic test selection"
+  },
+  "panels": [
+    {
+      "id": "matrix",
+      "title": "Which context observed each selected line?",
+      "blocks": [
+        {
+          "id": "observations",
+          "type": "comparison",
+          "labelColumn": "Selected location",
+          "columns": [
+            "State",
+            "T1 / run",
+            "T2 / teardown",
+            "Empty label",
+            "Unknown non-empty"
+          ],
+          "rows": [
+            {
+              "id": "matrix-line-1",
+              "label": "F1:5",
+              "cells": [
+                {
+                  "text": "mapped"
+                },
+                {
+                  "text": "observed"
+                },
+                {
+                  "text": "—"
+                },
+                {
+                  "text": "—"
+                },
+                {
+                  "text": "—"
+                }
+              ]
+            },
+            {
+              "id": "matrix-line-2",
+              "label": "F1:2",
+              "cells": [
+                {
+                  "text": "unattributed"
+                },
+                {
+                  "text": "—"
+                },
+                {
+                  "text": "—"
+                },
+                {
+                  "text": "unattributed"
+                },
+                {
+                  "text": "—"
+                }
+              ]
+            },
+            {
+              "id": "matrix-line-3",
+              "label": "F1:8",
+              "cells": [
+                {
+                  "text": "unknown"
+                },
+                {
+                  "text": "—"
+                },
+                {
+                  "text": "—"
+                },
+                {
+                  "text": "—"
+                },
+                {
+                  "text": "1 unmapped"
+                }
+              ]
+            },
+            {
+              "id": "matrix-line-4",
+              "label": "F1:13",
+              "cells": [
+                {
+                  "text": "missing"
+                },
+                {
+                  "text": "n/a"
+                },
+                {
+                  "text": "n/a"
+                },
+                {
+                  "text": "—"
+                },
+                {
+                  "text": "—"
+                }
+              ]
+            },
+            {
+              "id": "matrix-line-5",
+              "label": "F1:15",
+              "cells": [
+                {
+                  "text": "excluded"
+                },
+                {
+                  "text": "n/a"
+                },
+                {
+                  "text": "n/a"
+                },
+                {
+                  "text": "—"
+                },
+                {
+                  "text": "—"
+                }
+              ]
+            },
+            {
+              "id": "matrix-line-6",
+              "label": "F1:99",
+              "cells": [
+                {
+                  "text": "unavailable"
+                },
+                {
+                  "text": "n/a"
+                },
+                {
+                  "text": "n/a"
+                },
+                {
+                  "text": "—"
+                },
+                {
+                  "text": "—"
+                }
+              ]
+            },
+            {
+              "id": "matrix-line-7",
+              "label": "F1:9",
+              "cells": [
+                {
+                  "text": "mapped"
+                },
+                {
+                  "text": "—"
+                },
+                {
+                  "text": "observed"
+                },
+                {
+                  "text": "—"
+                },
+                {
+                  "text": "—"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "matrix-meaning",
+          "type": "prose",
+          "text": "Observed means an exact supplied context maps to that test and phase. A dash means not listed in this row, not proof of no execution in other runs. Missing, excluded and unavailable are not zero-percent coverage. No test results were consumed."
+        }
+      ]
+    },
+    {
+      "id": "identities",
+      "title": "Read the file and exact context identities",
+      "blocks": [
+        {
+          "id": "file-key",
+          "type": "comparison",
+          "labelColumn": "File ID",
+          "columns": [
+            "Selected source path",
+            "Source verification"
+          ],
+          "rows": [
+            {
+              "id": "file-key-0",
+              "label": "F1",
+              "cells": [
+                {
+                  "text": "domain.py"
+                },
+                {
+                  "text": "not verified; sidecar location only"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "context-key",
+          "type": "comparison",
+          "labelColumn": "Matrix column",
+          "columns": [
+            "Test ID",
+            "Phase",
+            "Exact context labels"
+          ],
+          "rows": [
+            {
+              "id": "group-T1",
+              "label": "T1",
+              "cells": [
+                {
+                  "text": "tests/test\\_cases.py::test\\_parameterized\\[a\\|b\\]"
+                },
+                {
+                  "text": "run"
+                },
+                {
+                  "text": "\\[\"tests/test\\_cases.py::test\\_parameterized\\[a\\|b\\]\\|run\"\\]"
+                }
+              ]
+            },
+            {
+              "id": "group-T2",
+              "label": "T2",
+              "cells": [
+                {
+                  "text": "tests/test\\_cases.py::test\\_parameterized\\[a\\|b\\]"
+                },
+                {
+                  "text": "teardown"
+                },
+                {
+                  "text": "\\[\"tests/test\\_cases.py::test\\_parameterized\\[a\\|b\\]\\|teardown\"\\]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "unknown-key",
+          "type": "comparison",
+          "labelColumn": "Location",
+          "columns": [
+            "Unknown non-empty context labels"
+          ],
+          "rows": [
+            {
+              "id": "unknown-line-3",
+              "label": "F1:8",
+              "cells": [
+                {
+                  "text": "\\[\"tests/test\\_cases.py::test\\_parameterized\\[a\\|b\\]\\|setup\"\\]"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "provenance",
+      "title": "Binding, scope and what was not verified",
+      "blocks": [
+        {
+          "id": "binding-facts",
+          "type": "comparison",
+          "labelColumn": "Claim",
+          "columns": [
+            "Supplied value"
+          ],
+          "rows": [
+            {
+              "id": "report-digest",
+              "label": "Report SHA-256",
+              "cells": [
+                {
+                  "text": "97d6ac1c596ae5562a41e4e42710256bc9ee4af94b313dec4f13d4b6fdcfb359"
+                }
+              ]
+            },
+            {
+              "id": "run-id",
+              "label": "Run ID",
+              "cells": [
+                {
+                  "text": "controlled-canonical-context-run"
+                }
+              ]
+            },
+            {
+              "id": "source-revision",
+              "label": "Source revision",
+              "cells": [
+                {
+                  "text": "da7d35c8a47be49eda2c57ce5bf7dbe3ba1512c9"
+                }
+              ]
+            },
+            {
+              "id": "exporter-version",
+              "label": "Exporter version",
+              "cells": [
+                {
+                  "text": "7.17.1a0.dev1"
+                }
+              ]
+            },
+            {
+              "id": "filter-scope",
+              "label": "Collection filters",
+              "cells": [
+                {
+                  "text": "\\[\"Actual controlled fixture only: --cov=domain; pytest -k parameterized; --cov-context=test.\",\"Source-binding note, not a filter: sourceRevision is SHA1 of the original fixture manifest content, NOT a Git commit.\",\"Only raw observed context labels are used; no labels manufactured for the second parameter case.\"\\]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "provenance-boundary",
+          "type": "list",
+          "items": [
+            "Digest and selection bindings match the supplied report bytes. Revision and run ID remain sidecar claims, not verified source facts.",
+            "Exact contextMap entries define identity. No pipe splitting or substring matching is used; parameterized test IDs may themselves contain pipes.",
+            "Empty string context is unattributed; a non-empty unmapped label is unknown. Neither is a failing test.",
+            "Locations and report field pointers are preserved in projection.json. No source file, URL, SQLite database, test runner or coverage collector was opened.",
+            "Coverage observations do not establish test outcomes, assertion quality, sufficient regression selection or source correctness."
+          ]
+        },
+        {
+          "id": "contract-note",
+          "type": "prose",
+          "text": "The fixed coverage.py reporter emits the line context arrays.[](source:coverage-format) pytest-cov supplies test context naming; this experiment does not decode that name.[](source:pytest-context)"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "coverage-format",
+      "title": "Fixed coverage.py format 3 reporter",
+      "url": "https://github.com/coveragepy/coveragepy/blob/0e4f752b455bbf26fdad32ac29948d067c87dd62/coverage/jsonreport.py"
+    },
+    {
+      "id": "pytest-context",
+      "title": "Fixed pytest-cov context naming",
+      "url": "https://github.com/pytest-dev/pytest-cov/blob/a8cb1260170754f2aff9022cfd252c488098e813/src/pytest_cov/plugin.py"
+    }
+  ]
+}

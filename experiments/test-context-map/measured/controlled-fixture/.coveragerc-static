@@ -1,0 +1,6 @@
+[run]
+source = domain
+context = controlled-static
+
+[json]
+show_contexts = True

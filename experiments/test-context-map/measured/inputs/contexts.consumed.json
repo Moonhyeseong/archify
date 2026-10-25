@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "format": 3,
+    "version": "7.17.1a0.dev1",
+    "show_contexts": true
+  },
+  "files": {
+    "domain.py": {
+      "executed_lines": [
+        2,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        12
+      ],
+      "missing_lines": [
+        13
+      ],
+      "excluded_lines": [
+        15,
+        16
+      ],
+      "contexts": {
+        "1": [
+          ""
+        ],
+        "2": [
+          ""
+        ],
+        "4": [
+          ""
+        ],
+        "7": [
+          ""
+        ],
+        "12": [
+          ""
+        ],
+        "15": [
+          ""
+        ],
+        "8": [
+          "tests/test_cases.py::test_parameterized[a|b]|setup"
+        ],
+        "10": [
+          "tests/test_cases.py::test_parameterized[a|b]|setup"
+        ],
+        "5": [
+          "tests/test_cases.py::test_parameterized[a|b]|run"
+        ],
+        "9": [
+          "tests/test_cases.py::test_parameterized[a|b]|teardown"
+        ]
+      }
+    }
+  }
+}

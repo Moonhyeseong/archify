@@ -1,0 +1,39 @@
+{
+  "recordType": "Portable selected validation summary; not an original Archify receipt",
+  "classification": "actual-run consumed-field projection from an original controlled fixture",
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "not-run"
+  },
+  "visualReview": "not-requested",
+  "artifacts": {
+    "projection.json": {
+      "sha256": "625288dba91d2606dd6453f8bfa05837496b06bda91ebff14e7508eab16ac96c"
+    },
+    "selection.tree.json": {
+      "sha256": "1c9123b50814f598bb8f57ee1becdde8ab1a24e152d7bf4a5ede0c1b2f8655a6"
+    },
+    "selection.html": {
+      "sha256": "a1291ab10cd3fa0abe6ab93792884bd5736904e1def6451ece7a90d5a8bca521"
+    },
+    "matrix.explainer.json": {
+      "sha256": "64507f186d62b7e339bfc70c5d1e1f92f136ded2b053793a4ca8a06dc59a647a"
+    },
+    "matrix.html": {
+      "sha256": "a86b293de73f0121e9f2b8f39e736fc0db862666fd76326f443955f351667ea0"
+    }
+  },
+  "upstreamExitCode": 0,
+  "upstreamExitMeaning": "Two controlled parameterized tests reported passed in companion pytest report; context reader does not consume their outcomes.",
+  "sourceRevisionMeaning": "Fixture source-manifest SHA-1 content token, NOT a Git commit or verified source revision",
+  "reader": {
+    "readerPath": "experiments/test-context-map/adapter.mjs",
+    "readerSha256": "dc45fa75a4f14ba37590dea1ada3c6c23221f24590dadd6ff76ae4c5e9017140",
+    "executionPolicy": "Existing reader consumes only projected reports and sidecars. No adapter input contract was modified for these measured records.",
+    "artifactPolicy": "Reader output is generated directly; no Markdown/JSON presentation postprocessing layer."
+  },
+  "inputEvidence": "../projection-transforms.json",
+  "rawReceiptPolicy": "Original Archify receipts/logs remain outside checkout; this summary selects stage results and artifact hashes without rewriting raw receipts."
+}

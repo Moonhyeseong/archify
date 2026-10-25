@@ -1,0 +1,11 @@
+{
+  "recordType": "Targeted measured-data assertions, not upstream test success or source correctness",
+  "checks": {
+    "actualContextCategoriesPreserved": true,
+    "unobservedSecondParameterNotManufactured": true,
+    "testResultsNotConsumed": true,
+    "sourceRevisionIsExplicitContentToken": true
+  },
+  "publicRenderAndFinalize": "See per-output portable-validation.json; raw originals outside checkout",
+  "reproduceScript": "syntax and static scope checked; wrapper not rerun; actual capture commands separately recorded"
+}

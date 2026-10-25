@@ -1,0 +1,6 @@
+{
+  "readerPath": "experiments/test-context-map/adapter.mjs",
+  "readerSha256": "dc45fa75a4f14ba37590dea1ada3c6c23221f24590dadd6ff76ae4c5e9017140",
+  "executionPolicy": "Existing reader consumes only projected reports and sidecars. No adapter input contract was modified for these measured records.",
+  "artifactPolicy": "Reader output is generated directly; no Markdown/JSON presentation postprocessing layer."
+}

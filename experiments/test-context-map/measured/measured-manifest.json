@@ -1,0 +1,146 @@
+{
+  "recordType": "Final published measured evidence files; hashes exclude this manifest itself",
+  "classification": "actual-run consumed-field projection of an original controlled fixture, not a real user project",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "c1434e35638659ef967547bb08f8f3e41e437e883240d02c06102a463b43bb35",
+      "bytes": 8960
+    },
+    {
+      "path": "actual-commands.json",
+      "sha256": "d6b6f55ec7feb5844a0bcf6e1017c0ee9198e900fabb0b9140d6cbf22cca3e50",
+      "bytes": 2240
+    },
+    {
+      "path": "controlled-fixture/.coveragerc",
+      "sha256": "a2767e910f4d5360a70539ee8434b38f0f4b253c04a536a76bc026e6683a3acc",
+      "bytes": 51
+    },
+    {
+      "path": "controlled-fixture/.coveragerc-static",
+      "sha256": "37aeb864725b3019a8969b97bfdded1ceb035cf4f78dd063b801133be0c289db",
+      "bytes": 79
+    },
+    {
+      "path": "controlled-fixture/domain.py",
+      "sha256": "125e8837e9d1fbc6dc96e819d4eb224d4f7f47b96753f3020a068fb551434c3c",
+      "bytes": 355
+    },
+    {
+      "path": "controlled-fixture/pytest.ini",
+      "sha256": "8250d20f42b419af40706490ead78aabab9feba93eab09a3f626e3de5256e1f4",
+      "bytes": 9
+    },
+    {
+      "path": "controlled-fixture/tests/conftest.py",
+      "sha256": "6197ba345b266decc20b93026332d73e01766e3a3c2b8dc8d2c75f7ce51e993d",
+      "bytes": 429
+    },
+    {
+      "path": "controlled-fixture/tests/test_cases.py",
+      "sha256": "0568e0be1e2ab78ad1c0b6bd4a454cd3e9de87591de79c79614b09f5995c6a86",
+      "bytes": 564
+    },
+    {
+      "path": "controlled-fixture/tests/test_collection_failure.py",
+      "sha256": "8365df9482bd7817ff09eff9bac7976dd6ba98a963257042d1da9b10704acc02",
+      "bytes": 149
+    },
+    {
+      "path": "execution-observations.json",
+      "sha256": "1502c5ffc9b2234d411b2b3bbcfd451ab0df6f8af6ca23a745ee60ee978bceda",
+      "bytes": 2932
+    },
+    {
+      "path": "fixture-source-manifest.json",
+      "sha256": "69c0b61d040f5cc3381f1206190455b737c3358745105854b5a3b6eb16712767",
+      "bytes": 1203
+    },
+    {
+      "path": "inputs/contexts.consumed.json",
+      "sha256": "97d6ac1c596ae5562a41e4e42710256bc9ee4af94b313dec4f13d4b6fdcfb359",
+      "bytes": 986
+    },
+    {
+      "path": "inputs/contexts.sidecar.json",
+      "sha256": "6d1ac2a4b2ad897fea06f26930adfc727dfc7a390889aa139d2cf90b7aec61ae",
+      "bytes": 1733
+    },
+    {
+      "path": "measured-checks.json",
+      "sha256": "6a59b6d3fa9adae9be9105f7313f9bddc6cdec7651856ea1e49561bea1ee207f",
+      "bytes": 533
+    },
+    {
+      "path": "observations/matrix.explainer.json",
+      "sha256": "64507f186d62b7e339bfc70c5d1e1f92f136ded2b053793a4ca8a06dc59a647a",
+      "bytes": 10810
+    },
+    {
+      "path": "observations/matrix.html",
+      "sha256": "a86b293de73f0121e9f2b8f39e736fc0db862666fd76326f443955f351667ea0",
+      "bytes": 158911
+    },
+    {
+      "path": "observations/portable-validation.json",
+      "sha256": "8d7da0e5a8c074b56612de5593a84e90ec9bd33667709b2ec82270b466df4963",
+      "bytes": 1898
+    },
+    {
+      "path": "observations/projection.json",
+      "sha256": "625288dba91d2606dd6453f8bfa05837496b06bda91ebff14e7508eab16ac96c",
+      "bytes": 8993
+    },
+    {
+      "path": "observations/selection.html",
+      "sha256": "a1291ab10cd3fa0abe6ab93792884bd5736904e1def6451ece7a90d5a8bca521",
+      "bytes": 821158
+    },
+    {
+      "path": "observations/selection.tree.json",
+      "sha256": "1c9123b50814f598bb8f57ee1becdde8ab1a24e152d7bf4a5ede0c1b2f8655a6",
+      "bytes": 1384
+    },
+    {
+      "path": "package-artifacts.json",
+      "sha256": "c79f85a35fd231cb1aa20e346f760715a793758e6ca4145030a38a2f5de61980",
+      "bytes": 1391
+    },
+    {
+      "path": "projection-transforms.json",
+      "sha256": "ca2ea66ae46428924df4a1ca33ad83671bf05b4c7117528ed333cff13ed95741",
+      "bytes": 2242
+    },
+    {
+      "path": "reader-provenance.json",
+      "sha256": "296e3008c54c1517eb65f3ef242dd278f79c62e7e4dfc5faa0d51b3d596ed12b",
+      "bytes": 414
+    },
+    {
+      "path": "reproduce.py",
+      "sha256": "b54d0c8f688e323778f900ac7e02a6febde7c161e1a56f3dd63f7ec852dbdac8",
+      "bytes": 6336
+    },
+    {
+      "path": "screenshots/capture.json",
+      "sha256": "0b779e1eae2f68cbfdf6cce72786a32511cca2c34a6d2635114ff9156a007cb7",
+      "bytes": 1234
+    },
+    {
+      "path": "screenshots/matrix.png",
+      "sha256": "317895eb497ae28b9b5e6c4401001502d23e2565adc70d1a9b7c3838434f5f33",
+      "bytes": 279841
+    },
+    {
+      "path": "screenshots/selection.png",
+      "sha256": "e285d304abe2f2307f7cc2f6a33aadd1bc9bcfe23c8993b1484a1565d84288ae",
+      "bytes": 104807
+    },
+    {
+      "path": "toolchain-provenance.json",
+      "sha256": "0116b0af362aa016a9d3f9d5d000f095a50e4f8df68619e90867e627593841c7",
+      "bytes": 3391
+    }
+  ]
+}

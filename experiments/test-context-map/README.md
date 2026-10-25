@@ -2,7 +2,7 @@
 
 这个离线实验读取**已有 coverage.py format 3 JSON 和显式选择 sidecar**，回答“这份运行记录中，哪些精确映射的 test/phase context 观测到了选中行”。它不运行 coverage/pytest、不读取 `.coverage` SQLite、不打开用户源文件或 URL，不从静态 imports 推测测试依赖，不自动选择或跳过测试。
 
-当前 fixture 为原创 **synthetic**：8 个显式选中位置、2 个 mapped test/phase 列，包含六类状态。没有真实测试运行、测试结果、源码位置验证或用户收益测量。
+原始示例为原创 **synthetic**：8 个显式选中位置、2 个 mapped test/phase 列，包含六类状态。新增 [measured 证据](measured/README.md)使用固定上游工具实际执行原创受控fixture后导出的报告；它仍不代表真实用户项目、源码位置验证或用户收益测量。
 
 基准 `82c7e0f089a02a4d514714adf37dc2061682da5f`；分支 `codex/lab-test-context-map`。仅新增本目录，没有修改共享合同、renderer、Viewer、CI、ZIP 或 live installation。
 
@@ -14,9 +14,15 @@
 - [测试记录](output/tests.tap)
 - [可移植验证摘要](output/portable-validation.json)：明确是选取阶段结果和 hashes 后生成的 summary，**不是原始 Archify receipt**。
 
-[实际浏览器矩阵截图](screenshots/matrix.png) 已由协调 agent 捕获并检查：概览矩阵、精确身份、binding 的布局可读，无巨大 JSON 卡片。可选位置 Tree 截图由协调 agent 另行补充。此视觉检查与原始 finalize 的 browser-check not-run 分开记录。
+[实际浏览器矩阵截图](screenshots/matrix.png) 已由协调 agent 捕获并检查：概览矩阵、精确身份、binding 的布局可读，无巨大 JSON 卡片。[可选位置 Tree 截图](screenshots/selection-tree.png)也已捕获。此视觉检查与原始 finalize 的 browser-check not-run 分开记录。
 
 ![Synthetic context observation matrix](screenshots/matrix.png)
+
+## 实际采集补充
+
+![实际context观测矩阵](measured/screenshots/matrix.png)
+
+pytest记录两个参数用例都通过，但本次coverage只导出其中一个用例的context标签。矩阵保留实际标签，不补造第二个，也不消费测试结果；输入的白名单投影、工具版本和逐项变换见[采集说明](measured/README.md)。适配器源文件与原18项focused证据未变。独立代理核对了raw→公开字段、fixture/tool来源和最终生成输入及HTML摘要。
 
 ## 六类状态如何读
 
@@ -104,7 +110,7 @@ node archify/bin/archify.mjs finalize explainer new-output-directory/matrix.expl
 
 真实公共 renderer 验证恶意 testId/context 与 sourcePath 中的 HTML/Markdown 字面符号：最终 cell 原文保留，没有攻击者链接、图片或 script。没有 mapped 或 unknown 列时也真实渲染，不留 schema 不允许的空 comparison。publication 期间禁止 readFileSync/fetch 的 probe 仍能正常生成，另有绝对路径/URL/traversal 拒绝测试；source key 不会触发外读。fresh-output symlink/victim 和 CLI malformed/oversize 输入拒绝均通过。
 
-最终 Tree render 与 Explainer finalize 的 validate/deliver/check 通过；browser-check 未请求，原始 visualReview 为 not-requested。报告所代表的 pytest/coverage 运行、测试结果与源位置未经独立验证；观察关系不能变成充分测试集合、执行次数、通过率或正确性结论。截图与实际用户读图收益单独验收，未用合成矩阵声称真实 test-impact 收益。
+原始 synthetic 与新增 measured 产物的 Tree render / Explainer finalize 阶段结果分别保存在各自摘要中；browser-check 未请求，原始 visualReview 为 not-requested。measured 补充有固定工具实际执行及 raw→公开字段的独立核对；适配器仍不消费测试结果或验证源码位置。观察关系不能变成充分测试集合、执行次数、通过率或正确性结论。实际用户读图收益未测量。
 
 按 test-value 保持测试围绕本地适配器语义和实际公共输出；没有改 shared runtime，因此未重复全套 Windows、安装、CI 或完整 renderer suite。独立 reviewer 提醒后已明确“行可多观察”与“context lookup 可能不存在”，并用 classificationEvidence 单独定位状态来源；没有把该澄清冒充真实源码验证。
 
