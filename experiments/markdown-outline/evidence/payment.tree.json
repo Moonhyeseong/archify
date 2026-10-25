@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "diagram_type": "tree",
+  "meta": {
+    "title": "支付平台",
+    "subtitle": "payment-outline.md · headings only · source lines retained",
+    "output": "payment.tree.html"
+  },
+  "layout": {
+    "direction": "right"
+  },
+  "nodes": [
+    {
+      "id": "h1",
+      "label": "支付平台",
+      "sublabel": "payment-outline.md:1 · H1"
+    },
+    {
+      "id": "h2",
+      "label": "订单",
+      "parent": "h1",
+      "sublabel": "payment-outline.md:5 · H2"
+    },
+    {
+      "id": "h3",
+      "label": "创建订单",
+      "parent": "h2",
+      "sublabel": "payment-outline.md:6 · H3"
+    },
+    {
+      "id": "h4",
+      "label": "取消订单",
+      "parent": "h2",
+      "sublabel": "payment-outline.md:7 · H3"
+    },
+    {
+      "id": "h5",
+      "label": "支付",
+      "parent": "h1",
+      "sublabel": "payment-outline.md:8 · H2"
+    },
+    {
+      "id": "h6",
+      "label": "银行卡",
+      "parent": "h5",
+      "sublabel": "payment-outline.md:9 · H3"
+    },
+    {
+      "id": "h7",
+      "label": "钱包",
+      "parent": "h5",
+      "sublabel": "payment-outline.md:10 · H3"
+    },
+    {
+      "id": "h8",
+      "label": "运营",
+      "parent": "h1",
+      "sublabel": "payment-outline.md:11 · H2"
+    },
+    {
+      "id": "h9",
+      "label": "退款",
+      "parent": "h8",
+      "sublabel": "payment-outline.md:12 · H3"
+    },
+    {
+      "id": "h10",
+      "label": "对账",
+      "parent": "h8",
+      "sublabel": "payment-outline.md:13 · H3"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "slate",
+      "title": "Source and scope",
+      "items": [
+        "experiments/markdown-outline/fixtures/payment-outline.md",
+        "Only top-level ATX and single-line Setext headings. Prose and code are intentionally omitted.",
+        "Line numbers are visible on nodes; editable native JSON and source mapping accompany this artifact."
+      ]
+    }
+  ]
+}

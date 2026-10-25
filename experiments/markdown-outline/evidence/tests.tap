@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: heading order, hierarchy, repeated labels and source positions survive projection
+ok 1 - heading order, hierarchy, repeated labels and source positions survive projection
+  ---
+  duration_ms: 2.015333
+  type: 'test'
+  ...
+# Subtest: fences suppress fake headings and a longer matching closer is accepted
+ok 2 - fences suppress fake headings and a longer matching closer is accepted
+  ---
+  duration_ms: 0.28975
+  type: 'test'
+  ...
+# Subtest: ATX spacing, closing hashes, CRLF, BOM and Setext ranges are preserved
+ok 3 - ATX spacing, closing hashes, CRLF, BOM and Setext ranges are preserved
+  ---
+  duration_ms: 0.182833
+  type: 'test'
+  ...
+# Subtest: inline syntax is literal and excluded containers are reported
+ok 4 - inline syntax is literal and excluded containers are reported
+  ---
+  duration_ms: 0.112292
+  type: 'test'
+  ...
+# Subtest: ambiguous or invalid structures fail with actionable source lines
+ok 5 - ambiguous or invalid structures fail with actionable source lines
+  ---
+  duration_ms: 0.387209
+  type: 'test'
+  ...
+# Subtest: CLI writes native JSON and receipt, refuses overwrite, and leaves failed targets untouched
+ok 6 - CLI writes native JSON and receipt, refuses overwrite, and leaves failed targets untouched
+  ---
+  duration_ms: 322.896875
+  type: 'test'
+  ...
+# Subtest: closing hashes that consume the whole label fail rather than becoming a fake node
+ok 7 - closing hashes that consume the whole label fail rather than becoming a fake node
+  ---
+  duration_ms: 0.18675
+  type: 'test'
+  ...
+# Subtest: exclusive outputs protect real victims through aliases and receipt failures
+ok 8 - exclusive outputs protect real victims through aliases and receipt failures
+  ---
+  duration_ms: 340.618417
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 740.619209

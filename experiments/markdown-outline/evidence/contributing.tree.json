@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "diagram_type": "tree",
+  "meta": {
+    "title": "Contributing to Archify",
+    "subtitle": "CONTRIBUTING.md · 82c7e0f0 · headings only · source lines retained",
+    "output": "contributing.tree.html"
+  },
+  "layout": {
+    "direction": "right"
+  },
+  "nodes": [
+    {
+      "id": "h1",
+      "label": "Contributing to Archify",
+      "sublabel": "archify-contributing.md:1 · H1"
+    },
+    {
+      "id": "h2",
+      "label": "Choose the right path",
+      "parent": "h1",
+      "sublabel": "archify-contributing.md:5 · H2"
+    },
+    {
+      "id": "h3",
+      "label": "Coordinate related work",
+      "parent": "h1",
+      "sublabel": "archify-contributing.md:18 · H2"
+    },
+    {
+      "id": "h4",
+      "label": "Prepare a reviewable change",
+      "parent": "h1",
+      "sublabel": "archify-contributing.md:29 · H2"
+    },
+    {
+      "id": "h5",
+      "label": "AI assistance and contributor responsibility",
+      "parent": "h1",
+      "sublabel": "archify-contributing.md:43 · H2"
+    },
+    {
+      "id": "h6",
+      "label": "PR improvement check",
+      "parent": "h1",
+      "sublabel": "archify-contributing.md:59 · H2"
+    },
+    {
+      "id": "h7",
+      "label": "Choose evidence by impact",
+      "parent": "h1",
+      "sublabel": "archify-contributing.md:87 · H2"
+    },
+    {
+      "id": "h8",
+      "label": "Real generation comparisons",
+      "parent": "h7",
+      "sublabel": "archify-contributing.md:109 · H3"
+    },
+    {
+      "id": "h9",
+      "label": "CI by affected responsibility",
+      "parent": "h7",
+      "sublabel": "archify-contributing.md:113 · H3"
+    },
+    {
+      "id": "h10",
+      "label": "Product and compatibility contracts",
+      "parent": "h1",
+      "sublabel": "archify-contributing.md:129 · H2"
+    },
+    {
+      "id": "h11",
+      "label": "Local setup and verification",
+      "parent": "h1",
+      "sublabel": "archify-contributing.md:138 · H2"
+    },
+    {
+      "id": "h12",
+      "label": "Packages and generated artifacts",
+      "parent": "h1",
+      "sublabel": "archify-contributing.md:258 · H2"
+    },
+    {
+      "id": "h13",
+      "label": "Release checklist",
+      "parent": "h1",
+      "sublabel": "archify-contributing.md:285 · H2"
+    },
+    {
+      "id": "h14",
+      "label": "Release checklist: DSH synchronization",
+      "parent": "h13",
+      "sublabel": "archify-contributing.md:296 · H3"
+    },
+    {
+      "id": "h15",
+      "label": "Final integration and follow-up",
+      "parent": "h1",
+      "sublabel": "archify-contributing.md:308 · H2"
+    },
+    {
+      "id": "h16",
+      "label": "Automated review",
+      "parent": "h1",
+      "sublabel": "archify-contributing.md:318 · H2"
+    },
+    {
+      "id": "h17",
+      "label": "License",
+      "parent": "h1",
+      "sublabel": "archify-contributing.md:324 · H2"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "slate",
+      "title": "Source and scope",
+      "items": [
+        "https://github.com/tt-a1i/archify/blob/82c7e0f089a02a4d514714adf37dc2061682da5f/CONTRIBUTING.md",
+        "Only top-level ATX and single-line Setext headings. Prose and code are intentionally omitted.",
+        "Line numbers are visible on nodes; editable native JSON and source mapping accompany this artifact."
+      ]
+    }
+  ]
+}

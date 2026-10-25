@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "experiment": "markdown-outline",
+  "source": "experiments/markdown-outline/fixtures/payment-outline.md",
+  "sourceUrl": "",
+  "sourceSha256": "4d686f1da148b1aecaf3df9ee9c1aaaf23cc03e3c1644e23abb1dadc7d0c2918",
+  "scope": "top-level ATX and single-line Setext heading projection",
+  "mapping": [
+    {
+      "id": "h1",
+      "level": 1,
+      "label": "支付平台",
+      "line": 1,
+      "endLine": 1,
+      "syntax": "atx"
+    },
+    {
+      "id": "h2",
+      "level": 2,
+      "label": "订单",
+      "line": 5,
+      "endLine": 5,
+      "syntax": "atx"
+    },
+    {
+      "id": "h3",
+      "level": 3,
+      "label": "创建订单",
+      "line": 6,
+      "endLine": 6,
+      "syntax": "atx"
+    },
+    {
+      "id": "h4",
+      "level": 3,
+      "label": "取消订单",
+      "line": 7,
+      "endLine": 7,
+      "syntax": "atx"
+    },
+    {
+      "id": "h5",
+      "level": 2,
+      "label": "支付",
+      "line": 8,
+      "endLine": 8,
+      "syntax": "atx"
+    },
+    {
+      "id": "h6",
+      "level": 3,
+      "label": "银行卡",
+      "line": 9,
+      "endLine": 9,
+      "syntax": "atx"
+    },
+    {
+      "id": "h7",
+      "level": 3,
+      "label": "钱包",
+      "line": 10,
+      "endLine": 10,
+      "syntax": "atx"
+    },
+    {
+      "id": "h8",
+      "level": 2,
+      "label": "运营",
+      "line": 11,
+      "endLine": 11,
+      "syntax": "atx"
+    },
+    {
+      "id": "h9",
+      "level": 3,
+      "label": "退款",
+      "line": 12,
+      "endLine": 12,
+      "syntax": "atx"
+    },
+    {
+      "id": "h10",
+      "level": 3,
+      "label": "对账",
+      "line": 13,
+      "endLine": 13,
+      "syntax": "atx"
+    }
+  ],
+  "omittedNonemptyLines": [
+    3,
+    15,
+    16,
+    17
+  ],
+  "warnings": []
+}

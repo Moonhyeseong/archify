@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "experiment": "markdown-outline",
+  "source": "experiments/markdown-outline/fixtures/markmap-readme.md",
+  "sourceUrl": "https://github.com/markmap/markmap/blob/122bf0500ee7aca4f023c2465f7e26bf023eec52/README.md",
+  "sourceSha256": "d42eae6b751bedde1e0be20e1e574f3463ab1ad7ef263260528468204d9f46d0",
+  "scope": "top-level ATX and single-line Setext heading projection",
+  "mapping": [
+    {
+      "id": "h1",
+      "level": 1,
+      "label": "markmap",
+      "line": 1,
+      "endLine": 1,
+      "syntax": "atx"
+    },
+    {
+      "id": "h2",
+      "level": 2,
+      "label": "Related Projects",
+      "line": 11,
+      "endLine": 11,
+      "syntax": "atx"
+    },
+    {
+      "id": "h3",
+      "level": 2,
+      "label": "Usage",
+      "line": 24,
+      "endLine": 24,
+      "syntax": "atx"
+    }
+  ],
+  "omittedNonemptyLines": [
+    3,
+    5,
+    7,
+    9,
+    13,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    26
+  ],
+  "warnings": []
+}

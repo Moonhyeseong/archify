@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "diagram_type": "tree",
+  "meta": {
+    "title": "markmap",
+    "subtitle": "README.md · 122bf050 · headings only · source lines retained",
+    "output": "markmap.tree.html"
+  },
+  "layout": {
+    "direction": "right"
+  },
+  "nodes": [
+    {
+      "id": "h1",
+      "label": "markmap",
+      "sublabel": "markmap-readme.md:1 · H1"
+    },
+    {
+      "id": "h2",
+      "label": "Related Projects",
+      "parent": "h1",
+      "sublabel": "markmap-readme.md:11 · H2"
+    },
+    {
+      "id": "h3",
+      "label": "Usage",
+      "parent": "h1",
+      "sublabel": "markmap-readme.md:24 · H2"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "slate",
+      "title": "Source and scope",
+      "items": [
+        "https://github.com/markmap/markmap/blob/122bf0500ee7aca4f023c2465f7e26bf023eec52/README.md",
+        "Only top-level ATX and single-line Setext headings. Prose and code are intentionally omitted.",
+        "Line numbers are visible on nodes; editable native JSON and source mapping accompany this artifact."
+      ]
+    }
+  ]
+}

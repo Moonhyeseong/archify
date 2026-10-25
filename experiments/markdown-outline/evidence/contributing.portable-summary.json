@@ -1,0 +1,31 @@
+{
+  "kind": "portable-summary-not-original-receipt",
+  "recordedAt": "2026-10-25",
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "node": "22.23.3",
+  "command": "node archify/bin/archify.mjs finalize tree experiments/markdown-outline/evidence/contributing.tree.json experiments/markdown-outline/evidence/contributing.html --json",
+  "ok": true,
+  "status": "pass",
+  "quality": "showcase",
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReview": "not-requested",
+  "specification": {
+    "sha256": "ea3abd1993ae091ac84736039f985e6246e4e93f2777bb467920733922e15682",
+    "bytes": 3295
+  },
+  "artifact": {
+    "sha256": "e57afde808356625a8b90f222544e815ad16c4524d7f73d8e74da6da9bee0b94",
+    "bytes": 836980
+  },
+  "artifactPath": "experiments/markdown-outline/evidence/contributing.html",
+  "note": "Portable transcription of actual public finalize stdout; personal paths omitted. Raw receipts retained outside checkout, not claimed as included."
+}

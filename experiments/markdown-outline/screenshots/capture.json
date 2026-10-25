@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "captureDate": "2026-10-25",
+  "browser": "Ego Lite Chromium",
+  "viewport": {
+    "width": 1440,
+    "height": 1000,
+    "deviceScaleFactor": 1
+  },
+  "appearance": "light / Classic / Still for native Viewer; System light / Clean for Explainer",
+  "captures": [
+    {
+      "artifact": {
+        "path": "../evidence/contributing.html",
+        "sha256": "e57afde808356625a8b90f222544e815ad16c4524d7f73d8e74da6da9bee0b94"
+      },
+      "image": {
+        "path": "contributing.png",
+        "sha256": "e074298aa7a4a2703b8b56cfff450655978bc178afeea4139cdf04c1ab8151aa",
+        "width": 1440,
+        "height": 1938
+      },
+      "method": "page screenshot; full page"
+    },
+    {
+      "artifact": {
+        "path": "../evidence/contributing.html",
+        "sha256": "e57afde808356625a8b90f222544e815ad16c4524d7f73d8e74da6da9bee0b94"
+      },
+      "image": {
+        "path": "contributing-export.png",
+        "sha256": "12ed0728d2314d68a6544c3e55b08eb4b8c9b572a9bd370f357efae25f12b741",
+        "width": 2400,
+        "height": 5253
+      },
+      "method": "native Export > PNG download"
+    }
+  ],
+  "review": {
+    "by": "Codex coordinating agent",
+    "observations": [
+      "17 headings from the pinned public CONTRIBUTING.md are present.",
+      "The native exported PNG contains the full tree without floating controls.",
+      "The page screenshot retains the existing floating-control overlap near the DSH branch; source filenames wrap."
+    ],
+    "humanAcceptance": "pending"
+  }
+}
