@@ -1,0 +1,56 @@
+{
+  "capturedAt": "2026-10-25T10:48:03.414Z",
+  "overview": {
+    "title": "为什么加入 max=20，limits 仍然报错？ · Archify",
+    "theme": "light",
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "documentHeight": 3016,
+    "table": [
+      [
+        "provider 与操作",
+        "声明提供什么",
+        "最终幸存字段（源码推导）",
+        "limits 错误 origins（上游断言）"
+      ],
+      [
+        "old · 初始",
+        "min=1",
+        "无；min 被 merge 的 new 覆盖",
+        "不在此错误 origins 中"
+      ],
+      [
+        "new · merge",
+        "min=10，max=5",
+        "min=10、max=5，均属 new",
+        "只有 new"
+      ],
+      [
+        "ignored · join",
+        "max=20",
+        "无；join 保留已有 max=5",
+        "不在此错误 origins 中"
+      ]
+    ],
+    "codeBlocks": [
+      "#[test]\nfn only_surviving_values_contribute() {\n    let figment = Figment::from(source(\"old\", \"limits\", map![\"min\" => 1]))\n        .merge(source(\"new\", \"limits\", map![\"min\" => 10, \"max\" => 5]))\n        .join(source(\"ignored\", \"limits\", map![\"max\" => 20]));\n\n    assert_error!(figment.extract_inner::<Bounds>(\"limits\"), at [\"limits\"], from [\"new\"]);",
+      "impl Coalescible for Value {\n    fn coalesce(self, other: Self, o: Order) -> Self {\n        use {Value::Dict as D, Value::Array as A, Order::*};\n        match (self, other, o) {\n            (D(t, a), D(_, b), Join | Adjoin) | (D(_, a), D(t, b), Merge | Admerge) => D(t, a.coalesce(b, o)),\n            (A(t, mut a), A(_, b), Adjoin | Admerge) => A(t, { a.extend(b); a }),\n            (v, _, Join | Adjoin) | (_, v, Merge | Admerge) => v,\n        }\n    }\n}",
+      "/// Deserializes from `{ min, max }`, failing as a whole when `min > max`.\n#[derive(Debug, Deserialize)]\n#[serde(try_from = \"RawBounds\")]\nstruct Bounds;\n\n#[derive(Deserialize)]\nstruct RawBounds { min: u16, max: u16 }\n\nimpl TryFrom<RawBounds> for Bounds {\n    type Error = &'static str;\n\n    fn try_from(raw: RawBounds) -> Result<Self, Self::Error> {\n        (raw.min <= raw.max).then_some(Bounds).ok_or(\"min must not exceed max\")\n    }\n}",
+      "/// A provider named `name` that supplies `data`. Its metadata has no source,\n/// so error messages are predictable.\nstruct Mock {\n    name: &'static str,\n    data: Result<Map<Profile, Dict>>,\n}\n\nimpl Provider for Mock {\n    fn metadata(&self) -> Metadata { Metadata::named(self.name) }\n    fn data(&self) -> Result<Map<Profile, Dict>> { self.data.clone() }"
+    ]
+  },
+  "source": {
+    "text": "三层声明与唯一错误归属\ntests/error-context.rs:144–150\n1\n144#[test]\n145fn only_surviving_values_contribute() {\n146    let figment = Figment::from(source(\"old\", \"limits\", map![\"min\" => 1]))\n147        .merge(source(\"new\", \"limits\", map![\"min\" => 10, \"max\" => 5]))\n148        .join(source(\"ignored\", \"limits\", map![\"max\" => 20]));\n149 \n150    assert_error!(figment.extract_inner::<Bounds>(\"limits\"), at [\"limits\"], from [\"new\"]);\n固定在 26d3e53\n打开原文 ↗",
+    "links": [
+      {
+        "text": "打开原文 ↗",
+        "href": "https://github.com/SergioBenitez/Figment/blob/26d3e531c2055bd0ae8524bebc69f31fe3757ba5/tests/error-context.rs#L144-L150"
+      }
+    ]
+  },
+  "closed": {
+    "sourceCardVisible": false
+  }
+}

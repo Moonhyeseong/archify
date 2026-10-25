@@ -1,0 +1,320 @@
+{
+  "schema_version": 1,
+  "diagram_type": "explainer",
+  "meta": {
+    "id": "config-origins",
+    "title": "为什么加入 max=20，limits 仍然报错？",
+    "locale": "zh-CN",
+    "style": "clean",
+    "repository": {
+      "url": "https://github.com/SergioBenitez/Figment",
+      "revision": "26d3e531c2055bd0ae8524bebc69f31fe3757ba5"
+    }
+  },
+  "answer": {
+    "summary": "join 没有覆盖已有的 max=5；幸存的 min=10、max=5 都来自 new，Bounds 整体约束仍失败。",
+    "reasons": [
+      "加入过的 provider，不一定提供最终值。",
+      "这条错误位于 limits，origins 只有 new。",
+      "这是固定上游测试的断言与源码推导，本轮未运行 Rust。"
+    ],
+    "scope": "Figment @26d3e531 · 公开构造测试 · Archify @10b4dd5c · 静态源码阅读"
+  },
+  "panels": [
+    {
+      "id": "layers",
+      "title": "三层声明，哪些值留到了最后？",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "layers-evidence",
+          "type": "prose",
+          "text": "表中声明来自固定测试，幸存值依据合并规则推导。“错误归属”取自上游断言，本轮未采集运行输出。[查看原测试](source:case)"
+        },
+        {
+          "id": "layer-table",
+          "type": "comparison",
+          "labelColumn": "provider 与操作",
+          "columns": [
+            "声明提供什么",
+            "最终幸存字段（源码推导）",
+            "limits 错误 origins（上游断言）"
+          ],
+          "rows": [
+            {
+              "id": "old",
+              "label": "old · 初始",
+              "cells": [
+                {
+                  "text": "min=1"
+                },
+                {
+                  "text": "无；min 被 merge 的 new 覆盖"
+                },
+                {
+                  "text": "不在此错误 origins 中"
+                }
+              ]
+            },
+            {
+              "id": "new",
+              "label": "new · merge",
+              "cells": [
+                {
+                  "text": "min=10，max=5"
+                },
+                {
+                  "text": "min=10、max=5，均属 new"
+                },
+                {
+                  "text": "只有 new"
+                }
+              ]
+            },
+            {
+              "id": "ignored",
+              "label": "ignored · join",
+              "cells": [
+                {
+                  "text": "max=20"
+                },
+                {
+                  "text": "无；join 保留已有 max=5"
+                },
+                {
+                  "text": "不在此错误 origins 中"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "not-history",
+          "type": "prose",
+          "text": "表中的顺序是源码声明顺序，未表示运行时间或外部文件加载。ignored 只是此测试选择的 provider 名称，不是所有 join 都会忽略输入。"
+        }
+      ]
+    },
+    {
+      "id": "why",
+      "title": "为什么 max=20 没有修复约束？",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "case-code",
+          "type": "code",
+          "source": "case",
+          "language": "rust"
+        },
+        {
+          "id": "merge-meaning",
+          "type": "prose",
+          "text": "merge 在值冲突时取 incoming，join 保留已有值；字典逐键递归应用该规则。所以 new 替换 min，并补入 max；ignored 的 max 与已有 max 冲突，保留 5。[值冲突规则](source:rule) [字典递归规则](source:dictionary)"
+        },
+        {
+          "id": "conflict-rule-code",
+          "type": "code",
+          "source": "rule",
+          "language": "rust"
+        },
+        {
+          "id": "bounds-reason",
+          "type": "prose",
+          "text": "10 大于 5，违反 Bounds 的整体约束。min 和 max 都能作为 u16 读取；这里不是两个字段各自的类型错误。[Bounds 定义](source:bounds)"
+        },
+        {
+          "id": "bounds-code",
+          "type": "code",
+          "source": "bounds",
+          "language": "rust"
+        }
+      ]
+    },
+    {
+      "id": "origin",
+      "title": "“at limits，from new”究竟证明什么？",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "error-facts",
+          "type": "facts",
+          "entries": [
+            {
+              "key": "错误位置",
+              "value": "limits：被提取的 Bounds 对象整体。"
+            },
+            {
+              "key": "来源集合",
+              "value": "new：本条错误的 origins 名称；不是所有曾加入的 provider。"
+            },
+            {
+              "key": "断言强度",
+              "value": "上游 helper 检查 error.count()=1、path 与 origins 相等；本轮只读该断言，未执行。"
+            }
+          ]
+        },
+        {
+          "id": "assertion-reference",
+          "type": "prose",
+          "text": "原断言提取 `Bounds` 对象，目标为 `limits`，写明 at [\"limits\"]、from [\"new\"]。[断言 helper 的检查范围](source:assertion)"
+        },
+        {
+          "id": "missing-source",
+          "type": "callout",
+          "level": "note",
+          "title": "没有配置文件行号可展示",
+          "text": "Mock 的 metadata 只有 provider 名称，故意没有 source。下面的 Git 文件和行号只定位测试源码，不是 min/max 的配置文件来源。"
+        },
+        {
+          "id": "mock-code",
+          "type": "code",
+          "source": "mock",
+          "language": "rust"
+        }
+      ]
+    },
+    {
+      "id": "limits",
+      "title": "哪些结论仍然未知？",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "evidence-status",
+          "type": "comparison",
+          "labelColumn": "证据层",
+          "columns": [
+            "本页能核对",
+            "本页没有证明"
+          ],
+          "rows": [
+            {
+              "id": "source-declarations",
+              "label": "声明",
+              "cells": [
+                {
+                  "text": "三次 provider 组合及原始数值；固定 Git 文件和行范围。"
+                },
+                {
+                  "text": "真实用户配置、部署事件或外部文件。"
+                }
+              ]
+            },
+            {
+              "id": "rule-derivation",
+              "label": "规则推导",
+              "cells": [
+                {
+                  "text": "merge/join 与字典规则支持幸存 min=10、max=5。"
+                },
+                {
+                  "text": "本轮 Rust 实际求值、运行日志或环境读值。"
+                }
+              ]
+            },
+            {
+              "id": "upstream-expected",
+              "label": "上游 expected",
+              "cells": [
+                {
+                  "text": "测试明确写出错误 path=limits、origins=[new]。"
+                },
+                {
+                  "text": "此 SHA 的测试在本机通过，或真实应用最终配置。"
+                }
+              ]
+            },
+            {
+              "id": "source-origin",
+              "label": "来源精度",
+              "cells": [
+                {
+                  "text": "Mock 名称和测试代码位置可核。"
+                },
+                {
+                  "text": "缺失的配置文件名、键行号及完整覆盖历史。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "license-reference",
+          "type": "prose",
+          "text": "完整原始测试、规则与 owner 源码随实验保留，未格式化或裁成独立可执行片段。Figment 许可为 [MIT](source:mit) 或 [Apache-2.0](source:apache) 二选一；原版权及许可证全文随附。"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "case",
+      "title": "三层声明与唯一错误归属",
+      "path": "tests/error-context.rs",
+      "lines": [
+        144,
+        150
+      ],
+      "revision": "26d3e531c2055bd0ae8524bebc69f31fe3757ba5"
+    },
+    {
+      "id": "bounds",
+      "title": "Bounds：整对象约束失败",
+      "path": "tests/error-context.rs",
+      "lines": [
+        23,
+        37
+      ],
+      "revision": "26d3e531c2055bd0ae8524bebc69f31fe3757ba5"
+    },
+    {
+      "id": "mock",
+      "title": "Mock：只有名称，没有配置文件来源",
+      "path": "tests/error-context.rs",
+      "lines": [
+        11,
+        20
+      ],
+      "revision": "26d3e531c2055bd0ae8524bebc69f31fe3757ba5"
+    },
+    {
+      "id": "assertion",
+      "title": "断言检查错误数量、path与origins",
+      "path": "tests/error-context.rs",
+      "lines": [
+        52,
+        69
+      ],
+      "revision": "26d3e531c2055bd0ae8524bebc69f31fe3757ba5"
+    },
+    {
+      "id": "rule",
+      "title": "值冲突：merge取新，join保留已有",
+      "path": "src/coalesce.rs",
+      "lines": [
+        26,
+        35
+      ],
+      "revision": "26d3e531c2055bd0ae8524bebc69f31fe3757ba5"
+    },
+    {
+      "id": "dictionary",
+      "title": "字典逐键递归合并",
+      "path": "src/coalesce.rs",
+      "lines": [
+        53,
+        66
+      ],
+      "revision": "26d3e531c2055bd0ae8524bebc69f31fe3757ba5"
+    },
+    {
+      "id": "mit",
+      "title": "Figment MIT license",
+      "url": "https://github.com/SergioBenitez/Figment/blob/26d3e531c2055bd0ae8524bebc69f31fe3757ba5/LICENSE-MIT"
+    },
+    {
+      "id": "apache",
+      "title": "Figment Apache-2.0 license",
+      "url": "https://github.com/SergioBenitez/Figment/blob/26d3e531c2055bd0ae8524bebc69f31fe3757ba5/LICENSE-APACHE"
+    }
+  ]
+}

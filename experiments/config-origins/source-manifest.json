@@ -1,0 +1,57 @@
+{
+  "kind": "derived-source-inventory",
+  "repository": "https://github.com/SergioBenitez/Figment",
+  "revision": "26d3e531c2055bd0ae8524bebc69f31fe3757ba5",
+  "license": "MIT OR Apache-2.0",
+  "files": [
+    {
+      "path": "upstream/tests/error-context.rs",
+      "upstreamPath": "tests/error-context.rs",
+      "bytes": 14505,
+      "sha256": "b7058b21bda2d134b84d4ef4d0b1529753ba64988f9d8d467a8d974dbfc0658b",
+      "url": "https://github.com/SergioBenitez/Figment/blob/26d3e531c2055bd0ae8524bebc69f31fe3757ba5/tests/error-context.rs"
+    },
+    {
+      "path": "upstream/src/coalesce.rs",
+      "upstreamPath": "src/coalesce.rs",
+      "bytes": 2074,
+      "sha256": "3fd11fe4d00c52f58adbe26209a56ca85000b0702a3dc0e23b9622dc84c2299d",
+      "url": "https://github.com/SergioBenitez/Figment/blob/26d3e531c2055bd0ae8524bebc69f31fe3757ba5/src/coalesce.rs"
+    },
+    {
+      "path": "upstream/src/metadata.rs",
+      "upstreamPath": "src/metadata.rs",
+      "bytes": 11086,
+      "sha256": "001417912d9d689f13fd3e8548bbb92290d3302becb2a9e85c2d8a0ecf2493f2",
+      "url": "https://github.com/SergioBenitez/Figment/blob/26d3e531c2055bd0ae8524bebc69f31fe3757ba5/src/metadata.rs"
+    },
+    {
+      "path": "upstream/src/figment.rs",
+      "upstreamPath": "src/figment.rs",
+      "bytes": 36711,
+      "sha256": "6082c1057f86ee50e3f2461fb91c9529cef694053d1ab5bb49d42d5cbe0161f6",
+      "url": "https://github.com/SergioBenitez/Figment/blob/26d3e531c2055bd0ae8524bebc69f31fe3757ba5/src/figment.rs"
+    },
+    {
+      "path": "upstream/Cargo.toml",
+      "upstreamPath": "Cargo.toml",
+      "bytes": 1542,
+      "sha256": "3100eaf2dd7c502f7f94c621aa8a8c0b71e14f56b47b2ef6c44992e7392150d9",
+      "url": "https://github.com/SergioBenitez/Figment/blob/26d3e531c2055bd0ae8524bebc69f31fe3757ba5/Cargo.toml"
+    },
+    {
+      "path": "upstream/LICENSE-MIT",
+      "upstreamPath": "LICENSE-MIT",
+      "bytes": 1080,
+      "sha256": "361df454e66f5cd7f4d4f2ded7045dfec007580c6d8833ebf7db7a21fe461ab1",
+      "url": "https://github.com/SergioBenitez/Figment/blob/26d3e531c2055bd0ae8524bebc69f31fe3757ba5/LICENSE-MIT"
+    },
+    {
+      "path": "upstream/LICENSE-APACHE",
+      "upstreamPath": "LICENSE-APACHE",
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+      "url": "https://github.com/SergioBenitez/Figment/blob/26d3e531c2055bd0ae8524bebc69f31fe3757ba5/LICENSE-APACHE"
+    }
+  ]
+}

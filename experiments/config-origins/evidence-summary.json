@@ -1,0 +1,62 @@
+{
+  "kind": "derived-evidence-summary",
+  "note": "Projection of local CLI/file checks and root actual browser evidence. Original receipts remain outside checkout; byte-preserved safe browser observations and PNGs accompany this summary. Not an upstream Rust execution receipt.",
+  "productBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "upstreamRevision": "26d3e531c2055bd0ae8524bebc69f31fe3757ba5",
+  "artifacts": [
+    {
+      "path": "explainer.json",
+      "bytes": 9814,
+      "sha256": "c951a0e4fe042e8bdacaa8c5eb64b67a3ef53ae5aa163326d2df1abcbd88c214"
+    },
+    {
+      "path": "review.html",
+      "bytes": 272917,
+      "sha256": "2a6355b64f878ff87e6b4530930bfc4af348ed30dfaeee2cd040e4311ce41b5b"
+    },
+    {
+      "path": "source-manifest.json",
+      "bytes": 2434,
+      "sha256": "34850b78830cf3e205fb81aac47544990329f938e25db3f9f704f4fc776df1c2"
+    }
+  ],
+  "finalize": {
+    "quality": "standard",
+    "gates": {
+      "validate": "pass",
+      "deliver": "pass",
+      "check": "pass",
+      "browser-check": "not-run"
+    },
+    "diagnostics": [],
+    "browserCheckRequested": false
+  },
+  "bindingCheck": {
+    "kind": "source-and-artifact-binding-check",
+    "sourceFiles": 7,
+    "verifiedExcerpts": 6,
+    "declaredProviderRows": 3,
+    "completeInputPreserved": true,
+    "artifactSha256": "2a6355b64f878ff87e6b4530930bfc4af348ed30dfaeee2cd040e4311ce41b5b",
+    "upstreamExecuted": false
+  },
+  "rustExecuted": false,
+  "environmentOrTemplateEvaluated": false,
+  "actualBrowserReview": {
+    "operator": "root",
+    "rootViewedThreePngs": true,
+    "observations": "browser-observations.json",
+    "bindings": "capture-metadata.json",
+    "scope": "1440x1100 light overview/full page, pointer hover source card and Escape close; not AT, external link navigation, or full browser gate"
+  },
+  "screenshots": [
+    "screenshots/overview.png",
+    "screenshots/full.png",
+    "screenshots/source-card.png"
+  ],
+  "firstAttempt": {
+    "result": "rejected-before-validation",
+    "reason": "literal Rust generic in authored prose was treated as raw HTML; corrected prose, complete evidence retained",
+    "rawRecordPreservedOutsideCheckout": true
+  }
+}

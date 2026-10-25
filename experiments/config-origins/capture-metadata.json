@@ -1,0 +1,74 @@
+{
+  "kind": "derived-browser-capture-bindings",
+  "note": "Binds root-provided actual browser observations and byte-preserved PNGs to the frozen HTML. PNG file mtime is not an independent capture clock. Root reported pointer hover and Escape actions; this is not a full browser-check receipt.",
+  "artifact": {
+    "path": "review.html",
+    "bytes": 272917,
+    "sha256": "2a6355b64f878ff87e6b4530930bfc4af348ed30dfaeee2cd040e4311ce41b5b"
+  },
+  "productBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "observations": {
+    "path": "browser-observations.json",
+    "sha256": "e5c8e8dffd417f05a565b4af3dc2a4291ff3f1beafbe024cc900a1646dc5b11e",
+    "bytes": 3403,
+    "recordedAt": "2026-10-25T10:48:03.414Z",
+    "byteCopiedFromOriginal": true
+  },
+  "conditions": {
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "theme": "light",
+    "documentHeight": 3016
+  },
+  "verifiedAgainstArtifact": {
+    "threeProviderRowsExact": true,
+    "fourRenderedCodeBlocksExact": true,
+    "sourceCardCasePathAndLinesExact": true,
+    "sourceCardFixedUrlExact": true,
+    "sourceCardClosedAfterEscape": true
+  },
+  "actionsReportedByRoot": [
+    "pointer hover opened case source card",
+    "Escape closed source card"
+  ],
+  "pictures": [
+    {
+      "path": "screenshots/overview.png",
+      "bytes": 201111,
+      "sha256": "e21dbb3239569af1e01b8eb33760ffa9dd0afc017c68bb286436c8b4bb42c7b6",
+      "pixelWidth": 1440,
+      "pixelHeight": 1100,
+      "writtenAtFromFileMtime": "2026-10-25T10:48:02.003679+00:00",
+      "rootViewed": true,
+      "implementationAgentViewed": true
+    },
+    {
+      "path": "screenshots/full.png",
+      "bytes": 524992,
+      "sha256": "6ff529acb5c57fdbe7eb8875edf9be6a2895415ef02589e154b010bb415c6a7c",
+      "pixelWidth": 1440,
+      "pixelHeight": 3016,
+      "writtenAtFromFileMtime": "2026-10-25T10:48:02.119344+00:00",
+      "rootViewed": true,
+      "implementationAgentViewed": true
+    },
+    {
+      "path": "screenshots/source-card.png",
+      "bytes": 232715,
+      "sha256": "54ddec0d466899ba75b1a034aa9473f8000159f41622656f060d0bb71fb4f05b",
+      "pixelWidth": 1440,
+      "pixelHeight": 1100,
+      "writtenAtFromFileMtime": "2026-10-25T10:48:03.346483+00:00",
+      "rootViewed": true,
+      "implementationAgentViewed": true
+    }
+  ],
+  "notClaimed": [
+    "assistive technology acceptance",
+    "external source link navigation",
+    "full browser-check gate",
+    "upstream Rust execution"
+  ]
+}
