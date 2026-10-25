@@ -1,0 +1,39 @@
+{
+  "source": {
+    "repository": "https://github.com/tt-a1i/archify",
+    "revision": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+    "path": "archify/explainer/revision.mjs",
+    "local": "source/revision.mjs",
+    "lines": 20,
+    "sha256": "29032cab30c03b2e4c48730f40175e0e59aa4794893c02e5ae38668776c18288",
+    "bytes": 1965,
+    "license": "source/ARCHIFY-LICENSE",
+    "notice": "source/ARCHIFY-NOTICE"
+  },
+  "inspiration": {
+    "repository": "https://github.com/onmax/comark-ui",
+    "revision": "ec5769238df1f8523f836317817c4076e376be42",
+    "mechanism": "line marker to authored note and explicit return anchor; no copied implementation in experiment runtime",
+    "files": [
+      {
+        "path": "packages/code-notes/LICENSE",
+        "local": "inspiration/COMARK-LICENSE",
+        "bytes": 4341,
+        "sha256": "b1f6ed88695aa633c5b85d7881f64f81364c5a47fcf928d81f7c323278630af7"
+      },
+      {
+        "path": "packages/code-notes/test/code-notes.test.ts",
+        "local": "inspiration/code-notes.test.ts",
+        "bytes": 6539,
+        "sha256": "4c3493a4b9b2fed58066a2af515ae646296f922d0b671e6cb1d6bd5aee0fbf64"
+      },
+      {
+        "path": "packages/code-notes/src/index.ts",
+        "local": "inspiration/code-notes-consumer.ts",
+        "bytes": 10802,
+        "sha256": "e3eb36c8b5307579d8f7e3829644487016a4257229836d06800971704060140c"
+      }
+    ],
+    "license": "MIT code; package notice also lists Lucide ISC and Feather MIT; no icons/framework/parser reused"
+  }
+}

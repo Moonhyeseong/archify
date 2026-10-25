@@ -1,0 +1,38 @@
+{
+  "sourceId": "revision-source",
+  "sourceSha256": "29032cab30c03b2e4c48730f40175e0e59aa4794893c02e5ae38668776c18288",
+  "sourcePath": "source/revision.mjs",
+  "revision": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "notes": [
+    {
+      "noteId": "text",
+      "blockId": "snippet-a",
+      "sourceId": "revision-source",
+      "sourceSha256": "29032cab30c03b2e4c48730f40175e0e59aa4794893c02e5ae38668776c18288",
+      "originalLine": 6,
+      "noteBlockId": "note-text",
+      "label": "①",
+      "text": "作者注释：这一行记录输入正文的摘要；正文摘要只是完整身份中的一项。"
+    },
+    {
+      "noteId": "excerpt",
+      "blockId": "snippet-a",
+      "sourceId": "revision-source",
+      "sourceSha256": "29032cab30c03b2e4c48730f40175e0e59aa4794893c02e5ae38668776c18288",
+      "originalLine": 15,
+      "noteBlockId": "note-excerpt",
+      "label": "②",
+      "text": "作者注释：这一行把来源摘录的文本摘要写入身份；来源位置也在同一条记录中。"
+    },
+    {
+      "noteId": "child",
+      "blockId": "snippet-b",
+      "sourceId": "revision-source",
+      "sourceSha256": "29032cab30c03b2e4c48730f40175e0e59aa4794893c02e5ae38668776c18288",
+      "originalLine": 16,
+      "noteBlockId": "note-child",
+      "label": "③",
+      "text": "作者注释：这一行分别记录子图 HTML 与 spec 的摘要；两者不是同一个输入。"
+    }
+  ]
+}

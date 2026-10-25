@@ -1,0 +1,122 @@
+{
+  "kind": "root-authored-summary-of-actual-browser-observations",
+  "date": "2026-10-25",
+  "browser": "Ego TaskSpace4 Chromium",
+  "artifacts": [
+    {
+      "file": "baseline.html",
+      "bytes": 162877,
+      "sha256": "159ea87f896a73d3454c97f95f1a400325e0e4392fcd5478b2ba7f4d54671e07"
+    },
+    {
+      "file": "candidate.html",
+      "bytes": 170924,
+      "sha256": "4bcdf115e3bd73b2355de9966017a52c3d6710e9570be574170c0c127aef5310"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "baseline-desktop-light.png",
+      "bytes": 381694,
+      "sha256": "f603ecb428bcba874c3fb2f4c88ed324ecef1a1f2640fdd5854c33df5c747a37",
+      "imageSize": [
+        1440,
+        1897
+      ]
+    },
+    {
+      "file": "candidate-desktop-light.png",
+      "bytes": 406468,
+      "sha256": "cb281804b7fe3e7e7658afaaefd7db558bd02ae8cc939d6f732aeab4a5949326",
+      "imageSize": [
+        1440,
+        2112
+      ]
+    },
+    {
+      "file": "candidate-return-line15-light.png",
+      "bytes": 219855,
+      "sha256": "3fe9fd3747a1c70726ac1a4fc93f0adc454a4dd07281cf3f25c8e25d133dd4af",
+      "imageSize": [
+        1440,
+        1100
+      ]
+    },
+    {
+      "file": "candidate-return-line16-dark.png",
+      "bytes": 202976,
+      "sha256": "0000ee97394edd334a000ff2774afe0ac9a7800ec8d47353aceefba72c05115c",
+      "imageSize": [
+        1440,
+        1100
+      ]
+    },
+    {
+      "file": "candidate-mobile-line16-light-ready.png",
+      "bytes": 79029,
+      "sha256": "67e4f2101441ffe806d503e787d9db8a93758f85158106d107094bd839896db3",
+      "imageSize": [
+        390,
+        844
+      ]
+    }
+  ],
+  "allSelectedPngsViewed": true,
+  "rawObservations": [
+    {
+      "file": "baseline-observations.json",
+      "bytes": 4750,
+      "sha256": "f0c4c91bfc5c3295e136ded2edf357ecc6b7238ef4966543543ff39606b4aa08"
+    },
+    {
+      "file": "candidate-initial-observations.json",
+      "bytes": 5459,
+      "sha256": "f398c033d67f0cd4d5525667c4e3d73d431411c1de838d74cd345f307bfd7522"
+    },
+    {
+      "file": "desktop-roundtrip-observations.json",
+      "bytes": 2858,
+      "sha256": "aae5c38b9c35152c47e7df70eb65f3e444f6963da4130f2ad57f414043e75873"
+    },
+    {
+      "file": "mobile-roundtrip-observations.json",
+      "bytes": 3268,
+      "sha256": "534da422d1afc2c2ffa490aff0b99c372e45d5028604b46ef1aa2191100a02e7"
+    }
+  ],
+  "observed": [
+    "Baseline and candidate1440x1100: same two complete1965-character code blocks and three author notes; baseline has0expnote links, candidate has3forward+3return links.",
+    "Candidate pointer note2 focuses note2; actual Tab reaches its return link and Enter focuses snippet-a exactline15/hash.",
+    "Candidate dark pointer note3 then return focuses snippet-b exactline16, distinct from duplicate text in snippet-a.",
+    "Both actual Copy buttons invoked a controlled navigator.clipboard.writeText stub; each1965B payload exactly equals fixed original source SHA29032cab30c03b2e4c48730f40175e0e59aa4794893c02e5ae38668776c18288 including final LF. No OS clipboard used.",
+    "Mobile390x844: controlled DOMpre.scrollLeft500, not touch gesture; actual pointer note3 then Tab/Enter returns exact snippet-b line16 while preserving500. Document width390, code itself wider and horizontally clipped.",
+    "CDP Page.navigateToHistoryEntry previous/forward actual session entries switched between note3 andline16 and focused corresponding exacttarget; this was programmatic history navigation, not keyboard shortcut acceptance."
+  ],
+  "limitations": [
+    "Candidate is experimental postprocessing, not a normal CLI finalized artifact.",
+    "Baseline public browser gate has4footer keyboard diagnoses; these pointer/keyboard samples do not override it.",
+    "No complete root Tab traversal or assistive-technology, touchscreen, cross-browser or user-benefit acceptance.",
+    "Long code lines are clipped by code viewport in both base and candidate; no claim all1965bytes simultaneously visible.",
+    "Source footer/external source navigation and native child hash were not exercised by root."
+  ],
+  "retainedAttempts": [
+    {
+      "kind": "keyboard shortcut attempt",
+      "detail": "Meta+[ was dispatched in390viewport but URL stayed line16;wait timed out4000ms. No product-level cause established. Subsequent fresh observation and CDP history test are distinct."
+    },
+    {
+      "kind": "earlier mobile capture",
+      "file": {
+        "file": "candidate-mobile-line16-light.png",
+        "bytes": 72190,
+        "sha256": "2190255a125cea910ef0fd66fc74ecb12485408a9d548bc10191af1ce30515b0",
+        "imageSize": [
+          390,
+          844
+        ]
+      },
+      "detail": "Earlier actual line16 capture retained privately; final selected mobile capture taken after fonts.ready and subsequent history checks."
+    }
+  ],
+  "publication": "Selected PNGs unchanged; this authored summary may be published as derived evidence. Raw observation JSON remains private."
+}

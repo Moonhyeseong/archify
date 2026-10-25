@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "diagram_type": "explainer",
+  "meta": {
+    "id": "line-notes",
+    "title": "读完解释，回到那一行",
+    "locale": "zh-CN",
+    "quality_profile": "standard"
+  },
+  "answer": {
+    "summary": "把每条作者解释对应到明确的源码行。",
+    "reasons": [
+      "同一份完整源码展示两次，便于检查位置。",
+      "三条解释都保留在代码下方。"
+    ],
+    "scope": "Archify 固定版本 · 完整 20 行 · 作者注释"
+  },
+  "panels": [
+    {
+      "id": "panel-a",
+      "title": "片段 A：正文和来源",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "intro-a",
+          "type": "prose",
+          "text": "完整原文 20 行；下方是作者对指定行的解释。[固定源码](source:revision-source) [转到另一个片段](block:panel-b)"
+        },
+        {
+          "id": "snippet-a",
+          "type": "snippet",
+          "title": "revision.mjs · 完整源码",
+          "language": "js",
+          "text": "import { createHash } from 'node:crypto';\nconst hash = text => createHash('sha256').update(text).digest('hex');\n\n/** Stable authored-content identity; excludes filesystem relocation and outer reader presentation. */\nexport function computeExplainerRevision({document,sourceText=JSON.stringify(document),preparedSources={},preparedDiagrams={},dependencies}) {\n  const sourceSha256 = hash(sourceText);\n  const sources = preparedSources.sources || preparedSources;\n  const assets = preparedSources.assets || {};\n  const diagrams = preparedDiagrams.diagrams || preparedDiagrams;\n  const stable = value => Array.isArray(value) ? value.map(stable) : value && typeof value === 'object' ? Object.fromEntries(Object.entries(value).filter(([,entry])=>entry !== undefined).sort(([a],[b])=>a < b ? -1 : a > b ? 1 : 0).map(([key,entry])=>[key,stable(entry)])) : value;\n  const ordered = entries => entries.map(stable).sort((a,b)=>JSON.stringify(a) < JSON.stringify(b) ? -1 : JSON.stringify(a) > JSON.stringify(b) ? 1 : 0);\n  const resourceIdentity = {\n    version:1,sourceSha256,documentSha256:hash(JSON.stringify(stable(document))),\n    dependencies:ordered((dependencies || [...(preparedSources.dependencies || []),...(preparedDiagrams.dependencies || [])]).map(({kind,id,sha256,bytes})=>({kind,id,sha256,bytes}))),\n    sources:Object.fromEntries(Object.entries(sources).map(([id,source])=>[id,{title:source.title,url:source.url,path:source.path,lines:source.lines,revision:source.revision,textSha256:typeof source.text === 'string' ? hash(source.text) : undefined}])),\n    children:Object.fromEntries(Object.entries(diagrams).map(([id,child])=>[id,{htmlSha256:hash(child.html),specSha256:hash(JSON.stringify(stable(child.spec || {})))}])),\n    assets:Object.fromEntries(Object.entries(assets).map(([id,asset])=>[id,{sha256:asset.sha256,dataSha256:hash(asset.dataUrl || ''),mime:asset.mime,bytes:asset.bytes}]))\n  };\n  return hash(JSON.stringify(stable(resourceIdentity)));\n}\n"
+        },
+        {
+          "id": "note-text",
+          "type": "prose",
+          "text": "① 第 6 行｜作者注释：这一行记录输入正文的摘要；正文摘要只是完整身份中的一项。"
+        },
+        {
+          "id": "note-excerpt",
+          "type": "prose",
+          "text": "② 第 15 行｜作者注释：这一行把来源摘录的文本摘要写入身份；来源位置也在同一条记录中。"
+        }
+      ]
+    },
+    {
+      "id": "panel-b",
+      "title": "片段 B：子图身份",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "intro-b",
+          "type": "prose",
+          "text": "完整原文 20 行；下方是作者对指定行的解释。[固定源码](source:revision-source) [转到另一个片段](block:panel-a)"
+        },
+        {
+          "id": "snippet-b",
+          "type": "snippet",
+          "title": "revision.mjs · 完整源码",
+          "language": "js",
+          "text": "import { createHash } from 'node:crypto';\nconst hash = text => createHash('sha256').update(text).digest('hex');\n\n/** Stable authored-content identity; excludes filesystem relocation and outer reader presentation. */\nexport function computeExplainerRevision({document,sourceText=JSON.stringify(document),preparedSources={},preparedDiagrams={},dependencies}) {\n  const sourceSha256 = hash(sourceText);\n  const sources = preparedSources.sources || preparedSources;\n  const assets = preparedSources.assets || {};\n  const diagrams = preparedDiagrams.diagrams || preparedDiagrams;\n  const stable = value => Array.isArray(value) ? value.map(stable) : value && typeof value === 'object' ? Object.fromEntries(Object.entries(value).filter(([,entry])=>entry !== undefined).sort(([a],[b])=>a < b ? -1 : a > b ? 1 : 0).map(([key,entry])=>[key,stable(entry)])) : value;\n  const ordered = entries => entries.map(stable).sort((a,b)=>JSON.stringify(a) < JSON.stringify(b) ? -1 : JSON.stringify(a) > JSON.stringify(b) ? 1 : 0);\n  const resourceIdentity = {\n    version:1,sourceSha256,documentSha256:hash(JSON.stringify(stable(document))),\n    dependencies:ordered((dependencies || [...(preparedSources.dependencies || []),...(preparedDiagrams.dependencies || [])]).map(({kind,id,sha256,bytes})=>({kind,id,sha256,bytes}))),\n    sources:Object.fromEntries(Object.entries(sources).map(([id,source])=>[id,{title:source.title,url:source.url,path:source.path,lines:source.lines,revision:source.revision,textSha256:typeof source.text === 'string' ? hash(source.text) : undefined}])),\n    children:Object.fromEntries(Object.entries(diagrams).map(([id,child])=>[id,{htmlSha256:hash(child.html),specSha256:hash(JSON.stringify(stable(child.spec || {})))}])),\n    assets:Object.fromEntries(Object.entries(assets).map(([id,asset])=>[id,{sha256:asset.sha256,dataSha256:hash(asset.dataUrl || ''),mime:asset.mime,bytes:asset.bytes}]))\n  };\n  return hash(JSON.stringify(stable(resourceIdentity)));\n}\n"
+        },
+        {
+          "id": "note-child",
+          "type": "prose",
+          "text": "③ 第 16 行｜作者注释：这一行分别记录子图 HTML 与 spec 的摘要；两者不是同一个输入。"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "revision-source",
+      "title": "固定源码：revision.mjs 全部 20 行",
+      "url": "https://github.com/tt-a1i/archify/blob/10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0/archify/explainer/revision.mjs",
+      "path": "archify/explainer/revision.mjs",
+      "revision": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+      "lines": [
+        1,
+        20
+      ]
+    }
+  ]
+}

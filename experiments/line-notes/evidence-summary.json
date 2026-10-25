@@ -1,0 +1,330 @@
+{
+  "format": "公开派生摘要；不是原始CLI或浏览器receipt",
+  "baseline": {
+    "method": "normal JSON Explainer finalize, fixed dev10b4 runtime",
+    "input": "23f5ea39bb1246afd7b7d531ba7265d6892c5edd768386b668ff56c9a7d18f9f",
+    "artifact": "159ea87f896a73d3454c97f95f1a400325e0e4392fcd5478b2ba7f4d54671e07",
+    "gates": {
+      "validate": "pass",
+      "deliver": "pass",
+      "check": "pass",
+      "browser-check": "fail"
+    },
+    "exitCode": 1,
+    "diagnosticCount": 4,
+    "diagnosticCodes": [
+      "explainer/browser-keyboard-traversal"
+    ],
+    "diagnosticBoundary": "4条均为footer Archify链接未由本次Tab遍历到达；不修改共享checker，也不宣称整体gate通过"
+  },
+  "candidate": {
+    "method": "experiment-only HTML post-processing; not normal finalize output",
+    "artifact": "4bcdf115e3bd73b2355de9966017a52c3d6710e9570be574170c0c127aef5310",
+    "normalFinalize": false,
+    "copiedBaselinePreparedBundle": true,
+    "strictProvenanceCheck": "不把baseline receipt套到后处理HTML；未宣称候选通过正常strict check/finalize"
+  },
+  "source": {
+    "repository": "https://github.com/tt-a1i/archify",
+    "revision": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+    "path": "archify/explainer/revision.mjs",
+    "local": "source/revision.mjs",
+    "lines": 20,
+    "sha256": "29032cab30c03b2e4c48730f40175e0e59aa4794893c02e5ae38668776c18288",
+    "bytes": 1965,
+    "license": "source/ARCHIFY-LICENSE"
+  },
+  "staticAudit": {
+    "originalGitBlobExact": true,
+    "sourceSha256": "29032cab30c03b2e4c48730f40175e0e59aa4794893c02e5ae38668776c18288",
+    "twoCodePayloadsExactInEachArm": true,
+    "blankLinesAndFinalLfExact": true,
+    "gutterAndNotesOutsideCode": true,
+    "originalScriptsAndPreparedInputExact": true,
+    "validRoundtripLinks": 6,
+    "uniqueDomIds": true,
+    "browserBehavior": "separate evidence"
+  },
+  "negativeCases": {
+    "pass": 5,
+    "fail": 0,
+    "skip": 0,
+    "cases": [
+      "line zero",
+      "line beyond full blob",
+      "wrong source digest",
+      "duplicate note identifier",
+      "duplicate block line"
+    ]
+  },
+  "browserAudit": {
+    "mechanism": "actual headless Chrome CDP pointer/Enter/history; copied payload uses resolved stub, no OS clipboard write",
+    "records": [
+      {
+        "width": 1440,
+        "theme": "light",
+        "pointerNote": {
+          "hash": "#expnote-snippet-a-note-text",
+          "active": "expnote-snippet-a-note-text",
+          "y": 468.75
+        },
+        "pointerReturn": {
+          "hash": "#expnote-snippet-a-line-6",
+          "active": "expnote-snippet-a-line-6",
+          "y": 110
+        },
+        "keyboardNote": {
+          "hash": "#expnote-snippet-b-note-child",
+          "active": "expnote-snippet-b-note-child",
+          "y": 578.75
+        },
+        "keyboardReturn": {
+          "hash": "#expnote-snippet-b-line-16",
+          "active": "expnote-snippet-b-line-16",
+          "y": 446.5
+        },
+        "backForwardExact": true,
+        "horizontalScroll": {
+          "maximum": 964,
+          "actual": 964
+        },
+        "copiedSha256": [
+          "29032cab30c03b2e4c48730f40175e0e59aa4794893c02e5ae38668776c18288",
+          "29032cab30c03b2e4c48730f40175e0e59aa4794893c02e5ae38668776c18288"
+        ],
+        "sourceCardOpenEscape": true,
+        "panelLink": true,
+        "consoleErrors": [],
+        "tabStopBoundary": "activation uses focused ordinary anchors plus real Enter; target tabindex=-1; not a complete Tab traversal"
+      },
+      {
+        "width": 1440,
+        "theme": "dark",
+        "pointerNote": {
+          "hash": "#expnote-snippet-a-note-text",
+          "active": "expnote-snippet-a-note-text",
+          "y": 109.75
+        },
+        "pointerReturn": {
+          "hash": "#expnote-snippet-a-line-6",
+          "active": "expnote-snippet-a-line-6",
+          "y": 110
+        },
+        "keyboardNote": {
+          "hash": "#expnote-snippet-b-note-child",
+          "active": "expnote-snippet-b-note-child",
+          "y": 578.75
+        },
+        "keyboardReturn": {
+          "hash": "#expnote-snippet-b-line-16",
+          "active": "expnote-snippet-b-line-16",
+          "y": 446.5
+        },
+        "backForwardExact": true,
+        "horizontalScroll": {
+          "maximum": 964,
+          "actual": 964
+        },
+        "copiedSha256": [
+          "29032cab30c03b2e4c48730f40175e0e59aa4794893c02e5ae38668776c18288",
+          "29032cab30c03b2e4c48730f40175e0e59aa4794893c02e5ae38668776c18288"
+        ],
+        "sourceCardOpenEscape": true,
+        "panelLink": true,
+        "consoleErrors": [],
+        "tabStopBoundary": "activation uses focused ordinary anchors plus real Enter; target tabindex=-1; not a complete Tab traversal"
+      },
+      {
+        "width": 390,
+        "theme": "light",
+        "pointerNote": {
+          "hash": "#expnote-snippet-a-note-text",
+          "active": "expnote-snippet-a-note-text",
+          "y": 456.171875
+        },
+        "pointerReturn": {
+          "hash": "#expnote-snippet-a-line-6",
+          "active": "expnote-snippet-a-line-6",
+          "y": 110.421875
+        },
+        "keyboardNote": {
+          "hash": "#expnote-snippet-b-note-child",
+          "active": "expnote-snippet-b-note-child",
+          "y": 509.765625
+        },
+        "keyboardReturn": {
+          "hash": "#expnote-snippet-b-line-16",
+          "active": "expnote-snippet-b-line-16",
+          "y": 377.515625
+        },
+        "backForwardExact": true,
+        "horizontalScroll": {
+          "maximum": 1870,
+          "actual": 1870
+        },
+        "copiedSha256": [
+          "29032cab30c03b2e4c48730f40175e0e59aa4794893c02e5ae38668776c18288",
+          "29032cab30c03b2e4c48730f40175e0e59aa4794893c02e5ae38668776c18288"
+        ],
+        "sourceCardOpenEscape": true,
+        "panelLink": true,
+        "consoleErrors": [],
+        "tabStopBoundary": "activation uses focused ordinary anchors plus real Enter; target tabindex=-1; not a complete Tab traversal"
+      },
+      {
+        "width": 390,
+        "theme": "dark",
+        "pointerNote": {
+          "hash": "#expnote-snippet-a-note-text",
+          "active": "expnote-snippet-a-note-text",
+          "y": 110.171875
+        },
+        "pointerReturn": {
+          "hash": "#expnote-snippet-a-line-6",
+          "active": "expnote-snippet-a-line-6",
+          "y": 110.421875
+        },
+        "keyboardNote": {
+          "hash": "#expnote-snippet-b-note-child",
+          "active": "expnote-snippet-b-note-child",
+          "y": 509.765625
+        },
+        "keyboardReturn": {
+          "hash": "#expnote-snippet-b-line-16",
+          "active": "expnote-snippet-b-line-16",
+          "y": 377.515625
+        },
+        "backForwardExact": true,
+        "horizontalScroll": {
+          "maximum": 1870,
+          "actual": 1870
+        },
+        "copiedSha256": [
+          "29032cab30c03b2e4c48730f40175e0e59aa4794893c02e5ae38668776c18288",
+          "29032cab30c03b2e4c48730f40175e0e59aa4794893c02e5ae38668776c18288"
+        ],
+        "sourceCardOpenEscape": true,
+        "panelLink": true,
+        "consoleErrors": [],
+        "tabStopBoundary": "activation uses focused ordinary anchors plus real Enter; target tabindex=-1; not a complete Tab traversal"
+      }
+    ],
+    "deepLinkExact": true,
+    "nativeChild": "not present; not claimed tested",
+    "wholeArtifactTabTraversal": "not claimed",
+    "assistiveTechnology": "not tested"
+  },
+  "failuresRetained": [
+    {
+      "file": "candidate-first-failed-script-insertion.html",
+      "kind": "首次后处理将script插到reader内部字符串，独立script保真审计失败；改为document最后body闭合前插入后通过"
+    },
+    {
+      "file": "browser-first-return-failed.stderr",
+      "kind": "首次实际pointer返行等待超时；原runtime有hashchange和click timer重复focus。收窄不同hash仅hashchange、同hash才timer；最终新HTML4视口主题case通过，不宣称已证明底层根因。"
+    }
+  ],
+  "rootCapture": {
+    "path": "screenshots/root-capture-summary.json",
+    "sha256": "fa49c6c9ca8681c11b724dbf54a7222be2151b55b353e4f0e22f2443f81f0021",
+    "selectedOriginalPngs": 5,
+    "allRootViewed": true,
+    "sameFrozenHtml": true,
+    "readmeScope": "实际pointer/Tab/Enter/copy与程序session history；无OSclipboard/AT/完整Tab/触屏或收益结论"
+  },
+  "rawBindings": [
+    {
+      "basename": "baseline-finalize.stdout.json",
+      "bytes": 1196,
+      "sha256": "1dc130b1ac6a7529d669e3dbf098d6569f44c25ccc3c3e9003df6010ec95aabb"
+    },
+    {
+      "basename": "baseline-browser.stdout.json",
+      "bytes": 4769,
+      "sha256": "95bbbdcc01f509bf07abbb150189618ac2f6baf99fb6a202b4c33f3512440351"
+    },
+    {
+      "basename": "baseline.delivery.json",
+      "bytes": 1064,
+      "sha256": "76c63eafbea7fb0f0e5486d3ea829a092f277f7025d63c78e94f1e0fd8e860c5"
+    },
+    {
+      "basename": "baseline-browser.delivery.json",
+      "bytes": 1064,
+      "sha256": "5704ec41dd1d9332dda779c0de41e5fc61b8eae03fff214bb2b9d07f1f1c4f6c"
+    },
+    {
+      "basename": "build.json",
+      "bytes": 617,
+      "sha256": "fa155a10febdf8b94afbe5feebbc870e6e43b110f8469fd0e3004c07877ffbeb"
+    },
+    {
+      "basename": "static-audit.json",
+      "bytes": 378,
+      "sha256": "f642f7ff728bcd6cf0c0140cb861861ef76dcf64911342c5a22ec5a0caed4284"
+    },
+    {
+      "basename": "negative.tap",
+      "bytes": 658,
+      "sha256": "b6262aa1462febbaaa8916e488bd9fbc4e2012497dcf7fe6b53f773e8b329e6e"
+    },
+    {
+      "basename": "browser-audit.json",
+      "bytes": 4940,
+      "sha256": "41b30d8a368d41a3b67d98e4ce0d464d382b6d95c72f6ffe2e05cfb0429de6b5"
+    },
+    {
+      "basename": "browser-first-return-failed.stderr",
+      "bytes": 558,
+      "sha256": "93a6d2aea7b776f2fa8857796de0ccb58dcf8da3f13d7d2de63aa7022c8dc6ca"
+    },
+    {
+      "basename": "candidate-first-failed-script-insertion.html",
+      "bytes": 170726,
+      "sha256": "56abd6d8669e6a2bbaaa0ce38cbab64c55cfcc014c1fd065dc5d04ff8e18e4b3"
+    },
+    {
+      "basename": "browser-before-callback-fix.json",
+      "bytes": 4940,
+      "sha256": "2d9b330788df9764a0e9cd4c1f51d1606c418ec75961263c0edd54f13ea8145b"
+    }
+  ],
+  "untrackedNoIndexDiffCheck": [
+    {
+      "path": "baseline.html",
+      "exitCode": 1,
+      "diagnosticLines": 0
+    },
+    {
+      "path": "candidate.html",
+      "exitCode": 1,
+      "diagnosticLines": 0
+    },
+    {
+      "path": "build-candidate.mjs",
+      "exitCode": 1,
+      "diagnosticLines": 0
+    },
+    {
+      "path": "audit.py",
+      "exitCode": 1,
+      "diagnosticLines": 0
+    },
+    {
+      "path": "browser-audit.mjs",
+      "exitCode": 1,
+      "diagnosticLines": 0
+    },
+    {
+      "path": "negative.test.mjs",
+      "exitCode": 1,
+      "diagnosticLines": 0
+    },
+    {
+      "path": "README.md",
+      "exitCode": 1,
+      "diagnosticLines": 0
+    }
+  ],
+  "untrackedNoIndexDiffCheckMeaning": "七项exit1来自no-index文件差异；输出0行，没有whitespace诊断。未归一化冻结HTML。"
+}
