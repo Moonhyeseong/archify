@@ -14,7 +14,7 @@
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
-[离线图片浏览页](gallery/README.md)：当前固定快照含34项的34张原始PNG，可按分组和关键词筛选、展开完整图；下载`gallery/index.html`后可独立打开。已加入Byte views，并将State/Recipe主图换为官方fixture实导出/实际Just dump。固定提交和图片摘要见manifest；本版桌面与390px浅深色、三项完整图和筛选均经过实际检查，七张截图已查看。历史33/29/27快照及各自证据继续按固定提交保留。第35项Source keyboard activation见下表；待两项旧候选刷新完成后，统一更新下一版画廊。
+[离线图片浏览页](gallery/README.md)：当前固定快照含34项的34张原始PNG，可按分组和关键词筛选、展开完整图；下载`gallery/index.html`后可独立打开。已加入Byte views，并将State/Recipe主图换为官方fixture实导出/实际Just dump。固定提交和图片摘要见manifest；本版桌面与390px浅深色、三项完整图和筛选均经过实际检查，七张截图已查看。历史33/29/27快照及各自证据继续按固定提交保留。第35项Source keyboard activation见下表；两项旧候选的新dev刷新现已推送，下一版画廊正在同步。
 
 | 实验与远程分支 | 具体价值 | 发布 revision | 实际图片 | 验证与限制 |
 | --- | --- | --- | --- | --- |
@@ -45,9 +45,9 @@
 | [Lasso witness](https://github.com/tt-a1i/archify/tree/codex/lab-lasso-witness/experiments/lasso-witness) | 三位置反例保留有限前缀和无限后缀的显式闭合入口 | `900fe5a3` | [实际原文与图对照](https://github.com/tt-a1i/archify/tree/codex/lab-lasso-witness/experiments/lasso-witness) | 零共享代码；固定上游选段；3页四阶段通过；实际回环遮挡已通过输入修复，旧图保留；未运行checker/未验证用户收益 |
 | [Workflow self-loop](https://github.com/tt-a1i/archify/tree/codex/lab-workflow-self-loop/experiments/workflow-self-loop) | 同一节点同时作为起点和终点，正确外绕回接不再被误拒 | `eb299b15` | [实际回环](https://github.com/tt-a1i/archify/blob/codex/lab-workflow-self-loop/experiments/workflow-self-loop/screenshots/explicit-loop.png) | 局部compiler；145focused/core、独立8、四旧例逐字一致、ZIP/抽包四阶段通过；必要折返守卫，既有auto候选也可用，未扩搜索 |
 | [Plan row counts](https://github.com/tt-a1i/archify/tree/codex/lab-plan-row-counts/experiments/plan-row-counts) | 每次平均3行×352循环≈1056次输出，保留局部估计差异 | `91e2ffad` | [实际解释页](https://github.com/tt-a1i/archify/blob/codex/lab-plan-row-counts/experiments/plan-row-counts/screenshots/explainer.png) | 零共享代码；固定PEV2样例3节点；Tree四阶段、Explainer三阶段通过/自动browser未跑；非SQL执行/unique rows/调优证明 |
-| [Diff line numbers](https://github.com/tt-a1i/archify/tree/codex/lab-diff-line-numbers/experiments/diff-line-numbers) | diff行号保持完整单行，长代码仍可横向滚动 | `88b0dcb0` | [1280px修复后](https://github.com/tt-a1i/archify/blob/codex/lab-diff-line-numbers/experiments/diff-line-numbers/screenshots/candidate-1280-light.png) | 单条CSS；25focused/19core/generated、canonical双ZIP、1280/390浅深8组DOM对照通过；30拆行→0；4实际前后图；完整browsergate未跑，未修改键盘检查 |
+| [Diff line numbers](https://github.com/tt-a1i/archify/tree/codex/lab-diff-line-numbers/experiments/diff-line-numbers) | diff行号保持完整单行，长代码仍可横向滚动 | `28f9f95d` | [新dev实际对照](https://github.com/tt-a1i/archify/blob/codex/lab-diff-line-numbers/experiments/diff-line-numbers/dev10b4/screenshots/candidate-1280-light.png) | 已整合10b4；单CSS、25focused/19core/generated、双ZIP/解包通过；8臂DOM 30拆行→0、4新图；两页3静态gate/同7writing warnings，完整browsergate未跑；4docs保留10b历史 |
 | [Keyboard traversal](https://github.com/tt-a1i/archify/tree/codex/lab-keyboard-traversal/experiments/keyboard-traversal) | 纳入实际Tab额外停点，末尾可达控件不再因过早停止被误报 | `d9308631` | [实际第65步到达footer](https://github.com/tt-a1i/archify/blob/codex/lab-keyboard-traversal/experiments/keyboard-traversal/screenshots/tab-65-footer.png) | 最终focused11、v3算法整file19复用、core19、canonical双ZIP/抽包通过；固定HTML四视口均50/50且0诊断；iframe/date/trap/无限焦点边界保留；非PR验收 |
-| [Preview dashed ink](https://github.com/tt-a1i/archify/tree/codex/lab-preview-dashed-ink/experiments/preview-dashed-ink) | Explainer预览的虚线关系文字、线和箭头使用可读颜色，保留节点边框 | `36cc35fb` | [浅色修复后](https://github.com/tt-a1i/archify/blob/codex/lab-preview-dashed-ink/experiments/preview-dashed-ink/screenshots/candidate-light.png) | 3条CSS映射；2browser/56focused、基线失败、候选四阶段及抽包通过；4张实际浅深对照图；4份旧生成物的既有freshness更新单列，不称全模式可访问性验收 |
+| [Preview dashed ink](https://github.com/tt-a1i/archify/tree/codex/lab-preview-dashed-ink/experiments/preview-dashed-ink) | Explainer预览的虚线关系文字、线和箭头使用可读颜色，保留节点边框 | `ca4baa1d` | [新dev浅色对照](https://github.com/tt-a1i/archify/blob/codex/lab-preview-dashed-ink/experiments/preview-dashed-ink/refresh-dev-10b4/screenshots/candidate-light.png) | 已整合10b4；3CSS映射、2browser/57focused/core、4generatedchecks、基线失败、候选和抽包四阶段通过；4新浅深图，旧20实验/4docs保留36cc历史，不称当前docs已重生成 |
 | [Copy identity](https://github.com/tt-a1i/archify/tree/codex/lab-copy-identity/experiments/copy-identity) | 内容相等仍可能共享不同对象：别名、浅拷贝、深拷贝的引用对照 | `18d51b89` | [实际引用图](https://github.com/tt-a1i/archify/blob/codex/lab-copy-identity/experiments/copy-identity/screenshots/native.png) | 新dev3f95；标准库独立观察4变量/7list/10引用、6内容检查、两产物四阶段通过；3张实际图；上游教学构造，未运行上游工具/未观察整个heap |
 | [CLI reading tour](https://github.com/tt-a1i/archify/tree/codex/lab-cli-reading-tour/experiments/cli-reading-tour) | 沿真实源码区分三个CLI出口、磁盘JSON、HTTP快照与用户启动 | `1dff88d3` | [实际阅读页](https://github.com/tt-a1i/archify/blob/codex/lab-cli-reading-tour/experiments/cli-reading-tour/screenshots/overview.png) | 新dev3f95；7固定源、11SourceCards、10节点9边；三静态阶段通过/自动browser未请求；实际Walk、hover/Escape及3图；未运行上游服务或scanner |
 | [Clipboard outcome](https://github.com/tt-a1i/archify/tree/codex/lab-clipboard-outcome/experiments/clipboard-outcome) | 复制不可用时保留可选择的内容，恢复后重试不重复包装问题 | `68866954` | [实际失败恢复](https://github.com/tt-a1i/archify/blob/codex/lab-clipboard-outcome/experiments/clipboard-outcome/screenshots/missing-ask-candidate.png) | 基线3f95；8种API边界、邻近32/core19、canonical双ZIP/抽包通过；同一真实PR输入基线/候选三阶段通过；API受控注入实测，未写OS clipboard；自动browser未请求 |
@@ -110,17 +110,19 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 2026-10-25 18:07:06核Source keyboard activation `d81830d3`：远端head一致，Actions runs/check-runs均为0，本地验证与远端CI分列。17:59:53重新查GitHub，dev仍10b4、main仍51a29177，latest Release仍v3.2.0（2026-10-19发布）。
 
+2026-10-25 18:14:23核Diff line numbers新head `28f9f95d` 与Preview dashed ink新head `ca4baa1d`：都包含固定dev10b4祖先，远端head一致，Actions runs/check-runs均为0。本文本不把未运行CI写成通过。
+
 ## 正在推进
 
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
 | 新内容实验 | fq字节区间与位解释视图 | byte-views已推b844ecb2，计入第34项；完整97B官方fixture/golden与四张真实截图，冻结67f基线 |
 | 新产品实验 | source-only图节点的键盘激活 | d81830d3已推，计入第35项；真实基线可Tab但Enter/Space不激活，候选补等价动作与button角色；5图及独立审查完成 |
-| 已有候选刷新 | Diff行号 / Preview虚线文字 | 两条既有分支已在本地整合固定dev10b4，新同输入前后图/包/直接测试完成，正在最后审查，尚未推送新head |
-| 新一轮发现 | 调试回放与图内标注阅读 | 第7轮14个新来源，4个深入源码；本轮0直接实施建议，保留具体再评估条件；图节点到来源的键盘交接正在核查 |
+| 已有候选刷新 | Diff行号 / Preview虚线文字 | 两条既有分支均已整合固定dev10b4并完成独立终审：28f9f95d/ca4baa1d已推，新旧证据身份分列 |
+| 新一轮发现 | Shell阅读 / CSS来源解释 | 第8轮12个新来源、4个深入源码，0直接实施建议；第9轮继续一手调研，已有键盘实际缺口已独立修复 |
 | 既有实验真实输出 | Recipe stages / State contract | State官方fixture实导出已推f7269e09；Recipe官方test有效输入dump已推062dee5d，自然完整示例拒绝并保留；历史synthetic不改称实跑 |
 | 新发现修复 | Explainer复制结果与手工恢复 | Clipboard outcome已推送68866954，来源、基线/候选和实际截图见第33项 |
-| 浏览页更新 | 第35项及两项CSS候选的新基线图片 | 当前固定34版完整可用；待两项刷新分支发布后一起生成35版，不把当前19项浏览器观察自动算到下一版 |
+| 浏览页更新 | 第35项及两项CSS候选的新基线图片 | 当前固定34版完整可用；两项刷新已发布，正在一起生成35版，不把当前19项浏览器观察自动算到下一版 |
 | 既有实验补证据 | DBML与Plan actions | DBML已补上primary key同义写法接受；原拒绝记录保留；完整plan fixture转换证据不变 |
 | 已排除的重复实现 | Mutation报告reader | 原viewer已有文件搜索、状态筛选、diff、测试关联和单HTML打包；只保留研究，不另建reader |
 | 新dev影响核对 | 许可声明与finalize源范围修复 | [15:41迁移](base-refresh-1541.md) / [16:18交付逻辑](base-refresh-1618.md)：分别核对实际diff；旧证据保留原身份，新整合按影响验证 |
