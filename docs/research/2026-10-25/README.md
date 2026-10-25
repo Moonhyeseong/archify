@@ -6,11 +6,11 @@
 
 共同实验基线：[dev `82c7e0f0`](https://github.com/tt-a1i/archify/commit/82c7e0f089a02a4d514714adf37dc2061682da5f)，2026-10-25 已重新核对远端仍为该 revision。下面的“已推送”只表示远程实验分支可审查，不能等同于合入、发布或人类验收。
 
-## 已推送的 27 个实验
+## 已推送的 28 个实验
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
-[离线图片浏览页](gallery/README.md)：27 张原始 PNG，可按分组和关键词筛选、展开完整图；下载 `gallery/index.html` 后可独立打开。固定提交/图片摘要保留在 manifest，桌面与 390px 实际检查见浏览页说明。
+[离线图片浏览页](gallery/README.md)：首个固定快照含 27 张原始 PNG，可按分组和关键词筛选、展开完整图；下载 `gallery/index.html` 后可独立打开。固定提交/图片摘要保留在 manifest，桌面与 390px 实际检查见浏览页说明。
 
 | 实验与远程分支 | 具体价值 | 发布 revision | 实际图片 | 验证与限制 |
 | --- | --- | --- | --- | --- |
@@ -26,7 +26,7 @@
 | [State contract](https://github.com/tt-a1i/archify/tree/codex/lab-state-contract/experiments/state-contract) | 把 robot3-viz flat 数据和显式 sidecar 转为 Lifecycle 与状态×事件声明矩阵 | `cc8c75bc` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-state-contract/experiments/state-contract/screenshots/state-contract.png) | 40 tests；两种产物四阶段通过；rich 语义拒绝，无机器执行，synthetic |
 | [Finder canvas matches](https://github.com/tt-a1i/archify/tree/codex/lab-finder-highlights/experiments/finder-highlights) | 输入查询后，列表与画布同步显示匹配节点，保留既有选择与视图 | `94c165ee` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-finder-highlights/experiments/finder-highlights/screenshots/candidate-api-light.png) | 共享 Viewer；作者最终 browser 60/60、core 19/19、generated/ZIP 一致；独立 browser 17/17；有固定输入浅/深色前后图，无效率计时 |
 | [CI conditions](https://github.com/tt-a1i/archify/tree/codex/lab-ci-conditions/experiments/ci-conditions) | 固定真实 workflow 的 needs、原始 if、隐式 status 门槛与未知矩阵 | `0ec0b834` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-ci-conditions/experiments/ci-conditions/screenshots/overview.png) | 10 tests；三份产物 finalize 四阶段通过；没有运行 CI 或预测 job 结果 |
-| [Plan actions](https://github.com/tt-a1i/archify/tree/codex/lab-plan-actions/experiments/plan-actions) | 分别看两种 replacement 顺序，保留 unknown/sensitive/null 路径与 deferred/complete | `640fa6ff` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-plan-actions/experiments/plan-actions/screenshots/explainer.png) | 16 tests；render/finalize 通过，自动 browser 未请求；synthetic，所有 before/after 值不入产物 |
+| [Plan actions](https://github.com/tt-a1i/archify/tree/codex/lab-plan-actions/experiments/plan-actions) | 分别看两种 replacement 顺序，保留 unknown/sensitive/null 路径与 deferred/complete | `729d3a03` | [官方完整fixture](https://github.com/tt-a1i/archify/blob/codex/lab-plan-actions/experiments/plan-actions/upstream-example/screenshots/explainer.png) | 原16tests复用；官方1资源delete→create完整输入通过，Workflow render/Explainer三阶段通过；before/after值不入输出模型，native字节扫描保留一处静态注释普通词重合；未执行Terraform |
 | [Recipe stages](https://github.com/tt-a1i/archify/tree/codex/lab-recipe-stages/experiments/recipe-stages) | Just dump 的 priors 只改一值，直观看出同一依赖由 before 移到 after | `10164864` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-recipe-stages/experiments/recipe-stages/screenshots/priors-2.png) | 10 tests；四份产物四阶段通过；固定上游形状的原创 synthetic，没有执行 Just |
 | [Relation reference](https://github.com/tt-a1i/archify/tree/codex/lab-relation-reference/experiments/relation-reference) | 复制当前 pinned 关系的原始方向、标签、节点 ID 与明确身份，便于准确引用 | `6d7cd594` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-relation-reference/experiments/relation-reference/screenshots/candidate-light.png) | 共享 Viewer；focused 62/62，最后 Focus 16/16，core 19/19、generated/ZIP 一致；独立复核；真实 OS clipboard 与用户收益未验证 |
 | [Test context map](https://github.com/tt-a1i/archify/tree/codex/lab-test-context-map/experiments/test-context-map) | 精确 context 映射到选择源码行，保留空标签、未知、缺失、排除和不可用 | `9d6b4e3a` | [实跑矩阵](https://github.com/tt-a1i/archify/blob/codex/lab-test-context-map/experiments/test-context-map/measured/screenshots/matrix.png) | 原18 tests复用；新增固定工具实跑原创fixture和逐字段复核；finalize通过，自动browser未请求；sidecar仍是声明，不补造缺失标签 |
@@ -42,7 +42,9 @@
 | [Workflow self-loop](https://github.com/tt-a1i/archify/tree/codex/lab-workflow-self-loop/experiments/workflow-self-loop) | 同一节点同时作为起点和终点，正确外绕回接不再被误拒 | `eb299b15` | [实际回环](https://github.com/tt-a1i/archify/blob/codex/lab-workflow-self-loop/experiments/workflow-self-loop/screenshots/explicit-loop.png) | 局部compiler；145focused/core、独立8、四旧例逐字一致、ZIP/抽包四阶段通过；必要折返守卫，既有auto候选也可用，未扩搜索 |
 | [Plan row counts](https://github.com/tt-a1i/archify/tree/codex/lab-plan-row-counts/experiments/plan-row-counts) | 每次平均3行×352循环≈1056次输出，保留局部估计差异 | `91e2ffad` | [实际解释页](https://github.com/tt-a1i/archify/blob/codex/lab-plan-row-counts/experiments/plan-row-counts/screenshots/explainer.png) | 零共享代码；固定PEV2样例3节点；Tree四阶段、Explainer三阶段通过/自动browser未跑；非SQL执行/unique rows/调优证明 |
 
-这二十七项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
+| [Diff line numbers](https://github.com/tt-a1i/archify/tree/codex/lab-diff-line-numbers/experiments/diff-line-numbers) | diff行号保持完整单行，长代码仍可横向滚动 | `88b0dcb0` | [1280px修复后](https://github.com/tt-a1i/archify/blob/codex/lab-diff-line-numbers/experiments/diff-line-numbers/screenshots/candidate-1280-light.png) | 单条CSS；25focused/19core/generated、canonical双ZIP、1280/390浅深8组DOM对照通过；30拆行→0；4实际前后图；完整browsergate未跑，未修改键盘检查 |
+
+这二十八项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
 
 GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确远端 head 的 Actions runs/check-runs 均为 0。当前 [CI 配置](https://github.com/tt-a1i/archify/blob/82c7e0f089a02a4d514714adf37dc2061682da5f/.github/workflows/ci.yml) 只对 main/dev push 自动运行，另外支持 PR/manual。这里的实验分支 push 没有提供远端 CI 通过证据；上表测试均按实际本地来源记录。
 
@@ -76,12 +78,14 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 [390px图内导航实测](evidence/mobile-nav/README.md)：横滚后全部缩放控件可命中，实际100%→125%，因此不把初始裁剪误作不可用，也不新增布局分支。物理触屏和可发现性尚未验证。
 
+2026-10-25 14:56（台北）核对DBML新head `d0472cc3`、Plan actions新head `729d3a03`；15:03核对Diff line numbers `88b0dcb0`：远端head均吻合，Actions runs/check-runs均为0。本地验证不替代远端CI。
+
 ## 正在推进
 
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
-| 新发现修复 | Explainer键盘遍历与diff行号 | 两个独立分支实施中：原生Tab停点使检查过早结束、三位行号被折行；均由实际产物复现 |
-| 既有实验补证据 | Plan actions官方完整fixture | 原文转换通过，真实图片已查看，独立证据复核收尾；DBML两原文拒绝已推送 |
+| 新发现修复 | Explainer键盘遍历 | 保留原生/动态Tab停点的有界遍历，独立review补iframe/shadow边界；行号独立修复已推送 |
+| 既有实验补证据 | DBML与Plan actions | 两项补证据均已推送：官方DBML明确拒绝；完整plan fixture转换通过；各自边界见README |
 | 已排除的重复实现 | Mutation报告reader | 原viewer已有文件搜索、状态筛选、diff、测试关联和单HTML打包；只保留研究，不另建reader |
 | 保留候选 | Notebook别名与派生值的不同stale预期 | 6项目只读报告完成；目前无实际notebook交接任务，暂不扩成converter |
 
