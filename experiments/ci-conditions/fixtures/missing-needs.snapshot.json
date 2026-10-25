@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "kind": "manual-static-workflow-snapshot",
+  "title": "Release CI conditions",
+  "source": {
+    "classification": "synthetic",
+    "url": "https://github.com/feruzkarimovv/gha-graph/blob/d3f156ec59279f134dff38c333f476e177706f9b/examples/realistic-release/.github/workflows/release.yml",
+    "commit": "d3f156ec59279f134dff38c333f476e177706f9b",
+    "path": "examples/realistic-release/.github/workflows/release.yml",
+    "sha256": "24c37719dcd797c18c6b194fe39156a43f6465c7e288d2839f4a9e2b7ba2131f"
+  },
+  "coverage": {
+    "stepConditions": "not-inspected",
+    "outputs": "not-inspected",
+    "reusableWorkflows": "not-inspected",
+    "execution": "not-run"
+  },
+  "jobs": [
+    {
+      "id": "quality",
+      "needs": [],
+      "condition": {
+        "availability": "verified-absent"
+      },
+      "matrix": {
+        "kind": "literal",
+        "axes": {
+          "node": [
+            20,
+            22,
+            24
+          ]
+        },
+        "modifiers": []
+      },
+      "sourceLines": [
+        13,
+        29
+      ]
+    },
+    {
+      "id": "package",
+      "needs": [
+        "missing-job"
+      ],
+      "condition": {
+        "availability": "verified-absent"
+      },
+      "matrix": {
+        "kind": "none"
+      },
+      "sourceLines": [
+        31,
+        44
+      ]
+    },
+    {
+      "id": "publish",
+      "needs": [
+        "package"
+      ],
+      "condition": {
+        "availability": "provided",
+        "raw": "github.event_name == 'push' && github.ref == 'refs/heads/main'"
+      },
+      "matrix": {
+        "kind": "none"
+      },
+      "sourceLines": [
+        46,
+        54
+      ]
+    }
+  ]
+}

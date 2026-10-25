@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "status": "pass",
+  "quality": "showcase",
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReview": "not-requested",
+  "kind": "portable-summary-not-original-receipt",
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "node": "22.23.3",
+  "recordedAt": "2026-10-25",
+  "command": "node archify/bin/archify.mjs finalize explainer experiments/ci-conditions/evidence/conditions.archify.md experiments/ci-conditions/evidence/conditions.html --browser-check --json",
+  "note": "Transcription of actual finalize stdout; personal paths omitted. Original receipts retained outside checkout.",
+  "specification": {
+    "sha256": "f705f25491968801df9c6c656600a1667bc56cc5da335056ba31a8b11e535e77",
+    "bytes": 3680
+  },
+  "artifact": {
+    "sha256": "7c0121c8d17c51cb0fd075eae151b9e7afaa5d42b3ae0fc6efacc34a34da1589",
+    "bytes": 495036
+  },
+  "revisionNote": "Compact conditions/matrix overview; non-string ID and unsafe integer matrix products rejected."
+}

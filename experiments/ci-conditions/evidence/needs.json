@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Release CI conditions",
+    "subtitle": "Declared needs only · conditions not evaluated · run outcome unknown",
+    "output": "needs.html"
+  },
+  "layout": {
+    "mode": "grid",
+    "cols": 3,
+    "cellW": 160,
+    "cellH": 80,
+    "gapX": 100,
+    "gapY": 80
+  },
+  "components": [
+    {
+      "id": "quality",
+      "type": "backend",
+      "label": "quality",
+      "col": 0,
+      "row": 0
+    },
+    {
+      "id": "package",
+      "type": "backend",
+      "label": "package",
+      "col": 1,
+      "row": 0
+    },
+    {
+      "id": "publish",
+      "type": "backend",
+      "label": "publish",
+      "col": 2,
+      "row": 0
+    }
+  ],
+  "connections": [
+    {
+      "from": "quality",
+      "to": "package",
+      "label": "needs"
+    },
+    {
+      "from": "package",
+      "to": "publish",
+      "label": "needs"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "slate",
+      "title": "Scope",
+      "items": [
+        "Arrows mean declared needs; no job is shown as ran, skipped or successful.",
+        "Missing if is not unconditional: implicit status gates still apply.",
+        "Snapshot class: upstream-source. Step conditions, outputs and reusable-workflow internals not inspected."
+      ]
+    }
+  ]
+}

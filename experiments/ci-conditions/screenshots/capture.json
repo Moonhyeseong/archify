@@ -1,0 +1,82 @@
+{
+  "kind": "agent-browser-screenshot-summary",
+  "capturedAt": "2026-10-25T05:03:41.531313+00:00",
+  "method": "Actual Ego Lite browser screenshots; no compositing or image generation",
+  "images": [
+    {
+      "source": "../evidence/conditions.html",
+      "sourceSha256": "7c0121c8d17c51cb0fd075eae151b9e7afaa5d42b3ae0fc6efacc34a34da1589",
+      "image": "overview.png",
+      "imageSha256": "8607552aeed90d4ec3f880951124cf8391f1b610ee741d8f70b43c7cb07c641b",
+      "imagePixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "viewportCssPixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "deviceScaleFactor": 1,
+      "theme": "light",
+      "preset": "Clean",
+      "fullPage": false
+    },
+    {
+      "source": "../unknown-evidence/conditions.html",
+      "sourceSha256": "bfd8bfde771f8da82a7da9de83c658bc38269348b9067dd7101f4d9a30ffab63",
+      "image": "unknown-overview.png",
+      "imageSha256": "b7b29d6c80c72ec97e83abf7ab7714a9dcc97b514882c84369ea4d32b3fc044e",
+      "imagePixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "viewportCssPixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "deviceScaleFactor": 1,
+      "theme": "light",
+      "preset": "Clean",
+      "fullPage": false
+    },
+    {
+      "source": "../evidence/conditions.html",
+      "sourceSha256": "7c0121c8d17c51cb0fd075eae151b9e7afaa5d42b3ae0fc6efacc34a34da1589",
+      "image": "conditions.png",
+      "imageSha256": "b6527fb14837a1f6d570e0c63a6babbd2f2643140035b0b521c1f4d3c0359f69",
+      "imagePixels": {
+        "width": 1440,
+        "height": 3324
+      },
+      "viewportCssPixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "deviceScaleFactor": 1,
+      "theme": "light",
+      "preset": "Clean",
+      "fullPage": true
+    },
+    {
+      "source": "../unknown-evidence/conditions.html",
+      "sourceSha256": "bfd8bfde771f8da82a7da9de83c658bc38269348b9067dd7101f4d9a30ffab63",
+      "image": "unknown.png",
+      "imageSha256": "e70b1c4281d56b7271e92c8cc4183b6222749de5006e891768310972e0559ded",
+      "imagePixels": {
+        "width": 1440,
+        "height": 3395
+      },
+      "viewportCssPixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "deviceScaleFactor": 1,
+      "theme": "light",
+      "preset": "Clean",
+      "fullPage": true
+    }
+  ],
+  "agentVisualReview": "The overview shows all three jobs, raw if/availability, implicit status gates and declared matrix counts beside the needs graph. The synthetic variant visibly retains unavailable conditions and dynamic matrix counts as unknown. Full-page evidence retains the exact source values. No workflow or expression was executed.",
+  "humanAcceptance": "pending",
+  "limits": "Image review is separate from automated browser gates, upstream execution and human acceptance."
+}

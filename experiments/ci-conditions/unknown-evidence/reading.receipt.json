@@ -1,0 +1,88 @@
+{
+  "kind": "ci-conditions-reading",
+  "inputSha256": "de42a0b8468c07713f815e3a7b592a769d90abdd6ecf20deac687073ccfa3046",
+  "source": {
+    "classification": "synthetic",
+    "url": "https://github.com/feruzkarimovv/gha-graph/blob/d3f156ec59279f134dff38c333f476e177706f9b/examples/realistic-release/.github/workflows/release.yml",
+    "commit": "d3f156ec59279f134dff38c333f476e177706f9b",
+    "path": "examples/realistic-release/.github/workflows/release.yml",
+    "sha256": "24c37719dcd797c18c6b194fe39156a43f6465c7e288d2839f4a9e2b7ba2131f"
+  },
+  "coverage": {
+    "stepConditions": "not-inspected",
+    "outputs": "not-inspected",
+    "reusableWorkflows": "not-inspected",
+    "execution": "not-run"
+  },
+  "jobs": [
+    {
+      "id": "quality",
+      "needs": [],
+      "condition": {
+        "availability": "verified-absent"
+      },
+      "statusGate": "implicit success(): no explicit if in supplied source snapshot",
+      "matrix": {
+        "kind": "literal",
+        "axes": {
+          "node": [
+            20,
+            22,
+            24
+          ]
+        },
+        "modifiers": [],
+        "combinations": 3,
+        "meaning": "declared axis product only; no observed executions"
+      },
+      "sourceLines": [
+        13,
+        29
+      ],
+      "runOutcome": "unknown: no run data"
+    },
+    {
+      "id": "package",
+      "needs": [
+        "quality"
+      ],
+      "condition": {
+        "availability": "unavailable"
+      },
+      "statusGate": "unknown: source condition unavailable; not unconditional",
+      "matrix": {
+        "kind": "dynamic",
+        "raw": "${{ fromJSON(needs.quality.outputs.matrix) }}",
+        "combinations": null,
+        "meaning": "unknown; expression preserved and not expanded"
+      },
+      "sourceLines": [
+        31,
+        44
+      ],
+      "runOutcome": "unknown: no run data"
+    },
+    {
+      "id": "publish",
+      "needs": [
+        "package"
+      ],
+      "condition": {
+        "availability": "provided",
+        "raw": "contains(github.event.head_commit.message, 'always()')"
+      },
+      "statusGate": "unknown: status-function analysis outside supported syntax; supplied if not evaluated",
+      "matrix": {
+        "kind": "none",
+        "meaning": "no matrix declared in snapshot; one job definition, not one observed run"
+      },
+      "sourceLines": [
+        46,
+        54
+      ],
+      "runOutcome": "unknown: no run data"
+    }
+  ],
+  "expressionEvaluation": "not-performed",
+  "runConclusions": "unavailable"
+}

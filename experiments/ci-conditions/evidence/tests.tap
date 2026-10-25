@@ -1,0 +1,70 @@
+TAP version 13
+# Subtest: real fixed source and curated snapshot agree on identities, ranges, needs and exact if
+ok 1 - real fixed source and curated snapshot agree on identities, ranges, needs and exact if
+  ---
+  duration_ms: 2.988958
+  type: 'test'
+  ...
+# Subtest: missing if means default success only when source absence is explicit, never unconditional
+ok 2 - missing if means default success only when source absence is explicit, never unconditional
+  ---
+  duration_ms: 0.57075
+  type: 'test'
+  ...
+# Subtest: dynamic matrices and include/exclude stay unknown rather than zero or invented combinations
+ok 3 - dynamic matrices and include/exclude stay unknown rather than zero or invented combinations
+  ---
+  duration_ms: 0.06575
+  type: 'test'
+  ...
+# Subtest: missing needs, cycles, duplicate ids and absent coverage cannot become a successful DAG
+ok 4 - missing needs, cycles, duplicate ids and absent coverage cannot become a successful DAG
+  ---
+  duration_ms: 0.477417
+  type: 'test'
+  ...
+# Subtest: dangerous literals remain JSON snippets and are never evaluated or used as commands
+ok 5 - dangerous literals remain JSON snippets and are never evaluated or used as commands
+  ---
+  duration_ms: 707.122
+  type: 'test'
+  ...
+# Subtest: fresh exclusive bundles preserve real directory and symlink victims; later conflict only cleans owned files
+ok 6 - fresh exclusive bundles preserve real directory and symlink victims; later conflict only cleans owned files
+  ---
+  duration_ms: 6.713958
+  type: 'test'
+  ...
+# Subtest: CLI fails missing dependency without creating an output directory
+ok 7 - CLI fails missing dependency without creating an output directory
+  ---
+  duration_ms: 54.367083
+  type: 'test'
+  ...
+# Subtest: job IDs reject absent, null and boolean values instead of JS regex coercion
+ok 8 - job IDs reject absent, null and boolean values instead of JS regex coercion
+  ---
+  duration_ms: 0.30525
+  type: 'test'
+  ...
+# Subtest: matrix counts never return rounded integers beyond the safe exact limit
+ok 9 - matrix counts never return rounded integers beyond the safe exact limit
+  ---
+  duration_ms: 0.303333
+  type: 'test'
+  ...
+# Subtest: overview exposes condition availability and matrix counts without interpreting raw literals
+ok 10 - overview exposes condition availability and matrix counts without interpreting raw literals
+  ---
+  duration_ms: 0.420417
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 839.677167
