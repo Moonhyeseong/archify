@@ -1,0 +1,66 @@
+{
+  "kind": "derived root real-browser capture binding",
+  "pathBase": "experiments/finder-context/refresh-dev-10b4",
+  "input": {
+    "path": "../input.waterfall.json",
+    "sha256": "77d610013a5aab031df739c207b66ebc26e1740371b51da06956ecf06b5e9929",
+    "bytes": 4617
+  },
+  "artifacts": [
+    {
+      "path": "base.html",
+      "sha256": "713657486fdc26480ebb30df1676a763a55c76d19ef0c924db7e58a11781bb8d",
+      "bytes": 892564
+    },
+    {
+      "path": "candidate.html",
+      "sha256": "ff5e8b82be3ad26d996ab56409cfa7505ed1b7a840bae5b040bd11bd7731e11d",
+      "bytes": 892744
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "screenshots/base-finder.png",
+      "artifact": "base.html",
+      "sha256": "b3c4ab0de63a05268f1e467d03d5b2d445cef08a1989a6f742f6eff5d88c021e",
+      "bytes": 182864,
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "rootViewed": true,
+      "capturedBy": "root"
+    },
+    {
+      "path": "screenshots/candidate-finder.png",
+      "artifact": "candidate.html",
+      "sha256": "0d81e2c6dc9ea25898f71610fbe4d859fccb879c775bb7905ad5b1e70ec06ddd",
+      "bytes": 182852,
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "rootViewed": true,
+      "capturedBy": "root"
+    },
+    {
+      "path": "screenshots/keyboard-selection.png",
+      "artifact": "candidate.html",
+      "sha256": "229965a94cfd4724f019fd9f4569f5a3fdfdbb45c03f76b6620cea77c770e9c0",
+      "bytes": 187990,
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "rootViewed": true,
+      "capturedBy": "root"
+    }
+  ],
+  "rootObserved": "1440×1000, light, Classic, Still; query check-render-output.mjs, 8 same-named buttons; actual AX distinguishes descriptions. ArrowDown twice and Enter selects ex1_check.",
+  "limits": "PNG shows UI, not speech. Actual AX/keyboard observations do not establish VoiceOver/NVDA, cross-AT, physical device, human acceptance or task speed.",
+  "rootObservations": {
+    "path": "root-observations.json",
+    "sha256": "46dda453cca146c4630125cf86c4a53f1aff046b1c8509fbee901f4b51a0275d",
+    "bytes": 10891
+  }
+}

@@ -63,3 +63,8 @@ Required regeneration is limited to the shared Viewer template, 15 development a
 The test-value check protects observable description associations and selection rather than freezing particular generated ID strings or coordinates. A separate accessibility graph, copied context state or custom announcement system would add maintenance without evidence of benefit for this gap.
 
 AI assistance: Codex researched, implemented, independently reviewed and captured this experiment. The browser and code evidence are agent checks; human and cross-AT acceptance remain unverified.
+
+
+## 合入dev10b4后的同输入刷新
+
+旧base/candidate、输入、截图与原证据继续保留原82c7/5b770身份。最新[refresh-dev-10b4](refresh-dev-10b4/README.md)按固定dev10b4正常merge后重建同一完整input，两页和解包CLI四gate均pass；26focused/19core及完整generated通过，31规定HTML正常再生。root新三图及真实8行AX描述/键盘选择均独立绑定，不用新软件身份覆盖旧结果。完整失败尝试、未刷新manual/gallery/docs边界及当前未提交merge身份见新摘要。

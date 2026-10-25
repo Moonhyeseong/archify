@@ -1,0 +1,616 @@
+{
+  "kind": "derived-portable-evidence-summary",
+  "scope": "Existing Finder metadata descriptions only; merge refreshed to fixed dev, no added product capability or live installation. Raw originals remain outside checkout; this selected summary is not an unmodified receipt.",
+  "revision": {
+    "historicalHead": "5b7701c170dabf5d204f3d220ebdb9d39fe178d2",
+    "mergedDev": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+    "identity": "Uncommitted merge: HEAD historicalHead, MERGE_HEAD mergedDev. Source/template/ZIP/HTML bytes identify current candidate, not a committed or pushed new revision.",
+    "conflicts": [
+      "archify.zip",
+      "docs/gallery.html",
+      "docs/gallery/manifest.json",
+      "examples/checkout-platform-delta.receipt.json"
+    ],
+    "resolution": "Preserve dev tracked generated products first, then normally regenerate canonical checked examples/template and rebuild ZIP."
+  },
+  "software": {
+    "version": "3.2.1-dev.1",
+    "license": "Apache-2.0 with historical MIT/NOTICE preserved",
+    "node": "22.23.2",
+    "zlib": "1.3.1-e00f703"
+  },
+  "input": {
+    "path": "../input.waterfall.json",
+    "sha256": "77d610013a5aab031df739c207b66ebc26e1740371b51da06956ecf06b5e9929",
+    "bytes": 4617,
+    "meaning": "Complete unchanged prior measured repository example; no new measurement of that workload."
+  },
+  "sourceFiles": {
+    "viewer/node-finder.js": {
+      "sha256": "eabb491f82c222a1d9b54de1ed1f311b60b8de90244632e6b3ec476ed32ee4de",
+      "bytes": 12721
+    },
+    "test/finder-browser.test.mjs": {
+      "sha256": "48fd767c0f77b4b3bd38d53517f194f6022f8edece34f6df3306342c9516b883",
+      "bytes": 28173
+    },
+    "archify/assets/template.html": {
+      "sha256": "49e94708d7af9e3719f711b530fcc748947ecb7024a672cdf17af78b49c211c5",
+      "bytes": 816030
+    },
+    "archify/LICENSE": {
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    "archify/LICENSE-MIT": {
+      "sha256": "b799ab081703e7821ae5096d2c1abdf14bbdc75e8ea1c4045998c36ed6db9706",
+      "bytes": 1102
+    },
+    "archify/NOTICE": {
+      "sha256": "4c88357b600f24214bd6d12ee70e37d66a160c6069bba2aec2d35486f6ff1a3a",
+      "bytes": 1340
+    },
+    "archify/THIRD_PARTY_NOTICES.md": {
+      "sha256": "afe000ec995a2025368ab0017f7f9417df682724970c824ff8f4af5cfac0e9a4",
+      "bytes": 5967
+    }
+  },
+  "sourceDiff": "viewer/node-finder.js: callback index + metadata id/aria-describedby only; test adds existing description regression. No name/text/context/selection/schema/locale/runtime model changes.",
+  "comparison": {
+    "sameCompleteHtmlOutsideFinderPatch": true,
+    "sameNativeSvg": true,
+    "inputPreserved": true,
+    "all31RequiredHtmlOutsideFinderPatchMatchDev": true
+  },
+  "finalize": {
+    "base": {
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "diagnosticSummary": {
+        "total": 0,
+        "shown": 0,
+        "truncated": false
+      },
+      "artifact": {
+        "sha256": "713657486fdc26480ebb30df1676a763a55c76d19ef0c924db7e58a11781bb8d",
+        "bytes": 892564
+      },
+      "rawStdout": {
+        "sha256": "53b62c41e2574f7da5958b7b2be2e8e59943fbcd623728b236bd60128ff585ba",
+        "bytes": 1344
+      }
+    },
+    "candidate": {
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "diagnosticSummary": {
+        "total": 0,
+        "shown": 0,
+        "truncated": false
+      },
+      "artifact": {
+        "sha256": "ff5e8b82be3ad26d996ab56409cfa7505ed1b7a840bae5b040bd11bd7731e11d",
+        "bytes": 892744
+      },
+      "rawStdout": {
+        "sha256": "a6d4918474bb05550aa59077b98d0c886d164f3e5744c7206115ad00c0bb3636",
+        "bytes": 1371
+      }
+    },
+    "package": {
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "diagnosticSummary": {
+        "total": 0,
+        "shown": 0,
+        "truncated": false
+      },
+      "artifact": {
+        "sha256": "ff5e8b82be3ad26d996ab56409cfa7505ed1b7a840bae5b040bd11bd7731e11d",
+        "bytes": 892744
+      },
+      "rawStdout": {
+        "sha256": "0f74612a9b9af4cdaadfe0687a9e98e3026973066e97e8db24d0c871996d358c",
+        "bytes": 1325
+      }
+    }
+  },
+  "tests": {
+    "focused": {
+      "files": [
+        "test/finder-browser.test.mjs",
+        "test/focus-browser.test.mjs"
+      ],
+      "passed": 26,
+      "failed": 0,
+      "skipped": 0
+    },
+    "core": {
+      "passed": 19,
+      "failed": 0,
+      "skipped": 0
+    },
+    "generated": {
+      "status": "pass",
+      "command": "npm run test:generated",
+      "includes": "4 checks and test/golden.mjs; 15 pairs canonical examples + web-app script freshness",
+      "initialStatus": "31 stale failures preserved; normal renderer generation and rerun pass",
+      "manualFreshnessNotCovered": true
+    },
+    "reuse": "Focused/core ran on the unchanged final Viewer source and tests; subsequent edits only regenerated canonical artifacts and experiment evidence."
+  },
+  "package": {
+    "sha256": "0b58e7fbaa96f66a1bba938ced3f11c2bb8003790e18a1061e5eb0038173f380",
+    "bytes": 6988188,
+    "members": 235,
+    "twoCanonicalBuildsByteIdentical": true,
+    "allMembersCrcPass": true,
+    "templateExactToSource": true,
+    "unpackedFinalizeFourGatesPass": true,
+    "unpackedHtmlExactToCandidate": true,
+    "canonicalManifestCleanup": "scripts/devDependencies removed by canonical stage; no manual ZIP editing."
+  },
+  "actualAccessibility": {
+    "base": {
+      "sameNamedButtons": 8,
+      "descriptionsAbsent": 8
+    },
+    "candidate": {
+      "sameNamedButtons": 8,
+      "distinctDescriptionsEqualOwnVisibleMetadata": 8
+    },
+    "unchangedNames": true,
+    "keyboard": "Author final probe + independent root: ArrowDown twice then Enter selects ex1_check; Passport worker 2 context preserved.",
+    "limits": "Actual Chromium AX and keyboard, not VoiceOver/NVDA/speech/cross-AT/device/user benefit acceptance."
+  },
+  "attempts": {
+    "zipGuard": "Homebrew Node22.23.3/zlib1.2.12 rejected; raw kept, official Node22 used without changing guard.",
+    "generated": "Initial 31 stale results were not hidden; 31 canonical HTML normally re-rendered, complete command passed.",
+    "authorProbe": "Two initial keyDown/up-only Enter probes selected null. Sources/stdout/stderr kept; final Enter includes CDP text, navigation ex0/ex1 and selection pass for both base/candidate. No product keyboard code changed.",
+    "rootCapture": "Independent root capture has no author probe failures or inherited historical selector miss."
+  },
+  "historicalFilesUnchanged": {
+    "base.html": {
+      "sha256": "4dc89cfefc54305319f42db08c7f89a40db7f844e311510bb711ab6e3f5eb149",
+      "bytes": 846959
+    },
+    "input.waterfall.json": {
+      "sha256": "77d610013a5aab031df739c207b66ebc26e1740371b51da06956ecf06b5e9929",
+      "bytes": 4617
+    },
+    "candidate.html": {
+      "sha256": "01818f5c1d96e1d1ac3bbce79999df1938ae3dd1997daceddc125dfa078fe5bf",
+      "bytes": 847139
+    },
+    "screenshots/capture.json": {
+      "sha256": "2cb069229df72d44d58092ae53dff2a9c58a00ab8559d9efebad267640a0bada",
+      "bytes": 2577
+    },
+    "screenshots/keyboard-selection.png": {
+      "sha256": "d661dbf78408f6ff7d278512ea79b268069a115f3507dae992280843b0c3306b",
+      "bytes": 188034
+    },
+    "screenshots/base-finder.png": {
+      "sha256": "2a833540284d277b0ebc10acf452799117f85dcfdc2f688cb832e69c36c59303",
+      "bytes": 183146
+    },
+    "screenshots/candidate-ax.json": {
+      "sha256": "c96bc0abdf7d98c4920ee4a5e7599439587b62efb4bc7407dba93c584473160c",
+      "bytes": 4676
+    },
+    "screenshots/base-ax.json": {
+      "sha256": "61ab5b2edc98d117fd8f01cc86cd7d2aec3bee9fe9c8df11dcd4e39717c8ecc9",
+      "bytes": 3619
+    },
+    "screenshots/keyboard-selection.json": {
+      "sha256": "7e357a5f5dd1d3cd21c6f1846a7fb70a541be3386e0b2324b088546dd8d0ec3f",
+      "bytes": 1126
+    },
+    "screenshots/candidate-finder.png": {
+      "sha256": "4412671f8e86472937e6f512c2e9381611876fa1c18f0454dccdd8c76aa1cb84",
+      "bytes": 182866
+    },
+    "evidence/checks-summary.json": {
+      "sha256": "ad6cacaed074f6dc910ac1d10d08dfffeeabe180ed5c0e7731af90cd1a61c77b",
+      "bytes": 1846
+    },
+    "evidence/zip-summary.json": {
+      "sha256": "16293f5153df943a749815d18e882395740ecf713eaf9166757b1d91f5747af9",
+      "bytes": 428
+    },
+    "evidence/candidate.portable-summary.json": {
+      "sha256": "238851c1dd02a3e97518317f52971da72eadc5f9f11277ccce31a4e916d0155e",
+      "bytes": 925
+    },
+    "evidence/binding-summary.json": {
+      "sha256": "bf8535e92bf9abd5e76d1b9e9f7aaaa333e23c572b8589eb902b5c32d7382c60",
+      "bytes": 946
+    }
+  },
+  "historicalReadmeOriginal": {
+    "sha256": "26036c4dfdee2ff332b09036ce8f6dc66f0c4592c00a4c3d496d4882eae024b0",
+    "bytes": 7619
+  },
+  "parentReadmeAppendedOnly": {
+    "path": "../README.md",
+    "sha256": "27cf28271645684a7afe98c724b0fff27000e4a23fada1ecbed17ec14003af4c",
+    "bytes": 8158
+  },
+  "regeneratedProducts": {
+    "archify/examples/class-payment-processors-rendered.html": {
+      "sha256": "ad5b4cb8bb037876ac72f2af6ef2c244a03f5d28f428fc0d60ba90bcbfba86d7",
+      "bytes": 904576
+    },
+    "archify/examples/class-payments-rendered.html": {
+      "sha256": "39a0e5c70a9e72a5b3216e4e8ee71b37b16e170591dac9b9370f0dfbb64dc720",
+      "bytes": 870315
+    },
+    "archify/examples/dataflow-product-analytics.html": {
+      "sha256": "c26d1718f7672ad6dc4661d7c8dd7aba3259f3cd52d80cd7f3c1318addd83b2d",
+      "bytes": 873395
+    },
+    "archify/examples/erd-orders-rendered.html": {
+      "sha256": "5fd74c66a2aadd8281ed9d68a501888c6a11367b743a9a26e59594da717b7e19",
+      "bytes": 890799
+    },
+    "archify/examples/lifecycle-agent-run.html": {
+      "sha256": "4a010737d1c76c300f297be555527de0cbf527564196862c6611f94b8d86e984",
+      "bytes": 877203
+    },
+    "archify/examples/sequence-cache-miss-request.html": {
+      "sha256": "40726357434465449fe3026da550f9caf1fc4fc2f25390c0bf6a352a9c40454a",
+      "bytes": 871108
+    },
+    "archify/examples/subscription-billing-rendered.html": {
+      "sha256": "52a0460e768f77a4becd7c7a95afc298fe53751130a2c38d355c599f4be464f9",
+      "bytes": 913752
+    },
+    "archify/examples/timeline-archify-dev-activity-rendered.html": {
+      "sha256": "b6276b33a6152b995d4d46a49597bccb41b0f719e30fc36340ef8015c8d1a85c",
+      "bytes": 896050
+    },
+    "archify/examples/timeline-payment-incident-rendered.html": {
+      "sha256": "4ada8f8f0f2b06815345c3d53c8fca6acffd2a4a6df7c9a813ae6396f8d7eec6",
+      "bytes": 863637
+    },
+    "archify/examples/tree-archify-repository-rendered.html": {
+      "sha256": "c45d01bbe9d06fcd1011ad5124ce55d837b2ede5aab96857e4ae6f983d8e2b96",
+      "bytes": 906900
+    },
+    "archify/examples/tree-payment-platform-rendered.html": {
+      "sha256": "e37db846b08700561b6a1a9662eada30bf26a14bb47a4982b2f4f70fc239563e",
+      "bytes": 869259
+    },
+    "archify/examples/waterfall-checkout-request-rendered.html": {
+      "sha256": "d3a6b4e4909bc73bf79a76cadf44c299c30a522647e815966f3d56e728861723",
+      "bytes": 862926
+    },
+    "archify/examples/waterfall-example-rebuild-rendered.html": {
+      "sha256": "ff5e8b82be3ad26d996ab56409cfa7505ed1b7a840bae5b040bd11bd7731e11d",
+      "bytes": 892744
+    },
+    "archify/examples/web-app-rendered.html": {
+      "sha256": "1bf998c33d58661f47ff41c289a316fa14ab75d5c9a42593e08c8d5ed381190d",
+      "bytes": 875737
+    },
+    "archify/examples/workflow-agent-tool-call-rendered.html": {
+      "sha256": "67cea20cdcc656417882cf89f1c19d0236e1ea6c4010a1820416dd00c125d5ac",
+      "bytes": 880820
+    },
+    "examples/class-payment-processors-rendered.html": {
+      "sha256": "ad5b4cb8bb037876ac72f2af6ef2c244a03f5d28f428fc0d60ba90bcbfba86d7",
+      "bytes": 904576
+    },
+    "examples/class-payments-rendered.html": {
+      "sha256": "39a0e5c70a9e72a5b3216e4e8ee71b37b16e170591dac9b9370f0dfbb64dc720",
+      "bytes": 870315
+    },
+    "examples/dataflow-product-analytics.html": {
+      "sha256": "c26d1718f7672ad6dc4661d7c8dd7aba3259f3cd52d80cd7f3c1318addd83b2d",
+      "bytes": 873395
+    },
+    "examples/erd-orders-rendered.html": {
+      "sha256": "5fd74c66a2aadd8281ed9d68a501888c6a11367b743a9a26e59594da717b7e19",
+      "bytes": 890799
+    },
+    "examples/lifecycle-agent-run.html": {
+      "sha256": "4a010737d1c76c300f297be555527de0cbf527564196862c6611f94b8d86e984",
+      "bytes": 877203
+    },
+    "examples/sequence-cache-miss-request.html": {
+      "sha256": "40726357434465449fe3026da550f9caf1fc4fc2f25390c0bf6a352a9c40454a",
+      "bytes": 871108
+    },
+    "examples/subscription-billing-rendered.html": {
+      "sha256": "52a0460e768f77a4becd7c7a95afc298fe53751130a2c38d355c599f4be464f9",
+      "bytes": 913752
+    },
+    "examples/timeline-archify-dev-activity-rendered.html": {
+      "sha256": "b6276b33a6152b995d4d46a49597bccb41b0f719e30fc36340ef8015c8d1a85c",
+      "bytes": 896050
+    },
+    "examples/timeline-payment-incident-rendered.html": {
+      "sha256": "4ada8f8f0f2b06815345c3d53c8fca6acffd2a4a6df7c9a813ae6396f8d7eec6",
+      "bytes": 863637
+    },
+    "examples/tree-archify-repository-rendered.html": {
+      "sha256": "c45d01bbe9d06fcd1011ad5124ce55d837b2ede5aab96857e4ae6f983d8e2b96",
+      "bytes": 906900
+    },
+    "examples/tree-payment-platform-rendered.html": {
+      "sha256": "e37db846b08700561b6a1a9662eada30bf26a14bb47a4982b2f4f70fc239563e",
+      "bytes": 869259
+    },
+    "examples/waterfall-checkout-request-rendered.html": {
+      "sha256": "d3a6b4e4909bc73bf79a76cadf44c299c30a522647e815966f3d56e728861723",
+      "bytes": 862926
+    },
+    "examples/waterfall-example-rebuild-rendered.html": {
+      "sha256": "ff5e8b82be3ad26d996ab56409cfa7505ed1b7a840bae5b040bd11bd7731e11d",
+      "bytes": 892744
+    },
+    "examples/web-app-rendered.html": {
+      "sha256": "1bf998c33d58661f47ff41c289a316fa14ab75d5c9a42593e08c8d5ed381190d",
+      "bytes": 875737
+    },
+    "examples/web-app.html": {
+      "sha256": "1bf998c33d58661f47ff41c289a316fa14ab75d5c9a42593e08c8d5ed381190d",
+      "bytes": 875737
+    },
+    "examples/workflow-agent-tool-call-rendered.html": {
+      "sha256": "67cea20cdcc656417882cf89f1c19d0236e1ea6c4010a1820416dd00c125d5ac",
+      "bytes": 880820
+    }
+  },
+  "manualTrackedProductsPreserved": {
+    "docs/cases/explainer/finalize-delivery.html": {
+      "sha256": "f5e8b38535039ffced65502d87534019909c31c43fac86425351804f10aeced6",
+      "bytes": 533315
+    },
+    "docs/cases/explainer/first-rental.html": {
+      "sha256": "62e6aecbcb5f5ec62f65c375e6e47c8e71355558eedeefbb825aecd9bdaa5206",
+      "bytes": 517908
+    },
+    "docs/cases/explainer/p99-tail-latency.html": {
+      "sha256": "f2657385d7c4971975726ce56e14cb62ac0f97e5ebed72dc05b0a15dc07ee0cb",
+      "bytes": 516430
+    },
+    "docs/cases/explainer/tls-first-visit.html": {
+      "sha256": "dbd57bee0bb12ed83df184fb11c425155d968c711e9f0a07ddd47c7dd254eff1",
+      "bytes": 518147
+    },
+    "docs/gallery.html": {
+      "sha256": "b5cd66b034b9249747cad3d29be007959000996eff5982a1fb4ef9e2306230f6",
+      "bytes": 145477
+    },
+    "docs/gallery/manifest.json": {
+      "sha256": "21c7003463567606ea1d7c0c02148b55f5254194b4b90083f095d88177b601c9",
+      "bytes": 64482
+    },
+    "examples/checkout-platform-delta.html": {
+      "sha256": "089761b59f8215901ebb2dbb46e82f9bf8ecce0458160c5eec43374e915882f8",
+      "bytes": 2429667
+    },
+    "examples/checkout-platform-delta.receipt.json": {
+      "sha256": "120f6a57029fd2109052ddca7cdf82b9b1b460ab8d17b08534d616bbbeb2735c",
+      "bytes": 5291
+    }
+  },
+  "manualBoundary": "Preserved against 10b tracked bytes, not claimed freshly generated; gallery/manual/four docs-case freshness is not covered by the passing canonical check.",
+  "privateRawFiles": {
+    "probe-first-source.mjs": {
+      "sha256": "169b1679acb312b2a70eca6b315bcc4d49d441eda77a928f744d299c3d02f7ae",
+      "bytes": 4322
+    },
+    "base-stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "accessibility-stdout.json": {
+      "sha256": "ebe948b3ba25ae9ca11b06e9886be24c9c692d9904aafbb9ab2bf6ebe96f9582",
+      "bytes": 8076
+    },
+    "initial-accessibility-stderr.txt": {
+      "sha256": "707ba9998e75851445718e55b833e609fdac35961db35818548c75f38420e612",
+      "bytes": 575
+    },
+    "base-stdout.json": {
+      "sha256": "53b62c41e2574f7da5958b7b2be2e8e59943fbcd623728b236bd60128ff585ba",
+      "bytes": 1344
+    },
+    "render-web-app.log": {
+      "sha256": "50b789dbe80e072ce9d39cd5c365621100fe988aadc04d666066ed8afe4141f1",
+      "bytes": 83
+    },
+    "candidate-stdout.json": {
+      "sha256": "a6d4918474bb05550aa59077b98d0c886d164f3e5744c7206115ad00c0bb3636",
+      "bytes": 1371
+    },
+    "focused.tap": {
+      "sha256": "ee31c2172f6441c2ec3e9d49db44939cc2a4334baa4b455a3579431c2757c8bc",
+      "bytes": 6650
+    },
+    "zip-first.log": {
+      "sha256": "e01ed4c223056a2ee65e0fb054a7c031ccb10a469541227d91a76097768cfaa2",
+      "bytes": 170
+    },
+    "before-generated-zip-first.log": {
+      "sha256": "e01ed4c223056a2ee65e0fb054a7c031ccb10a469541227d91a76097768cfaa2",
+      "bytes": 170
+    },
+    "historical-manifest.json": {
+      "sha256": "f970e30c85145f0e5eb35b5146f4ddb9b6ec1166dc8e4c32c3f7c4582e3bfb5b",
+      "bytes": 2083
+    },
+    "probe-second-source.mjs": {
+      "sha256": "36c5bec17716f5a8b4d78f8aa4eed868120b83a5fc2dc7dde204785bf29d2dc3",
+      "bytes": 4439
+    },
+    "package-stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "generated.log": {
+      "sha256": "ee4c27df0506412458b1cdcf7107c03312b190727c64e9fc3e98e5c38169094c",
+      "bytes": 4647
+    },
+    "second-accessibility-stderr.txt": {
+      "sha256": "8a7c1c5165bdf02ac297938f6e0e608ec4ff887b25919629f1a1f1c390bca91b",
+      "bytes": 575
+    },
+    "candidate-stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "package-stdout.json": {
+      "sha256": "0f74612a9b9af4cdaadfe0687a9e98e3026973066e97e8db24d0c871996d358c",
+      "bytes": 1325
+    },
+    "package-render.delivery.json": {
+      "sha256": "e7cbb1cbc2b169ba1f7416d922703d26106f15a353a8d9a9c66857aa888488bd",
+      "bytes": 610
+    },
+    "zip-second.log": {
+      "sha256": "e01ed4c223056a2ee65e0fb054a7c031ccb10a469541227d91a76097768cfaa2",
+      "bytes": 170
+    },
+    "accessibility-stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "initial-accessibility-stdout.json": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "initial-generated.log": {
+      "sha256": "2512784de29681b3ae9566fe0c90ed96dad585e4b8c665304a4437f1636fdb40",
+      "bytes": 8958
+    },
+    "zip-homebrew-rejected.log": {
+      "sha256": "3af1ec781404f41fa304fdb5bda9540e14b46edcb8927f1597533f8bc4af30b8",
+      "bytes": 232
+    },
+    "before-generated-zip-second.log": {
+      "sha256": "e01ed4c223056a2ee65e0fb054a7c031ccb10a469541227d91a76097768cfaa2",
+      "bytes": 170
+    },
+    "render-root-examples.log": {
+      "sha256": "e7dc9dcb6f32dc6d67ebf7a6f37a69f4bc01fb539d9741825c09589da93247e9",
+      "bytes": 1568
+    },
+    "render-package-examples.log": {
+      "sha256": "1b9c12dbed3b3946611a865ab36af204fbd61e00efb57cca315b80ab78582bac",
+      "bytes": 1688
+    },
+    "core.tap": {
+      "sha256": "71d99285610efe0f8a5f84b36c98e4aaf7d63005a651a1e992aed48c30476e13",
+      "bytes": 4430
+    },
+    "second-accessibility-stdout.json": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "base-receipts/base.finalize-summary.json": {
+      "sha256": "508b8c0c80376e36a183d7b3c6f4a58c2178f6305bd2901e89082c1c1becf582",
+      "bytes": 1586
+    },
+    "base-receipts/base.finalize.json": {
+      "sha256": "952d84020cb86b9b373e24635ff469dbbd866632e420a64bc21ac9edc9b8e5ae",
+      "bytes": 35208
+    },
+    "base-receipts/base.browser-check.json": {
+      "sha256": "6622995de2b864e328cf0079d8c3204a1a0def6b09f16a476c9f161364011b28",
+      "bytes": 21551
+    },
+    "candidate-receipts/candidate.finalize-summary.json": {
+      "sha256": "02f488c02713e628af991e3b2190838c43077959093522c9b2d60a41feec80c0",
+      "bytes": 1613
+    },
+    "candidate-receipts/candidate.finalize.json": {
+      "sha256": "325ebbe8c52788bcecd28183d158878a2f0ed932a0f2ee4a23b388b2749f31af",
+      "bytes": 35229
+    },
+    "candidate-receipts/candidate.browser-check.json": {
+      "sha256": "e368b0db0287c355d3a727223bd00ddbcdce29f074633e58bd1c8c236f093f84",
+      "bytes": 21562
+    },
+    "package-receipts/package-render.browser-check.json": {
+      "sha256": "21ba9d1cf75a234f6956c31c0a54d6c8ce10135cd51d536c18fa78a01f2ba802",
+      "bytes": 21510
+    },
+    "package-receipts/package-render.finalize.json": {
+      "sha256": "0ac8d81453d9a0b1edf45c5494ee02fb49cace542ec425eb76a7231357d3e5d6",
+      "bytes": 34831
+    },
+    "package-receipts/package-render.finalize-summary.json": {
+      "sha256": "07a122a90f46e78ae4f3465f606a803ca52c5f3f9ce4cc0d99edaecc22678eaa",
+      "bytes": 1567
+    },
+    "candidate.delivery.json": {
+      "sha256": "a2dc183ab36bbd59ce1161e39b37dc515d2008d12e21c8c7db3eea37c6c45ab1",
+      "bytes": 657
+    }
+  },
+  "publicFiles": {
+    "base.html": {
+      "sha256": "713657486fdc26480ebb30df1676a763a55c76d19ef0c924db7e58a11781bb8d",
+      "bytes": 892564
+    },
+    "root-observations.json": {
+      "sha256": "46dda453cca146c4630125cf86c4a53f1aff046b1c8509fbee901f4b51a0275d",
+      "bytes": 10891
+    },
+    "README.md": {
+      "sha256": "5d53c4ef93da3e37c507bc8b0d06827afc54f9655e69c98ea962ab8ef7aec632",
+      "bytes": 5841
+    },
+    "candidate.html": {
+      "sha256": "ff5e8b82be3ad26d996ab56409cfa7505ed1b7a840bae5b040bd11bd7731e11d",
+      "bytes": 892744
+    },
+    "ledger.md": {
+      "sha256": "c463ec28dc40226a1797632fd314e6c20e8acaba9fcd801be5f906fbbc77a74f",
+      "bytes": 1542
+    },
+    "check-accessibility.mjs": {
+      "sha256": "325d7f8b8fa21c16da188a03ce44314c36b748c2fcc61b1bf7c6441161285126",
+      "bytes": 4752
+    },
+    "screenshots/capture.json": {
+      "sha256": "c236be09a77fae6e51ae2c8550be4152d2a9bafe0f46b9b78b5a759fff481b59",
+      "bytes": 2094
+    },
+    "screenshots/keyboard-selection.png": {
+      "sha256": "229965a94cfd4724f019fd9f4569f5a3fdfdbb45c03f76b6620cea77c770e9c0",
+      "bytes": 187990
+    },
+    "screenshots/base-finder.png": {
+      "sha256": "b3c4ab0de63a05268f1e467d03d5b2d445cef08a1989a6f742f6eff5d88c021e",
+      "bytes": 182864
+    },
+    "screenshots/candidate-finder.png": {
+      "sha256": "0d81e2c6dc9ea25898f71610fbe4d859fccb879c775bb7905ad5b1e70ec06ddd",
+      "bytes": 182852
+    }
+  },
+  "screenshots": {
+    "capture": "screenshots/capture.json",
+    "rootViewed": true,
+    "imagesAreOriginalBytes": true,
+    "browserOperatedByAuthorInEgo": false
+  },
+  "ci": "No remote revision/CI result claimed for this uncommitted merge; local checks do not establish CI success.",
+  "deliveryReceiptBoundary": "Original candidate.delivery.json moved outside checkout unchanged because it contains private physical paths; portable artifact copies/summary do not claim current physical provenance."
+}

@@ -1,0 +1,262 @@
+{
+  "kind": "derived actual root Chromium AX/DOM/keyboard observations",
+  "projection": "Whitelist only capturedAt/viewport/buttons and DOM row id/name/describedby/metadata/descriptionTarget; omit full AX tree and browser/environment data. Raw originals remain outside checkout.",
+  "query": "check-render-output.mjs",
+  "runs": [
+    {
+      "name": "base",
+      "capturedAt": "2026-10-25T10:30:32.232Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "theme": "light",
+      "buttons": [
+        {
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "description": null,
+          "ignored": false
+        },
+        {
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "description": null,
+          "ignored": false
+        },
+        {
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "description": null,
+          "ignored": false
+        },
+        {
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "description": null,
+          "ignored": false
+        },
+        {
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "description": null,
+          "ignored": false
+        },
+        {
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "description": null,
+          "ignored": false
+        },
+        {
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "description": null,
+          "ignored": false
+        },
+        {
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "description": null,
+          "ignored": false
+        }
+      ],
+      "rows": [
+        {
+          "id": "ex0_check",
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "describedby": null,
+          "metadata": "Frontend · ex0_check · 263.3–429.7 ms · 166.4 ms · 13% of 1,286.2 ms wall-clock",
+          "descriptionTarget": null
+        },
+        {
+          "id": "ex1_check",
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "describedby": null,
+          "metadata": "Backend · ex1_check · 298.5–445.2 ms · 146.7 ms · 11% of 1,286.2 ms wall-clock",
+          "descriptionTarget": null
+        },
+        {
+          "id": "ex2_check",
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "describedby": null,
+          "metadata": "Database · ex2_check · 224.4–398.4 ms · 174 ms · 14% of 1,286.2 ms wall-clock",
+          "descriptionTarget": null
+        },
+        {
+          "id": "ex3_check",
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "describedby": null,
+          "metadata": "Database · ex3_check · 593.4–830.7 ms · 237.3 ms · 18% of 1,286.2 ms wall-clock",
+          "descriptionTarget": null
+        },
+        {
+          "id": "ex4_check",
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "describedby": null,
+          "metadata": "Frontend · ex4_check · 643.7–862.8 ms · 219.1 ms · 17% of 1,286.2 ms wall-clock",
+          "descriptionTarget": null
+        },
+        {
+          "id": "ex5_check",
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "describedby": null,
+          "metadata": "Backend · ex5_check · 645.9–868.3 ms · 222.4 ms · 17% of 1,286.2 ms wall-clock",
+          "descriptionTarget": null
+        },
+        {
+          "id": "ex6_check",
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "describedby": null,
+          "metadata": "Database · ex6_check · 1,022.2–1,231.3 ms · 209.1 ms · 16% of 1,286.2 ms wall-clock",
+          "descriptionTarget": null
+        },
+        {
+          "id": "ex7_check",
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "describedby": null,
+          "metadata": "Frontend · ex7_check · 1,082.5–1,286.2 ms · 203.7 ms · 16% of 1,286.2 ms wall-clock",
+          "descriptionTarget": null
+        }
+      ]
+    },
+    {
+      "name": "candidate",
+      "capturedAt": "2026-10-25T10:30:35.445Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "theme": "light",
+      "buttons": [
+        {
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "description": "Frontend · ex0_check · 263.3–429.7 ms · 166.4 ms · 13% of 1,286.2 ms wall-clock",
+          "ignored": false
+        },
+        {
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "description": "Backend · ex1_check · 298.5–445.2 ms · 146.7 ms · 11% of 1,286.2 ms wall-clock",
+          "ignored": false
+        },
+        {
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "description": "Database · ex2_check · 224.4–398.4 ms · 174 ms · 14% of 1,286.2 ms wall-clock",
+          "ignored": false
+        },
+        {
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "description": "Database · ex3_check · 593.4–830.7 ms · 237.3 ms · 18% of 1,286.2 ms wall-clock",
+          "ignored": false
+        },
+        {
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "description": "Frontend · ex4_check · 643.7–862.8 ms · 219.1 ms · 17% of 1,286.2 ms wall-clock",
+          "ignored": false
+        },
+        {
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "description": "Backend · ex5_check · 645.9–868.3 ms · 222.4 ms · 17% of 1,286.2 ms wall-clock",
+          "ignored": false
+        },
+        {
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "description": "Database · ex6_check · 1,022.2–1,231.3 ms · 209.1 ms · 16% of 1,286.2 ms wall-clock",
+          "ignored": false
+        },
+        {
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "description": "Frontend · ex7_check · 1,082.5–1,286.2 ms · 203.7 ms · 16% of 1,286.2 ms wall-clock",
+          "ignored": false
+        }
+      ],
+      "rows": [
+        {
+          "id": "ex0_check",
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "describedby": "node-finder-result-meta-0",
+          "metadata": "Frontend · ex0_check · 263.3–429.7 ms · 166.4 ms · 13% of 1,286.2 ms wall-clock",
+          "descriptionTarget": "Frontend · ex0_check · 263.3–429.7 ms · 166.4 ms · 13% of 1,286.2 ms wall-clock"
+        },
+        {
+          "id": "ex1_check",
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "describedby": "node-finder-result-meta-1",
+          "metadata": "Backend · ex1_check · 298.5–445.2 ms · 146.7 ms · 11% of 1,286.2 ms wall-clock",
+          "descriptionTarget": "Backend · ex1_check · 298.5–445.2 ms · 146.7 ms · 11% of 1,286.2 ms wall-clock"
+        },
+        {
+          "id": "ex2_check",
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "describedby": "node-finder-result-meta-2",
+          "metadata": "Database · ex2_check · 224.4–398.4 ms · 174 ms · 14% of 1,286.2 ms wall-clock",
+          "descriptionTarget": "Database · ex2_check · 224.4–398.4 ms · 174 ms · 14% of 1,286.2 ms wall-clock"
+        },
+        {
+          "id": "ex3_check",
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "describedby": "node-finder-result-meta-3",
+          "metadata": "Database · ex3_check · 593.4–830.7 ms · 237.3 ms · 18% of 1,286.2 ms wall-clock",
+          "descriptionTarget": "Database · ex3_check · 593.4–830.7 ms · 237.3 ms · 18% of 1,286.2 ms wall-clock"
+        },
+        {
+          "id": "ex4_check",
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "describedby": "node-finder-result-meta-4",
+          "metadata": "Frontend · ex4_check · 643.7–862.8 ms · 219.1 ms · 17% of 1,286.2 ms wall-clock",
+          "descriptionTarget": "Frontend · ex4_check · 643.7–862.8 ms · 219.1 ms · 17% of 1,286.2 ms wall-clock"
+        },
+        {
+          "id": "ex5_check",
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "describedby": "node-finder-result-meta-5",
+          "metadata": "Backend · ex5_check · 645.9–868.3 ms · 222.4 ms · 17% of 1,286.2 ms wall-clock",
+          "descriptionTarget": "Backend · ex5_check · 645.9–868.3 ms · 222.4 ms · 17% of 1,286.2 ms wall-clock"
+        },
+        {
+          "id": "ex6_check",
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "describedby": "node-finder-result-meta-6",
+          "metadata": "Database · ex6_check · 1,022.2–1,231.3 ms · 209.1 ms · 16% of 1,286.2 ms wall-clock",
+          "descriptionTarget": "Database · ex6_check · 1,022.2–1,231.3 ms · 209.1 ms · 16% of 1,286.2 ms wall-clock"
+        },
+        {
+          "id": "ex7_check",
+          "name": "Focus check-render-output.mjs, 1 related connection",
+          "describedby": "node-finder-result-meta-7",
+          "metadata": "Frontend · ex7_check · 1,082.5–1,286.2 ms · 203.7 ms · 16% of 1,286.2 ms wall-clock",
+          "descriptionTarget": "Frontend · ex7_check · 1,082.5–1,286.2 ms · 203.7 ms · 16% of 1,286.2 ms wall-clock"
+        }
+      ]
+    }
+  ],
+  "keyboard": {
+    "capturedAt": "2026-10-25T10:30:37.488Z",
+    "actions": [
+      "ArrowDown",
+      "ArrowDown",
+      "Enter"
+    ],
+    "selection": {
+      "hash": "#focus=ex1_check",
+      "passport": "SEMANTIC PASSPORT\ncheck-render-output.mjs\n298.5–445.2 ms · 146.7 ms · 11% of 1,286.2 ms wall-clock\nBACKEND\nworker 2 › agent-tool-call.workflow\nex1_check\n0 outgoing · 1 incoming\nAUTHORED REACH\nUpstream\n2\nDownstream\n0\n×\nCopy link\nINCOMING · 1\n← IN\nagent-tool-call.workflow\nconnects from",
+      "selected": [
+        "ex1_check"
+      ]
+    }
+  },
+  "rawFiles": {
+    "base-checks.json": {
+      "sha256": "2936fb92e31eb39390c88d960365071352f999df473e70aab3bf21f8b09bcd1e",
+      "bytes": 3538
+    },
+    "base-ax-raw.json": {
+      "sha256": "d4a53b4309778a53b2c7910a09546c773bcde8893d86ca402b0d681364f6c3c1",
+      "bytes": 526471
+    },
+    "candidate-ax-raw.json": {
+      "sha256": "20b8207d8b0cf65ad480557283a02c3f0ce4e5d1d882c2524f42dc20894bde89",
+      "bytes": 503272
+    },
+    "candidate-checks.json": {
+      "sha256": "ea1f91ea5a4b3866640a79e05853f3e06792b21f7457e93cc0b6c630bf5260c8",
+      "bytes": 5058
+    },
+    "keyboard-selection.json": {
+      "sha256": "376adc95504368620e044b96f1521e632ada811bf8b638b2409199cf55bf3c5e",
+      "bytes": 541
+    }
+  }
+}
