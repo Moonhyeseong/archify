@@ -1,0 +1,436 @@
+[
+  {
+    "scenario": "light-preview-no-return",
+    "active": "cdn",
+    "hash": "#focus=cdn",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "light-jump",
+    "active": "api",
+    "hash": "#focus=api",
+    "returnAction": {
+      "hidden": false,
+      "label": "Back to cdn"
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "light-returned",
+    "active": "cdn",
+    "hash": "#focus=cdn",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "light-keyboard-jump",
+    "active": "api",
+    "hash": "#focus=api",
+    "returnAction": {
+      "hidden": false,
+      "label": "Back to cdn"
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "light-replace-origin",
+    "active": "db",
+    "hash": "#focus=db",
+    "returnAction": {
+      "hidden": false,
+      "label": "Back to api"
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "light-one-return-only",
+    "active": "api",
+    "hash": "#focus=api",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "light-self-loop",
+    "active": "api",
+    "hash": "#focus=api",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "dark-preview-no-return",
+    "active": "cdn",
+    "hash": "#focus=cdn",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "dark-jump",
+    "active": "api",
+    "hash": "#focus=api",
+    "returnAction": {
+      "hidden": false,
+      "label": "Back to cdn"
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "dark-returned",
+    "active": "cdn",
+    "hash": "#focus=cdn",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "dark-keyboard-jump",
+    "active": "api",
+    "hash": "#focus=api",
+    "returnAction": {
+      "hidden": false,
+      "label": "Back to cdn"
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "dark-replace-origin",
+    "active": "db",
+    "hash": "#focus=db",
+    "returnAction": {
+      "hidden": false,
+      "label": "Back to api"
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "dark-one-return-only",
+    "active": "api",
+    "hash": "#focus=api",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "dark-self-loop",
+    "active": "api",
+    "hash": "#focus=api",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "return-cleared-node",
+    "active": "db",
+    "hash": "#focus=db",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "return-cleared-multi",
+    "active": [
+      "api",
+      "db"
+    ],
+    "hash": "#focus=api",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "return-cleared-reach",
+    "active": "api",
+    "hash": "#focus=api&reach=downstream",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "return-cleared-pin",
+    "active": "api",
+    "hash": "#relation=edge-f",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "return-cleared-route",
+    "active": null,
+    "hash": "#focus=api",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "return-cleared-lens",
+    "active": null,
+    "hash": "#lens=backend",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "return-cleared-clear",
+    "active": null,
+    "hash": "",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "return-cleared-hash",
+    "active": "db",
+    "hash": "#focus=db",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "no-return-from-reach",
+    "active": "api",
+    "hash": "#focus=api",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "no-return-from-pin",
+    "active": "api",
+    "hash": "#focus=api",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "no-return-from-route",
+    "active": "api",
+    "hash": "#focus=api",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "invalid-destination-node.remove()",
+    "active": "cdn",
+    "hash": "#focus=cdn",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "invalid-origin-node.remove()",
+    "active": "api",
+    "hash": "#focus=api",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "invalid-destination-node.setAttribute('data-tree-hidden','')",
+    "active": "cdn",
+    "hash": "#focus=cdn",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "invalid-origin-node.setAttribute('data-tree-hidden','')",
+    "active": "api",
+    "hash": "#focus=api",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "invalid-destination-node.style.display='none'",
+    "active": "cdn",
+    "hash": "#focus=cdn",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "invalid-origin-node.style.display='none'",
+    "active": "api",
+    "hash": "#focus=api",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "tree-expanded-destination",
+    "active": "card_payment",
+    "hash": "#focus=card_payment",
+    "returnAction": {
+      "hidden": false,
+      "label": "Back to Payments"
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "tree-expanded-return-origin",
+    "active": "card_payment",
+    "hash": "#focus=card_payment",
+    "returnAction": {
+      "hidden": true,
+      "label": ""
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "production-light-390",
+    "active": "api_a",
+    "hash": "#focus=api_a",
+    "returnAction": {
+      "hidden": false,
+      "label": "Back to API Gateway"
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "return-layout-light-390",
+    "within": true,
+    "buttonWithin": true,
+    "width": 390
+  },
+  {
+    "scenario": "production-light-1440",
+    "active": "api_a",
+    "hash": "#focus=api_a",
+    "returnAction": {
+      "hidden": false,
+      "label": "Back to API Gateway"
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "return-layout-light-1440",
+    "within": true,
+    "buttonWithin": true,
+    "width": 1440
+  },
+  {
+    "scenario": "production-dark-390",
+    "active": "api_a",
+    "hash": "#focus=api_a",
+    "returnAction": {
+      "hidden": false,
+      "label": "Back to API Gateway"
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "return-layout-dark-390",
+    "within": true,
+    "buttonWithin": true,
+    "width": 390
+  },
+  {
+    "scenario": "production-dark-1440",
+    "active": "api_a",
+    "hash": "#focus=api_a",
+    "returnAction": {
+      "hidden": false,
+      "label": "Back to API Gateway"
+    },
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "return-layout-dark-1440",
+    "within": true,
+    "buttonWithin": true,
+    "width": 1440
+  }
+]

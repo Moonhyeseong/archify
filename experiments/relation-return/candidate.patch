@@ -1,0 +1,351 @@
+diff --git a/archify/locales/ar.json b/archify/locales/ar.json
+index edfe36c9..2609083a 100644
+--- a/archify/locales/ar.json
++++ b/archify/locales/ar.json
+@@ -242,6 +242,7 @@
+   "viewer.passport.downstream.trace": "تتبّعُ الوصول المُؤَلَّف نحو المصبّ",
+   "viewer.passport.close": "أغلق الجواز الدلالي",
+   "viewer.passport.move": "حرّك الجواز الدلالي. اسحب، أو استخدم أسهم المفاتيح، أو اضغط Home لإعادته.",
++  "viewer.passport.return": "العودة إلى {label}",
+   "viewer.passport.copy": "انسخ الرابط",
+   "viewer.passport.copy.focus": "انسخ رابط العقدة المُبرَزة",
+   "viewer.passport.relations": "العلاقات",
+diff --git a/archify/locales/en.json b/archify/locales/en.json
+index ce8c4c72..c41409da 100644
+--- a/archify/locales/en.json
++++ b/archify/locales/en.json
+@@ -242,6 +242,7 @@
+   "viewer.passport.downstream.trace": "Trace downstream authored reachability",
+   "viewer.passport.close": "Close semantic passport",
+   "viewer.passport.move": "Move semantic passport. Drag, use arrow keys, or press Home to reset.",
++  "viewer.passport.return": "Back to {label}",
+   "viewer.passport.copy": "Copy link",
+   "viewer.passport.copy.focus": "Copy link to focused node",
+   "viewer.passport.relations": "Relations",
+diff --git a/archify/locales/es.json b/archify/locales/es.json
+index 85bf4dce..230b5ed6 100644
+--- a/archify/locales/es.json
++++ b/archify/locales/es.json
+@@ -250,6 +250,7 @@
+   "viewer.passport.downstream.trace": "Trazar la alcanzabilidad definida descendente",
+   "viewer.passport.close": "Cerrar el pasaporte semántico",
+   "viewer.passport.move": "Mover el pasaporte semántico. Arrastra, usa las flechas o pulsa Inicio para restablecer.",
++  "viewer.passport.return": "Volver a {label}",
+   "viewer.passport.copy": "Copiar enlace",
+   "viewer.passport.copy.focus": "Copiar enlace al nodo enfocado",
+   "viewer.passport.relations": "Relaciones",
+diff --git a/archify/locales/ko.json b/archify/locales/ko.json
+index 38c14e32..a06bbcf9 100644
+--- a/archify/locales/ko.json
++++ b/archify/locales/ko.json
+@@ -438,6 +438,7 @@
+   "viewer.guide.title": "이 시스템 살펴보기",
+   "viewer.focus.selectedNodes": "선택한 노드 {count}개",
+   "viewer.passport.move": "의미 정보 패널 이동. 드래그하거나 화살표 키를 사용하고, Home 키로 초기화하세요.",
++  "viewer.passport.return": "{label}(으)로 돌아가기",
+   "viewer.outline.title": "노드 목록",
+   "viewer.rail.show": "설명 및 목록",
+   "viewer.rail.controls": "측면 패널",
+diff --git a/archify/locales/zh-CN.json b/archify/locales/zh-CN.json
+index c7868583..0396046a 100644
+--- a/archify/locales/zh-CN.json
++++ b/archify/locales/zh-CN.json
+@@ -242,6 +242,7 @@
+   "viewer.passport.downstream.trace": "追踪下游编写可达性",
+   "viewer.passport.close": "关闭语义护照",
+   "viewer.passport.move": "移动语义护照。可拖动、使用方向键移动，或按 Home 恢复自动位置。",
++  "viewer.passport.return": "回到{label}",
+   "viewer.passport.copy": "复制链接",
+   "viewer.passport.copy.focus": "复制聚焦节点的链接",
+   "viewer.passport.relations": "关系",
+diff --git a/archify/locales/zh-TW.json b/archify/locales/zh-TW.json
+index f4bad294..9465b7f4 100644
+--- a/archify/locales/zh-TW.json
++++ b/archify/locales/zh-TW.json
+@@ -242,6 +242,7 @@
+   "viewer.passport.downstream.trace": "追蹤下游可達範圍",
+   "viewer.passport.close": "關閉語意護照",
+   "viewer.passport.move": "移動語意護照。可拖曳、用方向鍵移動，或按 Home 回到自動位置。",
++  "viewer.passport.return": "回到{label}",
+   "viewer.passport.copy": "複製連結",
+   "viewer.passport.copy.focus": "複製聚焦節點的連結",
+   "viewer.passport.relations": "關係",
+diff --git a/test/focus-browser.test.mjs b/test/focus-browser.test.mjs
+index 83f2c0ef..d9d3e969 100644
+--- a/test/focus-browser.test.mjs
++++ b/test/focus-browser.test.mjs
+@@ -26,6 +26,12 @@ test('Focus preserves semantic selection, relationships, reachability and shared
+     files[mode] = path.join(scratch, mode + '.html');
+     execFileSync(process.execPath, [path.join(skillRoot, `renderers/${mode}/render-${mode}.mjs`), path.join(skillRoot, 'examples', example), files[mode]]);
+   }
++  files.production = path.join(scratch, 'production.html');
++  execFileSync(process.execPath, [path.join(skillRoot, 'renderers/architecture/render-architecture.mjs'),
++    path.join(skillRoot, 'examples/production-deployment.architecture.json'), files.production]);
++  files.tree = path.join(scratch, 'tree.html');
++  execFileSync(process.execPath, [path.join(skillRoot, 'renderers/tree/render-tree.mjs'),
++    path.join(skillRoot, 'examples/payment-platform.tree.json'), files.tree]);
+   // The graph fixture deliberately exercises DOM fragment contracts outside IR validation.
+   const graph = `<g data-edge-key="a" data-edge-id="edge-a" data-edge-from="users" data-edge-to="cdn"></g>
+     <path data-edge-key="a" data-edge-id="edge-a" data-edge-from="users" data-edge-to="cdn" d="M 110 180 L 245 180"/>
+@@ -97,6 +103,7 @@ test('Focus preserves semantic selection, relationships, reachability and shared
+     const s=await run(`(()=>{const svg=document.querySelector('.diagram-container > svg'),f=Archify.focus,chip=document.getElementById('focus-chip');
+       const attrs=e=>Object.fromEntries([...e.attributes].filter(a=>/^(data-(focus|relationship|reach)|aria-(pressed|expanded|current))/.test(a.name)).map(a=>[a.name,a.value]));
+       return {active:f.active(),relationship:f.relationship(),reach:f.reachability(),snapshot:f.reachabilitySnapshot(),hash:location.hash,svg:attrs(svg),chip:{hidden:chip.hidden,label:document.getElementById('focus-label').textContent,attrs:attrs(chip)},
++        returnAction:{hidden:document.getElementById('btn-focus-return').hidden,label:document.getElementById('btn-focus-return').textContent},
+         nodes:[...svg.querySelectorAll('[data-node-id]')].map(n=>({id:n.dataset.nodeId,attrs:attrs(n)})),edges:[...svg.querySelectorAll('[data-edge-from]')].map(n=>({key:n.dataset.edgeKey,attrs:attrs(n)})),
+         hits:[...svg.querySelectorAll('[data-relationship-hit-key]')].map(n=>({key:n.dataset.relationshipHitKey,tab:n.tabIndex,attrs:attrs(n)})),
+         rows:[...document.querySelectorAll('#relationship-lens-list [data-relationship-key]')].map(n=>({key:n.dataset.relationshipKey,target:n.dataset.relationshipTarget,attrs:attrs(n)})),pulse:svg.querySelectorAll('[data-relationship-pulse-overlay]').length,errors:focusErrors,external:performance.getEntriesByType('resource').map(r=>r.name).filter(n=>/^https?:/.test(n))};})()`);
+@@ -133,6 +140,89 @@ test('Focus preserves semantic selection, relationships, reachability and shared
+     await key('ArrowDown','ArrowDown',40);assert.equal(await run('document.activeElement.dataset.relationshipKey'),'d');await key('Enter','Enter',13);assert.equal(await run('Archify.focus.active()'),'api');assert.equal(await run('document.activeElement.dataset.nodeId'),'api');
+     await select('isolated');const s=await snapshot('isolated-passport');assert.equal(s.rows.length,0);assert.deepEqual(await run(`({up:document.getElementById('btn-reach-upstream').disabled,down:document.getElementById('btn-reach-downstream').disabled,evidence:document.getElementById('focus-evidence').hidden,detail:document.getElementById('focus-detail').hidden})`),{up:true,down:true,evidence:true,detail:true});assert.equal(await run(`Archify.focus.reach('upstream')`),false);
+   });
++  await t.test('ordinary relationship jumps offer one return address without recording preview or a history stack',async()=>{
++    for (const theme of ['light','dark']) {
++      await load('graph',{theme});await select('cdn');
++      await move(relation('d'));await focus(relation('d'));
++      assert.equal((await snapshot(theme+'-preview-no-return')).returnAction.hidden,true);
++      await click(relation('d'));
++      let s=await snapshot(theme+'-jump');assert.equal(s.active,'api');assert.deepEqual(s.returnAction,{hidden:false,label:'Back to cdn'});
++      assert.equal(s.hash,'#focus=api');
++      await focus('#btn-focus-return');await key('Enter','Enter',13);
++      s=await snapshot(theme+'-returned');assert.equal(s.active,'cdn');assert.equal(s.returnAction.hidden,true);assert.equal(s.hash,'#focus=cdn');assert.equal(await run('document.activeElement.dataset.nodeId'),'cdn');
++      await focus(relation('d'));await key('Enter','Enter',13);
++      assert.equal((await snapshot(theme+'-keyboard-jump')).returnAction.label,'Back to cdn');
++      await click(relation('f'));
++      s=await snapshot(theme+'-replace-origin');assert.equal(s.active,'db');assert.equal(s.returnAction.label,'Back to api');
++      await click('#btn-focus-return');assert.equal(await run('Archify.focus.active()'),'api');
++      assert.equal((await snapshot(theme+'-one-return-only')).returnAction.hidden,true);
++      await click(relation('g'));
++      assert.equal((await snapshot(theme+'-self-loop')).returnAction.hidden,true);
++    }
++  });
++  await t.test('other semantic actions clear return; Reach, pinned and Route contexts never record an origin',async()=>{
++    const actions={
++      node:`Archify.focus.set('db',{toggle:false})`,
++      multi:`Archify.focus.setMany(['api','db'],{toggle:false})`,
++      reach:`Archify.focus.reach('downstream',{reveal:false})`,
++      pin:`Archify.focus.inspectRelationshipById('edge-f')`,
++      route:`Archify.routeProbe.begin({source:'users'})`,
++      lens:`Archify.semanticLens.select('backend')`,
++      clear:`Archify.focus.clear()`,
++      hash:`new Promise(resolve=>{addEventListener('hashchange',()=>requestAnimationFrame(resolve),{once:true});location.hash='focus=db';})`,
++    };
++    for(const [name,action] of Object.entries(actions)){
++      await load();await select('cdn');await click(relation('d'));
++      assert.equal(await run('document.getElementById("btn-focus-return").hidden'),false);
++      await run(action);await stable();assert.equal((await snapshot('return-cleared-'+name)).returnAction.hidden,true);
++    }
++    for(const [name,setup] of Object.entries({reach:`Archify.focus.reach('downstream',{reveal:false})`,pin:`Archify.focus.inspectRelationshipById('edge-d')`,route:`Archify.routeProbe.begin({source:'users'});Archify.focus.set('cdn',{toggle:false,preserveRoute:true})`})){
++      await load();await select('cdn');await run(setup);await stable();await click(relation('d'));
++      assert.equal((await snapshot('no-return-from-'+name)).returnAction.hidden,true);
++    }
++  });
++  await t.test('missing and hidden destinations or return origins preserve the current selection',async()=>{
++    for(const mutation of [`node.remove()`,`node.setAttribute('data-tree-hidden','')`,`node.style.display='none'`]){
++      await load();await select('cdn');
++      await run(`{const node=document.querySelector('.diagram-container svg [data-node-id="api"]');${mutation};}`);
++      const before=await run('({active:Archify.focus.active(),hash:location.hash,camera:Archify.view.state()})');
++      await click(relation('d'));
++      assert.deepEqual(await run('({active:Archify.focus.active(),hash:location.hash,camera:Archify.view.state()})'),before);
++      assert.equal((await snapshot('invalid-destination-'+mutation)).returnAction.hidden,true);
++      await load();await select('cdn');await click(relation('d'));
++      await run(`{const node=document.querySelector('.diagram-container svg [data-node-id="cdn"]');${mutation};}`);
++      const selected=await run('({active:Archify.focus.active(),hash:location.hash,camera:Archify.view.state()})');
++      await click('#btn-focus-return');
++      assert.deepEqual(await run('({active:Archify.focus.active(),hash:location.hash,camera:Archify.view.state()})'),selected);
++      assert.equal((await snapshot('invalid-origin-'+mutation)).returnAction.hidden,true);
++    }
++  });
++  await t.test('real collapsed tree relationships reveal destinations and return origins before selection',async()=>{
++    await load('tree');await select('payments');
++    await run(`Archify.treeBranches.collapse('payments')`);await stable();
++    assert.equal(await run(`document.querySelector('[data-node-id="card_payment"]').hasAttribute('data-tree-hidden')`),true);
++    await focus('#relationship-lens-list [data-relationship-target="card_payment"]');await key('Enter','Enter',13);
++    assert.equal(await run('Archify.focus.active()'),'card_payment');
++    assert.equal((await snapshot('tree-expanded-destination')).returnAction.label,'Back to Payments');
++    await focus('#relationship-lens-list [data-relationship-target="payments"]');await key('Enter','Enter',13);
++    await run(`Archify.treeBranches.collapse('payments')`);await stable();
++    assert.equal(await run(`document.querySelector('[data-node-id="card_payment"]').hasAttribute('data-tree-hidden')`),true);
++    await click('#btn-focus-return');
++    assert.equal(await run('Archify.focus.active()'),'card_payment');
++    assert.equal(await run(`document.querySelector('[data-node-id="card_payment"]').hasAttribute('data-tree-hidden')`),false);
++    assert.equal((await snapshot('tree-expanded-return-origin')).returnAction.hidden,true);
++  });
++  await t.test('production relationship return stays inside desktop and narrow Passport layouts',async()=>{
++    for(const theme of ['light','dark'])for(const width of [390,1440]){
++      await load('production',{theme,width});await select('gateway');
++      if(width===390)await click('#btn-focus-relations');
++      await focus('#relationship-lens-list [data-relationship-target="api_a"]');await key('Enter','Enter',13);
++      const state=await snapshot('production-'+theme+'-'+width);assert.equal(state.active,'api_a');assert.equal(state.returnAction.label,'Back to API Gateway');
++      const layout=await run(`(()=>{const p=document.getElementById('focus-chip').getBoundingClientRect(),b=document.getElementById('btn-focus-return').getBoundingClientRect();return {within:p.left>=-1&&p.right<=innerWidth+1&&p.top>=-1&&p.bottom<=innerHeight+1,buttonWithin:b.left>=p.left&&b.right<=p.right&&b.top>=p.top&&b.bottom<=p.bottom,width:innerWidth};})()`);
++      assert.equal(layout.within,true,JSON.stringify(layout));assert.equal(layout.buttonWithin,true,JSON.stringify(layout));records.push({scenario:'return-layout-'+theme+'-'+width,...layout});
++      await click('#btn-focus-return');assert.equal(await run('Archify.focus.active()'),'gateway');
++    }
++  });
+   await t.test('relationship focus and pointer intents yield to pins and direct keyboard exploration',async()=>{
+     await load();await select('cdn');await focus('#btn-focus-relations');await key('Enter','Enter',13);await move(relation('a'));await focus(relation('b'));await stable();assert.equal((await snapshot('focus-over-hover')).svg['data-relationship-preview-active'],'b');
+     await run('document.activeElement.blur()');await stable();assert.equal((await snapshot('hover-restored')).svg['data-relationship-preview-active'],'a');
+diff --git a/viewer/README.md b/viewer/README.md
+index 8909fedb..72688843 100644
+--- a/viewer/README.md
++++ b/viewer/README.md
+@@ -242,7 +242,7 @@ provider is part of Focus ownership, not a second initialization step.
+ 
+ | State or surface | Owner and dependencies |
+ | --- | --- |
+-| Selected IDs, hover/focus/pin/preview references, reachability, hit targets, direct timer, lens rAF | Focus closure; page lifetime, no destroy interface |
++| Selected IDs, one relationship-list origin ID, hover/focus/pin/preview references, reachability, hit targets, direct timer, lens rAF | Focus closure; page lifetime, no destroy interface |
+ | data-focus-active/match/selected, node aria-pressed, Passport content/hidden/expanded/top | Focus writes/clears; Camera reveals/resets and Radar syncs through call-time lookups |
+ | data-reach-active/match/origin/depth and Passport Reach controls | Focus; Export consumes syncReachShare and reachabilitySnapshot |
+ | data-relationship-preview/direct/pin-active, preview source/target and row/hit ARIA | Focus; Lens/Route/Intent/Guide state controls existing eligibility rules |
+@@ -255,6 +255,17 @@ is made. Verify live state and clone state separately; do not assert that every
+ export leaves every focus-backed preview unchanged. Author geometry, stable IDs,
+ viewBox and static SVG output remain unchanged by this source extraction.
+ 
++An ordinary single-node Passport relationship-list jump offers one `Back to`
++node action. It stores only the source node ID, replacing any earlier origin;
++returning consumes it. Preview and self-loops do not create an origin. Focus
++clearing or another semantic selection removes it, including Reach, Route,
++Lens, pinned relationships, multi-selection and hash restoration. Neither a
++missing nor an unrevealable hidden destination is selected; an unavailable return
++source removes the action while preserving the current selection. Collapsed tree
++ancestors expand through the existing tree reveal contract before selection. This does not
++restore camera, scroll or other reading state, and does not provide browser,
++Atlas or cross-diagram history. The control lives outside canonical SVG.
++
+ Browser checks exercise actual node/relationship inputs, pointer delay, pin priority,
+ Passport grouping, cyclic Reach and strict rejection, cold/hash URLs, copy feedback,
+ real pulse end/cancel, media preference transitions, actual SVG export, three widths
+diff --git a/viewer/focus.js b/viewer/focus.js
+index 27618846..187e2007 100644
+--- a/viewer/focus.js
++++ b/viewer/focus.js
+@@ -28,8 +28,10 @@
+       var copyBtn = document.getElementById('btn-focus-copy');
+       var relationsBtn = document.getElementById('btn-focus-relations');
+       var clearBtn = document.getElementById('btn-focus-clear');
++      var returnBtn = document.getElementById('btn-focus-return');
+       var moveBtn = document.getElementById('btn-focus-move');
+       var activeIds = [];
++      var relationshipOriginId = null;
+       var hoveredRelationship = null;
+       var focusedRelationship = null;
+       var pinnedRelationship = null;
+@@ -56,6 +58,31 @@
+       function nodeLabel(node, fallback) {
+         return node.getAttribute('data-node-label') || (node.getAttribute('aria-label') || fallback).replace(/^Focus\s+/, '');
+       }
++      function clearRelationshipOrigin() {
++        relationshipOriginId = null;
++        returnBtn.hidden = true;
++        returnBtn.textContent = '';
++        returnBtn.removeAttribute('title');
++      }
++      function visibleNode(id) {
++        var node = nodes().find(function (candidate) { return candidate.getAttribute('data-node-id') === id; });
++        if (!node || node.closest('[hidden]')) return null;
++        // Preserve the existing tree-selection contract: collapsed ancestors
++        // expand before measuring. Other hidden/missing nodes stay unselected.
++        if (node.hasAttribute('data-tree-hidden') && Archify.treeBranches && Archify.treeBranches.active) {
++          Archify.treeBranches.reveal(id);
++        }
++        if (node.closest('[data-tree-hidden]')) return null;
++        var style = getComputedStyle(node);
++        var rect = node.getBoundingClientRect();
++        return style.display !== 'none' && style.visibility !== 'hidden' && rect.width > 0 && rect.height > 0 ? node : null;
++      }
++      function revealRelationshipNode(id, node) {
++        if (Archify.view && typeof Archify.view.reveal === 'function') {
++          Archify.view.reveal([id], { includeNeighbors: true, reason: 'relationship' });
++        }
++        try { node.focus({ preventScroll: true }); } catch (_) { try { node.focus(); } catch (_) {} }
++      }
+       function reachabilityRelationships() {
+         var seen = Object.create(null);
+         var relationships = [];
+@@ -128,6 +155,7 @@
+       }
+       function clearReachability(options) {
+         options = options || {};
++        clearRelationshipOrigin();
+         reachabilityMode = null;
+         activeReachability = null;
+         svg.removeAttribute('data-reach-active');
+@@ -1446,6 +1474,12 @@
+       });
+       moveBtn.addEventListener('keydown', moveLensWithKeyboard);
+       clearBtn.addEventListener('click', function () { clear({ restoreFocus: true }); });
++      returnBtn.addEventListener('click', function () {
++        var id = relationshipOriginId;
++        var node = id && visibleNode(id);
++        if (!node) { clearRelationshipOrigin(); return; }
++        if (set(id, { toggle: false })) revealRelationshipNode(id, node);
++      });
+       copyBtn.addEventListener('click', copyFocusLink);
+       upstreamBtn.addEventListener('click', function () { applyReachability('upstream'); });
+       downstreamBtn.addEventListener('click', function () { applyReachability('downstream'); });
+@@ -1463,14 +1497,23 @@
+         var button = event.target.closest('[data-relationship-target]');
+         if (!button) return;
+         var id = button.getAttribute('data-relationship-target');
+-        set(id, { toggle: false });
+-        if (Archify.view && typeof Archify.view.reveal === 'function') {
+-          Archify.view.reveal([id], { includeNeighbors: true, reason: 'relationship' });
+-        }
+-        var node = svg.querySelector('[data-node-id="' + id + '"]');
+-        if (node) {
+-          try { node.focus({ preventScroll: true }); } catch (_) { try { node.focus(); } catch (_) {} }
++        var node = visibleNode(id);
++        if (!node) return;
++        // A single list jump owns one return address. It is not reading
++        // history: other semantic selections clear it through clear().
++        var origin = activeIds.length === 1 && !chip.hidden && !reachabilityMode && !pinnedRelationshipKey &&
++          !(Archify.routeProbe && Archify.routeProbe.active()) &&
++          !(Archify.semanticLens && Archify.semanticLens.active()) ? activeIds[0] : null;
++        if (!set(id, { toggle: false })) return;
++        var originNode = origin && origin !== id ? visibleNode(origin) : null;
++        if (originNode) {
++          relationshipOriginId = origin;
++          returnBtn.textContent = viewerText('viewer.passport.return', { label: nodeLabel(originNode, origin) });
++          returnBtn.title = returnBtn.textContent;
++          returnBtn.hidden = false;
++          placeRelationshipLens();
+         }
++        revealRelationshipNode(id, node);
+       });
+       relationshipList.addEventListener('pointerover', function (event) {
+         if (event.pointerType === 'touch') return;
+diff --git a/viewer/template.source.html b/viewer/template.source.html
+index 60d671ee..4af18518 100644
+--- a/viewer/template.source.html
++++ b/viewer/template.source.html
+@@ -516,6 +516,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
+               <div class="semantic-passport-evidence-links" id="focus-evidence-links"></div>
+             </div>
+             <span class="relationship-lens-summary" id="focus-summary" aria-live="polite"></span>
++            <button class="semantic-passport-return" id="btn-focus-return" type="button" hidden></button>
+             <div class="semantic-passport-reach" id="focus-reach" hidden>
+               <span class="semantic-passport-reach-label">{{i18n:viewer.passport.reach}}</span>
+               <div class="semantic-passport-reach-actions" role="group" aria-label="{{i18n:viewer.passport.reach.trace}}">
+diff --git a/viewer/viewer.css b/viewer/viewer.css
+index d8f4705e..b6ad583e 100644
+--- a/viewer/viewer.css
++++ b/viewer/viewer.css
+@@ -1617,6 +1617,17 @@ html[data-preset="blueprint"] .focus-chip { border-radius: 0.3rem; }
+   .relationship-lens-drag-handle { display: none; }
+ }
+ .relationship-lens-copy { min-width: 0; }
++.semantic-passport-return {
++  display: block;
++  max-width: 100%;
++  margin-top: 0.35rem;
++  overflow: hidden;
++  text-overflow: ellipsis;
++  white-space: nowrap;
++  text-align: left;
++  color: var(--frontend-stroke);
++}
++.semantic-passport-return[hidden] { display: none; }
+ .relationship-lens-actions {
+   display: flex;
+   flex-direction: column;

@@ -1,0 +1,123 @@
+{
+  "kind": "portable-browser-capture-summary",
+  "date": "2026-10-25",
+  "captureTool": "ego-browser",
+  "taskSpace": 4,
+  "images": [
+    {
+      "image": "base-destination-light.png",
+      "sha256": "15baadaa519be0b8eb8a096c2da5636ba7d069303bd12663515523b725286a5a",
+      "width": 1440,
+      "height": 900,
+      "source": "../base.html",
+      "sourceSha256": "3ee797c5806a5aeda056eae8e20d4f8e8fc2c1258de5f9194f7ba5aa10bdec7c",
+      "capturedAtUtc": "2026-10-25T05:09:12.510532+00:00",
+      "viewportCss": [
+        1440,
+        900
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "theme": "light",
+      "preset": "Blueprint",
+      "motion": "Still"
+    },
+    {
+      "image": "base-origin-light.png",
+      "sha256": "618a18b0823e91309b768269c2710a5f4c7756dd43b76b03ccc7536e34fcec88",
+      "width": 1440,
+      "height": 900,
+      "source": "../base.html",
+      "sourceSha256": "3ee797c5806a5aeda056eae8e20d4f8e8fc2c1258de5f9194f7ba5aa10bdec7c",
+      "capturedAtUtc": "2026-10-25T05:09:12.256268+00:00",
+      "viewportCss": [
+        1440,
+        900
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "theme": "light",
+      "preset": "Blueprint",
+      "motion": "Still"
+    },
+    {
+      "image": "base-returned-light.png",
+      "sha256": "baf1c3fc4fdc3bc8ce9005c2ba057220186286c2b51cdf1c9d7642cead0976c8",
+      "width": 1440,
+      "height": 900,
+      "source": "../base.html",
+      "sourceSha256": "3ee797c5806a5aeda056eae8e20d4f8e8fc2c1258de5f9194f7ba5aa10bdec7c",
+      "capturedAtUtc": "2026-10-25T05:09:14.935409+00:00",
+      "viewportCss": [
+        1440,
+        900
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "theme": "light",
+      "preset": "Blueprint",
+      "motion": "Still"
+    },
+    {
+      "image": "candidate-destination-light.png",
+      "sha256": "252747eabe7b067f5679be9f5402759af4076c26ede0d3c3c53f92989d424352",
+      "width": 1440,
+      "height": 900,
+      "source": "../candidate.html",
+      "sourceSha256": "0422c41f1319d72abde3cb411b494d2a6526b7c7a99cb8715e95e3d108d324c4",
+      "capturedAtUtc": "2026-10-25T05:09:17.774801+00:00",
+      "viewportCss": [
+        1440,
+        900
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "theme": "light",
+      "preset": "Blueprint",
+      "motion": "Still"
+    },
+    {
+      "image": "candidate-origin-light.png",
+      "sha256": "504442dfabc8d88c6bfce51d21067373859996a0853b3ee9c589de54e28fd698",
+      "width": 1440,
+      "height": 900,
+      "source": "../candidate.html",
+      "sourceSha256": "0422c41f1319d72abde3cb411b494d2a6526b7c7a99cb8715e95e3d108d324c4",
+      "capturedAtUtc": "2026-10-25T05:09:15.293855+00:00",
+      "viewportCss": [
+        1440,
+        900
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "theme": "light",
+      "preset": "Blueprint",
+      "motion": "Still"
+    },
+    {
+      "image": "candidate-returned-light.png",
+      "sha256": "e7049d23a1dae523edc11a48fc90422d28b0f93143865012173d15b2d915fa99",
+      "width": 1440,
+      "height": 900,
+      "source": "../candidate.html",
+      "sourceSha256": "0422c41f1319d72abde3cb411b494d2a6526b7c7a99cb8715e95e3d108d324c4",
+      "capturedAtUtc": "2026-10-25T05:09:17.957155+00:00",
+      "viewportCss": [
+        1440,
+        900
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "theme": "light",
+      "preset": "Blueprint",
+      "motion": "Still"
+    }
+  ],
+  "agentVisualReview": [
+    "The parent agent performed the real gateway → api_a jump in both HTML artifacts. The baseline Incoming relationship row and candidate Back button each returned to gateway in one action.",
+    "Screenshots document the controls and selection states, not a pixel-perfect camera comparison. Auto camera framing differs between artifacts.",
+    "No reduction in action count or reading-time benefit was demonstrated. Runtime integration is deferred."
+  ],
+  "humanAcceptance": "pending",
+  "imageGeneration": "none: actual browser screenshots"
+}
