@@ -1,0 +1,94 @@
+{
+  "kind": "derived image/observation binding, not original browser capture metadata",
+  "operator": "root Codex agent; four actual screenshots individually viewed as reported by root",
+  "artifact": {
+    "path": "explainer.html",
+    "bytes": 173053,
+    "sha256": "0c970f1badd886f48eb655692c2d38665d6d2041b9dcd064f7df20eae7343a55"
+  },
+  "artifactBindingBasis": "Root explicitly identified final0c970f...3a55 HTML for these four captures; raw observations contain DOM values, not their own artifact hash.",
+  "input": {
+    "path": "explainer.archify.md",
+    "bytes": 4613,
+    "sha256": "8bf6e71d3a26ea69df64e1e229c41d60d3a0beb2b3666e0f9b62c9f00ffe984a"
+  },
+  "projection": {
+    "path": "fixture-projection.json",
+    "bytes": 4009,
+    "sha256": "15640485f982da4c816ef0a4906d099f8e4a201c242cda6fa4db84cda878f1b5"
+  },
+  "images": [
+    {
+      "path": "desktop-light.png",
+      "bytes": 360130,
+      "sha256": "f3b791ea1a5b92dc44e9c8d37cec3c6e0caaefc265da117e073c60ef14107b0b",
+      "pngDimensions": [
+        1440,
+        1903
+      ],
+      "artifactSHA256": "0c970f1badd886f48eb655692c2d38665d6d2041b9dcd064f7df20eae7343a55",
+      "rootAgentReportedViewed": true
+    },
+    {
+      "path": "source-dark.png",
+      "bytes": 218921,
+      "sha256": "ca5ed558fea41e6dcc3803fdddfcaa4080714ea6ab87a4a8d7a0067f77f1674f",
+      "pngDimensions": [
+        1440,
+        1100
+      ],
+      "artifactSHA256": "0c970f1badd886f48eb655692c2d38665d6d2041b9dcd064f7df20eae7343a55",
+      "rootAgentReportedViewed": true
+    },
+    {
+      "path": "mobile-light.png",
+      "bytes": 343525,
+      "sha256": "78de090b60185408ea10e92eeb4ff3e317e82caf065c7f31047d1d5d75263970",
+      "pngDimensions": [
+        390,
+        3400
+      ],
+      "artifactSHA256": "0c970f1badd886f48eb655692c2d38665d6d2041b9dcd064f7df20eae7343a55",
+      "rootAgentReportedViewed": true
+    },
+    {
+      "path": "mobile-query-right.png",
+      "bytes": 88920,
+      "sha256": "2d9914f23d011b00794bda2063de02aad9c824644419efe1123abc63a0be98c1",
+      "pngDimensions": [
+        390,
+        844
+      ],
+      "artifactSHA256": "0c970f1badd886f48eb655692c2d38665d6d2041b9dcd064f7df20eae7343a55",
+      "rootAgentReportedViewed": true
+    }
+  ],
+  "originalObservationBindings": [
+    {
+      "name": "desktop-observation.json",
+      "bytes": 1763,
+      "sha256": "54a27c612ce0e481329c55530881cff5d8c97e6186d13c5120d646666c4ba9af"
+    },
+    {
+      "name": "mobile-observation.json",
+      "bytes": 1761,
+      "sha256": "8a63c19ba3a0098923f92ae3d1454bd3a47a03048d43fc25b1f14909a0c9950c"
+    },
+    {
+      "name": "source-dark-observation.json",
+      "bytes": 367,
+      "sha256": "db2f476c250803ce02c00f7f5de3b0d8397fef0e7ca4a76b96b83646077db401"
+    },
+    {
+      "name": "mobile-query-scroll-observation.json",
+      "bytes": 3919,
+      "sha256": "e28300371e455fe8c7a1b196b808b7c66186f5e9f3a6f3487d4b5f9a53e2e9ce"
+    }
+  ],
+  "derivedObservations": {
+    "path": "observations-summary.json",
+    "bytes": 2890,
+    "sha256": "a6706254af8ecc7c0b359f82a68cc8b4b6bc7b8d610fb75d85b984b0040ce49a"
+  },
+  "excluded": "Parent-directory initial desktop/mobile images and observations remain private and refer to superseded7d6cd HTML. They are not successful final screenshots."
+}

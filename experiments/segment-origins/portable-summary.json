@@ -1,0 +1,211 @@
+{
+  "kind": "derived portable summary, not original finalize/delivery receipts",
+  "base": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "source": "jridgewell/sourcemaps@b7600158f4de012d246b7834a73c7c2190e75136",
+  "disposition": "fixed content experiment; actual root browser evidence separately bound, with mobile horizontal-scroll limitation",
+  "finalize": {
+    "gates": {
+      "validate": "pass",
+      "deliver": "pass",
+      "check": "pass",
+      "browser-check": "not-run"
+    },
+    "browserCheck": {
+      "requested": false,
+      "ran": false
+    },
+    "diagnostics": [],
+    "originalStdout": {
+      "name": "short-headings.stdout.json",
+      "bytes": 1249,
+      "sha256": "472c1bcdc97a734df329f29c2e57f688e0b1aaf98d2de56f391b9dd89d0fd7b0"
+    },
+    "originalReceipt": {
+      "name": "explainer.finalize.json",
+      "bytes": 6481,
+      "sha256": "ca781a1db1865500befa7a1a113f10d2e383dc3f2cac7963355ef25627f7abf5"
+    },
+    "originalDelivery": {
+      "name": "short-headings.delivery.json",
+      "bytes": 779,
+      "sha256": "e80a23ef9bbcdde52bddc9526be332b0d56be750942b9a78e0266428714ff237"
+    }
+  },
+  "audit": {
+    "checks": 7,
+    "scope": "byte/frozen projection/presentation binding only; no mapping evaluation",
+    "stdout": {
+      "bytes": 716,
+      "sha256": "0ecbf0878218f88e0a493b870ce0bacfdc8ec24c7182bedfab04a233998ad7ed"
+    }
+  },
+  "preservedFailure": {
+    "reason": "duplicate automatic comparison row IDs for repeated2:13; explicit distinct row IDs repaired without changing data/expected",
+    "gates": {
+      "validate": "not-run",
+      "deliver": "not-run",
+      "check": "not-run",
+      "browser-check": "not-run"
+    },
+    "diagnosticCodes": [
+      "explainer/duplicate-id",
+      "explainer/writing-sentence-length"
+    ],
+    "originalInput": {
+      "name": "first.archify.md",
+      "bytes": 4617,
+      "sha256": "632fa9ded5dc7d92854fb69a2161ab657aea75d1d0068f79bc6478e5c196f7dd"
+    },
+    "originalStdout": {
+      "name": "first-finalize.stdout.json",
+      "bytes": 1840,
+      "sha256": "04a1f7079d9452a3a9cdd3cbd50e82caf338e1f6e0d38359e045d7724050a24f"
+    },
+    "originalStderr": {
+      "name": "first-finalize.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "limits": [
+    "No upstream/library/compiler execution.",
+    "No generated output.js supplied; sourcesContent is a submitted map test field, not verified independent Git source.",
+    "Default and explicit GLB are combined only in display; all four original expected assertions retained.",
+    "Author-selected segment pointers are source interpretation, not upstream trace.",
+    "No shared product, dependency, template or ZIP changes."
+  ],
+  "boundedHeadingRevision": {
+    "scope": "Only first table header changed; all row values, explicit rowIDs, four assertions, all map lines and JSON string unchanged",
+    "oldHTML": {
+      "bytes": 173125,
+      "sha256": "7d6cd060565e28df364d2426d2be1c10d40a560dfbda4716d8bb4311153501b9"
+    },
+    "oldInput": {
+      "bytes": 4637,
+      "sha256": "eab1fb79559687f178f53c08b675fd1d4551df36a738babb158d6b10485119c8"
+    },
+    "oldFinalizeStdout": {
+      "bytes": 1219,
+      "sha256": "78e2637465c00bd35eca7c3f352b2d2f718472386e2beda5099ed93c42b1f884"
+    },
+    "firstRootPrivateEvidence": [
+      {
+        "name": "desktop-light.png",
+        "bytes": 362275,
+        "sha256": "140a4d11cf7b752ec3bc4a401838bda60aafe4badaca6508a7a8b93eeea1f5ae"
+      },
+      {
+        "name": "desktop-observation.json",
+        "bytes": 4595,
+        "sha256": "2a870cd20d9ed84ef12be4092a796e522f9d427bd4efe04aaa9d70b4a0a03763"
+      },
+      {
+        "name": "mobile-light.png",
+        "bytes": 345150,
+        "sha256": "901b7a185235c5505c72fc039bcac0bf9b50d8fa3dd980f714739d8e3986e84a"
+      },
+      {
+        "name": "mobile-observation.json",
+        "bytes": 4586,
+        "sha256": "189669e1e6c7f20e734f478b9460711c2556434b266c66d254dc3fc63385e1da"
+      }
+    ]
+  },
+  "rootCapture": {
+    "path": "screenshots/capture.json",
+    "bytes": 3264,
+    "sha256": "7114cd6f6f3e006b4c5e2973f220d4b221fb5c4ffc424e31f8bf136a722aac7e"
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 7818,
+      "sha256": "4a0554cc0f183785adeda2d47c25fd1675513dc5f942d91f584e4617ecbd4ce3"
+    },
+    {
+      "path": "audit-result.json",
+      "bytes": 716,
+      "sha256": "0ecbf0878218f88e0a493b870ce0bacfdc8ec24c7182bedfab04a233998ad7ed"
+    },
+    {
+      "path": "audit.py",
+      "bytes": 4182,
+      "sha256": "9b996ff8e5cbd86d020d9a17494f20cb3b548ff07d1d50466cadf2b2e01d4180"
+    },
+    {
+      "path": "explainer.archify.md",
+      "bytes": 4613,
+      "sha256": "8bf6e71d3a26ea69df64e1e229c41d60d3a0beb2b3666e0f9b62c9f00ffe984a"
+    },
+    {
+      "path": "explainer.html",
+      "bytes": 173053,
+      "sha256": "0c970f1badd886f48eb655692c2d38665d6d2041b9dcd064f7df20eae7343a55"
+    },
+    {
+      "path": "fixture-projection.json",
+      "bytes": 4009,
+      "sha256": "15640485f982da4c816ef0a4906d099f8e4a201c242cda6fa4db84cda878f1b5"
+    },
+    {
+      "path": "screenshots/capture.json",
+      "bytes": 3264,
+      "sha256": "7114cd6f6f3e006b4c5e2973f220d4b221fb5c4ffc424e31f8bf136a722aac7e"
+    },
+    {
+      "path": "screenshots/desktop-light.png",
+      "bytes": 360130,
+      "sha256": "f3b791ea1a5b92dc44e9c8d37cec3c6e0caaefc265da117e073c60ef14107b0b"
+    },
+    {
+      "path": "screenshots/mobile-light.png",
+      "bytes": 343525,
+      "sha256": "78de090b60185408ea10e92eeb4ff3e317e82caf065c7f31047d1d5d75263970"
+    },
+    {
+      "path": "screenshots/mobile-query-right.png",
+      "bytes": 88920,
+      "sha256": "2d9914f23d011b00794bda2063de02aad9c824644419efe1123abc63a0be98c1"
+    },
+    {
+      "path": "screenshots/observations-summary.json",
+      "bytes": 2890,
+      "sha256": "a6706254af8ecc7c0b359f82a68cc8b4b6bc7b8d610fb75d85b984b0040ce49a"
+    },
+    {
+      "path": "screenshots/source-dark.png",
+      "bytes": 218921,
+      "sha256": "ca5ed558fea41e6dcc3803fdddfcaa4080714ea6ab87a4a8d7a0067f77f1674f"
+    },
+    {
+      "path": "upstream/packages/trace-mapping/LICENSE",
+      "bytes": 1080,
+      "sha256": "769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c"
+    },
+    {
+      "path": "upstream/packages/trace-mapping/src/binary-search.ts",
+      "bytes": 3082,
+      "sha256": "8e7eb5c2efac583fab19d04082b16431e5914b3b237c1af5a59f8d1b6b88fbd8"
+    },
+    {
+      "path": "upstream/packages/trace-mapping/src/sourcemap-segment.ts",
+      "bytes": 890,
+      "sha256": "9290f5ab37493ac396dd4f5abff578a9d6a340394c8de8eb9c957367fb8cebf3"
+    },
+    {
+      "path": "upstream/packages/trace-mapping/src/trace-mapping.ts",
+      "bytes": 24934,
+      "sha256": "e45736cfe634564cbd3fc54f746fc23104f4e8ae82014dd492ad62384e7befa4"
+    },
+    {
+      "path": "upstream/packages/trace-mapping/test/trace-mapping.test.ts",
+      "bytes": 34534,
+      "sha256": "e8e50397fc96d6fac2b534be35057e867d1745bef10ba0b4d330872b9cd25972"
+    },
+    {
+      "path": "upstream/source-manifest.json",
+      "bytes": 1203,
+      "sha256": "1ce95cfcac4ee689bb6922e0ed3c79f5a372fca13b562243ad4f640de2e55233"
+    }
+  ]
+}

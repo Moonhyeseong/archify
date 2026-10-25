@@ -1,0 +1,106 @@
+{
+  "kind": "derived whitelist browser observations, not original DOM output",
+  "desktop": {
+    "viewport": [
+      1440,
+      1100
+    ],
+    "pageWidth": 1440,
+    "theme": "light",
+    "tables": [
+      {
+        "client": 1238,
+        "scroll": 1238,
+        "parent": 1238,
+        "parentScroll": 1238
+      },
+      {
+        "client": 590,
+        "scroll": 590,
+        "parent": 590,
+        "parentScroll": 590
+      },
+      {
+        "client": 590,
+        "scroll": 590,
+        "parent": 590,
+        "parentScroll": 590
+      }
+    ],
+    "fullPagePNGDimensions": [
+      1440,
+      1903
+    ]
+  },
+  "mobile": {
+    "viewport": [
+      390,
+      844
+    ],
+    "pageWidth": 390,
+    "theme": "light",
+    "tableContainers": [
+      {
+        "client": 332,
+        "scroll": 432,
+        "scrollLeft": 0
+      },
+      {
+        "client": 332,
+        "scroll": 332,
+        "scrollLeft": 0
+      },
+      {
+        "client": 332,
+        "scroll": 332,
+        "scrollLeft": 0
+      }
+    ],
+    "jsonPre": {
+      "client": 330,
+      "scroll": 668,
+      "horizontalScrollTested": false
+    },
+    "fullPagePNGDimensions": [
+      390,
+      3400
+    ],
+    "limitation": "Query table remains locally horizontally scrollable. Initial right name column is outside the visible parent; other two tables fit."
+  },
+  "mobileQueryWheel": {
+    "action": "Same-invocation actual horizontal wheel160, waited for positive scrollLeft",
+    "viewport": [
+      390,
+      844
+    ],
+    "beforeScrollLeft": 0,
+    "afterScrollLeft": 100,
+    "client": 332,
+    "scroll": 432,
+    "allTableTextUnchanged": true,
+    "rootAgentVisualReport": "Right name column becomes readable, while left query column is clipped; not all columns visible simultaneously.",
+    "limits": "Actual wheel only; no touch or keyboard acceptance."
+  },
+  "sourceCard": {
+    "theme": "dark",
+    "viewport": [
+      1440,
+      1100
+    ],
+    "hash": "#panel-0f597d556a3f",
+    "sourceLink": "https://github.com/jridgewell/sourcemaps/blob/b7600158f4de012d246b7834a73c7c2190e75136/packages/trace-mapping/test/trace-mapping.test.ts#L251-L286",
+    "cardText": "完整上游 fixture 与四条原断言\ngithub.com\n2\n打开原文 ↗",
+    "preCount": 1,
+    "rootReportedAction": "Actual dark click, first-panel anchor, then hover source-oracle; external source link not clicked.",
+    "limits": "Metadata only. No code excerpt, external source retrieval, Escape or keyboard claim."
+  },
+  "jsonLiteral": {
+    "allRecordedDOMJSONStringsDecodeToCompleteSourcesContent": true,
+    "decodedLFCount": 3
+  },
+  "limits": [
+    "Root agent reported viewing four original images; no human or AT acceptance claimed.",
+    "No keyboard, OS, touch, external source, mapper or upstream execution tested.",
+    "Short headings reduced query table width from438 to432, not to332; no zero-overflow claim."
+  ]
+}

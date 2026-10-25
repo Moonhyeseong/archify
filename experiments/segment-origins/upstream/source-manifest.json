@@ -1,0 +1,33 @@
+{
+  "repository": "https://github.com/jridgewell/sourcemaps",
+  "revision": "b7600158f4de012d246b7834a73c7c2190e75136",
+  "license": "MIT; entire packages/trace-mapping/LICENSE retained",
+  "scope": "Complete upstream source files; data/expected from synthetic unit fixture, not this run output",
+  "files": [
+    {
+      "path": "packages/trace-mapping/LICENSE",
+      "bytes": 1080,
+      "sha256": "769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c"
+    },
+    {
+      "path": "packages/trace-mapping/test/trace-mapping.test.ts",
+      "bytes": 34534,
+      "sha256": "e8e50397fc96d6fac2b534be35057e867d1745bef10ba0b4d330872b9cd25972"
+    },
+    {
+      "path": "packages/trace-mapping/src/trace-mapping.ts",
+      "bytes": 24934,
+      "sha256": "e45736cfe634564cbd3fc54f746fc23104f4e8ae82014dd492ad62384e7befa4"
+    },
+    {
+      "path": "packages/trace-mapping/src/binary-search.ts",
+      "bytes": 3082,
+      "sha256": "8e7eb5c2efac583fab19d04082b16431e5914b3b237c1af5a59f8d1b6b88fbd8"
+    },
+    {
+      "path": "packages/trace-mapping/src/sourcemap-segment.ts",
+      "bytes": 890,
+      "sha256": "9290f5ab37493ac396dd4f5abff578a9d6a340394c8de8eb9c957367fb8cebf3"
+    }
+  ]
+}

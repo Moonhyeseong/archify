@@ -1,0 +1,240 @@
+{
+  "kind": "authored fixed projection from upstream test; not a source-map execution",
+  "upstreamTest": "packages/trace-mapping/test/trace-mapping.test.ts",
+  "mapSourceLines": [
+    29,
+    71
+  ],
+  "expectedSourceLines": [
+    251,
+    286
+  ],
+  "coordinateContract": {
+    "originalPositionFor": {
+      "lineBase": 1,
+      "columnBase": 0
+    },
+    "decodedSegments": {
+      "lineBase": 0,
+      "columnBase": 0
+    }
+  },
+  "decodedMap": {
+    "version": 3,
+    "file": "output.js",
+    "sources": [
+      "input.js"
+    ],
+    "sourceRoot": "https://astexplorer.net/",
+    "names": [
+      "foo",
+      "bar",
+      "Error"
+    ],
+    "mappings": [
+      [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          9,
+          0,
+          0,
+          9,
+          0
+        ],
+        [
+          12,
+          0,
+          0,
+          0
+        ],
+        [
+          13,
+          0,
+          0,
+          13,
+          1
+        ],
+        [
+          16,
+          0,
+          0,
+          0
+        ],
+        [
+          18,
+          0,
+          0,
+          33
+        ]
+      ],
+      [
+        [
+          4,
+          0,
+          1,
+          4
+        ],
+        [
+          8,
+          0,
+          1,
+          10
+        ],
+        [
+          12,
+          0,
+          1,
+          14,
+          2
+        ],
+        [
+          17,
+          0,
+          1,
+          10
+        ],
+        [
+          18,
+          0,
+          1,
+          20
+        ],
+        [
+          32,
+          0,
+          1,
+          10
+        ],
+        [
+          33,
+          0,
+          1,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          2,
+          1
+        ]
+      ],
+      [],
+      [
+        [
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          3,
+          3
+        ]
+      ],
+      [
+        [
+          0
+        ]
+      ]
+    ],
+    "sourcesContent": [
+      "function foo(bar: number): never {\n    throw new Error('Intentional.');\n}\nfoo();"
+    ]
+  },
+  "upstreamAssertions": [
+    {
+      "id": "default",
+      "query": {
+        "line": 2,
+        "column": 13
+      },
+      "expected": {
+        "source": "https://astexplorer.net/input.js",
+        "line": 2,
+        "column": 14,
+        "name": "Error"
+      }
+    },
+    {
+      "id": "explicit-glb",
+      "query": {
+        "line": 2,
+        "column": 13,
+        "bias": "GREATEST_LOWER_BOUND"
+      },
+      "expected": {
+        "source": "https://astexplorer.net/input.js",
+        "line": 2,
+        "column": 14,
+        "name": "Error"
+      }
+    },
+    {
+      "id": "lub",
+      "query": {
+        "line": 2,
+        "column": 13,
+        "bias": "LEAST_UPPER_BOUND"
+      },
+      "expected": {
+        "source": "https://astexplorer.net/input.js",
+        "line": 2,
+        "column": 10,
+        "name": null
+      }
+    },
+    {
+      "id": "outside",
+      "query": {
+        "line": 100,
+        "column": 13
+      },
+      "expected": {
+        "source": null,
+        "line": null,
+        "column": null,
+        "name": null
+      }
+    }
+  ],
+  "authorSelectedSegmentExplanation": [
+    {
+      "displayRow": "default / GLB",
+      "assertionIDs": [
+        "default",
+        "explicit-glb"
+      ],
+      "segmentPointer": "/decodedMap/mappings/1/2"
+    },
+    {
+      "displayRow": "LUB",
+      "assertionIDs": [
+        "lub"
+      ],
+      "segmentPointer": "/decodedMap/mappings/1/3"
+    },
+    {
+      "displayRow": "outside",
+      "assertionIDs": [
+        "outside"
+      ],
+      "segmentPointer": null
+    }
+  ],
+  "limits": [
+    "No generated output.js file supplied with this fixture.",
+    "sourcesContent is a map test field, not Git-verified input.js.",
+    "This fixture has no rangeMappings metadata.",
+    "Selection pointers are author explanation checked against consumer source, not recorded upstream trace."
+  ]
+}

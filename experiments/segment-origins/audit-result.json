@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "scope": "fixed byte identity and rendered-content binding only; not source-map evaluation, upstream test execution or browser acceptance",
+  "checks": [
+    "five complete fixed upstream source/license byte bindings",
+    "frozen authored projection identity, independently source-reviewed",
+    "three displayed queries retain all four upstream expected assertions",
+    "seven displayed segments preserve declared fields and line-base conversion",
+    "all six generated lines preserved, including empty and one-field forms",
+    "rendered JSON string decodes to complete map sourcesContent with three LF",
+    "range and virtual-source boundaries remain explicit; no private paths"
+  ]
+}
