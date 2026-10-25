@@ -10,7 +10,7 @@
 
 2026-10-25 16:18（台北）再次核对：dev 已合入 [#1100](https://github.com/tt-a1i/archify/pull/1100)，推进到 [`67f12389`](https://github.com/tt-a1i/archify/commit/67f12389212c54b3122da60e2813c7f8dab7ab2f)，main 仍为 `51a29177`。这次修改 finalize 的源码范围修复、候选文件保留及相关交付逻辑；Copy identity、CLI reading tour 和 Clipboard outcome 保留实际冻结的 `3f95f034` 基线，不把既有结果改称新 dev 验证。
 
-## 已推送的 37 个实验
+## 已推送的 39 个实验
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
@@ -43,7 +43,7 @@
 | [Waterfall status text](https://github.com/tt-a1i/archify/tree/codex/lab-waterfall-status/experiments/waterfall-status) | 已提供error/cancelled同时显示在行尾、节点说明和可访问名称 | `68311bb8` | [新dev实际前后图](https://github.com/tt-a1i/archify/tree/codex/lab-waterfall-status/experiments/waterfall-status/refresh-dev-10b4) | 基线10b4；34focused/core，XML初缺依赖后单独3pass；原生/精确ZIP四阶段；无状态两例相同；7真实图/DOM与AX分列；构造输入、非真人AT |
 | [Retained size](https://github.com/tt-a1i/archify/tree/codex/lab-retained-size/experiments/retained-size) | Twiggy自身165B+直接支配子项4B=保留169B，避免跨层重复计数 | `a0c76fc8` | [实际解释页](https://github.com/tt-a1i/archify/blob/codex/lab-retained-size/experiments/retained-size/screenshots/explanation.png) | 零共享代码；固定上游golden；Tree四阶段、Explainer三阶段通过/自动browser未跑；单一模型绑定已修，旧图保留；非删减实测 |
 | [Lasso witness](https://github.com/tt-a1i/archify/tree/codex/lab-lasso-witness/experiments/lasso-witness) | 三位置反例保留有限前缀和无限后缀的显式闭合入口 | `900fe5a3` | [实际原文与图对照](https://github.com/tt-a1i/archify/tree/codex/lab-lasso-witness/experiments/lasso-witness) | 零共享代码；固定上游选段；3页四阶段通过；实际回环遮挡已通过输入修复，旧图保留；未运行checker/未验证用户收益 |
-| [Workflow self-loop](https://github.com/tt-a1i/archify/tree/codex/lab-workflow-self-loop/experiments/workflow-self-loop) | 同一节点同时作为起点和终点，正确外绕回接不再被误拒 | `eb299b15` | [实际回环](https://github.com/tt-a1i/archify/blob/codex/lab-workflow-self-loop/experiments/workflow-self-loop/screenshots/explicit-loop.png) | 局部compiler；145focused/core、独立8、四旧例逐字一致、ZIP/抽包四阶段通过；必要折返守卫，既有auto候选也可用，未扩搜索 |
+| [Workflow self-loop](https://github.com/tt-a1i/archify/tree/codex/lab-workflow-self-loop/experiments/workflow-self-loop) | 同节点双端接触保留合法自环，仍拒绝中段碰撞及立即折返 | `9578b8e4` | [新dev实际自环与证据](https://github.com/tt-a1i/archify/tree/codex/lab-workflow-self-loop/experiments/workflow-self-loop/refresh-dev-10b4) | 基线10b4真实拒绝且无HTML；候选/精确ZIP四阶段0诊断、148focused、4generated通过；4shipped SVG/receipt相同；3实图；构造几何回归，不称运行trace或作者节时 |
 | [Plan row counts](https://github.com/tt-a1i/archify/tree/codex/lab-plan-row-counts/experiments/plan-row-counts) | 每次平均3行×352循环≈1056次输出，保留局部估计差异 | `91e2ffad` | [实际解释页](https://github.com/tt-a1i/archify/blob/codex/lab-plan-row-counts/experiments/plan-row-counts/screenshots/explainer.png) | 零共享代码；固定PEV2样例3节点；Tree四阶段、Explainer三阶段通过/自动browser未跑；非SQL执行/unique rows/调优证明 |
 | [Diff line numbers](https://github.com/tt-a1i/archify/tree/codex/lab-diff-line-numbers/experiments/diff-line-numbers) | diff行号保持完整单行，长代码仍可横向滚动 | `28f9f95d` | [新dev实际对照](https://github.com/tt-a1i/archify/blob/codex/lab-diff-line-numbers/experiments/diff-line-numbers/dev10b4/screenshots/candidate-1280-light.png) | 已整合10b4；单CSS、25focused/19core/generated、双ZIP/解包通过；8臂DOM 30拆行→0、4新图；两页3静态gate/同7writing warnings，完整browsergate未跑；4docs保留10b历史 |
 | [Keyboard traversal](https://github.com/tt-a1i/archify/tree/codex/lab-keyboard-traversal/experiments/keyboard-traversal) | 纳入实际Tab额外停点，末尾可达控件不再因过早停止被误报 | `d9308631` | [实际第65步到达footer](https://github.com/tt-a1i/archify/blob/codex/lab-keyboard-traversal/experiments/keyboard-traversal/screenshots/tab-65-footer.png) | 最终focused11、v3算法整file19复用、core19、canonical双ZIP/抽包通过；固定HTML四视口均50/50且0诊断；iframe/date/trap/无限焦点边界保留；非PR验收 |
@@ -55,6 +55,8 @@
 | [Source keyboard activation](https://github.com/tt-a1i/archify/tree/codex/lab-source-keyboard/experiments/source-keyboard) | 同一源码预览节点的Enter/Space执行已有鼠标开原图动作，AX提供button语义 | `d81830d3` | [实际Enter打开结果](https://github.com/tt-a1i/archify/blob/codex/lab-source-keyboard/experiments/source-keyboard/screenshots/candidate-enter-viewer.png) | 基线10b4；6browser/15renderer/19core、生成/235项ZIP通过；真实前后AX/按键/返回与5图；Tab及focus原本已有，误判已撤回；4docs继承freshness单列，无AT接受 |
 | [Notebook occurrences](https://github.com/tt-a1i/archify/tree/codex/lab-notebook-occurrences/experiments/notebook-occurrences) | 六个重复文本cell按位置保留，分清源码改变与保存输出改变 | `2090b0ff` | [实际六行对照页](https://github.com/tt-a1i/archify/blob/codex/lab-notebook-occurrences/experiments/notebook-occurrences/screenshots/explainer-overview.png) | 内容限定固定nbdime三完整fixture；11事实审计，Tree四阶段/Explainer三阶段且browser未跑；4真实图/DOM字段核实；无kernel/nbdime执行、稳定ID或因果推断 |
 | [Config origins](https://github.com/tt-a1i/archify/tree/codex/lab-config-origins/experiments/config-origins) | 区分provider声明、幸存字段与错误归属，解释join的max=20为何未修复整体约束 | `14867942` | [实际来源对照](https://github.com/tt-a1i/archify/blob/codex/lab-config-origins/experiments/config-origins/screenshots/overview.png) | 内容限定固定Figment完整测试；7原件/6源码摘录核对、3静态gate通过/browser未请求；3实图和hover/Escape；未执行Rust/provider或声称配置文件行号 |
+| [Benchmark reading](https://github.com/tt-a1i/archify/tree/codex/lab-benchmark-reading/experiments/benchmark-reading) | 四组median与CI/p/n/~并排，区分中心值变化与上游比较结论 | `7b8258cd` | [实际柱图与邻表](https://github.com/tt-a1i/archify/blob/codex/lab-benchmark-reading/experiments/benchmark-reading/screenshots/overview.png) | 固定benchstat完整old/new/CSV与40值；10事实审计、3静态gate通过/browser未跑、3实图；不重算统计、不称本轮benchmark或版本普遍收益 |
+| [Task occurrences](https://github.com/tt-a1i/archify/tree/codex/lab-task-occurrences/experiments/task-occurrences) | 11打印位置对应10身份，两个compileJava位置定位同一双父节点 | `caffb4aa` | [实际位置与身份页](https://github.com/tt-a1i/archify/blob/codex/lab-task-occurrences/experiments/task-occurrences/screenshots/overview.png) | 固定Gradle完整8文件fixture/14原件/5源码；原生四阶段、解释页三阶段通过但16键盘诊断；5实图/两次pointer定位；未执行Gradle，打印数不当执行数 |
 
 这三十三项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
 
@@ -120,6 +122,8 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 2026-10-25 本次增量核对Finder `e219bc5b`、Config origins `14867942`：远端head均一致，精确head的Actions runs/check-runs均为0；dev仍10b4、main仍51a29177。Config为第37个实验，图片浏览页仍固定35项，新项可从表格直达。
 
+2026-10-25 本次核Workflow新head `9578b8e4`、Benchmark reading `7b8258cd`、Task occurrences `caffb4aa`：远端head一致，精确head的Actions runs/check-runs均为0。Task首次push遇GitHub远端写pack失败，原提交不变，重新查询后重试成功。已发布总数39；固定图片页仍35项，准备下一批更新。
+
 ## 正在推进
 
 | 方向 | 来源与目标 | 状态 |
@@ -127,9 +131,10 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 新内容实验 | fq字节区间与位解释视图 | byte-views已推b844ecb2，计入第34项；完整97B官方fixture/golden与四张真实截图，冻结67f基线 |
 | 新产品实验 | source-only图节点的键盘激活 | d81830d3已推，计入第35项；真实基线可Tab但Enter/Space不激活，候选补等价动作与button角色；5图及独立审查完成 |
 | 已有候选刷新 | Diff行号 / Preview虚线文字 | 两条既有分支均已整合固定dev10b4并完成独立终审：28f9f95d/ca4baa1d已推，新旧证据身份分列 |
-| 已有候选刷新 | Waterfall状态 / Finder结果描述 | Waterfall已推68311bb8；Finder已推e219bc5b，独立审查与新基线实图/AX完成；Workflow自环正在补最终图绑定 |
-| 新一轮发现 | Shell / CSS / Notebook / 构建阅读 | 第9轮13个新来源，未增加实现；第10轮12个新来源，Notebook已推2090b0ff，task occurrence已修预览文字并补5实图，保留最终16键盘诊断；源码卡审计无确认新缺陷；第11轮配置来源已推14867942 |
-| 新一轮发现 | Benchmark / 语法 / 并发阅读 | 第12轮6新来源，benchstat四组median与原CI/p/n/~内容例正在制作；第13轮另两路排重调查 |
+| 已有候选刷新 | Waterfall状态 / Finder结果描述 | Waterfall已推68311bb8；Finder已推e219bc5b，独立审查与新基线实图/AX完成；Workflow自环已推9578b8e4，旧证据原字节保留 |
+| 新一轮发现 | Shell / CSS / Notebook / 构建阅读 | 第9轮13个新来源，未增加实现；第10轮12个新来源，Notebook已推2090b0ff，task occurrence已推caffb4aa并补5实图，保留最终16键盘诊断；源码卡审计无确认新缺陷；第11轮配置来源已推14867942 |
+| 新一轮发现 | Benchmark / 语法 / 并发阅读 | 第12轮6新来源，benchstat已推7b8258cd；第13轮语法/并发共4新来源，暂不增实现；第14轮继续图交互检索 |
+| 已有候选刷新 | Keyboard traversal / Clipboard outcome | 正在整合固定dev10b4；同一task页candidate实际41/41可达，原dev37/41，结果只记在checker分支；Clipboard受控API前后截图待完成 |
 | 既有实验真实输出 | Recipe stages / State contract | State官方fixture实导出已推f7269e09；Recipe官方test有效输入dump已推062dee5d，自然完整示例拒绝并保留；历史synthetic不改称实跑 |
 | 新发现修复 | Explainer复制结果与手工恢复 | Clipboard outcome已推送68866954，来源、基线/候选和实际截图见第33项 |
 | 浏览页更新 | 35项固定实验图片 | c23d585c已发布：35原图，当前11项观测/4新截图，390px和深色明确复用34同模板历史；固定来源与限制保留 |
@@ -201,6 +206,8 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 长源码与多来源交接窄审计 | [Source reading audit round 10](scouts/source-reading-audit-round10.md) |
 | 配置叠加、幸存值与错误来源 | [Config reading round 11](scouts/config-reading-round11.md) |
 | Benchmark中心值、区间与比较结论 | [Benchmark reading round 12](scouts/benchmark-reading-round12.md) |
+| Parser输出策略与共享森林计数 | [Parser reading round 13](scouts/parser-reading-round13.md) |
+| 创建关系、上下文与取消请求 | [Concurrency reading round 13](scouts/concurrency-reading-round13.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
 报告中的上游声明、局部源码核实、计划中的实验和已经执行的结果分别标注。未推荐方向也保留原因，避免反复研究；没有把上游宣传、星数或作者截图当作 Archify 的效果证明。
