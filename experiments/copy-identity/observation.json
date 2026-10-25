@@ -1,0 +1,199 @@
+{
+  "kind": "actual-stdlib-observation-of-fixed-teaching-construction",
+  "scope": "Four selected variables and reachable list identities only; no scalar identity claim or mutation",
+  "sourceSha256": "ea76c0f64542e239a7ab77e468564d5e3c358d8abdef80ba7b932c69ba2bd31b",
+  "constructionSha256": "ac39409f23f345c929565bc6bed8ca93de36085a31a33bd144c9cbe9849c7d3a",
+  "sourceLines": {
+    "first": 8,
+    "last": 13
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "version": "3.14.8"
+  },
+  "symbolPolicy": "A/B/C/P/Q/R/S are traversal labels, not addresses or persistent IDs",
+  "variableBindings": [
+    {
+      "variable": "a",
+      "target": "A"
+    },
+    {
+      "variable": "c1",
+      "target": "A"
+    },
+    {
+      "variable": "c2",
+      "target": "B"
+    },
+    {
+      "variable": "c3",
+      "target": "C"
+    }
+  ],
+  "lists": [
+    {
+      "symbol": "A",
+      "elements": [
+        {
+          "index": 0,
+          "listReference": "P"
+        },
+        {
+          "index": 1,
+          "listReference": "Q"
+        }
+      ]
+    },
+    {
+      "symbol": "B",
+      "elements": [
+        {
+          "index": 0,
+          "listReference": "P"
+        },
+        {
+          "index": 1,
+          "listReference": "Q"
+        }
+      ]
+    },
+    {
+      "symbol": "C",
+      "elements": [
+        {
+          "index": 0,
+          "listReference": "R"
+        },
+        {
+          "index": 1,
+          "listReference": "S"
+        }
+      ]
+    },
+    {
+      "symbol": "P",
+      "elements": [
+        {
+          "index": 0,
+          "embeddedValue": 1
+        },
+        {
+          "index": 1,
+          "embeddedValue": 2
+        }
+      ]
+    },
+    {
+      "symbol": "Q",
+      "elements": [
+        {
+          "index": 0,
+          "embeddedValue": "x"
+        },
+        {
+          "index": 1,
+          "embeddedValue": "y"
+        }
+      ]
+    },
+    {
+      "symbol": "R",
+      "elements": [
+        {
+          "index": 0,
+          "embeddedValue": 1
+        },
+        {
+          "index": 1,
+          "embeddedValue": 2
+        }
+      ]
+    },
+    {
+      "symbol": "S",
+      "elements": [
+        {
+          "index": 0,
+          "embeddedValue": "x"
+        },
+        {
+          "index": 1,
+          "embeddedValue": "y"
+        }
+      ]
+    }
+  ],
+  "listReferences": [
+    {
+      "from": "A",
+      "index": 0,
+      "to": "P"
+    },
+    {
+      "from": "A",
+      "index": 1,
+      "to": "Q"
+    },
+    {
+      "from": "B",
+      "index": 0,
+      "to": "P"
+    },
+    {
+      "from": "B",
+      "index": 1,
+      "to": "Q"
+    },
+    {
+      "from": "C",
+      "index": 0,
+      "to": "R"
+    },
+    {
+      "from": "C",
+      "index": 1,
+      "to": "S"
+    }
+  ],
+  "rootPairs": [
+    {
+      "left": "a",
+      "right": "c1",
+      "sameObject": true,
+      "equalContents": true
+    },
+    {
+      "left": "a",
+      "right": "c2",
+      "sameObject": false,
+      "equalContents": true
+    },
+    {
+      "left": "a",
+      "right": "c3",
+      "sameObject": false,
+      "equalContents": true
+    },
+    {
+      "left": "c1",
+      "right": "c2",
+      "sameObject": false,
+      "equalContents": true
+    },
+    {
+      "left": "c1",
+      "right": "c3",
+      "sameObject": false,
+      "equalContents": true
+    },
+    {
+      "left": "c2",
+      "right": "c3",
+      "sameObject": false,
+      "equalContents": true
+    }
+  ],
+  "upstreamToolImported": false,
+  "upstreamRenderCalled": false,
+  "mutationPerformed": false
+}

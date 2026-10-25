@@ -1,0 +1,86 @@
+{
+  "recordType": "derived binding of actual coordinating-agent Ego Chromium captures; original metadata outside checkout",
+  "records": [
+    {
+      "html": "output/explainer.html",
+      "htmlSha256": "5678a1593654dc53cc496085b28322a0fee7f1744294a86fbdfa18eea7602bfc",
+      "image": "screenshots/explainer.png",
+      "imageSha256": "4a767fe2840367b71f9d645b2dc07e4c009b770d126f5a3fb94721a84a009634",
+      "imageBytes": 251403,
+      "imageDimensions": {
+        "width": 1440,
+        "height": 2167
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "deviceScaleFactor": 1
+      },
+      "capturedAt": "2026-10-25T08:03:13.319Z",
+      "rootViewed": true,
+      "rawCaptureMetadataSha256": "916a639e6ec64f2783adc0634a931602fbb1900165b322dc2a59c099cb645fde",
+      "theme": "light",
+      "fullPage": true
+    },
+    {
+      "html": "output/copy-identity.html",
+      "htmlSha256": "f6b4a93babf1948a19a90c957a85d8115fa7b03920eb0a981086ccce6ff9dd75",
+      "image": "screenshots/native.png",
+      "imageSha256": "dda2834e1a955019b7410106b8dda9405a02113d61199518f43f6df07a2a51b2",
+      "imageBytes": 141495,
+      "imageDimensions": {
+        "width": 1440,
+        "height": 1452
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "deviceScaleFactor": 1
+      },
+      "capturedAt": "2026-10-25T08:03:47.231Z",
+      "rootViewed": true,
+      "rawCaptureMetadataSha256": "cbad1fcd544c4f18e44c8a99a67eec63d5cfdbb5329bed3c50c40bc979ad76ee",
+      "fullPage": true,
+      "state": {
+        "theme": "light",
+        "styleButton": "当前视觉风格：经典。选择视觉风格",
+        "width": 1440,
+        "scrollWidth": 1440
+      }
+    },
+    {
+      "html": "output/explainer.html",
+      "htmlSha256": "5678a1593654dc53cc496085b28322a0fee7f1744294a86fbdfa18eea7602bfc",
+      "image": "screenshots/source-card-hover.png",
+      "imageSha256": "aa9c923df16ac0bd411498f7efce193587c5f706ccbe3620001c023948c64ad1",
+      "imageBytes": 146510,
+      "imageDimensions": {
+        "width": 1440,
+        "height": 1100
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "deviceScaleFactor": 1
+      },
+      "capturedAt": "2026-10-25T08:06:08.227Z",
+      "rootViewed": true,
+      "rawCaptureMetadataSha256": "6e8b28939c557b7629a49ae71e566505e3c70100ba130feb0512342807d80b91",
+      "interaction": "pointer hover on construction citation, awaited visible card, then Escape",
+      "card": {
+        "visible": true,
+        "text": "memory_graph：原始构造 L8–13\nimages/copy_mutable.py:8–13\n1\n8a = [ [1, 2], ['x', 'y'] ] # a nested list (a list containing lists)\n9 \n10# three different ways to make a \"copy\" of 'a':\n11c1 = a\n12c2 = copy.copy(a) # equivalent to:  a.copy() a[:] list(a)\n13c3 = copy.deepcopy(a)\n固定在 97f39f7\n打开原文 ↗",
+        "link": "https://github.com/bterwijn/memory_graph/blob/97f39f7832c795ba74da442fb3bb06cdcf506674/images/copy_mutable.py#L8-L13"
+      },
+      "escaped": {
+        "cardHidden": true
+      }
+    }
+  ],
+  "sourceCardScope": "Actual pointer hover and Escape only; source URL not opened. No keyboard-focus, screen-reader or human acceptance claim.",
+  "initialFocusProbe": {
+    "cardVisible": false,
+    "acceptedAsSourceCardCapture": false,
+    "note": "Earlier focus attempt and its original image/metadata remain outside checkout; not substituted for the successful hover capture."
+  }
+}

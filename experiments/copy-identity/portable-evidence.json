@@ -1,0 +1,273 @@
+{
+  "recordType": "portable-derived-selected-evidence; not original finalize receipts",
+  "base": "3f95f0349c8276db71509ca239461b6fe9d00f9f",
+  "scope": "fixed teaching construction; actual local stdlib identity observation; no upstream visualization execution or mutation",
+  "sourceRepository": "bterwijn/memory_graph",
+  "sourceRevision": "97f39f7832c795ba74da442fb3bb06cdcf506674",
+  "sourceLicense": "BSD-2-Clause, complete source and license retained",
+  "software": "Base-generated Archify software declarations and notices unchanged",
+  "observation": {
+    "command": "python3 experiments/copy-identity/observe.py",
+    "exitCode": 0,
+    "stdoutPath": "observation.json",
+    "stdoutSha256": "3e7f936c0f3a967a3022300632a57442e993c1a590158000e67148ef7223acd7",
+    "observerSha256": "7b142d4c0d30b06cd122f33b49b096ba0eb12126e81da198aa55397282ae6da3",
+    "runtime": {
+      "implementation": "CPython",
+      "version": "3.14.8"
+    },
+    "constructionSha256": "ac39409f23f345c929565bc6bed8ca93de36085a31a33bd144c9cbe9849c7d3a",
+    "selectedVariables": 4,
+    "listIdentities": 7,
+    "variableBindings": 4,
+    "indexReferences": 6,
+    "sameOuterPairs": 1,
+    "allRootPairsContentEqual": true,
+    "addressesExported": false,
+    "upstreamToolImported": false,
+    "mutationPerformed": false
+  },
+  "sourceCard": {
+    "path": "images/copy_mutable.py",
+    "lines": [
+      8,
+      13
+    ],
+    "revision": "97f39f7832c795ba74da442fb3bb06cdcf506674",
+    "wholeFileSha256": "ea76c0f64542e239a7ab77e468564d5e3c358d8abdef80ba7b932c69ba2bd31b",
+    "wholeFileBytes": 398,
+    "excerptSha256": "4e88019a402c89269efe40bdc180408f0f6096e2993c42cb4273840cd9324032",
+    "note": "Card text is the exact selected lines without final newline; metadata SHA/bytes are the complete upstream file"
+  },
+  "finalizes": [
+    {
+      "type": "architecture",
+      "command": "node archify/bin/archify.mjs finalize architecture <owned-input> <public-output> --repo-root <fixed-upstream-git> --quality showcase --json --out-dir <private-receipts>",
+      "status": "pass",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "specificationSha256": "b4d7fc61a3b31f85bb3409f4cb00f89fc61c33832cae28ef8e5dbbcea8c350c1",
+      "artifactSha256": "f6b4a93babf1948a19a90c957a85d8115fa7b03920eb0a981086ccce6ff9dd75",
+      "rawStdoutSha256": "0c6dffba472bd3ff49d5aefc12f626217861ea2962432b41fffbd202895c2f9f",
+      "diagnostics": [],
+      "visualReview": "not-requested",
+      "browserCheck": {
+        "requested": true,
+        "ran": true
+      }
+    },
+    {
+      "type": "explainer",
+      "command": "node archify/bin/archify.mjs finalize explainer <owned-input> <public-output> --repo-root <fixed-upstream-git> --quality showcase --browser-check --json --out-dir <private-receipts>",
+      "status": "pass",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "specificationSha256": "0030829555f46ba925423b35370dd4756a30eded436e37859068c5d88e5ec84d",
+      "artifactSha256": "5678a1593654dc53cc496085b28322a0fee7f1744294a86fbdfa18eea7602bfc",
+      "rawStdoutSha256": "f4132506fe464c39b4437c5613f2cdb181058012de5af3bd4ace7fdc173e3804",
+      "diagnostics": [],
+      "visualReview": "not-requested",
+      "browserCheck": {
+        "requested": true,
+        "ran": true
+      }
+    }
+  ],
+  "publicRender": [
+    {
+      "type": "architecture",
+      "quality": "showcase",
+      "exitCode": 0,
+      "stdoutSha256": "bedf3c7b225481122a7c5f1d26ab44c566367c57f31b6fb0438f6bd835470306",
+      "htmlIdenticalToFinalized": true
+    },
+    {
+      "type": "explainer",
+      "quality": "showcase",
+      "exitCode": 0,
+      "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "htmlIdenticalToFinalized": false,
+      "note": "Separate output location; no byte-identity claim"
+    }
+  ],
+  "contentAudit": {
+    "command": "node experiments/copy-identity/audit.mjs",
+    "exitCode": 0,
+    "ok": true,
+    "checks": [
+      "complete fixed upstream teaching source and BSD license match their bytes and hashes",
+      "observed stdout binds the exact copied construction; no upstream render or mutation is claimed",
+      "four variables have equal contents, but only a/c1 share the outer identity; seven lists and six index references",
+      "native model preserves exactly four bindings and six index references without duplicate shared targets",
+      "Explainer freezes the one native JSON and exact Git-pinned source-card excerpt",
+      "both public HTML artifacts contain no local absolute filesystem paths"
+    ]
+  },
+  "failures": [
+    {
+      "run": "native-1",
+      "status": "fail",
+      "failedStage": "validate",
+      "gates": {
+        "validate": "fail",
+        "deliver": "not-run",
+        "check": "not-run",
+        "browser-check": "not-run"
+      },
+      "specificationSha256": "b2dbddd6f8ebc991b77463124f2e49e0f8d6e916a46fb944268d7a14e525fb5e",
+      "artifactSha256": null,
+      "diagnosticCodes": [
+        "schema/additionalProperties"
+      ],
+      "rawStdoutSha256": "98e742fd8e061ac35ec8e04e2e2682839a838e9dbfaf6ac1329ecdfcb83d0674"
+    },
+    {
+      "run": "explainer-1",
+      "status": "fail",
+      "failedStage": "browser-check",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "fail"
+      },
+      "specificationSha256": "0030829555f46ba925423b35370dd4756a30eded436e37859068c5d88e5ec84d",
+      "artifactSha256": "2643aff099d5393437d107c3561fd6cc78558c5ce4581ee90037206106413610",
+      "diagnosticCodes": [
+        "explainer/browser-readability"
+      ],
+      "rawStdoutSha256": "fdb33a2a5ed78685bd0195e7fafcac4e849e6c69329f74aeb96e7a67e11d5414"
+    }
+  ],
+  "otherInitialFailures": [
+    {
+      "run": "content-audit-first",
+      "evidenceType": "transcribed actual tool error; original stderr not saved as a separate receipt",
+      "reason": "Assertion 2 !== 1: initially assumed only the native dependency; Git source file is an additional legitimate dependency",
+      "repair": "Verify one diagram dependency and one exact Git-source dependency separately",
+      "originalAuditSha256": "c1314a492b1cc5c9daba7bad704261875e35ee7c3a90c1bf11f09024f64c6cae"
+    },
+    {
+      "run": "public-render-explainer-default-profile",
+      "evidenceType": "transcribed actual stderr; original stderr not saved as a separate file",
+      "exitCode": 1,
+      "quality": "default standard",
+      "diagnosticCodes": [
+        "explainer/diagram-render"
+      ],
+      "reason": "Two label-overlap diagnostics at list-A and list-R",
+      "repair": "Explicit showcase matches the finalized profile; no input or generated-byte modification"
+    }
+  ],
+  "preservedPriorOutput": {
+    "kind": "private original byte preservation",
+    "nativeBeforeReadabilitySha256": "1eb763c9b1719118e0a013880fa0e1ec69cc1851dd6585fdda7876c20b98eb4e",
+    "pageBeforeReadabilitySha256": "2643aff099d5393437d107c3561fd6cc78558c5ce4581ee90037206106413610",
+    "nativeInputBeforeReadabilitySha256": "b5a0cb51edf929ac75fe700e040646836ccf25aa71d2cae305c1c76708c85241",
+    "scope": "Only position repair after first page browser-readability failure; topology unchanged"
+  },
+  "screenshots": {
+    "status": "actual coordinating-agent Ego Chromium capture and visual review",
+    "capture": "screenshots/capture.json",
+    "count": 3,
+    "scope": "native overview, full page, actual pointer hover source card and Escape",
+    "initialFocusProbe": "cardVisible false; excluded from successful source-card images, originals retained outside checkout",
+    "humanAcceptance": "not-claimed",
+    "screenReaderAcceptance": "not-claimed"
+  },
+  "tests": "No product behavior changed; fixed-content audit and actual render/finalize used, no product/full suite",
+  "rawReceipts": "Original stdout/delivery/finalize/browser records remain outside checkout; no local paths reproduced here",
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "fb42bd82a3c4f447bc3b01b47964d9cf93f00be78d8969afbaa37bee7887da51",
+      "bytes": 8613
+    },
+    {
+      "path": "audit.mjs",
+      "sha256": "7c74f29fadb2e9265fc6b599503d8572e49ddd7ea1a3ad456c6da02092ff9aef",
+      "bytes": 4571
+    },
+    {
+      "path": "copy-identity.archify.md",
+      "sha256": "0030829555f46ba925423b35370dd4756a30eded436e37859068c5d88e5ec84d",
+      "bytes": 1889
+    },
+    {
+      "path": "copy-identity.architecture.json",
+      "sha256": "b4d7fc61a3b31f85bb3409f4cb00f89fc61c33832cae28ef8e5dbbcea8c350c1",
+      "bytes": 5904
+    },
+    {
+      "path": "observation.json",
+      "sha256": "3e7f936c0f3a967a3022300632a57442e993c1a590158000e67148ef7223acd7",
+      "bytes": 3499
+    },
+    {
+      "path": "observe.py",
+      "sha256": "7b142d4c0d30b06cd122f33b49b096ba0eb12126e81da198aa55397282ae6da3",
+      "bytes": 3262
+    },
+    {
+      "path": "output/copy-identity.html",
+      "sha256": "f6b4a93babf1948a19a90c957a85d8115fa7b03920eb0a981086ccce6ff9dd75",
+      "bytes": 852221
+    },
+    {
+      "path": "output/explainer.html",
+      "sha256": "5678a1593654dc53cc496085b28322a0fee7f1744294a86fbdfa18eea7602bfc",
+      "bytes": 578405
+    },
+    {
+      "path": "screenshots/capture.json",
+      "sha256": "26f56fe3333105ee579cc9186e725abeb8f5a528f4e21bba58c8fe3e7336651c",
+      "bytes": 3472
+    },
+    {
+      "path": "screenshots/explainer.png",
+      "sha256": "4a767fe2840367b71f9d645b2dc07e4c009b770d126f5a3fb94721a84a009634",
+      "bytes": 251403
+    },
+    {
+      "path": "screenshots/native.png",
+      "sha256": "dda2834e1a955019b7410106b8dda9405a02113d61199518f43f6df07a2a51b2",
+      "bytes": 141495
+    },
+    {
+      "path": "screenshots/source-card-hover.png",
+      "sha256": "aa9c923df16ac0bd411498f7efce193587c5f706ccbe3620001c023948c64ad1",
+      "bytes": 146510
+    },
+    {
+      "path": "source/LICENSE.txt",
+      "sha256": "96105f857e3226eb7ff9a84f02c1fced7864fb4d437f5ed2b5df97d57cbaae15",
+      "bytes": 1314
+    },
+    {
+      "path": "source/copy_mutable.py",
+      "sha256": "ea76c0f64542e239a7ab77e468564d5e3c358d8abdef80ba7b932c69ba2bd31b",
+      "bytes": 398
+    },
+    {
+      "path": "source/manifest.json",
+      "sha256": "1502e2b0297c67275fea91bf569029f4d4fe5ffe72d577e7f034643adc396384",
+      "bytes": 843
+    }
+  ],
+  "whitespace": {
+    "findingsByFile": {
+      "output/copy-identity.html": 15,
+      "output/explainer.html": 12
+    },
+    "excludingGeneratedHtml": "pass: no trailing whitespace in authored/source text",
+    "generatedBytesRewritten": false
+  }
+}

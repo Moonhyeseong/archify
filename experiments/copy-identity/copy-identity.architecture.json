@@ -1,0 +1,330 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "内容相等，列表身份不同",
+    "subtitle": "固定教学构造的独立观察 · 四个变量 / 七个 list · 代号不是地址",
+    "locale": "zh-CN",
+    "output": "experiments/copy-identity/output/copy-identity.html",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "repository": {
+      "url": "https://github.com/bterwijn/memory_graph",
+      "revision": "97f39f7832c795ba74da442fb3bb06cdcf506674"
+    },
+    "legend": {
+      "entries": {
+        "external": {
+          "label": "变量名"
+        },
+        "backend": {
+          "label": "列表对象"
+        }
+      }
+    }
+  },
+  "components": [
+    {
+      "id": "var-a",
+      "type": "external",
+      "label": "a",
+      "sublabel": "原始变量",
+      "pos": [
+        40,
+        40
+      ],
+      "size": [
+        130,
+        64
+      ],
+      "sources": [
+        {
+          "path": "images/copy_mutable.py",
+          "line": 8
+        }
+      ]
+    },
+    {
+      "id": "var-c1",
+      "type": "external",
+      "label": "c1",
+      "sublabel": "直接赋值",
+      "pos": [
+        40,
+        180
+      ],
+      "size": [
+        130,
+        64
+      ],
+      "sources": [
+        {
+          "path": "images/copy_mutable.py",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "id": "var-c2",
+      "type": "external",
+      "label": "c2",
+      "sublabel": "浅拷贝",
+      "pos": [
+        665,
+        410
+      ],
+      "size": [
+        130,
+        64
+      ],
+      "sources": [
+        {
+          "path": "images/copy_mutable.py",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "id": "var-c3",
+      "type": "external",
+      "label": "c3",
+      "sublabel": "深拷贝",
+      "pos": [
+        40,
+        550
+      ],
+      "size": [
+        130,
+        64
+      ],
+      "sources": [
+        {
+          "path": "images/copy_mutable.py",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "id": "list-A",
+      "type": "backend",
+      "label": "列表 A",
+      "sublabel": "外层 · a / c1",
+      "pos": [
+        300,
+        70
+      ],
+      "size": [
+        160,
+        74
+      ],
+      "sources": [
+        {
+          "path": "images/copy_mutable.py",
+          "line": 8
+        }
+      ]
+    },
+    {
+      "id": "list-B",
+      "type": "backend",
+      "label": "列表 B",
+      "sublabel": "浅拷贝的外层",
+      "pos": [
+        650,
+        300
+      ],
+      "size": [
+        160,
+        74
+      ],
+      "sources": [
+        {
+          "path": "images/copy_mutable.py",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "id": "list-C",
+      "type": "backend",
+      "label": "列表 C",
+      "sublabel": "深拷贝的外层",
+      "pos": [
+        300,
+        550
+      ],
+      "size": [
+        160,
+        74
+      ],
+      "sources": [
+        {
+          "path": "images/copy_mutable.py",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "id": "list-P",
+      "type": "backend",
+      "label": "列表 P",
+      "sublabel": "[1, 2]",
+      "pos": [
+        650,
+        70
+      ],
+      "size": [
+        160,
+        74
+      ],
+      "sources": [
+        {
+          "path": "images/copy_mutable.py",
+          "line": 8
+        }
+      ]
+    },
+    {
+      "id": "list-Q",
+      "type": "backend",
+      "label": "列表 Q",
+      "sublabel": "['x', 'y']",
+      "pos": [
+        300,
+        300
+      ],
+      "size": [
+        160,
+        74
+      ],
+      "sources": [
+        {
+          "path": "images/copy_mutable.py",
+          "line": 8
+        }
+      ]
+    },
+    {
+      "id": "list-R",
+      "type": "backend",
+      "label": "列表 R",
+      "sublabel": "[1, 2]",
+      "pos": [
+        650,
+        490
+      ],
+      "size": [
+        160,
+        74
+      ],
+      "sources": [
+        {
+          "path": "images/copy_mutable.py",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "id": "list-S",
+      "type": "backend",
+      "label": "列表 S",
+      "sublabel": "['x', 'y']",
+      "pos": [
+        650,
+        650
+      ],
+      "size": [
+        160,
+        74
+      ],
+      "sources": [
+        {
+          "path": "images/copy_mutable.py",
+          "line": 13
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "bind-a",
+      "from": "var-a",
+      "to": "list-A",
+      "label": "绑定"
+    },
+    {
+      "id": "bind-c1",
+      "from": "var-c1",
+      "to": "list-A",
+      "label": "绑定"
+    },
+    {
+      "id": "bind-c2",
+      "from": "var-c2",
+      "to": "list-B",
+      "label": "绑定"
+    },
+    {
+      "id": "bind-c3",
+      "from": "var-c3",
+      "to": "list-C",
+      "label": "绑定"
+    },
+    {
+      "id": "index-A-0",
+      "from": "list-A",
+      "to": "list-P",
+      "label": "[0]"
+    },
+    {
+      "id": "index-A-1",
+      "from": "list-A",
+      "to": "list-Q",
+      "label": "[1]"
+    },
+    {
+      "id": "index-B-0",
+      "from": "list-B",
+      "to": "list-P",
+      "label": "[0]"
+    },
+    {
+      "id": "index-B-1",
+      "from": "list-B",
+      "to": "list-Q",
+      "label": "[1]"
+    },
+    {
+      "id": "index-C-0",
+      "from": "list-C",
+      "to": "list-R",
+      "label": "[0]"
+    },
+    {
+      "id": "index-C-1",
+      "from": "list-C",
+      "to": "list-S",
+      "label": "[1]"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "看箭头汇入哪里",
+      "items": [
+        "a / c1 汇入同一外层 A",
+        "A / B 的元素汇入同一 P / Q",
+        "C 的元素指向不同的 R / S"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "范围与身份",
+      "items": [
+        "只统计七个 list，不是整个对象堆",
+        "标量内嵌为值，不判断其身份",
+        "字母是阅读代号，不是内存地址"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "repository": "bterwijn/memory_graph",
+  "commit": "97f39f7832c795ba74da442fb3bb06cdcf506674",
+  "classification": "upstream-committed-teaching-example",
+  "license": "BSD-2-Clause",
+  "transformations": "none; complete original bytes",
+  "files": [
+    {
+      "upstreamPath": "images/copy_mutable.py",
+      "localPath": "source/copy_mutable.py",
+      "sha256": "ea76c0f64542e239a7ab77e468564d5e3c358d8abdef80ba7b932c69ba2bd31b",
+      "bytes": 398
+    },
+    {
+      "upstreamPath": "LICENSE.txt",
+      "localPath": "source/LICENSE.txt",
+      "sha256": "96105f857e3226eb7ff9a84f02c1fced7864fb4d437f5ed2b5df97d57cbaae15",
+      "bytes": 1314
+    }
+  ],
+  "constructionLines": {
+    "first": 8,
+    "last": 13
+  },
+  "upstreamToolExecution": "not-run",
+  "sourceGeneration": "committed teaching source, not a captured user workload"
+}
