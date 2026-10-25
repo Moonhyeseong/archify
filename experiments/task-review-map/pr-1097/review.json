@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "repository": "https://github.com/tt-a1i/archify",
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "head": "5f012ab74911781e4a2a38fba791801d6e5afef7",
+  "title": "PR #1097：诊断修复、测试同步与尚未核对的安装包",
+  "author": "Codex 独立阅读声明（依据公开 PR，未经原作者确认）",
+  "nodes": [
+    {
+      "id": "before-normalization",
+      "label": "原逻辑：换行被正规化消耗",
+      "why": "我的阅读：原代码替换 showData 与 slice 文本时没有单独保留已接受的换行。此引用仅供核对被替换的源码，不代表本实验执行过错误复现。",
+      "ref": {
+        "path": "archify/explainer/charts.mjs",
+        "side": "base",
+        "start": 20,
+        "end": 20
+      }
+    },
+    {
+      "id": "preserve-lines",
+      "label": "修复：保留已接受换行",
+      "why": "我的阅读：新增 gap/breaks 处理保留 CR/LF，使诊断可继续映射作者行。这里只核对变更引用，不能据此证明所有诊断正确。",
+      "ref": {
+        "path": "archify/explainer/charts.mjs",
+        "side": "head",
+        "start": 20,
+        "end": 25
+      }
+    },
+    {
+      "id": "finalize-regression",
+      "label": "公开 finalize 诊断回归",
+      "why": "我的阅读：测试源码增加两种 malformed pie 输入，要求失败、原始行号和不交付 HTML。这是测试源码关联，本实验未执行 PR 的测试。",
+      "ref": {
+        "path": "test/explainer-charts.test.mjs",
+        "side": "head",
+        "start": 35,
+        "end": 41
+      }
+    },
+    {
+      "id": "compile-regression",
+      "label": "编译诊断与有效 SVG 对照",
+      "why": "我的阅读：新增 LF/CRLF 诊断行与有效格式 SVG 等价断言。这些断言表达测试意图，不是本实验取得的执行结果。",
+      "ref": {
+        "path": "test/explainer-charts.test.mjs",
+        "side": "head",
+        "start": 87,
+        "end": 118
+      }
+    },
+    {
+      "id": "before-close",
+      "label": "原测试：关闭后立即切换",
+      "why": "我的阅读：原测试关闭弹窗后直接聚焦下一步骤；引用这一删除行以区分产品修复与测试同步调整。",
+      "ref": {
+        "path": "test/explainer-browser.test.mjs",
+        "side": "base",
+        "start": 101,
+        "end": 101
+      }
+    },
+    {
+      "id": "await-close",
+      "label": "测试同步：等待 close 事件",
+      "why": "我的阅读：新增 closeStep 等待 close 事件，再进行下一步操作；此 hunk 是浏览器测试同步调整，不是 pie runtime 实现，也不能据此声称 CI 已通过。",
+      "ref": {
+        "path": "test/explainer-browser.test.mjs",
+        "side": "head",
+        "start": 99,
+        "end": 109
+      }
+    }
+  ],
+  "edges": [
+    {
+      "to": "preserve-lines",
+      "label": "声明：替换",
+      "from": "before-normalization"
+    },
+    {
+      "to": "preserve-lines",
+      "label": "声明：诊断测试关联",
+      "from": "finalize-regression"
+    },
+    {
+      "to": "preserve-lines",
+      "label": "声明：编译测试关联",
+      "from": "compile-regression"
+    },
+    {
+      "to": "await-close",
+      "label": "声明：测试同步替换",
+      "from": "before-close"
+    }
+  ]
+}

@@ -72,3 +72,20 @@ Focused simplification 检查：一份 mapping report 是唯一事实来源，Ex
 ![Change map with a deliberately unexplained hunk](screenshots/omitted.png)
 
 [完整引用版本截图](screenshots/complete.png) · [捕获方法及文件 hash](screenshots/capture.json)。协调 Agent 已查看两张完整页面，未解释 hunk 与 Agent 声明边界均可见；这没有消除上文记录的自动键盘遍历失败。独立 Codex 复核了 Git 范围/config 修复与最终哈希，未发现剩余代码阻塞。人类验收仍待进行。
+
+## 完整真实 PR 补例：#1097
+
+[PR #1097 阅读说明与来源](pr-1097/README.md) · [实际页面](pr-1097/output/review.html) · [独立证据摘要](pr-1097/evidence.json)。现有主例已经是真实历史提交；本例增加的是完整 PR 中“诊断修复 / 测试同步 / 未解析安装包”的审阅边界，不以更多截图替代验证。固定 `82c7e0f089a02a4d514714adf37dc2061682da5f` → `5f012ab74911781e4a2a38fba791801d6e5afef7`，六个 Codex 声明均未经原 PR 作者确认。
+
+完整四文件未过滤：映射退出 1，五个文本 hunk 变更行已记账，约 5.4 MB ZIP 超出现有 1 MiB blob 限额、仍 unresolved，因此 `mappingComplete=false`。这不是源码缺陷判定；测试引用不表示测试执行。本例未运行 PR 代码或测试。公开 PR 的必要原声明、抓取时点与完整正文 hash 单列于 [source.json](pr-1097/source.json)。
+
+本例单独执行原生 finalize：validate/deliver/check 通过，browser-check 失败，报告键盘遍历及预览文字尺寸/fit 问题；不与旧 HTML 的浏览器证据混用。adapter 未修改，SHA-256：`c8392ace0c3402915b054c89458295f1da6081c07dc882c91602e1fde1ca4aab`；本例 HTML SHA-256：`97a603834f49fa6c9d53d46f60ce488cb8cd97f6c4b14450c7f482fab89bacaf`。原始回执保留 checkout 外；本例截图见下方，人类验收尚未进行。
+
+该 PR 另保留 [仅位置变化的手写布局派生](pr-1097/authored-layout/README.md) 与 [可读布局页面](pr-1097/authored-layout/review.html)。完整 JSON 差异严格限于 component.pos，mapping/内容保持不变；不称为自动 adapter 输出已通过。派生 finalize 的 validate/deliver/check 通过，browser-check 仍有 30 条 keyboard-traversal 失败，readability/fit/text 本次未再报告。派生 HTML hash：`bf30fb5bda006c2d4a961bae4a0677c26aba91ec42379a816e5b7ffff15f28e6`。
+
+
+### PR #1097 实际图片
+
+![真实 PR 的图与六个声明步骤](pr-1097/screenshots/diagram-and-summary-1280.png)
+
+[1280px 原始/派生对照及未解析 ZIP 图片](pr-1097/README.md#实际截图与前后对照) · [完整页面](pr-1097/screenshots/full-review.png) · [capture 与 hash 账目](pr-1097/ledger.md)。协调 Agent 已实际查看；键盘遍历失败仍保留，未执行 PR 代码/测试，不表示人类验收。

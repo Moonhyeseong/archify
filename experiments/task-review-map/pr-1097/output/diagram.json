@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "output": "change-map.html",
+    "title": "声明的变更关系 · 点击节点读 why",
+    "subtitle": "关系由 Agent 编写，未通过静态或运行分析验证"
+  },
+  "components": [
+    {
+      "id": "before-normalization",
+      "type": "backend",
+      "label": "原逻辑：换行被正规化消耗",
+      "sublabel": "Agent 声明",
+      "pos": [
+        40,
+        60
+      ],
+      "size": [
+        240,
+        86
+      ]
+    },
+    {
+      "id": "preserve-lines",
+      "type": "backend",
+      "label": "修复：保留已接受换行",
+      "sublabel": "Agent 声明",
+      "pos": [
+        420,
+        60
+      ],
+      "size": [
+        240,
+        86
+      ]
+    },
+    {
+      "id": "finalize-regression",
+      "type": "backend",
+      "label": "公开 finalize 诊断回归",
+      "sublabel": "Agent 声明",
+      "pos": [
+        800,
+        60
+      ],
+      "size": [
+        240,
+        86
+      ]
+    },
+    {
+      "id": "compile-regression",
+      "type": "backend",
+      "label": "编译诊断与有效 SVG 对照",
+      "sublabel": "Agent 声明",
+      "pos": [
+        40,
+        240
+      ],
+      "size": [
+        240,
+        86
+      ]
+    },
+    {
+      "id": "before-close",
+      "type": "backend",
+      "label": "原测试：关闭后立即切换",
+      "sublabel": "Agent 声明",
+      "pos": [
+        420,
+        240
+      ],
+      "size": [
+        240,
+        86
+      ]
+    },
+    {
+      "id": "await-close",
+      "type": "backend",
+      "label": "测试同步：等待 close 事件",
+      "sublabel": "Agent 声明",
+      "pos": [
+        800,
+        240
+      ],
+      "size": [
+        240,
+        86
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "before-normalization",
+      "to": "preserve-lines",
+      "label": "声明：替换"
+    },
+    {
+      "from": "finalize-regression",
+      "to": "preserve-lines",
+      "label": "声明：诊断测试关联"
+    },
+    {
+      "from": "compile-regression",
+      "to": "preserve-lines",
+      "label": "声明：编译测试关联"
+    },
+    {
+      "from": "before-close",
+      "to": "await-close",
+      "label": "声明：测试同步替换"
+    }
+  ]
+}

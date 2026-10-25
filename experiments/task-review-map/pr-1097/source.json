@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "kind": "public-source-provenance",
+  "url": "https://github.com/tt-a1i/archify/pull/1097",
+  "capturedAt": "2026-10-25T06:10:09.860687+00:00",
+  "stateAtCapture": "OPEN",
+  "updatedAtAtCapture": "2026-10-25T06:05:44Z",
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "head": "5f012ab74911781e4a2a38fba791801d6e5afef7",
+  "observedPrBase": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "observedPrHead": "5f012ab74911781e4a2a38fba791801d6e5afef7",
+  "bodySha256": "f997db90635b12a70b6e3e70ec87ec2c7f27e32413885bd4f6323b57a55fbdf7",
+  "bodyHashEncoding": "UTF-8 of GitHub body string, without an added newline",
+  "retainedOriginalStatement": {
+    "source": "Public PR body, Problem and value, first paragraph",
+    "text": "Fixes #1074. A malformed pie slice can be reported one or more lines above its authored location because Archify's legend normalization consumes line breaks in `showData`, slice whitespace and blank tails. Preserve the consumed CR/LF characters while retaining the accepted multiline slice normalization, so both the diagnostic line and its message identify the actual bad line.",
+    "evidenceKind": "Original PR author statement; not independently validated by this experiment"
+  },
+  "codexStatements": "review.json nodes/edges are independently authored reading statements, not quotations or original author approval.",
+  "excluded": "Full body and raw receipts are outside the checkout; no author emails, local paths, CI logs or claimed test passes are republished.",
+  "testExecution": "not-run: no PR source, test, build or upstream executable is executed"
+}

@@ -1,0 +1,38 @@
+{
+  "kind": "actual-Chromium-capture-of-authored-layout",
+  "artifact": "authored-layout/review.html",
+  "artifactSha256": "bf30fb5bda006c2d4a961bae4a0677c26aba91ec42379a816e5b7ffff15f28e6",
+  "capturedAt": "2026-10-25T06:16:58.956Z",
+  "viewport": {
+    "width": 1280,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "screenshots": [
+    "screenshots/overview-1280.png",
+    "screenshots/full-review.png"
+  ],
+  "observations": {
+    "visibleFitWarnings": [
+      ""
+    ],
+    "scrollSize": {
+      "width": 1280,
+      "height": 7462
+    }
+  },
+  "limitations": "Only node position values manually changed after original adapter mapping. Automated browser-check still fails keyboard traversal; this capture does not erase it. No PR code or tests executed; ZIP remains unresolved.",
+  "additionalViews": {
+    "viewport": {
+      "width": 1280,
+      "height": 1400,
+      "deviceScaleFactor": 1
+    },
+    "screenshots": [
+      "screenshots/diagram-and-summary-1280.png",
+      "screenshots/unresolved-package-1280.png"
+    ],
+    "capturedAt": "2026-10-25T06:18:12.328Z",
+    "navigation": "Actual wheel scroll to bottom for unresolved file section"
+  }
+}

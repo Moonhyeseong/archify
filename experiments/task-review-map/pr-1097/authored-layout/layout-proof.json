@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "kind": "authored-layout-derivation",
+  "note": "Manual layout projection after the unchanged adapter mapping. Not an automatic adapter improvement. Original output/ files and failed receipts remain unchanged.",
+  "allowedChangedPaths": {
+    "diagram.json": [
+      "/components/0/pos",
+      "/components/1/pos",
+      "/components/2/pos",
+      "/components/3/pos",
+      "/components/4/pos",
+      "/components/5/pos"
+    ],
+    "explainer.json": [
+      "/panels/0/blocks/2/spec/components/0/pos",
+      "/panels/0/blocks/2/spec/components/1/pos",
+      "/panels/0/blocks/2/spec/components/2/pos",
+      "/panels/0/blocks/2/spec/components/3/pos",
+      "/panels/0/blocks/2/spec/components/4/pos",
+      "/panels/0/blocks/2/spec/components/5/pos"
+    ]
+  },
+  "files": {
+    "diagram.json": {
+      "sourceSha256": "5cd941d2195604460aba12e6c4fb98f41e76a2255f827117cf2bc6a219367f17",
+      "derivedSha256": "5e638b6d4f6fe1cb8f6148887d156c1b13b9bb05bacc08b368b22fba4f3380d5",
+      "actualChanges": [
+        {
+          "path": "/components/1/pos",
+          "before": [
+            420,
+            60
+          ],
+          "after": [
+            360,
+            60
+          ]
+        },
+        {
+          "path": "/components/2/pos",
+          "before": [
+            800,
+            60
+          ],
+          "after": [
+            40,
+            220
+          ]
+        },
+        {
+          "path": "/components/3/pos",
+          "before": [
+            40,
+            240
+          ],
+          "after": [
+            360,
+            220
+          ]
+        },
+        {
+          "path": "/components/4/pos",
+          "before": [
+            420,
+            240
+          ],
+          "after": [
+            40,
+            380
+          ]
+        },
+        {
+          "path": "/components/5/pos",
+          "before": [
+            800,
+            240
+          ],
+          "after": [
+            360,
+            380
+          ]
+        }
+      ],
+      "contentEqualAfterRemovingAllowedPositions": true
+    },
+    "explainer.json": {
+      "sourceSha256": "1397328ce37613d695aa8aa9cbcc354401c4a75d45d18cd2cb73fec368cb74c7",
+      "derivedSha256": "060fe0536b626f480ec3fa3f3bf81f3a41ad0bb76f640db362dc5a8f095dc3d1",
+      "actualChanges": [
+        {
+          "path": "/panels/0/blocks/2/spec/components/1/pos",
+          "before": [
+            420,
+            60
+          ],
+          "after": [
+            360,
+            60
+          ]
+        },
+        {
+          "path": "/panels/0/blocks/2/spec/components/2/pos",
+          "before": [
+            800,
+            60
+          ],
+          "after": [
+            40,
+            220
+          ]
+        },
+        {
+          "path": "/panels/0/blocks/2/spec/components/3/pos",
+          "before": [
+            40,
+            240
+          ],
+          "after": [
+            360,
+            220
+          ]
+        },
+        {
+          "path": "/panels/0/blocks/2/spec/components/4/pos",
+          "before": [
+            420,
+            240
+          ],
+          "after": [
+            40,
+            380
+          ]
+        },
+        {
+          "path": "/panels/0/blocks/2/spec/components/5/pos",
+          "before": [
+            800,
+            240
+          ],
+          "after": [
+            360,
+            380
+          ]
+        }
+      ],
+      "contentEqualAfterRemovingAllowedPositions": true
+    }
+  },
+  "sameEmbeddedAndStandaloneDiagram": true,
+  "unchangedMappingSha256": "8393478d2ae129c9fe11cb22a975a6a237f9d296be317c2a935bd0f4d4eb4fb6",
+  "unchangedInputSha256": "a90b04771b3d4d77b42260141e1bf18092e948585a01c9d8aa5f7f2c22d5c828",
+  "retainedCounts": {
+    "nodes": 6,
+    "edges": 4,
+    "steps": 6
+  }
+}

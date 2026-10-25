@@ -1,0 +1,313 @@
+{
+  "version": 1,
+  "kind": "portable-mapping-evidence",
+  "source": "source.json",
+  "scope": "Existing adapter reads fixed public Git objects in a separate temporary bare repository. No checkout and no PR source/test/build execution. No new mapping logic.",
+  "objectAcquisition": {
+    "command": "git -C <temporary-bare-repository> fetch --no-tags --depth=1 https://github.com/tt-a1i/archify.git <base> <head>",
+    "exitCode": 0,
+    "verifiedCommitObjects": [
+      "82c7e0f089a02a4d514714adf37dc2061682da5f",
+      "5f012ab74911781e4a2a38fba791801d6e5afef7"
+    ],
+    "zipObjects": [
+      {
+        "commit": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+        "zipGitBlob": "1bc825ef9e2bfa7d93332cf01bb4648596a86f48",
+        "zipBytes": 5425022
+      },
+      {
+        "commit": "5f012ab74911781e4a2a38fba791801d6e5afef7",
+        "zipGitBlob": "25ac6f79b2a23ed418de2481fd78ef4beae7ff33",
+        "zipBytes": 5425127
+      }
+    ]
+  },
+  "mappingCommand": "node experiments/task-review-map/review-map.mjs <temporary-bare-repository> experiments/task-review-map/pr-1097/review.json experiments/task-review-map/pr-1097/output",
+  "mappingExitCode": 1,
+  "mappingComplete": false,
+  "summary": {
+    "files": 4,
+    "hunks": 5,
+    "referenceMatches": 6,
+    "invalidReferences": 0,
+    "unexplainedHunks": 0,
+    "unresolvedFiles": 1
+  },
+  "unresolvedFiles": [
+    {
+      "path": "archify.zip",
+      "reason": "Blob exceeds 1 MiB experiment limit"
+    }
+  ],
+  "testExecution": "not-run",
+  "render": {
+    "command": "node archify/bin/archify.mjs finalize explainer <pr-1097>/output/explainer.json <pr-1097>/output/review.html --browser-check --out-dir <private-evidence-directory> --json",
+    "exitCode": 1,
+    "gates": {
+      "validate": "pass",
+      "deliver": "pass",
+      "check": "pass",
+      "browser-check": "fail"
+    },
+    "failedStage": "browser-check",
+    "browserCheck": {
+      "requested": true,
+      "ran": true
+    },
+    "durationMs": 26815,
+    "diagnosticSummary": {
+      "total": 42,
+      "shown": 8,
+      "truncated": true,
+      "omittedByCode": {
+        "explainer/browser-keyboard-traversal": 25,
+        "explainer/browser-readability": 3,
+        "explainer/browser-diagram-fit": 3,
+        "explainer/browser-diagram-text": 3
+      }
+    },
+    "diagnostics": [
+      {
+        "code": "explainer/browser-keyboard-traversal",
+        "severity": "error",
+        "message": "This active control was not reached by Tab or native radio ArrowRight navigation. A 查看固定 revision 的源码"
+      },
+      {
+        "code": "explainer/browser-readability",
+        "severity": "error",
+        "message": "Rendered text is 9.343525179856115px, below 10px."
+      },
+      {
+        "code": "explainer/browser-diagram-fit",
+        "severity": "error",
+        "message": "The native preview cannot fit its complete graph at the required text size."
+      },
+      {
+        "code": "explainer/browser-diagram-text",
+        "severity": "error",
+        "message": "Native diagram text is below its viewport reading floor (10px; 75% of body at 1440)."
+      },
+      {
+        "code": "explainer/browser-keyboard-traversal",
+        "severity": "error",
+        "message": "This active control was not reached by Tab or native radio ArrowRight navigation. A 测试同步：等待 close 事件"
+      },
+      {
+        "code": "explainer/browser-keyboard-traversal",
+        "severity": "error",
+        "message": "This active control was not reached by Tab or native radio ArrowRight navigation. BUTTON 复制"
+      },
+      {
+        "code": "explainer/browser-keyboard-traversal",
+        "severity": "error",
+        "message": "This active control was not reached by Tab or native radio ArrowRight navigation. A 查看固定 revision 的源码"
+      },
+      {
+        "code": "explainer/browser-keyboard-traversal",
+        "severity": "error",
+        "message": "This active control was not reached by Tab or native radio ArrowRight navigation. A 尚未解释 · 0 个 hunk"
+      }
+    ],
+    "fullFinalizeDiagnostics": {
+      "total": 42,
+      "byCode": {
+        "explainer/browser-keyboard-traversal": 30,
+        "explainer/browser-readability": 4,
+        "explainer/browser-diagram-fit": 4,
+        "explainer/browser-diagram-text": 4
+      },
+      "bySeverity": {
+        "error": 42
+      }
+    },
+    "rawBrowserDiagnostics": {
+      "total": 54,
+      "byCode": {
+        "explainer/browser-keyboard-traversal": 30,
+        "explainer/browser-readability": 16,
+        "explainer/browser-diagram-fit": 4,
+        "explainer/browser-diagram-text": 4
+      },
+      "bySeverity": {
+        "error": 54
+      }
+    },
+    "privateRawReceiptHashes": {
+      "review.browser-check.json": "3a8703283e085eed5426b31e541979b80814152dc235f3ffb8f7a24ffc38b816",
+      "review.delivery.json": "4ef4217ae972233cab4eb6131086f72ea8722ef8b12826a6a0cf3d70f1f72dab",
+      "review.finalize-summary.json": "e64df4e2e43a9d642f9a5efd72e57a334117da1a8809a14f1f9b070adc349a48",
+      "review.finalize.json": "888013ba0afdfbe217a82d3ad9e42692ba24a08135fb0f3819c0fcf0aa941629",
+      "command-stdout.json": "4993e1a0faa4ddb4974a7899776d32d2bfdd18a58598baed57238747bb1887cb",
+      "command-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "privateRawReceiptNote": "Hashes identify the retained external raw files; only portable results/hashes are public. Raw receipts may contain local absolute paths."
+  },
+  "browser": "ran; fail (see render gates and diagnostics); not human acceptance",
+  "hashes": {
+    "review.json": "a90b04771b3d4d77b42260141e1bf18092e948585a01c9d8aa5f7f2c22d5c828",
+    "source.json": "4af13efc96fb96a7b7a47629f3b6375c829a140da30c00aa646d2987293a48ac",
+    "output/mapping.json": "8393478d2ae129c9fe11cb22a975a6a237f9d296be317c2a935bd0f4d4eb4fb6",
+    "output/explainer.json": "1397328ce37613d695aa8aa9cbcc354401c4a75d45d18cd2cb73fec368cb74c7",
+    "output/diagram.json": "5cd941d2195604460aba12e6c4fb98f41e76a2255f827117cf2bc6a219367f17",
+    "output/review.html": "97a603834f49fa6c9d53d46f60ce488cb8cd97f6c4b14450c7f482fab89bacaf"
+  },
+  "producerCheckout": "b9e339748ecb07377f7cfeebeee4ad280e14c734",
+  "adapterSha256": "c8392ace0c3402915b054c89458295f1da6081c07dc882c91602e1fde1ca4aab",
+  "authoredLayout": {
+    "kind": "manual-layout-after-unchanged-mapping",
+    "proof": "authored-layout/layout-proof.json",
+    "allowedDifferences": "component.pos only; full trees equal after removing listed positions; 6 nodes/4 edges/6 steps unchanged",
+    "command": "node archify/bin/archify.mjs finalize explainer <pr-1097>/authored-layout/explainer.json <pr-1097>/authored-layout/review.html --browser-check --out-dir <private-authored-evidence-directory> --json",
+    "exitCode": 1,
+    "gates": {
+      "validate": "pass",
+      "deliver": "pass",
+      "check": "pass",
+      "browser-check": "fail"
+    },
+    "failedStage": "browser-check",
+    "browserCheck": {
+      "requested": true,
+      "ran": true
+    },
+    "durationMs": 26098,
+    "fullFinalizeDiagnostics": {
+      "total": 30,
+      "byCode": {
+        "explainer/browser-keyboard-traversal": 30
+      },
+      "bySeverity": {
+        "error": 30
+      }
+    },
+    "rawBrowserDiagnostics": {
+      "total": 30,
+      "byCode": {
+        "explainer/browser-keyboard-traversal": 30
+      },
+      "bySeverity": {
+        "error": 30
+      }
+    },
+    "diagnostics": [
+      {
+        "code": "explainer/browser-keyboard-traversal",
+        "severity": "error",
+        "message": "This active control was not reached by Tab or native radio ArrowRight navigation. A 查看固定 revision 的源码"
+      },
+      {
+        "code": "explainer/browser-keyboard-traversal",
+        "severity": "error",
+        "message": "This active control was not reached by Tab or native radio ArrowRight navigation. A 测试同步：等待 close 事件"
+      },
+      {
+        "code": "explainer/browser-keyboard-traversal",
+        "severity": "error",
+        "message": "This active control was not reached by Tab or native radio ArrowRight navigation. BUTTON 复制"
+      },
+      {
+        "code": "explainer/browser-keyboard-traversal",
+        "severity": "error",
+        "message": "This active control was not reached by Tab or native radio ArrowRight navigation. A 查看固定 revision 的源码"
+      },
+      {
+        "code": "explainer/browser-keyboard-traversal",
+        "severity": "error",
+        "message": "This active control was not reached by Tab or native radio ArrowRight navigation. A 尚未解释 · 0 个 hunk"
+      },
+      {
+        "code": "explainer/browser-keyboard-traversal",
+        "severity": "error",
+        "message": "This active control was not reached by Tab or native radio ArrowRight navigation. A Archify把你想理解、规划或分享的事，变成可以互动的可视化作品。"
+      },
+      {
+        "code": "explainer/browser-keyboard-traversal",
+        "severity": "error",
+        "message": "This active control was not reached by Tab or native radio ArrowRight navigation. BUTTON 追问"
+      },
+      {
+        "code": "explainer/browser-keyboard-traversal",
+        "severity": "error",
+        "message": "This active control was not reached by Tab or native radio ArrowRight navigation. BUTTON 追问"
+      }
+    ],
+    "nativeTextObservations": [
+      {
+        "width": 1280,
+        "minimum": 10,
+        "body": 14.5,
+        "ratio": 0.6896551724137931,
+        "fit": "fit",
+        "outsidePreviewCount": 0
+      },
+      {
+        "width": 1440,
+        "minimum": 10.891447368421053,
+        "body": 14.5,
+        "ratio": 0.7511343012704175,
+        "fit": "fit",
+        "outsidePreviewCount": 0
+      },
+      {
+        "width": 1280,
+        "minimum": 10,
+        "body": 14.5,
+        "ratio": 0.6896551724137931,
+        "fit": "fit",
+        "outsidePreviewCount": 0
+      },
+      {
+        "width": 1440,
+        "minimum": 10.891447368421053,
+        "body": 14.5,
+        "ratio": 0.7511343012704175,
+        "fit": "fit",
+        "outsidePreviewCount": 0
+      }
+    ],
+    "hashes": {
+      "explainer.json": "060fe0536b626f480ec3fa3f3bf81f3a41ad0bb76f640db362dc5a8f095dc3d1",
+      "diagram.json": "5e638b6d4f6fe1cb8f6148887d156c1b13b9bb05bacc08b368b22fba4f3380d5",
+      "layout-proof.json": "eca84491afc336a5b67f7b6d175e47cb37f988f7dfb2971485a73ed1d43e015f",
+      "review.html": "bf30fb5bda006c2d4a961bae4a0677c26aba91ec42379a816e5b7ffff15f28e6"
+    },
+    "privateRawReceiptHashes": {
+      "review.browser-check.json": "1a1f5649d00d8addf4aaef87d0fac1065b24693109cf76ba6d9ef382b13aec55",
+      "review.delivery.json": "a29642055684c6296ea7021c76e73c504b4422aa90faea08cae719fff0b208ca",
+      "review.finalize-summary.json": "75ad2679a81204858ce5037acbadcdff1dc5b2f9047ece2e45df8752141a185c",
+      "review.finalize.json": "619a32eb446622b086082e8684df9c37ea4884eca9facb2115f2cf0d33f18d51",
+      "command-stdout.json": "a65a46b861474e04c55ce92f1bde9160e35dbf19310aec2811a3639fd63ba956",
+      "command-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "privateRawReceiptNote": "Hashes identify the retained external raw files; only portable results/hashes are public. Raw receipts may contain local absolute paths."
+  },
+  "screenshots": {
+    "screenshots-before": {
+      "capture": "screenshots-before/capture.json",
+      "captureSha256": "f6a086dff8851a41422f9f989b4ec90e7e0d453125018799bebde9e8c4828ef6",
+      "artifact": "output/review.html",
+      "artifactSha256": "97a603834f49fa6c9d53d46f60ce488cb8cd97f6c4b14450c7f482fab89bacaf",
+      "images": {
+        "screenshots-before/overview-1280.png": "9c84caa725fa75486e0051abb4828f9e2535398f8ce1f26bfc713ba81cf829da",
+        "screenshots-before/review.png": "0f1dd7ebfb569e61903b462c3229d759aff12375c6a521df264456cd880a73e2"
+      },
+      "observationSource": "Coordinating agent captured and visually inspected actual Chromium pages; not human acceptance.",
+      "limitations": "No PR code/test execution; ZIP remains unresolved; automated keyboard-traversal failure remains."
+    },
+    "screenshots": {
+      "capture": "screenshots/capture.json",
+      "captureSha256": "0781743df671fa3bd056b2845c053b36e0a09eb6e0188624096cabe07f31e379",
+      "artifact": "authored-layout/review.html",
+      "artifactSha256": "bf30fb5bda006c2d4a961bae4a0677c26aba91ec42379a816e5b7ffff15f28e6",
+      "images": {
+        "screenshots/diagram-and-summary-1280.png": "1ea8560b9af9260874a0bf91c37774d2c5af147ee842b631d7741ea5e1614987",
+        "screenshots/full-review.png": "c1867bab31c896f6802d282d2eed938f7dc5c02a0c374a48d677dfe0ff3adae0",
+        "screenshots/overview-1280.png": "767ed0d48887cedaa9517db728ae08a237e680577f56e339795cc74acd1cbd70",
+        "screenshots/unresolved-package-1280.png": "bf6f59e27b1ad09463c9b938742dcf98c283a21321a14887a66c0b8884e28814"
+      },
+      "observationSource": "Coordinating agent captured and visually inspected actual Chromium pages; not human acceptance.",
+      "limitations": "No PR code/test execution; ZIP remains unresolved; automated keyboard-traversal failure remains."
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "artifact": "output/review.html",
+  "artifactSha256": "97a603834f49fa6c9d53d46f60ce488cb8cd97f6c4b14450c7f482fab89bacaf",
+  "screenshot": "screenshots-before/review.png",
+  "capturedAt": "2026-10-25T06:12:15.153Z",
+  "viewport": {
+    "width": 1440,
+    "height": 1100,
+    "deviceScaleFactor": 1
+  },
+  "limitations": "Actual unmodified adapter output for fixed public PR; known automated browser failures retained separately; no execution of PR code or human review.",
+  "viewportOverview": {
+    "screenshot": "screenshots-before/overview-1280.png",
+    "viewport": {
+      "width": 1280,
+      "height": 900,
+      "deviceScaleFactor": 1
+    },
+    "artifactSha256": "97a603834f49fa6c9d53d46f60ce488cb8cd97f6c4b14450c7f482fab89bacaf",
+    "capturedAt": "2026-10-25T06:13:12.153Z"
+  }
+}

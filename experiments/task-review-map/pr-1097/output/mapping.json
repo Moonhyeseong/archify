@@ -1,0 +1,353 @@
+{
+  "version": 1,
+  "experiment": "task-review-map",
+  "repository": "https://github.com/tt-a1i/archify",
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "head": "5f012ab74911781e4a2a38fba791801d6e5afef7",
+  "reviewSha256": "3fbe232243d2497a9c65338046fe550b65e4a4847c610e62a9f9f38b31a326e8",
+  "repositoryIdentity": "Author-declared public URL; remote object availability is not checked or authenticated.",
+  "statementAuthor": "Codex 独立阅读声明（依据公开 PR，未经原作者确认）",
+  "scope": "Local committed objects only; no checkout, fetch, AST or test execution. Renames are delete/add.",
+  "meaning": "reference-matches means changed-line reference agreement only. Why and relations remain agent statements. range-accounted is not semantic completeness or test coverage.",
+  "nodes": [
+    {
+      "id": "before-normalization",
+      "label": "原逻辑：换行被正规化消耗",
+      "why": "我的阅读：原代码替换 showData 与 slice 文本时没有单独保留已接受的换行。此引用仅供核对被替换的源码，不代表本实验执行过错误复现。",
+      "ref": {
+        "path": "archify/explainer/charts.mjs",
+        "side": "base",
+        "start": 20,
+        "end": 20
+      },
+      "status": "reference-matches",
+      "reason": "Range contains changed lines in the stated Git side. Semantic meaning and test results are not checked.",
+      "matchedHunks": [
+        "archify/explainer/charts.mjs:1"
+      ],
+      "excerpt": "  return text.replace(/^(\\s*pie)\\s+showData\\b/u, '$1').replace(slice, (_, indent, label, value) => { const share = Math.round(Number(value) / total * 100); return `${indent}\"${label} · ${value}${/\\p{Script=Han}/u.test(label) ? `（${share}%）` : ` (${share}%)`}\" : ${value}`; });",
+      "blobSha256": "7a159ed9e2334fb86e0a8acd452d5c1ba035d5e2d1a91cbd9dd9106b56cbbd01"
+    },
+    {
+      "id": "preserve-lines",
+      "label": "修复：保留已接受换行",
+      "why": "我的阅读：新增 gap/breaks 处理保留 CR/LF，使诊断可继续映射作者行。这里只核对变更引用，不能据此证明所有诊断正确。",
+      "ref": {
+        "path": "archify/explainer/charts.mjs",
+        "side": "head",
+        "start": 20,
+        "end": 25
+      },
+      "status": "reference-matches",
+      "reason": "Range contains changed lines in the stated Git side. Semantic meaning and test results are not checked.",
+      "matchedHunks": [
+        "archify/explainer/charts.mjs:1"
+      ],
+      "excerpt": "  return text.replace(/^(\\s*pie)(\\s+)showData\\b/u, (_, pie, gap) => pie + gap.replace(/[^\\r\\n]/g, '')).replace(slice, (matched, indent, label, value) => {\n    const share = Math.round(Number(value) / total * 100);\n    // Keep accepted multiline whitespace without dropping diagnostic lines.\n    const breaks = matched.slice(indent.length + label.length + 2).replace(/[^\\r\\n]/g, '');\n    return `${indent}\"${label} · ${value}${/\\p{Script=Han}/u.test(label) ? `（${share}%）` : ` (${share}%)`}\" : ${value}${breaks}`;\n  });",
+      "blobSha256": "81e40b2d55d76b09c677ab991194aa1493200496435796cefe5f3484f1849ddc"
+    },
+    {
+      "id": "finalize-regression",
+      "label": "公开 finalize 诊断回归",
+      "why": "我的阅读：测试源码增加两种 malformed pie 输入，要求失败、原始行号和不交付 HTML。这是测试源码关联，本实验未执行 PR 的测试。",
+      "ref": {
+        "path": "test/explainer-charts.test.mjs",
+        "side": "head",
+        "start": 35,
+        "end": 41
+      },
+      "status": "reference-matches",
+      "reason": "Range contains changed lines in the stated Git side. Semantic meaning and test results are not checked.",
+      "matchedHunks": [
+        "test/explainer-charts.test.mjs:1"
+      ],
+      "excerpt": "  for (const chart of ['pie\\n  \"a\": 1\\n\\n  \"b\": x', 'pie\\nshowData\\n  \"a\": 1\\n  \"b\": x']) {\n    const failure = finalize(t, chart);\n    assert.notEqual(failure.status, 0);\n    assert.ok(failure.receipt.diagnostics.some(d => d.code === 'explainer/chart'\n      && d.subject.line === 13 && /line 4\\b/.test(d.message)));\n    assert.equal(failure.html, null);\n  }",
+      "blobSha256": "e9c6a40742f4f5eff27444b14f560ecc037d181ec29e8b1050684e5fe52fe191"
+    },
+    {
+      "id": "compile-regression",
+      "label": "编译诊断与有效 SVG 对照",
+      "why": "我的阅读：新增 LF/CRLF 诊断行与有效格式 SVG 等价断言。这些断言表达测试意图，不是本实验取得的执行结果。",
+      "ref": {
+        "path": "test/explainer-charts.test.mjs",
+        "side": "head",
+        "start": 87,
+        "end": 118
+      },
+      "status": "reference-matches",
+      "reason": "Range contains changed lines in the stated Git side. Semantic meaning and test results are not checked.",
+      "matchedHunks": [
+        "test/explainer-charts.test.mjs:2"
+      ],
+      "excerpt": "\n\ntest('pie diagnostics retain authored blank and showData lines', async () => {\n  const { compileExplainerChart } = await import('../archify/explainer/charts.mjs');\n  for (const newline of ['\\n', '\\r\\n']) {\n    for (const lines of [\n      ['pie', '  \"a\" : 1', '', '  \"b\": x'],\n      ['pie', 'showData', '  \"a\": 1', '  \"b\": x'],\n      ['pie showData', '  \"a\": 1', '', '  \"b\": x'],\n      ['pie', '  \"a\": 1', '', '', '  \"b\": x'],\n      ['pie', '  \"a\":', '1', '  \"b\": x'],\n      ['pie', '  \"a\"', ': 1', '  \"b\": x'],\n    ]) {\n      const result = compileExplainerChart(lines.join(newline));\n      assert.equal(result.line, lines.length, JSON.stringify(lines));\n      assert.match(result.error, new RegExp(`line ${lines.length}\\\\b`));\n      assert.equal(result.svg, undefined);\n    }\n  }\n  const canonical = compileExplainerChart('pie\\n  \"A\":60\\n  \"B\":40').svg;\n  assert.equal(typeof canonical, 'string');\n  for (const input of [\n    'pie showData\\n  \"A\":60\\n  \"B\":40',\n    'pie\\nshowData\\n  \"A\":60\\n  \"B\":40',\n    'pie\\n  \"A\":60\\n\\n  \"B\":40',\n    'pie\\n  \"A\":\\n60\\n  \"B\":40',\n    'pie\\n  \"A\"\\n:60\\n  \"B\":40',\n  ]) {\n    assert.equal(compileExplainerChart(input).svg, canonical);\n    assert.equal(compileExplainerChart(input.replaceAll('\\n', '\\r\\n')).svg, canonical);\n  }\n});",
+      "blobSha256": "e9c6a40742f4f5eff27444b14f560ecc037d181ec29e8b1050684e5fe52fe191"
+    },
+    {
+      "id": "before-close",
+      "label": "原测试：关闭后立即切换",
+      "why": "我的阅读：原测试关闭弹窗后直接聚焦下一步骤；引用这一删除行以区分产品修复与测试同步调整。",
+      "ref": {
+        "path": "test/explainer-browser.test.mjs",
+        "side": "base",
+        "start": 101,
+        "end": 101
+      },
+      "status": "reference-matches",
+      "reason": "Range contains changed lines in the stated Git side. Semantic meaning and test results are not checked.",
+      "matchedHunks": [
+        "test/explainer-browser.test.mjs:2"
+      ],
+      "excerpt": "  const first=await focusStep(1,['api'],['api-to-redis-1']);await keyboardActivate(browser,'[data-close-diagram]');const second=await focusStep(2,['redis'],['redis-to-api-1']);assert.equal(second.targetId,first.targetId,'The second step must update the existing native iframe');await keyboardActivate(browser,'[data-close-diagram]');const reopened=await focusStep(1,['api'],['api-to-redis-1']);assert.equal(reopened.targetId,first.targetId);await keyboardActivate(browser,'[data-close-diagram]');",
+      "blobSha256": "25cd44b35acedaba44b674d06dee16fd93933a0d0ed31a570ceb54c60d92d101"
+    },
+    {
+      "id": "await-close",
+      "label": "测试同步：等待 close 事件",
+      "why": "我的阅读：新增 closeStep 等待 close 事件，再进行下一步操作；此 hunk 是浏览器测试同步调整，不是 pie runtime 实现，也不能据此声称 CI 已通过。",
+      "ref": {
+        "path": "test/explainer-browser.test.mjs",
+        "side": "head",
+        "start": 99,
+        "end": 109
+      },
+      "status": "reference-matches",
+      "reason": "Range contains changed lines in the stated Git side. Semantic meaning and test results are not checked.",
+      "matchedHunks": [
+        "test/explainer-browser.test.mjs:1",
+        "test/explainer-browser.test.mjs:2"
+      ],
+      "excerpt": "  const closeStep=async()=>{\n   // dialog.close() queues close; the reader restores opener focus in that\n   // event. Finish it before the next helper focuses its requested step.\n   await pageValue(browser,`(()=>{const dialog=document.querySelector('#diagram-dialog');window.__nativeCloseResult=new Promise(resolve=>{const state=closed=>({closed,open:dialog.open,activeElement:document.activeElement?.outerHTML?.slice(0,400)});const finish=()=>{clearTimeout(timeout);resolve(state(true));};const timeout=setTimeout(()=>{dialog.removeEventListener('close',finish);resolve(state(false));},5000);dialog.addEventListener('close',finish,{once:true});});})()`);\n   await keyboardActivate(browser,'[data-close-diagram]');\n   const closed=await pageValue(browser,'(async()=>{const result=await window.__nativeCloseResult;delete window.__nativeCloseResult;return result;})()');\n   assert.equal(closed.closed,true,JSON.stringify(closed));assert.equal(closed.open,false,JSON.stringify(closed));\n  };\n  // Closing the modal makes the next step reachable. Reopening uses the same\n  // iframe with a different target, and the third opening changes it back. Actual child DOM selection is the proof, not the host's last ack.\n  const first=await focusStep(1,['api'],['api-to-redis-1']);await closeStep();const second=await focusStep(2,['redis'],['redis-to-api-1']);assert.equal(second.targetId,first.targetId,'The second step must update the existing native iframe');await closeStep();const reopened=await focusStep(1,['api'],['api-to-redis-1']);assert.equal(reopened.targetId,first.targetId);await closeStep();",
+      "blobSha256": "05044c988f8e414fc99b9977b9bfbd47c25043568e2c523b0db0301efc4ee8c7"
+    }
+  ],
+  "edges": [
+    {
+      "to": "preserve-lines",
+      "label": "声明：替换",
+      "from": "before-normalization"
+    },
+    {
+      "to": "preserve-lines",
+      "label": "声明：诊断测试关联",
+      "from": "finalize-regression"
+    },
+    {
+      "to": "preserve-lines",
+      "label": "声明：编译测试关联",
+      "from": "compile-regression"
+    },
+    {
+      "to": "await-close",
+      "label": "声明：测试同步替换",
+      "from": "before-close"
+    }
+  ],
+  "hunks": [
+    {
+      "id": "archify/explainer/charts.mjs:1",
+      "path": "archify/explainer/charts.mjs",
+      "base": {
+        "start": 20,
+        "count": 1
+      },
+      "head": {
+        "start": 20,
+        "count": 6
+      },
+      "diff": "@@ -20 +20,6 @@ function pieLegend(text) {\n-  return text.replace(/^(\\s*pie)\\s+showData\\b/u, '$1').replace(slice, (_, indent, label, value) => { const share = Math.round(Number(value) / total * 100); return `${indent}\"${label} · ${value}${/\\p{Script=Han}/u.test(label) ? `（${share}%）` : ` (${share}%)`}\" : ${value}`; });\n+  return text.replace(/^(\\s*pie)(\\s+)showData\\b/u, (_, pie, gap) => pie + gap.replace(/[^\\r\\n]/g, '')).replace(slice, (matched, indent, label, value) => {\n+    const share = Math.round(Number(value) / total * 100);\n+    // Keep accepted multiline whitespace without dropping diagnostic lines.\n+    const breaks = matched.slice(indent.length + label.length + 2).replace(/[^\\r\\n]/g, '');\n+    return `${indent}\"${label} · ${value}${/\\p{Script=Han}/u.test(label) ? `（${share}%）` : ` (${share}%)`}\" : ${value}${breaks}`;\n+  });",
+      "explainedBy": [
+        "before-normalization",
+        "preserve-lines"
+      ],
+      "changed": {
+        "base": [
+          20
+        ],
+        "head": [
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      },
+      "unexplainedLines": {
+        "base": [],
+        "head": []
+      },
+      "coverage": "range-accounted"
+    },
+    {
+      "id": "test/explainer-browser.test.mjs:1",
+      "path": "test/explainer-browser.test.mjs",
+      "base": {
+        "start": 98,
+        "count": 0
+      },
+      "head": {
+        "start": 99,
+        "count": 8
+      },
+      "diff": "@@ -98,0 +99,8 @@ test('native step opens the complete Viewer and focuses exact nodes and edges wi\n+  const closeStep=async()=>{\n+   // dialog.close() queues close; the reader restores opener focus in that\n+   // event. Finish it before the next helper focuses its requested step.\n+   await pageValue(browser,`(()=>{const dialog=document.querySelector('#diagram-dialog');window.__nativeCloseResult=new Promise(resolve=>{const state=closed=>({closed,open:dialog.open,activeElement:document.activeElement?.outerHTML?.slice(0,400)});const finish=()=>{clearTimeout(timeout);resolve(state(true));};const timeout=setTimeout(()=>{dialog.removeEventListener('close',finish);resolve(state(false));},5000);dialog.addEventListener('close',finish,{once:true});});})()`);\n+   await keyboardActivate(browser,'[data-close-diagram]');\n+   const closed=await pageValue(browser,'(async()=>{const result=await window.__nativeCloseResult;delete window.__nativeCloseResult;return result;})()');\n+   assert.equal(closed.closed,true,JSON.stringify(closed));assert.equal(closed.open,false,JSON.stringify(closed));\n+  };",
+      "explainedBy": [
+        "await-close"
+      ],
+      "changed": {
+        "base": [],
+        "head": [
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106
+        ]
+      },
+      "unexplainedLines": {
+        "base": [],
+        "head": []
+      },
+      "coverage": "range-accounted"
+    },
+    {
+      "id": "test/explainer-browser.test.mjs:2",
+      "path": "test/explainer-browser.test.mjs",
+      "base": {
+        "start": 101,
+        "count": 1
+      },
+      "head": {
+        "start": 109,
+        "count": 1
+      },
+      "diff": "@@ -101 +109 @@ test('native step opens the complete Viewer and focuses exact nodes and edges wi\n-  const first=await focusStep(1,['api'],['api-to-redis-1']);await keyboardActivate(browser,'[data-close-diagram]');const second=await focusStep(2,['redis'],['redis-to-api-1']);assert.equal(second.targetId,first.targetId,'The second step must update the existing native iframe');await keyboardActivate(browser,'[data-close-diagram]');const reopened=await focusStep(1,['api'],['api-to-redis-1']);assert.equal(reopened.targetId,first.targetId);await keyboardActivate(browser,'[data-close-diagram]');\n+  const first=await focusStep(1,['api'],['api-to-redis-1']);await closeStep();const second=await focusStep(2,['redis'],['redis-to-api-1']);assert.equal(second.targetId,first.targetId,'The second step must update the existing native iframe');await closeStep();const reopened=await focusStep(1,['api'],['api-to-redis-1']);assert.equal(reopened.targetId,first.targetId);await closeStep();",
+      "explainedBy": [
+        "before-close",
+        "await-close"
+      ],
+      "changed": {
+        "base": [
+          101
+        ],
+        "head": [
+          109
+        ]
+      },
+      "unexplainedLines": {
+        "base": [],
+        "head": []
+      },
+      "coverage": "range-accounted"
+    },
+    {
+      "id": "test/explainer-charts.test.mjs:1",
+      "path": "test/explainer-charts.test.mjs",
+      "base": {
+        "start": 34,
+        "count": 0
+      },
+      "head": {
+        "start": 35,
+        "count": 7
+      },
+      "diff": "@@ -34,0 +35,7 @@ test('explainer chart fences send native diagram types to shorthand and locate s\n+  for (const chart of ['pie\\n  \"a\": 1\\n\\n  \"b\": x', 'pie\\nshowData\\n  \"a\": 1\\n  \"b\": x']) {\n+    const failure = finalize(t, chart);\n+    assert.notEqual(failure.status, 0);\n+    assert.ok(failure.receipt.diagnostics.some(d => d.code === 'explainer/chart'\n+      && d.subject.line === 13 && /line 4\\b/.test(d.message)));\n+    assert.equal(failure.html, null);\n+  }",
+      "explainedBy": [
+        "finalize-regression"
+      ],
+      "changed": {
+        "base": [],
+        "head": [
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41
+        ]
+      },
+      "unexplainedLines": {
+        "base": [],
+        "head": []
+      },
+      "coverage": "range-accounted"
+    },
+    {
+      "id": "test/explainer-charts.test.mjs:2",
+      "path": "test/explainer-charts.test.mjs",
+      "base": {
+        "start": 79,
+        "count": 0
+      },
+      "head": {
+        "start": 87,
+        "count": 32
+      },
+      "diff": "@@ -79,0 +87,32 @@ test('a blank data cell is missing data, never drawn as zero', async () => {\n+\n+\n+test('pie diagnostics retain authored blank and showData lines', async () => {\n+  const { compileExplainerChart } = await import('../archify/explainer/charts.mjs');\n+  for (const newline of ['\\n', '\\r\\n']) {\n+    for (const lines of [\n+      ['pie', '  \"a\" : 1', '', '  \"b\": x'],\n+      ['pie', 'showData', '  \"a\": 1', '  \"b\": x'],\n+      ['pie showData', '  \"a\": 1', '', '  \"b\": x'],\n+      ['pie', '  \"a\": 1', '', '', '  \"b\": x'],\n+      ['pie', '  \"a\":', '1', '  \"b\": x'],\n+      ['pie', '  \"a\"', ': 1', '  \"b\": x'],\n+    ]) {\n+      const result = compileExplainerChart(lines.join(newline));\n+      assert.equal(result.line, lines.length, JSON.stringify(lines));\n+      assert.match(result.error, new RegExp(`line ${lines.length}\\\\b`));\n+      assert.equal(result.svg, undefined);\n+    }\n+  }\n+  const canonical = compileExplainerChart('pie\\n  \"A\":60\\n  \"B\":40').svg;\n+  assert.equal(typeof canonical, 'string');\n+  for (const input of [\n+    'pie showData\\n  \"A\":60\\n  \"B\":40',\n+    'pie\\nshowData\\n  \"A\":60\\n  \"B\":40',\n+    'pie\\n  \"A\":60\\n\\n  \"B\":40',\n+    'pie\\n  \"A\":\\n60\\n  \"B\":40',\n+    'pie\\n  \"A\"\\n:60\\n  \"B\":40',\n+  ]) {\n+    assert.equal(compileExplainerChart(input).svg, canonical);\n+    assert.equal(compileExplainerChart(input.replaceAll('\\n', '\\r\\n')).svg, canonical);\n+  }\n+});",
+      "explainedBy": [
+        "compile-regression"
+      ],
+      "changed": {
+        "base": [],
+        "head": [
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118
+        ]
+      },
+      "unexplainedLines": {
+        "base": [],
+        "head": []
+      },
+      "coverage": "range-accounted"
+    }
+  ],
+  "unresolvedFiles": [
+    {
+      "path": "archify.zip",
+      "reason": "Blob exceeds 1 MiB experiment limit"
+    }
+  ],
+  "summary": {
+    "files": 4,
+    "hunks": 5,
+    "referenceMatches": 6,
+    "invalidReferences": 0,
+    "unexplainedHunks": 0,
+    "unresolvedFiles": 1
+  },
+  "testExecution": "not-run",
+  "mappingComplete": false
+}
