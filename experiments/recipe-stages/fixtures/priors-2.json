@@ -1,0 +1,231 @@
+{
+  "aliases": {},
+  "assignments": {},
+  "doc": null,
+  "first": "release",
+  "groups": [],
+  "module_path": "",
+  "modules": {
+    "web": {
+      "aliases": {},
+      "assignments": {},
+      "doc": null,
+      "first": "check",
+      "groups": [],
+      "module_path": "web",
+      "modules": {},
+      "recipes": {
+        "check": {
+          "attributes": [],
+          "body": [
+            [
+              "echo 'original synthetic body: never executed'"
+            ]
+          ],
+          "dependencies": [],
+          "doc": null,
+          "name": "check",
+          "namepath": "web::check",
+          "parameters": [],
+          "priors": 0,
+          "private": false,
+          "quiet": false,
+          "shebang": false
+        }
+      },
+      "settings": {
+        "allow_duplicate_recipes": false,
+        "allow_duplicate_variables": false,
+        "default_list": false,
+        "default_script": false,
+        "dotenv_load": false,
+        "dotenv_override": false,
+        "dotenv_required": false,
+        "export": false,
+        "fallback": false,
+        "guards": false,
+        "ignore_comments": false,
+        "lazy": false,
+        "lists": false,
+        "no_cd": false,
+        "no_exit_message": false,
+        "positional_arguments": false,
+        "quiet": false,
+        "unstable": false,
+        "windows_powershell": false,
+        "dotenv_filename": null,
+        "dotenv_path": null,
+        "indentation": null,
+        "shell": null,
+        "tempdir": null,
+        "windows_shell": null,
+        "working_directory": null,
+        "dotenv_command": []
+      },
+      "source": "web.just",
+      "unexports": [],
+      "warnings": []
+    },
+    "api": {
+      "aliases": {},
+      "assignments": {},
+      "doc": null,
+      "first": "check",
+      "groups": [],
+      "module_path": "api",
+      "modules": {},
+      "recipes": {
+        "check": {
+          "attributes": [],
+          "body": [
+            [
+              "echo 'original synthetic body: never executed'"
+            ]
+          ],
+          "dependencies": [],
+          "doc": null,
+          "name": "check",
+          "namepath": "api::check",
+          "parameters": [],
+          "priors": 0,
+          "private": false,
+          "quiet": false,
+          "shebang": false
+        }
+      },
+      "settings": {
+        "allow_duplicate_recipes": false,
+        "allow_duplicate_variables": false,
+        "default_list": false,
+        "default_script": false,
+        "dotenv_load": false,
+        "dotenv_override": false,
+        "dotenv_required": false,
+        "export": false,
+        "fallback": false,
+        "guards": false,
+        "ignore_comments": false,
+        "lazy": false,
+        "lists": false,
+        "no_cd": false,
+        "no_exit_message": false,
+        "positional_arguments": false,
+        "quiet": false,
+        "unstable": false,
+        "windows_powershell": false,
+        "dotenv_filename": null,
+        "dotenv_path": null,
+        "indentation": null,
+        "shell": null,
+        "tempdir": null,
+        "windows_shell": null,
+        "working_directory": null,
+        "dotenv_command": []
+      },
+      "source": "api.just",
+      "unexports": [],
+      "warnings": []
+    }
+  },
+  "recipes": {
+    "release": {
+      "attributes": [],
+      "body": [
+        [
+          "echo 'original synthetic body: never executed'"
+        ]
+      ],
+      "dependencies": [
+        {
+          "arguments": [],
+          "recipe": "web::check",
+          "star": null
+        },
+        {
+          "arguments": [],
+          "recipe": "api::check",
+          "star": null
+        },
+        {
+          "arguments": [],
+          "recipe": "notify",
+          "star": null
+        }
+      ],
+      "doc": null,
+      "name": "release",
+      "namepath": "release",
+      "parameters": [],
+      "priors": 2,
+      "private": false,
+      "quiet": false,
+      "shebang": false
+    },
+    "check": {
+      "attributes": [],
+      "body": [
+        [
+          "echo 'original synthetic body: never executed'"
+        ]
+      ],
+      "dependencies": [],
+      "doc": null,
+      "name": "check",
+      "namepath": "check",
+      "parameters": [],
+      "priors": 0,
+      "private": false,
+      "quiet": false,
+      "shebang": false
+    },
+    "notify": {
+      "attributes": [],
+      "body": [
+        [
+          "echo 'original synthetic body: never executed'"
+        ]
+      ],
+      "dependencies": [],
+      "doc": null,
+      "name": "notify",
+      "namepath": "notify",
+      "parameters": [],
+      "priors": 0,
+      "private": false,
+      "quiet": false,
+      "shebang": false
+    }
+  },
+  "settings": {
+    "allow_duplicate_recipes": false,
+    "allow_duplicate_variables": false,
+    "default_list": false,
+    "default_script": false,
+    "dotenv_load": false,
+    "dotenv_override": false,
+    "dotenv_required": false,
+    "export": false,
+    "fallback": false,
+    "guards": false,
+    "ignore_comments": false,
+    "lazy": false,
+    "lists": false,
+    "no_cd": false,
+    "no_exit_message": false,
+    "positional_arguments": false,
+    "quiet": false,
+    "unstable": false,
+    "windows_powershell": false,
+    "dotenv_filename": null,
+    "dotenv_path": null,
+    "indentation": null,
+    "shell": null,
+    "tempdir": null,
+    "windows_shell": null,
+    "working_directory": null,
+    "dotenv_command": []
+  },
+  "source": "justfile",
+  "unexports": [],
+  "warnings": []
+}

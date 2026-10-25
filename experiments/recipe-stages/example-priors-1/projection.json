@@ -1,0 +1,94 @@
+{
+  "format": "recipe-stages-lab/1",
+  "upstreamCommit": "d6fee036379c531369dc37f67f8d4640f6bf1e2d",
+  "selected": {
+    "namepath": "release",
+    "module": "",
+    "priors": 1,
+    "dependencies": [
+      {
+        "index": 0,
+        "stage": "before",
+        "recipe": "web::check",
+        "qualified": "web::check",
+        "arguments": [],
+        "star": null,
+        "expansion": "no-arguments"
+      },
+      {
+        "index": 1,
+        "stage": "after",
+        "recipe": "api::check",
+        "qualified": "api::check",
+        "arguments": [],
+        "star": null,
+        "expansion": "no-arguments"
+      },
+      {
+        "index": 2,
+        "stage": "after",
+        "recipe": "notify",
+        "qualified": "notify",
+        "arguments": [],
+        "star": null,
+        "expansion": "no-arguments"
+      }
+    ],
+    "body": [
+      [
+        "echo 'original synthetic body: never executed'"
+      ]
+    ],
+    "parameters": []
+  },
+  "before": [
+    {
+      "index": 0,
+      "stage": "before",
+      "recipe": "web::check",
+      "qualified": "web::check",
+      "arguments": [],
+      "star": null,
+      "expansion": "no-arguments"
+    }
+  ],
+  "after": [
+    {
+      "index": 1,
+      "stage": "after",
+      "recipe": "api::check",
+      "qualified": "api::check",
+      "arguments": [],
+      "star": null,
+      "expansion": "no-arguments"
+    },
+    {
+      "index": 2,
+      "stage": "after",
+      "recipe": "notify",
+      "qualified": "notify",
+      "arguments": [],
+      "star": null,
+      "expansion": "no-arguments"
+    }
+  ],
+  "inventory": [
+    "api::check",
+    "check",
+    "notify",
+    "release",
+    "web::check"
+  ],
+  "coverage": {
+    "sourceRecipes": "unknown: disabled_recipes omitted by Just serialization",
+    "absentModules": "unknown: absent_modules omitted by Just serialization",
+    "execution": "not-run",
+    "expressions": "not-evaluated",
+    "dependentBodies": "not-expanded",
+    "schedulingWithinGroups": "not-modeled",
+    "invocationArguments": "not-expanded",
+    "inspectedDumpRecipes": 5,
+    "inspectedDumpModules": 3
+  },
+  "inputSha256": "3f6ed86b5a5dac0f56239d821baab7c48f95f483beb0d4f517e3f44427179a8e"
+}

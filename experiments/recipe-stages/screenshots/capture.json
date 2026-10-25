@@ -1,0 +1,46 @@
+{
+  "kind": "agent-browser-screenshot-summary",
+  "capturedAt": "2026-10-25T05:03:41.537515+00:00",
+  "method": "Actual Ego Lite browser screenshots; no compositing or image generation",
+  "images": [
+    {
+      "source": "../example-priors-2/review.html",
+      "sourceSha256": "14c02cdd76e4c86fa4c2d076976a791c74136e76bb93cd495d66d349560c43e6",
+      "image": "priors-2.png",
+      "imageSha256": "aa665825865c3cffd4c16dc418b3aba4bf36a8e493f649acbdd514ecef582fa7",
+      "imagePixels": {
+        "width": 1440,
+        "height": 2085
+      },
+      "viewportCssPixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "deviceScaleFactor": 1,
+      "theme": "light",
+      "preset": "Clean",
+      "fullPage": true
+    },
+    {
+      "source": "../example-priors-1/review.html",
+      "sourceSha256": "f1b22c359af27a069ec23482376c2f5d3eaf6ad4b678c741f223bc8c503fa426",
+      "image": "priors-1.png",
+      "imageSha256": "3f96b96072d1562f69d593ea5ad12d481a5c57156147e2bc386bbae8fdfdf918",
+      "imagePixels": {
+        "width": 1440,
+        "height": 2085
+      },
+      "viewportCssPixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "deviceScaleFactor": 1,
+      "theme": "light",
+      "preset": "Clean",
+      "fullPage": true
+    }
+  ],
+  "agentVisualReview": "At the same viewport, changing only priors from 2 to 1 changes the before/after call counts and moves api::check to the after group in the table. Three phase nodes remain; there is no invented dependency or concurrency edge within either group. Qualified recipe identities and the unexecuted body remain visible.",
+  "humanAcceptance": "pending",
+  "limits": "Image review is separate from automated browser gates, upstream execution and human acceptance."
+}

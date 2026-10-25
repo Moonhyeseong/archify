@@ -1,0 +1,233 @@
+{
+  "format": "recipe-stages-lab-evidence/1",
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "upstream": {
+    "repository": "casey/just",
+    "commit": "d6fee036379c531369dc37f67f8d4640f6bf1e2d",
+    "license": "CC0-1.0"
+  },
+  "fixtureOrigin": "Original synthetic full-module JSON, source-conformant by inspection; Just was not run",
+  "node": "22.23.3",
+  "tests": {
+    "pass": 10,
+    "fail": 0,
+    "includesPublicRendererLiteralAndNonexecutionChecks": true
+  },
+  "reproduction": {
+    "generatedSourceFilesMatched": 6
+  },
+  "sources": [
+    {
+      "file": "README.md",
+      "sha256": "895d015115391de63e890c95b386f86742f93985f6391999da48347e01a9d390",
+      "bytes": 11226,
+      "note": "Updated after verification with actual screenshots and matching explicit browser-check reproduction flag; converter and artifacts unchanged."
+    },
+    {
+      "file": "convert.mjs",
+      "sha256": "acdc74d9f13e26fa8ab1e8397809b6cde137cc18f6e0b4474afa2687008825d9",
+      "bytes": 14857
+    },
+    {
+      "file": "convert.test.mjs",
+      "sha256": "d2dee824e3c98b00961b1456107850e4a67d2c69591d95985cfbf6a967643ebe",
+      "bytes": 7762
+    },
+    {
+      "file": "example-priors-1/projection.json",
+      "sha256": "053675a1e36efec1eaca4785b51afb4bbe26adf362a56211695c4de2df6eaed4",
+      "bytes": 2188
+    },
+    {
+      "file": "example-priors-1/review.archify.md",
+      "sha256": "06cced23859657ad490e4b79cacf309016312164186d376cab976ad4cfed038f",
+      "bytes": 2834
+    },
+    {
+      "file": "example-priors-1/stages.workflow.json",
+      "sha256": "6b19f4f09d31035ef7f0aea5c815ec295fe1630f1dfa02521d219ab19980d04d",
+      "bytes": 1632
+    },
+    {
+      "file": "example-priors-2/projection.json",
+      "sha256": "458696936fac5aa2ee81e97894ed6d7b0ea12cf732b09da730c1b8a84ae2604b",
+      "bytes": 2190
+    },
+    {
+      "file": "example-priors-2/review.archify.md",
+      "sha256": "9ad34cfa87dfd657e987d03e8db6ab7fcc5087859f35ab5d097cca2ddc020fc5",
+      "bytes": 2836
+    },
+    {
+      "file": "example-priors-2/stages.workflow.json",
+      "sha256": "0d568ad3379b8680324acc5e47144f80a744e7010cc8eb033b4e671f9cf89b80",
+      "bytes": 1632
+    },
+    {
+      "file": "fixtures/priors-1.json",
+      "sha256": "3f6ed86b5a5dac0f56239d821baab7c48f95f483beb0d4f517e3f44427179a8e",
+      "bytes": 5471
+    },
+    {
+      "file": "fixtures/priors-2.json",
+      "sha256": "90568ced957ae79e3c4296f51f6bd648128d2bc8891d2e543975b53ff277d3d1",
+      "bytes": 5471
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "example-priors-1/stages.html",
+      "sha256": "e6117ae927bc6725099b4b1c015fa4d53b6eb84c10c72a5f888ccce411efeea4",
+      "bytes": 811605
+    },
+    {
+      "file": "example-priors-1/review.html",
+      "sha256": "f1b22c359af27a069ec23482376c2f5d3eaf6ad4b678c741f223bc8c503fa426",
+      "bytes": 491644
+    },
+    {
+      "file": "example-priors-2/stages.html",
+      "sha256": "c3d3ba464d452552446ecc1cff9bec0f5908dd53f66e1da6cb1f0d7561afb124",
+      "bytes": 811605
+    },
+    {
+      "file": "example-priors-2/review.html",
+      "sha256": "14c02cdd76e4c86fa4c2d076976a791c74136e76bb93cd495d66d349560c43e6",
+      "bytes": 491650
+    }
+  ],
+  "finalize": {
+    "priors-1-workflow": {
+      "ok": true,
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "diagnosticCodes": []
+    },
+    "priors-1-explainer": {
+      "ok": true,
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "diagnosticCodes": []
+    },
+    "priors-2-workflow": {
+      "ok": true,
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "diagnosticCodes": []
+    },
+    "priors-2-explainer": {
+      "ok": true,
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "diagnosticCodes": []
+    }
+  },
+  "publicRender": [
+    {
+      "fixture": "priors-1",
+      "type": "workflow",
+      "ok": true,
+      "sha256": "0924327d7a61b6075cb2ddaf2da0ffc8f9b82c76ddc7e4c2766c001eff760e08",
+      "retainedOutsideCheckout": true
+    },
+    {
+      "fixture": "priors-1",
+      "type": "explainer",
+      "ok": true,
+      "sha256": "984f25b19f712c3f85a49a50aca22949f13057c89c630526e47c46b6fcfde3f4",
+      "retainedOutsideCheckout": true
+    },
+    {
+      "fixture": "priors-2",
+      "type": "workflow",
+      "ok": true,
+      "sha256": "4946eaa3a1d151f3840e9ba54b7cddb0c020d92b44ac4414dc7a523703f6af53",
+      "retainedOutsideCheckout": true
+    },
+    {
+      "fixture": "priors-2",
+      "type": "explainer",
+      "ok": true,
+      "sha256": "6eeccdb7e303f21515160e9680f983716d6d05f6a949d5c6c17092d3a9c6a352",
+      "retainedOutsideCheckout": true
+    }
+  ],
+  "earlierFailures": [
+    {
+      "attempt": "priors-1-browser",
+      "ok": false,
+      "diagnosticCodes": [
+        "explainer/browser-diagram-fit",
+        "explainer/browser-diagram-text",
+        "explainer/browser-readability"
+      ],
+      "artifactSha256": "16ba011a8eb72ec63a594efaaa1d95125e956ee8b9732658d0da17d83a64adf6"
+    },
+    {
+      "attempt": "priors-2-browser",
+      "ok": false,
+      "diagnosticCodes": [
+        "explainer/browser-diagram-fit",
+        "explainer/browser-diagram-text",
+        "explainer/browser-readability"
+      ],
+      "artifactSha256": "6321983bd80d053366eeb94640f733fe96af3091de4808078be29ec9fa33c39f"
+    },
+    {
+      "attempt": "compact-priors-1-workflow",
+      "ok": false,
+      "diagnosticCodes": [
+        "workflow/sublabel-readability"
+      ],
+      "artifactSha256": "2a3eb36a61e5fcdb0b34c94acc2dea48d4ba4dcc0ca724017194918c279a8626"
+    },
+    {
+      "attempt": "compact-priors-2-workflow",
+      "ok": false,
+      "diagnosticCodes": [
+        "workflow/sublabel-readability"
+      ],
+      "artifactSha256": "d576a447d9b5cd88994ac372a0fb11803075d54aabd8bc8ee3651eb9595b6f3e"
+    },
+    {
+      "attempt": "compact-priors-1-explainer",
+      "ok": false,
+      "diagnosticCodes": [
+        "explainer/diagram-render"
+      ],
+      "artifactSha256": null
+    },
+    {
+      "attempt": "compact-priors-2-explainer",
+      "ok": false,
+      "diagnosticCodes": [
+        "explainer/diagram-render"
+      ],
+      "artifactSha256": null
+    }
+  ],
+  "limitations": [
+    "No Just execution or shell/backtick/env/interpolation evaluation.",
+    "Disabled recipes and absent modules are not serialized; source coverage remains unknown.",
+    "Diagram grouping does not model order or concurrency within dependency groups.",
+    "Native qualified identities are in the detail cards and Explainer dependency table.",
+    "Raw receipts are outside the checkout. This portable summary is not an original delivery receipt.",
+    "No human visual acceptance or measured reviewer benefit."
+  ]
+}
