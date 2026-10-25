@@ -1,0 +1,25 @@
+{
+  "kind": "actual-keyboard-selection",
+  "capturedAt": "2026-10-25T05:47:36.693Z",
+  "query": "check-render-output.mjs",
+  "keys": [
+    "ArrowDown",
+    "ArrowDown",
+    "Enter"
+  ],
+  "selectedBeforeEnter": {
+    "tag": "BUTTON",
+    "id": "ex1_check",
+    "name": "Focus check-render-output.mjs, 1 related connection",
+    "description": "Backend · ex1_check · 298.5–445.2 ms · 146.7 ms · 11% of 1,286.2 ms wall-clock"
+  },
+  "sourceSha256": "01818f5c1d96e1d1ac3bbce79999df1938ae3dd1997daceddc125dfa078fe5bf",
+  "afterEnter": {
+    "passportVisible": true,
+    "passportVisibleText": "SEMANTIC PASSPORT check-render-output.mjs 298.5–445.2 ms · 146.7 ms · 11% of 1,286.2 ms wall-clock BACKEND worker 2 › agent-tool-call.workflow ex1_check 0 outgoing · 1 incoming AUTHORED REACH Upstream 2 Downstream 0 × Copy link INCOMING · 1 ← IN agent-tool-call.workflow connects from"
+  },
+  "initialFollowupProbe": {
+    "matched": false,
+    "reason": "An aria-label selector did not match; the Passport region is named through aria-labelledby. This was a selector miss, not observed absence of the Passport."
+  }
+}

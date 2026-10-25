@@ -1,0 +1,76 @@
+{
+  "kind": "actual-root-browser-capture-and-AX-comparison",
+  "recordedAt": "2026-10-25T05:49:16.803521+00:00",
+  "viewport": {
+    "width": 1440,
+    "height": 1000,
+    "deviceScaleFactor": 1
+  },
+  "images": [
+    {
+      "file": "screenshots/base-finder.png",
+      "sha256": "2a833540284d277b0ebc10acf452799117f85dcfdc2f688cb832e69c36c59303",
+      "bytes": 183146,
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "file": "screenshots/candidate-finder.png",
+      "sha256": "4412671f8e86472937e6f512c2e9381611876fa1c18f0454dccdd8c76aa1cb84",
+      "bytes": 182866,
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "file": "screenshots/keyboard-selection.png",
+      "sha256": "d661dbf78408f6ff7d278512ea79b268069a115f3507dae992280843b0c3306b",
+      "bytes": 188034,
+      "width": 1440,
+      "height": 1000
+    }
+  ],
+  "evidence": [
+    {
+      "file": "screenshots/base-ax.json",
+      "sha256": "61ab5b2edc98d117fd8f01cc86cd7d2aec3bee9fe9c8df11dcd4e39717c8ecc9",
+      "bytes": 3619
+    },
+    {
+      "file": "screenshots/candidate-ax.json",
+      "sha256": "c96bc0abdf7d98c4920ee4a5e7599439587b62efb4bc7407dba93c584473160c",
+      "bytes": 4676
+    },
+    {
+      "file": "screenshots/keyboard-selection.json",
+      "sha256": "7e357a5f5dd1d3cd21c6f1846a7fb70a541be3386e0b2324b088546dd8d0ec3f",
+      "bytes": 1126
+    }
+  ],
+  "inputs": [
+    {
+      "file": "base.html",
+      "sha256": "4dc89cfefc54305319f42db08c7f89a40db7f844e311510bb711ab6e3f5eb149",
+      "bytes": 846959
+    },
+    {
+      "file": "candidate.html",
+      "sha256": "01818f5c1d96e1d1ac3bbce79999df1938ae3dd1997daceddc125dfa078fe5bf",
+      "bytes": 847139
+    },
+    {
+      "file": "input.waterfall.json",
+      "sha256": "77d610013a5aab031df739c207b66ebc26e1740371b51da06956ecf06b5e9929",
+      "bytes": 4617
+    }
+  ],
+  "observed": {
+    "repeatedResultCount": 8,
+    "actionNamesUnchanged": true,
+    "baseDescriptionsAbsent": true,
+    "candidateDescriptionsDistinct": true,
+    "keyboardChoice": "ex1_check",
+    "visiblePassportContext": "worker 2 › agent-tool-call.workflow"
+  },
+  "agentVisualReview": "Coordinator viewed all three actual screenshots. Visual design remains unchanged; the AX records, not screenshots alone, establish the description change. Keyboard selection opens the expected existing Passport.",
+  "limits": "Existing measured repository example, not a newly repeated workload. Chromium accessibility-tree evidence only; no VoiceOver/NVDA or cross-AT/human acceptance, no usability timing. No screenshot implies text was spoken."
+}

@@ -287,3 +287,58 @@ test('Finder preserves search, keyboard, contextual Route selection and cleanup'
     }
   });
 });
+
+test('Finder results describe their own existing metadata for repeated measured Waterfall labels', {
+  skip: chrome ? false : 'Set ARCHIFY_CHROME to run real-browser Finder description checks.',
+}, async (t) => {
+  const scratch=fs.mkdtempSync(path.join(os.tmpdir(),'archify-finder-description-'));
+  t.after(()=>fs.rmSync(scratch,{recursive:true,force:true}));
+  const natural=path.join(scratch,'natural.html');
+  execFileSync(process.execPath,[path.join(skillRoot,'renderers/waterfall/render-waterfall.mjs'),path.join(skillRoot,'examples/example-rebuild.waterfall.json'),natural]);
+  const source=fs.readFileSync(natural,'utf8');
+  const anchor='    Archify.finder = (function () {';
+  const literal='<img src=x onerror="globalThis.__finderInjected=true"> `literal`';
+  const hostile=path.join(scratch,'hostile.html');
+  fs.writeFileSync(hostile,source.replace(anchor,`
+    var finderHostile=document.querySelector('[data-node-id="ex0_check"]');
+    finderHostile.setAttribute('data-node-sublabel',${JSON.stringify(literal)});
+    finderHostile.setAttribute('data-node-context','context-only-not-visible');
+${anchor}`));
+  const noMeta=path.join(scratch,'empty-meta.html');
+  fs.writeFileSync(noMeta,source.replace(anchor,`
+    var finderEmpty=document.querySelector('[data-node-id="ex0_check"]');
+    finderEmpty.setAttribute('data-node-id','');
+    finderEmpty.setAttribute('data-node-kind','finder-empty-kind');
+    finderEmpty.setAttribute('data-node-sublabel','');
+    finderEmpty.setAttribute('data-node-tag','');
+    finderEmpty.setAttribute('data-node-context','');
+    var finderOriginalKind=viewerKindLabel;
+    viewerKindLabel=function(kind){return kind==='finder-empty-kind'?'':finderOriginalKind(kind);};
+${anchor}`));
+  const browser=new ChromeVisualBrowser(chrome);t.after(()=>browser.close());
+  const session=await browser.sessionPromise;
+  const send=(method,params={})=>browser.cdp.send(method,params,session);
+  await send('Emulation.setFocusEmulationEnabled',{enabled:true});
+  const run=async expression=>{const result=await send('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true});assert.equal(result.exceptionDetails,undefined,result.exceptionDetails?.text);return result.result.value;};
+  async function load(file){const loaded=browser.cdp.waitFor('Page.loadEventFired',session);await send('Page.navigate',{url:pathToFileURL(file).href+'?theme=light'});await loaded;await run('document.fonts.ready');await run('Archify.finder.open()');await run('new Promise(resolve=>requestAnimationFrame(resolve))');}
+  async function search(query){await run(`(()=>{const input=document.getElementById('node-finder-input');input.value=${JSON.stringify(query)};input.dispatchEvent(new Event('input',{bubbles:true}));})()`);}
+  const rows=()=>run(`Array.from(document.querySelectorAll('.node-finder-result')).map(button=>{const reference=button.getAttribute('aria-describedby'),target=reference?document.getElementById(reference):null,small=button.querySelector('small');return {id:button.dataset.nodeId,name:button.getAttribute('aria-label'),reference,description:target?.textContent??null,visibleMeta:small.textContent,metaTitle:small.title,withinRow:target?button.contains(target):false,uniqueReference:target?Array.from(document.querySelectorAll('[id]')).filter(el=>el.id===reference).length:0};})`);
+  const checkRows=value=>{assert.equal(new Set(value.map(r=>r.reference)).size,value.length);for(const row of value){assert.ok(row.reference);assert.equal(row.description,row.visibleMeta);assert.equal(row.withinRow,true);assert.equal(row.uniqueReference,1);assert.ok(row.description.includes(row.id));}};
+  await t.test('same action names expose distinct metadata and redraw references remain local',async()=>{
+    await load(natural);await search('check-render-output.mjs');let value=await rows();assert.equal(value.length,8);assert.equal(new Set(value.map(r=>r.name)).size,1);assert.equal(new Set(value.map(r=>r.description)).size,8);checkRows(value);
+    await search('ex1_check');value=await rows();assert.equal(value.length,1);assert.equal(value[0].id,'ex1_check');assert.equal(value[0].description.includes('ex0_check'),false);checkRows(value);
+    const previous=value[0].reference;await search('nothing-matches-this');assert.deepEqual(await rows(),[]);assert.equal(await run(`document.getElementById(${JSON.stringify(previous)})===null`),true);
+    await search('check-render-output.mjs');value=await rows();assert.equal(value.length,8);checkRows(value);
+  });
+  await t.test('keyboard selection still selects the requested repeated-label node',async()=>{
+    await search('ex1_check');await run("document.getElementById('node-finder-input').focus()");
+    await send('Input.dispatchKeyEvent',{type:'keyDown',key:'Enter',code:'Enter',windowsVirtualKeyCode:13});await send('Input.dispatchKeyEvent',{type:'keyUp',key:'Enter',code:'Enter',windowsVirtualKeyCode:13});
+    assert.equal(await run('Archify.focus.active()'),'ex1_check');assert.equal(await run('Archify.finder.isOpen()'),false);
+  });
+  await t.test('described metadata remains literal and does not turn tooltip-only context into visible text',async()=>{
+    await load(hostile);await search('ex0_check');const value=await rows();assert.equal(value.length,1);checkRows(value);assert.ok(value[0].description.includes(literal));assert.equal(value[0].description.includes('context-only-not-visible'),false);assert.ok(value[0].metaTitle.includes('context-only-not-visible'));assert.equal(await run("document.querySelectorAll('#node-finder-results img').length"),0);assert.equal(await run('globalThis.__finderInjected===true'),false);
+  });
+  await t.test('an empty metadata row has no broken description reference',async()=>{
+    await load(noMeta);await search('check-render-output.mjs');const value=await rows();const empty=value.find(r=>r.id==='');assert.ok(empty);assert.equal(empty.visibleMeta,'');assert.equal(empty.reference,null);assert.equal(empty.description,null);checkRows(value.filter(r=>r.id!==''));
+  });
+});

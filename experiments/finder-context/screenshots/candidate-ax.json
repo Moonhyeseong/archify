@@ -1,0 +1,112 @@
+{
+  "kind": "actual-chromium-accessibility-tree",
+  "capturedAt": "2026-10-25T05:47:36.357Z",
+  "source": "../candidate.html",
+  "sourceSha256": "01818f5c1d96e1d1ac3bbce79999df1938ae3dd1997daceddc125dfa078fe5bf",
+  "query": "check-render-output.mjs",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "rows": [
+    {
+      "role": "button",
+      "name": "Focus check-render-output.mjs, 1 related connection",
+      "description": "Frontend · ex0_check · 263.3–429.7 ms · 166.4 ms · 13% of 1,286.2 ms wall-clock",
+      "ignored": false
+    },
+    {
+      "role": "button",
+      "name": "Focus check-render-output.mjs, 1 related connection",
+      "description": "Backend · ex1_check · 298.5–445.2 ms · 146.7 ms · 11% of 1,286.2 ms wall-clock",
+      "ignored": false
+    },
+    {
+      "role": "button",
+      "name": "Focus check-render-output.mjs, 1 related connection",
+      "description": "Database · ex2_check · 224.4–398.4 ms · 174 ms · 14% of 1,286.2 ms wall-clock",
+      "ignored": false
+    },
+    {
+      "role": "button",
+      "name": "Focus check-render-output.mjs, 1 related connection",
+      "description": "Database · ex3_check · 593.4–830.7 ms · 237.3 ms · 18% of 1,286.2 ms wall-clock",
+      "ignored": false
+    },
+    {
+      "role": "button",
+      "name": "Focus check-render-output.mjs, 1 related connection",
+      "description": "Frontend · ex4_check · 643.7–862.8 ms · 219.1 ms · 17% of 1,286.2 ms wall-clock",
+      "ignored": false
+    },
+    {
+      "role": "button",
+      "name": "Focus check-render-output.mjs, 1 related connection",
+      "description": "Backend · ex5_check · 645.9–868.3 ms · 222.4 ms · 17% of 1,286.2 ms wall-clock",
+      "ignored": false
+    },
+    {
+      "role": "button",
+      "name": "Focus check-render-output.mjs, 1 related connection",
+      "description": "Database · ex6_check · 1,022.2–1,231.3 ms · 209.1 ms · 16% of 1,286.2 ms wall-clock",
+      "ignored": false
+    },
+    {
+      "role": "button",
+      "name": "Focus check-render-output.mjs, 1 related connection",
+      "description": "Frontend · ex7_check · 1,082.5–1,286.2 ms · 203.7 ms · 16% of 1,286.2 ms wall-clock",
+      "ignored": false
+    }
+  ],
+  "visible": [
+    {
+      "id": "ex0_check",
+      "name": "Focus check-render-output.mjs, 1 related connection",
+      "text": "check-render-output.mjs1 linkFrontend · ex0_check · 263.3–429.7 ms · 166.4 ms · 13% of 1,286.2 ms wall-clock",
+      "describedby": "node-finder-result-meta-0"
+    },
+    {
+      "id": "ex1_check",
+      "name": "Focus check-render-output.mjs, 1 related connection",
+      "text": "check-render-output.mjs1 linkBackend · ex1_check · 298.5–445.2 ms · 146.7 ms · 11% of 1,286.2 ms wall-clock",
+      "describedby": "node-finder-result-meta-1"
+    },
+    {
+      "id": "ex2_check",
+      "name": "Focus check-render-output.mjs, 1 related connection",
+      "text": "check-render-output.mjs1 linkDatabase · ex2_check · 224.4–398.4 ms · 174 ms · 14% of 1,286.2 ms wall-clock",
+      "describedby": "node-finder-result-meta-2"
+    },
+    {
+      "id": "ex3_check",
+      "name": "Focus check-render-output.mjs, 1 related connection",
+      "text": "check-render-output.mjs1 linkDatabase · ex3_check · 593.4–830.7 ms · 237.3 ms · 18% of 1,286.2 ms wall-clock",
+      "describedby": "node-finder-result-meta-3"
+    },
+    {
+      "id": "ex4_check",
+      "name": "Focus check-render-output.mjs, 1 related connection",
+      "text": "check-render-output.mjs1 linkFrontend · ex4_check · 643.7–862.8 ms · 219.1 ms · 17% of 1,286.2 ms wall-clock",
+      "describedby": "node-finder-result-meta-4"
+    },
+    {
+      "id": "ex5_check",
+      "name": "Focus check-render-output.mjs, 1 related connection",
+      "text": "check-render-output.mjs1 linkBackend · ex5_check · 645.9–868.3 ms · 222.4 ms · 17% of 1,286.2 ms wall-clock",
+      "describedby": "node-finder-result-meta-5"
+    },
+    {
+      "id": "ex6_check",
+      "name": "Focus check-render-output.mjs, 1 related connection",
+      "text": "check-render-output.mjs1 linkDatabase · ex6_check · 1,022.2–1,231.3 ms · 209.1 ms · 16% of 1,286.2 ms wall-clock",
+      "describedby": "node-finder-result-meta-6"
+    },
+    {
+      "id": "ex7_check",
+      "name": "Focus check-render-output.mjs, 1 related connection",
+      "text": "check-render-output.mjs1 linkFrontend · ex7_check · 1,082.5–1,286.2 ms · 203.7 ms · 16% of 1,286.2 ms wall-clock",
+      "describedby": "node-finder-result-meta-7"
+    }
+  ],
+  "limitations": "Chromium AX observation, not VoiceOver/NVDA or human assistive-technology acceptance."
+}

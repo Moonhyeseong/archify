@@ -1,0 +1,52 @@
+{
+  "kind": "actual-scoped-validation-summary",
+  "runtimeNode": "22.23.3",
+  "browserSuites": {
+    "command": "ARCHIFY_CHROME=<existing Chrome executable> node scripts/run-tests.mjs --require-files test/finder-browser.test.mjs test/toolbar-keyboard-browser.test.mjs",
+    "pass": 13,
+    "fail": 0,
+    "skip": 0
+  },
+  "core": {
+    "command": "node scripts/run-tests.mjs --require-files test/core-smoke.test.mjs",
+    "pass": 19,
+    "fail": 0,
+    "skip": 0
+  },
+  "generatedCommands": [
+    {
+      "command": "node scripts/generate-viewer.mjs --check",
+      "exitCode": 0
+    },
+    {
+      "command": "node archify/scripts/generate-brand-marks.mjs --check",
+      "exitCode": 0
+    },
+    {
+      "command": "node archify/scripts/generate-validators.mjs --check",
+      "exitCode": 0
+    },
+    {
+      "command": "node scripts/check-release-identity.mjs",
+      "exitCode": 0
+    }
+  ],
+  "golden": {
+    "command": "node test/golden.mjs",
+    "exitCode": 0,
+    "passChecks": 68,
+    "note": "An initial stale manual examples/web-app.html Finder block was re-derived from current viewer source; final golden passed."
+  },
+  "generatedGalleryAndCompare": {
+    "pass": 2,
+    "fail": 0,
+    "command": "node scripts/run-tests.mjs --require-files test/gallery.test.mjs test/architecture-delta.test.mjs --test-name-pattern=\"generated proof gallery matches|checked-in Checkout compare artifact\""
+  },
+  "dependencySetup": "Read-only reuse of already installed lock-matching parse5 7.3.0, Ajv 8.20.0 and simple-icons 16.28.0; no installation or lockfile change.",
+  "limits": "No full repository, cross-AT, VoiceOver/NVDA, human or usability-timing acceptance claimed.",
+  "exactArchivePackageSmoke": {
+    "exitCode": 0,
+    "platform": "darwin",
+    "command": "node scripts/package-smoke.mjs <extracted exact canonical archive>"
+  }
+}

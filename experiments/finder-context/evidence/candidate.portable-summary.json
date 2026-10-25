@@ -1,0 +1,28 @@
+{
+  "ok": true,
+  "status": "pass",
+  "quality": "showcase",
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReview": "not-requested",
+  "kind": "portable-summary-not-original-receipt",
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "command": "node archify/bin/archify.mjs finalize waterfall experiments/finder-context/input.waterfall.json experiments/finder-context/candidate.html --json",
+  "note": "Transcribed actual public finalize stdout with local filesystem paths omitted; original receipts remain outside checkout.",
+  "specification": {
+    "sha256": "77d610013a5aab031df739c207b66ebc26e1740371b51da06956ecf06b5e9929",
+    "bytes": 4617
+  },
+  "artifact": {
+    "sha256": "01818f5c1d96e1d1ac3bbce79999df1938ae3dd1997daceddc125dfa078fe5bf",
+    "bytes": 847139
+  }
+}

@@ -17612,7 +17612,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         var available = availableItems();
         visibleItems = available.filter(function (item) { return !query || item.search.indexOf(query) !== -1; });
         results.textContent = &#39;&#39;;
-        visibleItems.forEach(function (item) {
+        visibleItems.forEach(function (item, index) {
           var button = document.createElement(&#39;button&#39;);
           button.type = &#39;button&#39;;
           button.className = &#39;node-finder-result&#39;;
@@ -17638,6 +17638,10 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
           var meta = document.createElement(&#39;small&#39;);
           meta.textContent = [viewerKindLabel(item.type), item.id, item.sublabel, item.tag].filter(Boolean).join(&#39; \u00b7 &#39;);
           meta.title = [viewerKindLabel(item.type), item.id, item.context, item.sublabel, item.tag].filter(Boolean).join(&#39; \u00b7 &#39;);
+          if (meta.textContent.trim()) {
+            meta.id = &#39;node-finder-result-meta-&#39; + index;
+            button.setAttribute(&#39;aria-describedby&#39;, meta.id);
+          }
           button.appendChild(name);
           button.appendChild(links);
           button.appendChild(meta);
@@ -32834,7 +32838,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         var available = availableItems();
         visibleItems = available.filter(function (item) { return !query || item.search.indexOf(query) !== -1; });
         results.textContent = &#39;&#39;;
-        visibleItems.forEach(function (item) {
+        visibleItems.forEach(function (item, index) {
           var button = document.createElement(&#39;button&#39;);
           button.type = &#39;button&#39;;
           button.className = &#39;node-finder-result&#39;;
@@ -32860,6 +32864,10 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
           var meta = document.createElement(&#39;small&#39;);
           meta.textContent = [viewerKindLabel(item.type), item.id, item.sublabel, item.tag].filter(Boolean).join(&#39; \u00b7 &#39;);
           meta.title = [viewerKindLabel(item.type), item.id, item.context, item.sublabel, item.tag].filter(Boolean).join(&#39; \u00b7 &#39;);
+          if (meta.textContent.trim()) {
+            meta.id = &#39;node-finder-result-meta-&#39; + index;
+            button.setAttribute(&#39;aria-describedby&#39;, meta.id);
+          }
           button.appendChild(name);
           button.appendChild(links);
           button.appendChild(meta);

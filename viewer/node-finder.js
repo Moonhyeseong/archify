@@ -138,7 +138,7 @@
         var available = availableItems();
         visibleItems = available.filter(function (item) { return !query || item.search.indexOf(query) !== -1; });
         results.textContent = '';
-        visibleItems.forEach(function (item) {
+        visibleItems.forEach(function (item, index) {
           var button = document.createElement('button');
           button.type = 'button';
           button.className = 'node-finder-result';
@@ -164,6 +164,10 @@
           var meta = document.createElement('small');
           meta.textContent = [viewerKindLabel(item.type), item.id, item.sublabel, item.tag].filter(Boolean).join(' \u00b7 ');
           meta.title = [viewerKindLabel(item.type), item.id, item.context, item.sublabel, item.tag].filter(Boolean).join(' \u00b7 ');
+          if (meta.textContent.trim()) {
+            meta.id = 'node-finder-result-meta-' + index;
+            button.setAttribute('aria-describedby', meta.id);
+          }
           button.appendChild(name);
           button.appendChild(links);
           button.appendChild(meta);

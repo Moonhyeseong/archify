@@ -1,0 +1,13 @@
+{
+  "kind": "actual-fixed-natural-input-comparison",
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "inputSha256": "77d610013a5aab031df739c207b66ebc26e1740371b51da06956ecf06b5e9929",
+  "baseHtmlSha256": "4dc89cfefc54305319f42db08c7f89a40db7f844e311510bb711ab6e3f5eb149",
+  "candidateHtmlSha256": "01818f5c1d96e1d1ac3bbce79999df1938ae3dd1997daceddc125dfa078fe5bf",
+  "authoredSvgByteIdentical": true,
+  "authoredSvgSha256": "9cf0d5c0e819dc17adcfee0542cf114810ac7c8bddd0096c5e1fb2a2a7cb94b1",
+  "viewerSourceSha256": "eabb491f82c222a1d9b54de1ed1f311b60b8de90244632e6b3ec476ed32ee4de",
+  "templateSha256": "896294c57dad58d6a9147357017b6d6fe903cac233a9ab7f4a79c7bd03b6c6c8",
+  "browserTestSha256": "a2acaeecae5d6edfc1a6087c6aad7fb45b2f5c76b6da63f10fef947c93055c78",
+  "note": "Existing measured repository example; no new workload, timing or assistive-technology run is inferred. Root screenshot/AX hashes separately bind captured files."
+}
