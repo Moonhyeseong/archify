@@ -1,0 +1,31 @@
+{
+  "recordType": "Fixed complete upstream files; no upstream program executed",
+  "repository": "https://github.com/serge-sans-paille/beniget",
+  "revision": "c0f03c00a4b737916a3dcfe9849fc177d1e1fe88",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1490,
+      "sha256": "e0b021e890014fff3f0eca73233f1317ca940ba56f085a644665771361ce4b9f",
+      "url": "https://github.com/serge-sans-paille/beniget/blob/c0f03c00a4b737916a3dcfe9849fc177d1e1fe88/LICENSE"
+    },
+    {
+      "path": "README.rst",
+      "bytes": 9048,
+      "sha256": "a3d0210ac1e1c0eb3306966a5de50492e0689d19407ad5503a400170e4342341",
+      "url": "https://github.com/serge-sans-paille/beniget/blob/c0f03c00a4b737916a3dcfe9849fc177d1e1fe88/README.rst"
+    },
+    {
+      "path": "tests/test_chains.py",
+      "bytes": 94585,
+      "sha256": "f0ba63aec94472a7166597b88f0f91ca7bf6d376f6c4a01f7ce9babab470ad42",
+      "url": "https://github.com/serge-sans-paille/beniget/blob/c0f03c00a4b737916a3dcfe9849fc177d1e1fe88/tests/test_chains.py"
+    },
+    {
+      "path": "beniget/beniget.py",
+      "bytes": 69713,
+      "sha256": "ebca8a5e4ee6fe6975baa81b662d1590cd4132766d541de4d750d46e0dde2d32",
+      "url": "https://github.com/serge-sans-paille/beniget/blob/c0f03c00a4b737916a3dcfe9849fc177d1e1fe88/beniget/beniget.py"
+    }
+  ]
+}

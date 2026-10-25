@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "以模块局部定义 a 为根的静态 use-chain 投影",
+    "subtitle": "7 节点 / 8 条 use 关系；共享 IfExp 只画一次。不是控制路径、调用图或执行轨迹。",
+    "output": "experiments/static-uses/use-chain.html",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "components": [
+    {
+      "id": "def-a",
+      "type": "backend",
+      "icon": "none",
+      "label": "定义 a",
+      "sublabel": "模块局部定义",
+      "pos": [
+        30,
+        180
+      ],
+      "size": [
+        184,
+        90
+      ]
+    },
+    {
+      "id": "load-test",
+      "type": "backend",
+      "icon": "none",
+      "label": "读取 a · 条件",
+      "sublabel": "test · 偏移 16",
+      "pos": [
+        285,
+        30
+      ],
+      "size": [
+        184,
+        90
+      ]
+    },
+    {
+      "id": "load-body",
+      "type": "backend",
+      "icon": "none",
+      "label": "读取 a · 真分支",
+      "sublabel": "body · 偏移 7",
+      "pos": [
+        285,
+        180
+      ],
+      "size": [
+        184,
+        90
+      ]
+    },
+    {
+      "id": "load-else",
+      "type": "backend",
+      "icon": "none",
+      "label": "读取 a · 假分支",
+      "sublabel": "orelse · 偏移 25",
+      "pos": [
+        285,
+        330
+      ],
+      "size": [
+        184,
+        90
+      ]
+    },
+    {
+      "id": "binop",
+      "type": "backend",
+      "icon": "none",
+      "label": "a + 1",
+      "sublabel": "BinOp",
+      "pos": [
+        540,
+        180
+      ],
+      "size": [
+        184,
+        90
+      ]
+    },
+    {
+      "id": "unaryop",
+      "type": "backend",
+      "icon": "none",
+      "label": "- a",
+      "sublabel": "UnaryOp",
+      "pos": [
+        540,
+        330
+      ],
+      "size": [
+        184,
+        90
+      ]
+    },
+    {
+      "id": "ifexp",
+      "type": "backend",
+      "icon": "none",
+      "label": "条件表达式",
+      "sublabel": "共享 IfExp",
+      "pos": [
+        795,
+        180
+      ],
+      "size": [
+        184,
+        90
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "use-1",
+      "from": "def-a",
+      "to": "load-test",
+      "label": "use",
+      "variant": "default"
+    },
+    {
+      "id": "use-2",
+      "from": "def-a",
+      "to": "load-body",
+      "label": "use",
+      "variant": "default"
+    },
+    {
+      "id": "use-3",
+      "from": "def-a",
+      "to": "load-else",
+      "label": "use",
+      "variant": "default"
+    },
+    {
+      "id": "use-4",
+      "from": "load-test",
+      "to": "ifexp",
+      "label": "use",
+      "variant": "default"
+    },
+    {
+      "id": "use-5",
+      "from": "load-body",
+      "to": "binop",
+      "label": "use",
+      "variant": "default"
+    },
+    {
+      "id": "use-6",
+      "from": "binop",
+      "to": "ifexp",
+      "label": "use",
+      "variant": "default"
+    },
+    {
+      "id": "use-7",
+      "from": "load-else",
+      "to": "unaryop",
+      "label": "use",
+      "variant": "default"
+    },
+    {
+      "id": "use-8",
+      "from": "unaryop",
+      "to": "ifexp",
+      "label": "use",
+      "variant": "default"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "slate",
+      "title": "这张图只表示静态使用关系",
+      "items": [
+        "四个 a 是一个定义与三次 Load occurrence；同名不合并。",
+        "三条分支链汇入同一个 IfExp；打印重复展开不创造新节点。",
+        "偏移从 0 开始，按源字符串字符计数；由作者标注，不是工具导出位置。"
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "固定官方期望，不是本次运行",
+      "items": [
+        "Beniget c0f03c00 · test_ifexp_chain；本轮没有运行 Beniget 或这段 Python。",
+        "常量未出现在此根的 expected 链；工具本身有 visit_Constant。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "recordType": "Authored projection of the complete official expected string, checked against owning visitors; not an upstream export",
+  "upstreamRevision": "c0f03c00a4b737916a3dcfe9849fc177d1e1fe88",
+  "sourceInput": {
+    "path": "source-input.txt",
+    "bytes": 26,
+    "sha256": "5b387280560580de5f8bb73a737b17a2de20309d1d34877ae223263948cedef8",
+    "origin": "tests/test_chains.py L57 Python string contents; no trailing LF",
+    "coordinateContract": "sourceString character offsets, zero-based, half-open; this ASCII fixture also has equal byte offsets; authored, not upstream emitted spans"
+  },
+  "expected": {
+    "path": "expected-chain.txt",
+    "sha256": "61456eb360c67e1da8e458329f0d86955a68b44a635279526687a553179a903f",
+    "origin": "tests/test_chains.py L61–65 adjacent literal contents joined by the author, no trailing LF; not evaluated"
+  },
+  "sourceRanges": [
+    {
+      "path": "tests/test_chains.py",
+      "start": 36,
+      "end": 46,
+      "role": "consumer"
+    },
+    {
+      "path": "tests/test_chains.py",
+      "start": 56,
+      "end": 67,
+      "role": "complete selected test"
+    },
+    {
+      "path": "tests/test_chains.py",
+      "start": 2285,
+      "end": 2288,
+      "role": "normalization"
+    },
+    {
+      "path": "beniget/beniget.py",
+      "start": 207,
+      "end": 219,
+      "role": "shared-chain text expansion"
+    },
+    {
+      "path": "beniget/beniget.py",
+      "start": 508,
+      "end": 512,
+      "role": "local roots dump"
+    },
+    {
+      "path": "beniget/beniget.py",
+      "start": 1030,
+      "end": 1034,
+      "role": "assignment visitor"
+    },
+    {
+      "path": "beniget/beniget.py",
+      "start": 1302,
+      "end": 1311,
+      "role": "operator visitors"
+    },
+    {
+      "path": "beniget/beniget.py",
+      "start": 1335,
+      "end": 1340,
+      "role": "IfExp shared Def"
+    },
+    {
+      "path": "beniget/beniget.py",
+      "start": 1422,
+      "end": 1424,
+      "role": "Constant exists"
+    },
+    {
+      "path": "beniget/beniget.py",
+      "start": 1481,
+      "end": 1507,
+      "role": "Name occurrences"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "def-a",
+      "label": "定义 a",
+      "role": "模块局部定义",
+      "sourceSpan": [
+        0,
+        1
+      ],
+      "sourceText": "a",
+      "identity": "authored reading ID; AST occurrence identity supported by owning source",
+      "expectedOccurrences": 1
+    },
+    {
+      "id": "load-test",
+      "label": "读取 a · 条件",
+      "role": "test · 偏移 16",
+      "sourceSpan": [
+        16,
+        17
+      ],
+      "sourceText": "a",
+      "identity": "authored reading ID; AST occurrence identity supported by owning source",
+      "expectedOccurrences": 1
+    },
+    {
+      "id": "load-body",
+      "label": "读取 a · 真分支",
+      "role": "body · 偏移 7",
+      "sourceSpan": [
+        7,
+        8
+      ],
+      "sourceText": "a",
+      "identity": "authored reading ID; AST occurrence identity supported by owning source",
+      "expectedOccurrences": 1
+    },
+    {
+      "id": "load-else",
+      "label": "读取 a · 假分支",
+      "role": "orelse · 偏移 25",
+      "sourceSpan": [
+        25,
+        26
+      ],
+      "sourceText": "a",
+      "identity": "authored reading ID; AST occurrence identity supported by owning source",
+      "expectedOccurrences": 1
+    },
+    {
+      "id": "binop",
+      "label": "a + 1",
+      "role": "BinOp",
+      "sourceSpan": [
+        7,
+        12
+      ],
+      "sourceText": "a + 1",
+      "identity": "authored reading ID; AST occurrence identity supported by owning source",
+      "expectedOccurrences": 1
+    },
+    {
+      "id": "unaryop",
+      "label": "- a",
+      "role": "UnaryOp",
+      "sourceSpan": [
+        23,
+        26
+      ],
+      "sourceText": "- a",
+      "identity": "authored reading ID; AST occurrence identity supported by owning source",
+      "expectedOccurrences": 1
+    },
+    {
+      "id": "ifexp",
+      "label": "条件表达式",
+      "role": "共享 IfExp",
+      "sourceSpan": [
+        7,
+        26
+      ],
+      "sourceText": "a + 1 if a else - a",
+      "identity": "authored reading ID; AST occurrence identity supported by owning source",
+      "expectedOccurrences": 3
+    }
+  ],
+  "edges": [
+    {
+      "id": "use-1",
+      "from": "def-a",
+      "to": "load-test",
+      "kind": "static use",
+      "expectedBranch": "condition",
+      "basis": "complete expected chain and corresponding visitor; no execution ordering"
+    },
+    {
+      "id": "use-2",
+      "from": "def-a",
+      "to": "load-body",
+      "kind": "static use",
+      "expectedBranch": "body",
+      "basis": "complete expected chain and corresponding visitor; no execution ordering"
+    },
+    {
+      "id": "use-3",
+      "from": "def-a",
+      "to": "load-else",
+      "kind": "static use",
+      "expectedBranch": "orelse",
+      "basis": "complete expected chain and corresponding visitor; no execution ordering"
+    },
+    {
+      "id": "use-4",
+      "from": "load-test",
+      "to": "ifexp",
+      "kind": "static use",
+      "expectedBranch": "condition",
+      "basis": "complete expected chain and corresponding visitor; no execution ordering"
+    },
+    {
+      "id": "use-5",
+      "from": "load-body",
+      "to": "binop",
+      "kind": "static use",
+      "expectedBranch": "body",
+      "basis": "complete expected chain and corresponding visitor; no execution ordering"
+    },
+    {
+      "id": "use-6",
+      "from": "binop",
+      "to": "ifexp",
+      "kind": "static use",
+      "expectedBranch": "body",
+      "basis": "complete expected chain and corresponding visitor; no execution ordering"
+    },
+    {
+      "id": "use-7",
+      "from": "load-else",
+      "to": "unaryop",
+      "kind": "static use",
+      "expectedBranch": "orelse",
+      "basis": "complete expected chain and corresponding visitor; no execution ordering"
+    },
+    {
+      "id": "use-8",
+      "from": "unaryop",
+      "to": "ifexp",
+      "kind": "static use",
+      "expectedBranch": "orelse",
+      "basis": "complete expected chain and corresponding visitor; no execution ordering"
+    }
+  ],
+  "notProjected": [
+    "assignment and constant AST nodes absent from this root expected chain",
+    "full AST and all DefUseChains roots",
+    "CFG, control dependence edges, feasible paths, observed execution and values",
+    "stable upstream exported graph IDs or coordinates"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "status": "pass",
+  "scope": "fixed official fixture/expected projection and rendered content only; no upstream execution or browser",
+  "checks": [
+    "four complete upstream files retain fixed bytes and SHA",
+    "complete official selected test and source literal preserved",
+    "all five official expected literals preserved without running Python",
+    "seven nodes and eight static-use relations equal fixed expected projection",
+    "ledger binds same seven nodes and eight edges without adding runtime edges",
+    "four distinct a occurrences and one shared IfExp are preserved",
+    "page sourceText equals authored MD and native spec is exact",
+    "embedded native HTML equals standalone final artifact bytes",
+    "source dependency is exact fixed native JSON",
+    "actual rendered source and complete expected literal excerpt retained",
+    "all eight relation rows actually rendered exactly once",
+    "standalone SVG exposes exact graph identity and eight path relations",
+    "scope, offsets, shared-expression and effective Live caveats remain public",
+    "public generated HTML contains no personal file path"
+  ]
+}

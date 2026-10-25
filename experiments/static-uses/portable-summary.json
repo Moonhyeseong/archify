@@ -1,0 +1,673 @@
+{
+  "recordType": "Portable derived evidence summary, not original Archify receipt",
+  "archifyBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "sourceRevision": "c0f03c00a4b737916a3dcfe9849fc177d1e1fe88",
+  "runtime": "Node 22.23.2; Python3 standard library content audit; Chrome used only by native automatic browser gate",
+  "scope": "New authored content only; fixed official expected projection, no Beniget/AST/gast/source program execution; no shared code/ZIP/install",
+  "authoredInput": "7 nodes and 8 static use relationships; single IfExp shared across three text expansions; four a occurrences",
+  "commands": [
+    {
+      "purpose": "public native render",
+      "command": "node archify/bin/archify.mjs render architecture experiments/static-uses/use-chain.architecture.json experiments/static-uses/use-chain.render.html --quality showcase",
+      "exitCode": 0
+    },
+    {
+      "purpose": "public Explainer render",
+      "command": "node archify/bin/archify.mjs render explainer experiments/static-uses/explainer.archify.md experiments/static-uses/explainer.render.html",
+      "exitCode": 0
+    },
+    {
+      "purpose": "final native public finalize",
+      "command": "node archify/bin/archify.mjs finalize architecture experiments/static-uses/use-chain.architecture.json experiments/static-uses/use-chain.html --quality showcase --out-dir <new-private-evidence-directory>/native-v2 --json",
+      "exitCode": 0
+    },
+    {
+      "purpose": "final Explainer public finalize",
+      "command": "node archify/bin/archify.mjs finalize explainer experiments/static-uses/explainer.archify.md experiments/static-uses/explainer.html --json --out-dir <new-private-evidence-directory>/explainer-v2",
+      "exitCode": 0
+    },
+    {
+      "purpose": "fixed facts and actual generated HTML content audit",
+      "command": "python3 experiments/static-uses/audit.py",
+      "exitCode": 0
+    }
+  ],
+  "finalize": {
+    "native": {
+      "recordType": "Selected fields from original finalize stdout; original stays outside checkout",
+      "rawStdout": {
+        "path": "native-v2.stdout.json",
+        "bytes": 1292,
+        "sha256": "0655541ed1fa1c1c12854a5b6de53d4d06ecaacb6eaa69a97d8cffdc7e5c1386"
+      },
+      "ok": true,
+      "status": "pass",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "diagnostics": [],
+      "diagnosticSummary": {
+        "total": 0,
+        "shown": 0,
+        "truncated": false
+      },
+      "browserCheck": {
+        "requested": true,
+        "ran": true
+      },
+      "visualReview": "not-requested",
+      "specification": {
+        "sha256": "39ef61b3a2b292eedc866be198e9ec5f5f8c6ee70118325f93cbb5f79fff0980",
+        "bytes": 3967
+      },
+      "artifact": {
+        "sha256": "a8bbc654dae2aae9d4e549ca1cd3caeed48edafbd781c21341a07fc2dcf2093b",
+        "bytes": 866293
+      },
+      "diagnosticSelection": "Code/severity only. Original messages and local-path subjects remain in raw receipt; this is a derived selector."
+    },
+    "explainer": {
+      "recordType": "Selected fields from original finalize stdout; original stays outside checkout",
+      "rawStdout": {
+        "path": "explainer-v2.stdout.json",
+        "bytes": 1196,
+        "sha256": "38ceaf0b532f538fe1aa7e21f970f966bb15ef7c467686a45bd97dd4bd3993df"
+      },
+      "ok": true,
+      "status": "pass",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "not-run"
+      },
+      "diagnostics": [],
+      "diagnosticSummary": {
+        "total": 0,
+        "shown": 0,
+        "truncated": false
+      },
+      "browserCheck": {
+        "requested": false,
+        "ran": false
+      },
+      "visualReview": "not-requested",
+      "specification": {
+        "sha256": "76bac7f5d71d5c9bcb3bcba3ec041e1206560eab718c26219342a9ab8871ed3e",
+        "bytes": 3565
+      },
+      "artifact": {
+        "sha256": "98d3202ab22b741c8f6c6a850f5560e685367b8c746d217418f60dea4872ef87",
+        "bytes": 571817
+      },
+      "diagnosticSelection": "Code/severity only. Original messages and local-path subjects remain in raw receipt; this is a derived selector."
+    }
+  },
+  "audit": {
+    "status": "pass",
+    "scope": "fixed official fixture/expected projection and rendered content only; no upstream execution or browser",
+    "checks": [
+      "four complete upstream files retain fixed bytes and SHA",
+      "complete official selected test and source literal preserved",
+      "all five official expected literals preserved without running Python",
+      "seven nodes and eight static-use relations equal fixed expected projection",
+      "ledger binds same seven nodes and eight edges without adding runtime edges",
+      "four distinct a occurrences and one shared IfExp are preserved",
+      "page sourceText equals authored MD and native spec is exact",
+      "embedded native HTML equals standalone final artifact bytes",
+      "source dependency is exact fixed native JSON",
+      "actual rendered source and complete expected literal excerpt retained",
+      "all eight relation rows actually rendered exactly once",
+      "standalone SVG exposes exact graph identity and eight path relations",
+      "scope, offsets, shared-expression and effective Live caveats remain public",
+      "public generated HTML contains no personal file path"
+    ]
+  },
+  "history": {
+    "firstRevision": {
+      "reason": "Root visual reading requested source in first screen and tighter graph; offset terminology corrected",
+      "page": {
+        "path": "first-revision/public-before-change/explainer.html",
+        "bytes": 570075,
+        "sha256": "4feb81562f93e20d4483f16086c2f57fda2062089f91072b380c98e149c130e8"
+      },
+      "native": {
+        "path": "first-revision/public-before-change/use-chain.html",
+        "bytes": 866166,
+        "sha256": "a94bb32f70d1c714f4cf1ab0e2ef91d8c302cfb07fcf61ea6d9e4d90b71403d3"
+      },
+      "preserved": "Complete original authored/source/artifact files and original applicable pass receipts remain outside checkout"
+    },
+    "failedEvidenceReuse": {
+      "reason": "Previous browser receipt bound first HTML; checker refused unowned evidence path after content change",
+      "finalize": {
+        "recordType": "Selected fields from original finalize stdout; original stays outside checkout",
+        "rawStdout": {
+          "path": "native.stdout.json",
+          "bytes": 1907,
+          "sha256": "51db68f97d455831cd6f75224b584cbe925cee59277cdc0e8b92ba22b0f8074d"
+        },
+        "ok": false,
+        "status": "fail",
+        "gates": {
+          "validate": "pass",
+          "deliver": "pass",
+          "check": "pass",
+          "browser-check": "fail"
+        },
+        "diagnostics": [
+          {
+            "code": "viewer/evidence-path-conflict",
+            "severity": "error"
+          }
+        ],
+        "diagnosticSummary": {
+          "total": 1,
+          "shown": 1,
+          "truncated": false
+        },
+        "browserCheck": {
+          "requested": true,
+          "ran": false
+        },
+        "visualReview": "not-requested",
+        "specification": {
+          "sha256": "39ef61b3a2b292eedc866be198e9ec5f5f8c6ee70118325f93cbb5f79fff0980",
+          "bytes": 3967
+        },
+        "artifact": {
+          "sha256": "a8bbc654dae2aae9d4e549ca1cd3caeed48edafbd781c21341a07fc2dcf2093b",
+          "bytes": 866293
+        },
+        "diagnosticSelection": "Code/severity only. Original messages and local-path subjects remain in raw receipt; this is a derived selector."
+      },
+      "resolution": "New independent native-v2 out-dir; all four gates rerun and passed; original failure retained"
+    },
+    "animationInputCorrection": "First authored meta.animation:none was not effective: fixed base svgRootAttrs emits trace for every diagram; final input omits animation. Existing Live motion is decorative, not execution ordering; Still may be selected by reader."
+  },
+  "rootVisualReview": {
+    "status": "Root actual browser/visual sample captured and all four PNGs viewed",
+    "recordType": "Selected metadata from root-authored derived capture summary; not raw browser JSON or CLI receipt",
+    "captureSummary": {
+      "path": "screenshots/capture-summary.json",
+      "bytes": 4119,
+      "sha256": "34bb9b965ff15a755e4027bfe52eb7cc9af8b4eb22dee64a4a6e187df7f3f5a6"
+    },
+    "sourceSummarySha256": "34bb9b965ff15a755e4027bfe52eb7cc9af8b4eb22dee64a4a6e187df7f3f5a6",
+    "observed": [
+      "Desktop1440x1100 Explainer: complete source visible in answer; same7nodeIDs and all8use rows; single ifexp; desktop small-text hint absent after authored layout revision. Full-page PNG1440x2068, document width1440.",
+      "Mobile390x844 Explainer: document width390, diagram thumbnail small with existing open-interactive hint; long expected block and wider tables require horizontal scrolling. Full-page PNG390x2825.",
+      "Standalone native1440x1000 dark: all7nodes/8use labels visible; motion control already read Still/static with aria-pressed=false and title恢复动效. Root did not toggle motion, and does not claim the artifact disables Live by default.",
+      "Actual #node-ifexp pointer click opens Passport with0out/3in (condition,BinOp,UnaryOp) and6authored upstream nodes. This is authored graph adjacency, not program execution."
+    ],
+    "limitations": [
+      "Page browser-check not requested; native normalCLI browser evidence separate from this rootpointer/visual sample.",
+      "No root full keyboard traversal, assistive-tech, touch, cross-browser, upstream program run or measured reader-benefit validation.",
+      "No external source navigation, SourceCard verified excerpt interaction, OSclipboard or mobile native interaction claimed.",
+      "Mobile code/table contents not all simultaneously visible; full DOM text does not establish complete viewport visibility.",
+      "Native screenshot at1000height does not include all footer/sidebar text."
+    ],
+    "rawObservationBindings": [
+      {
+        "file": "desktop-v2-observations.json",
+        "bytes": 3361,
+        "sha256": "f67da5e975bc26083d1072c13ea46619542d03aa4659aa8addb19e4e11c6d111"
+      },
+      {
+        "file": "mobile-v2-observations.json",
+        "bytes": 765,
+        "sha256": "e277162dc994cac41375225ea8688cf456d98f940455108f5635683bc100d6ef"
+      },
+      {
+        "file": "native-v2-observations.json",
+        "bytes": 3440,
+        "sha256": "dd9c1c6ed464d9f1215dc91d649eea10b9b3b13730f20421e864c3e40b26e6bd"
+      }
+    ],
+    "retainedFirstRevision": [
+      {
+        "kind": "first revision visual review",
+        "file": {
+          "file": "initial-desktop-light.png",
+          "bytes": 308969,
+          "sha256": "4854f643573d4b8f1d2ed0a403bee764756bb737b8679f09ced891eaf75c1a8e",
+          "imageSize": [
+            1440,
+            1988
+          ]
+        },
+        "detail": "Old4feb81562f93e20d4483f16086c2f57fda2062089f91072b380c98e149c130e8 page showed desktop small-text hint and source below diagram. Preserved privately; author revised normalCLI inputs/layout and explicit zero-based offset labels before final capture."
+      }
+    ],
+    "browserGateIsNotRootReview": true,
+    "motionClarification": "Observed Still before capture with aria-pressed=false; root did not toggle and does not infer default Live disabled."
+  },
+  "provenancePolicy": "Original finalize/delivery/browser receipts remain private and unchanged; portable selectors do not establish current delivery provenance for shared physical copies",
+  "publicFiles": [
+    {
+      "path": ".gitattributes",
+      "bytes": 26,
+      "sha256": "d4938964577a3248795b6627852a3d297bcbc95ffbab896955cd4c1cd03915fd"
+    },
+    {
+      "path": "ATTRIBUTION.md",
+      "bytes": 1264,
+      "sha256": "490efbf8b94e4d2b57f7f2bef1b6cf89edecc11f135b7cf2c6cc61867f99861e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 10512,
+      "sha256": "37279df3c5ef3085f282efd31e0de4c8dbd1fd3cb810fb452ab0fc60d26b29ad"
+    },
+    {
+      "path": "audit-results.json",
+      "bytes": 1142,
+      "sha256": "59eabd176b4d175dcb88f943afa18c896c51fc40a4de5efef44d4e98f6ff4936"
+    },
+    {
+      "path": "audit.py",
+      "bytes": 5478,
+      "sha256": "5609dc3e7e9669a1fb979f560fa77126d8120f23888bdcaa34bf0a6acf23346f"
+    },
+    {
+      "path": "expected-chain.txt",
+      "bytes": 99,
+      "sha256": "61456eb360c67e1da8e458329f0d86955a68b44a635279526687a553179a903f"
+    },
+    {
+      "path": "explainer.archify.md",
+      "bytes": 3565,
+      "sha256": "76bac7f5d71d5c9bcb3bcba3ec041e1206560eab718c26219342a9ab8871ed3e"
+    },
+    {
+      "path": "explainer.html",
+      "bytes": 571817,
+      "sha256": "98d3202ab22b741c8f6c6a850f5560e685367b8c746d217418f60dea4872ef87"
+    },
+    {
+      "path": "projection-ledger.json",
+      "bytes": 6440,
+      "sha256": "565bb7966368b5b81ad5c75d97b4313435f7353cb08b97b996c7aeec7d522b1c"
+    },
+    {
+      "path": "screenshots/capture-summary.json",
+      "bytes": 4119,
+      "sha256": "34bb9b965ff15a755e4027bfe52eb7cc9af8b4eb22dee64a4a6e187df7f3f5a6"
+    },
+    {
+      "path": "screenshots/native-dark-still.png",
+      "bytes": 146709,
+      "sha256": "fe5d983214f566858d33728c3ccd59cf5cc8041e8493236d619d6ee32cf69431"
+    },
+    {
+      "path": "screenshots/native-shared-ifexp-dark.png",
+      "bytes": 182223,
+      "sha256": "64529412484e229ebe23dd2ae1504dac5ae3a25b2fc7c800dd685d78c8eb40df"
+    },
+    {
+      "path": "screenshots/overview-light.png",
+      "bytes": 328176,
+      "sha256": "eb72c1d603ea341d3726dffe5dfba58e1ba9b9df0378d7987843e4f4012bb7a5"
+    },
+    {
+      "path": "screenshots/overview-mobile-light.png",
+      "bytes": 274267,
+      "sha256": "5839c76ea4e8837b54c6d606fb83f0d8bfb28e9d093d3bae2bb1f42f92f3127c"
+    },
+    {
+      "path": "selected-test.txt",
+      "bytes": 353,
+      "sha256": "dc693994ce0b396b4ed814fa1c5e343620db3822952c903e6f92bccb0530e549"
+    },
+    {
+      "path": "source-input.txt",
+      "bytes": 26,
+      "sha256": "5b387280560580de5f8bb73a737b17a2de20309d1d34877ae223263948cedef8"
+    },
+    {
+      "path": "upstream/beniget/LICENSE",
+      "bytes": 1490,
+      "sha256": "e0b021e890014fff3f0eca73233f1317ca940ba56f085a644665771361ce4b9f"
+    },
+    {
+      "path": "upstream/beniget/README.rst",
+      "bytes": 9048,
+      "sha256": "a3d0210ac1e1c0eb3306966a5de50492e0689d19407ad5503a400170e4342341"
+    },
+    {
+      "path": "upstream/beniget/beniget/beniget.py",
+      "bytes": 69713,
+      "sha256": "ebca8a5e4ee6fe6975baa81b662d1590cd4132766d541de4d750d46e0dde2d32"
+    },
+    {
+      "path": "upstream/beniget/tests/test_chains.py",
+      "bytes": 94585,
+      "sha256": "f0ba63aec94472a7166597b88f0f91ca7bf6d376f6c4a01f7ce9babab470ad42"
+    },
+    {
+      "path": "upstream/source-manifest.json",
+      "bytes": 1305,
+      "sha256": "ca6080e0a380439f9720dc7ab765fee490c6793a2b028ac174ad728d0824665d"
+    },
+    {
+      "path": "use-chain.architecture.json",
+      "bytes": 3967,
+      "sha256": "39ef61b3a2b292eedc866be198e9ec5f5f8c6ee70118325f93cbb5f79fff0980"
+    },
+    {
+      "path": "use-chain.html",
+      "bytes": 866293,
+      "sha256": "a8bbc654dae2aae9d4e549ca1cd3caeed48edafbd781c21341a07fc2dcf2093b"
+    }
+  ],
+  "rawEvidence": [
+    {
+      "path": "audit.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "audit.stdout.json",
+      "bytes": 1142,
+      "sha256": "59eabd176b4d175dcb88f943afa18c896c51fc40a4de5efef44d4e98f6ff4936"
+    },
+    {
+      "path": "explainer/explainer.finalize-summary.json",
+      "bytes": 1426,
+      "sha256": "f723590d91ac4d1a8daa77df68cde117cf7c61716c5eb13833b37cf593cc3b37"
+    },
+    {
+      "path": "explainer/explainer.finalize.json",
+      "bytes": 11834,
+      "sha256": "cc2e4f9644bb7e62265ab504cf3996d274a08b9fc4eba92ad9c6068e5eade624"
+    },
+    {
+      "path": "explainer-v2/explainer.finalize-summary.json",
+      "bytes": 1432,
+      "sha256": "86377eed25222b3fd5719d9bcc180c56f5576626cc95c0425e9138fff06c3659"
+    },
+    {
+      "path": "explainer-v2/explainer.finalize.json",
+      "bytes": 11856,
+      "sha256": "777ec0bf4076e9502c61ce789bd6a28f79698d208cc9467d031d07fd8daf3111"
+    },
+    {
+      "path": "explainer-v2.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "explainer-v2.stdout.json",
+      "bytes": 1196,
+      "sha256": "38ceaf0b532f538fe1aa7e21f970f966bb15ef7c467686a45bd97dd4bd3993df"
+    },
+    {
+      "path": "explainer.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "explainer.stdout.json",
+      "bytes": 1190,
+      "sha256": "a7c56f7937ede2b65ef87ca9a7ef85f6c8e9179f2f949fba519091c952d7a34c"
+    },
+    {
+      "path": "final-render-and-delivery/explainer.delivery.json",
+      "bytes": 1130,
+      "sha256": "609287a2a688ed5f39eed3ed68cefc90163c936ff912cb470bf49be70c58c749"
+    },
+    {
+      "path": "final-render-and-delivery/explainer.render.html",
+      "bytes": 571817,
+      "sha256": "56ad5036d806b114caca425eaa32f8b2fd90bbbda89ca955122ac7fdfb59127e"
+    },
+    {
+      "path": "final-render-and-delivery/use-chain.delivery.json",
+      "bytes": 638,
+      "sha256": "af7424139d74d353ee6a86a65d0d5007b389aae5d3118e2390cf36a28f047c43"
+    },
+    {
+      "path": "final-render-and-delivery/use-chain.render.html",
+      "bytes": 866293,
+      "sha256": "a8bbc654dae2aae9d4e549ca1cd3caeed48edafbd781c21341a07fc2dcf2093b"
+    },
+    {
+      "path": "first-revision/explainer/explainer.finalize-summary.json",
+      "bytes": 1426,
+      "sha256": "f723590d91ac4d1a8daa77df68cde117cf7c61716c5eb13833b37cf593cc3b37"
+    },
+    {
+      "path": "first-revision/explainer/explainer.finalize.json",
+      "bytes": 11834,
+      "sha256": "cc2e4f9644bb7e62265ab504cf3996d274a08b9fc4eba92ad9c6068e5eade624"
+    },
+    {
+      "path": "first-revision/explainer.delivery.json",
+      "bytes": 1130,
+      "sha256": "5fcd331b0dc269f3499bb34bdad959a2e299f70e33bb538fdbc55910adfc4111"
+    },
+    {
+      "path": "first-revision/explainer.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "first-revision/explainer.stdout.json",
+      "bytes": 1190,
+      "sha256": "a7c56f7937ede2b65ef87ca9a7ef85f6c8e9179f2f949fba519091c952d7a34c"
+    },
+    {
+      "path": "first-revision/native/use-chain.browser-check.json",
+      "bytes": 21483,
+      "sha256": "8fe442039a654a89abbc1a178f8e535294c214f700da16c76744658f49cf0b12"
+    },
+    {
+      "path": "first-revision/native/use-chain.finalize-summary.json",
+      "bytes": 1525,
+      "sha256": "5629ee581108a5fe65c5802720fe81b9c83afba82d2c2fb5284c05ad0050903f"
+    },
+    {
+      "path": "first-revision/native/use-chain.finalize.json",
+      "bytes": 35272,
+      "sha256": "45b166e350266c30218698a322b0c6bc8d0a035f3b6d5fba9d1738c0255f2986"
+    },
+    {
+      "path": "first-revision/native.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "first-revision/native.stdout.json",
+      "bytes": 1283,
+      "sha256": "7c2ebcc735bacb623febadefece1e07659ef7c075ca152f9d18d39c73a72ed13"
+    },
+    {
+      "path": "first-revision/public-before-change/.gitattributes",
+      "bytes": 26,
+      "sha256": "d4938964577a3248795b6627852a3d297bcbc95ffbab896955cd4c1cd03915fd"
+    },
+    {
+      "path": "first-revision/public-before-change/expected-chain.txt",
+      "bytes": 99,
+      "sha256": "61456eb360c67e1da8e458329f0d86955a68b44a635279526687a553179a903f"
+    },
+    {
+      "path": "first-revision/public-before-change/explainer.archify.md",
+      "bytes": 3359,
+      "sha256": "48cc978edb04c1e16f480549a4e9c8bb41968ed0d032693e30af7f95cd22f3a6"
+    },
+    {
+      "path": "first-revision/public-before-change/explainer.delivery.json",
+      "bytes": 1130,
+      "sha256": "5fcd331b0dc269f3499bb34bdad959a2e299f70e33bb538fdbc55910adfc4111"
+    },
+    {
+      "path": "first-revision/public-before-change/explainer.html",
+      "bytes": 570075,
+      "sha256": "4feb81562f93e20d4483f16086c2f57fda2062089f91072b380c98e149c130e8"
+    },
+    {
+      "path": "first-revision/public-before-change/explainer.render.html",
+      "bytes": 570075,
+      "sha256": "9942e711d15f19a1e0d8d3b2e8dbd166fb117ce274e3f1fa793c194504012257"
+    },
+    {
+      "path": "first-revision/public-before-change/projection-ledger.json",
+      "bytes": 6431,
+      "sha256": "2626560cb38b0bc1a94154bc826bf839e5fc007aa371703e46f591de7de4dcc3"
+    },
+    {
+      "path": "first-revision/public-before-change/selected-test.txt",
+      "bytes": 353,
+      "sha256": "dc693994ce0b396b4ed814fa1c5e343620db3822952c903e6f92bccb0530e549"
+    },
+    {
+      "path": "first-revision/public-before-change/source-input.txt",
+      "bytes": 26,
+      "sha256": "5b387280560580de5f8bb73a737b17a2de20309d1d34877ae223263948cedef8"
+    },
+    {
+      "path": "first-revision/public-before-change/upstream/beniget/LICENSE",
+      "bytes": 1490,
+      "sha256": "e0b021e890014fff3f0eca73233f1317ca940ba56f085a644665771361ce4b9f"
+    },
+    {
+      "path": "first-revision/public-before-change/upstream/beniget/README.rst",
+      "bytes": 9048,
+      "sha256": "a3d0210ac1e1c0eb3306966a5de50492e0689d19407ad5503a400170e4342341"
+    },
+    {
+      "path": "first-revision/public-before-change/upstream/beniget/beniget/beniget.py",
+      "bytes": 69713,
+      "sha256": "ebca8a5e4ee6fe6975baa81b662d1590cd4132766d541de4d750d46e0dde2d32"
+    },
+    {
+      "path": "first-revision/public-before-change/upstream/beniget/tests/test_chains.py",
+      "bytes": 94585,
+      "sha256": "f0ba63aec94472a7166597b88f0f91ca7bf6d376f6c4a01f7ce9babab470ad42"
+    },
+    {
+      "path": "first-revision/public-before-change/upstream/source-manifest.json",
+      "bytes": 1305,
+      "sha256": "ca6080e0a380439f9720dc7ab765fee490c6793a2b028ac174ad728d0824665d"
+    },
+    {
+      "path": "first-revision/public-before-change/use-chain.architecture.json",
+      "bytes": 3876,
+      "sha256": "ca2e3f0932e150405f8007e9c7b8cfddc541a60450a7ac02eac5adc440413edc"
+    },
+    {
+      "path": "first-revision/public-before-change/use-chain.delivery.json",
+      "bytes": 638,
+      "sha256": "8c47ea37eba0bb61c86cf52968614a03969e5d1d52b961f3a2ba78055fa3f323"
+    },
+    {
+      "path": "first-revision/public-before-change/use-chain.html",
+      "bytes": 866166,
+      "sha256": "a94bb32f70d1c714f4cf1ab0e2ef91d8c302cfb07fcf61ea6d9e4d90b71403d3"
+    },
+    {
+      "path": "first-revision/public-before-change/use-chain.render.html",
+      "bytes": 866166,
+      "sha256": "a94bb32f70d1c714f4cf1ab0e2ef91d8c302cfb07fcf61ea6d9e4d90b71403d3"
+    },
+    {
+      "path": "first-revision/render-explainer.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "first-revision/render-explainer.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "first-revision/use-chain.delivery.json",
+      "bytes": 638,
+      "sha256": "8c47ea37eba0bb61c86cf52968614a03969e5d1d52b961f3a2ba78055fa3f323"
+    },
+    {
+      "path": "native/use-chain.browser-check.json",
+      "bytes": 21483,
+      "sha256": "8fe442039a654a89abbc1a178f8e535294c214f700da16c76744658f49cf0b12"
+    },
+    {
+      "path": "native/use-chain.finalize-summary.json",
+      "bytes": 2295,
+      "sha256": "3a1a819ca93a8435372d0d6535df0d808ccea630d552322cff4ddeab61d91914"
+    },
+    {
+      "path": "native/use-chain.finalize.json",
+      "bytes": 12813,
+      "sha256": "6e0d35a1ced593d209eb00d3e84ae00a7b822a23532251cb65031b7140eeb955"
+    },
+    {
+      "path": "native-v2/use-chain.browser-check.json",
+      "bytes": 21543,
+      "sha256": "97e963a41743367a377f6f04db8ca3a348fbc38cb74f6488ecf6f09b36f9402d"
+    },
+    {
+      "path": "native-v2/use-chain.finalize-summary.json",
+      "bytes": 1534,
+      "sha256": "31e7a5d325bdea40411489c1f62e88563866a29df12d42f947efef6782e41abf"
+    },
+    {
+      "path": "native-v2/use-chain.finalize.json",
+      "bytes": 35360,
+      "sha256": "ee6f0957812207e0ac619927bf9b983fb4140ae12eba697e565da5170d4808de"
+    },
+    {
+      "path": "native-v2.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "native-v2.stdout.json",
+      "bytes": 1292,
+      "sha256": "0655541ed1fa1c1c12854a5b6de53d4d06ecaacb6eaa69a97d8cffdc7e5c1386"
+    },
+    {
+      "path": "native.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "native.stdout.json",
+      "bytes": 1907,
+      "sha256": "51db68f97d455831cd6f75224b584cbe925cee59277cdc0e8b92ba22b0f8074d"
+    },
+    {
+      "path": "render-explainer-v2.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "render-explainer-v2.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "render-explainer.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "render-explainer.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "render-native.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "render-native.stdout.txt",
+      "bytes": 104,
+      "sha256": "5b863a56be344d8153c2c2a066e85277e4ec1dc2353f5d5461f054497008f4e7"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "kind": "root-authored-summary-of-actual-browser-observations",
+  "date": "2026-10-25",
+  "browser": "Ego TaskSpace4 Chromium",
+  "artifacts": [
+    {
+      "file": "explainer.html",
+      "bytes": 571817,
+      "sha256": "98d3202ab22b741c8f6c6a850f5560e685367b8c746d217418f60dea4872ef87"
+    },
+    {
+      "file": "use-chain.html",
+      "bytes": 866293,
+      "sha256": "a8bbc654dae2aae9d4e549ca1cd3caeed48edafbd781c21341a07fc2dcf2093b"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "overview-light.png",
+      "bytes": 328176,
+      "sha256": "eb72c1d603ea341d3726dffe5dfba58e1ba9b9df0378d7987843e4f4012bb7a5",
+      "imageSize": [
+        1440,
+        2068
+      ]
+    },
+    {
+      "file": "overview-mobile-light.png",
+      "bytes": 274267,
+      "sha256": "5839c76ea4e8837b54c6d606fb83f0d8bfb28e9d093d3bae2bb1f42f92f3127c",
+      "imageSize": [
+        390,
+        2825
+      ]
+    },
+    {
+      "file": "native-dark-still.png",
+      "bytes": 146709,
+      "sha256": "fe5d983214f566858d33728c3ccd59cf5cc8041e8493236d619d6ee32cf69431",
+      "imageSize": [
+        1440,
+        1000
+      ]
+    },
+    {
+      "file": "native-shared-ifexp-dark.png",
+      "bytes": 182223,
+      "sha256": "64529412484e229ebe23dd2ae1504dac5ae3a25b2fc7c800dd685d78c8eb40df",
+      "imageSize": [
+        1440,
+        1000
+      ]
+    }
+  ],
+  "allSelectedPngsViewed": true,
+  "rawObservations": [
+    {
+      "file": "desktop-v2-observations.json",
+      "bytes": 3361,
+      "sha256": "f67da5e975bc26083d1072c13ea46619542d03aa4659aa8addb19e4e11c6d111"
+    },
+    {
+      "file": "mobile-v2-observations.json",
+      "bytes": 765,
+      "sha256": "e277162dc994cac41375225ea8688cf456d98f940455108f5635683bc100d6ef"
+    },
+    {
+      "file": "native-v2-observations.json",
+      "bytes": 3440,
+      "sha256": "dd9c1c6ed464d9f1215dc91d649eea10b9b3b13730f20421e864c3e40b26e6bd"
+    }
+  ],
+  "observed": [
+    "Desktop1440x1100 Explainer: complete source visible in answer; same7nodeIDs and all8use rows; single ifexp; desktop small-text hint absent after authored layout revision. Full-page PNG1440x2068, document width1440.",
+    "Mobile390x844 Explainer: document width390, diagram thumbnail small with existing open-interactive hint; long expected block and wider tables require horizontal scrolling. Full-page PNG390x2825.",
+    "Standalone native1440x1000 dark: all7nodes/8use labels visible; motion control already read Still/static with aria-pressed=false and title恢复动效. Root did not toggle motion, and does not claim the artifact disables Live by default.",
+    "Actual #node-ifexp pointer click opens Passport with0out/3in (condition,BinOp,UnaryOp) and6authored upstream nodes. This is authored graph adjacency, not program execution."
+  ],
+  "limitations": [
+    "Page browser-check not requested; native normalCLI browser evidence separate from this rootpointer/visual sample.",
+    "No root full keyboard traversal, assistive-tech, touch, cross-browser, upstream program run or measured reader-benefit validation.",
+    "No external source navigation, SourceCard verified excerpt interaction, OSclipboard or mobile native interaction claimed.",
+    "Mobile code/table contents not all simultaneously visible; full DOM text does not establish complete viewport visibility.",
+    "Native screenshot at1000height does not include all footer/sidebar text."
+  ],
+  "retainedAttempts": [
+    {
+      "kind": "first revision visual review",
+      "file": {
+        "file": "initial-desktop-light.png",
+        "bytes": 308969,
+        "sha256": "4854f643573d4b8f1d2ed0a403bee764756bb737b8679f09ced891eaf75c1a8e",
+        "imageSize": [
+          1440,
+          1988
+        ]
+      },
+      "detail": "Old4feb81562f93e20d4483f16086c2f57fda2062089f91072b380c98e149c130e8 page showed desktop small-text hint and source below diagram. Preserved privately; author revised normalCLI inputs/layout and explicit zero-based offset labels before final capture."
+    }
+  ],
+  "publication": "Selected PNGs copied unchanged; this is derived authored summary. Original observation JSON remains outside checkout."
+}

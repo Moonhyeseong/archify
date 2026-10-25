@@ -1,0 +1,12 @@
+    def test_ifexp_chain(self):
+        code = "a = 1; a + 1 if a else - a"
+        self.checkChains(
+            code,
+            [
+                "a -> ("
+                "a -> (<IfExp> -> ()), "
+                "a -> (<BinOp> -> (<IfExp> -> ())), "
+                "a -> (<UnaryOp> -> (<IfExp> -> ()))"
+                ")"
+            ],
+        )
