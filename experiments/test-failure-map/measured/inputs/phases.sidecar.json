@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "classification": "redacted",
+  "exporterCommit": "c6f0bc93a174770e04b965e459d339a880005e78",
+  "pytestVersion": "8.4.2",
+  "reportSha256": "ae843399872eefbe5f0c774d88b807c4ddc1cb60df2e47cecc57951499369677",
+  "pathMap": {
+    "tests/test_cases.py": "tests/test_cases.py",
+    "tests/conftest.py": "tests/conftest.py",
+    "tests/test_collection_failure.py": "tests/test_collection_failure.py",
+    "domain.py": "domain.py"
+  },
+  "traceback": "provided",
+  "showMessages": true
+}

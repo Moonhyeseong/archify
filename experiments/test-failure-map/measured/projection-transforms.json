@@ -1,0 +1,209 @@
+{
+  "reports": [
+    {
+      "name": "phases",
+      "rawFile": "canonical-phase-failures.pytest.json",
+      "rawSha256": "01bb5a0df0ab73a5654c7b3d85ea858b25eed9f4c2fa6659e96ec4098a87adfc",
+      "projectedFile": "inputs/phases.consumed.json",
+      "projectedSha256": "ae843399872eefbe5f0c774d88b807c4ddc1cb60df2e47cecc57951499369677",
+      "classification": "actual-run consumed-field projection; original controlled fixture",
+      "testsRetained": 3,
+      "collectorsRetained": 2,
+      "transforms": [
+        {
+          "operation": "omit-subtree",
+          "pointer": "/created",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/duration",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/exitcode",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/root",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/environment",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/summary",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/tests/0/keywords",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/tests/0/setup/duration",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/tests/0/setup/longrepr",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "normalize-path",
+          "pointer": "/tests/0/setup/crash/path",
+          "reason": "strip controlled fixture absolute prefix; same original fixture file",
+          "rawPathSha256": "670be8caf2edea26c000d403296f106604efff4b32b558a03e372186502e4233",
+          "displayPath": "tests/conftest.py"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/tests/0/teardown/duration",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/tests/1/keywords",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/tests/1/setup/duration",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/tests/1/call/duration",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/tests/1/call/longrepr",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "normalize-path",
+          "pointer": "/tests/1/call/crash/path",
+          "reason": "strip controlled fixture absolute prefix; same original fixture file",
+          "rawPathSha256": "a0de1b6b34e783f0c82a04436b9c4641a51a7789ac17efbc9aaa7a53fbe8ab75",
+          "displayPath": "tests/test_cases.py"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/tests/1/teardown/duration",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/tests/2/keywords",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/tests/2/setup/duration",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/tests/2/call/duration",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/tests/2/teardown/duration",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/tests/2/teardown/longrepr",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "normalize-path",
+          "pointer": "/tests/2/teardown/crash/path",
+          "reason": "strip controlled fixture absolute prefix; same original fixture file",
+          "rawPathSha256": "670be8caf2edea26c000d403296f106604efff4b32b558a03e372186502e4233",
+          "displayPath": "tests/conftest.py"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/collectors/0/result",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/collectors/1/result",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        }
+      ],
+      "rawOutcomeValuesPreserved": true,
+      "rawRootEnvironmentAbsolutePaths": "not copied; raw retained outside repository"
+    },
+    {
+      "name": "collection",
+      "rawFile": "canonical-collection-failure.pytest.json",
+      "rawSha256": "faebb64e473bf51b3283a22202db162ef9aea7825a9ecc828dbb853b5af399d1",
+      "projectedFile": "inputs/collection.consumed.json",
+      "projectedSha256": "6cd2e81ede4316f6ed8e567da67aac7a7a588206f9396947577e33f85253d30b",
+      "classification": "actual-run consumed-field projection; original controlled fixture",
+      "testsRetained": 0,
+      "collectorsRetained": 2,
+      "transforms": [
+        {
+          "operation": "omit-subtree",
+          "pointer": "/created",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/duration",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/exitcode",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/root",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/environment",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/summary",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/collectors/0/result",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/collectors/1/result",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        },
+        {
+          "operation": "omit-subtree",
+          "pointer": "/collectors/1/longrepr",
+          "reason": "not consumed by existing reader / raw environment or presentation fields"
+        }
+      ],
+      "rawOutcomeValuesPreserved": true,
+      "rawRootEnvironmentAbsolutePaths": "not copied; raw retained outside repository"
+    }
+  ],
+  "policy": "Read-only whitelist. Not pristine exporter output; actual raw report hashes and each omitted subtree/path normalization retained. No test observation or outcome invented."
+}

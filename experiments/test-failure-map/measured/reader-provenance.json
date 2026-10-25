@@ -1,0 +1,6 @@
+{
+  "readerPath": "experiments/test-failure-map/report-reader.mjs",
+  "readerSha256": "475987e703bb0b79b64934f6a2f77c6a12eeb65626b2c3c35b5cfe89b60a3061",
+  "executionPolicy": "Existing reader consumes only projected reports and sidecars. No adapter input contract was modified for these measured records.",
+  "artifactPolicy": "Reader output is generated directly; no Markdown/JSON presentation postprocessing layer."
+}

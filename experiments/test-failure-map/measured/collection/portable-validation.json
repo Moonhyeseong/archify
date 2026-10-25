@@ -1,0 +1,33 @@
+{
+  "recordType": "Portable selected validation summary; not an original Archify receipt",
+  "classification": "actual-run consumed-field projection from an original controlled fixture",
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "not-run"
+  },
+  "visualReview": "not-requested",
+  "artifacts": {
+    "failure.archify.md": {
+      "sha256": "fcf7bf61f20cb03d88d6e197552f7149aabbcb92305f4643df93288c582faae9"
+    },
+    "projection.json": {
+      "sha256": "65af4ca38d6d975e63bb1e10f7c28f13edf426b6cac7544180fef6d2d77c8bb7"
+    },
+    "failure.html": {
+      "sha256": "70edcd90ae713b02cedfe309a5a126360a686ac5b5db39663440ffdb55013129"
+    }
+  },
+  "upstreamExitCode": 2,
+  "upstreamExitMeaning": "Intentional designed test failures, not hidden errors or successful tests",
+  "readerDidNotExecutePytest": true,
+  "reader": {
+    "readerPath": "experiments/test-failure-map/report-reader.mjs",
+    "readerSha256": "475987e703bb0b79b64934f6a2f77c6a12eeb65626b2c3c35b5cfe89b60a3061",
+    "executionPolicy": "Existing reader consumes only projected reports and sidecars. No adapter input contract was modified for these measured records.",
+    "artifactPolicy": "Reader output is generated directly; no Markdown/JSON presentation postprocessing layer."
+  },
+  "inputEvidence": "../projection-transforms.json",
+  "rawReceiptPolicy": "Original Archify receipts/logs remain outside checkout; this summary selects stage results and artifact hashes without rewriting raw receipts."
+}

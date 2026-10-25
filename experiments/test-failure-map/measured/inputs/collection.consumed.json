@@ -1,0 +1,13 @@
+{
+  "tests": [],
+  "collectors": [
+    {
+      "nodeid": "",
+      "outcome": "passed"
+    },
+    {
+      "nodeid": "tests/test_collection_failure.py",
+      "outcome": "failed"
+    }
+  ]
+}

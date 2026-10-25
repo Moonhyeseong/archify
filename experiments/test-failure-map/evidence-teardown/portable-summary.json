@@ -14,18 +14,19 @@
   },
   "visualReview": "not-requested",
   "kind": "portable-summary-not-original-receipt",
-  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
-  "node": "22.23.3",
+  "base": "82af4896fd0dc2f93ff5f8e4ab27a4736076c1d3",
+  "node": "22.23.2",
   "recordedAt": "2026-10-25",
   "command": "node archify/bin/archify.mjs finalize explainer experiments/test-failure-map/evidence-teardown/failure.archify.md experiments/test-failure-map/evidence-teardown/failure.html --browser-check --json",
-  "note": "Transcription of actual final public finalize stdout; personal paths omitted. Raw receipts retained outside checkout.",
+  "note": "Transcription of actual public finalize stdout; local paths omitted. Original receipts retained outside checkout.",
   "specification": {
-    "sha256": "255a1e2b26e681fc1cfd69431e3ef129527bd66b0f1319e504d9de8f048fac23",
-    "bytes": 2722
+    "sha256": "715807f48f44a921a2bf70d3282225b5d420f3e21789d03cfe550496e694e6e3",
+    "bytes": 2879
   },
   "artifact": {
-    "sha256": "c259f9ab5caedb0e9e4dceaa8906bbbf40033292663a48a43f3e8d0a2bdfe0d4",
-    "bytes": 136882
+    "sha256": "75ca539b8e977c86b4bd707d5b870e230f705f04270f006aaa6f4da7011e7785",
+    "bytes": 137372
   },
-  "revisionNote": "Presentation only: compact provenance/omission summary; complete projection remains a separate unchanged JSON file; only overflow literals are repeated."
+  "readerSha256": "475987e703bb0b79b64934f6a2f77c6a12eeb65626b2c3c35b5cfe89b60a3061",
+  "revisionNote": "Classification wording follows the existing sidecar label; execution boundary applies only to this reader, not the upstream report producer. Selected projection unchanged."
 }

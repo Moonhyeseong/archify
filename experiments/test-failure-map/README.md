@@ -2,7 +2,15 @@
 
 Read an explicitly provided pytest-json-report JSON plus sidecar. The first panels show a compact setup/call/teardown overview and literal source-location table. A passed call does not conceal a failed teardown; setup failure does not turn a missing call into passed. Collection failures stay separate from test cases.
 
-Base: `82c7e0f089a02a4d514714adf37dc2061682da5f`. Branch: `codex/lab-test-failure-map`. Node: 22.23.3. Only `experiments/test-failure-map/` changes; no shared renderer/schema/Viewer/CI/package/ZIP modification, installation or new runtime dependency.
+Base: `82c7e0f089a02a4d514714adf37dc2061682da5f`. Branch: `codex/lab-test-failure-map`. Reader wording refresh: Node 22.23.2. Only `experiments/test-failure-map/` changes; no shared renderer/schema/Viewer/CI/package/ZIP modification, installation or new runtime dependency.
+
+## Actual upstream capture
+
+[Measured evidence](measured/README.md) adds reports from fixed upstream tools executing an original controlled fixture, including intentionally failed setup/call/teardown and collection. These are actual runs of controlled examples, not a real user project. Public inputs are explicit consumed-field projections with a deletion/normalization ledger; they do not masquerade as raw reports.
+
+![Actual upstream phase records](measured/screenshots/phases.png)
+
+The existing reader wording was narrowed to distinguish supplied classifications and describe only its own no-execution boundary. It already had a redacted body branch; selected facts and projection semantics did not change. All four original pages and screenshots were refreshed. A separate agent checked raw-to-public fields, fixed tool/fixture provenance, and final native reader output and HTML bindings.
 
 ## Fixed sources, licenses and line conventions
 
@@ -10,7 +18,11 @@ Base: `82c7e0f089a02a4d514714adf37dc2061682da5f`. Branch: `codex/lab-test-failur
 - [pytest 8.4.2 TestReport source](https://github.com/pytest-dev/pytest/blob/bfae4224fd554d3d7f2c277a4cc092b6ec6af3ae/src/_pytest/reports.py#L290), fixed commit `bfae4224fd554d3d7f2c277a4cc092b6ec6af3ae`, explicitly documents test location as zero-based.
 - [pytest traceback construction](https://github.com/pytest-dev/pytest/blob/bfae4224fd554d3d7f2c277a4cc092b6ec6af3ae/src/_pytest/_code/code.py#L1093) creates ReprFileLocation with `entry.lineno + 1`; crash construction also uses `lineno + 1`. [MIT](https://github.com/pytest-dev/pytest/blob/bfae4224fd554d3d7f2c277a4cc092b6ec6af3ae/LICENSE), retained in `fixtures/PYTEST-LICENSE`.
 
-No upstream code was copied or executed. All four report fixtures are **original synthetic examples**, not outputs of running pytest or the exporter. The version pins identify the source conventions used to construct/read them, not a claim that those versions executed successfully here.
+The four original report fixtures below are **synthetic examples**, not outputs
+of running pytest or the exporter. The version pins identify the source
+conventions used to construct/read those fixtures. Any actual upstream execution
+is documented separately in the [measured manifests](measured/), rather than
+being inferred from the reader's classification label.
 
 ## Four scenarios
 
@@ -25,9 +37,9 @@ No native Tree is added: the phase/location tables communicate this slice withou
 
 ## Narrow input and safety contract
 
-The CLI reads only the **two explicit filenames** passed to it. It never opens a test definition path, frame/crash path, URL, repository, source map, home directory, test cache or session database. No pytest, user code, shell commands from reports or upstream tools are executed.
+The CLI reads only the **two explicit filenames** passed to it. It never opens a test definition path, frame/crash path, URL, repository, source map, home directory, test cache or session database. This reader does not execute pytest, user code, shell commands from reports or upstream tools. This boundary does not state that the report's producer did not execute them.
 
-Sidecar version 1 requires `classification: synthetic|redacted`, the supported exporter commit, pytest 8.4.2, exact raw report SHA-256, `pathMap`, traceback coverage (`provided|omitted|unknown`) and explicit `showMessages` boolean. A label of redacted is supplied metadata, **not an anonymization guarantee**. The `pathMap` maps exact raw report paths to distinct safe relative display paths; it authorizes a display name, not filesystem access. Collected nodeid paths without mapping fail; non-allowlisted crash/frame paths show unavailable, and their original strings are not copied into output.
+Sidecar version 1 requires `classification: synthetic|redacted`, the supported exporter commit, pytest 8.4.2, exact supplied report SHA-256, `pathMap`, traceback coverage (`provided|omitted|unknown`) and explicit `showMessages` boolean. Generated pages call these categories **synthetic supplied fixture** and **provided redacted report**. The label is supplied metadata, **not an anonymization or authenticity guarantee**; the reader does not verify how the report was produced. The `pathMap` maps exact raw report paths to distinct safe relative display paths; it authorizes a display name, not filesystem access. Collected nodeid paths without mapping fail; non-allowlisted crash/frame paths show unavailable, and their original strings are not copied into output.
 
 Test nodeids must be explicit unique strings. Repeated nodeids could represent retries, so this version refuses to merge them. Supported total outcomes: passed/failed/skipped/error. Supported stage outcomes: passed/failed/skipped. Unknown phase shapes, malformed line numbers, unsafe paths, provenance/hash conflicts and passed-total plus supplied failed-stage conflicts fail. A failed/skipped setup with a supplied call, or a non-failed stage carrying failure locations, is also rejected in this narrow supported slice. A failed total without a supplied failed stage remains a reported total with phase details unavailable, never an invented assertion failure.
 
@@ -57,17 +69,21 @@ From repository root, use new output directories:
 /opt/homebrew/opt/node@22/bin/node archify/bin/archify.mjs finalize explainer experiments/test-failure-map/repro-setup/failure.archify.md experiments/test-failure-map/repro-setup/failure.html --browser-check --json
 ```
 
-Repeat with `teardown-failure`, `collection-only` and `omitted-traceback` report/sidecar pairs. The sidecar SHA-256 binds the original report bytes. Changing even whitespace requires a new explicit digest.
+Repeat with `teardown-failure`, `collection-only` and `omitted-traceback` report/sidecar pairs. The sidecar SHA-256 binds the supplied report bytes. Changing even whitespace requires a new explicit digest.
 
 ## Actual evidence and limits
 
-- Focused tests: **10 pass, 0 fail, 0 skip** (`tests.tap`). They protect both line conventions, phase separation, collection-only/summary-only/omission distinctions, malformed/conflicting input, default field exclusion, hostile literals through public Explainer rendering, victim/rollback safety and real CLI hash failure.
+- Focused tests: **11 pass, 0 fail, 0 skip** (`tests.tap`). They protect both line conventions, phase separation, collection-only/summary-only/omission distinctions, malformed/conflicting input, default field exclusion, hostile redacted-report literals through public Explainer rendering, victim/rollback safety and real CLI hash failure. The classification counterexample uses the same report bytes with the other supported label: selected facts remain identical, while the wording does not call a redacted report synthetic or claim that its producer did not execute code.
 - All four final pages actually use public `finalize explainer --browser-check`. Each portable summary records actual stage results, source/HTML SHA-256 and bytes. Original receipts contain local paths and are kept outside checkout; summaries are clearly labeled transcriptions, not original unredacted receipts.
 - Actual hash-conflict input exits nonzero and creates no output directory (`hash-conflict.failure.json`). An initial hostile-literal render test exposed duplicate auto-generated table row IDs when several long identities used the same placeholder. Fixed row ordinals retain distinct positions; the earlier failed TAP is retained outside checkout, while current tests pass.
 - Independent review corrected an initial field-pairing mistake: the prototype had combined collected nodeid path with report.lineno as a test definition location. Fixed output explicitly leaves the definition file unavailable; an inherited-method counterexample now protects that distinction. All four pages and final portable summaries were regenerated.
-- The original finalize summaries retain `visualReview: not-requested`. The parent agent separately captured and inspected all four final pages; [capture.json](screenshots/capture.json) binds each image to its HTML. Human acceptance remains pending. Browser checks do not prove that any test was fixed or that the supplied run data are genuine.
+- The finalize summaries retain `visualReview: not-requested`. Parent-session [capture.json](screenshots/capture.json) binds each image to the HTML revision actually captured; compare those hashes with the refreshed portable summaries when reviewing the classification wording. Human acceptance remains pending. Browser checks do not prove that any test was fixed or that the supplied run data are genuine.
 
-This demonstrates a narrow handoff aid. Real-value validation still needs an explicitly provided, reviewed, safe report from an actual failed test handoff; synthetic examples do not establish saved diagnosis time or improved test quality.
+This demonstrates a narrow handoff aid. The original synthetic examples do not
+establish saved diagnosis time or improved test quality. Separate measured
+controlled-fixture execution can validate report consumption and field
+conventions; it still does not establish benefit in an independent user's actual
+failed-test handoff.
 
 ## Actual artifact images
 

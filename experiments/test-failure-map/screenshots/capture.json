@@ -6,12 +6,12 @@
   "images": [
     {
       "image": "setup.png",
-      "sha256": "5a794832b3d6d6ab549b6c68fc7c58eaeb6625bc96db564f48aa77ae3501bd7e",
+      "sha256": "dfcf4da7b5e9e72ea68be69734526ac1385be785e9d5e42f0cf59ef0715e66c0",
       "width": 1440,
-      "height": 1612,
+      "height": 1650,
       "source": "../evidence-setup/failure.html",
-      "sourceSha256": "13671b0d8a758ad672a1c363b3c26c9235027ac5a1929a6dfe2934fcbcb3890d",
-      "capturedAtUtc": "2026-10-25T05:16:16.289345+00:00",
+      "sourceSha256": "f2b60fac14e88ce2832b428bce67a8d253e3b5f4da14473e565a38d226be25a6",
+      "capturedAtUtc": "2026-10-25T05:37:22.187Z",
       "viewportCss": [
         1440,
         1000
@@ -22,12 +22,12 @@
     },
     {
       "image": "teardown.png",
-      "sha256": "7c62e29f46318178b5e40d1223a83807d9fc774506cfcb008f9ff88206c08fd2",
+      "sha256": "5ff919d2ee34d1ab2791e7219471c998cbfd92f522c1287e3cde4e2b26936eb2",
       "width": 1440,
-      "height": 1612,
+      "height": 1650,
       "source": "../evidence-teardown/failure.html",
-      "sourceSha256": "c259f9ab5caedb0e9e4dceaa8906bbbf40033292663a48a43f3e8d0a2bdfe0d4",
-      "capturedAtUtc": "2026-10-25T05:16:16.480947+00:00",
+      "sourceSha256": "75ca539b8e977c86b4bd707d5b870e230f705f04270f006aaa6f4da7011e7785",
+      "capturedAtUtc": "2026-10-25T05:37:22.414Z",
       "viewportCss": [
         1440,
         1000
@@ -38,12 +38,12 @@
     },
     {
       "image": "collection.png",
-      "sha256": "b5852f97273f62cab8d22261706e9e708a06ea2dc10f51189f1b9e9493861ff7",
+      "sha256": "c36d9f904f33c454cc8bacc891f220c4015ce6809b1bd0ed5aefc2e6b654c09b",
       "width": 1440,
-      "height": 1204,
+      "height": 1232,
       "source": "../evidence-collection/failure.html",
-      "sourceSha256": "52030964931a5eed74ef24aace2079064e70c92f39e4649ba953fc4558de84fd",
-      "capturedAtUtc": "2026-10-25T05:16:16.657212+00:00",
+      "sourceSha256": "f9556b42ea9e0e3de5e4fe4eca2ccf23874d52a6ae863a4c7ecbc26e3f4ab0d5",
+      "capturedAtUtc": "2026-10-25T05:37:22.633Z",
       "viewportCss": [
         1440,
         1000
@@ -54,12 +54,12 @@
     },
     {
       "image": "omitted.png",
-      "sha256": "edc11f08099866e459ae008e661d347eea8fb1b4f0a34942a6ad65af7d3613f0",
+      "sha256": "75a9e9331cd2dd1d41357581a7b138b532f36ae82cee588b51f11705b809f608",
       "width": 1440,
-      "height": 1483,
+      "height": 1496,
       "source": "../evidence-omitted/failure.html",
-      "sourceSha256": "61f926b680f35fc2e90f6e1c184e4c267f6240dd040a2cf6b3fea26d009a7ea9",
-      "capturedAtUtc": "2026-10-25T05:16:16.846389+00:00",
+      "sourceSha256": "f79c5c532de92778e6e8e24bea22d0478c7d57c60ffcb3b80c13e0e23c24c2fb",
+      "capturedAtUtc": "2026-10-25T05:37:22.858Z",
       "viewportCss": [
         1440,
         1000
@@ -70,13 +70,13 @@
     }
   ],
   "sourceSha256": {
-    "report-reader.mjs": "62421cccff86143e47cbe671183af1bf580d0fb470f2ed2506ff233598f163a1",
-    "report-reader.test.mjs": "696697f1fc296de5507188ef4e069a4643d4a40ea63c64bc15fbd8e6d04109ac"
+    "report-reader.mjs": "475987e703bb0b79b64934f6a2f77c6a12eeb65626b2c3c35b5cfe89b60a3061",
+    "report-reader.test.mjs": "e348e316b6938550bea2e43447b699c4ffc3fb94537af2ff8b6dfa3a98a96b2d"
   },
   "agentVisualReview": [
-    "Parent agent viewed all four final actual pages after the inherited-definition-path correction.",
-    "Phase and supplied-location tables remain primary; complete projection JSON is retained separately.",
-    "Selected messages and traceback coverage remain visible in the compact layout. No measured diagnosis-time benefit is claimed."
+    "Parent agent viewed all four final actual pages after narrowing reader-only execution and classification wording.",
+    "Phase, supplied-location and selected-message tables remain readable; full projection JSON is retained separately.",
+    "No measured diagnosis-time benefit or human acceptance is claimed."
   ],
   "humanAcceptance": "pending"
 }

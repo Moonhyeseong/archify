@@ -1,0 +1,89 @@
+{
+  "tests": [
+    {
+      "nodeid": "tests/test_cases.py::test_setup_failure",
+      "lineno": 8,
+      "outcome": "error",
+      "setup": {
+        "outcome": "failed",
+        "crash": {
+          "path": "tests/conftest.py",
+          "lineno": 12,
+          "message": "AssertionError: DESIGNED setup failure\nassert 2 == 3\n +  where 2 = <function total at 0x10adb0e00>([1, 1])\n +    where <function total at 0x10adb0e00> = domain.total"
+        },
+        "traceback": [
+          {
+            "path": "tests/conftest.py",
+            "lineno": 12,
+            "message": "AssertionError"
+          }
+        ]
+      },
+      "teardown": {
+        "outcome": "passed"
+      }
+    },
+    {
+      "nodeid": "tests/test_cases.py::test_call_failure",
+      "lineno": 11,
+      "outcome": "failed",
+      "setup": {
+        "outcome": "passed"
+      },
+      "call": {
+        "outcome": "failed",
+        "crash": {
+          "path": "tests/test_cases.py",
+          "lineno": 13,
+          "message": "AssertionError: DESIGNED call failure\nassert 3 == 99\n +  where 3 = <function total at 0x10adb0e00>([1, 2])\n +    where <function total at 0x10adb0e00> = domain.total"
+        },
+        "traceback": [
+          {
+            "path": "tests/test_cases.py",
+            "lineno": 13,
+            "message": "AssertionError"
+          }
+        ]
+      },
+      "teardown": {
+        "outcome": "passed"
+      }
+    },
+    {
+      "nodeid": "tests/test_cases.py::test_teardown_failure",
+      "lineno": 14,
+      "outcome": "error",
+      "setup": {
+        "outcome": "passed"
+      },
+      "call": {
+        "outcome": "passed"
+      },
+      "teardown": {
+        "outcome": "failed",
+        "crash": {
+          "path": "tests/conftest.py",
+          "lineno": 17,
+          "message": "AssertionError: DESIGNED teardown failure\nassert 4 == 5\n +  where 4 = <function total at 0x10adb0e00>([2, 2])\n +    where <function total at 0x10adb0e00> = domain.total"
+        },
+        "traceback": [
+          {
+            "path": "tests/conftest.py",
+            "lineno": 17,
+            "message": "AssertionError"
+          }
+        ]
+      }
+    }
+  ],
+  "collectors": [
+    {
+      "nodeid": "",
+      "outcome": "passed"
+    },
+    {
+      "nodeid": "tests/test_cases.py",
+      "outcome": "passed"
+    }
+  ]
+}

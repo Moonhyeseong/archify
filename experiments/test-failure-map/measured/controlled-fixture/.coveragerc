@@ -1,0 +1,5 @@
+[run]
+source = domain
+
+[json]
+show_contexts = True

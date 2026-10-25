@@ -1,0 +1,241 @@
+{
+  "kind": "pytest-failure-reading",
+  "classification": "redacted",
+  "exporterCommit": "c6f0bc93a174770e04b965e459d339a880005e78",
+  "pytestVersion": "8.4.2",
+  "reportSha256": "ae843399872eefbe5f0c774d88b807c4ddc1cb60df2e47cecc57951499369677",
+  "availability": "provided records only; no completeness claim",
+  "tests": [
+    {
+      "test": "tests/test_cases.py::test_setup_failure",
+      "reportedOutcome": "error",
+      "stages": {
+        "setup": {
+          "outcome": "failed",
+          "traceback": "supplied entries; not a complete call graph",
+          "crash": {
+            "owner": "tests/test_cases.py::test_setup_failure",
+            "role": "setup crash",
+            "path": "tests/conftest.py",
+            "rawLine": 12,
+            "displayLine": 12,
+            "lineConvention": "one-based; unchanged",
+            "sourceVerification": "unverified literal; source text not read",
+            "message": "AssertionError: DESIGNED setup failure\nassert 2 == 3\n +  where 2 = <function total at 0x10adb0e00>([1, 1])\n +    where <function total at 0x10adb0e00> = domain.total"
+          },
+          "frames": [
+            {
+              "owner": "tests/test_cases.py::test_setup_failure",
+              "role": "setup frame",
+              "path": "tests/conftest.py",
+              "rawLine": 12,
+              "displayLine": 12,
+              "lineConvention": "one-based; unchanged",
+              "sourceVerification": "unverified literal; source text not read",
+              "message": "AssertionError"
+            }
+          ]
+        },
+        "call": {
+          "outcome": "not-provided",
+          "traceback": "unavailable: stage missing"
+        },
+        "teardown": {
+          "outcome": "passed",
+          "traceback": "unavailable: not provided; absence does not prove an empty stack"
+        }
+      }
+    },
+    {
+      "test": "tests/test_cases.py::test_call_failure",
+      "reportedOutcome": "failed",
+      "stages": {
+        "setup": {
+          "outcome": "passed",
+          "traceback": "unavailable: not provided; absence does not prove an empty stack"
+        },
+        "call": {
+          "outcome": "failed",
+          "traceback": "supplied entries; not a complete call graph",
+          "crash": {
+            "owner": "tests/test_cases.py::test_call_failure",
+            "role": "call crash",
+            "path": "tests/test_cases.py",
+            "rawLine": 13,
+            "displayLine": 13,
+            "lineConvention": "one-based; unchanged",
+            "sourceVerification": "unverified literal; source text not read",
+            "message": "AssertionError: DESIGNED call failure\nassert 3 == 99\n +  where 3 = <function total at 0x10adb0e00>([1, 2])\n +    where <function total at 0x10adb0e00> = domain.total"
+          },
+          "frames": [
+            {
+              "owner": "tests/test_cases.py::test_call_failure",
+              "role": "call frame",
+              "path": "tests/test_cases.py",
+              "rawLine": 13,
+              "displayLine": 13,
+              "lineConvention": "one-based; unchanged",
+              "sourceVerification": "unverified literal; source text not read",
+              "message": "AssertionError"
+            }
+          ]
+        },
+        "teardown": {
+          "outcome": "passed",
+          "traceback": "unavailable: not provided; absence does not prove an empty stack"
+        }
+      }
+    },
+    {
+      "test": "tests/test_cases.py::test_teardown_failure",
+      "reportedOutcome": "error",
+      "stages": {
+        "setup": {
+          "outcome": "passed",
+          "traceback": "unavailable: not provided; absence does not prove an empty stack"
+        },
+        "call": {
+          "outcome": "passed",
+          "traceback": "unavailable: not provided; absence does not prove an empty stack"
+        },
+        "teardown": {
+          "outcome": "failed",
+          "traceback": "supplied entries; not a complete call graph",
+          "crash": {
+            "owner": "tests/test_cases.py::test_teardown_failure",
+            "role": "teardown crash",
+            "path": "tests/conftest.py",
+            "rawLine": 17,
+            "displayLine": 17,
+            "lineConvention": "one-based; unchanged",
+            "sourceVerification": "unverified literal; source text not read",
+            "message": "AssertionError: DESIGNED teardown failure\nassert 4 == 5\n +  where 4 = <function total at 0x10adb0e00>([2, 2])\n +    where <function total at 0x10adb0e00> = domain.total"
+          },
+          "frames": [
+            {
+              "owner": "tests/test_cases.py::test_teardown_failure",
+              "role": "teardown frame",
+              "path": "tests/conftest.py",
+              "rawLine": 17,
+              "displayLine": 17,
+              "lineConvention": "one-based; unchanged",
+              "sourceVerification": "unverified literal; source text not read",
+              "message": "AssertionError"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "collectors": [
+    {
+      "collector": "unavailable: collector identity not allowlisted",
+      "outcome": "passed",
+      "sourceLocation": "not supplied by collector serializer",
+      "longrepr": "not exported by this reader"
+    },
+    {
+      "collector": "tests/test_cases.py",
+      "outcome": "passed",
+      "sourceLocation": "not supplied by collector serializer",
+      "longrepr": "not exported by this reader"
+    }
+  ],
+  "locations": [
+    {
+      "owner": "tests/test_cases.py::test_setup_failure",
+      "role": "reported test line (file unavailable)",
+      "path": "unavailable: definition file not exported",
+      "rawLine": 8,
+      "displayLine": 9,
+      "lineConvention": "zero-based test.lineno + 1",
+      "sourceVerification": "location[0] omitted by exporter; nodeid path is not a definition-file claim"
+    },
+    {
+      "owner": "tests/test_cases.py::test_setup_failure",
+      "role": "setup crash",
+      "path": "tests/conftest.py",
+      "rawLine": 12,
+      "displayLine": 12,
+      "lineConvention": "one-based; unchanged",
+      "sourceVerification": "unverified literal; source text not read",
+      "message": "AssertionError: DESIGNED setup failure\nassert 2 == 3\n +  where 2 = <function total at 0x10adb0e00>([1, 1])\n +    where <function total at 0x10adb0e00> = domain.total"
+    },
+    {
+      "owner": "tests/test_cases.py::test_setup_failure",
+      "role": "setup frame",
+      "path": "tests/conftest.py",
+      "rawLine": 12,
+      "displayLine": 12,
+      "lineConvention": "one-based; unchanged",
+      "sourceVerification": "unverified literal; source text not read",
+      "message": "AssertionError"
+    },
+    {
+      "owner": "tests/test_cases.py::test_call_failure",
+      "role": "reported test line (file unavailable)",
+      "path": "unavailable: definition file not exported",
+      "rawLine": 11,
+      "displayLine": 12,
+      "lineConvention": "zero-based test.lineno + 1",
+      "sourceVerification": "location[0] omitted by exporter; nodeid path is not a definition-file claim"
+    },
+    {
+      "owner": "tests/test_cases.py::test_call_failure",
+      "role": "call crash",
+      "path": "tests/test_cases.py",
+      "rawLine": 13,
+      "displayLine": 13,
+      "lineConvention": "one-based; unchanged",
+      "sourceVerification": "unverified literal; source text not read",
+      "message": "AssertionError: DESIGNED call failure\nassert 3 == 99\n +  where 3 = <function total at 0x10adb0e00>([1, 2])\n +    where <function total at 0x10adb0e00> = domain.total"
+    },
+    {
+      "owner": "tests/test_cases.py::test_call_failure",
+      "role": "call frame",
+      "path": "tests/test_cases.py",
+      "rawLine": 13,
+      "displayLine": 13,
+      "lineConvention": "one-based; unchanged",
+      "sourceVerification": "unverified literal; source text not read",
+      "message": "AssertionError"
+    },
+    {
+      "owner": "tests/test_cases.py::test_teardown_failure",
+      "role": "reported test line (file unavailable)",
+      "path": "unavailable: definition file not exported",
+      "rawLine": 14,
+      "displayLine": 15,
+      "lineConvention": "zero-based test.lineno + 1",
+      "sourceVerification": "location[0] omitted by exporter; nodeid path is not a definition-file claim"
+    },
+    {
+      "owner": "tests/test_cases.py::test_teardown_failure",
+      "role": "teardown crash",
+      "path": "tests/conftest.py",
+      "rawLine": 17,
+      "displayLine": 17,
+      "lineConvention": "one-based; unchanged",
+      "sourceVerification": "unverified literal; source text not read",
+      "message": "AssertionError: DESIGNED teardown failure\nassert 4 == 5\n +  where 4 = <function total at 0x10adb0e00>([2, 2])\n +    where <function total at 0x10adb0e00> = domain.total"
+    },
+    {
+      "owner": "tests/test_cases.py::test_teardown_failure",
+      "role": "teardown frame",
+      "path": "tests/conftest.py",
+      "rawLine": 17,
+      "displayLine": 17,
+      "lineConvention": "one-based; unchanged",
+      "sourceVerification": "unverified literal; source text not read",
+      "message": "AssertionError"
+    }
+  ],
+  "reportedFailedStages": 3,
+  "reportedFailedCollectors": 0,
+  "privacy": {
+    "omittedTopAndStageFieldCount": 0,
+    "excluded": "root/environment/streams/log/longrepr/duration/summary/unknown fields and non-allowlisted paths; messages included only when explicitly enabled",
+    "warning": "Test identities, paths and selected messages are metadata and may still identify people/projects. This projection is not an anonymization guarantee."
+  },
+  "sourceVerification": "unverified literal positions only; no frame/test path or URL opened"
+}

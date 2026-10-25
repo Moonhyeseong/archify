@@ -2,7 +2,7 @@
 
 Unavailable supplied failed stages; 1 supplied failed collectors. Missing stages are not passed. Positions are unverified literals, not root-cause or call-graph proof.
 
-@answer scope="synthetic fixture · no pytest or user code executed · provided records only; no completeness claim"
+@answer scope="synthetic supplied fixture · this reader does not execute pytest or user code · provided records only; no completeness claim"
 @meta locale=en
 
 ## Which stage actually has a supplied result? {#overview}
@@ -11,7 +11,7 @@ Unavailable supplied failed stages; 1 supplied failed collectors. Missing stages
 | --- | --- | --- | --- | --- |
 | unavailable: no test records | not inferred | not-provided | not-provided | not-provided |
 
-provided records only; no completeness claim. These are original synthetic scenarios, not results of running the exporter.
+provided records only; no completeness claim. The sidecar classifies this input as a synthetic supplied fixture. Classification is supplied metadata, not an anonymization or authenticity guarantee. The reader does not verify how the report was produced.
 
 ## Which supplied source positions can be read? {#positions}
 
