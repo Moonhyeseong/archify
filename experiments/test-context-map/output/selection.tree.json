@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "diagram_type": "tree",
+  "meta": {
+    "title": "Selected source locations · not verified",
+    "subtitle": "Contains relationships only; not test calls or module dependencies.",
+    "output": "selection.html",
+    "quality_profile": "standard"
+  },
+  "layout": {
+    "direction": "down"
+  },
+  "nodes": [
+    {
+      "id": "selection",
+      "label": "Selected source locations",
+      "sublabel": "Structure only · source not verified"
+    },
+    {
+      "id": "F1",
+      "parent": "selection",
+      "label": "F1",
+      "sublabel": "Sidecar file identity"
+    },
+    {
+      "id": "line-1",
+      "parent": "F1",
+      "label": "Line 12",
+      "sublabel": "mapped"
+    },
+    {
+      "id": "line-2",
+      "parent": "F1",
+      "label": "Line 13",
+      "sublabel": "unattributed"
+    },
+    {
+      "id": "line-3",
+      "parent": "F1",
+      "label": "Line 14",
+      "sublabel": "unknown"
+    },
+    {
+      "id": "line-4",
+      "parent": "F1",
+      "label": "Line 15",
+      "sublabel": "missing"
+    },
+    {
+      "id": "line-5",
+      "parent": "F1",
+      "label": "Line 16",
+      "sublabel": "excluded"
+    },
+    {
+      "id": "line-6",
+      "parent": "F1",
+      "label": "Line 17",
+      "sublabel": "mapped"
+    },
+    {
+      "id": "line-7",
+      "parent": "F1",
+      "label": "Line 99",
+      "sublabel": "unavailable"
+    },
+    {
+      "id": "F2",
+      "parent": "selection",
+      "label": "F2",
+      "sublabel": "Sidecar file identity"
+    },
+    {
+      "id": "line-8",
+      "parent": "F2",
+      "label": "Line 1",
+      "sublabel": "unavailable"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "recordType": "Portable selected validation summary, not an original Archify receipt",
+  "baseRevision": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "fixture": "Original synthetic format 3 report and explicit sidecar; no pytest/coverage/source execution",
+  "commands": [
+    {
+      "command": [
+        "node",
+        "experiments/test-context-map/adapter.mjs",
+        "experiments/test-context-map/fixtures/synthetic.coverage.json",
+        "experiments/test-context-map/fixtures/synthetic.selection.json",
+        "experiments/test-context-map/run-aee276b3-99cd-434f-ae70-71ab0784efb7"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "archify/bin/archify.mjs",
+        "render",
+        "tree",
+        "experiments/test-context-map/run-aee276b3-99cd-434f-ae70-71ab0784efb7/selection.tree.json",
+        "experiments/test-context-map/run-aee276b3-99cd-434f-ae70-71ab0784efb7/selection.html",
+        "--quality",
+        "standard"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "archify/bin/archify.mjs",
+        "finalize",
+        "explainer",
+        "experiments/test-context-map/run-aee276b3-99cd-434f-ae70-71ab0784efb7/matrix.explainer.json",
+        "experiments/test-context-map/run-aee276b3-99cd-434f-ae70-71ab0784efb7/matrix.html",
+        "--out-dir",
+        "<temporary-receipt-directory>",
+        "--json"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "not-run"
+  },
+  "visualReview": "not-requested",
+  "scope": "Matching report-byte binding and sidecar claims, not independently verified source/test execution.",
+  "artifacts": {
+    "projection.json": {
+      "sha256": "8fd08a166ac5e51dd6fbd02c77ce34087d87bbe38d1c3aac63c7c1a9aaea5320"
+    },
+    "selection.tree.json": {
+      "sha256": "26d7501f53850a1033f55c2fada932453d315236a60a5303e6c691e0373e56f5"
+    },
+    "matrix.explainer.json": {
+      "sha256": "5cdb142d6214d83b7acd92881b6fb3be5b173bc389cf3aa2f860fda250faeb2d"
+    },
+    "selection.html": {
+      "sha256": "a16240f422e2aa9fef24bc8609fd56c481760ed5abf95dab4063babff84ffd56"
+    },
+    "matrix.html": {
+      "sha256": "045bdfd287232fd36be51642b48b1d4c5b41e03f323537731f363c393d3c58dc"
+    }
+  },
+  "artifactLocationNote": "Successful fresh-run artifact bytes copied to output/ unchanged. Original receipts stay outside checkout; this selected summary does not rebind a relocated original receipt.",
+  "tests": {
+    "command": "node --test experiments/test-context-map/adapter.test.mjs",
+    "passed": 18,
+    "failed": 0,
+    "skipped": 0,
+    "log": "tests.tap"
+  },
+  "reviewClarifications": [
+    "Observed mapped/empty/unknown categories may coexist on a line; missing/excluded/unavailable are classification boundaries.",
+    "contextLookupPointer may be absent; contextLookupPresent states that explicitly. classificationEvidence separately identifies the line-set fact or unavailable lookup."
+  ]
+}

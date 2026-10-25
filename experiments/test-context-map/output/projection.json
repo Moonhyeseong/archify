@@ -1,0 +1,345 @@
+{
+  "adapter": "test-context-map/1",
+  "kind": "synthetic",
+  "contracts": {
+    "coverage": {
+      "repository": "https://github.com/coveragepy/coveragepy",
+      "commit": "0e4f752b455bbf26fdad32ac29948d067c87dd62",
+      "file": "coverage/jsonreport.py",
+      "license": "Apache-2.0"
+    },
+    "pytestCov": {
+      "repository": "https://github.com/pytest-dev/pytest-cov",
+      "commit": "a8cb1260170754f2aff9022cfd252c488098e813",
+      "file": "src/pytest_cov/plugin.py",
+      "license": "MIT"
+    }
+  },
+  "reportSha256": "3f882a1b09013fd5d47159858c27e1b5f0659426296f10c9d68a399512e1b022",
+  "reportBinding": {
+    "sha256": "3f882a1b09013fd5d47159858c27e1b5f0659426296f10c9d68a399512e1b022",
+    "runId": "synthetic-run-1",
+    "sourceRevision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "exporterVersion": "synthetic-format3"
+  },
+  "selectionBinding": {
+    "reportSha256": "3f882a1b09013fd5d47159858c27e1b5f0659426296f10c9d68a399512e1b022",
+    "runId": "synthetic-run-1",
+    "sourceRevision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "bindingStatus": "matching sidecar claims; no source or run independently verified",
+  "sourceStatus": "not-verified",
+  "testResults": "not-consumed; no pass/fail inference",
+  "collectionFilters": [
+    "Original synthetic fixture; no coverage.py or pytest run occurred."
+  ],
+  "selectedLineCount": 8,
+  "selectedFileCount": 2,
+  "reportFileCount": 1,
+  "contextGroups": [
+    {
+      "id": "T1",
+      "testId": "tests/test_orders.py::test_total[a|b]",
+      "phase": "run",
+      "contexts": [
+        "tests/test_orders.py::test_total[a|b]|run",
+        "ci-static|tests/test_orders.py::test_total[a|b]|run"
+      ]
+    },
+    {
+      "id": "T2",
+      "testId": "tests/test_orders.py::test_validate",
+      "phase": "setup",
+      "contexts": [
+        "tests/test_orders.py::test_validate|setup"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "line-1",
+      "fileId": "F1",
+      "sourcePath": "src/orders.py",
+      "line": 12,
+      "states": [
+        "mapped"
+      ],
+      "labels": [
+        "tests/test_orders.py::test_total[a|b]|run",
+        "ci-static|tests/test_orders.py::test_total[a|b]|run"
+      ],
+      "mapped": [
+        "T1"
+      ],
+      "unknownLabels": [],
+      "unattributedEmpty": false,
+      "sourceStatus": "not-verified",
+      "provenance": {
+        "reportPath": "src/orders.py",
+        "contextLookupPointer": "/files/src~1orders.py/contexts/12",
+        "contextLookupPath": [
+          "files",
+          "src/orders.py",
+          "contexts",
+          "12"
+        ],
+        "contextLookupPresent": true,
+        "reportSha256": "3f882a1b09013fd5d47159858c27e1b5f0659426296f10c9d68a399512e1b022",
+        "classificationEvidence": [
+          {
+            "pointer": "/files/src~1orders.py/executed_lines/0",
+            "value": 12
+          }
+        ]
+      }
+    },
+    {
+      "id": "line-2",
+      "fileId": "F1",
+      "sourcePath": "src/orders.py",
+      "line": 13,
+      "states": [
+        "unattributed"
+      ],
+      "labels": [
+        ""
+      ],
+      "mapped": [],
+      "unknownLabels": [],
+      "unattributedEmpty": true,
+      "sourceStatus": "not-verified",
+      "provenance": {
+        "reportPath": "src/orders.py",
+        "contextLookupPointer": "/files/src~1orders.py/contexts/13",
+        "contextLookupPath": [
+          "files",
+          "src/orders.py",
+          "contexts",
+          "13"
+        ],
+        "contextLookupPresent": true,
+        "reportSha256": "3f882a1b09013fd5d47159858c27e1b5f0659426296f10c9d68a399512e1b022",
+        "classificationEvidence": [
+          {
+            "pointer": "/files/src~1orders.py/executed_lines/1",
+            "value": 13
+          }
+        ]
+      }
+    },
+    {
+      "id": "line-3",
+      "fileId": "F1",
+      "sourcePath": "src/orders.py",
+      "line": 14,
+      "states": [
+        "unknown"
+      ],
+      "labels": [
+        "opaque-worker-context|not-a-known-test"
+      ],
+      "mapped": [],
+      "unknownLabels": [
+        "opaque-worker-context|not-a-known-test"
+      ],
+      "unattributedEmpty": false,
+      "sourceStatus": "not-verified",
+      "provenance": {
+        "reportPath": "src/orders.py",
+        "contextLookupPointer": "/files/src~1orders.py/contexts/14",
+        "contextLookupPath": [
+          "files",
+          "src/orders.py",
+          "contexts",
+          "14"
+        ],
+        "contextLookupPresent": true,
+        "reportSha256": "3f882a1b09013fd5d47159858c27e1b5f0659426296f10c9d68a399512e1b022",
+        "classificationEvidence": [
+          {
+            "pointer": "/files/src~1orders.py/executed_lines/2",
+            "value": 14
+          }
+        ]
+      }
+    },
+    {
+      "id": "line-4",
+      "fileId": "F1",
+      "sourcePath": "src/orders.py",
+      "line": 15,
+      "states": [
+        "missing"
+      ],
+      "labels": [],
+      "mapped": [],
+      "unknownLabels": [],
+      "unattributedEmpty": false,
+      "sourceStatus": "not-verified",
+      "provenance": {
+        "reportPath": "src/orders.py",
+        "contextLookupPointer": "/files/src~1orders.py/contexts/15",
+        "contextLookupPath": [
+          "files",
+          "src/orders.py",
+          "contexts",
+          "15"
+        ],
+        "contextLookupPresent": false,
+        "reportSha256": "3f882a1b09013fd5d47159858c27e1b5f0659426296f10c9d68a399512e1b022",
+        "classificationEvidence": [
+          {
+            "pointer": "/files/src~1orders.py/missing_lines/0",
+            "value": 15
+          }
+        ]
+      },
+      "reason": "reported missing; no test selection inferred"
+    },
+    {
+      "id": "line-5",
+      "fileId": "F1",
+      "sourcePath": "src/orders.py",
+      "line": 16,
+      "states": [
+        "excluded"
+      ],
+      "labels": [],
+      "mapped": [],
+      "unknownLabels": [],
+      "unattributedEmpty": false,
+      "sourceStatus": "not-verified",
+      "provenance": {
+        "reportPath": "src/orders.py",
+        "contextLookupPointer": "/files/src~1orders.py/contexts/16",
+        "contextLookupPath": [
+          "files",
+          "src/orders.py",
+          "contexts",
+          "16"
+        ],
+        "contextLookupPresent": false,
+        "reportSha256": "3f882a1b09013fd5d47159858c27e1b5f0659426296f10c9d68a399512e1b022",
+        "classificationEvidence": [
+          {
+            "pointer": "/files/src~1orders.py/excluded_lines/0",
+            "value": 16
+          }
+        ]
+      },
+      "reason": "reported excluded; not attributed to test columns"
+    },
+    {
+      "id": "line-6",
+      "fileId": "F1",
+      "sourcePath": "src/orders.py",
+      "line": 17,
+      "states": [
+        "mapped"
+      ],
+      "labels": [
+        "tests/test_orders.py::test_validate|setup"
+      ],
+      "mapped": [
+        "T2"
+      ],
+      "unknownLabels": [],
+      "unattributedEmpty": false,
+      "sourceStatus": "not-verified",
+      "provenance": {
+        "reportPath": "src/orders.py",
+        "contextLookupPointer": "/files/src~1orders.py/contexts/17",
+        "contextLookupPath": [
+          "files",
+          "src/orders.py",
+          "contexts",
+          "17"
+        ],
+        "contextLookupPresent": true,
+        "reportSha256": "3f882a1b09013fd5d47159858c27e1b5f0659426296f10c9d68a399512e1b022",
+        "classificationEvidence": [
+          {
+            "pointer": "/files/src~1orders.py/executed_lines/3",
+            "value": 17
+          }
+        ]
+      }
+    },
+    {
+      "id": "line-7",
+      "fileId": "F1",
+      "sourcePath": "src/orders.py",
+      "line": 99,
+      "states": [
+        "unavailable"
+      ],
+      "labels": [],
+      "mapped": [],
+      "unknownLabels": [],
+      "unattributedEmpty": false,
+      "sourceStatus": "not-verified",
+      "provenance": {
+        "reportPath": "src/orders.py",
+        "contextLookupPointer": "/files/src~1orders.py/contexts/99",
+        "contextLookupPath": [
+          "files",
+          "src/orders.py",
+          "contexts",
+          "99"
+        ],
+        "contextLookupPresent": false,
+        "reportSha256": "3f882a1b09013fd5d47159858c27e1b5f0659426296f10c9d68a399512e1b022",
+        "classificationEvidence": [
+          {
+            "pointer": "/files/src~1orders.py/executed_lines",
+            "containsSelectedLine": false
+          },
+          {
+            "pointer": "/files/src~1orders.py/missing_lines",
+            "containsSelectedLine": false
+          },
+          {
+            "pointer": "/files/src~1orders.py/excluded_lines",
+            "containsSelectedLine": false
+          }
+        ]
+      },
+      "reason": "line not classified by reported line sets"
+    },
+    {
+      "id": "line-8",
+      "fileId": "F2",
+      "sourcePath": "src/absent.py",
+      "line": 1,
+      "states": [
+        "unavailable"
+      ],
+      "labels": [],
+      "mapped": [],
+      "unknownLabels": [],
+      "unattributedEmpty": false,
+      "sourceStatus": "not-verified",
+      "provenance": {
+        "reportPath": "src/absent.py",
+        "contextLookupPointer": "/files/src~1absent.py/contexts/1",
+        "contextLookupPath": [
+          "files",
+          "src/absent.py",
+          "contexts",
+          "1"
+        ],
+        "contextLookupPresent": false,
+        "reportSha256": "3f882a1b09013fd5d47159858c27e1b5f0659426296f10c9d68a399512e1b022",
+        "classificationEvidence": [
+          {
+            "lookupPointer": "/files/src~1absent.py",
+            "present": false
+          }
+        ]
+      },
+      "reason": "file not present in report"
+    }
+  ],
+  "coverage": "Explicit selected rows only; no coverage percentage, test ranking, automatic selection or correctness conclusion. File keys are data and are never opened.",
+  "sidecarSha256": "4fe1842608115987d4450ac09d5d3902eb7f4f2b89b8b920a07a882027764778"
+}

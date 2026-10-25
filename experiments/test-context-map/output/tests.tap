@@ -1,0 +1,118 @@
+TAP version 13
+# Subtest: selected rows retain all six states and unavailable file/line distinctions
+ok 1 - selected rows retain all six states and unavailable file/line distinctions
+  ---
+  duration_ms: 2.357167
+  type: 'test'
+  ...
+# Subtest: parameterized pipe test ID and static+dynamic full labels use exact mapping, not splitting
+ok 2 - parameterized pipe test ID and static+dynamic full labels use exact mapping, not splitting
+  ---
+  duration_ms: 0.639
+  type: 'test'
+  ...
+# Subtest: empty context and unmapped nonempty labels never gain guessed identities
+ok 3 - empty context and unmapped nonempty labels never gain guessed identities
+  ---
+  duration_ms: 0.232708
+  type: 'test'
+  ...
+# Subtest: mixed observed labels keep mapped, empty and unknown attributions together
+ok 4 - mixed observed labels keep mapped, empty and unknown attributions together
+  ---
+  duration_ms: 0.141916
+  type: 'test'
+  ...
+# Subtest: excluded raw contexts do not count as mapped test execution
+ok 5 - excluded raw contexts do not count as mapped test execution
+  ---
+  duration_ms: 0.148542
+  type: 'test'
+  ...
+# Subtest: report digest, selection digest, claimed revision/run and exporter mismatches refuse publication
+ok 6 - report digest, selection digest, claimed revision/run and exporter mismatches refuse publication
+  ---
+  duration_ms: 1.192208
+  type: 'test'
+  ...
+# Subtest: show_contexts and file/executed-line contexts are mandatory, never zero attribution
+ok 7 - show_contexts and file/executed-line contexts are mandatory, never zero attribution
+  ---
+  duration_ms: 0.35825
+  type: 'test'
+  ...
+# Subtest: contradictory sets, duplicate lines and observed contexts on missing lines fail
+ok 8 - contradictory sets, duplicate lines and observed contexts on missing lines fail
+  ---
+  duration_ms: 0.225708
+  type: 'test'
+  ...
+# Subtest: duplicate/conflicting path and exact context-map entries refuse instead of merging
+ok 9 - duplicate/conflicting path and exact context-map entries refuse instead of merging
+  ---
+  duration_ms: 0.517708
+  type: 'test'
+  ...
+# Subtest: selection order is preserved and undeclared source mapping is refused
+ok 10 - selection order is preserved and undeclared source mapping is refused
+  ---
+  duration_ms: 0.389041
+  type: 'test'
+  ...
+# Subtest: report field pointer preserves exact file key and source is never promoted to verified
+ok 11 - report field pointer preserves exact file key and source is never promoted to verified
+  ---
+  duration_ms: 0.213667
+  type: 'test'
+  ...
+# Subtest: explicit input limits refuse oversized selections, context counts and invalid line numbers
+ok 12 - explicit input limits refuse oversized selections, context counts and invalid line numbers
+  ---
+  duration_ms: 0.480709
+  type: 'test'
+  ...
+# Subtest: converter/publication cannot read source files or fetch paths/URLs from report/sidecar
+ok 13 - converter/publication cannot read source files or fetch paths/URLs from report/sidecar
+  ---
+  duration_ms: 6.985875
+  type: 'test'
+  ...
+# Subtest: real renderer treats hostile test IDs, contexts and paths as literals with no active links/images
+ok 14 - real renderer treats hostile test IDs, contexts and paths as literals with no active links/images
+  ---
+  duration_ms: 249.735792
+  type: 'test'
+  ...
+# Subtest: no mapped or unknown labels still render a valid matrix without empty comparison rows
+ok 15 - no mapped or unknown labels still render a valid matrix without empty comparison rows
+  ---
+  duration_ms: 448.751459
+  type: 'test'
+  ...
+# Subtest: fresh destination rejects existing directory and symlink, preserving unrelated victim
+ok 16 - fresh destination rejects existing directory and symlink, preserving unrelated victim
+  ---
+  duration_ms: 4.913667
+  type: 'test'
+  ...
+# Subtest: CLI invalid input and malformed UTF-8 return nonzero without publishing
+ok 17 - CLI invalid input and malformed UTF-8 return nonzero without publishing
+  ---
+  duration_ms: 369.695042
+  type: 'test'
+  ...
+# Subtest: missing/excluded/unavailable provenance never pretends absent context lookup is existing evidence
+ok 18 - missing/excluded/unavailable provenance never pretends absent context lookup is existing evidence
+  ---
+  duration_ms: 0.25525
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1172.087375

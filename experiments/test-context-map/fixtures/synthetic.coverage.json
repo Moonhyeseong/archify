@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "format": 3,
+    "version": "synthetic-format3",
+    "timestamp": "2026-10-25T00:00:00",
+    "branch_coverage": false,
+    "show_contexts": true
+  },
+  "files": {
+    "src/orders.py": {
+      "executed_lines": [
+        12,
+        13,
+        14,
+        17
+      ],
+      "summary": {
+        "covered_lines": 4,
+        "num_statements": 5,
+        "percent_covered": 80,
+        "percent_covered_display": "80",
+        "missing_lines": 1,
+        "excluded_lines": 1,
+        "percent_statements_covered": 80,
+        "percent_statements_covered_display": "80"
+      },
+      "missing_lines": [
+        15
+      ],
+      "excluded_lines": [
+        16
+      ],
+      "contexts": {
+        "12": [
+          "tests/test_orders.py::test_total[a|b]|run",
+          "ci-static|tests/test_orders.py::test_total[a|b]|run"
+        ],
+        "13": [
+          ""
+        ],
+        "14": [
+          "opaque-worker-context|not-a-known-test"
+        ],
+        "17": [
+          "tests/test_orders.py::test_validate|setup"
+        ]
+      },
+      "functions": {},
+      "classes": {}
+    }
+  },
+  "totals": {
+    "covered_lines": 4,
+    "num_statements": 5,
+    "percent_covered": 80,
+    "percent_covered_display": "80",
+    "missing_lines": 1,
+    "excluded_lines": 1,
+    "percent_statements_covered": 80,
+    "percent_statements_covered_display": "80"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "kind": "portable-browser-capture-summary",
+  "date": "2026-10-25",
+  "captureTool": "ego-browser",
+  "taskSpace": 4,
+  "images": [
+    {
+      "image": "matrix.png",
+      "sha256": "8604a1eb5fdd0e51f2809cd73f8b061bc2d30e9dd0fe2930c4615dfc51cabdf4",
+      "width": 1440,
+      "height": 1843,
+      "source": "../output/matrix.html",
+      "sourceSha256": "045bdfd287232fd36be51642b48b1d4c5b41e03f323537731f363c393d3c58dc",
+      "capturedAtUtc": "2026-10-25T05:14:21.745560+00:00",
+      "viewportCss": [
+        1440,
+        1000
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "theme": "light"
+    },
+    {
+      "image": "selection-tree.png",
+      "sha256": "f7c773296aa39e274103bbdb0da7032523953535b928b41c00fb006d3bca031e",
+      "width": 1440,
+      "height": 1349,
+      "source": "../output/selection.html",
+      "sourceSha256": "a16240f422e2aa9fef24bc8609fd56c481760ed5abf95dab4063babff84ffd56",
+      "capturedAtUtc": "2026-10-25T05:15:17.373773+00:00",
+      "viewportCss": [
+        1440,
+        1000
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "theme": "light"
+    }
+  ],
+  "sourceSha256": {
+    "adapter.mjs": "dc45fa75a4f14ba37590dea1ada3c6c23221f24590dadd6ff76ae4c5e9017140",
+    "adapter.test.mjs": "2c0e5c995d8557894a1105eb578ba29f9a974d7e862386f8d0650857daf4d424",
+    "build.mjs": "77e08e4e2f891685656fd67dd42823121f2fa5d9d992b03d442443faf6d8d293"
+  },
+  "agentVisualReview": [
+    "Parent agent viewed the actual matrix and optional location Tree.",
+    "The overview distinguishes mapped, empty, unknown, missing, excluded and unavailable evidence. Exact context identities and binding limits remain visible below it.",
+    "The Tree shows selected location containment only, not calls or test order."
+  ],
+  "browserCheck": "not-run: these captures are separate from the public finalize gate",
+  "humanAcceptance": "pending"
+}

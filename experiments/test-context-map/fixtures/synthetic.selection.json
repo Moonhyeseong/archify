@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "kind": "synthetic",
+  "reportBinding": {
+    "sha256": "3f882a1b09013fd5d47159858c27e1b5f0659426296f10c9d68a399512e1b022",
+    "runId": "synthetic-run-1",
+    "sourceRevision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "exporterVersion": "synthetic-format3",
+    "collectionFilters": [
+      "Original synthetic fixture; no coverage.py or pytest run occurred."
+    ]
+  },
+  "selectionBinding": {
+    "reportSha256": "3f882a1b09013fd5d47159858c27e1b5f0659426296f10c9d68a399512e1b022",
+    "runId": "synthetic-run-1",
+    "sourceRevision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "fileMap": [
+    {
+      "reportPath": "src/orders.py",
+      "sourcePath": "src/orders.py"
+    },
+    {
+      "reportPath": "src/absent.py",
+      "sourcePath": "src/absent.py"
+    }
+  ],
+  "selections": [
+    {
+      "sourcePath": "src/orders.py",
+      "lines": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        99
+      ]
+    },
+    {
+      "sourcePath": "src/absent.py",
+      "lines": [
+        1
+      ]
+    }
+  ],
+  "contextMap": [
+    {
+      "context": "tests/test_orders.py::test_total[a|b]|run",
+      "testId": "tests/test_orders.py::test_total[a|b]",
+      "phase": "run"
+    },
+    {
+      "context": "ci-static|tests/test_orders.py::test_total[a|b]|run",
+      "testId": "tests/test_orders.py::test_total[a|b]",
+      "phase": "run"
+    },
+    {
+      "context": "tests/test_orders.py::test_validate|setup",
+      "testId": "tests/test_orders.py::test_validate",
+      "phase": "setup"
+    }
+  ]
+}
