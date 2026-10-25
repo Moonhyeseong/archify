@@ -12,7 +12,7 @@
 
 | 实验与远程分支 | 具体价值 | 发布 revision | 实际图片 | 验证与限制 |
 | --- | --- | --- | --- | --- |
-| [Task review map](https://github.com/tt-a1i/archify/tree/codex/lab-task-review-map/experiments/task-review-map) | 借鉴 gtindo/task-view，把 Agent 的解释绑定固定 Git diff，列出未解释改动 | `b9e33974` | [遗漏示例](https://github.com/tt-a1i/archify/blob/codex/lab-task-review-map/experiments/task-review-map/screenshots/omitted.png) | 15 tests；validate/deliver/check 通过；当前 browser 未重跑，历史键盘遍历失败按旧 hash 保留 |
+| [Task review map](https://github.com/tt-a1i/archify/tree/codex/lab-task-review-map/experiments/task-review-map) | 固定Git改动对应独立声明；真实PR #1097的5hunk已记账与ZIP未解析并列 | `dcedd538` | [真实PR前后布局](https://github.com/tt-a1i/archify/tree/codex/lab-task-review-map/experiments/task-review-map/pr-1097) | 原15 tests复用；新增完整4文件证据，映射exit1；只手工改9坐标修阅读性，原输出保留；3静态gate通过，仍30键盘诊断；未跑PR代码 |
 | [Dependency map](https://github.com/tt-a1i/archify/tree/codex/lab-dependency-map/experiments/dependency-map) | 把 dependency-cruiser 已有报告变成局部原生图，保留未解析与视图外账目 | `2be2ab55` | [官方样例](https://github.com/tt-a1i/archify/blob/codex/lab-dependency-map/experiments/dependency-map/screenshots/official.png) | 6 tests；两图 finalize 四阶段通过；synthetic 的三条绕行建议仍保留 |
 | [Trace waterfall](https://github.com/tt-a1i/archify/tree/codex/lab-trace-waterfall/experiments/trace-waterfall) | 把真实采集的 Chrome X 格式操作区间变成可分享瀑布图 | `8e65f150` | [真实采集](https://github.com/tt-a1i/archify/blob/codex/lab-trace-waterfall/experiments/trace-waterfall/screenshots/workload.png) | 9 tests；四阶段通过；仅 X 子集，不推断调用树或关键路径 |
 | [Markdown outline](https://github.com/tt-a1i/archify/tree/codex/lab-markdown-outline/experiments/markdown-outline) | 标题与源行号直接转原生 Tree，保留文档层级 | `3f156e97` | [原生 PNG 导出](https://github.com/tt-a1i/archify/blob/codex/lab-markdown-outline/experiments/markdown-outline/screenshots/contributing-export.png) | 8 tests；三样例四阶段通过；公开 CONTRIBUTING.md 17 节点，受限 Markdown 子集 |
@@ -74,9 +74,9 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
-| 完整PR审阅实证 | Task review map应用于固定Archify PR #1097 | 4文件/5hunk引用已核实，ZIP保持unresolved；原始browser失败保留，准备手工布局派生对照 |
 | Workflow显式自环 | 合法via回接同一节点被当source obstacle误拒 | 独立最小产品修复中；不扩大自动搜索或放宽中段碰撞 |
-| 后续发现 | SQL计划计量、Notebook依赖与执行证据 | 固定来源调研，先去重；不运行数据库或notebook |
+| Plan row counts | 固定PEV2样例的每次平均与累计输出 | 原生Tree/解释页验证中；原估计与实际值同屏，未运行SQL |
+| 后续发现 | Notebook别名与派生值的不同stale预期 | 6项目只读报告完成，暂留内容候选；没有实际notebook交接任务 |
 
 ## 一手调研报告
 
@@ -108,6 +108,7 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 离线图交换、关系身份与来源链接 | [Graph exchange small tools](scouts/graph-exchange-smalltools.md) |
 | 模型检查反例、位置与循环闭合 | [Model witness small tools](scouts/model-witness-smalltools.md) |
 | SQL查询计划与统计口径 | [Query plan small tools](scouts/query-plan-smalltools.md) |
+| Notebook别名、物化值与stale证据 | [Notebook evidence small tools](scouts/notebook-evidence-smalltools.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
 报告中的上游声明、局部源码核实、计划中的实验和已经执行的结果分别标注。未推荐方向也保留原因，避免反复研究；没有把上游宣传、星数或作者截图当作 Archify 的效果证明。
