@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "https://github.com/tt-a1i/archify",
-  "hubCommit": "fc7017426177ad44e213242a2b1756ffba43b9e3",
+  "hubCommit": "60b748c83470be4c30d8869991e7f2ac82905462",
   "hubPath": "docs/research/2026-10-25/README.md",
   "visualSourcePaths": [
     "website/src/styles/site.css",
@@ -125,13 +125,13 @@
     },
     {
       "id": "finder-highlights",
-      "commit": "94c165ee6e5213c67e37a75a0b04496564980801",
+      "commit": "ed04916f33cca4cc6475eada7b4397694426f3f8",
       "branch": "codex/lab-finder-highlights",
       "directory": "experiments/finder-highlights",
       "group": "product",
-      "inputKind": "既有固定图",
-      "imagePath": "experiments/finder-highlights/screenshots/candidate-api-light.png",
-      "imageCaption": "输入查询后，列表与画布显示相同匹配节点。"
+      "inputKind": "真实 API 查询 / dev10b4 对照",
+      "imagePath": "experiments/finder-highlights/refresh-dev-10b4/screenshots/candidate-light.png",
+      "imageCaption": "新 dev 同输入 API 查询同步显示画布匹配；保留既有选择与视图，非完整 camera 或效率证明。"
     },
     {
       "id": "ci-conditions",
@@ -165,13 +165,13 @@
     },
     {
       "id": "relation-reference",
-      "commit": "6d7cd59492240952c8ade422ec9014de76fb4164",
+      "commit": "d5691a02f2dd77acd38b827e254249981bc142ee",
       "branch": "codex/lab-relation-reference",
       "directory": "experiments/relation-reference",
       "group": "product",
-      "inputKind": "既有固定图",
-      "imagePath": "experiments/relation-reference/screenshots/candidate-light.png",
-      "imageCaption": "固定关系 Passport 中的 Copy reference。"
+      "inputKind": "固定平行关系 / dev10b4 对照",
+      "imagePath": "experiments/relation-reference/refresh-dev-10b4/screenshots/parallel-candidate-light.png",
+      "imageCaption": "新 Passport 引用当前 pinned 关系的原始方向与身份；复制为受控注入，非 OS 剪贴板或 AT。"
     },
     {
       "id": "test-context-map",
@@ -195,13 +195,13 @@
     },
     {
       "id": "delta-values",
-      "commit": "4c35456b23b5452ca3f620672a8b52545979c945",
+      "commit": "a0a9ba77cb59e3e3a97be0713ca626df63a3234d",
       "branch": "codex/lab-delta-values",
       "directory": "experiments/delta-values",
       "group": "product",
-      "inputKind": "既有 Checkout 比较",
-      "imagePath": "experiments/delta-values/screenshots/candidate-persist-order-light.png",
-      "imageCaption": "exact row 显示 receipt 已保留的 SQL → SQL tx。"
+      "inputKind": "固定 exact row / dev10b4 对照",
+      "imagePath": "experiments/delta-values/refresh-dev-10b4/screenshots/candidate-persist-light.png",
+      "imageCaption": "当前 exact row 显示 SQL→SQL tx；未知 receipt 字段不猜，public compare/check 非四阶段 finalize。"
     },
     {
       "id": "source-question-tour",
@@ -215,13 +215,13 @@
     },
     {
       "id": "diagnostic-locations",
-      "commit": "67328d7de5cdf7bd894bfb526682cff9fdc2d10b",
+      "commit": "b6679399ae688e9a6907e2eca4f222aaa964a975",
       "branch": "codex/lab-diagnostic-locations",
       "directory": "experiments/diagnostic-locations",
       "group": "product",
-      "inputKind": "固定诊断 / 连续预览",
-      "imagePath": "experiments/diagnostic-locations/screenshots/live-preview-needs-fix.png",
-      "imageCaption": "坏输入诊断显示位置，保留先前 verified 图。"
+      "inputKind": "真实 CLI stderr / dev10b4 对照",
+      "imagePath": "experiments/diagnostic-locations/refresh-dev-10b4/screenshots/comparison-overview-light.png",
+      "imageCaption": "三条同文诊断区分原有行号；text/JSON 均 exit 1、JSON 原字节不变，late-open 空 iframe 边界未修。"
     },
     {
       "id": "finder-context",
@@ -412,6 +412,76 @@
       "inputKind": "固定 Gradle fixture / expected",
       "imagePath": "experiments/task-occurrences/screenshots/overview.png",
       "imageCaption": "11 个打印位置对应 10 个身份；两处 compileJava 共用目标，打印次数不是执行次数；解释页仍有 16 条键盘诊断。"
+    },
+    {
+      "id": "edge-extras",
+      "commit": "1db953a726b79f135187ee3cd2e12723717c7555",
+      "branch": "codex/lab-edge-extras",
+      "directory": "experiments/edge-extras",
+      "group": "content",
+      "inputKind": "固定 pipdeptree 受控 fixture",
+      "imagePath": "experiments/edge-extras/screenshots/explainer-desktop-light.png",
+      "imageCaption": "同一 urllib3 的入边 extras 与模式分开解释；未执行上游，Explainer 保留28条键盘失败。"
+    },
+    {
+      "id": "line-notes",
+      "commit": "079d562915a701f8c76b6479e59622432f81ee79",
+      "branch": "codex/lab-line-notes",
+      "directory": "experiments/line-notes",
+      "group": "content",
+      "inputKind": "固定源码 / 实验后处理原型",
+      "imagePath": "experiments/line-notes/screenshots/candidate-desktop-light.png",
+      "imageCaption": "源码行与作者解释往返；相同片段不串跳。仅实验 HTML 后处理，非共享产品或 normal finalize 候选。"
+    },
+    {
+      "id": "static-uses",
+      "commit": "7be0711da68d8db0dafaefef0b64894665f8609f",
+      "branch": "codex/lab-static-uses",
+      "directory": "experiments/static-uses",
+      "group": "content",
+      "inputKind": "固定 Beniget fixture / 静态根投影",
+      "imagePath": "experiments/static-uses/screenshots/overview-light.png",
+      "imageCaption": "7节点8条 use 边共享一个 IfExp；只是模块定义根投影，非完整 AST 或实际分支执行。"
+    },
+    {
+      "id": "hintful-stages",
+      "commit": "8d698ceec15a2ea24012135632c4612e5a58e7b5",
+      "branch": "codex/lab-hintful-stages",
+      "directory": "experiments/hintful-stages",
+      "group": "content",
+      "inputKind": "固定 diff-format 声明 fixture",
+      "imagePath": "experiments/hintful-stages/screenshots/desktop-light.png",
+      "imageCaption": "A→命名中间态 S→B 的两段声明；S 非第三 Git commit 或观测运行，未执行上游。"
+    },
+    {
+      "id": "spatial-focus",
+      "commit": "08af09117396b4d2b62774215bc48d8bd516386f",
+      "branch": "codex/lab-spatial-focus",
+      "directory": "experiments/spatial-focus",
+      "group": "product",
+      "inputKind": "公开示例 / 真实键盘对照",
+      "imagePath": "experiments/spatial-focus/screenshots/architecture-candidate-settled-right-light.png",
+      "imageCaption": "同一真实 Tab→Right 路径将 DOM 焦点从 Users 移到 CDN；不提交选择或移动 camera，非效率或 AT 验收。"
+    },
+    {
+      "id": "maybe-initialized",
+      "commit": "61d43f93ee9d11d30d2a239f80e1b2976539d850",
+      "branch": "codex/lab-maybe-initialized",
+      "directory": "experiments/maybe-initialized",
+      "group": "content",
+      "inputKind": "固定 RustOwl snapshot / 概念表",
+      "imagePath": "experiments/maybe-initialized/screenshots/desktop-light.png",
+      "imageCaption": "选中 v 的静态状态集合与读取 r 分开；未运行 RustOwl，保留48条键盘失败，窄屏代码仍可能横向裁切。"
+    },
+    {
+      "id": "load-filter",
+      "commit": "d2ff5f8c2cce954d5e20b6dd8970f027f52d46c0",
+      "branch": "codex/lab-load-filter",
+      "directory": "experiments/load-filter",
+      "group": "content",
+      "inputKind": "固定 Stevedore source / expected",
+      "imagePath": "experiments/load-filter/screenshots/desktop-light.png",
+      "imageCaption": "enabled 名单只见 t2 不证明 t1 从未 load；来源为 URL metadata，未执行上游插件或发现安装环境。"
     }
   ],
   "deferred": {

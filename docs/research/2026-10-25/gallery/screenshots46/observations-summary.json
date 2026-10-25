@@ -1,0 +1,816 @@
+{
+  "kind": "derived selected browser observations; not original raw JSON or delivery receipt",
+  "rawSourceRecords": [
+    {
+      "path": "final-observations.json",
+      "sha256": "2656482e9846ed3608e197c411b7c6ede10a7e9a118a345bc5928531f31cc23d",
+      "bytes": 12819
+    },
+    {
+      "path": "desktop-maybe-settled-observation.json",
+      "sha256": "b9a96df023ca4e1d6940be9833506dd0b1ae137617760807a734b7f4217f3ddc",
+      "bytes": 587
+    },
+    {
+      "path": "changed-items-observation.json",
+      "sha256": "6494866b0641002035e2afbbfb09ab4236b3538292e56652db7ef2936b363955",
+      "bytes": 13248
+    },
+    {
+      "path": "mobile-observation.json",
+      "sha256": "823348c73d097894f05a4354e3657eb772cd5f4b0c2a1816df1e3290869fab08",
+      "bytes": 2808
+    }
+  ],
+  "currentHtml": {
+    "sha256": "85e9877b6386b6dbe884baf549fb28bdad183ef0f3925dd443b8981ba40982dd",
+    "bytes": 15099916
+  },
+  "currentObservations": {
+    "initial": {
+      "theme": "light",
+      "viewport": [
+        1440,
+        1100
+      ],
+      "pageWidth": 1440,
+      "result": "显示 46 / 46 项",
+      "hub": "https://github.com/tt-a1i/archify/blob/60b748c83470be4c30d8869991e7f2ac82905462/docs/research/2026-10-25/README.md"
+    },
+    "filters": [
+      {
+        "filter": "all",
+        "result": "显示 46 / 46 项",
+        "pageWidth": 1440
+      },
+      {
+        "filter": "product",
+        "result": "显示 13 / 46 项",
+        "pageWidth": 1440
+      },
+      {
+        "filter": "offline",
+        "result": "显示 15 / 46 项",
+        "pageWidth": 1440
+      },
+      {
+        "filter": "content",
+        "result": "显示 18 / 46 项",
+        "pageWidth": 1440
+      }
+    ],
+    "sevenValuesAndFixedLinks": [
+      {
+        "id": "edge-extras",
+        "value": "同一urllib3沿不同入边extras与显示模式可有不同可见后继",
+        "links": [
+          {
+            "text": "固定提交说明 ↗",
+            "url": "https://github.com/tt-a1i/archify/tree/1db953a726b79f135187ee3cd2e12723717c7555/experiments/edge-extras"
+          },
+          {
+            "text": "分支 ↗",
+            "url": "https://github.com/tt-a1i/archify/tree/codex/lab-edge-extras/experiments/edge-extras"
+          }
+        ],
+        "imageSHA": "3959663f67401eafab510ed33d3b1b0f987c50bb566361ab527447c2cfc60b8b"
+      },
+      {
+        "id": "line-notes",
+        "value": "固定源码行→作者解释→同片段原行往返；相同源码两处不串跳",
+        "links": [
+          {
+            "text": "固定提交说明 ↗",
+            "url": "https://github.com/tt-a1i/archify/tree/079d562915a701f8c76b6479e59622432f81ee79/experiments/line-notes"
+          },
+          {
+            "text": "分支 ↗",
+            "url": "https://github.com/tt-a1i/archify/tree/codex/lab-line-notes/experiments/line-notes"
+          }
+        ],
+        "imageSHA": "cb281804b7fe3e7e7658afaaefd7db558bd02ae8cc939d6f732aeab4a5949326"
+      },
+      {
+        "id": "static-uses",
+        "value": "7节点8use边解释Beniget模块定义根的局部静态投影，不是执行分支",
+        "links": [
+          {
+            "text": "固定提交说明 ↗",
+            "url": "https://github.com/tt-a1i/archify/tree/7be0711da68d8db0dafaefef0b64894665f8609f/experiments/static-uses"
+          },
+          {
+            "text": "分支 ↗",
+            "url": "https://github.com/tt-a1i/archify/tree/codex/lab-static-uses/experiments/static-uses"
+          }
+        ],
+        "imageSHA": "eb72c1d603ea341d3726dffe5dfba58e1ba9b9df0378d7987843e4f4012bb7a5"
+      },
+      {
+        "id": "hintful-stages",
+        "value": "区分A→命名中间态S→B两段声明，删3在第二段",
+        "links": [
+          {
+            "text": "固定提交说明 ↗",
+            "url": "https://github.com/tt-a1i/archify/tree/8d698ceec15a2ea24012135632c4612e5a58e7b5/experiments/hintful-stages"
+          },
+          {
+            "text": "分支 ↗",
+            "url": "https://github.com/tt-a1i/archify/tree/codex/lab-hintful-stages/experiments/hintful-stages"
+          }
+        ],
+        "imageSHA": "de149eaa8cc69a6c99cc07eecb51c3e46f8f55c325af1860f2b54a1516d526e2"
+      },
+      {
+        "id": "spatial-focus",
+        "value": "屏内完整可见语义node用plain Arrow移动DOM焦点，保留选择/hash/camera，Tree及Route排除",
+        "links": [
+          {
+            "text": "固定提交说明 ↗",
+            "url": "https://github.com/tt-a1i/archify/tree/08af09117396b4d2b62774215bc48d8bd516386f/experiments/spatial-focus"
+          },
+          {
+            "text": "分支 ↗",
+            "url": "https://github.com/tt-a1i/archify/tree/codex/lab-spatial-focus/experiments/spatial-focus"
+          }
+        ],
+        "imageSHA": "386cc77e110410fb08b19042cbf1514ba13c7742db7f55780bb4f30b6f0b054f"
+      },
+      {
+        "id": "maybe-initialized",
+        "value": "RustOwl官方expected与概念I/U/union状态表分开，绿色波浪不表示一次执行状态",
+        "links": [
+          {
+            "text": "固定提交说明 ↗",
+            "url": "https://github.com/tt-a1i/archify/tree/61d43f93ee9d11d30d2a239f80e1b2976539d850/experiments/maybe-initialized"
+          },
+          {
+            "text": "分支 ↗",
+            "url": "https://github.com/tt-a1i/archify/tree/codex/lab-maybe-initialized/experiments/maybe-initialized"
+          }
+        ],
+        "imageSHA": "d511b0943b29f5bef28ea943da861105bf7da6f1b173d1353912d0d883960991"
+      },
+      {
+        "id": "load-filter",
+        "value": "enabled最终名单不证明先前未load/invoke，官方True expected与默认False源码推断分列",
+        "links": [
+          {
+            "text": "固定提交说明 ↗",
+            "url": "https://github.com/tt-a1i/archify/tree/d2ff5f8c2cce954d5e20b6dd8970f027f52d46c0/experiments/load-filter"
+          },
+          {
+            "text": "分支 ↗",
+            "url": "https://github.com/tt-a1i/archify/tree/codex/lab-load-filter/experiments/load-filter"
+          }
+        ],
+        "imageSHA": "cbf3826542353e49e7edc282da7fd60a8228e7b30a3bdeb8a0c0af71bb0d9188"
+      }
+    ],
+    "desktopDark": {
+      "theme": "dark",
+      "viewport": [
+        1440,
+        1100
+      ],
+      "pageWidth": 1440,
+      "result": "显示 46 / 46 项",
+      "hub": "https://github.com/tt-a1i/archify/blob/60b748c83470be4c30d8869991e7f2ac82905462/docs/research/2026-10-25/README.md"
+    },
+    "mobile": {
+      "theme": "light",
+      "viewport": [
+        390,
+        844
+      ],
+      "pageWidth": 390,
+      "result": "显示 1 / 46 项",
+      "query": "Maybe initialized",
+      "visible": [
+        "maybe-initialized"
+      ],
+      "hub": "https://github.com/tt-a1i/archify/blob/60b748c83470be4c30d8869991e7f2ac82905462/docs/research/2026-10-25/README.md"
+    },
+    "dialog": {
+      "theme": "dark",
+      "viewport": [
+        390,
+        844
+      ],
+      "pageWidth": 390,
+      "title": "Maybe initialized",
+      "natural": [
+        1440,
+        2829
+      ],
+      "shown": [
+        351.9921875,
+        691.53125
+      ],
+      "imageSHA": "d511b0943b29f5bef28ea943da861105bf7da6f1b173d1353912d0d883960991",
+      "source": "https://github.com/tt-a1i/archify/blob/61d43f93ee9d11d30d2a239f80e1b2976539d850/experiments/maybe-initialized/screenshots/desktop-light.png"
+    },
+    "escape": {
+      "open": false,
+      "focusCard": "maybe-initialized"
+    },
+    "empty": {
+      "theme": "dark",
+      "viewport": [
+        390,
+        844
+      ],
+      "pageWidth": 390,
+      "result": "显示 0 / 46 项",
+      "query": "no-match-archify-46-20261025",
+      "visible": [],
+      "hub": "https://github.com/tt-a1i/archify/blob/60b748c83470be4c30d8869991e7f2ac82905462/docs/research/2026-10-25/README.md"
+    },
+    "reset": {
+      "result": "显示 46 / 46 项",
+      "query": "",
+      "active": "query",
+      "viewport": [
+        390,
+        844
+      ],
+      "pageWidth": 390
+    },
+    "desktopMaybeSettled": {
+      "note": "Replaces immediate search screenshot with undecoded lazy image; early image retained privately, not selected as successful rendering.",
+      "theme": "light",
+      "viewport": [
+        1440,
+        1100
+      ],
+      "pageWidth": 1440,
+      "result": "显示 1 / 46 项",
+      "value": "RustOwl官方expected与概念I/U/union状态表分开，绿色波浪不表示一次执行状态",
+      "image": {
+        "complete": true,
+        "natural": [
+          1440,
+          2829
+        ]
+      },
+      "hub": "https://github.com/tt-a1i/archify/blob/60b748c83470be4c30d8869991e7f2ac82905462/docs/research/2026-10-25/README.md"
+    }
+  },
+  "reusedPriorHtmlEvidence": {
+    "html": {
+      "path": "prior-version/index.html",
+      "sha256": "350964384a42a24294cc0b2809b688a309291c795daa11261913f7749853ecd1",
+      "bytes": 15101784
+    },
+    "hubSourceCommit": "588dd5bac368daa7e24777a03c61bf7d4a9f7f70",
+    "semantics": "These eleven checks and mobile wheel were actually performed on prior 350964 HTML, not rerun eleven times on current 85e987 HTML. Same template and 46 image records justify scoped reuse; current content/count/theme/mobile dialog checks above are fresh.",
+    "changedItems": [
+      {
+        "id": "edge-extras",
+        "fit": {
+          "title": "Edge-scoped extras",
+          "subtitle": "同一 urllib3 的入边 extras 与模式分开解释；未执行上游，Explainer 保留28条键盘失败。 · 1440 × 2690 px · 原 PNG 未编辑",
+          "imageSHA": "3959663f67401eafab510ed33d3b1b0f987c50bb566361ab527447c2cfc60b8b",
+          "imageBytes": 390048,
+          "natural": [
+            1440,
+            2690
+          ],
+          "shown": [
+            1357.9921875,
+            2536.8125
+          ],
+          "hashText": "SHA-256 3959663f67401eafab510ed33d3b1b0f987c50bb566361ab527447c2cfc60b8b",
+          "source": "https://github.com/tt-a1i/archify/blob/1db953a726b79f135187ee3cd2e12723717c7555/experiments/edge-extras/screenshots/explainer-desktop-light.png",
+          "open": true,
+          "query": "Edge-scoped extras",
+          "result": "显示 1 / 46 项",
+          "viewport": [
+            1440,
+            1100
+          ]
+        },
+        "original": {
+          "pressed": "true",
+          "mode": "true",
+          "shown": [
+            1440,
+            2690
+          ],
+          "scroll": [
+            1398,
+            1480
+          ]
+        },
+        "close": {
+          "open": false,
+          "focusedCard": "edge-extras",
+          "sourceCleared": false
+        }
+      },
+      {
+        "id": "line-notes",
+        "fit": {
+          "title": "Line notes",
+          "subtitle": "源码行与作者解释往返；相同片段不串跳。仅实验 HTML 后处理，非共享产品或 normal finalize 候选。 · 1440 × 2112 px · 原 PNG 未编辑",
+          "imageSHA": "cb281804b7fe3e7e7658afaaefd7db558bd02ae8cc939d6f732aeab4a5949326",
+          "imageBytes": 406468,
+          "natural": [
+            1440,
+            2112
+          ],
+          "shown": [
+            1357.9921875,
+            1991.7265625
+          ],
+          "hashText": "SHA-256 cb281804b7fe3e7e7658afaaefd7db558bd02ae8cc939d6f732aeab4a5949326",
+          "source": "https://github.com/tt-a1i/archify/blob/079d562915a701f8c76b6479e59622432f81ee79/experiments/line-notes/screenshots/candidate-desktop-light.png",
+          "open": true,
+          "query": "Line notes",
+          "result": "显示 1 / 46 项",
+          "viewport": [
+            1440,
+            1100
+          ]
+        },
+        "original": {
+          "pressed": "true",
+          "mode": "true",
+          "shown": [
+            1440,
+            2112
+          ],
+          "scroll": [
+            1398,
+            1480
+          ]
+        },
+        "close": {
+          "open": false,
+          "focusedCard": "line-notes",
+          "sourceCleared": false
+        }
+      },
+      {
+        "id": "static-uses",
+        "fit": {
+          "title": "Static uses",
+          "subtitle": "7节点8条 use 边共享一个 IfExp；只是模块定义根投影，非完整 AST 或实际分支执行。 · 1440 × 2068 px · 原 PNG 未编辑",
+          "imageSHA": "eb72c1d603ea341d3726dffe5dfba58e1ba9b9df0378d7987843e4f4012bb7a5",
+          "imageBytes": 328176,
+          "natural": [
+            1440,
+            2068
+          ],
+          "shown": [
+            1357.9921875,
+            1950.234375
+          ],
+          "hashText": "SHA-256 eb72c1d603ea341d3726dffe5dfba58e1ba9b9df0378d7987843e4f4012bb7a5",
+          "source": "https://github.com/tt-a1i/archify/blob/7be0711da68d8db0dafaefef0b64894665f8609f/experiments/static-uses/screenshots/overview-light.png",
+          "open": true,
+          "query": "Static uses",
+          "result": "显示 1 / 46 项",
+          "viewport": [
+            1440,
+            1100
+          ]
+        },
+        "original": {
+          "pressed": "true",
+          "mode": "true",
+          "shown": [
+            1440,
+            2068
+          ],
+          "scroll": [
+            1398,
+            1480
+          ]
+        },
+        "close": {
+          "open": false,
+          "focusedCard": "static-uses",
+          "sourceCleared": false
+        }
+      },
+      {
+        "id": "hintful-stages",
+        "fit": {
+          "title": "Hintful stages",
+          "subtitle": "A→命名中间态 S→B 的两段声明；S 非第三 Git commit 或观测运行，未执行上游。 · 1440 × 2616 px · 原 PNG 未编辑",
+          "imageSHA": "de149eaa8cc69a6c99cc07eecb51c3e46f8f55c325af1860f2b54a1516d526e2",
+          "imageBytes": 374496,
+          "natural": [
+            1440,
+            2616
+          ],
+          "shown": [
+            1357.9921875,
+            2467.03125
+          ],
+          "hashText": "SHA-256 de149eaa8cc69a6c99cc07eecb51c3e46f8f55c325af1860f2b54a1516d526e2",
+          "source": "https://github.com/tt-a1i/archify/blob/8d698ceec15a2ea24012135632c4612e5a58e7b5/experiments/hintful-stages/screenshots/desktop-light.png",
+          "open": true,
+          "query": "Hintful stages",
+          "result": "显示 1 / 46 项",
+          "viewport": [
+            1440,
+            1100
+          ]
+        },
+        "original": {
+          "pressed": "true",
+          "mode": "true",
+          "shown": [
+            1440,
+            2616
+          ],
+          "scroll": [
+            1398,
+            1480
+          ]
+        },
+        "close": {
+          "open": false,
+          "focusedCard": "hintful-stages",
+          "sourceCleared": false
+        }
+      },
+      {
+        "id": "spatial-focus",
+        "fit": {
+          "title": "Spatial focus",
+          "subtitle": "同一真实 Tab→Right 路径将 DOM 焦点从 Users 移到 CDN；不提交选择或移动 camera，非效率或 AT 验收。 · 1440 × 1100 px · 原 PNG 未编辑",
+          "imageSHA": "386cc77e110410fb08b19042cbf1514ba13c7742db7f55780bb4f30b6f0b054f",
+          "imageBytes": 137940,
+          "natural": [
+            1440,
+            1100
+          ],
+          "shown": [
+            1357.9921875,
+            1037.359375
+          ],
+          "hashText": "SHA-256 386cc77e110410fb08b19042cbf1514ba13c7742db7f55780bb4f30b6f0b054f",
+          "source": "https://github.com/tt-a1i/archify/blob/08af09117396b4d2b62774215bc48d8bd516386f/experiments/spatial-focus/screenshots/architecture-candidate-settled-right-light.png",
+          "open": true,
+          "query": "Spatial focus",
+          "result": "显示 1 / 46 项",
+          "viewport": [
+            1440,
+            1100
+          ]
+        },
+        "original": {
+          "pressed": "true",
+          "mode": "true",
+          "shown": [
+            1440,
+            1100
+          ],
+          "scroll": [
+            1398,
+            1480
+          ]
+        },
+        "close": {
+          "open": false,
+          "focusedCard": "spatial-focus",
+          "sourceCleared": true
+        }
+      },
+      {
+        "id": "maybe-initialized",
+        "fit": {
+          "title": "Maybe initialized",
+          "subtitle": "选中 v 的静态状态集合与读取 r 分开；未运行 RustOwl，保留48条键盘失败，窄屏代码仍可能横向裁切。 · 1440 × 2829 px · 原 PNG 未编辑",
+          "imageSHA": "d511b0943b29f5bef28ea943da861105bf7da6f1b173d1353912d0d883960991",
+          "imageBytes": 455848,
+          "natural": [
+            1440,
+            2829
+          ],
+          "shown": [
+            1357.9921875,
+            2667.8984375
+          ],
+          "hashText": "SHA-256 d511b0943b29f5bef28ea943da861105bf7da6f1b173d1353912d0d883960991",
+          "source": "https://github.com/tt-a1i/archify/blob/61d43f93ee9d11d30d2a239f80e1b2976539d850/experiments/maybe-initialized/screenshots/desktop-light.png",
+          "open": true,
+          "query": "Maybe initialized",
+          "result": "显示 1 / 46 项",
+          "viewport": [
+            1440,
+            1100
+          ]
+        },
+        "original": {
+          "pressed": "true",
+          "mode": "true",
+          "shown": [
+            1440,
+            2829
+          ],
+          "scroll": [
+            1398,
+            1480
+          ]
+        },
+        "close": {
+          "open": false,
+          "focusedCard": "maybe-initialized",
+          "sourceCleared": false
+        }
+      },
+      {
+        "id": "load-filter",
+        "fit": {
+          "title": "Load filter",
+          "subtitle": "enabled 名单只见 t2 不证明 t1 从未 load；来源为 URL metadata，未执行上游插件或发现安装环境。 · 1440 × 3072 px · 原 PNG 未编辑",
+          "imageSHA": "cbf3826542353e49e7edc282da7fd60a8228e7b30a3bdeb8a0c0af71bb0d9188",
+          "imageBytes": 477003,
+          "natural": [
+            1440,
+            3072
+          ],
+          "shown": [
+            1357.9921875,
+            2897.0625
+          ],
+          "hashText": "SHA-256 cbf3826542353e49e7edc282da7fd60a8228e7b30a3bdeb8a0c0af71bb0d9188",
+          "source": "https://github.com/tt-a1i/archify/blob/d2ff5f8c2cce954d5e20b6dd8970f027f52d46c0/experiments/load-filter/screenshots/desktop-light.png",
+          "open": true,
+          "query": "Load filter",
+          "result": "显示 1 / 46 项",
+          "viewport": [
+            1440,
+            1100
+          ]
+        },
+        "original": {
+          "pressed": "true",
+          "mode": "true",
+          "shown": [
+            1440,
+            3072
+          ],
+          "scroll": [
+            1398,
+            1480
+          ]
+        },
+        "close": {
+          "open": false,
+          "focusedCard": "load-filter",
+          "sourceCleared": true
+        }
+      },
+      {
+        "id": "finder-highlights",
+        "fit": {
+          "title": "Finder canvas matches",
+          "subtitle": "新 dev 同输入 API 查询同步显示画布匹配；保留既有选择与视图，非完整 camera 或效率证明。 · 1440 × 900 px · 原 PNG 未编辑",
+          "imageSHA": "8f09f63acf32890006c6e96397cd444e08cf56e3749accd7a4b2f21abe84d51f",
+          "imageBytes": 192742,
+          "natural": [
+            1440,
+            900
+          ],
+          "shown": [
+            1358,
+            848.75
+          ],
+          "hashText": "SHA-256 8f09f63acf32890006c6e96397cd444e08cf56e3749accd7a4b2f21abe84d51f",
+          "source": "https://github.com/tt-a1i/archify/blob/ed04916f33cca4cc6475eada7b4397694426f3f8/experiments/finder-highlights/refresh-dev-10b4/screenshots/candidate-light.png",
+          "open": true,
+          "query": "Finder canvas matches",
+          "result": "显示 1 / 46 项",
+          "viewport": [
+            1440,
+            1100
+          ]
+        },
+        "original": {
+          "pressed": "true",
+          "mode": "true",
+          "shown": [
+            1440,
+            900
+          ],
+          "scroll": [
+            1398,
+            1480
+          ]
+        },
+        "close": {
+          "open": false,
+          "focusedCard": "finder-highlights",
+          "sourceCleared": false
+        }
+      },
+      {
+        "id": "relation-reference",
+        "fit": {
+          "title": "Relation reference",
+          "subtitle": "新 Passport 引用当前 pinned 关系的原始方向与身份；复制为受控注入，非 OS 剪贴板或 AT。 · 1440 × 1000 px · 原 PNG 未编辑",
+          "imageSHA": "09119cc7e73daac48d141d86d57ec129f430ccc5538a90f87cd68e6b96ed173e",
+          "imageBytes": 175258,
+          "natural": [
+            1440,
+            1000
+          ],
+          "shown": [
+            1357.9921875,
+            943.0546875
+          ],
+          "hashText": "SHA-256 09119cc7e73daac48d141d86d57ec129f430ccc5538a90f87cd68e6b96ed173e",
+          "source": "https://github.com/tt-a1i/archify/blob/d5691a02f2dd77acd38b827e254249981bc142ee/experiments/relation-reference/refresh-dev-10b4/screenshots/parallel-candidate-light.png",
+          "open": true,
+          "query": "Relation reference",
+          "result": "显示 1 / 46 项",
+          "viewport": [
+            1440,
+            1100
+          ]
+        },
+        "original": {
+          "pressed": "true",
+          "mode": "true",
+          "shown": [
+            1440,
+            1000
+          ],
+          "scroll": [
+            1398,
+            1480
+          ]
+        },
+        "close": {
+          "open": false,
+          "focusedCard": "relation-reference",
+          "sourceCleared": false
+        }
+      },
+      {
+        "id": "diagnostic-locations",
+        "fit": {
+          "title": "Diagnostic locations",
+          "subtitle": "三条同文诊断区分原有行号；text/JSON 均 exit 1、JSON 原字节不变，late-open 空 iframe 边界未修。 · 1440 × 1000 px · 原 PNG 未编辑",
+          "imageSHA": "ef8acac2c2917b9c6b77e77f6b5b433f958d6f9bf2736657543867651c38b288",
+          "imageBytes": 174774,
+          "natural": [
+            1440,
+            1000
+          ],
+          "shown": [
+            1357.9921875,
+            943.0546875
+          ],
+          "hashText": "SHA-256 ef8acac2c2917b9c6b77e77f6b5b433f958d6f9bf2736657543867651c38b288",
+          "source": "https://github.com/tt-a1i/archify/blob/b6679399ae688e9a6907e2eca4f222aaa964a975/experiments/diagnostic-locations/refresh-dev-10b4/screenshots/comparison-overview-light.png",
+          "open": true,
+          "query": "Diagnostic locations",
+          "result": "显示 1 / 46 项",
+          "viewport": [
+            1440,
+            1100
+          ]
+        },
+        "original": {
+          "pressed": "true",
+          "mode": "true",
+          "shown": [
+            1440,
+            1000
+          ],
+          "scroll": [
+            1398,
+            1480
+          ]
+        },
+        "close": {
+          "open": false,
+          "focusedCard": "diagnostic-locations",
+          "sourceCleared": false
+        }
+      },
+      {
+        "id": "delta-values",
+        "fit": {
+          "title": "Delta values",
+          "subtitle": "当前 exact row 显示 SQL→SQL tx；未知 receipt 字段不猜，public compare/check 非四阶段 finalize。 · 1440 × 1000 px · 原 PNG 未编辑",
+          "imageSHA": "fcadacd769f12e7e18f57394ad6e6348157f32893998743ffe7d52b49271d4f1",
+          "imageBytes": 134462,
+          "natural": [
+            1440,
+            1000
+          ],
+          "shown": [
+            1357.9921875,
+            943.0546875
+          ],
+          "hashText": "SHA-256 fcadacd769f12e7e18f57394ad6e6348157f32893998743ffe7d52b49271d4f1",
+          "source": "https://github.com/tt-a1i/archify/blob/a0a9ba77cb59e3e3a97be0713ca626df63a3234d/experiments/delta-values/refresh-dev-10b4/screenshots/candidate-persist-light.png",
+          "open": true,
+          "query": "Delta values",
+          "result": "显示 1 / 46 项",
+          "viewport": [
+            1440,
+            1100
+          ]
+        },
+        "original": {
+          "pressed": "true",
+          "mode": "true",
+          "shown": [
+            1440,
+            1000
+          ],
+          "scroll": [
+            1398,
+            1480
+          ]
+        },
+        "close": {
+          "open": false,
+          "focusedCard": "delta-values",
+          "sourceCleared": false
+        }
+      }
+    ],
+    "mobileWheel": {
+      "before": 0,
+      "after": 159.5,
+      "scrollHeight": 712,
+      "clientHeight": 552
+    }
+  },
+  "images": [
+    {
+      "path": "screenshots46/desktop-maybe-card-light.png",
+      "sha256": "fbffcf5d0b006d4e7045732fdc993b6b74a06bfcbea583dbc70c74f600c29197",
+      "bytes": 156800,
+      "width": 1440,
+      "height": 1100,
+      "boundHtmlSha256": "85e9877b6386b6dbe884baf549fb28bdad183ef0f3925dd443b8981ba40982dd",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged from root final capture."
+    },
+    {
+      "path": "screenshots46/desktop-overview-dark.png",
+      "sha256": "ca7bc7dff06ab5cf12e96f7d8df4cc87808266bc4451be82a6e9baf4bcedc870",
+      "bytes": 299376,
+      "width": 1440,
+      "height": 1100,
+      "boundHtmlSha256": "85e9877b6386b6dbe884baf549fb28bdad183ef0f3925dd443b8981ba40982dd",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged from root final capture."
+    },
+    {
+      "path": "screenshots46/desktop-overview-light.png",
+      "sha256": "f16727fafcbdb36139ac63c4304386114ddb22ec3fff2fd85d61b517a0aacd50",
+      "bytes": 295367,
+      "width": 1440,
+      "height": 1100,
+      "boundHtmlSha256": "85e9877b6386b6dbe884baf549fb28bdad183ef0f3925dd443b8981ba40982dd",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged from root final capture."
+    },
+    {
+      "path": "screenshots46/mobile-empty-dark.png",
+      "sha256": "3641254e3506e198896888c27093b3dbc1dad61eb80915878998904a21f68707",
+      "bytes": 75920,
+      "width": 390,
+      "height": 844,
+      "boundHtmlSha256": "85e9877b6386b6dbe884baf549fb28bdad183ef0f3925dd443b8981ba40982dd",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged from root final capture."
+    },
+    {
+      "path": "screenshots46/mobile-maybe-card-light.png",
+      "sha256": "ddaef4c650a2cce5fd9ba68831751c9f7495383f666636522b2c7260537c3dd8",
+      "bytes": 176840,
+      "width": 390,
+      "height": 1682,
+      "boundHtmlSha256": "85e9877b6386b6dbe884baf549fb28bdad183ef0f3925dd443b8981ba40982dd",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged from root final capture."
+    },
+    {
+      "path": "screenshots46/mobile-maybe-dialog-dark.png",
+      "sha256": "e9477f2f2250237bf0225ba45af1c6c05ca405364311dc0108f9d85be690f8d9",
+      "bytes": 81078,
+      "width": 390,
+      "height": 844,
+      "boundHtmlSha256": "85e9877b6386b6dbe884baf549fb28bdad183ef0f3925dd443b8981ba40982dd",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged from root final capture."
+    }
+  ],
+  "limits": [
+    "Root captured and viewed six final PNGs; author copied bytes and checked bindings without Ego.",
+    "Early undecoded-lazy desktop image remains private and is not a successful final capture.",
+    "Prior eleven dialog/original-size/Escape operations and wheel belong to prior HTML; prior eight images are not current screenshots.",
+    "No experiment HTML execution, external-link navigation, OS clipboard, AT, physical touch, cross-browser, full keyboard focus-trap or human acceptance claim."
+  ]
+}

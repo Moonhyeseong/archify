@@ -1,0 +1,883 @@
+{
+  "kind": "derived browser evidence for fixed 39-item gallery; not delivery receipt",
+  "hubSourceCommit": "fc7017426177ad44e213242a2b1756ffba43b9e3",
+  "artifacts": {
+    "index.html": {
+      "path": "index.html",
+      "sha256": "f884139c70fb99c2d290d1cbc24613d5d35adbab99d5eed5c12cb36f5eec9fd7",
+      "bytes": 11628628
+    },
+    "manifest.json": {
+      "path": "manifest.json",
+      "sha256": "dffc5cb30f9fbefae49a31b440b44df685c961849e7103416ab11b75b1164785",
+      "bytes": 86067
+    },
+    "verification.json": {
+      "path": "verification.json",
+      "sha256": "e8d1115193782123a6d00661d51136d7425d1a75dba2286040170fb24e6ff97a",
+      "bytes": 800
+    },
+    "selection.json": {
+      "path": "selection.json",
+      "sha256": "2c14f4d835b94f4069c9023e63b6f7c507abeea238fbc42ac4d4a778427d93d3",
+      "bytes": 19414
+    },
+    "README.md": {
+      "path": "README.md",
+      "sha256": "4bcee0259ecfcd960cac9bf97aeb95a171fa37580659284000c865647d92bd8e",
+      "bytes": 16589
+    },
+    "template.html": {
+      "path": "template.html",
+      "sha256": "bc7d0445a2c11578de09b89afb0a3f57e468d8923dbfcc1d98978b203b7f5ce9",
+      "bytes": 16951
+    }
+  },
+  "hubReadme": {
+    "path": "../README.md",
+    "sha256": "91b5f93a98e10d991e8fc3a15ff70392d7ce4743f97883c5b8a32d99f9dff232",
+    "bytes": 44048,
+    "sourceCommit": "f2ac641892bf57cce0d30e0a8005008f765ecb37",
+    "semantics": "Fixed README Git object at gallery publication; not the evolving worktree README. Later hub prose changes do not require gallery regeneration."
+  },
+  "environment": "Ego Chromium, existing space; mouse/keyboard and CSS viewport emulation; root captured and viewed seven PNGs",
+  "summary": {
+    "experiments": 39,
+    "groupCounts": {
+      "product": 12,
+      "offline": 15,
+      "content": 12
+    },
+    "originalObservationCount": 20,
+    "publishedCaptureCount": 7,
+    "desktopLightViewport": [
+      1440,
+      1100
+    ],
+    "mobileViewport": [
+      390,
+      844
+    ],
+    "desktopDarkViewport": [
+      1440,
+      1100
+    ]
+  },
+  "observations": [
+    {
+      "path": "screenshots39/desktop-observations.json",
+      "sha256": "46bb0fd2e49ce2631c19de68ba3a32f6ff82ef30231a2d75c3080e72db4f5492",
+      "bytes": 14969,
+      "records": [
+        {
+          "action": "filter",
+          "filter": "product",
+          "count": "显示 12 / 39 项",
+          "visible": [
+            "finder-highlights",
+            "relation-reference",
+            "delta-values",
+            "diagnostic-locations",
+            "finder-context",
+            "waterfall-status",
+            "workflow-self-loop",
+            "diff-line-numbers",
+            "keyboard-traversal",
+            "preview-dashed-ink",
+            "clipboard-outcome",
+            "source-keyboard"
+          ],
+          "theme": "light",
+          "viewport": [
+            1440,
+            1100
+          ],
+          "pageWidth": 1440
+        },
+        {
+          "action": "filter",
+          "filter": "offline",
+          "count": "显示 15 / 39 项",
+          "visible": [
+            "task-review-map",
+            "dependency-map",
+            "trace-waterfall",
+            "markdown-outline",
+            "dbml-erd",
+            "change-coupling",
+            "payload-delta",
+            "decision-thread",
+            "migration-plan",
+            "state-contract",
+            "ci-conditions",
+            "plan-actions",
+            "recipe-stages",
+            "test-context-map",
+            "test-failure-map"
+          ],
+          "theme": "light",
+          "viewport": [
+            1440,
+            1100
+          ],
+          "pageWidth": 1440
+        },
+        {
+          "action": "filter",
+          "filter": "content",
+          "count": "显示 12 / 39 项",
+          "visible": [
+            "source-question-tour",
+            "delivery-witness",
+            "retained-size",
+            "lasso-witness",
+            "plan-row-counts",
+            "copy-identity",
+            "cli-reading-tour",
+            "byte-views",
+            "notebook-occurrences",
+            "config-origins",
+            "benchmark-reading",
+            "task-occurrences"
+          ],
+          "theme": "light",
+          "viewport": [
+            1440,
+            1100
+          ],
+          "pageWidth": 1440
+        },
+        {
+          "action": "filter",
+          "filter": "all",
+          "count": "显示 39 / 39 项",
+          "visible": [
+            "finder-highlights",
+            "relation-reference",
+            "delta-values",
+            "diagnostic-locations",
+            "finder-context",
+            "waterfall-status",
+            "workflow-self-loop",
+            "diff-line-numbers",
+            "keyboard-traversal",
+            "preview-dashed-ink",
+            "clipboard-outcome",
+            "source-keyboard",
+            "task-review-map",
+            "dependency-map",
+            "trace-waterfall",
+            "markdown-outline",
+            "dbml-erd",
+            "change-coupling",
+            "payload-delta",
+            "decision-thread",
+            "migration-plan",
+            "state-contract",
+            "ci-conditions",
+            "plan-actions",
+            "recipe-stages",
+            "test-context-map",
+            "test-failure-map",
+            "source-question-tour",
+            "delivery-witness",
+            "retained-size",
+            "lasso-witness",
+            "plan-row-counts",
+            "copy-identity",
+            "cli-reading-tour",
+            "byte-views",
+            "notebook-occurrences",
+            "config-origins",
+            "benchmark-reading",
+            "task-occurrences"
+          ],
+          "theme": "light",
+          "viewport": [
+            1440,
+            1100
+          ],
+          "pageWidth": 1440
+        },
+        {
+          "action": "search-and-original-image",
+          "id": "notebook-occurrences",
+          "result": {
+            "count": "显示 1 / 39 项",
+            "visible": [
+              "notebook-occurrences"
+            ],
+            "theme": "light",
+            "viewport": [
+              1440,
+              1100
+            ],
+            "pageWidth": 1440
+          },
+          "detail": {
+            "title": "Notebook occurrences",
+            "description": "六个 cell 按位置保留：source 改变与保存 output 改变分列；没有运行 notebook 或推断执行依赖。 · 1440 × 1100 px · 原 PNG 未编辑",
+            "hash": "SHA-256 24db235f847663e50468b1f9eae4595629408416a10f30811649e6bca7199137",
+            "source": "https://github.com/tt-a1i/archify/blob/2090b0ff144b7bc3425d52821655f659858f5d6a/experiments/notebook-occurrences/screenshots/explainer-overview.png",
+            "naturalWidth": 1440,
+            "naturalHeight": 1100,
+            "focus": "close-image",
+            "actualSha256": "24db235f847663e50468b1f9eae4595629408416a10f30811649e6bca7199137"
+          },
+          "original": {
+            "pressed": "true",
+            "mode": "true",
+            "width": 1440,
+            "naturalWidth": 1440
+          },
+          "returned": {
+            "closed": true,
+            "focusId": "notebook-occurrences",
+            "focusClass": "image-open"
+          }
+        },
+        {
+          "action": "search-and-original-image",
+          "id": "config-origins",
+          "result": {
+            "count": "显示 1 / 39 项",
+            "visible": [
+              "config-origins"
+            ],
+            "theme": "light",
+            "viewport": [
+              1440,
+              1100
+            ],
+            "pageWidth": 1440
+          },
+          "detail": {
+            "title": "Config origins",
+            "description": "provider 声明、幸存字段与整体错误归属分开；join 的 max=20 没有修复该测试约束，未运行 Rust。 · 1440 × 1100 px · 原 PNG 未编辑",
+            "hash": "SHA-256 e21dbb3239569af1e01b8eb33760ffa9dd0afc017c68bb286436c8b4bb42c7b6",
+            "source": "https://github.com/tt-a1i/archify/blob/14867942a81542c1ce1b0d4aae38c6e7b9ddddef/experiments/config-origins/screenshots/overview.png",
+            "naturalWidth": 1440,
+            "naturalHeight": 1100,
+            "focus": "close-image",
+            "actualSha256": "e21dbb3239569af1e01b8eb33760ffa9dd0afc017c68bb286436c8b4bb42c7b6"
+          },
+          "original": {
+            "pressed": "true",
+            "mode": "true",
+            "width": 1440,
+            "naturalWidth": 1440
+          },
+          "returned": {
+            "closed": true,
+            "focusId": "config-origins",
+            "focusClass": "image-open"
+          }
+        },
+        {
+          "action": "search-and-original-image",
+          "id": "benchmark-reading",
+          "result": {
+            "count": "显示 1 / 39 项",
+            "visible": [
+              "benchmark-reading"
+            ],
+            "theme": "light",
+            "viewport": [
+              1440,
+              1100
+            ],
+            "pageWidth": 1440
+          },
+          "detail": {
+            "title": "Benchmark reading",
+            "description": "四个 median 与 CI/p/n/~ 邻表；上游历史材料，未重跑统计或 benchmark，不声称普遍性能收益。 · 1440 × 1100 px · 原 PNG 未编辑",
+            "hash": "SHA-256 5d74a6d1693e0677f64c4b59c7b1d535a6815db4834b82fa9748dfc96c124771",
+            "source": "https://github.com/tt-a1i/archify/blob/7b8258cdc3f7bc2d9c6a0277feaa5d31b1a70686/experiments/benchmark-reading/screenshots/overview.png",
+            "naturalWidth": 1440,
+            "naturalHeight": 1100,
+            "focus": "close-image",
+            "actualSha256": "5d74a6d1693e0677f64c4b59c7b1d535a6815db4834b82fa9748dfc96c124771"
+          },
+          "original": {
+            "pressed": "true",
+            "mode": "true",
+            "width": 1440,
+            "naturalWidth": 1440
+          },
+          "returned": {
+            "closed": true,
+            "focusId": "benchmark-reading",
+            "focusClass": "image-open"
+          }
+        },
+        {
+          "action": "search-and-original-image",
+          "id": "task-occurrences",
+          "result": {
+            "count": "显示 1 / 39 项",
+            "visible": [
+              "task-occurrences"
+            ],
+            "theme": "light",
+            "viewport": [
+              1440,
+              1100
+            ],
+            "pageWidth": 1440
+          },
+          "detail": {
+            "title": "Task occurrences",
+            "description": "11 个打印位置对应 10 个身份；两处 compileJava 共用目标，打印次数不是执行次数；解释页仍有 16 条键盘诊断。 · 1440 × 1100 px · 原 PNG 未编辑",
+            "hash": "SHA-256 f7b2378b674a63375fe892b2f69121ca509fc7c9b4441458dc99c96e0151b36c",
+            "source": "https://github.com/tt-a1i/archify/blob/caffb4aabb13b04a77bb9475866ad65465d79b20/experiments/task-occurrences/screenshots/overview.png",
+            "naturalWidth": 1440,
+            "naturalHeight": 1100,
+            "focus": "close-image",
+            "actualSha256": "f7b2378b674a63375fe892b2f69121ca509fc7c9b4441458dc99c96e0151b36c"
+          },
+          "original": {
+            "pressed": "true",
+            "mode": "true",
+            "width": 1440,
+            "naturalWidth": 1440
+          },
+          "returned": {
+            "closed": true,
+            "focusId": "task-occurrences",
+            "focusClass": "image-open"
+          }
+        },
+        {
+          "action": "search-and-original-image",
+          "id": "finder-context",
+          "result": {
+            "count": "显示 1 / 39 项",
+            "visible": [
+              "finder-context"
+            ],
+            "theme": "light",
+            "viewport": [
+              1440,
+              1100
+            ],
+            "pageWidth": 1440
+          },
+          "detail": {
+            "title": "Finder result descriptions",
+            "description": "新 dev 同名结果 UI 保持原样；8 个可访问描述来自实际 AX 记录，图片本身不证明发声或 AT 验收。 · 1440 × 1000 px · 原 PNG 未编辑",
+            "hash": "SHA-256 0d81e2c6dc9ea25898f71610fbe4d859fccb879c775bb7905ad5b1e70ec06ddd",
+            "source": "https://github.com/tt-a1i/archify/blob/e219bc5ba4fdf90f653c2fae7eadcc1ceeeda942/experiments/finder-context/refresh-dev-10b4/screenshots/candidate-finder.png",
+            "naturalWidth": 1440,
+            "naturalHeight": 1000,
+            "focus": "close-image",
+            "actualSha256": "0d81e2c6dc9ea25898f71610fbe4d859fccb879c775bb7905ad5b1e70ec06ddd"
+          },
+          "original": {
+            "pressed": "true",
+            "mode": "true",
+            "width": 1440,
+            "naturalWidth": 1440
+          },
+          "returned": {
+            "closed": true,
+            "focusId": "finder-context",
+            "focusClass": "image-open"
+          }
+        },
+        {
+          "action": "search-and-original-image",
+          "id": "waterfall-status",
+          "result": {
+            "count": "显示 1 / 39 项",
+            "visible": [
+              "waterfall-status"
+            ],
+            "theme": "light",
+            "viewport": [
+              1440,
+              1100
+            ],
+            "pageWidth": 1440
+          },
+          "detail": {
+            "title": "Waterfall status text",
+            "description": "新 dev 同一构造输入显示 Error / Cancelled；时间比例不是成功率，非真实操作记录。 · 1440 × 1000 px · 原 PNG 未编辑",
+            "hash": "SHA-256 d149f17fc7e478573091723b5d00fcec2f24ca7febb4554c79e094299b12d409",
+            "source": "https://github.com/tt-a1i/archify/blob/68311bb8461ddd4086af6f2e41ce60e9e6f7f5d4/experiments/waterfall-status/refresh-dev-10b4/screenshots/candidate-light.png",
+            "naturalWidth": 1440,
+            "naturalHeight": 1000,
+            "focus": "close-image",
+            "actualSha256": "d149f17fc7e478573091723b5d00fcec2f24ca7febb4554c79e094299b12d409"
+          },
+          "original": {
+            "pressed": "true",
+            "mode": "true",
+            "width": 1440,
+            "naturalWidth": 1440
+          },
+          "returned": {
+            "closed": true,
+            "focusId": "waterfall-status",
+            "focusClass": "image-open"
+          }
+        },
+        {
+          "action": "search-and-original-image",
+          "id": "workflow-self-loop",
+          "result": {
+            "count": "显示 1 / 39 项",
+            "visible": [
+              "workflow-self-loop"
+            ],
+            "theme": "light",
+            "viewport": [
+              1440,
+              1100
+            ],
+            "pageWidth": 1440
+          },
+          "detail": {
+            "title": "Workflow self-loop",
+            "description": "候选保留原始合法自环 pins；新 dev 基线验证失败且没有 HTML，不伪造 before 图。 · 1440 × 1000 px · 原 PNG 未编辑",
+            "hash": "SHA-256 bf431d202ddcd601556d1d49332e20a3585fa27ba632a06e9f5df0983f1e1a1d",
+            "source": "https://github.com/tt-a1i/archify/blob/9578b8e4f2daf71b383704921d4df9cef19b8d13/experiments/workflow-self-loop/refresh-dev-10b4/screenshots/candidate-light.png",
+            "naturalWidth": 1440,
+            "naturalHeight": 1000,
+            "focus": "close-image",
+            "actualSha256": "bf431d202ddcd601556d1d49332e20a3585fa27ba632a06e9f5df0983f1e1a1d"
+          },
+          "original": {
+            "pressed": "true",
+            "mode": "true",
+            "width": 1440,
+            "naturalWidth": 1440
+          },
+          "returned": {
+            "closed": true,
+            "focusId": "workflow-self-loop",
+            "focusClass": "image-open"
+          }
+        },
+        {
+          "action": "search-and-original-image",
+          "id": "keyboard-traversal",
+          "result": {
+            "count": "显示 1 / 39 项",
+            "visible": [
+              "keyboard-traversal"
+            ],
+            "theme": "light",
+            "viewport": [
+              1440,
+              1100
+            ],
+            "pageWidth": 1440
+          },
+          "detail": {
+            "title": "Keyboard traversal",
+            "description": "同页真实 Tab 到尾，没有视觉改版；root task47/PR63 与 checker48/64 分列，不回写 Task 实验的16条失败。 · 1440 × 900 px · 原 PNG 未编辑",
+            "hash": "SHA-256 3a92c04ac869dc1e6d3fb37deda6db491b6f2ca7090ea9398a8de592d6e4c6ee",
+            "source": "https://github.com/tt-a1i/archify/blob/c96e8aa74ff5e309cdab07a1b70d0242f33bed75/experiments/keyboard-traversal/refresh-dev-10b4/screenshots/task-footer-tab.png",
+            "naturalWidth": 1440,
+            "naturalHeight": 900,
+            "focus": "close-image",
+            "actualSha256": "3a92c04ac869dc1e6d3fb37deda6db491b6f2ca7090ea9398a8de592d6e4c6ee"
+          },
+          "original": {
+            "pressed": "true",
+            "mode": "true",
+            "width": 1440,
+            "naturalWidth": 1440
+          },
+          "returned": {
+            "closed": true,
+            "focusId": "keyboard-traversal",
+            "focusClass": "image-open"
+          }
+        },
+        {
+          "action": "search-and-original-image",
+          "id": "clipboard-outcome",
+          "result": {
+            "count": "显示 1 / 39 项",
+            "visible": [
+              "clipboard-outcome"
+            ],
+            "theme": "light",
+            "viewport": [
+              1440,
+              1100
+            ],
+            "pageWidth": 1440
+          },
+          "detail": {
+            "title": "Clipboard outcome",
+            "description": "受控缺失 API 时保留完整消息供手工恢复；未写 OS 剪贴板，两页三阶段及同7条写作 warnings，自动 browser 未请求。 · 1280 × 1000 px · 原 PNG 未编辑",
+            "hash": "SHA-256 e9ee025bf2d31da8fc52aa87449201a0e8737b2e415f8ea66b442c0a3e7e0c36",
+            "source": "https://github.com/tt-a1i/archify/blob/0e4a2c71c9550905004d20bbadb3b33d6bd85f3d/experiments/clipboard-outcome/refresh-dev-10b4/screenshots/candidate-missing-ask.png",
+            "naturalWidth": 1280,
+            "naturalHeight": 1000,
+            "focus": "close-image",
+            "actualSha256": "e9ee025bf2d31da8fc52aa87449201a0e8737b2e415f8ea66b442c0a3e7e0c36"
+          },
+          "original": {
+            "pressed": "true",
+            "mode": "true",
+            "width": 1280,
+            "naturalWidth": 1280
+          },
+          "returned": {
+            "closed": true,
+            "focusId": "clipboard-outcome",
+            "focusClass": "image-open"
+          }
+        },
+        {
+          "action": "clear-query",
+          "count": "显示 39 / 39 项",
+          "visible": [
+            "finder-highlights",
+            "relation-reference",
+            "delta-values",
+            "diagnostic-locations",
+            "finder-context",
+            "waterfall-status",
+            "workflow-self-loop",
+            "diff-line-numbers",
+            "keyboard-traversal",
+            "preview-dashed-ink",
+            "clipboard-outcome",
+            "source-keyboard",
+            "task-review-map",
+            "dependency-map",
+            "trace-waterfall",
+            "markdown-outline",
+            "dbml-erd",
+            "change-coupling",
+            "payload-delta",
+            "decision-thread",
+            "migration-plan",
+            "state-contract",
+            "ci-conditions",
+            "plan-actions",
+            "recipe-stages",
+            "test-context-map",
+            "test-failure-map",
+            "source-question-tour",
+            "delivery-witness",
+            "retained-size",
+            "lasso-witness",
+            "plan-row-counts",
+            "copy-identity",
+            "cli-reading-tour",
+            "byte-views",
+            "notebook-occurrences",
+            "config-origins",
+            "benchmark-reading",
+            "task-occurrences"
+          ],
+          "theme": "light",
+          "viewport": [
+            1440,
+            1100
+          ],
+          "pageWidth": 1440
+        }
+      ],
+      "recordCount": 14,
+      "originalSafeBytes": true
+    },
+    {
+      "path": "screenshots39/responsive-observations.json",
+      "sha256": "9eb4cee94190a5b87f77279785680b445639dcefeb4e350a1f97f5ccbbc9148f",
+      "bytes": 3795,
+      "records": [
+        {
+          "action": "mobile-task-card",
+          "theme": "light",
+          "viewport": [
+            390,
+            844
+          ],
+          "width": 390,
+          "count": "显示 1 / 39 项",
+          "visible": [
+            "task-occurrences"
+          ],
+          "dialog": false,
+          "dialogBox": {
+            "x": 0,
+            "width": 0
+          },
+          "focus": "query"
+        },
+        {
+          "action": "mobile-dark-dialog",
+          "theme": "dark",
+          "viewport": [
+            390,
+            844
+          ],
+          "width": 390,
+          "count": "显示 1 / 39 项",
+          "visible": [
+            "task-occurrences"
+          ],
+          "dialog": true,
+          "dialogBox": {
+            "x": 8,
+            "width": 374
+          },
+          "focus": "close-image"
+        },
+        {
+          "action": "mobile-escape",
+          "theme": "dark",
+          "viewport": [
+            390,
+            844
+          ],
+          "width": 390,
+          "count": "显示 1 / 39 项",
+          "visible": [
+            "task-occurrences"
+          ],
+          "dialog": false,
+          "dialogBox": {
+            "x": 0,
+            "width": 0
+          },
+          "focus": "",
+          "returnId": "task-occurrences"
+        },
+        {
+          "action": "empty-search",
+          "theme": "dark",
+          "viewport": [
+            390,
+            844
+          ],
+          "width": 390,
+          "count": "显示 0 / 39 项",
+          "visible": [],
+          "dialog": false,
+          "dialogBox": {
+            "x": 0,
+            "width": 0
+          },
+          "focus": "query",
+          "emptyVisible": true
+        },
+        {
+          "action": "reset",
+          "theme": "dark",
+          "viewport": [
+            390,
+            844
+          ],
+          "width": 390,
+          "count": "显示 39 / 39 项",
+          "visible": [
+            "finder-highlights",
+            "relation-reference",
+            "delta-values",
+            "diagnostic-locations",
+            "finder-context",
+            "waterfall-status",
+            "workflow-self-loop",
+            "diff-line-numbers",
+            "keyboard-traversal",
+            "preview-dashed-ink",
+            "clipboard-outcome",
+            "source-keyboard",
+            "task-review-map",
+            "dependency-map",
+            "trace-waterfall",
+            "markdown-outline",
+            "dbml-erd",
+            "change-coupling",
+            "payload-delta",
+            "decision-thread",
+            "migration-plan",
+            "state-contract",
+            "ci-conditions",
+            "plan-actions",
+            "recipe-stages",
+            "test-context-map",
+            "test-failure-map",
+            "source-question-tour",
+            "delivery-witness",
+            "retained-size",
+            "lasso-witness",
+            "plan-row-counts",
+            "copy-identity",
+            "cli-reading-tour",
+            "byte-views",
+            "notebook-occurrences",
+            "config-origins",
+            "benchmark-reading",
+            "task-occurrences"
+          ],
+          "dialog": false,
+          "dialogBox": {
+            "x": 0,
+            "width": 0
+          },
+          "focus": "query"
+        },
+        {
+          "action": "desktop-dark",
+          "theme": "dark",
+          "viewport": [
+            1440,
+            1100
+          ],
+          "width": 1440,
+          "count": "显示 39 / 39 项",
+          "visible": [
+            "finder-highlights",
+            "relation-reference",
+            "delta-values",
+            "diagnostic-locations",
+            "finder-context",
+            "waterfall-status",
+            "workflow-self-loop",
+            "diff-line-numbers",
+            "keyboard-traversal",
+            "preview-dashed-ink",
+            "clipboard-outcome",
+            "source-keyboard",
+            "task-review-map",
+            "dependency-map",
+            "trace-waterfall",
+            "markdown-outline",
+            "dbml-erd",
+            "change-coupling",
+            "payload-delta",
+            "decision-thread",
+            "migration-plan",
+            "state-contract",
+            "ci-conditions",
+            "plan-actions",
+            "recipe-stages",
+            "test-context-map",
+            "test-failure-map",
+            "source-question-tour",
+            "delivery-witness",
+            "retained-size",
+            "lasso-witness",
+            "plan-row-counts",
+            "copy-identity",
+            "cli-reading-tour",
+            "byte-views",
+            "notebook-occurrences",
+            "config-origins",
+            "benchmark-reading",
+            "task-occurrences"
+          ],
+          "dialog": false,
+          "dialogBox": {
+            "x": 0,
+            "width": 0
+          },
+          "focus": "query"
+        }
+      ],
+      "recordCount": 6,
+      "originalSafeBytes": true
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "screenshots39/benchmark-reading-dialog.png",
+      "sha256": "0bec5821367840febe60e945ed0168378504b4cc0c2160d0e9d3432a209958c6",
+      "bytes": 231415,
+      "pngDimensions": [
+        1440,
+        1100
+      ],
+      "rootViewed": true,
+      "byteIdenticalToRootOriginal": true
+    },
+    {
+      "path": "screenshots39/clipboard-outcome-dialog.png",
+      "sha256": "c23edac78206a1f758147124de8f910cd6f2d0865cba93aa7cb41d42a81bd7dd",
+      "bytes": 262975,
+      "pngDimensions": [
+        1440,
+        1100
+      ],
+      "rootViewed": true,
+      "byteIdenticalToRootOriginal": true
+    },
+    {
+      "path": "screenshots39/overview-desktop-dark.png",
+      "sha256": "0144c9c5140a10c3fc94ca53cd755ab2a1b3289d2776aafbe2d3329614d63e2b",
+      "bytes": 279186,
+      "pngDimensions": [
+        1440,
+        1100
+      ],
+      "rootViewed": true,
+      "byteIdenticalToRootOriginal": true
+    },
+    {
+      "path": "screenshots39/overview-desktop-light.png",
+      "sha256": "354110b5d490c00b52b52aa8fee52ae6b54915ad76602cbab00fb32bbbdb4e23",
+      "bytes": 275450,
+      "pngDimensions": [
+        1440,
+        1100
+      ],
+      "rootViewed": true,
+      "byteIdenticalToRootOriginal": true
+    },
+    {
+      "path": "screenshots39/task-mobile-dark-dialog.png",
+      "sha256": "4b4e6292b84550236bd911da3b2c9b93edb5275c9184ae6124c466d59cfb6358",
+      "bytes": 59169,
+      "pngDimensions": [
+        390,
+        844
+      ],
+      "rootViewed": true,
+      "byteIdenticalToRootOriginal": true
+    },
+    {
+      "path": "screenshots39/task-mobile-light.png",
+      "sha256": "9c1944d68b9f28a504ca217f176bc424082a2e11f1645641f8e300507b49b1e1",
+      "bytes": 169477,
+      "pngDimensions": [
+        390,
+        1663
+      ],
+      "rootViewed": true,
+      "byteIdenticalToRootOriginal": true
+    },
+    {
+      "path": "screenshots39/task-occurrences-dialog.png",
+      "sha256": "624e05427cb584f5e75acf140688b744973d4c1c739520a074b4be893ee5c56f",
+      "bytes": 182118,
+      "pngDimensions": [
+        1440,
+        1100
+      ],
+      "rootViewed": true,
+      "byteIdenticalToRootOriginal": true
+    }
+  ],
+  "historical": {
+    "gallery35Commit": "c23d585c6a5aead61ca30198b1fcbecc5fe8595d",
+    "gallery34Commit": "800599678493c33e69179adc7f66d5b17ab3aa63",
+    "oldScreenshotFilesPreserved": true,
+    "templateBytesUnchanged": true
+  },
+  "limits": [
+    "No external link navigation, experiment HTML execution, OS clipboard, screen-reader, physical touch or human acceptance.",
+    "Dialogs display original PNGs, not a fresh product test of their depicted content.",
+    "Original-size width was observed; End scrolling and fine modal Tab traversal were not retested.",
+    "Escape returned to each opener; this is not a focus-trap acceptance claim.",
+    "Individual experiment failures and not-run stages remain in fixed source records.",
+    "No self-hash is included; source README binding is separate from this derived summary."
+  ]
+}

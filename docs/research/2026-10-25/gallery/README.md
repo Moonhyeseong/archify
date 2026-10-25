@@ -27,7 +27,37 @@ python3 docs/research/2026-10-25/gallery/verify.py --node '<node-executable>'
 
 各实验自己的失败与未运行阶段保留在卡片及固定来源中。例如 Task review map 的 ZIP unresolved 和键盘遍历失败，不会因为有截图而变为通过。
 
-## 当前 39 版的静态绑定
+## 当前46版静态绑定与浏览器观察
+
+本版仅收录固定 hub [`60b748c83470be4c30d8869991e7f2ac82905462`](https://github.com/tt-a1i/archify/blob/60b748c83470be4c30d8869991e7f2ac82905462/docs/research/2026-10-25/README.md) 的46项已发布实验：**13产品交互 / 15离线适配 / 18内容示例**。来源README为57,339 bytes，SHA-256 `1674aabe85f7834466e7e7b0e2d373549448d8d603a2936458077d6a462b38c4`；这是固定Git对象，不跟随研究中心工作树后续文字变化。
+
+新增Edge extras、Line notes、Static uses、Hintful stages、Spatial focus、Maybe initialized、Load filter七项。Line notes仅为实验HTML后处理原型，列为内容示例，不是共享产品能力或正常finalize候选。Spatial focus为产品候选，方向键移动DOM焦点，不提交选择或移动camera；其余六项为内容示例。
+
+Finder canvas、Relation reference、Diagnostic locations、Delta values换用各自固定dev10b4刷新原图；其余35项沿用39版所选PNG的原bytes。所有46张PNG均由固定实验Git对象读取，原始PNG共11,235,152 bytes；没有重新采集、编辑或运行实验页面。旧39版证据原JSON另存为[browser-evidence39.json](browser-evidence39.json)，其历史截图保留于screenshots39，不用于当前页面验收。
+
+卡片价值与验证边界逐项取自上述固定hub表，图片语义对照各固定实验README。Edge的28条、Maybe的48条机器键盘失败保持可见；Line的baseline4条footer失败与后处理审计分开。Static的use边不是执行分支，Hintful的命名中间态不是第三Git提交。Load的来源是URL元数据，不冒称verified snippet或上游插件执行。Diagnostic late-open空iframe边界未修；Delta为public compare/check而非四阶段finalize。图片不会将无CI、未请求browser、受控copy或局部指针操作升级为完整通过、OS剪贴板、AT或真人验收。
+
+正常build及固定Node22.23.2静态verify已完成：46个HEAD/origin、README/PNG工作树字节与固定Git对象一致；分组、筛选数、嵌入PNG SHA、固定链接及JS语法均通过，外部资源引用为0。产物：
+
+- `index.html`：15,099,916 bytes；SHA-256 `85e9877b6386b6dbe884baf549fb28bdad183ef0f3925dd443b8981ba40982dd`
+- `manifest.json`：SHA-256 `e624ffe58aeaf9c820a51f5488e99c35fa9419fa8755a1678defa1510be08c0f`
+- 模板、builder、verify均未改；模板SHA-256仍为 `bc7d0445a2c11578de09b89afb0a3f57e468d8923dbfcc1d98978b203b7f5ce9`。
+
+## 当前46版实际浏览器观察与明确复用
+
+协调Agent在Ego/Chromium实际检查当前 `85e9877b…982dd` HTML，并逐张查看[screenshots46](screenshots46/)中的六张终版原PNG。[browser-evidence.json](browser-evidence.json)绑定当前静态产物、固定hub README与六图；[observations-summary.json](screenshots46/observations-summary.json)是选字段的公开派生摘要，原始JSON继续留在checkout外，摘要列原文件名/bytes/SHA，不冒充原始收据。
+
+当前新HTML实际重新检查四筛选46/13/15/18、七个新增value无裸URL或Markdown且卡片固定说明链接仍指向对应提交目录、固定hub60b748、1440×1100浅/深色，以及390×844页面宽390。Maybe深色dialog显示原图SHA与天然1440×2829，Escape关闭并回到Maybe opener；空结果0/46，reset回46且query获得焦点。桌面Maybe卡片等待lazy图片complete及natural尺寸确认后重拍；早期未解码空白图仅私有保留，不列为成功截图。移动Maybe卡片PNG按IHDR记录实际尺寸，不由CSS viewport推断整图尺寸。
+
+**十一项完整图/原始尺寸操作明确复用旧页面证据。** root先在上一内容版HTML `350964384a42a24294cc0b2809b688a309291c795daa11261913f7749853ecd1`（hub588dd5）实际逐项搜索七新增/四刷新，各为1/46，打开dialog核PNG SHA/bytes/天然尺寸/固定来源，切原始尺寸后显示尺寸等于天然尺寸，Escape均返回原卡片。旧移动dialog实际wheel从0到159.5。这些动作没有在新HTML上重新做十一遍；其适用性来自模板及46张图片记录逐项不变，仅七value文本与hub绑定变化，新内容与移动dialog另有上述实查。旧八图仍仅属于旧HTML，不作为新页面截图。
+
+![当前桌面浅色](screenshots46/desktop-overview-light.png)
+
+[等待图片解码后的Maybe桌面卡片](screenshots46/desktop-maybe-card-light.png) · [当前桌面深色](screenshots46/desktop-overview-dark.png) · [390px Maybe卡片](screenshots46/mobile-maybe-card-light.png) · [390px深色完整图dialog](screenshots46/mobile-maybe-dialog-dark.png) · [390px深色空结果](screenshots46/mobile-empty-dark.png)。
+
+本次没有执行实验HTML、打开外链、写OS剪贴板、读屏器、实体触屏或真人验收；没有完整modal Tab焦点陷阱或跨浏览器声明。gallery展示原PNG不会抵消Maybe48/Edge28等实验自身失败。旧39/35等浏览器观察继续只属于各自固定历史页面。
+
+## 历史 39 版的静态绑定
 
 本次固定 hub 为 [`fc7017426177ad44e213242a2b1756ffba43b9e3`](https://github.com/tt-a1i/archify/blob/fc7017426177ad44e213242a2b1756ffba43b9e3/docs/research/2026-10-25/README.md)：39 项 / 39 张原始 PNG，实际分组为 **12 产品交互 / 15 离线适配 / 12 内容示例**。Relation return 仍为暂缓，不计入已发布数。
 
@@ -50,9 +80,9 @@ Finder、Waterfall、Workflow、Keyboard 与 Clipboard 五项主图更新到固�
 
 模板与历史35版逐字相同，SHA-256 `bc7d0445a2c11578de09b89afb0a3f57e468d8923dbfcc1d98978b203b7f5ce9`。本次未修改 builder、verify 或模板。
 
-## 当前39版的实际浏览器观察
+## 历史39版的实际浏览器观察
 
-协调 Agent 已在 Ego / Chromium 实际操作当前冻结 HTML，并逐张查看7张原PNG。[browser-evidence.json](browser-evidence.json) 绑定 HTML、manifest、verification、selection、模板、README、20项原始观测和7图的SHA/bytes/尺寸；摘要是派生记录，不是delivery receipt。[桌面14项观测](screenshots39/desktop-observations.json)与[响应式6项观测](screenshots39/responsive-observations.json)为原字节安全副本。
+协调 Agent 已在 Ego / Chromium 实际操作当前冻结 HTML，并逐张查看7张原PNG。[browser-evidence39.json](browser-evidence39.json) 绑定 HTML、manifest、verification、selection、模板、README、20项原始观测和7图的SHA/bytes/尺寸；摘要是派生记录，不是delivery receipt。[桌面14项观测](screenshots39/desktop-observations.json)与[响应式6项观测](screenshots39/responsive-observations.json)为原字节安全副本。
 
 1440×1100浅色实际核对四个筛选39/12/15/12；四个新增与五个刷新项目各搜索为1/39，并逐项打开完整图，核实际data bytes摘要等于UI摘要、天然尺寸与固定GitHub来源。九次切到原始尺寸后，实际图片宽度等于天然宽度；九次Escape均关闭dialog并返回原opener。清空后恢复39项，页面宽度1440。
 
@@ -102,4 +132,4 @@ Finder、Waterfall、Workflow、Keyboard 与 Clipboard 五项主图更新到固�
 
 [历史桌面图片](https://github.com/tt-a1i/archify/blob/50cc320adffef212f046f065eb2e9e702610a27d/docs/research/2026-10-25/gallery/screenshots/desktop-light.png) · [历史 390px 图片](https://github.com/tt-a1i/archify/blob/50cc320adffef212f046f065eb2e9e702610a27d/docs/research/2026-10-25/gallery/screenshots/mobile-dark.png)。
 
-`browser-evidence.json` 的 `hubReadme` 绑定发布提交 `f2ac641892bf57cce0d30e0a8005008f765ecb37` 中的固定 README Git 对象，表示当次发布快照；研究中心 README 后续更新不要求重建这个固定39项 gallery。
+历史 `browser-evidence39.json` 的 `hubReadme` 绑定发布提交 `f2ac641892bf57cce0d30e0a8005008f765ecb37` 中的固定 README Git 对象，表示当次发布快照；研究中心 README 后续更新不要求重建这个固定39项 gallery。
