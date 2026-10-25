@@ -101,3 +101,5 @@ Finder、Waterfall、Workflow、Keyboard 与 Clipboard 五项主图更新到固�
 [历史浏览器摘要与截图绑定](https://github.com/tt-a1i/archify/blob/50cc320adffef212f046f065eb2e9e702610a27d/docs/research/2026-10-25/gallery/browser-evidence.json) 与 builder 静态核验分开；这些是 Chromium 鼠标/键盘和视口模拟观测，未验证实体触屏、读屏器或人类接受。未打开外链或执行各实验产物代码。当时另一位 Agent 独立核对固定 Git 对象/图片字节，并重建出逐字相同的 index 与 manifest。
 
 [历史桌面图片](https://github.com/tt-a1i/archify/blob/50cc320adffef212f046f065eb2e9e702610a27d/docs/research/2026-10-25/gallery/screenshots/desktop-light.png) · [历史 390px 图片](https://github.com/tt-a1i/archify/blob/50cc320adffef212f046f065eb2e9e702610a27d/docs/research/2026-10-25/gallery/screenshots/mobile-dark.png)。
+
+`browser-evidence.json` 的 `hubReadme` 绑定发布提交 `f2ac641892bf57cce0d30e0a8005008f765ecb37` 中的固定 README Git 对象，表示当次发布快照；研究中心 README 后续更新不要求重建这个固定39项 gallery。

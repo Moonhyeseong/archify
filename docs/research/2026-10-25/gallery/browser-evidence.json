@@ -24,8 +24,8 @@
     },
     "README.md": {
       "path": "README.md",
-      "sha256": "5b5449bb8cf11418e74e3908a610626fd3d2a1eb266fd82c0f21b109761d5a50",
-      "bytes": 16350
+      "sha256": "4bcee0259ecfcd960cac9bf97aeb95a171fa37580659284000c865647d92bd8e",
+      "bytes": 16589
     },
     "template.html": {
       "path": "template.html",
@@ -36,7 +36,9 @@
   "hubReadme": {
     "path": "../README.md",
     "sha256": "91b5f93a98e10d991e8fc3a15ff70392d7ce4743f97883c5b8a32d99f9dff232",
-    "bytes": 44048
+    "bytes": 44048,
+    "sourceCommit": "f2ac641892bf57cce0d30e0a8005008f765ecb37",
+    "semantics": "Fixed README Git object at gallery publication; not the evolving worktree README. Later hub prose changes do not require gallery regeneration."
   },
   "environment": "Ego Chromium, existing space; mouse/keyboard and CSS viewport emulation; root captured and viewed seven PNGs",
   "summary": {
