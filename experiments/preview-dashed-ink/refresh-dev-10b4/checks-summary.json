@@ -1,0 +1,203 @@
+{
+  "kind": "derived scoped verification and history record; original logs remain outside checkout",
+  "softwareBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "mergeParentCandidate": "36cc35fb446c697046d4f0522253fd7010b2303d",
+  "mergeState": "uncommitted merge; candidate identified by source hashes and final artifacts",
+  "sourceScope": "Only three preview CSS rules and their prior real DOM regression above new dev; no parser/schema/geometry edit. New-dev closeStep remains intact.",
+  "commands": [
+    {
+      "command": "ARCHIFY_EXPLAINER_BROWSER_TESTS=1 node scripts/run-tests.mjs --require-files --test-name-pattern=\"dashed preview relationships|formal renderer retains keyboard\" test/explainer-browser.test.mjs",
+      "result": {
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "command": "node scripts/run-tests.mjs --require-files test/explainer-diagrams.test.mjs test/explainer-renderer.test.mjs test/core-smoke.test.mjs test/generated-artifact-xml.test.mjs",
+      "result": {
+        "passed": 57,
+        "failed": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "command": "Same final dashed behavior regression on archived 10b source",
+      "result": {
+        "passed": 0,
+        "failed": 1,
+        "skipped": 0
+      },
+      "reason": "Actual label contrast below 4.5; expected base regression, not a candidate failure."
+    },
+    {
+      "command": "generate-viewer --check; generate-brand-marks --check; generate-validators --check; check-release-identity",
+      "result": "4 commands exit 0",
+      "coverage": "These freshness checks do NOT cover docs/cases/explainer HTML."
+    }
+  ],
+  "historicalExperimentFilesPreserved": {
+    "experiments/preview-dashed-ink/checks-summary.json": {
+      "sha256": "6b4ac6a71d52a4c5635a5f7950216f35be31f0267f41e15a4fedf37cd2748535",
+      "bytes": 3820
+    },
+    "experiments/preview-dashed-ink/fresh-source-summary.json": {
+      "sha256": "7159592d43b05042d67c8e02c92c80a380efbb836a4012078c699c377eb787a6",
+      "bytes": 2764
+    },
+    "experiments/preview-dashed-ink/archive-finalize-summary.json": {
+      "sha256": "5adfaa21e4f8ded7650cecdc22136ff874f5b1fdc53204d5ea16f896f0c937a6",
+      "bytes": 1041
+    },
+    "experiments/preview-dashed-ink/base.html": {
+      "sha256": "b6dbbfa395f90c109c9a1894d4e91683050b07e62dae470ff0eef1fcf862e639",
+      "bytes": 499715
+    },
+    "experiments/preview-dashed-ink/input.workflow.json": {
+      "sha256": "ac8db8467d0c40e06b0a83a88a333354a144f4a3536244bd6e90f8dfbf5c9327",
+      "bytes": 1424
+    },
+    "experiments/preview-dashed-ink/generated-summary.json": {
+      "sha256": "790b81be9d469f249ccc6b5f5fd8ed23743af025faa0c24e84e14ba0520f1b07",
+      "bytes": 2255
+    },
+    "experiments/preview-dashed-ink/README.md": {
+      "sha256": "bff56d5cb0d9613e387748019de679daaecc7459b6010b77da04dfb3af4755c1",
+      "bytes": 8238
+    },
+    "experiments/preview-dashed-ink/zip-summary.json": {
+      "sha256": "88e01b5f6ad8d033880136f82e453a9c826fe97a00fd775bab01a287c3ba1728",
+      "bytes": 450
+    },
+    "experiments/preview-dashed-ink/candidate-finalize-summary.json": {
+      "sha256": "d12c497cae8f0d87b15ed4d3cab72cd2f4164de3b5c2d56177871fb7654fe814",
+      "bytes": 1019
+    },
+    "experiments/preview-dashed-ink/candidate.html": {
+      "sha256": "8d1803900cc402d10d50170861cc27c441009a632b6491d80d4d29cdac2e3feb",
+      "bytes": 500034
+    },
+    "experiments/preview-dashed-ink/binding-summary.json": {
+      "sha256": "ae2dae1a23a1464a19af5882fb9e8f0a9def81c5181b913206e40c48579c5533",
+      "bytes": 3248
+    },
+    "experiments/preview-dashed-ink/input.explainer.json": {
+      "sha256": "817929530bbb0a40560c47c20c501a83006d0a63329c3a4b1df8147efbfc65d2",
+      "bytes": 8081
+    },
+    "experiments/preview-dashed-ink/screenshots/candidate-light.png": {
+      "sha256": "eec4001ffa60ab4ce271857809e857d778093da00c083f3623d0d55288e37263",
+      "bytes": 166286
+    },
+    "experiments/preview-dashed-ink/screenshots/base-dark.png": {
+      "sha256": "0a02915413f5a53e16962e18c62c69fd64079df65ab7d469123a1fd6614bf8df",
+      "bytes": 164585
+    },
+    "experiments/preview-dashed-ink/screenshots/capture.json": {
+      "sha256": "88e3a32213f8168e5e1410312230ce37c7cb0429255d8a0a84a80be0bbc876f6",
+      "bytes": 3309
+    },
+    "experiments/preview-dashed-ink/screenshots/base-light.png": {
+      "sha256": "9d501774f7e74216bdde0cf95442c4c071c0f1fef177539ce7da21d912ab2100",
+      "bytes": 165925
+    },
+    "experiments/preview-dashed-ink/screenshots/candidate-dark.png": {
+      "sha256": "cd06a8fb0319113cdcbc98f443784a1a6058f6cd196f2fb01a875bcd1517c05d",
+      "bytes": 164965
+    },
+    "experiments/preview-dashed-ink/source/plan.json": {
+      "sha256": "582180f5f2a423d2e0f1f77348b0bc57af4e6b7d3a3580ec4c9c8bada2735bb5",
+      "bytes": 1630
+    },
+    "experiments/preview-dashed-ink/source/LICENSE": {
+      "sha256": "3128413743d8bf1356ca3e1980433619248f260a7928f3563569aac6d6df4b7b",
+      "bytes": 16757
+    },
+    "experiments/preview-dashed-ink/source/manifest.json": {
+      "sha256": "12e4d590eb1727be58e4047b2a0b0faa2cbf07d7ecb8c09de44d651684243c2b",
+      "bytes": 2347
+    }
+  },
+  "historicalDocsCasesPreserved": {
+    "docs/cases/explainer/finalize-delivery.html": {
+      "sha256": "8566cd612aa531d83ea7103ea4ac1c064fcb27ea96eb24203c1cc22525d5c22c",
+      "bytes": 537632
+    },
+    "docs/cases/explainer/first-rental.html": {
+      "sha256": "9090ca352ceb377b8b62d9942169171047869c12acbd3956dfa43e99e62dfa7a",
+      "bytes": 522228
+    },
+    "docs/cases/explainer/p99-tail-latency.html": {
+      "sha256": "d20934685f290df7b48275d3224e5bd595a0e89b0af901d59d48d893210fae28",
+      "bytes": 520717
+    },
+    "docs/cases/explainer/tls-first-visit.html": {
+      "sha256": "1be010269b919eef98a39319b1ea3323b4d2e12c3b68ae3a9bf3f38772c48f68",
+      "bytes": 522720
+    }
+  },
+  "docsPolicy": "No new docs/cases freshness repair retained. These files retain exact historical 36cc candidate bytes; they are not current 10b renderings or evidence for this refresh. The inherited old-vs-dev diff must not be labelled new CSS-only output.",
+  "rawLogBindings": {
+    "base-render.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "base-render.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "candidate-render.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "candidate-render.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "browser-tests.log": {
+      "sha256": "e647432e156a324e275574c46b9627ffbcfa06cd48f1453a97c6b43ad14745a7",
+      "bytes": 651
+    },
+    "focused-tests.log": {
+      "sha256": "8ca671dde178a245ad416f20bf8bc865b1b3d37a998dae463e1199620fd9ddca",
+      "bytes": 13840
+    },
+    "base-browser-test.log": {
+      "sha256": "76e7b067290328ba7b6111e542f862508b79a48d8a0dca96278ef286c18f6e82",
+      "bytes": 1572
+    },
+    "generated-checks.log": {
+      "sha256": "0a5812d3e14dd70da9fb04b7671e107688e987b3d19a0a3a42ee69bae22cc7dc",
+      "bytes": 33
+    },
+    "zip-first.log": {
+      "sha256": "0796b8c383b082a56b4a3ff6b57e5f8dae8680e38ce200ca52443b63e7e8cd31",
+      "bytes": 208
+    },
+    "zip-second.log": {
+      "sha256": "24aaf4b28132bf6ebd9c4392906770849388309322a67d9fb2ede2311e3edf0f",
+      "bytes": 210
+    },
+    "candidate-finalize.stdout": {
+      "sha256": "d67ab3f6dfab406d3de3ae8f3461fc7707fba0d1391dc05246f96a38555506d1",
+      "bytes": 1459
+    },
+    "candidate-finalize.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "archive-finalize.stdout": {
+      "sha256": "d365e3ebbe6d2adb55b4205057814db7d58047bfc4c5b9b89ba61c1129b44ba8",
+      "bytes": 1430
+    },
+    "archive-finalize.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  },
+  "scopeLimits": [
+    "No full-repository suite, upstream execution or live installation.",
+    "New-dev CI success is not reassigned to this uncommitted candidate.",
+    "Root visual captures are separate from browser tests/finalize stages."
+  ]
+}

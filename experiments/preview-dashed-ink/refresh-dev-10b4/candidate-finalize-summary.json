@@ -1,0 +1,44 @@
+{
+  "kind": "derived portable selected receipt fields; NOT a raw receipt",
+  "softwareBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "rawReceipt": {
+    "sha256": "808996dc807d3ebacdcac4d91acd336a274a57160299d969ae1b957e5ea14571",
+    "bytes": 602179
+  },
+  "quality": "standard",
+  "status": "pass",
+  "specification": {
+    "path": "../input.explainer.json",
+    "sha256": "817929530bbb0a40560c47c20c501a83006d0a63329c3a4b1df8147efbfc65d2",
+    "bytes": 8081
+  },
+  "artifact": {
+    "location": "candidate.html",
+    "sha256": "61fa0b9793e600c58dd29cbe446a0af80ff61e426eefb270bff13291f7c152ee",
+    "bytes": 537398
+  },
+  "stages": {
+    "validate": {
+      "status": "pass",
+      "exitCode": 0
+    },
+    "deliver": {
+      "status": "pass",
+      "exitCode": 0
+    },
+    "check": {
+      "status": "pass",
+      "exitCode": 0
+    },
+    "browser-check": {
+      "status": "pass",
+      "exitCode": 0
+    }
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "diagnostics": [],
+  "visualReview": "not-requested"
+}

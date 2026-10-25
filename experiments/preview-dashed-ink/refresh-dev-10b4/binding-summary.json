@@ -1,0 +1,85 @@
+{
+  "kind": "derived portable final-artifact ledger; no self-reference",
+  "softwareBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "historicalCandidate": "36cc35fb446c697046d4f0522253fd7010b2303d",
+  "files": {
+    "README.md": {
+      "sha256": "6a5e747ec9a39927585dc4d28a619b8789d155b84d6c1955556b9569b086b77d",
+      "bytes": 8079
+    },
+    "archive-finalize-summary.json": {
+      "sha256": "3f980a9c78a55d2e99a415bf1eabef1ba49c1086e38c1becd4f8e6a31cf3786e",
+      "bytes": 1095
+    },
+    "base.html": {
+      "sha256": "345703a0cfa2575a9b6cef76a6b8f4d76a417f501d58514155d25f8ed54dd8f8",
+      "bytes": 537077
+    },
+    "candidate-finalize-summary.json": {
+      "sha256": "81b319fc53282e09f1ac57e5f3e9a17a20c211c3e8b2ccc0d846bf783543f077",
+      "bytes": 1045
+    },
+    "candidate.html": {
+      "sha256": "61fa0b9793e600c58dd29cbe446a0af80ff61e426eefb270bff13291f7c152ee",
+      "bytes": 537398
+    },
+    "checks-summary.json": {
+      "sha256": "36c1d4d551e9895b8be767c30b6edd004b9839bfc133a9dead72fd5a0fbbbc15",
+      "bytes": 8373
+    },
+    "comparison.json": {
+      "sha256": "c124668831c5603b6a8d1a7e5448f010a4f2a6ce3dc29705085561e46e1f5d8a",
+      "bytes": 1636
+    },
+    "screenshots/base-dark.png": {
+      "sha256": "0a02915413f5a53e16962e18c62c69fd64079df65ab7d469123a1fd6614bf8df",
+      "bytes": 164585
+    },
+    "screenshots/base-light.png": {
+      "sha256": "776cf09639da7ca34c4ff806e9879f375b15a5f9e69062481a7101ea6a99b60e",
+      "bytes": 165924
+    },
+    "screenshots/candidate-dark.png": {
+      "sha256": "cfde63933fc35121f29efb80454eef11e4912c6e792192a13b615f01e71867d9",
+      "bytes": 165162
+    },
+    "screenshots/candidate-light.png": {
+      "sha256": "1b5210a712c6d1fdf36bdb30f8612d905930b857602799995b6867afc63f4daa",
+      "bytes": 166287
+    },
+    "screenshots/capture.json": {
+      "sha256": "2743f235647893c0fc78af1b7a6e6b5ecfb63f0dd6d399948fab8ab73d679f16",
+      "bytes": 4544
+    },
+    "zip-summary.json": {
+      "sha256": "66b2ad3b0f8c36afeb63382c6211aef4599c50af9a80fa0c112a348a514ec5a7",
+      "bytes": 555
+    }
+  },
+  "sourceBindings": {
+    "archify/explainer/reader.css": {
+      "sha256": "e7ea84df01471009dc136cef7edd21402f46dd31acc38cc045d88a39820f9931",
+      "bytes": 47570
+    },
+    "test/explainer-browser.test.mjs": {
+      "sha256": "7628f56c8cc2da95156799d9a4e7a922a1ff6bac2302c5d0dd4adda9ecaf9ddc",
+      "bytes": 42075
+    },
+    "archify.zip": {
+      "sha256": "73bfb813bb2495b97581ab5774802af8563e9f1c2d2d5a8c947ed693d46d3a93",
+      "bytes": 6987509
+    }
+  },
+  "coordinatorVisualEvidence": {
+    "captureSummary": {
+      "path": "screenshots/capture.json",
+      "sha256": "2743f235647893c0fc78af1b7a6e6b5ecfb63f0dd6d399948fab8ab73d679f16"
+    },
+    "rawObservation": {
+      "basename": "capture-checks.json",
+      "bytes": 1666,
+      "sha256": "ec40bfed22dc7b273aa98c77a1d5d7d258af9c34d9dab520776979fbb2ecab08"
+    },
+    "scope": "Four agent-captured and agent-viewed light/dark comparisons; no human/AT acceptance."
+  }
+}

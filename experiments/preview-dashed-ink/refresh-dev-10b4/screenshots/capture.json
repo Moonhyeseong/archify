@@ -1,0 +1,158 @@
+{
+  "kind": "derived real-browser capture summary",
+  "pathBase": "experiments/preview-dashed-ink/refresh-dev-10b4",
+  "artifacts": [
+    {
+      "path": "base.html",
+      "bytes": 537077,
+      "sha256": "345703a0cfa2575a9b6cef76a6b8f4d76a417f501d58514155d25f8ed54dd8f8"
+    },
+    {
+      "path": "candidate.html",
+      "bytes": 537398,
+      "sha256": "61fa0b9793e600c58dd29cbe446a0af80ff61e426eefb270bff13291f7c152ee"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "screenshots/base-light.png",
+      "bytes": 165924,
+      "sha256": "776cf09639da7ca34c4ff806e9879f375b15a5f9e69062481a7101ea6a99b60e",
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "viewportCssPixels": [
+        1440,
+        1000
+      ],
+      "artifact": "base.html",
+      "theme": "light",
+      "rootViewed": true,
+      "sourceModifiedAtUtc": "2026-10-25T10:08:10.300808+00:00"
+    },
+    {
+      "path": "screenshots/candidate-light.png",
+      "bytes": 166287,
+      "sha256": "1b5210a712c6d1fdf36bdb30f8612d905930b857602799995b6867afc63f4daa",
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "viewportCssPixels": [
+        1440,
+        1000
+      ],
+      "artifact": "candidate.html",
+      "theme": "light",
+      "rootViewed": true,
+      "sourceModifiedAtUtc": "2026-10-25T10:08:11.835328+00:00"
+    },
+    {
+      "path": "screenshots/base-dark.png",
+      "bytes": 164585,
+      "sha256": "0a02915413f5a53e16962e18c62c69fd64079df65ab7d469123a1fd6614bf8df",
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "viewportCssPixels": [
+        1440,
+        1000
+      ],
+      "artifact": "base.html",
+      "theme": "dark",
+      "rootViewed": true,
+      "sourceModifiedAtUtc": "2026-10-25T10:08:11.521183+00:00"
+    },
+    {
+      "path": "screenshots/candidate-dark.png",
+      "bytes": 165162,
+      "sha256": "cfde63933fc35121f29efb80454eef11e4912c6e792192a13b615f01e71867d9",
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "viewportCssPixels": [
+        1440,
+        1000
+      ],
+      "artifact": "candidate.html",
+      "theme": "dark",
+      "rootViewed": true,
+      "sourceModifiedAtUtc": "2026-10-25T10:08:12.088850+00:00"
+    }
+  ],
+  "rawObservation": {
+    "basename": "capture-checks.json",
+    "bytes": 1666,
+    "sha256": "ec40bfed22dc7b273aa98c77a1d5d7d258af9c34d9dab520776979fbb2ecab08"
+  },
+  "observations": {
+    "observedAt": "2026-10-25T10:08:12.089Z",
+    "checks": [
+      {
+        "name": "base-light",
+        "width": 1440,
+        "height": 1000,
+        "theme": "light",
+        "scrollY": 0,
+        "text": "then, for this resource",
+        "labelFill": "rgb(211, 215, 221)",
+        "pathStroke": "rgb(211, 215, 221)",
+        "markerFill": "rgb(211, 215, 221)",
+        "path": "M 140 120 L 268.4 120",
+        "points": "0 0, 10 3.5, 0 7",
+        "viewBox": "42 80 324 80"
+      },
+      {
+        "name": "base-dark",
+        "width": 1440,
+        "height": 1000,
+        "theme": "dark",
+        "scrollY": 0,
+        "text": "then, for this resource",
+        "labelFill": "rgb(52, 57, 67)",
+        "pathStroke": "rgb(52, 57, 67)",
+        "markerFill": "rgb(52, 57, 67)",
+        "path": "M 140 120 L 268.4 120",
+        "points": "0 0, 10 3.5, 0 7",
+        "viewBox": "42 80 324 80"
+      },
+      {
+        "name": "candidate-light",
+        "width": 1440,
+        "height": 1000,
+        "theme": "light",
+        "scrollY": 0,
+        "text": "then, for this resource",
+        "labelFill": "rgb(106, 112, 124)",
+        "pathStroke": "rgb(106, 112, 124)",
+        "markerFill": "rgb(106, 112, 124)",
+        "path": "M 140 120 L 268.4 120",
+        "points": "0 0, 10 3.5, 0 7",
+        "viewBox": "42 80 324 80"
+      },
+      {
+        "name": "candidate-dark",
+        "width": 1440,
+        "height": 1000,
+        "theme": "dark",
+        "scrollY": 0,
+        "text": "then, for this resource",
+        "labelFill": "rgb(141, 148, 161)",
+        "pathStroke": "rgb(141, 148, 161)",
+        "markerFill": "rgb(141, 148, 161)",
+        "path": "M 140 120 L 268.4 120",
+        "points": "0 0, 10 3.5, 0 7",
+        "viewBox": "42 80 324 80"
+      }
+    ]
+  },
+  "limits": [
+    "Same supplied official Plan fixture and top-of-page state; no upstream Terraform execution",
+    "All four screenshots viewed by root agent; no image editing",
+    "Computed label/path/marker colors and recorded geometry are scoped to this supplied diagram",
+    "Not physical assistive-technology, cross-browser or human acceptance"
+  ]
+}

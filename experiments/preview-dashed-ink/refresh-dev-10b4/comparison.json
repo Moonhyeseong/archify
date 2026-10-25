@@ -1,0 +1,45 @@
+{
+  "kind": "derived portable comparison; not a raw receipt",
+  "softwareBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "historicalCandidate": "36cc35fb446c697046d4f0522253fd7010b2303d",
+  "input": {
+    "path": "../input.explainer.json",
+    "sha256": "817929530bbb0a40560c47c20c501a83006d0a63329c3a4b1df8147efbfc65d2",
+    "bytes": 8081
+  },
+  "baseHtml": {
+    "path": "base.html",
+    "sha256": "345703a0cfa2575a9b6cef76a6b8f4d76a417f501d58514155d25f8ed54dd8f8",
+    "bytes": 537077
+  },
+  "candidateHtml": {
+    "path": "candidate.html",
+    "sha256": "61fa0b9793e600c58dd29cbe446a0af80ff61e426eefb270bff13291f7c152ee",
+    "bytes": 537398
+  },
+  "preparedBundlesExactlyEqual": true,
+  "candidateMinusFiveCssCommentLinesEqualsBase": true,
+  "diagrams": [
+    {
+      "id": "replacement-graph",
+      "svg": {
+        "sha256": "42f6036c190848311aa36eafca0798a0e2d28a35b15c3a7da738e799ff6f9398",
+        "bytes": 9833
+      },
+      "childHtmlSHA256": "0769488e942114b1da52da0122763da4a24fd76b04fe9dec3a00006bba580ab6",
+      "childHtmlBytes": 855597,
+      "specSha256": "1c813552cc23c68d0d54f6dd18a265ead8b0542e9f461b1c73eaa6966341f3fc"
+    }
+  ],
+  "sourceSHA256": {
+    "archify/explainer/reader.css": {
+      "sha256": "e7ea84df01471009dc136cef7edd21402f46dd31acc38cc045d88a39820f9931",
+      "bytes": 47570
+    },
+    "test/explainer-browser.test.mjs": {
+      "sha256": "7628f56c8cc2da95156799d9a4e7a922a1ff6bac2302c5d0dd4adda9ecaf9ddc",
+      "bytes": 42075
+    }
+  },
+  "historicalEvidencePolicy": "Existing experiment files remain bound to their original revision; old docs/cases HTML is not this refresh output."
+}
