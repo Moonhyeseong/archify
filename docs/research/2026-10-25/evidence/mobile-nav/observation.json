@@ -1,0 +1,59 @@
+{
+  "kind": "actual-existing-mobile-navigation-observation",
+  "capturedAt": "2026-10-25T05:41:03.536Z",
+  "source": {
+    "url": "https://github.com/tt-a1i/archify/blob/6d7cd59492240952c8ade422ec9014de76fb4164/experiments/relation-reference/base.html",
+    "sha256": "3ee797c5806a5aeda056eae8e20d4f8e8fc2c1258de5f9194f7ba5aa10bdec7c",
+    "rendererBase": "82c7e0f089a02a4d514714adf37dc2061682da5f"
+  },
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "deviceScaleFactor": 1,
+    "mobile": true
+  },
+  "before": {
+    "scrollWidth": 413,
+    "clientWidth": 322,
+    "scrollLeft": 0,
+    "reset": "100% · Zoom in again to reveal tags and annotations. Reset diagram view"
+  },
+  "afterScroll": {
+    "scrollLeft": 91,
+    "buttons": [
+      {
+        "action": "out",
+        "x": 211.9921875,
+        "right": 255.9921875,
+        "hit": true
+      },
+      {
+        "action": "reset",
+        "x": 255.9921875,
+        "right": 315.9921875,
+        "hit": true
+      },
+      {
+        "action": "in",
+        "x": 315.9921875,
+        "right": 359.9921875,
+        "hit": true
+      }
+    ]
+  },
+  "afterZoom": {
+    "scrollLeft": 91,
+    "reset": "125% · Zoom in again to reveal tags and annotations. Reset diagram view"
+  },
+  "images": [
+    {
+      "file": "before.png",
+      "sha256": "ea0bf26143987975b64a799a87dc2ad3a170f49eb9efadfa6a833b028947eb30"
+    },
+    {
+      "file": "after-scroll-and-zoom.png",
+      "sha256": "cd6da3e70bf9e7d0ef33c9fcc48f75d184addea5a662a2e9c0a48e63084c9f01"
+    }
+  ],
+  "limitations": "Desktop Chromium with mobile viewport and native horizontal wheel/click input; not a physical touchscreen or human discoverability study."
+}
