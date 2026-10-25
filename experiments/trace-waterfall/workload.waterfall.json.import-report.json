@@ -1,0 +1,20 @@
+{
+  "format": "chrome-trace-X-subset",
+  "inputEvents": 11,
+  "convertedSpans": 10,
+  "originUs": 39215.667,
+  "unit": "us",
+  "evidence": "measured",
+  "unsupportedPhases": {
+    "M": 1
+  },
+  "metadataPolicy": "M may label a thread; all non-X phases remain counted as unsupported for timing conversion.",
+  "parentPolicy": "All spans are roots; temporal containment and overlap do not establish causality.",
+  "limits": {
+    "bytes": 2097152,
+    "events": 1000,
+    "spans": 60
+  },
+  "sourceSha256": "7c35ade82faee3abf3f3b61abab16ebada359122b1fb16e3c6fc167bfd925f47",
+  "sourceBytes": 2680
+}

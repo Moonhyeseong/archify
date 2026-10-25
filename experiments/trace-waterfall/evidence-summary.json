@@ -1,0 +1,73 @@
+{
+  "kind": "portable-summary-derived-from-local-receipts",
+  "notRawReceipt": true,
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "node": "v22.23.3",
+  "capturedAt": "2026-10-25T04:39:33.222Z",
+  "commands": [
+    "node --test experiments/trace-waterfall/import-trace.test.mjs",
+    "node experiments/trace-waterfall/collect-workload.mjs <new-trace.json>",
+    "node experiments/trace-waterfall/import-trace.mjs <trace.json> <waterfall.json> measured",
+    "node archify/bin/archify.mjs render waterfall <waterfall.json> <output.html>",
+    "ARCHIFY_CHROME=<local-chrome> node archify/bin/archify.mjs finalize waterfall <waterfall.json> <output.html> --json --receipt <local-receipt>"
+  ],
+  "files": {
+    "workload.trace.json": {
+      "path": "workload.trace.json",
+      "sha256": "7c35ade82faee3abf3f3b61abab16ebada359122b1fb16e3c6fc167bfd925f47",
+      "bytes": 2680
+    },
+    "workload.waterfall.json": {
+      "path": "workload.waterfall.json",
+      "sha256": "6803bfd12648011e74e9e056f4e143535622ccdd6a7db15632a08893d389a5b0",
+      "bytes": 4094
+    },
+    "workload.html": {
+      "path": "workload.html",
+      "sha256": "fa36df29c7a8acb98c01840a566a45931841bbe298286d2b517ab97762573ce5",
+      "bytes": 826048
+    },
+    "import-trace.mjs": {
+      "path": "import-trace.mjs",
+      "sha256": "1742c3763967b4d65b4503eb15c73a9812e83e2b71e0c0d34c7ce4d7d1f40c88",
+      "bytes": 7083
+    },
+    "collect-workload.mjs": {
+      "path": "collect-workload.mjs",
+      "sha256": "09ecab5efde21b0f9f511b5059f2ff49208f10d9e207571b6dbe84ebf922bc01",
+      "bytes": 2846
+    },
+    "import-trace.test.mjs": {
+      "path": "import-trace.test.mjs",
+      "sha256": "5cd4f57287c4e4a9f5a14ec053e70dd40622c1af4112f24ef7cdc7e33c3333a0",
+      "bytes": 7259
+    }
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "quality": "showcase",
+  "tests": {
+    "passed": 9,
+    "failed": 0,
+    "skipped": 0
+  },
+  "recordingVerification": {
+    "intervalsMatchedAgainstRaw": 10,
+    "commonOriginUs": 39215.667,
+    "unit": "us",
+    "allRoots": true,
+    "unsupportedPhases": {
+      "M": 1
+    },
+    "minimumDurationUs": 662.3329999999987,
+    "wallClockUs": 97343.458
+  },
+  "visualReview": "Coordinating agent generated screenshots/workload.png and reported complete readable diagram; implementation agent did not independently inspect screenshot.",
+  "priorAttempt": "After start-order sorting changed the HTML, a rerun refused stale browser evidence (ownership-artifact-mismatch). Original receipts preserved outside checkout. Final combined artifact reran all finalize gates successfully.",
+  "rawReceiptPolicy": "Local original receipts retained outside checkout; this derived summary omits machine-specific paths and is not an original receipt.",
+  "evidenceReuse": "Final HTML and typed JSON unchanged after exclusive-output cleanup hardening; existing finalize hashes still bind them. Final-source tests rerun: 9 passed."
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "diagram_type": "waterfall",
+  "meta": {
+    "title": "Recorded Node workload",
+    "evidence": "measured",
+    "unit": "us",
+    "output": "workload.html",
+    "subtitle": "10 recorded intervals · elapsed wall time, including waits · all spans are roots; no call hierarchy inferred"
+  },
+  "spans": [
+    {
+      "id": "span_1",
+      "name": "Entire workload",
+      "start": 0,
+      "duration": 97343.458,
+      "service": "pid 58493 / tid 0 · Node main event loop",
+      "detail": "Chrome Trace event 10; recorded ts=39215.667 us, dur=97343.458 us. Group denotes process/thread, not a discovered business service. No parent inferred."
+    },
+    {
+      "id": "span_2",
+      "name": "Build 5000 public sample rows",
+      "start": 28.58299999999872,
+      "duration": 662.3329999999987,
+      "service": "pid 58493 / tid 0 · Node main event loop",
+      "detail": "Chrome Trace event 1; recorded ts=39244.25 us, dur=662.3329999999987 us. Group denotes process/thread, not a discovered business service. No parent inferred."
+    },
+    {
+      "id": "span_3",
+      "name": "Concurrent branches (inclusive)",
+      "start": 701.8749999999927,
+      "duration": 96640.33300000001,
+      "service": "pid 58493 / tid 0 · Node main event loop",
+      "detail": "Chrome Trace event 9; recorded ts=39917.541999999994 us, dur=96640.33300000001 us. Group denotes process/thread, not a discovered business service. No parent inferred."
+    },
+    {
+      "id": "span_4",
+      "name": "Branch A: file roundtrip and timer",
+      "start": 721.2909999999974,
+      "duration": 70446.334,
+      "service": "pid 58493 / tid 0 · Node main event loop",
+      "detail": "Chrome Trace event 6; recorded ts=39936.958 us, dur=70446.334 us. Group denotes process/thread, not a discovered business service. No parent inferred."
+    },
+    {
+      "id": "span_5",
+      "name": "Write temporary JSON",
+      "start": 729.6659999999974,
+      "duration": 30119.792,
+      "service": "pid 58493 / tid 0 · Node main event loop",
+      "detail": "Chrome Trace event 3; recorded ts=39945.333 us, dur=30119.792 us. Group denotes process/thread, not a discovered business service. No parent inferred."
+    },
+    {
+      "id": "span_6",
+      "name": "Branch B: digest and timer",
+      "start": 1017.625,
+      "duration": 96322.25000000001,
+      "service": "pid 58493 / tid 0 · Node main event loop",
+      "detail": "Chrome Trace event 8; recorded ts=40233.292 us, dur=96322.25000000001 us. Group denotes process/thread, not a discovered business service. No parent inferred."
+    },
+    {
+      "id": "span_7",
+      "name": "SHA-256 x 200",
+      "start": 1026.875,
+      "duration": 29275.290999999997,
+      "service": "pid 58493 / tid 0 · Node main event loop",
+      "detail": "Chrome Trace event 2; recorded ts=40242.542 us, dur=29275.290999999997 us. Group denotes process/thread, not a discovered business service. No parent inferred."
+    },
+    {
+      "id": "span_8",
+      "name": "Timer B (requested 65 ms)",
+      "start": 30309.165999999997,
+      "duration": 67021.292,
+      "service": "pid 58493 / tid 0 · Node main event loop",
+      "detail": "Chrome Trace event 7; recorded ts=69524.833 us, dur=67021.292 us. Group denotes process/thread, not a discovered business service. No parent inferred."
+    },
+    {
+      "id": "span_9",
+      "name": "Read temporary JSON",
+      "start": 30855.290999999997,
+      "duration": 4013.5420000000013,
+      "service": "pid 58493 / tid 0 · Node main event loop",
+      "detail": "Chrome Trace event 4; recorded ts=70070.958 us, dur=4013.5420000000013 us. Group denotes process/thread, not a discovered business service. No parent inferred."
+    },
+    {
+      "id": "span_10",
+      "name": "Timer A (requested 35 ms)",
+      "start": 34874.25,
+      "duration": 36286.25,
+      "service": "pid 58493 / tid 0 · Node main event loop",
+      "detail": "Chrome Trace event 5; recorded ts=74089.917 us, dur=36286.25 us. Group denotes process/thread, not a discovered business service. No parent inferred."
+    }
+  ]
+}

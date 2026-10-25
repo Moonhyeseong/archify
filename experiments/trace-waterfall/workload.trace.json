@@ -1,0 +1,112 @@
+{
+  "collector": {
+    "name": "archify-original-node-workload",
+    "node": "v22.23.3",
+    "startedAt": "2026-10-25T04:39:33.222Z",
+    "clock": "performance.now() * 1000; process-relative microseconds; not Unix epoch",
+    "scope": "Elapsed intervals only around explicitly wrapped operations in this original program. Timers measure actual elapsed waits, not requested delays. Not a V8, CPU, OS-thread, or automatic call trace.",
+    "evidence": "measured",
+    "operationCount": 10
+  },
+  "traceEvents": [
+    {
+      "ph": "M",
+      "name": "thread_name",
+      "pid": 58493,
+      "tid": 0,
+      "args": {
+        "name": "Node main event loop"
+      }
+    },
+    {
+      "ph": "X",
+      "cat": "archify-original-workload",
+      "pid": 58493,
+      "tid": 0,
+      "name": "Build 5000 public sample rows",
+      "ts": 39244.25,
+      "dur": 662.3329999999987
+    },
+    {
+      "ph": "X",
+      "cat": "archify-original-workload",
+      "pid": 58493,
+      "tid": 0,
+      "name": "SHA-256 x 200",
+      "ts": 40242.542,
+      "dur": 29275.290999999997
+    },
+    {
+      "ph": "X",
+      "cat": "archify-original-workload",
+      "pid": 58493,
+      "tid": 0,
+      "name": "Write temporary JSON",
+      "ts": 39945.333,
+      "dur": 30119.792
+    },
+    {
+      "ph": "X",
+      "cat": "archify-original-workload",
+      "pid": 58493,
+      "tid": 0,
+      "name": "Read temporary JSON",
+      "ts": 70070.958,
+      "dur": 4013.5420000000013
+    },
+    {
+      "ph": "X",
+      "cat": "archify-original-workload",
+      "pid": 58493,
+      "tid": 0,
+      "name": "Timer A (requested 35 ms)",
+      "ts": 74089.917,
+      "dur": 36286.25
+    },
+    {
+      "ph": "X",
+      "cat": "archify-original-workload",
+      "pid": 58493,
+      "tid": 0,
+      "name": "Branch A: file roundtrip and timer",
+      "ts": 39936.958,
+      "dur": 70446.334
+    },
+    {
+      "ph": "X",
+      "cat": "archify-original-workload",
+      "pid": 58493,
+      "tid": 0,
+      "name": "Timer B (requested 65 ms)",
+      "ts": 69524.833,
+      "dur": 67021.292
+    },
+    {
+      "ph": "X",
+      "cat": "archify-original-workload",
+      "pid": 58493,
+      "tid": 0,
+      "name": "Branch B: digest and timer",
+      "ts": 40233.292,
+      "dur": 96322.25000000001
+    },
+    {
+      "ph": "X",
+      "cat": "archify-original-workload",
+      "pid": 58493,
+      "tid": 0,
+      "name": "Concurrent branches (inclusive)",
+      "ts": 39917.541999999994,
+      "dur": 96640.33300000001
+    },
+    {
+      "ph": "X",
+      "cat": "archify-original-workload",
+      "pid": 58493,
+      "tid": 0,
+      "name": "Entire workload",
+      "ts": 39215.667,
+      "dur": 97343.458
+    }
+  ]
+}

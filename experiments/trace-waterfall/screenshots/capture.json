@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "captureDate": "2026-10-25",
+  "method": "Ego Lite Chromium browser page screenshot",
+  "viewport": {
+    "width": 1440,
+    "height": 1000,
+    "deviceScaleFactor": 1
+  },
+  "appearance": {
+    "theme": "light",
+    "style": "Classic",
+    "motion": "Still"
+  },
+  "artifact": {
+    "path": "../workload.html",
+    "sha256": "fa36df29c7a8acb98c01840a566a45931841bbe298286d2b517ab97762573ce5"
+  },
+  "image": {
+    "path": "workload.png",
+    "sha256": "42ac0fb447a58eb7b8a4eee819f3c996bce871357b77ffef6d7128c4abb71b55"
+  },
+  "review": {
+    "by": "Codex coordinating agent",
+    "observations": [
+      "All ten measured intervals and their shared time axis are visible.",
+      "The evidence label and no-inferred-hierarchy subtitle are visible.",
+      "The node index continues below this viewport."
+    ],
+    "humanAcceptance": "pending"
+  }
+}

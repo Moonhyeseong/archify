@@ -1,0 +1,64 @@
+TAP version 13
+# Subtest: common origin preserves duration, overlap, zero-length intervals and independent groups
+ok 1 - common origin preserves duration, overlap, zero-length intervals and independent groups
+  ---
+  duration_ms: 1.668625
+  type: 'test'
+  ...
+# Subtest: unsupported phases remain visible in report, metadata only labels groups
+ok 2 - unsupported phases remain visible in report, metadata only labels groups
+  ---
+  duration_ms: 6.234042
+  type: 'test'
+  ...
+# Subtest: invalid timing is refused rather than guessed or clipped
+ok 3 - invalid timing is refused rather than guessed or clipped
+  ---
+  duration_ms: 0.301417
+  type: 'test'
+  ...
+# Subtest: invalid structure and identity fail with the offending boundary
+ok 4 - invalid structure and identity fail with the offending boundary
+  ---
+  duration_ms: 0.309459
+  type: 'test'
+  ...
+# Subtest: evidence must be chosen explicitly; arbitrary JSON cannot self-certify
+ok 5 - evidence must be chosen explicitly; arbitrary JSON cannot self-certify
+  ---
+  duration_ms: 0.095333
+  type: 'test'
+  ...
+# Subtest: event and span limits refuse whole input with no silent truncation
+ok 6 - event and span limits refuse whole input with no silent truncation
+  ---
+  duration_ms: 0.239916
+  type: 'test'
+  ...
+# Subtest: file reader limits bytes and reports digest of exactly the parsed bytes
+ok 7 - file reader limits bytes and reports digest of exactly the parsed bytes
+  ---
+  duration_ms: 48.783958
+  type: 'test'
+  ...
+# Subtest: CLI rejects invalid input without creating outputs and preserves existing destinations
+ok 8 - CLI rejects invalid input without creating outputs and preserves existing destinations
+  ---
+  duration_ms: 172.314041
+  type: 'test'
+  ...
+# Subtest: fresh outputs protect real victims, dangling symlinks, input aliases and partial-write cleanup
+ok 9 - fresh outputs protect real victims, dangling symlinks, input aliases and partial-write cleanup
+  ---
+  duration_ms: 231.007542
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 547.96275
