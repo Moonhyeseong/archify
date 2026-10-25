@@ -1,0 +1,91 @@
+{
+  "kind": "portable-experiment-evidence-summary",
+  "revision": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "scope": "Authored content and paired source audit only. Original receipts live outside checkout; this is not an unredacted receipt or current-provenance assertion for a copied artifact.",
+  "artifacts": {
+    "question-first.archify.md": "9f5e7248ad180c02ddbc3d774b66fc97a43743eaba8ad12fa0eab9e45440ae0b",
+    "file-first.archify.md": "ff8df99c9c2742370195687788bbaabd5e6f1224a2f07c69e5a61392541119c3",
+    "question-first.html": "b8803bb7eef4e2aba87b1adcb66ecb154786c26ae6c7a5218dce54a6b9e4ceee",
+    "file-first.html": "0a07ad307ddadb7191da5ea8aac3ba90bd4bc5e3a5c2388e2010ee729a41b130",
+    "source-audit.json": "eaa5c7ecd5119f769f7d276ea4545f319598d98e3ba0a03f08ce989359a49478"
+  },
+  "verification": [
+    {
+      "page": "question-first",
+      "ok": true,
+      "status": "pass",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "not-run"
+      },
+      "command": "node archify/bin/archify.mjs finalize explainer <draft.archify.md> <artifact.html> --repo-root . --out-dir <private-dir> --json"
+    },
+    {
+      "page": "file-first",
+      "ok": true,
+      "status": "pass",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "not-run"
+      },
+      "command": "node archify/bin/archify.mjs finalize explainer <draft.archify.md> <artifact.html> --repo-root . --out-dir <private-dir> --json"
+    }
+  ],
+  "sourceAudit": {
+    "matchedExcerpts": 5,
+    "matchedFullFileDigests": 5,
+    "matchedCodeReferences": 5,
+    "stations": 4,
+    "lanes": 2,
+    "pairedSourcesEqual": true,
+    "pairedGraphEqual": true,
+    "onlyDataHandoffAcrossLanes": true
+  },
+  "writingDiagnostics": [
+    {
+      "code": "explainer/writing-qualification",
+      "severity": "warning",
+      "message": "把限定条件写进 scope 或来源"
+    },
+    {
+      "code": "explainer/writing-paragraph-length",
+      "severity": "warning",
+      "message": "This paragraph has 5 sentences and 64 reading units; long paragraphs are what the page should replace."
+    }
+  ],
+  "initialFailures": [
+    {
+      "type": "authored ID collision",
+      "resolution": "Steps now use walk-* IDs distinct from panel IDs."
+    },
+    {
+      "type": "native desktop readability",
+      "resolution": "Shortened authored node/edge labels and removed redundant separate Escape-return/hide nodes without changing the conditional text."
+    },
+    {
+      "type": "shorthand lane flattening",
+      "resolution": "Added the source-backed Read initialization node. Final prepared native spec has real Build and Read lanes, not a single lane with phase labels."
+    }
+  ],
+  "limits": [
+    "No new shared code or schema; no library/parser/peek/expand feature.",
+    "No full product tests or mirrored tests for low-impact authored content.",
+    "No automated browser gate, human visual acceptance or reader task timing. Root captures actual interaction separately.",
+    "The source-card Escape condition is not a promise about every page-level Escape listener."
+  ],
+  "formatRefresh": {
+    "change": "Removed one surplus EOF blank line from file-first.archify.md only.",
+    "previousHtmlSha256": "24add1bce57823595574810712ad21d75a0c532481d9257edec51567bbe11d11",
+    "htmlBytesChanged": true,
+    "canonicalDocumentUnchanged": true,
+    "preparedSourcesUnchanged": true,
+    "nativeWorkflowSpecUnchanged": true,
+    "sourceAuditFileUnchanged": true,
+    "finalize": "actual public command rerun; validate/deliver/check pass; browser not-run",
+    "screenshots": "Existing screenshots and interactions were left untouched for root to refresh against the new HTML hash."
+  }
+}

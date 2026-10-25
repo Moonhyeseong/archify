@@ -1,0 +1,95 @@
+{
+  "kind": "paired-source-excerpt-audit",
+  "revision": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "samePreparedSources": true,
+  "sameNativeGraph": true,
+  "sameFiveCodeSources": true,
+  "guideStations": 4,
+  "nativeWorkflowLanes": [
+    "build",
+    "read"
+  ],
+  "onlyCrossLaneDataTransfer": {
+    "id": "bundle-to-bind-1",
+    "from": "bundle",
+    "to": "bind",
+    "label": "产物数据交接"
+  },
+  "excerpts": [
+    {
+      "id": "build-excerpt",
+      "path": "archify/explainer/sources.mjs",
+      "lines": [
+        244,
+        263
+      ],
+      "revision": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+      "url": "https://github.com/tt-a1i/archify/blob/82c7e0f089a02a4d514714adf37dc2061682da5f/archify/explainer/sources.mjs#L244-L263",
+      "fullFileSha256": "c6aae2ef90b6e49d16c1ccd5cfc5351a7716b8f9150e1c261dbd6ca8b8ca9ab5",
+      "fullFileBytes": 20882,
+      "excerptSha256": "7f7779af501d28cd2afc9980503d41dd0deae883b326e751d30fecf765f0d712",
+      "excerptBytes": 1438,
+      "text": "      const reference = verified.nodes[entry.id][0];\n      const result = { id: entry.id, ...(entry.title === undefined ? {} : { title: entry.title }),\n        revision: repository.revision, path: reference.path, lines: Object.freeze([...entry.lines]),\n        ...(reference.href ? { url: reference.href } : {}) };\n      if (codeIds.has(entry.id)) {\n        const bytes = gitBytes(context, repoRoot, ['show', `${repository.revision}:${entry.path}`], `/sources/${index}`);\n        let text;\n        try { text = new TextDecoder('utf-8', { fatal: true }).decode(bytes); } catch {\n          fail(context, `/sources/${index}`, 'code', 'source-encoding', 'Code sources must contain UTF-8 text.', 'Use a UTF-8 text source file.');\n        }\n        if (text.includes('\\0') || containsExplainerSecret(text, entry.path)) fail(context, `/sources/${index}`, 'code', 'secret-content',\n          'This source cannot be displayed because it contains sensitive or binary content.', 'Use a public source file without secrets.');\n        result.text = text.split(/\\r\\n|\\n|\\r/).slice(entry.lines[0] - 1, entry.lines[1]).join('\\n');\n        const frozen = digest(bytes);\n        Object.assign(result, { sha256: frozen.sha256, bytes: frozen.bytes });\n        dependencies.push(Object.freeze({ kind: 'repository', id: entry.id, path: entry.path, revision: repository.revision, ...frozen }));\n      }\n      sources[entry.id] = Object.freeze(result);\n    }\n  }"
+    },
+    {
+      "id": "card-init",
+      "path": "archify/explainer/reader.js",
+      "lines": [
+        599,
+        611
+      ],
+      "revision": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+      "url": "https://github.com/tt-a1i/archify/blob/82c7e0f089a02a4d514714adf37dc2061682da5f/archify/explainer/reader.js#L599-L611",
+      "fullFileSha256": "e495d020eb932cbb5894bffcc683788ac3b9ff895ad56a47cd98c1b87a9e1097",
+      "fullFileBytes": 54030,
+      "excerptSha256": "3f52e2e74640ea3325c146056092eaf4f074e899fe078923531a9a06dd68f2b0",
+      "excerptBytes": 1080,
+      "text": "  function setupSourceCards() {\n    const sources = prepared.preparedSources?.sources || {};\n    const card = document.createElement('div'); card.className = 'source-card'; card.hidden = true; card.setAttribute('role','group'); card.setAttribute('aria-label',say('Source details','来源详情'));\n    document.body.append(card);\n    let hideTimer, opener;\n    const hide = () => { clearTimeout(hideTimer); hideTimer = setTimeout(()=>{ if (!card.contains(document.activeElement)) card.hidden = true; },160); };\n    card.addEventListener('mouseenter',()=>clearTimeout(hideTimer)); card.addEventListener('mouseleave',hide);\n    card.addEventListener('focusin',()=>clearTimeout(hideTimer)); card.addEventListener('focusout',hide);\n    const show = (link, id = decodeURIComponent(link.getAttribute('href').slice('#source-'.length)), blockId) => {\n      const content = blockId && byId(blockId);\n      const source = sources[id] || prepared.document?.sources?.find(entry=>entry.id === id) || {};\n      if (!Object.keys(source).length && !content) return;\n      clearTimeout(hideTimer);"
+    },
+    {
+      "id": "card-preview",
+      "path": "archify/explainer/reader.js",
+      "lines": [
+        615,
+        626
+      ],
+      "revision": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+      "url": "https://github.com/tt-a1i/archify/blob/82c7e0f089a02a4d514714adf37dc2061682da5f/archify/explainer/reader.js#L615-L626",
+      "fullFileSha256": "e495d020eb932cbb5894bffcc683788ac3b9ff895ad56a47cd98c1b87a9e1097",
+      "fullFileBytes": 54030,
+      "excerptSha256": "d1a9c44b1a77ddfbc94123143e261655e755054c9110f5ccb0d9d3e2510fd531",
+      "excerptBytes": 2230,
+      "text": "      const host = (()=>{ try { return new URL(source.url).host.replace(/^www\\./,''); } catch { return ''; } })();\n      const where = source.path ? `${source.path}${source.lines ? `:${source.lines.join('–')}` : ''}` : host || (content ? source.title || '' : '');\n      const kind = source.path ? 'code' : source.url ? 'web' : 'note';\n      const lines = source.path && typeof source.text === 'string' ? source.text.split('\\n') : [];\n      const first = source.lines?.[0] || 1;\n      const excerpt = lines.length ? `<pre><code>${lines.slice(0,14).map((line,index)=>`<span class=\"line\"><i>${first + index}</i>${escapeText(line) || ' '}</span>`).join('')}${lines.length > 14 ? `<span class=\"line more\"><i></i>…</span>` : ''}</code></pre>` : '';\n      const note = !source.path && (source.text || source.method) ? `<p class=\"source-note\">${escapeText(source.text || '')}${source.method ? `<span>${escapeText(source.method)}</span>` : ''}</p>` : '';\n      const contentNote = content ? `<p class=\"source-note source-content\">${escapeText((content.innerText || content.textContent).trim())}</p>` : '';\n      const title = content ? link.getAttribute('data-node-label') || content.closest('.panel')?.querySelector('h2')?.textContent : source.title || source.path || id;\n      const number = /^\\d+$/.test(link.textContent.trim()) ? link.textContent.trim() : '';\n      card.innerHTML = `<header><span class=\"source-icon\" data-kind=\"${kind}\" aria-hidden=\"true\">${sourceIcons[kind]}</span><span class=\"source-head\"><b>${escapeText(title)}</b>${where ? `<span class=\"source-where\">${escapeText(where)}</span>` : ''}</span>${number ? `<span class=\"source-number\">${number}</span>` : ''}</header>${contentNote}${excerpt}${note}${source.revision || source.url || content ? `<footer>${content ? `<a href=\"#${encodeURIComponent(blockId)}\">${say('Read this paragraph','阅读这段')} ↗</a>` : ''}${source.revision ? `<span class=\"source-pin\">${say('Pinned at','固定在')} <code>${escapeText(String(source.revision).slice(0,7))}</code></span>` : ''}${source.url ? `<a href=\"${escapeText(source.url)}\" target=\"_blank\" rel=\"noopener noreferrer\">${say('Open source','打开原文')} ↗</a>` : ''}</footer>` : ''}`;\n      card.hidden = false;"
+    },
+    {
+      "id": "node-map",
+      "path": "archify/explainer/reader.js",
+      "lines": [
+        638,
+        649
+      ],
+      "revision": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+      "url": "https://github.com/tt-a1i/archify/blob/82c7e0f089a02a4d514714adf37dc2061682da5f/archify/explainer/reader.js#L638-L649",
+      "fullFileSha256": "e495d020eb932cbb5894bffcc683788ac3b9ff895ad56a47cd98c1b87a9e1097",
+      "fullFileBytes": 54030,
+      "excerptSha256": "7e6afd6e1f1070d428e1ee4edb11c1ac1a114e909906f66be4e15b598b5c11b2",
+      "excerptBytes": 1047,
+      "text": "    all('.diagram-preview[data-node-sources],.diagram-preview[data-node-blocks]').forEach(preview=>{\n      let map = {}, blocks = {}; try { map = JSON.parse(preview.dataset.nodeSources || '{}'); blocks = JSON.parse(preview.dataset.nodeBlocks || '{}'); } catch {}\n      all('[data-node-id]',preview).forEach(node=>{\n        const nodeId = node.dataset.nodeId;\n        const id = Object.hasOwn(map,nodeId) ? map[nodeId] : '', blockId = Object.hasOwn(blocks,nodeId) ? blocks[nodeId] : ''; if (!id && !blockId) return;\n        node.classList.add('has-source');\n        node.addEventListener('mouseenter',()=>show(node,id || '',blockId)); node.addEventListener('mouseleave',hide);\n        node.addEventListener('focus',()=>show(node,id || '',blockId)); node.addEventListener('blur',hide);\n        if (blockId) {\n          node.setAttribute('tabindex','0'); node.setAttribute('role','button');\n          node.setAttribute('aria-label',node.getAttribute('data-node-label') || node.dataset.nodeId);\n          node.setAttribute('aria-describedby',blockId);"
+    },
+    {
+      "id": "escape-return",
+      "path": "archify/explainer/reader.js",
+      "lines": [
+        654,
+        668
+      ],
+      "revision": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+      "url": "https://github.com/tt-a1i/archify/blob/82c7e0f089a02a4d514714adf37dc2061682da5f/archify/explainer/reader.js#L654-L668",
+      "fullFileSha256": "e495d020eb932cbb5894bffcc683788ac3b9ff895ad56a47cd98c1b87a9e1097",
+      "fullFileBytes": 54030,
+      "excerptSha256": "74166c741d6ae99376e8657e5b6015bf11c264c31b47f37e6309ca2313258bbb",
+      "excerptBytes": 899,
+      "text": "    document.addEventListener('keydown',event=>{\n      if (event.key === 'Escape') {\n        if (card.contains(document.activeElement)) opener?.focus();\n        clearTimeout(hideTimer); card.hidden = true;\n      } else if (event.key === 'Tab' && !card.hidden && opener) {\n        // Visit the floating links after their opener, then resume the document's normal tab order.\n        const links = all('a[href]',card);\n        if (!event.shiftKey && event.target === opener && links.length) { event.preventDefault(); links[0].focus(); }\n        else if (event.shiftKey && event.target === links[0]) { event.preventDefault(); opener.focus(); }\n        else if (!event.shiftKey && event.target === links.at(-1)) { opener.focus(); card.hidden = true; }\n      }\n    });\n  }\n  // Checklist ticks are the reader's own progress; keep them per page and block across reloads.\n  all('.checklist').forEach(list=>{"
+    }
+  ]
+}

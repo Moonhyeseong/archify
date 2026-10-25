@@ -1,0 +1,79 @@
+{
+  "kind": "actual-browser-interaction-observations",
+  "outsideEscape": {
+    "before": {
+      "activeTag": "BUTTON",
+      "activeText": "浅色",
+      "cardVisible": true
+    },
+    "after": {
+      "activeTag": "BUTTON",
+      "activeText": "浅色",
+      "cardVisible": false
+    }
+  },
+  "insideEscape": {
+    "before": {
+      "focusInsideCard": true,
+      "activeText": "打开原文 ↗",
+      "sourceHref": "https://github.com/tt-a1i/archify/blob/82c7e0f089a02a4d514714adf37dc2061682da5f/archify/explainer/sources.mjs#L244-L263",
+      "displayedLines": [
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257
+      ]
+    },
+    "after": {
+      "activeTag": "BODY",
+      "href": null,
+      "cardVisible": false,
+      "activeTextNote": "BODY contents intentionally omitted; focus target alone is recorded."
+    },
+    "result": "BODY focus observed in the split-session capture; stable single-invocation repeat is recorded separately.",
+    "note": "This earlier observation crossed tool invocations with viewport override release/reapplication; intervening pointer/layout state was not controlled. It does not establish the cause of the BODY focus result."
+  },
+  "claim": "Existing source-card behavior exercised through pointer hover, keyboard Tab and Escape; no efficiency measurement or human acceptance.",
+  "insideEscapeSingleInvocation": {
+    "before": {
+      "tag": "A",
+      "text": "打开原文 ↗",
+      "href": "https://github.com/tt-a1i/archify/blob/82c7e0f089a02a4d514714adf37dc2061682da5f/archify/explainer/sources.mjs#L244-L263",
+      "insideCard": true
+    },
+    "after": {
+      "tag": "A",
+      "text": "1",
+      "href": "#source-build-excerpt",
+      "cardVisible": false
+    },
+    "conditions": "Fresh navigation, same 1440x1000 CDP session throughout, pointer outside source targets, focus citation then real Tab/Escape."
+  },
+  "nodeHover": {
+    "node": "esc",
+    "cardVisible": true,
+    "sourceLocation": "archify/explainer/reader.js:654–668",
+    "pinnedRevision": "固定在 82c7e0f"
+  },
+  "nativeDiagramStep": {
+    "action": "Click first step link",
+    "observedDialog": "Build 固定数据，Read 消费数据",
+    "observedNativePassport": "读取固定提交",
+    "verification": "Actual browser accessibility snapshot; sandboxed srcdoc is intentionally not readable through parent contentDocument.",
+    "afterClose": {
+      "openDialogs": 0,
+      "activeTag": "A",
+      "activeText": "第 1 站：这是当前工作树文件吗？ ↗"
+    }
+  }
+}

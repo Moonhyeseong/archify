@@ -1,0 +1,119 @@
+{
+  "kind": "portable-browser-capture-summary",
+  "captureTool": "ego-browser",
+  "taskSpace": 4,
+  "images": [
+    {
+      "image": "question-first-overview.png",
+      "sha256": "4280ec667e2f49ee57783acc4f0e0947075378b131be59e80f5e9d5c1e556e3d",
+      "width": 1440,
+      "height": 1000,
+      "source": "../question-first.html",
+      "sourceSha256": "b8803bb7eef4e2aba87b1adcb66ecb154786c26ae6c7a5218dce54a6b9e4ceee",
+      "viewportCss": [
+        1440,
+        1000
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "capturedAtUtc": "2026-10-25T05:26:19.561Z",
+      "theme": "light"
+    },
+    {
+      "image": "question-first-full.png",
+      "sha256": "a1b7f233ac6dc54d00beca77bec561aff9ec860557f85c744ece482c249bbe3c",
+      "width": 1440,
+      "height": 3529,
+      "source": "../question-first.html",
+      "sourceSha256": "b8803bb7eef4e2aba87b1adcb66ecb154786c26ae6c7a5218dce54a6b9e4ceee",
+      "viewportCss": [
+        1440,
+        1000
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "capturedAtUtc": "2026-10-25T05:26:19.785Z",
+      "theme": "light"
+    },
+    {
+      "image": "escape-node-source.png",
+      "sha256": "f0f15f3a33e93866ed568740f9ff0cd2d74bc683843974f0ae627568b20cbac1",
+      "width": 1440,
+      "height": 1000,
+      "source": "../question-first.html",
+      "sourceSha256": "b8803bb7eef4e2aba87b1adcb66ecb154786c26ae6c7a5218dce54a6b9e4ceee",
+      "viewportCss": [
+        1440,
+        1000
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "capturedAtUtc": "2026-10-25T05:26:20.059Z",
+      "theme": "light"
+    },
+    {
+      "image": "pinned-source-card.png",
+      "sha256": "146b48ee3203a5232cc024e08c1ac4a88483c93a64ac1ede4398185a54cbf939",
+      "width": 1440,
+      "height": 1000,
+      "source": "../question-first.html",
+      "sourceSha256": "b8803bb7eef4e2aba87b1adcb66ecb154786c26ae6c7a5218dce54a6b9e4ceee",
+      "viewportCss": [
+        1440,
+        1000
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "theme": "light",
+      "note": "Actual earlier pinned source card capture; its separate subsequent focus observation is retained in interactions.json."
+    },
+    {
+      "image": "native-first-stop.png",
+      "sha256": "cd83d134e3bb324a0e56c028f3b9203cf340253caa50e3d69ca2ab835071f951",
+      "width": 1440,
+      "height": 1000,
+      "source": "../question-first.html",
+      "sourceSha256": "b8803bb7eef4e2aba87b1adcb66ecb154786c26ae6c7a5218dce54a6b9e4ceee",
+      "viewportCss": [
+        1440,
+        1000
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "theme": "light"
+    },
+    {
+      "image": "file-first-overview.png",
+      "sha256": "d7a9d64c884b7b398306cd5918869fa7e02c48ed74b5c2ee2e8876d001f580ab",
+      "width": 1440,
+      "height": 1000,
+      "source": "../file-first.html",
+      "sourceSha256": "0a07ad307ddadb7191da5ea8aac3ba90bd4bc5e3a5c2388e2010ee729a41b130",
+      "viewportCss": [
+        1440,
+        1000
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "theme": "light",
+      "capturedAtUtc": "2026-10-25T05:29:40.244Z"
+    },
+    {
+      "image": "file-first-full.png",
+      "sha256": "b05ea13b6052d15eb5af33aea7375a7a037d8dc7d9ca2142538b1b2f86ed16a5",
+      "width": 1440,
+      "height": 3514,
+      "source": "../file-first.html",
+      "sourceSha256": "0a07ad307ddadb7191da5ea8aac3ba90bd4bc5e3a5c2388e2010ee729a41b130",
+      "viewportCss": [
+        1440,
+        1000
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "theme": "light",
+      "capturedAtUtc": "2026-10-25T05:29:40.373Z"
+    }
+  ],
+  "humanAcceptance": "pending"
+}
