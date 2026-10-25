@@ -59,7 +59,7 @@ Focused tests **15/15 passed，0 skipped**。测试使用临时真实 Git 仓库
 
 Focused simplification 检查：一份 mapping report 是唯一事实来源，Explainer 和原生图仅作投影；不复制源码解析器、不引入浏览器状态存储或第二套图模型维护层。Git 适配器局部保留是因为产品的相关封装是内部实现；没有为一次实验扩大产品 API。
 
-截图位置预留：主 agent 将对实际最终 HTML 统一截图并补入；本目录尚无视觉接受或人工审查结论。
+实际浏览器截图及协调 Agent 的观察见文末；人类视觉验收仍待进行。
 
 ## 灵感与许可
 
