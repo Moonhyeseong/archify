@@ -1,0 +1,132 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Synthetic per-resource actions",
+    "subtitle": "Each row is one resource. No cross-resource execution timeline or blast-radius inference.",
+    "output": "actions.html",
+    "quality_profile": "standard",
+    "legend": {
+      "entries": {
+        "backend": {
+          "label": "Reported action"
+        },
+        "external": {
+          "label": "Coverage boundary"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "r-1",
+      "label": "Resource 1"
+    },
+    {
+      "id": "r-2",
+      "label": "Resource 2"
+    },
+    {
+      "id": "r-3",
+      "label": "Resource 3"
+    },
+    {
+      "id": "r-4",
+      "label": "Resource 4"
+    },
+    {
+      "id": "r-5",
+      "label": "Resource 5"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "r-1-a-0",
+      "lane": "r-1",
+      "col": 0,
+      "type": "backend",
+      "label": "create",
+      "sublabel": "Resource 1",
+      "tag": "single reported action"
+    },
+    {
+      "id": "r-2-a-0",
+      "lane": "r-2",
+      "col": 0,
+      "type": "backend",
+      "label": "update",
+      "sublabel": "Resource 2",
+      "tag": "single reported action"
+    },
+    {
+      "id": "r-3-a-0",
+      "lane": "r-3",
+      "col": 0,
+      "type": "backend",
+      "label": "delete",
+      "sublabel": "Resource 3",
+      "tag": "replacement sequence"
+    },
+    {
+      "id": "r-3-a-1",
+      "lane": "r-3",
+      "col": 1,
+      "type": "backend",
+      "label": "create",
+      "sublabel": "Resource 3",
+      "tag": "replacement sequence"
+    },
+    {
+      "id": "r-4-a-0",
+      "lane": "r-4",
+      "col": 0,
+      "type": "backend",
+      "label": "create",
+      "sublabel": "Resource 4",
+      "tag": "replacement sequence"
+    },
+    {
+      "id": "r-4-a-1",
+      "lane": "r-4",
+      "col": 1,
+      "type": "backend",
+      "label": "delete",
+      "sublabel": "Resource 4",
+      "tag": "replacement sequence"
+    },
+    {
+      "id": "r-5-a-0",
+      "lane": "r-5",
+      "col": 0,
+      "type": "backend",
+      "label": "no-op",
+      "sublabel": "Resource 5",
+      "tag": "single reported action"
+    }
+  ],
+  "edges": [
+    {
+      "from": "r-3-a-0",
+      "to": "r-3-a-1",
+      "label": "then, for this resource",
+      "variant": "dashed"
+    },
+    {
+      "from": "r-4-a-0",
+      "to": "r-4-a-1",
+      "label": "then, for this resource",
+      "variant": "dashed"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "amber",
+      "title": "Action order, not global scheduling",
+      "items": [
+        "complete: false · deferred records: 1",
+        "Deferred records are listed separately; not scheduled as action rows.",
+        "No Terraform, cloud query or apply was executed."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,422 @@
+{
+  "schema_version": 1,
+  "diagram_type": "explainer",
+  "meta": {
+    "id": "plan-actions",
+    "title": "Synthetic Terraform plan: replacement order and unknowns",
+    "locale": "en"
+  },
+  "answer": {
+    "summary": "This synthetic input demonstrates per-resource action order and value-free path categories. No infrastructure was measured or changed.",
+    "reasons": [
+      "delete then create differs from create then delete.",
+      "Unknown, explicit null and sensitive paths remain distinct.",
+      "Deferred records and the supplied complete flag keep their own status."
+    ],
+    "scope": "5 resource records · 1 deferred records · complete false · all before/after values omitted"
+  },
+  "panels": [
+    {
+      "id": "actions",
+      "title": "Replacement order and plan coverage",
+      "blocks": [
+        {
+          "id": "completeness",
+          "type": "comparison",
+          "labelColumn": "Input fact",
+          "columns": [
+            "Supplied status"
+          ],
+          "rows": [
+            {
+              "id": "complete",
+              "label": "complete",
+              "cells": [
+                {
+                  "text": "false"
+                }
+              ]
+            },
+            {
+              "id": "resource-count",
+              "label": "resource_changes",
+              "cells": [
+                {
+                  "text": "5 supplied · provided"
+                }
+              ]
+            },
+            {
+              "id": "deferred",
+              "label": "deferred_changes",
+              "cells": [
+                {
+                  "text": "1 separate records · provided"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "replacement-graph",
+          "type": "diagram",
+          "diagramType": "workflow",
+          "spec": {
+            "schema_version": 2,
+            "diagram_type": "workflow",
+            "meta": {
+              "title": "Replacement order · selected rows",
+              "subtitle": "2 replacement rows shown; 3 other supplied resource rows omitted from this view. Full actions.html retains all rows.",
+              "output": "replacement-view.html",
+              "quality_profile": "standard",
+              "legend": {
+                "entries": {
+                  "backend": {
+                    "label": "Reported action"
+                  },
+                  "external": {
+                    "label": "Coverage boundary"
+                  }
+                }
+              }
+            },
+            "lanes": [
+              {
+                "id": "r-3",
+                "label": "Resource 3"
+              },
+              {
+                "id": "r-4",
+                "label": "Resource 4"
+              }
+            ],
+            "nodes": [
+              {
+                "id": "r-3-a-0",
+                "lane": "r-3",
+                "col": 0,
+                "type": "backend",
+                "label": "delete",
+                "sublabel": "Resource 3",
+                "tag": "replacement sequence"
+              },
+              {
+                "id": "r-3-a-1",
+                "lane": "r-3",
+                "col": 1,
+                "type": "backend",
+                "label": "create",
+                "sublabel": "Resource 3",
+                "tag": "replacement sequence"
+              },
+              {
+                "id": "r-4-a-0",
+                "lane": "r-4",
+                "col": 0,
+                "type": "backend",
+                "label": "create",
+                "sublabel": "Resource 4",
+                "tag": "replacement sequence"
+              },
+              {
+                "id": "r-4-a-1",
+                "lane": "r-4",
+                "col": 1,
+                "type": "backend",
+                "label": "delete",
+                "sublabel": "Resource 4",
+                "tag": "replacement sequence"
+              }
+            ],
+            "edges": [
+              {
+                "from": "r-3-a-0",
+                "to": "r-3-a-1",
+                "label": "then, for this resource",
+                "variant": "dashed"
+              },
+              {
+                "from": "r-4-a-0",
+                "to": "r-4-a-1",
+                "label": "then, for this resource",
+                "variant": "dashed"
+              }
+            ],
+            "cards": [
+              {
+                "dot": "amber",
+                "title": "Subset, not global scheduling",
+                "items": [
+                  "2 replacement rows; 3 other supplied rows omitted here.",
+                  "Actions connect only within one resource. Deferred records are not scheduled."
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "order-boundary",
+          "type": "prose",
+          "text": "This small view shows 2 replacement rows and omits 3 other supplied resource rows. Full actions.html retains every resource row. Arrows mean only that resource action order, never a global apply timeline or blast radius."
+        }
+      ]
+    },
+    {
+      "id": "resources",
+      "title": "Every supplied resource: actions and unknowns",
+      "blocks": [
+        {
+          "id": "resource-summary",
+          "type": "comparison",
+          "labelColumn": "Resource",
+          "columns": [
+            "Identity",
+            "Actions",
+            "Unknown after paths"
+          ],
+          "rows": [
+            {
+              "id": "resource-row-1",
+              "label": "Resource 1",
+              "cells": [
+                {
+                  "text": "example\\_service.created · example\\_service"
+                },
+                {
+                  "text": "create"
+                },
+                {
+                  "text": "\\[\"id\"\\]"
+                }
+              ]
+            },
+            {
+              "id": "resource-row-2",
+              "label": "Resource 2",
+              "cells": [
+                {
+                  "text": "example\\_service.updated · example\\_service"
+                },
+                {
+                  "text": "update"
+                },
+                {
+                  "text": "none marked"
+                }
+              ]
+            },
+            {
+              "id": "resource-row-3",
+              "label": "Resource 3",
+              "cells": [
+                {
+                  "text": "module.old.example\\_service.main\\[0\\] · example\\_service"
+                },
+                {
+                  "text": "delete then create"
+                },
+                {
+                  "text": "\\[\"value\"\\]"
+                }
+              ]
+            },
+            {
+              "id": "resource-row-4",
+              "label": "Resource 4",
+              "cells": [
+                {
+                  "text": "module.new.example\\_service.main\\[0\\] · example\\_service"
+                },
+                {
+                  "text": "create then delete"
+                },
+                {
+                  "text": "none marked"
+                }
+              ]
+            },
+            {
+              "id": "resource-row-5",
+              "label": "Resource 5",
+              "cells": [
+                {
+                  "text": "example\\_service.unchanged · example\\_service"
+                },
+                {
+                  "text": "no-op"
+                },
+                {
+                  "text": "none marked"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paths",
+      "title": "Sensitive, literal null and replacement paths",
+      "blocks": [
+        {
+          "id": "path-summary",
+          "type": "comparison",
+          "labelColumn": "Resource",
+          "columns": [
+            "Sensitive mask paths",
+            "Literal null paths",
+            "Replacement paths"
+          ],
+          "rows": [
+            {
+              "id": "paths-row-1",
+              "label": "Resource 1",
+              "cells": [
+                {
+                  "text": "Before: none marked; After: \\[\"token\"\\]"
+                },
+                {
+                  "text": "Before: \\[\\]; After: \\[\"endpoint\"\\]"
+                },
+                {
+                  "text": "not-provided"
+                }
+              ]
+            },
+            {
+              "id": "paths-row-2",
+              "label": "Resource 2",
+              "cells": [
+                {
+                  "text": "Before: \\[\"token\"\\]; After: \\[\"token\"\\]"
+                },
+                {
+                  "text": "Before: none observed; After: \\[\"optional\"\\]"
+                },
+                {
+                  "text": "not-provided"
+                }
+              ]
+            },
+            {
+              "id": "paths-row-3",
+              "label": "Resource 3",
+              "cells": [
+                {
+                  "text": "Before: none marked; After: none marked"
+                },
+                {
+                  "text": "Before: none observed; After: none observed"
+                },
+                {
+                  "text": "\\[\"shape\",0,\"size\"\\]"
+                }
+              ]
+            },
+            {
+              "id": "paths-row-4",
+              "label": "Resource 4",
+              "cells": [
+                {
+                  "text": "Before: \\[\\]; After: \\[\\]"
+                },
+                {
+                  "text": "Before: none observed; After: none observed"
+                },
+                {
+                  "text": "\\[\"shape\"\\]"
+                }
+              ]
+            },
+            {
+              "id": "paths-row-5",
+              "label": "Resource 5",
+              "cells": [
+                {
+                  "text": "Before: none marked; After: none marked"
+                },
+                {
+                  "text": "Before: none observed; After: none observed"
+                },
+                {
+                  "text": "not-provided"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "paths-boundary",
+          "type": "prose",
+          "text": "Paths are JSON arrays: string keys and numeric indexes stay distinct; an empty path means the root. None marked means no true leaf in that supplied mask; not-provided means the mask was absent. Literal null excludes supplied unknown or sensitive ancestors. No before/after values are displayed."
+        }
+      ]
+    },
+    {
+      "id": "deferred-records",
+      "title": "Deferred records: separate from action rows",
+      "blocks": [
+        {
+          "id": "deferred-table",
+          "type": "comparison",
+          "labelColumn": "Deferred record",
+          "columns": [
+            "Resource identity",
+            "Reason",
+            "Reported actions, not scheduled"
+          ],
+          "rows": [
+            {
+              "id": "deferred-row-1",
+              "label": "Deferred 1",
+              "cells": [
+                {
+                  "text": "example\\_service.later · example\\_service"
+                },
+                {
+                  "text": "resource\\_config\\_unknown"
+                },
+                {
+                  "text": "create"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "deferred-boundary",
+          "type": "prose",
+          "text": "Any actions in these records remain deferred evidence. Missing details stay unknown; deferred mask paths remain in the complete value-free projection.json file."
+        }
+      ]
+    },
+    {
+      "id": "coverage",
+      "title": "What this projection leaves unknown",
+      "blocks": [
+        {
+          "id": "categories",
+          "type": "list",
+          "items": [
+            "complete is the supplied flag, not a deployment approval. Missing, false and true remain distinct.",
+            "Literal null is not unknown or redacted. Missing masks do not prove runtime knownness.",
+            "All before/after values and all unselected field values are omitted. Metadata and path names are retained.",
+            "The complete value-free projection.json preserves mask status, full deferred path details and unprojected field counts. It is not a round-trip Terraform plan."
+          ]
+        },
+        {
+          "id": "source",
+          "type": "prose",
+          "text": "The pinned official data types define the actions and masks.[](source:contract-source) No Terraform, provider or cloud command was run."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "contract-source",
+      "title": "Fixed official Terraform JSON plan data types",
+      "url": "https://github.com/hashicorp/terraform-json/blob/8f4894d138d0fe71436cba6dbc8f16577e9a9e7d/plan.go"
+    }
+  ]
+}

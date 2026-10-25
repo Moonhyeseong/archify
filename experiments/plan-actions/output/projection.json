@@ -1,0 +1,300 @@
+{
+  "adapter": "plan-actions/1",
+  "kind": "synthetic",
+  "formatVersion": "1.2",
+  "contract": {
+    "repository": "https://github.com/hashicorp/terraform-json",
+    "commit": "8f4894d138d0fe71436cba6dbc8f16577e9a9e7d",
+    "license": "MPL-2.0",
+    "files": [
+      "plan.go",
+      "action.go"
+    ]
+  },
+  "complete": false,
+  "resourceChangesStatus": "provided",
+  "deferredChangesStatus": "provided",
+  "resources": [
+    {
+      "ordinal": 1,
+      "address": "example_service.created",
+      "type": "example_service",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "valuePolicy": "All before/after values omitted, including non-sensitive scalar values.",
+        "unknownAfterPaths": {
+          "status": "provided",
+          "paths": [
+            [
+              "id"
+            ]
+          ]
+        },
+        "sensitiveBeforePaths": {
+          "status": "provided",
+          "paths": []
+        },
+        "sensitiveAfterPaths": {
+          "status": "provided",
+          "paths": [
+            [
+              "token"
+            ]
+          ]
+        },
+        "explicitNullBefore": {
+          "status": "inspected-for-null-paths-only",
+          "paths": [
+            []
+          ]
+        },
+        "explicitNullAfter": {
+          "status": "inspected-for-null-paths-only",
+          "paths": [
+            [
+              "endpoint"
+            ]
+          ]
+        },
+        "replacePaths": {
+          "status": "not-provided",
+          "paths": []
+        },
+        "unprojectedFieldCount": 0
+      },
+      "unprojectedFieldCount": 0
+    },
+    {
+      "ordinal": 2,
+      "address": "example_service.updated",
+      "type": "example_service",
+      "change": {
+        "actions": [
+          "update"
+        ],
+        "valuePolicy": "All before/after values omitted, including non-sensitive scalar values.",
+        "unknownAfterPaths": {
+          "status": "provided",
+          "paths": []
+        },
+        "sensitiveBeforePaths": {
+          "status": "provided",
+          "paths": [
+            [
+              "token"
+            ]
+          ]
+        },
+        "sensitiveAfterPaths": {
+          "status": "provided",
+          "paths": [
+            [
+              "token"
+            ]
+          ]
+        },
+        "explicitNullBefore": {
+          "status": "inspected-for-null-paths-only",
+          "paths": []
+        },
+        "explicitNullAfter": {
+          "status": "inspected-for-null-paths-only",
+          "paths": [
+            [
+              "optional"
+            ]
+          ]
+        },
+        "replacePaths": {
+          "status": "not-provided",
+          "paths": []
+        },
+        "unprojectedFieldCount": 0
+      },
+      "unprojectedFieldCount": 0
+    },
+    {
+      "ordinal": 3,
+      "address": "module.old.example_service.main[0]",
+      "type": "example_service",
+      "change": {
+        "actions": [
+          "delete",
+          "create"
+        ],
+        "valuePolicy": "All before/after values omitted, including non-sensitive scalar values.",
+        "unknownAfterPaths": {
+          "status": "provided",
+          "paths": [
+            [
+              "value"
+            ]
+          ]
+        },
+        "sensitiveBeforePaths": {
+          "status": "provided",
+          "paths": []
+        },
+        "sensitiveAfterPaths": {
+          "status": "provided",
+          "paths": []
+        },
+        "explicitNullBefore": {
+          "status": "inspected-for-null-paths-only",
+          "paths": []
+        },
+        "explicitNullAfter": {
+          "status": "inspected-for-null-paths-only",
+          "paths": []
+        },
+        "replacePaths": {
+          "status": "provided",
+          "paths": [
+            [
+              "shape",
+              0,
+              "size"
+            ]
+          ]
+        },
+        "unprojectedFieldCount": 0
+      },
+      "unprojectedFieldCount": 0
+    },
+    {
+      "ordinal": 4,
+      "address": "module.new.example_service.main[0]",
+      "type": "example_service",
+      "change": {
+        "actions": [
+          "create",
+          "delete"
+        ],
+        "valuePolicy": "All before/after values omitted, including non-sensitive scalar values.",
+        "unknownAfterPaths": {
+          "status": "provided",
+          "paths": []
+        },
+        "sensitiveBeforePaths": {
+          "status": "provided",
+          "paths": [
+            []
+          ]
+        },
+        "sensitiveAfterPaths": {
+          "status": "provided",
+          "paths": [
+            []
+          ]
+        },
+        "explicitNullBefore": {
+          "status": "inspected-for-null-paths-only",
+          "paths": []
+        },
+        "explicitNullAfter": {
+          "status": "inspected-for-null-paths-only",
+          "paths": []
+        },
+        "replacePaths": {
+          "status": "provided",
+          "paths": [
+            [
+              "shape"
+            ]
+          ]
+        },
+        "unprojectedFieldCount": 0
+      },
+      "unprojectedFieldCount": 0
+    },
+    {
+      "ordinal": 5,
+      "address": "example_service.unchanged",
+      "type": "example_service",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "valuePolicy": "All before/after values omitted, including non-sensitive scalar values.",
+        "unknownAfterPaths": {
+          "status": "provided",
+          "paths": []
+        },
+        "sensitiveBeforePaths": {
+          "status": "provided",
+          "paths": []
+        },
+        "sensitiveAfterPaths": {
+          "status": "provided",
+          "paths": []
+        },
+        "explicitNullBefore": {
+          "status": "inspected-for-null-paths-only",
+          "paths": []
+        },
+        "explicitNullAfter": {
+          "status": "inspected-for-null-paths-only",
+          "paths": []
+        },
+        "replacePaths": {
+          "status": "not-provided",
+          "paths": []
+        },
+        "unprojectedFieldCount": 0
+      },
+      "unprojectedFieldCount": 0
+    }
+  ],
+  "deferred": [
+    {
+      "ordinal": 1,
+      "reason": "resource_config_unknown",
+      "resource": {
+        "address": "example_service.later",
+        "type": "example_service",
+        "change": {
+          "actions": [
+            "create"
+          ],
+          "valuePolicy": "All before/after values omitted, including non-sensitive scalar values.",
+          "unknownAfterPaths": {
+            "status": "provided",
+            "paths": [
+              []
+            ]
+          },
+          "sensitiveBeforePaths": {
+            "status": "not-provided",
+            "paths": []
+          },
+          "sensitiveAfterPaths": {
+            "status": "provided",
+            "paths": [
+              []
+            ]
+          },
+          "explicitNullBefore": {
+            "status": "not-provided",
+            "paths": []
+          },
+          "explicitNullAfter": {
+            "status": "inspected-for-null-paths-only",
+            "paths": []
+          },
+          "replacePaths": {
+            "status": "not-provided",
+            "paths": []
+          },
+          "unprojectedFieldCount": 0
+        },
+        "unprojectedFieldCount": 0
+      },
+      "unprojectedFieldCount": 0
+    }
+  ],
+  "unprojectedRootFieldCount": 1,
+  "coverage": "Actions and attribute-path categories only. Every before/after value and every unselected field value is omitted; not a filtered plan or full plan audit.",
+  "inputSha256": "95af24a4cf50c53430f5cecabbd7173710cfed4023f2d28dcc41718f990ee8be"
+}

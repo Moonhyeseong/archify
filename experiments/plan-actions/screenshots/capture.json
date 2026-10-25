@@ -1,0 +1,46 @@
+{
+  "kind": "agent-browser-screenshot-summary",
+  "capturedAt": "2026-10-25T05:03:41.535038+00:00",
+  "method": "Actual Ego Lite browser screenshots; no compositing or image generation",
+  "images": [
+    {
+      "source": "../output/explainer.html",
+      "sourceSha256": "e29d7b9a2ab3de15991a126abdfe690e885d72c9d412903918000b3361093f45",
+      "image": "explainer.png",
+      "imageSha256": "5d82231d6072ebd7a190078b37ba90b6ab6594dff2367ef245db89d7aeab8b9a",
+      "imagePixels": {
+        "width": 1440,
+        "height": 2376
+      },
+      "viewportCssPixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "deviceScaleFactor": 1,
+      "theme": "light",
+      "preset": "Clean",
+      "fullPage": true
+    },
+    {
+      "source": "../output/actions.html",
+      "sourceSha256": "3ed09e66c4bd943b9b3d53ea1124d70621252962b42967f8b999698172aec9ad",
+      "image": "plan-actions.png",
+      "imageSha256": "ccf42ae5bfafa92ad7e7de339b9a264658838940db2e3fc2d41cb31c1f62a9a9",
+      "imagePixels": {
+        "width": 1440,
+        "height": 2028
+      },
+      "viewportCssPixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "deviceScaleFactor": 1,
+      "theme": "light",
+      "preset": "Classic",
+      "fullPage": true
+    }
+  ],
+  "agentVisualReview": "The revised Explainer places both replacement orders and complete/deferred status at the top, with all five resource records in compact tables. Its captured height is 2376 pixels, compared with the earlier 9405-pixel JSON-heavy draft at the same 1440-pixel width. The complete native diagram remains separate; no cross-resource scheduling is inferred. This is an agent visual observation, not a reading-time study.",
+  "humanAcceptance": "pending",
+  "limits": "Image review is separate from automated browser gates, upstream execution and human acceptance."
+}

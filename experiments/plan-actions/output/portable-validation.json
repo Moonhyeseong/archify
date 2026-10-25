@@ -1,0 +1,88 @@
+{
+  "recordType": "Portable selected validation summary, not an original Archify receipt",
+  "baseRevision": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "kind": "original synthetic fixture; no Terraform, provider or cloud command executed",
+  "commands": [
+    {
+      "command": [
+        "node",
+        "experiments/plan-actions/adapter.mjs",
+        "experiments/plan-actions/fixtures/synthetic.plan.json",
+        "synthetic",
+        "experiments/plan-actions/run-2fcd2c3b-810f-4206-a85a-14b5da03aad9"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "archify/bin/archify.mjs",
+        "render",
+        "workflow",
+        "experiments/plan-actions/run-2fcd2c3b-810f-4206-a85a-14b5da03aad9/actions.workflow.json",
+        "experiments/plan-actions/run-2fcd2c3b-810f-4206-a85a-14b5da03aad9/actions.html",
+        "--quality",
+        "standard"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "archify/bin/archify.mjs",
+        "finalize",
+        "explainer",
+        "experiments/plan-actions/run-2fcd2c3b-810f-4206-a85a-14b5da03aad9/actions.explainer.json",
+        "experiments/plan-actions/run-2fcd2c3b-810f-4206-a85a-14b5da03aad9/explainer.html",
+        "--out-dir",
+        "<temporary-receipt-directory>",
+        "--json"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "not-run"
+  },
+  "visualReview": "not-requested",
+  "artifactPolicy": "Only value-free projections are rendered; input before/after values are not copied into artifacts or this summary.",
+  "artifacts": {
+    "projection.json": {
+      "sha256": "5af4315f81c2aeaace2b56dede93791eb523488d3da85bf8c1128261d3f57788"
+    },
+    "actions.workflow.json": {
+      "sha256": "61de307f8b4ea8d85dbf84b06b88ef6c6040da39f980d465ce302898b5d843ed"
+    },
+    "actions.explainer.json": {
+      "sha256": "0ebe16e908f02ebf770472d042cc1219ff9561555c3ae1d1d426c43ce41e5ce3"
+    },
+    "actions.html": {
+      "sha256": "3ed09e66c4bd943b9b3d53ea1124d70621252962b42967f8b999698172aec9ad"
+    },
+    "explainer.html": {
+      "sha256": "e29d7b9a2ab3de15991a126abdfe690e885d72c9d412903918000b3361093f45"
+    }
+  },
+  "artifactLocationNote": "Successful fresh-run artifacts copied to output/ unchanged. Complete native actions/projection hashes match the earlier version; only the Explainer presentation changed. This is not a relocated original receipt.",
+  "tests": {
+    "command": "node --test experiments/plan-actions/adapter.test.mjs",
+    "passed": 16,
+    "failed": 0,
+    "skipped": 0,
+    "log": "tests.tap"
+  },
+  "historicalFailures": [
+    {
+      "stage": "focused-test",
+      "reason": "First draft matched joined action strings, accepting a one-element comma string as replacement. Atomic action whitelist now rejects it; regression passes."
+    },
+    {
+      "stage": "compact-presentation-test",
+      "reason": "First compact draft reused a row/panel ID; public renderer duplicate-id gate refused it. Renamed row ID; all public render and focused tests now pass."
+    }
+  ],
+  "presentationChange": "Compact replacement-only overview explicitly omits other resource rows; all-resource actions/unknown and sensitive/null/path tables replace per-resource JSON snippets. Full projection remains alongside."
+}

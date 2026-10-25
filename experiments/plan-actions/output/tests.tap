@@ -1,0 +1,106 @@
+TAP version 13
+# Subtest: both replacement arrays retain different action and graph edge order
+ok 1 - both replacement arrays retain different action and graph edge order
+  ---
+  duration_ms: 2.550208
+  type: 'test'
+  ...
+# Subtest: complete missing, false and true stay distinct; bad shapes refused
+ok 2 - complete missing, false and true stay distinct; bad shapes refused
+  ---
+  duration_ms: 0.28925
+  type: 'test'
+  ...
+# Subtest: deferred records stay separate and never become scheduled rows
+ok 3 - deferred records stay separate and never become scheduled rows
+  ---
+  duration_ms: 0.31725
+  type: 'test'
+  ...
+# Subtest: unknown, sensitive and literal null paths do not collapse
+ok 4 - unknown, sensitive and literal null paths do not collapse
+  ---
+  duration_ms: 0.343792
+  type: 'test'
+  ...
+# Subtest: true ancestor mask suppresses all null-path traversal beneath it
+ok 5 - true ancestor mask suppresses all null-path traversal beneath it
+  ---
+  duration_ms: 0.08275
+  type: 'test'
+  ...
+# Subtest: replace paths retain string versus numeric segments and resource identity/deposed
+ok 6 - replace paths retain string versus numeric segments and resource identity/deposed
+  ---
+  duration_ms: 0.073042
+  type: 'test'
+  ...
+# Subtest: no-op stays visible and omitted collections are not asserted as zero infrastructure
+ok 7 - no-op stays visible and omitted collections are not asserted as zero infrastructure
+  ---
+  duration_ms: 0.189917
+  type: 'test'
+  ...
+# Subtest: unselected root/resource/change values are counted but never copied
+ok 8 - unselected root/resource/change values are counted but never copied
+  ---
+  duration_ms: 0.076833
+  type: 'test'
+  ...
+# Subtest: unsupported action sequences and formats fail without guessing
+ok 9 - unsupported action sequences and formats fail without guessing
+  ---
+  duration_ms: 0.289541
+  type: 'test'
+  ...
+# Subtest: invalid masks, paths, limits and metadata are explicitly refused
+ok 10 - invalid masks, paths, limits and metadata are explicitly refused
+  ---
+  duration_ms: 0.388958
+  type: 'test'
+  ...
+# Subtest: all original fixture values stay out of every generated JSON and HTML
+ok 11 - all original fixture values stay out of every generated JSON and HTML
+  ---
+  duration_ms: 1195.01675
+  type: 'test'
+  ...
+# Subtest: hostile metadata paths and deferred reason stay literal with no active links or images
+ok 12 - hostile metadata paths and deferred reason stay literal with no active links or images
+  ---
+  duration_ms: 227.137958
+  type: 'test'
+  ...
+# Subtest: fresh output refuses an existing directory and symlink without touching victim
+ok 13 - fresh output refuses an existing directory and symlink without touching victim
+  ---
+  duration_ms: 3.504291
+  type: 'test'
+  ...
+# Subtest: CLI bad input creates no output and never echoes a sensitive input value in error
+ok 14 - CLI bad input creates no output and never echoes a sensitive input value in error
+  ---
+  duration_ms: 53.953209
+  type: 'test'
+  ...
+# Subtest: empty collections and missing lists render as coverage boundaries, without invented action edges
+ok 15 - empty collections and missing lists render as coverage boundaries, without invented action edges
+  ---
+  duration_ms: 916.987917
+  type: 'test'
+  ...
+# Subtest: compact overview declares its subset while action and path tables retain every resource
+ok 16 - compact overview declares its subset while action and path tables retain every resource
+  ---
+  duration_ms: 0.289708
+  type: 'test'
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 16
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2484.63625

@@ -1,0 +1,13 @@
+{
+  "format_version":"1.2",
+  "complete":false,
+  "variables":{"not_projected":{"value":"SYNTHETIC_VARIABLE_VALUE_OMITTED"}},
+  "resource_changes":[
+    {"address":"example_service.created","type":"example_service","change":{"actions":["create"],"before":null,"after":{"id":null,"endpoint":null,"token":"SYNTHETIC_SECRET_CREATED"},"after_unknown":{"id":true},"before_sensitive":false,"after_sensitive":{"token":true}}},
+    {"address":"example_service.updated","type":"example_service","change":{"actions":["update"],"before":{"token":"SYNTHETIC_SECRET_OLD"},"after":{"token":"SYNTHETIC_SECRET_NEW","optional":null},"before_sensitive":{"token":true},"after_sensitive":{"token":true},"after_unknown":{}}},
+    {"address":"module.old.example_service.main[0]","type":"example_service","change":{"actions":["delete","create"],"before":{"value":"SYNTHETIC_BEFORE_VALUE_OMITTED"},"after":{"value":null},"after_unknown":{"value":true},"before_sensitive":{},"after_sensitive":{},"replace_paths":[["shape",0,"size"]]}},
+    {"address":"module.new.example_service.main[0]","type":"example_service","change":{"actions":["create","delete"],"before":{"token":"SYNTHETIC_REPLACEMENT_SECRET"},"after":{"token":"SYNTHETIC_REPLACEMENT_SECRET_NEW"},"before_sensitive":true,"after_sensitive":true,"after_unknown":{},"replace_paths":[["shape"]]}},
+    {"address":"example_service.unchanged","type":"example_service","change":{"actions":["no-op"],"before":{"visible":"SYNTHETIC_NON_SECRET_STILL_OMITTED"},"after":{"visible":"SYNTHETIC_NON_SECRET_STILL_OMITTED"},"after_unknown":{},"before_sensitive":{},"after_sensitive":{}}}
+  ],
+  "deferred_changes":[{"reason":"resource_config_unknown","resource_change":{"address":"example_service.later","type":"example_service","change":{"actions":["create"],"after_unknown":true,"after_sensitive":true,"after":{"secret":"SYNTHETIC_DEFERRED_SECRET"}}}}]
+}
