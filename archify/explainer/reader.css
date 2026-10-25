@@ -259,7 +259,7 @@ pre code{background:none;border:0;padding:0;white-space:pre;font-size:inherit}
 .diff-code th,.diff-code td{padding:0 8px;border:0;vertical-align:top}
 .diff-code .diff-line{display:table-row}
 .diff-code code{font:inherit;background:none;border:0;padding:0;white-space:pre}
-.diff-code .diff-number{width:1%;min-width:36px;text-align:right;user-select:none;color:var(--faint);border-right:1px solid var(--rule)}
+.diff-code .diff-number{width:1%;min-width:36px;white-space:nowrap;text-align:right;user-select:none;color:var(--faint);border-right:1px solid var(--rule)}
 .diff-code .added{background:color-mix(in srgb,var(--good) 9%,var(--code));color:var(--good)}
 .diff-code .removed{background:color-mix(in srgb,var(--bad) 9%,var(--code));color:var(--bad)}
 .diff-code .hunk{color:var(--accent);background:var(--sunk)}

@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "kind": "portable-evidence-summary",
+  "note": "Projection of actual focused commands/DOM observations; original receipts and full command logs remain outside the checkout. Not an original delivery/browser receipt.",
+  "baseline": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "scope": "One CSS property on shared Explainer diff line-number cells; no parser, schema, content, layout or keyboard-gate change.",
+  "baseCssSha256": "1f2a0b589b39f08af36012e9fadad79a7939ec8c52e2e0cb53018d9431aee1fd",
+  "candidateCssSha256": "c411d46dac27af6923c326c574a660cd208875b60e6381142a534f438629db44",
+  "cssDifference": "Only white-space:nowrap added to .diff-code .diff-number. Removing that property reproduces baseline CSS bytes.",
+  "fixedInputSha256": "060fe0536b626f480ec3fa3f3bf81f3a41ad0bb76f640db362dc5a8f095dc3d1",
+  "finalize": {
+    "base": {
+      "exitCode": 0,
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "not-run"
+      },
+      "artifactSha256": "fb9adc6e3df97f540016c0fb5d04ee4d0b1a696c067590777995af8b37ec24d1",
+      "inputSha256": "060fe0536b626f480ec3fa3f3bf81f3a41ad0bb76f640db362dc5a8f095dc3d1",
+      "rawReceiptHashes": {
+        "base.delivery.json": "d3cc9029dd47992e9aa461e51b458c694055cf23d661427ecb2c0b444d806b9d",
+        "base.finalize-summary.json": "8dc064c858cc860c09e69d16ec281160162cde3ce18e2506b32d3d299e27db8d",
+        "base.finalize.json": "c703e39cdf612beee553dde0c5cedc6d6931050d5615e12bb642c6fa1564cfcc"
+      }
+    },
+    "candidate": {
+      "exitCode": 0,
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "not-run"
+      },
+      "artifactSha256": "7f4a7c9aae063c88be84b0aa1c93550f6fd4445f766bcbe974044165fd79b5fb",
+      "inputSha256": "060fe0536b626f480ec3fa3f3bf81f3a41ad0bb76f640db362dc5a8f095dc3d1",
+      "rawReceiptHashes": {
+        "candidate.delivery.json": "4500f7c359edd8cc54040137b59ca15379da35ac2498e478485fdba7e8fb0df6",
+        "candidate.finalize-summary.json": "5f57089b4ca4499a19500f066414751b0d138e4c29f2da6f895be5678466571b",
+        "candidate.finalize.json": "d59ad60b32b3a8999b6b447eb809833115af61a88f079d88cb355e070c75410e"
+      }
+    }
+  },
+  "focusedDom": {
+    "command": "node experiments/diff-line-numbers/check-browser.mjs <base.html> <candidate.html>",
+    "exitCode": 0,
+    "observations": "browser-observations.json",
+    "arms": 8,
+    "viewports": [
+      1280,
+      390
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "perArmNumbers": 65,
+    "baseBrokenNumbersPerArm": 30,
+    "candidateBrokenNumbersPerArm": 0,
+    "preserved": "All old/new line identities and literal diff text equal across paired pages; long code retains one visual line, local horizontal scroll reaches its last character; document width stays at viewport.",
+    "notChecked": "Physical touch, user speed, assistive technology and full keyboard gate.",
+    "setupCorrection": "Initial probe assumed a theme URL parameter would control the Explainer and failed that setup assertion. Final probe sets prefers-color-scheme through CDP before navigation. No product change was made for that failure."
+  },
+  "tests": {
+    "focused": {
+      "files": [
+        "test/explainer-diff.test.mjs",
+        "test/explainer-renderer.test.mjs"
+      ],
+      "passed": 25,
+      "failed": 0,
+      "skipped": 0
+    },
+    "core": {
+      "passed": 19,
+      "failed": 0,
+      "skipped": 0
+    },
+    "generated": {
+      "status": "pass"
+    }
+  },
+  "package": {
+    "node": "22.23.2",
+    "zlib": "1.3.1-e00f703",
+    "twoBuildsByteIdentical": true,
+    "sha256": "f1f4863b8a15f8c4324314e48a044724ec2dc7dcc1cdbc8800cc6e64addf147c",
+    "bytes": 5425030,
+    "packagedCssMatchesSource": true,
+    "liveInstallation": "not-requested; not-performed"
+  },
+  "hashes": {
+    "input.explainer.json": "060fe0536b626f480ec3fa3f3bf81f3a41ad0bb76f640db362dc5a8f095dc3d1",
+    "source.json": "2937ddcc439475960d132fbb712d08b5c51b0fb491a7577555ee089f43755d71",
+    "check-browser.mjs": "2632e5cfd5097c400431ab05f7f53981bc32e1c4ca983ebb7357f6998611d835",
+    "base.html": "fb9adc6e3df97f540016c0fb5d04ee4d0b1a696c067590777995af8b37ec24d1",
+    "candidate.html": "7f4a7c9aae063c88be84b0aa1c93550f6fd4445f766bcbe974044165fd79b5fb",
+    "browser-observations.json": "a01dbd9aaff37588bb35f58a9e199d7f0baac699ed029f4ccce47108a8622b52"
+  },
+  "rawCommandHashes": {
+    "base-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "base-stdout.json": "01de7aed598e026bd9d1fe7ff6f2a8f22908dee25d44888752dd8e1fefd38a91",
+    "browser-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "browser.json": "658b3209a2e670a9a8bfeb391155d3c837748706247c757bd29898277337b6f5",
+    "candidate-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "candidate-stdout.json": "fc9597ff0656379413a05dff2afd1cb17542da233111261f5750a3037e402e47",
+    "core.tap": "397b631a0d98037efbe3a786701ab4c0585c893793d013e7d3cc00746fd1800c",
+    "focused.tap": "b3d0f0613a8d79e3359f9a8d7b8fdcc5399ace127ef47a86b95193e126424679",
+    "generated.log": "cc9722741c3f0751bb498fa20a10fa378e75647b33d7e6096a8f2bedd518e814",
+    "initial-theme-probe-browser-stderr.txt": "d0837721d948e2f0e4e1f3d1645b2d0a17e53162871ea6a2417b46578aac7b29",
+    "initial-theme-probe-browser.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "zip-first.log": "38834b8cb3b26b170b4f715b8547372a02013764555fedc9387d9175aa74fd4a",
+    "zip-second.log": "010326208ef942ddd2b78ad2a4a98a049b70e137cfe7fd2bb76bd87a7ebfc3a9",
+    "toolchains.json": "4917e6e8488438aba70cfcdff5166c12c3e35173a2fda35a148ed2b8714d31bf"
+  },
+  "toolchains": {
+    "runtime": {
+      "node": "22.23.3",
+      "zlib": "1.2.12"
+    },
+    "canonicalPackage": {
+      "node": "22.23.2",
+      "zlib": "1.3.1-e00f703"
+    }
+  },
+  "screenshots": {
+    "capture": "screenshots/capture.json",
+    "captureSha256": "72be585a8b1feba9f0b9f81e1bfadf13d9491e0bfbaf4cffe37a65233a51c267",
+    "images": {
+      "screenshots/base-1280-light.png": "7809a3b96b47f77825f6b251f9eb8952dbdbadfe2479029cd4ece24e94d32799",
+      "screenshots/candidate-1280-light.png": "0debc5e3a5364c9e83850c098581b7dd18cacea7503166050a291f8f6ff56cec",
+      "screenshots/base-390-light.png": "b0bc7ac5c165326b0da21e1ab2c301db6d9924881c154ba54e3fb065beb53c56",
+      "screenshots/candidate-390-light.png": "9919dbf49da00e5d6ac9509d283bd895c8f23bdfd61fef1a3cd8e1c49164d378"
+    },
+    "rootViewed": true,
+    "note": "Real unedited Ego Chromium captures; same scrollIntoView target/state instruction. Desktop Y differs because the shorter candidate document naturally clamps near its end. Not pixel-aligned crop comparison; no PR code/tests executed or human acceptance."
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "kind": "actual Ego Chromium screenshot evidence; same input and browser state instructions",
+  "records": [
+    {
+      "html": "base.html",
+      "htmlSha256": "fb9adc6e3df97f540016c0fb5d04ee4d0b1a696c067590777995af8b37ec24d1",
+      "image": "screenshots/base-1280-light.png",
+      "imageSha256": "7809a3b96b47f77825f6b251f9eb8952dbdbadfe2479029cd4ece24e94d32799",
+      "capturedAt": "2026-10-25T06:59:32.198Z",
+      "viewport": {
+        "width": 1280,
+        "height": 1000,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "theme": "light",
+      "state": "scrollIntoView diff-await-close-0; browser naturally clamps near document end",
+      "observed": {
+        "scrollY": 6462.5,
+        "anchorY": 129.2734375,
+        "pageWidth": 1280
+      },
+      "rootViewed": true
+    },
+    {
+      "html": "candidate.html",
+      "htmlSha256": "7f4a7c9aae063c88be84b0aa1c93550f6fd4445f766bcbe974044165fd79b5fb",
+      "image": "screenshots/candidate-1280-light.png",
+      "imageSha256": "0debc5e3a5364c9e83850c098581b7dd18cacea7503166050a291f8f6ff56cec",
+      "capturedAt": "2026-10-25T06:59:33.582Z",
+      "viewport": {
+        "width": 1280,
+        "height": 1000,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "theme": "light",
+      "state": "scrollIntoView diff-await-close-0; browser naturally clamps near document end",
+      "observed": {
+        "scrollY": 5850.5,
+        "anchorY": 313.2734375,
+        "pageWidth": 1280
+      },
+      "rootViewed": true
+    },
+    {
+      "html": "base.html",
+      "htmlSha256": "fb9adc6e3df97f540016c0fb5d04ee4d0b1a696c067590777995af8b37ec24d1",
+      "image": "screenshots/base-390-light.png",
+      "imageSha256": "b0bc7ac5c165326b0da21e1ab2c301db6d9924881c154ba54e3fb065beb53c56",
+      "capturedAt": "2026-10-25T06:59:33.878Z",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "theme": "light",
+      "state": "scrollIntoView diff-await-close-0; browser naturally clamps near document end",
+      "observed": {
+        "scrollY": 8415,
+        "anchorY": 0.2109375,
+        "pageWidth": 390
+      },
+      "rootViewed": true
+    },
+    {
+      "html": "candidate.html",
+      "htmlSha256": "7f4a7c9aae063c88be84b0aa1c93550f6fd4445f766bcbe974044165fd79b5fb",
+      "image": "screenshots/candidate-390-light.png",
+      "imageSha256": "9919dbf49da00e5d6ac9509d283bd895c8f23bdfd61fef1a3cd8e1c49164d378",
+      "capturedAt": "2026-10-25T06:59:34.184Z",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "theme": "light",
+      "state": "scrollIntoView diff-await-close-0; browser naturally clamps near document end",
+      "observed": {
+        "scrollY": 7987,
+        "anchorY": -0.15625,
+        "pageWidth": 390
+      },
+      "rootViewed": true
+    }
+  ]
+}

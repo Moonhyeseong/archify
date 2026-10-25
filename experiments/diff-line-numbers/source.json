@@ -1,0 +1,23 @@
+{
+  "kind": "fixed-real-pr-review-input",
+  "sourceRepository": "https://github.com/tt-a1i/archify",
+  "sourceCommit": "dcedd53856b82d3e403a9651dca0e15840496942",
+  "sourcePath": "experiments/task-review-map/pr-1097/authored-layout/explainer.json",
+  "inputSha256": "060fe0536b626f480ec3fa3f3bf81f3a41ad0bb76f640db362dc5a8f095dc3d1",
+  "sourceUrl": "https://github.com/tt-a1i/archify/blob/dcedd53856b82d3e403a9651dca0e15840496942/experiments/task-review-map/pr-1097/authored-layout/explainer.json",
+  "prUrl": "https://github.com/tt-a1i/archify/pull/1097",
+  "prBase": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "prHead": "5f012ab74911781e4a2a38fba791801d6e5afef7",
+  "scope": "Complete unchanged authored-layout Explainer spec from task-review-map; same input for base and candidate. No PR code/tests executed. Mapping remains incomplete because ZIP is unresolved; line references are independent Codex statements, not semantic or execution proof.",
+  "originalProblem": "Three-digit rendered diff line numbers wrap under inherited overflow-wrap:anywhere. Data values are not lost or changed.",
+  "relatedLookup": {
+    "date": "2026-10-25",
+    "queries": [
+      "repo:tt-a1i/archify diff in:title",
+      "repo:tt-a1i/archify \"diff-number\""
+    ],
+    "result": "No exact title/selector match found in these bounded searches; not proof that no related issue exists.",
+    "relatedPr1015": "Open broader Explainer polish patch touches reader.css; inspected diff does not modify diff-number.",
+    "pr1097": "Pie diagnostic source-line correctness; different responsibility from rendering its code-review line-number gutter."
+  }
+}
