@@ -1,0 +1,38 @@
+{
+  "root": "/synthetic-private-root",
+  "environment": {
+    "SECRET": "SENSITIVE_ENV_SENTINEL"
+  },
+  "summary": {
+    "total": 1
+  },
+  "exitcode": 1,
+  "tests": [
+    {
+      "nodeid": "tests/test_orders.py::test_total",
+      "lineno": 9,
+      "outcome": "error",
+      "setup": {
+        "outcome": "passed"
+      },
+      "call": {
+        "outcome": "passed"
+      },
+      "teardown": {
+        "outcome": "failed",
+        "crash": {
+          "path": "tests/conftest.py",
+          "lineno": 32,
+          "message": "Synthetic cleanup failure"
+        },
+        "traceback": [
+          {
+            "path": "tests/conftest.py",
+            "lineno": 32,
+            "message": "Synthetic cleanup frame"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "pytest-failure-reading",
+  "classification": "synthetic",
+  "exporterCommit": "c6f0bc93a174770e04b965e459d339a880005e78",
+  "pytestVersion": "8.4.2",
+  "reportSha256": "39583263c80a630fb99e68d802f771f93e4dcfb4e1de1e60cb69fc8a3e1e9747",
+  "availability": "provided records only; no completeness claim",
+  "tests": [],
+  "collectors": [
+    {
+      "collector": "tests/test_import.py",
+      "outcome": "failed",
+      "sourceLocation": "not supplied by collector serializer",
+      "longrepr": "not exported by this reader"
+    }
+  ],
+  "locations": [],
+  "reportedFailedStages": null,
+  "reportedFailedCollectors": 1,
+  "privacy": {
+    "omittedTopAndStageFieldCount": 6,
+    "excluded": "root/environment/streams/log/longrepr/duration/summary/unknown fields and non-allowlisted paths; messages included only when explicitly enabled",
+    "warning": "Test identities, paths and selected messages are metadata and may still identify people/projects. This projection is not an anonymization guarantee."
+  },
+  "sourceVerification": "unverified literal positions only; no frame/test path or URL opened"
+}

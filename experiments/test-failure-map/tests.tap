@@ -1,0 +1,70 @@
+TAP version 13
+# Subtest: zero-based test location increments once; crash/frame one-based positions stay unchanged
+ok 1 - zero-based test location increments once; crash/frame one-based positions stay unchanged
+  ---
+  duration_ms: 1.794791
+  type: 'test'
+  ...
+# Subtest: teardown failure is retained beside a passed call; collection-only is not fabricated as test failure
+ok 2 - teardown failure is retained beside a passed call; collection-only is not fabricated as test failure
+  ---
+  duration_ms: 0.33175
+  type: 'test'
+  ...
+# Subtest: omitted, missing and empty traceback are different and no summary-only success is inferred
+ok 3 - omitted, missing and empty traceback are different and no summary-only success is inferred
+  ---
+  duration_ms: 0.8125
+  type: 'test'
+  ...
+# Subtest: source identity, line conventions, duplicate nodeids and phase conflicts reject rather than invent
+ok 4 - source identity, line conventions, duplicate nodeids and phase conflicts reject rather than invent
+  ---
+  duration_ms: 1.313334
+  type: 'test'
+  ...
+# Subtest: privacy projection strips report contents and never reads path/URL locations
+ok 5 - privacy projection strips report contents and never reads path/URL locations
+  ---
+  duration_ms: 0.290958
+  type: 'test'
+  ...
+# Subtest: literal hostile identities/messages render safely without links, HTML, directives or frame reads
+ok 6 - literal hostile identities/messages render safely without links, HTML, directives or frame reads
+  ---
+  duration_ms: 217.027792
+  type: 'test'
+  ...
+# Subtest: fresh output protection preserves input aliases, symlink victims and later-file collisions
+ok 7 - fresh output protection preserves input aliases, symlink victims and later-file collisions
+  ---
+  duration_ms: 9.583667
+  type: 'test'
+  ...
+# Subtest: CLI hash failure is nonzero and creates no output directory
+ok 8 - CLI hash failure is nonzero and creates no output directory
+  ---
+  duration_ms: 55.10775
+  type: 'test'
+  ...
+# Subtest: inherited test nodeid never supplies a missing definition-file path
+ok 9 - inherited test nodeid never supplies a missing definition-file path
+  ---
+  duration_ms: 0.444875
+  type: 'test'
+  ...
+# Subtest: normal pages show compact provenance instead of the full projection; overflow literals remain inspectable
+ok 10 - normal pages show compact provenance instead of the full projection; overflow literals remain inspectable
+  ---
+  duration_ms: 0.72825
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 354.605042

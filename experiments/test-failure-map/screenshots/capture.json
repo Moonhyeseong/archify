@@ -1,0 +1,82 @@
+{
+  "kind": "portable-browser-capture-summary",
+  "date": "2026-10-25",
+  "captureTool": "ego-browser",
+  "taskSpace": 4,
+  "images": [
+    {
+      "image": "setup.png",
+      "sha256": "5a794832b3d6d6ab549b6c68fc7c58eaeb6625bc96db564f48aa77ae3501bd7e",
+      "width": 1440,
+      "height": 1612,
+      "source": "../evidence-setup/failure.html",
+      "sourceSha256": "13671b0d8a758ad672a1c363b3c26c9235027ac5a1929a6dfe2934fcbcb3890d",
+      "capturedAtUtc": "2026-10-25T05:16:16.289345+00:00",
+      "viewportCss": [
+        1440,
+        1000
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "theme": "light"
+    },
+    {
+      "image": "teardown.png",
+      "sha256": "7c62e29f46318178b5e40d1223a83807d9fc774506cfcb008f9ff88206c08fd2",
+      "width": 1440,
+      "height": 1612,
+      "source": "../evidence-teardown/failure.html",
+      "sourceSha256": "c259f9ab5caedb0e9e4dceaa8906bbbf40033292663a48a43f3e8d0a2bdfe0d4",
+      "capturedAtUtc": "2026-10-25T05:16:16.480947+00:00",
+      "viewportCss": [
+        1440,
+        1000
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "theme": "light"
+    },
+    {
+      "image": "collection.png",
+      "sha256": "b5852f97273f62cab8d22261706e9e708a06ea2dc10f51189f1b9e9493861ff7",
+      "width": 1440,
+      "height": 1204,
+      "source": "../evidence-collection/failure.html",
+      "sourceSha256": "52030964931a5eed74ef24aace2079064e70c92f39e4649ba953fc4558de84fd",
+      "capturedAtUtc": "2026-10-25T05:16:16.657212+00:00",
+      "viewportCss": [
+        1440,
+        1000
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "theme": "light"
+    },
+    {
+      "image": "omitted.png",
+      "sha256": "edc11f08099866e459ae008e661d347eea8fb1b4f0a34942a6ad65af7d3613f0",
+      "width": 1440,
+      "height": 1483,
+      "source": "../evidence-omitted/failure.html",
+      "sourceSha256": "61f926b680f35fc2e90f6e1c184e4c267f6240dd040a2cf6b3fea26d009a7ea9",
+      "capturedAtUtc": "2026-10-25T05:16:16.846389+00:00",
+      "viewportCss": [
+        1440,
+        1000
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "theme": "light"
+    }
+  ],
+  "sourceSha256": {
+    "report-reader.mjs": "62421cccff86143e47cbe671183af1bf580d0fb470f2ed2506ff233598f163a1",
+    "report-reader.test.mjs": "696697f1fc296de5507188ef4e069a4643d4a40ea63c64bc15fbd8e6d04109ac"
+  },
+  "agentVisualReview": [
+    "Parent agent viewed all four final actual pages after the inherited-definition-path correction.",
+    "Phase and supplied-location tables remain primary; complete projection JSON is retained separately.",
+    "Selected messages and traceback coverage remain visible in the compact layout. No measured diagnosis-time benefit is claimed."
+  ],
+  "humanAcceptance": "pending"
+}

@@ -1,0 +1,31 @@
+{
+  "root": "/synthetic-private-root",
+  "environment": {
+    "SECRET": "SENSITIVE_ENV_SENTINEL"
+  },
+  "summary": {
+    "total": 1
+  },
+  "exitcode": 1,
+  "tests": [
+    {
+      "nodeid": "tests/test_orders.py::test_total",
+      "lineno": 9,
+      "outcome": "failed",
+      "setup": {
+        "outcome": "passed"
+      },
+      "call": {
+        "outcome": "failed",
+        "crash": {
+          "path": "tests/test_orders.py",
+          "lineno": 14,
+          "message": "Synthetic assertion failure; detailed frames omitted"
+        }
+      },
+      "teardown": {
+        "outcome": "passed"
+      }
+    }
+  ]
+}

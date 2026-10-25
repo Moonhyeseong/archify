@@ -1,0 +1,10 @@
+{
+  "kind": "actual-cli-failure-evidence",
+  "exitCode": 1,
+  "diagnostic": {
+    "ok": false,
+    "code": "failure/hash",
+    "message": "Report bytes do not match the sidecar SHA-256."
+  },
+  "outputDirectoryCreated": false
+}

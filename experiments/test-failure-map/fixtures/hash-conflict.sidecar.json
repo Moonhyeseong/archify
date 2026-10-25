@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "classification": "synthetic",
+  "exporterCommit": "c6f0bc93a174770e04b965e459d339a880005e78",
+  "pytestVersion": "8.4.2",
+  "reportSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "pathMap": {
+    "tests/test_orders.py": "tests/test_orders.py",
+    "tests/conftest.py": "tests/conftest.py",
+    "tests/test_import.py": "tests/test_import.py"
+  },
+  "traceback": "provided",
+  "showMessages": true
+}

@@ -1,0 +1,39 @@
+{
+  "root": "/synthetic-private-root",
+  "environment": {
+    "SECRET": "SENSITIVE_ENV_SENTINEL"
+  },
+  "summary": {
+    "total": 1
+  },
+  "exitcode": 1,
+  "tests": [
+    {
+      "nodeid": "tests/test_orders.py::test_total",
+      "lineno": 9,
+      "outcome": "error",
+      "setup": {
+        "outcome": "failed",
+        "crash": {
+          "path": "tests/conftest.py",
+          "lineno": 18,
+          "message": "Synthetic fixture initialization failure"
+        },
+        "traceback": [
+          {
+            "path": "tests/conftest.py",
+            "lineno": 18,
+            "message": "Synthetic supplied frame"
+          }
+        ],
+        "stdout": "SENSITIVE_STREAM_SENTINEL",
+        "log": [
+          "SENSITIVE_LOG_SENTINEL"
+        ]
+      },
+      "teardown": {
+        "outcome": "passed"
+      }
+    }
+  ]
+}

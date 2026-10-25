@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "status": "pass",
+  "quality": "showcase",
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReview": "not-requested",
+  "kind": "portable-summary-not-original-receipt",
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "node": "22.23.3",
+  "recordedAt": "2026-10-25",
+  "command": "node archify/bin/archify.mjs finalize explainer experiments/test-failure-map/evidence-collection/failure.archify.md experiments/test-failure-map/evidence-collection/failure.html --browser-check --json",
+  "note": "Transcription of actual final public finalize stdout; personal paths omitted. Raw receipts retained outside checkout.",
+  "specification": {
+    "sha256": "65bb6cc4886e6c4dc42999f7918da95b218e852f9ddc2079d79ab9851da8a4db",
+    "bytes": 2155
+  },
+  "artifact": {
+    "sha256": "52030964931a5eed74ef24aace2079064e70c92f39e4649ba953fc4558de84fd",
+    "bytes": 130073
+  },
+  "revisionNote": "Presentation only: compact provenance/omission summary; complete projection remains a separate unchanged JSON file; only overflow literals are repeated."
+}

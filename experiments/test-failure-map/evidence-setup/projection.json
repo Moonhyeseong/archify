@@ -1,0 +1,90 @@
+{
+  "kind": "pytest-failure-reading",
+  "classification": "synthetic",
+  "exporterCommit": "c6f0bc93a174770e04b965e459d339a880005e78",
+  "pytestVersion": "8.4.2",
+  "reportSha256": "91a4bc251ef56de001f7444319083a308dc69a388e1b25821ada2a53c2db9b62",
+  "availability": "provided records only; no completeness claim",
+  "tests": [
+    {
+      "test": "tests/test_orders.py::test_total",
+      "reportedOutcome": "error",
+      "stages": {
+        "setup": {
+          "outcome": "failed",
+          "traceback": "supplied entries; not a complete call graph",
+          "crash": {
+            "owner": "tests/test_orders.py::test_total",
+            "role": "setup crash",
+            "path": "tests/conftest.py",
+            "rawLine": 18,
+            "displayLine": 18,
+            "lineConvention": "one-based; unchanged",
+            "sourceVerification": "unverified literal; source text not read",
+            "message": "Synthetic fixture initialization failure"
+          },
+          "frames": [
+            {
+              "owner": "tests/test_orders.py::test_total",
+              "role": "setup frame",
+              "path": "tests/conftest.py",
+              "rawLine": 18,
+              "displayLine": 18,
+              "lineConvention": "one-based; unchanged",
+              "sourceVerification": "unverified literal; source text not read",
+              "message": "Synthetic supplied frame"
+            }
+          ]
+        },
+        "call": {
+          "outcome": "not-provided",
+          "traceback": "unavailable: stage missing"
+        },
+        "teardown": {
+          "outcome": "passed",
+          "traceback": "unavailable: not provided; absence does not prove an empty stack"
+        }
+      }
+    }
+  ],
+  "collectors": [],
+  "locations": [
+    {
+      "owner": "tests/test_orders.py::test_total",
+      "role": "reported test line (file unavailable)",
+      "path": "unavailable: definition file not exported",
+      "rawLine": 9,
+      "displayLine": 10,
+      "lineConvention": "zero-based test.lineno + 1",
+      "sourceVerification": "location[0] omitted by exporter; nodeid path is not a definition-file claim"
+    },
+    {
+      "owner": "tests/test_orders.py::test_total",
+      "role": "setup crash",
+      "path": "tests/conftest.py",
+      "rawLine": 18,
+      "displayLine": 18,
+      "lineConvention": "one-based; unchanged",
+      "sourceVerification": "unverified literal; source text not read",
+      "message": "Synthetic fixture initialization failure"
+    },
+    {
+      "owner": "tests/test_orders.py::test_total",
+      "role": "setup frame",
+      "path": "tests/conftest.py",
+      "rawLine": 18,
+      "displayLine": 18,
+      "lineConvention": "one-based; unchanged",
+      "sourceVerification": "unverified literal; source text not read",
+      "message": "Synthetic supplied frame"
+    }
+  ],
+  "reportedFailedStages": 1,
+  "reportedFailedCollectors": null,
+  "privacy": {
+    "omittedTopAndStageFieldCount": 6,
+    "excluded": "root/environment/streams/log/longrepr/duration/summary/unknown fields and non-allowlisted paths; messages included only when explicitly enabled",
+    "warning": "Test identities, paths and selected messages are metadata and may still identify people/projects. This projection is not an anonymization guarantee."
+  },
+  "sourceVerification": "unverified literal positions only; no frame/test path or URL opened"
+}

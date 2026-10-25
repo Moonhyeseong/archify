@@ -1,0 +1,18 @@
+{
+  "root": "/synthetic-private-root",
+  "environment": {
+    "SECRET": "SENSITIVE_ENV_SENTINEL"
+  },
+  "summary": {
+    "total": 1
+  },
+  "exitcode": 1,
+  "collectors": [
+    {
+      "nodeid": "tests/test_import.py",
+      "outcome": "failed",
+      "result": [],
+      "longrepr": "SENSITIVE_LONGREPR_SENTINEL"
+    }
+  ]
+}
