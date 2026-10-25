@@ -39,7 +39,7 @@ Archify固定基线为 [`10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0`](https://gith
 
 [calculateReportModel](https://github.com/dorongold/gradle-task-tree/blob/84cda7f0ce2363c96b1b26713ad34558519bdf05/src/main/groovy/com/dorongold/gradle/tasktree/TaskTreeTaskBase.groovy#L82-L119)从Gradle executionPlan.entryNodes开始，以task identityPath构造report；[TaskGraphUtils](https://github.com/dorongold/gradle-task-tree/blob/84cda7f0ce2363c96b1b26713ad34558519bdf05/src/main/groovy/utils/TaskGraphUtils.groovy#L28-L64)取dependencySuccessors，并unwrap included-build node。它是该次invocation计划依赖的投影，不能仅称静态扫描build.gradle。
 
-[插件skipAllTasks](https://github.com/dorongold/gradle-task-tree/blob/84cda7f0ce2363c96b1b26713ad34558519bdf05/src/main/groovy/com/dorongold/gradle/tasktree/TaskTreePlugin.groovy#L59-L86)禁用尚未executed的任务；已经提前执行的会记日志。因此不能把“taskTree跳过任务执行”扩成“调用Gradle绝无配置/其他代码执行”。本轮没有调用它。
+[插件skipAllTasks](https://github.com/dorongold/gradle-task-tree/blob/84cda7f0ce2363c96b1b26713ad34558519bdf05/src/main/groovy/com/dorongold/gradle/tasktree/TaskTreePlugin.groovy#L59-L76)禁用尚未executed的任务；已经提前执行的会记日志。因此不能把“taskTree跳过任务执行”扩成“调用Gradle绝无配置/其他代码执行”。本轮没有调用它。
 
 另外，included-build unwrap异常会返回空set并记录INFO；画出来的叶子可能表示读取失败，而非真实无依赖。这个错误分支是另一组[source/fixture](https://github.com/dorongold/gradle-task-tree/blob/84cda7f0ce2363c96b1b26713ad34558519bdf05/src/test/groovy/utils/TaskGraphUtilsTest.groovy#L50)，不是正常11位置expected里已发生的错误；不能为讲未知而添加一项虚假失败。
 
