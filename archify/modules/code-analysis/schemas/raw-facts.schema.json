@@ -19,7 +19,8 @@
         "snapshotId": { "type": "string", "pattern": "^[a-f0-9]{64}$", "description": "Digest identifying the extracted facts and captured source text." },
         "url": { "type": ["string", "null"], "description": "Git origin URL as configured; null when there is no Git repository or no origin." },
         "language": { "enum": ["ts", "py", "java"] },
-        "adapter": { "type": "string" }
+        "adapter": { "type": "string", "description": "Parser or runtime the adapter used, with its version." },
+        "adapterRevision": { "type": "integer", "minimum": 1, "description": "Revision of the adapter's own extraction logic. Absent in facts written before revisions were recorded." }
       }
     },
     "files": {

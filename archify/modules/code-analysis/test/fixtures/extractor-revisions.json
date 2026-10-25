@@ -1,0 +1,17 @@
+{
+  "ts": {
+    "fixture": "ts-basic",
+    "revision": 1,
+    "digest": "54c38cad3ad5390f55cd9257eb5cb32adeee445b051f31bb819527be47e1eb37"
+  },
+  "py": {
+    "fixture": "py-basic",
+    "revision": 1,
+    "digest": "c38b44b6071507e9d34c88ad26445b94554e920e6cfdaab1669b7c4697594657"
+  },
+  "java": {
+    "fixture": "java-basic",
+    "revision": 1,
+    "digest": "5de617bdb6a28153fde417fe7705c8db19b3d316df31e99c57710683b4264099"
+  }
+}

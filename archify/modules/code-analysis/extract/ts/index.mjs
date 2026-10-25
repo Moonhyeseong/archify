@@ -11,6 +11,10 @@ import { fail } from '../shared/diagnostics.mjs';
 import { measureFunctions } from './functions.mjs';
 
 export const id = 'ts';
+// Revision of this adapter's own extraction logic, recorded as
+// repository.adapterRevision. Bump it when the same sources can yield different
+// raw facts (see docs/TECH-GUIDE.md, "Extractor revisions").
+export const REVISION = 1;
 
 const SOURCE_EXT = /\.(?:[mc]?[jt]s|[jt]sx)$/;
 // Placeholder specifier for import()/require() calls whose argument is not a string literal.
@@ -97,7 +101,7 @@ export function extract(root, config) {
   const repo = describeRepository(absRoot);
   return {
     schema_version: 1,
-    repository: { ...repo, language: 'ts', adapter: `typescript@${ts.version}` },
+    repository: { ...repo, language: 'ts', adapter: `typescript@${ts.version}`, adapterRevision: REVISION },
     files: fileRecords,
     packageMarkers,
     imports,

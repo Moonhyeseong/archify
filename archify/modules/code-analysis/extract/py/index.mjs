@@ -11,6 +11,8 @@ import { classifyRole, listFiles, snapshotSources } from '../shared/files.mjs';
 import { describeRepository } from '../shared/git.mjs';
 
 export const id = 'py';
+// Extraction logic revision; see extract/ts/index.mjs and docs/TECH-GUIDE.md.
+export const REVISION = 1;
 
 const SCRIPT = path.join(path.dirname(fileURLToPath(import.meta.url)), 'extract.py');
 const PY_EXT = /\.py$/;
@@ -97,7 +99,7 @@ export function extract(root, config) {
   const repo = describeRepository(absRoot);
   const facts = {
     schema_version: 1,
-    repository: { ...repo, language: 'py', adapter: `python@${output.python}` },
+    repository: { ...repo, language: 'py', adapter: `python@${output.python}`, adapterRevision: REVISION },
     files: fileRecords,
     packageMarkers,
     imports,

@@ -54,6 +54,7 @@ export function analysisContext({ graph, config = {}, facts = null, active = RUL
     analyzer: { name: PACKAGE.name, version: PACKAGE.version },
     language: graph?.repository?.language ?? null,
     adapter: graph?.repository?.adapter ?? null,
+    adapterRevision: graph?.repository?.adapterRevision ?? null,
     // Key order is kept, not sorted: boundary layers and module groups are first-match
     // maps, so reordering them can change which layer or group owns a file. Reordering
     // any key therefore reads as a config change, which errs toward "not comparable".
