@@ -1,0 +1,569 @@
+#!/usr/bin/env python3.9
+import contextlib, hashlib, os, re, sys, tempfile, threading, unittest
+
+runAllTests="RUNALLTESTS" in os.environ and os.environ['RUNALLTESTS']
+_totalNumberOfAssertions = 7868 + (40096 if runAllTests else 0)
+
+# A table of strings expected to be included in the error message when validating invalid diff files
+expectedErrorMessagesForInvalidFiles={
+    '001/08-a-b.invalid.hintful.diff': ['[HDF11]', 'line 24:', 'end of file'],
+    '001/09-a-b.invalid.hintful.diff': ['[HDF11]', 'lines 4, 15:'],
+    '001/10-a-b.invalid.hintful.diff': ['[HDF13]', 'line 23:'],
+    '001/11-a-b.invalid.hintful.diff': ['[HDF15]', 'line 24:'],
+    '001/12-a-b.invalid.hintful.diff': ['[HDF11]', 'lines 4, 24:', 'right side'],
+    '001/20-a-b.invalid.hintful.diff': ['[HDF12]', 'line 8:'],
+    '001/21-a-b.invalid.hintful.diff': ['[HDF17]', 'line 15:'],
+    '001/22-a-b.invalid.hintful.diff': ['[HDF22]', 'line 2:'],
+    '002/02-a-b.invalid.hintful.diff': ['[HDF16]', 'line 8:', 'CR character not allowed before $ newline marker'],
+    '002/03-a-b.invalid.hintful.diff': ['[HDF16]', 'line 8:', 'sequence'],
+    '002/04-a-b.invalid.hintful.diff': ['[HDF16]', 'line 8:', 'sequence'],
+    '002/05-a-b.invalid.hintful.diff': ['[HDF18]', 'line 8:', 'left side'],
+    '003/02-o-b.invalid.compat.diff':  ['[HDF41]', 'line 1:'],
+    '003/07-a-m.invalid.hintful.diff': ['[HDF37]', 'line 39:', 'right side'],
+    '003/09-b-m.invalid.hintful.diff': ['[HDF15]', 'line 47:'],
+    '003/10-o-b.invalid.hintful.diff': ['[HDF24]', 'line 22:'],
+    '003/11-o-b.invalid.hintful.diff': ['[HDF24]', 'line 40:'],
+    '003/12-o-b.invalid.hintful.diff': ['[HDF24]', 'line 22:'],
+    '003/13-o-b.invalid.hintful.diff': ['[HDF36]', 'line 5:'],
+    '003/14-o-b.invalid.hintful.diff': ['[HDF33]', 'lines 1, 19:'],
+    '003/15-o-b.invalid.hintful.diff': ['[HDF35]', 'lines 2, 28:', '`index`', 'mismatch'],
+    '003/16-o-b.invalid.hintful.diff': ['[HDF34]', 'lines 2, 27:', '`index`', 'missing'],
+    '003/17-o-b.invalid.hintful.diff': ['[HDF35]', 'lines 3, 29:', '---', 'mismatch'],
+    '003/18-o-b.invalid.hintful.diff': ['[HDF34]', 'lines 3, 4, 27:', '---', 'missing'],
+    '003/19-o-b.invalid.hintful.diff': ['[HDF23]', 'line 10:', 'git', 'hintful'],
+    '003/20-o-b.invalid.compat.diff':  ['[HDF23]', 'line 10:', 'git', 'hintful'],
+    '003/21-a-m.invalid.compat.diff':  ['[HDF21]', 'line 1:'],
+    '003/22-a-m.invalid.compat.diff':  ['[HDF21]', 'line 27:'],
+    '003/23-a-m.invalid.unified.diff': ['[HDF21]', 'line 27:'],
+    '003/39-o-b.invalid.hintful.diff': ['[HDF31]', 'line 2:', '`index`'],
+    '003/40-o-b.invalid.hintful.diff': ['[HDF31]', 'line 3:', '---'],
+    '003/41-o-b.invalid.hintful.diff': ['[HDF31]', 'line 4:', '+++'],
+    '003/42-o-b.invalid.hintful.diff': ['[HDF31]', 'line 5:', 'hunk header'],
+    '003/43-o-b.invalid.hintful.diff': ['[HDF31]', 'line 6:', 'content'],
+    '003/49-o-b.invalid.hintful.diff': ['[HDF32]', 'line 1:'],
+    '003/52-a-m.invalid.hintful.diff': ['[HDF21]', 'line 10:', '---'],
+    '003/53-a-m.invalid.hintful.diff': ['[HDF21]', 'line 10:', '+++'],
+    '003/54-a-m.invalid.hintful.diff': ['[HDF21]', 'line 10:', 'similarity index'],
+    '003/55-a-m.invalid.hintful.diff': ['[HDF21]', 'line 10:', 'rename from'],
+    '003/56-a-m.invalid.hintful.diff': ['[HDF21]', 'line 10:', 'rename to'],
+    '003/57-a-m.invalid.hintful.diff': ['[HDF21]', 'line 10:', '`index`'],
+    '003/58-a-m.invalid.hintful.diff': ['[HDF21]', 'line 10:', 'deleted file mode'],
+    '003/59-a-m.invalid.hintful.diff': ['[HDF21]', 'line 10:', 'new file mode'],
+}
+
+def m(pattern, string):
+    match = re.match(pattern, string, re.DOTALL)
+    if not match:
+        return None
+    if(match.group(0) != string):
+        die(f'Pattern /${pattern}/ matched only part of string')
+    ret = []
+    for index in range((match.lastindex or 0)+1):
+        ret.append(match.group(index))
+    return ret
+
+def die(reason):
+    raise Exception(reason)
+
+# Polyfill
+if not 'waitstatus_to_exitcode' in dir(os):
+    def waitstatus_to_exitcode(sts):
+        if os.WIFSIGNALED(sts):
+            return -os.WTERMSIG(sts)
+        else:
+            assert os.WIFEXITED(sts), "Status is {:n}".format(sts)
+            return os.WEXITSTATUS(sts)
+    os.waitstatus_to_exitcode = waitstatus_to_exitcode
+
+# Multithreading helpers
+_local=threading.local()
+# Keep track of the thread-local path of nested tests
+_local.nestTestMsgs = []
+# Keep track of a thread-local simulated CWD, since the CWD is set per process.
+_local.cwd = os.getcwd()
+def cwd():
+    global _local
+    return _local.cwd
+def shQuote(s):
+    assert type(s)==str
+    ret=r"`printf '"
+    for char in s:
+        code=ord(char)
+        assert 0 < code <= 0xff
+        ret+='\\'+('00'+oct(code)[2:])[-3:]
+    ret+="'`"
+    return ret
+def os_system(cmd):
+    global _firstError
+    if _firstError:
+        die('An error occurred elsewhere, so stopping all activity')
+    # Since we cannot `set -o pipefail` in POSIX sh, we instead forbid piping.
+    if '|' in cmd:
+        die(f'No piping in os_system. cmd: {cmd}')
+    return os.system(f'cd {cwd()} || exit 2; {cmd}')
+def joinCwd(*path): return os.path.abspath(os.path.join(cwd(), *path))
+def os_listdir(dir='.'): return os.listdir(joinCwd(dir))
+def os_path_isdir(path): return os.path.isdir(joinCwd(path))
+def os_path_isfile(path): return os.path.isfile(joinCwd(path))
+# With multiple threads we can get multiple concurrent exceptions. We only want to report the first.
+_firstError=None
+def refineException(e):
+    global _firstError
+    if _firstError:
+        e.isFirstError = False
+    else:
+        # Save the first error that occurred to a global variable
+        _firstError=e
+        e.isFirstError = True
+    # Attach context to the exception
+    if not hasattr(e, 'thread'):
+        e.thread = threading.current_thread()
+    if not hasattr(e, 'nestTestMsgs'):
+        global _local
+        e.nestTestMsgs = _local.nestTestMsgs
+    return e
+@contextlib.contextmanager
+def threads():
+    global _local
+    _local.threads=[]
+    yield
+    for thread in _local.threads:
+        thread.start()
+    for thread in _local.threads:
+        thread.join()
+    global _firstError
+    if _firstError:
+        # Exceptions are swallowed in subthreads, but we still don't want to go on
+        die('An error occurred somewhere, so stopping all activity')
+def addThread(fun, *args):
+    global _local
+    _local.threads.append(threading.Thread(target=runOneThread, args=(_local.cwd, _local.nestTestMsgs, _local.testDir, fun, *args), ))
+def runOneThread(cwd, nestTestMsgs, testDir, fun, *args):
+    # Reconstruct the thread-local object
+    global _local
+    _local.cwd = cwd
+    _local.nestTestMsgs = nestTestMsgs
+    _local.testDir=testDir
+    try:
+        return fun(*args)
+    except Exception as e:
+        # Make sure exceptions get correct .thread attribute, and that no exception is reported in subthreads
+        refineException(e)
+
+@contextlib.contextmanager
+def inDir(*path):
+    global _local
+    olddir = cwd()
+    newdir = joinCwd(*path)
+    _local.cwd = newdir
+    try:
+        yield
+    finally:
+        _local.cwd = olddir
+
+@contextlib.contextmanager
+def filesInTmpDir(files):
+    with tempfile.TemporaryDirectory() as tempdir:
+        ec = os.waitstatus_to_exitcode(os_system(f'cp -prH -- {" ".join(files)} {tempdir}'))
+        if not ec==0:
+            die('Failed to copy files into temporary directory')
+        with inDir(tempdir):
+            yield
+
+implementationsOf={}
+def findImplementations():
+    with inDir('..', 'implementations'):
+        for dirName in os_listdir():
+            if(os_path_isdir(dirName)):
+                with inDir(dirName):
+                    for fileName in os_listdir():
+                        implementationsOf[fileName] = [*(implementationsOf[fileName] if fileName in implementationsOf else []), joinCwd(fileName)]
+
+def red(text):
+    if(sys.stdout.isatty()):
+        return f'\x1b[31m{text}\x1b[0m'
+    else:
+        return text
+
+class TestAll(unittest.TestCase):
+
+    # Count asserts
+
+    _assertCount=0
+    _assertCountLock=threading.Lock()
+
+    def assertEqual(self, expected, actual):
+        with self._assertCountLock:
+            super().assertEqual(expected, actual)
+            self._assertCount+=1
+            self.updateStatus(False)
+
+    def updateStatus(self, force):
+        global _totalNumberOfAssertions
+        asserts = self._assertCount
+        progress = round(asserts * 100 / _totalNumberOfAssertions)
+        threadCount = threading.active_count()
+        if sys.stdout.isatty():
+            print(f'\x1b[4D    \x1b[G{self._assertCount}/{_totalNumberOfAssertions} asserts done ({progress}%), running in {threadCount} thread{"s" if 1 < threadCount else ""}', end='', flush=True)
+        elif force or self._assertCount % 1000 == 0:
+            print(f'{self._assertCount}/{_totalNumberOfAssertions} asserts done ({progress}%)', flush=True)
+
+    # Nested tests
+
+    @contextlib.contextmanager
+    def nestTest(self, msg):
+        global _local
+        prevMsgs = _local.nestTestMsgs
+        theseMsgs = [*prevMsgs, msg] # Defensive copying
+        _local.nestTestMsgs = theseMsgs
+        try:
+            yield
+        except Exception as e:
+            # Make sure exceptions get correct .nestTestMsgs attribute
+            raise refineException(e)
+        finally:
+            _local.nestTestMsgs = prevMsgs
+
+    # Deduplication of generated tests
+    _dedupLock=threading.Lock()
+    _doneTests=[]
+    def alreadyRun(self, *testId):
+        with self._dedupLock:
+            if(testId in self._doneTests):
+                return True
+            self._doneTests.append(testId)
+            return False
+
+    # Will be executed by unittest.main
+
+    def test_all(self):
+        global _local
+        testdirs=os_listdir()
+        testdirs.sort()
+        try:
+            with threads():
+                for testdir in testdirs:
+                    _local.testDir = testdir
+                    if re.match('^[0-9]{3}$', testdir):
+                        with self.nestTest(f'Tests in directory {testdir}'):
+                            with inDir(testdir):
+                                addThread(self.doTestThisDir)
+                addThread(self.doTestErrorCodes)
+            self.updateStatus(True)
+        except Exception as e:
+            # Make sure we only report the first error
+            refineException(e)
+        finally:
+            print('')
+        global _firstError
+        if _firstError:
+            # Report error context
+            print(f"    {red('NOT SUCCESSFUL!')} TEST PATH:")
+            for msg in _firstError.nestTestMsgs:
+                print(f"    {red('✦')} {msg}")
+            # Use Python standard error reporter
+            raise _firstError
+        global _totalNumberOfAssertions
+        super().assertEqual(_totalNumberOfAssertions, self._assertCount)
+
+    # Run all tests in one directory
+
+    def doTestThisDir(self):
+        contentfiles = []
+        files=os_listdir()
+        files.sort()
+        def filewithnumber(no):
+            candidates=[x for x in files if x.startswith(no)]
+            assert(len(candidates)==1)
+            return candidates[0]
+        with threads():
+            for filename in files:
+                match = m('^[0-9]+-([a-z])-([a-z])\.(.*)', filename)
+                if(match):
+                    with self.nestTest(f'Test file {filename}'):
+                        v1 = match[1]
+                        v2 = match[2]
+                        testtype = match[3]
+                        if(testtype=='unified.diff'):
+                            addThread(self.doTestDiff, filename, v1, v2, 'unified')
+                        elif(testtype=='hintful.diff'):
+                            addThread(self.doTestDiff, filename, v1, v2, 'hintful')
+                        elif(testtype=='compat.diff'):
+                            addThread(self.doTestDiff, filename, v1, v2, 'compat')
+                        elif(testtype=='invalid.unified.diff'):
+                            addThread(self.doTestInvalidDiff, filename, 'unified')
+                        elif(testtype=='invalid.hintful.diff'):
+                            addThread(self.doTestInvalidDiff, filename, 'hintful')
+                        elif(testtype=='invalid.compat.diff'):
+                            addThread(self.doTestInvalidDiff, filename, 'compat')
+                        else:
+                            die(f"Don't know what to do with file {filename}")
+                    continue
+                match = m('^([a-z])$', filename)
+                if(match):
+                    for otherfile in contentfiles:
+                        with self.nestTest(f'Test content files {otherfile} and {filename}'):
+                            addThread(self.doTestContentFiles, otherfile, filename)
+                    contentfiles.append(filename)
+                    continue
+                match = m('^[0-9]+-([0-9]+)-([0-9]+)\.gen', filename)
+                if(match):
+                    with self.nestTest(f'Test file {filename}'):
+                        sourcefile=filewithnumber(match[1])
+                        targetfile=filewithnumber(match[2])
+                        addThread(self.doTestGen, filename, sourcefile, targetfile)
+                    continue
+                die(f"Don't know what to do with file {filename}")
+
+    # Functions for testing
+
+    def doTestDiff(self, diffFile, v1, v2, mode):
+        if(self.alreadyRun("doTestDiff", self.hashFileOrDir(diffFile), self.hashFileOrDir(v1), self.hashFileOrDir(v2), mode)): return
+        # Validate diff file
+        for validateDiff in implementationsOf[f'validate-{mode}-diff']:
+            with self.nestTest(f'Validate {mode} diff using {validateDiff}'):
+                self.shAssert(f'< {diffFile} {validateDiff}')
+        # For compat and unified format, try patching
+        if(mode in ['compat', 'unified']):
+            self.doTestDiffForwardPatch(diffFile, v1, v2, mode)
+        # By specification, we have the following invariants:
+        # (1) ¬hasPrefixLines(file) → isValidUnified(file) → isValidCompat(file)
+        if(mode=="unified" and not self.shBool("grep -ERq " + shQuote(r'^\|') + f" {diffFile}")):
+            with self.nestTest('Interpret this unified diff as if it was in compat format'):
+                self.doTestDiff(diffFile, v1, v2, "compat")
+        # (2) isValidCompat(file) → isValidUnified(file)
+        if(mode=="compat"):
+            with self.nestTest('Interpret this compat diff as if it was in unified format'):
+                self.doTestDiff(diffFile, v1, v2, "unified")
+        # (3) ¬hasUnprefixedHintfulFileComparison(file) → isValidHintful(file) → isValidCompat(file)
+        if(mode=="hintful" and not self.shBool(f"grep -ERq '^diff --hintful ' {diffFile}")):
+            with self.nestTest('Interpret this hintful diff as if it was in compat format'):
+                self.doTestDiff(diffFile, v1, v2, "compat")
+        # (4) isValidCompat(file) → isValidHintful(file)
+        if(mode=="compat"):
+            with self.nestTest('Interpret this compat diff as if it was in hintful format'):
+                self.doTestDiff(diffFile, v1, v2, "hintful")
+        # Test converting to the other diff formats
+        if diffFile.count('.con') < (15 if runAllTests else 1):
+            for othermode in ['compat', 'hintful', 'unified']:
+                if(mode==othermode): continue
+                for convertDiff in implementationsOf[f'convert-{mode}-diff-to-{othermode}-diff']:
+                    with self.nestTest(f'Convert to {othermode} using {convertDiff}'):
+                        with filesInTmpDir([diffFile, v1, v2]):
+                            newFileName=f"{diffFile}.con"
+                            self.sh(f'< {diffFile} {convertDiff} > {newFileName}')
+                            self.doTestDiff(newFileName, v1, v2, othermode)
+        # Test reversing
+        for reverseDiff in implementationsOf[f'reverse-{mode}-diff']:
+            with self.nestTest(f'Reverse {mode} diff using {reverseDiff}'):
+                with filesInTmpDir([diffFile, v1, v2]):
+                    self.sh(f'< {diffFile} {reverseDiff} > {diffFile}.rev')
+                    self.assertNotSame(diffFile, f'{diffFile}.rev')
+                    with self.nestTest('Three reversions has the same effect as one'):
+                        self.sh(f'< {diffFile}.rev {reverseDiff} > {diffFile}.2rev')
+                        self.sh(f'< {diffFile}.2rev {reverseDiff} > {diffFile}.3rev')
+                        self.assertSame(f'{diffFile}.rev', f'{diffFile}.3rev')
+                    with self.nestTest('Use reverse diff file as diff file'):
+                        self.doTestDiff(f'{diffFile}.rev', v2, v1, mode)
+        # Validity and semantics should be preserved over newline conversions for any diff file not using the `\ No newline` syntax
+        if(not self.shBool("grep -ERq " + shQuote(r'^\|?\\') + f"' No newline' {diffFile}")):
+            actions=[]
+            if not self.shBool(f"grep -ERq `printf '\\r\\r$'` {diffFile} {v1} {v2}"):
+                actions.append(['Add CR', 'addcr', r's@\n@\r\n@'])
+            if self.shBool(f"grep -ERq `printf '\\r$'` {diffFile} {v1} {v2}"):
+                actions.append(['Remove CR', 'rmcr', r's@\r\n@\n@'])
+            with filesInTmpDir([diffFile, v1, v2]):
+                for [explanation, ext, PRE] in actions:
+                    with self.nestTest(f'Convert newline: {explanation}'):
+                        newDiffFile=f'{diffFile}.{ext}'
+                        newV1=f'{v1}.{ext}'
+                        newV2=f'{v2}.{ext}'
+                        self.sh(f'cp {diffFile} {newDiffFile}')
+                        self.sh(f'cp -pr {v1} {newV1}')
+                        self.sh(f'cp -pr {v2} {newV2}')
+                        self.mapFiles(f"perl -pe '{PRE}'", [newDiffFile, newV1, newV2])
+                        # Validity should be preserved over newline conversions
+                        if runAllTests:
+                            self.doTestDiff(newDiffFile, newV1, newV2, mode)
+                        else:
+                            for validateDiff in implementationsOf[f'validate-{mode}-diff']:
+                                with self.nestTest(f'Validate {mode} diff using {validateDiff}'):
+                                    self.shAssert(f'< {newDiffFile} {validateDiff}')
+                            self.doTestDiffForwardPatch(newDiffFile, newV1, newV2, mode)
+        # If the diff file contains no escape character then test highlighting and visualization
+        if(not self.shBool(f"grep -ERq `printf '\\e'` {diffFile}")):
+            with filesInTmpDir([diffFile]):
+                diffFileHasPrefix=self.shBool("grep -ERq " + shQuote(r'^\|') + f" {diffFile}")
+                for highlightDiff in implementationsOf['terminal-highlight-diff']:
+                    with self.nestTest(f'Testing highlighter {highlightDiff}'):
+                        with filesInTmpDir([diffFile]):
+                            self.sh(f'< {diffFile} {highlightDiff} > {diffFile}.highlighted')
+                            with self.nestTest(f'Checking that only escape sequences are added by highlighter {highlightDiff}'):
+                                removeEscCmd="sed -r 's/'`printf '\\e'`'\\[[0-9;]+m//g'"
+                                self.sh(f"< {diffFile}.highlighted {removeEscCmd} > {diffFile}.highlighted.unhighlighted")
+                                self.assertSame(diffFile, f"{diffFile}.highlighted.unhighlighted")
+                for visualizeDiff in implementationsOf['terminal-visualize-diff']:
+                    with self.nestTest(f'Testing visualizer {visualizeDiff}'):
+                        with filesInTmpDir([diffFile]):
+                            self.sh(f'< {diffFile} {visualizeDiff} > {diffFile}.visualized')
+                            with self.nestTest('Checking that presence of prefix in the beginning of line is preserved by visualizer'):
+                                self.shAssert("grep -ERq " + shQuote('^\x1b\\[0;90;[0-9;]*m\\|') + f" {diffFile}.visualized", 0 if diffFileHasPrefix else 1)
+                            with self.nestTest('Checking that prefixes are not shown other than in the beginning of line by visualizer'):
+                                self.shAssert("grep -ER " + shQuote('.\x1b\\[0;90;[0-9;]*m\\|') + f" {diffFile}.visualized", 1)
+
+    def doTestDiffForwardPatch(self, diffFile, v1, v2, mode):
+        if(self.alreadyRun("doTestDiffForwardPatch", self.hashFileOrDir(diffFile), self.hashFileOrDir(v1), self.hashFileOrDir(v2), mode)): return
+        with self.nestTest(f'Test {mode} forward patch'):
+            with filesInTmpDir([diffFile, v1, v2]):
+                if(mode in ['compat', 'unified']):
+                    self.assertNotSame(v1, v2)
+                    self.sh(f'cp -pr {v1} {v1}.bu')
+                    for patchUnified in implementationsOf['patch-unified']:
+                        with self.nestTest(f'Patch unified using {patchUnified}'):
+                            with filesInTmpDir([diffFile, v1, v2, f'{v1}.bu']):
+                                self.sh(f'{patchUnified} {v1} < {diffFile}')
+                                self.assertSame(v1, v2)
+                                self.assertNotSame(v1, f'{v1}.bu')
+                else:
+                    for convertToUnifiedDiff in implementationsOf[f'convert-{mode}-diff-to-unified-diff']:
+                        with self.nestTest(f'Convert to unified using {convertToUnifiedDiff}'):
+                            with filesInTmpDir([diffFile, v1, v2]):
+                                self.sh(f'< {diffFile} {convertToUnifiedDiff} > {diffFile}.con')
+                                self.doTestDiffForwardPatch(f'{diffFile}.con', v1, v2, 'unified')
+
+    def doTestInvalidDiff(self, diffFile, mode, checkMessages=True, fileKey=None):
+        if(fileKey==None):
+            global _local
+            fileKey=f'{_local.testDir}/{diffFile}'
+        if(self.alreadyRun("doTestInvalidDiff", self.hashFileOrDir(diffFile), mode, checkMessages, fileKey)): return
+        for validateDiff in implementationsOf[f'validate-{mode}-diff']:
+            with self.nestTest(f'Make sure {mode} diff is invalid using {validateDiff}'):
+                with filesInTmpDir([diffFile]):
+                    stderrFile=f'{diffFile}.validation.stderr'
+                    self.shAssert(f'< {diffFile} {validateDiff} 2>{stderrFile}', 1)
+                    if checkMessages:
+                        with self.nestTest(f'Checking error message'):
+                            with open(joinCwd(stderrFile), encoding='latin1') as errMsgFile:
+                                errMsg=errMsgFile.read()
+                                with self.nestTest(f'Error message for validating {fileKey} is "{errMsg.strip()}"'):
+                                    expectedErrMsgs=expectedErrorMessagesForInvalidFiles[fileKey]
+                                    for expectedErrMsg in expectedErrMsgs:
+                                        with self.nestTest(f'Check that the error message includes "{expectedErrMsg}"'):
+                                            self.assertEqual(True, expectedErrMsg.lower() in errMsg.lower())
+        # Validity should be preserved over newline conversions for any diff file not using the `\ No newline` syntax
+        if(not self.shBool("grep -ERq " + shQuote(r'^\|?\\') + f"' No newline' {diffFile}")):
+            actions=[]
+            if not self.shBool(f"grep -ERq `printf '\\r\\r$'` {diffFile}"):
+                actions.append(['Add CR', 'add-cr', r's@\n@\r\n@'])
+            if self.shBool(f"grep -ERq `printf '\\r$'` {diffFile}"):
+                actions.append(['Remove CR', 'rm-cr', r's@\r\n@\n@'])
+            with filesInTmpDir([diffFile]):
+                for [explanation, ext, PRE] in actions:
+                    with self.nestTest(f'Convert newline: {explanation}'):
+                        newDiffFile=f'{diffFile}.{ext}.diff'
+                        self.sh(f'cp {diffFile} {newDiffFile}')
+                        self.mapFiles(f"perl -pe '{PRE}'", [newDiffFile])
+                        self.doTestInvalidDiff(newDiffFile, mode, checkMessages, fileKey)
+        # By specification, we have the following invariants:
+        # (1) ¬hasPrefixLines(file) → isValidUnified(file) → isValidCompat(file)
+        # (2) isValidCompat(file) → isValidUnified(file)
+        # (3) ¬hasUnprefixedHintfulFileComparison(file) → isValidHintful(file) → isValidCompat(file)
+        # (4) isValidCompat(file) → isValidHintful(file)
+        # By contraposition, we therefore have the following invariants useful for testing invalid diff files:
+        # (5) ¬hasPrefixLines(file) → ¬isValidCompat(file) → ¬isValidUnified(file) [from (1)]
+        if(mode=="compat" and not self.shBool("grep -ERq " + shQuote(r'^\|') + f" {diffFile}")):
+            with self.nestTest('Interpret this invalid compat diff as if it was in unified format'):
+                self.doTestInvalidDiff(diffFile, "unified", False, fileKey)
+        # (6) ¬isValidUnified(file) → ¬isValidCompat(file) [from (2)]
+        if(mode=="unified"):
+            with self.nestTest('Interpret this invalid unified diff as if it was in compat format'):
+                self.doTestInvalidDiff(diffFile, "compat", False, fileKey)
+        # (7) ¬hasUnprefixedHintfulFileComparison(file) → ¬isValidCompat(file) → ¬isValidHintful(file) [from (3)]
+        if(mode=="compat" and not self.shBool(f"grep -ERq '^diff --hintful ' {diffFile}")):
+            with self.nestTest('Interpret this invalid compat diff as if it was in hintful format'):
+                self.doTestInvalidDiff(diffFile, "hintful", False, fileKey)
+        # (8) ¬isValidHintful(file) → ¬isValidCompat(file) [from (4)]
+        if(mode=="hintful"):
+            with self.nestTest('Interpret this invalid hintful diff as if it was in compat format'):
+                self.doTestInvalidDiff(diffFile, "compat", False, fileKey)
+
+    def doTestContentFiles(self, v1, v2):
+        for mode in ['hintful', 'unified']:
+            for diff in (implementationsOf[f'diff-{mode}'] or []):
+                with self.nestTest(f'Create {mode} diff using {diff}'):
+                    with filesInTmpDir([v1, v2]):
+                        self.sh(f'{diff} {v1} {v2} > generated_diff-{v1}-{v2}.{mode}.diff', 1)
+                        self.doTestDiff(f'generated_diff-{v1}-{v2}.{mode}.diff', v1, v2, mode)
+
+    def doTestGen(self, genfile, sourcefile, targetfile):
+        with filesInTmpDir([genfile, sourcefile, targetfile]):
+            generatedfile=f'generated-{targetfile}'
+            with self.nestTest(f'Create {generatedfile}'):
+                self.sh(f'./{genfile} < {sourcefile} > {generatedfile}')
+                with self.nestTest(f'Compare {generatedfile} to {targetfile}'):
+                    self.assertSame(generatedfile, targetfile)
+
+    def doTestErrorCodes(self):
+        with filesInTmpDir(["../implementations/python3/implementation.py", "../ERROR-CODES.md", "../tests"]):
+            self.sh(r"find tests > tmp1; < tmp1 sed -r 's/^/d/;s/^.*\/([0-9]{3}\/.*\.invalid\..*)$/\1/;/^d/d;' > tmp2; < tmp2 sort > tmp3; < tmp3 uniq > invalidation-test-case-files")
+            self.sh(r"printf '" + '\\n'.join(expectedErrorMessagesForInvalidFiles.keys()) + r"' > tmp4; < tmp4 sort > invalidation-test-cases-in-table")
+            with self.nestTest('Compare *invalid* test case files to those mentioned in the table for expected error messages'):
+                self.assertSame("invalidation-test-case-files", "invalidation-test-cases-in-table")
+            self.sh(r"< implementation.py sed -r 's/^/d/;s/^.*\[(HDF[0-9][0-9])\].*$/\1/;/^d/d;' > tmp5; < tmp5 sort > tmp6; < tmp6 uniq > error-codes-in-implementation.py")
+            self.sh(r"< ERROR-CODES.md sed -r 's/^/d/;s/^.*\[(HDF[0-9][0-9])\].*$/\1/;/^d/d;' > tmp7; < tmp7 sort > tmp8; < tmp8 uniq > error-codes-in-ERROR-CODES.md")
+            self.sh(r"printf '" + '\\n'.join([value for values in expectedErrorMessagesForInvalidFiles.values() for value in values]) + r"' > tmp9; " +
+                    r"< tmp9 sed -r 's/^/d/;s/^.*\[(HDF[0-9][0-9])\].*$/\1/;/^d/d;' > tmp10; < tmp10 sort > tmp11; < tmp11 uniq > error-codes-in-table")
+            with self.nestTest('Compare error codes in ERROR-CODES.md to those mentioned in implementations/python3/implementation.py'):
+                self.assertSame("error-codes-in-ERROR-CODES.md", "error-codes-in-implementation.py")
+            with self.nestTest('Compare error codes in ERROR-CODES.md to those mentioned in the table for expected error messages'):
+                self.assertSame("error-codes-in-ERROR-CODES.md", "error-codes-in-table")
+
+    # Utility
+
+    def assertSame(self, v1, v2):
+        self.shAssert(f'diff -u -r {v1} {v2}', 0)
+
+    def assertNotSame(self, v1, v2):
+        self.shAssert(f'diff -u -r {v1} {v2} > /dev/null', 1)
+
+    def _sh(self, cmd):
+        return os.waitstatus_to_exitcode(os_system(f'set -e; {cmd}'))
+
+    def sh(self, cmd, expectedExitCode=0):
+        assert expectedExitCode==self._sh(cmd) # Do not count this assertion
+
+    def shAssert(self, cmd, expectedExitCode=0):
+        self.assertEqual(expectedExitCode, self._sh(cmd))
+
+    def shBool(self, cmd):
+        exitCode = self._sh(cmd)
+        assert exitCode in [0, 1] # Do not count this assertion
+        return {0: True, 1: False}[exitCode]
+
+    def hashFileOrDir(self, path):
+        if os_path_isfile(path):
+            with open(joinCwd(path),'rb') as file:
+                return hashlib.sha256(file.read()).hexdigest()
+        elif os_path_isdir(path):
+            with inDir(path):
+                ret=set()
+                for child in os_listdir():
+                    ret.add((child, self.hashFileOrDir(child)))
+                return ret
+
+    def mapFiles(self, cmd, files):
+        for filename in files:
+            if(os_path_isfile(filename)):
+                self.sh(f'< {filename} {cmd} > {filename}.tmp.processing; mv {filename}.tmp.processing {filename};')
+            elif(os_path_isdir(filename)):
+                files2 = os_listdir(filename)
+                with inDir(filename):
+                    self.mapFiles(cmd, files2)
+            else:
+                die(f'Cannot map file node {joinCwd(filename)}')
+
+if m('^.*[ !"#$&\'()*+;<>?\\^`{|}~].*$', cwd()):
+    die(f'Running from a weird path.')
+findImplementations()
+if __name__ == '__main__':
+    unittest.main()

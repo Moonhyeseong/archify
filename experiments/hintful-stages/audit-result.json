@@ -1,0 +1,15 @@
+{
+  "kind": "independent fixed-byte and rendered-content audit; not upstream validation",
+  "status": "pass",
+  "checks": [
+    "four complete fixed fixtures match independently recorded lengths and SHA",
+    "ten full upstream blobs, copyright files and chosen Apache terms retained",
+    "explicit valid byte ranges reconstruct complete A and B and identical named S",
+    "S stays derived, with no invented Git file or source digest",
+    "invalid example has same name but True versus False content; no rejection executed",
+    "HTML preserves complete authored input and eleven Git excerpts at exact ranges",
+    "three original code blocks render exact excerpt text, including markers and indentation",
+    "rendered three-row A/S/B comparison keeps literal item and wrapper facts",
+    "no diagram, fake S source, runtime claim or personal paths in public HTML"
+  ]
+}

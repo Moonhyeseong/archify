@@ -1,0 +1,338 @@
+{
+  "kind": "authored fixed-byte factual reading; not parser output or runtime trace",
+  "originalRepository": "https://github.com/svenssonaxel/diff-format",
+  "revision": "826f50b9488b27058e0f29a38108c97ebc78790d",
+  "validPatch": "upstream/tests/001/07-a-b.hintful.diff",
+  "fixedByteSpans": {
+    "A": [
+      {
+        "sourceLine": 8,
+        "byteStart": 117,
+        "byteEnd": 129,
+        "appendLF": true
+      },
+      {
+        "sourceLine": 10,
+        "byteStart": 139,
+        "byteEnd": 151,
+        "appendLF": true
+      },
+      {
+        "sourceLine": 12,
+        "byteStart": 161,
+        "byteEnd": 174,
+        "appendLF": true
+      },
+      {
+        "sourceLine": 14,
+        "byteStart": 184,
+        "byteEnd": 196,
+        "appendLF": true
+      }
+    ],
+    "rightS": [
+      {
+        "sourceLine": 6,
+        "byteStart": 99,
+        "byteEnd": 107,
+        "appendLF": true
+      },
+      {
+        "sourceLine": 7,
+        "byteStart": 110,
+        "byteEnd": 114,
+        "appendLF": false
+      },
+      {
+        "sourceLine": 8,
+        "byteStart": 117,
+        "byteEnd": 129,
+        "appendLF": true
+      },
+      {
+        "sourceLine": 9,
+        "byteStart": 132,
+        "byteEnd": 136,
+        "appendLF": false
+      },
+      {
+        "sourceLine": 10,
+        "byteStart": 139,
+        "byteEnd": 151,
+        "appendLF": true
+      },
+      {
+        "sourceLine": 11,
+        "byteStart": 154,
+        "byteEnd": 158,
+        "appendLF": false
+      },
+      {
+        "sourceLine": 12,
+        "byteStart": 161,
+        "byteEnd": 174,
+        "appendLF": true
+      },
+      {
+        "sourceLine": 13,
+        "byteStart": 177,
+        "byteEnd": 181,
+        "appendLF": false
+      },
+      {
+        "sourceLine": 14,
+        "byteStart": 184,
+        "byteEnd": 196,
+        "appendLF": true
+      }
+    ],
+    "leftS": [
+      {
+        "sourceLine": 17,
+        "byteStart": 215,
+        "byteEnd": 223,
+        "appendLF": true
+      },
+      {
+        "sourceLine": 18,
+        "byteStart": 226,
+        "byteEnd": 242,
+        "appendLF": true
+      },
+      {
+        "sourceLine": 19,
+        "byteStart": 245,
+        "byteEnd": 260,
+        "appendLF": false
+      },
+      {
+        "sourceLine": 20,
+        "byteStart": 263,
+        "byteEnd": 264,
+        "appendLF": true
+      },
+      {
+        "sourceLine": 21,
+        "byteStart": 267,
+        "byteEnd": 282,
+        "appendLF": false
+      },
+      {
+        "sourceLine": 22,
+        "byteStart": 285,
+        "byteEnd": 287,
+        "appendLF": true
+      },
+      {
+        "sourceLine": 23,
+        "byteStart": 290,
+        "byteEnd": 306,
+        "appendLF": true
+      }
+    ],
+    "B": [
+      {
+        "sourceLine": 17,
+        "byteStart": 215,
+        "byteEnd": 223,
+        "appendLF": true
+      },
+      {
+        "sourceLine": 18,
+        "byteStart": 226,
+        "byteEnd": 242,
+        "appendLF": true
+      },
+      {
+        "sourceLine": 19,
+        "byteStart": 245,
+        "byteEnd": 260,
+        "appendLF": false
+      },
+      {
+        "sourceLine": 22,
+        "byteStart": 285,
+        "byteEnd": 287,
+        "appendLF": true
+      },
+      {
+        "sourceLine": 23,
+        "byteStart": 290,
+        "byteEnd": 306,
+        "appendLF": true
+      }
+    ]
+  },
+  "stages": [
+    {
+      "id": "A",
+      "kind": "original file",
+      "sourcePath": "upstream/tests/001/a/file.py",
+      "wrapper": null,
+      "items": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "S",
+      "kind": "derived named snippet; not a Git source file or revision",
+      "name": "enclosing if",
+      "wrapper": "if True",
+      "items": [
+        1,
+        2,
+        3
+      ],
+      "derivedText": "if True:\n    for a in [1,\n              2,\n              3]:\n        print(a)\n"
+    },
+    {
+      "id": "B",
+      "kind": "original file",
+      "sourcePath": "upstream/tests/001/b/file.py",
+      "wrapper": "if True",
+      "items": [
+        1,
+        2
+      ]
+    }
+  ],
+  "validDeclaration": {
+    "first": {
+      "patchLines": [
+        5,
+        15
+      ],
+      "side": "new/right",
+      "namedSnippet": "enclosing if"
+    },
+    "second": {
+      "patchLines": [
+        16,
+        24
+      ],
+      "side": "old/left",
+      "namedSnippet": "enclosing if"
+    },
+    "sameNamedContent": true,
+    "deletedItem": 3,
+    "deletionIn": "second declaration"
+  },
+  "invalidExample": {
+    "path": "upstream/tests/001/11-a-b.invalid.hintful.diff",
+    "fixedByteSpans": {
+      "rightS": [
+        {
+          "sourceLine": 6,
+          "byteStart": 99,
+          "byteEnd": 107,
+          "appendLF": true
+        },
+        {
+          "sourceLine": 7,
+          "byteStart": 110,
+          "byteEnd": 114,
+          "appendLF": false
+        },
+        {
+          "sourceLine": 8,
+          "byteStart": 117,
+          "byteEnd": 129,
+          "appendLF": true
+        },
+        {
+          "sourceLine": 9,
+          "byteStart": 132,
+          "byteEnd": 136,
+          "appendLF": false
+        },
+        {
+          "sourceLine": 10,
+          "byteStart": 139,
+          "byteEnd": 151,
+          "appendLF": true
+        },
+        {
+          "sourceLine": 11,
+          "byteStart": 154,
+          "byteEnd": 158,
+          "appendLF": false
+        },
+        {
+          "sourceLine": 12,
+          "byteStart": 161,
+          "byteEnd": 174,
+          "appendLF": true
+        },
+        {
+          "sourceLine": 13,
+          "byteStart": 177,
+          "byteEnd": 181,
+          "appendLF": false
+        },
+        {
+          "sourceLine": 14,
+          "byteStart": 184,
+          "byteEnd": 196,
+          "appendLF": true
+        }
+      ],
+      "leftS": [
+        {
+          "sourceLine": 17,
+          "byteStart": 215,
+          "byteEnd": 224,
+          "appendLF": true
+        },
+        {
+          "sourceLine": 18,
+          "byteStart": 227,
+          "byteEnd": 243,
+          "appendLF": true
+        },
+        {
+          "sourceLine": 19,
+          "byteStart": 246,
+          "byteEnd": 261,
+          "appendLF": false
+        },
+        {
+          "sourceLine": 20,
+          "byteStart": 264,
+          "byteEnd": 265,
+          "appendLF": true
+        },
+        {
+          "sourceLine": 21,
+          "byteStart": 268,
+          "byteEnd": 283,
+          "appendLF": false
+        },
+        {
+          "sourceLine": 22,
+          "byteStart": 286,
+          "byteEnd": 288,
+          "appendLF": true
+        },
+        {
+          "sourceLine": 23,
+          "byteStart": 291,
+          "byteEnd": 307,
+          "appendLF": true
+        }
+      ]
+    },
+    "firstCondition": "if True",
+    "secondCondition": "if False",
+    "sameName": true,
+    "sameContent": false,
+    "rule": "HDF15",
+    "classification": "upstream specification and tests catalogue call it invalid; no upstream validator execution"
+  },
+  "limits": [
+    "no arbitrary patch input accepted or parsed",
+    "no Python or upstream validator execution",
+    "no third source revision, real editing order or behavior-equivalence claim"
+  ]
+}

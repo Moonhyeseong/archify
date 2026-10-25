@@ -1,0 +1,84 @@
+{
+  "kind": "complete original Git blob inventory",
+  "repository": "https://github.com/svenssonaxel/diff-format",
+  "revision": "826f50b9488b27058e0f29a38108c97ebc78790d",
+  "licenseChoice": "Apache-2.0, one of the licenses offered by original LICENSE.md; original LICENSE.md and CONTRIBUTORS.md retained",
+  "files": [
+    {
+      "path": "upstream/tests/001/a/file.py",
+      "upstreamPath": "tests/001/a/file.py",
+      "bytes": 53,
+      "sha256": "1e99918f7dbe30fe1d61b00e37310b6096009e3a20b0f95a8c02e685b007b7c1",
+      "gitBlob": "cfdc74143b7c2dd985a56b2080512159aac1d79b"
+    },
+    {
+      "path": "upstream/tests/001/b/file.py",
+      "upstreamPath": "tests/001/b/file.py",
+      "bytes": 61,
+      "sha256": "7a6b16c1108e0ef29bb64112cee106de11206ecd766586b2c82fb46d2c46ebc7",
+      "gitBlob": "af7c174685b274979f803125acc6bd032038ad66"
+    },
+    {
+      "path": "upstream/tests/001/07-a-b.hintful.diff",
+      "upstreamPath": "tests/001/07-a-b.hintful.diff",
+      "bytes": 310,
+      "sha256": "aaa1abddb4283af03f7af56ca60cbd7a82ecf1f93bb9b21a3e256eef04445f19",
+      "gitBlob": "54df25ed57f24e49cef750154ffbdbe24ba4b139"
+    },
+    {
+      "path": "upstream/tests/001/11-a-b.invalid.hintful.diff",
+      "upstreamPath": "tests/001/11-a-b.invalid.hintful.diff",
+      "bytes": 311,
+      "sha256": "1934717d10df8a8c786a27a47b12a27fd567f9187323177b4e065c6e0d32d634",
+      "gitBlob": "814ee3385c40ef48f9eac59b805ed101e3eb1d66"
+    },
+    {
+      "path": "upstream/LICENSE.md",
+      "upstreamPath": "LICENSE.md",
+      "bytes": 884,
+      "sha256": "e7260c06628bc478152847efb2ca4bd29730cdda048220cde365dd9fd693d5dc",
+      "gitBlob": "7bf27b0b5cf7b16b307ede3049b328193ba52766"
+    },
+    {
+      "path": "upstream/CONTRIBUTORS.md",
+      "upstreamPath": "CONTRIBUTORS.md",
+      "bytes": 40,
+      "sha256": "527c704aab660b73057cb0f2ff762ce9528ef019afd8173c5a08c9ab82ad901f",
+      "gitBlob": "25ce9047b10279d4a243fe86fa4db9874792da39"
+    },
+    {
+      "path": "upstream/MAIN.md",
+      "upstreamPath": "MAIN.md",
+      "bytes": 25203,
+      "sha256": "4107b9160c21bf85b7b004af862d7ea81b0eb9474bf319d02e6ddb28ecefebae",
+      "gitBlob": "c8a2edc4510e2021ba2553a9c2d55825cfb35783"
+    },
+    {
+      "path": "upstream/implementations/python3/implementation.py",
+      "upstreamPath": "implementations/python3/implementation.py",
+      "bytes": 49381,
+      "sha256": "c1032bfa84dc2b94694053fdc59a37d62361690d81863fc2a74acf9acb2f96b7",
+      "gitBlob": "562de6a6e81d72be2a842bb42ec5601dda92c8ff"
+    },
+    {
+      "path": "upstream/tests/README.md",
+      "upstreamPath": "tests/README.md",
+      "bytes": 9392,
+      "sha256": "a0c05599c686516f8413929a016fd0d6eaf0b081f30a2406e514f3b720379808",
+      "gitBlob": "3c87e5e9a01882d8ae8d2c670f9f90894ff6fa75"
+    },
+    {
+      "path": "upstream/tests/run-tests",
+      "upstreamPath": "tests/run-tests",
+      "bytes": 30490,
+      "sha256": "8422c10e6b3ff9993ce2e807acc6cea5f0ac4c0e349bbe15bc1b4ed2b06b2b51",
+      "gitBlob": "8a5751981f46abb7cf099962b1525ad8afa77054"
+    }
+  ],
+  "externalLicenseText": {
+    "path": "licenses/Apache-2.0.txt",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+    "bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  }
+}

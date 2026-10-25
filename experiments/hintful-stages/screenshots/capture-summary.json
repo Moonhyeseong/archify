@@ -1,0 +1,257 @@
+{
+  "kind": "derived selected root browser observations; NOT copied raw JSON or a browser-check receipt",
+  "artifact": {
+    "path": "explainer.html",
+    "bytes": 377646,
+    "sha256": "5cf708c77624c01259a0abd37f3d6d4a97f430225413b3626cecdf08e3e8a0b7"
+  },
+  "pictures": [
+    {
+      "path": "screenshots/desktop-light.png",
+      "bytes": 374496,
+      "sha256": "de149eaa8cc69a6c99cc07eecb51c3e46f8f55c325af1860f2b54a1516d526e2",
+      "pngDimensions": [
+        1440,
+        2616
+      ],
+      "viewportCssPixels": [
+        1440,
+        1100
+      ],
+      "theme": "light",
+      "fullPage": true,
+      "rootViewed": true,
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "screenshots/valid-source-light.png",
+      "bytes": 184496,
+      "sha256": "b7e5ec42ef9d538e9f50124f46ef9385b5fcd453b369f042f4efea89c22ce726",
+      "pngDimensions": [
+        1440,
+        1100
+      ],
+      "viewportCssPixels": [
+        1440,
+        1100
+      ],
+      "theme": "light",
+      "fullPage": false,
+      "rootViewed": true,
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "screenshots/invalid-source-dark.png",
+      "bytes": 182166,
+      "sha256": "bd4ec42081b13c564d4d663561653d6b19f89c28508ac59c467913605095725d",
+      "pngDimensions": [
+        1440,
+        1100
+      ],
+      "viewportCssPixels": [
+        1440,
+        1100
+      ],
+      "theme": "dark",
+      "fullPage": false,
+      "rootViewed": true,
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "screenshots/mobile-light.png",
+      "bytes": 362527,
+      "sha256": "d2342af3f1d6d674fb6bc5a607b774a0b0ea99c4ef741fa13846b679655e131f",
+      "pngDimensions": [
+        390,
+        3989
+      ],
+      "viewportCssPixels": [
+        390,
+        844
+      ],
+      "theme": "light",
+      "fullPage": true,
+      "rootViewed": true,
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "screenshots/mobile-table-right.png",
+      "bytes": 83092,
+      "sha256": "06c05cb9477bebd99f14bbdc4ec535ad73f2af8da3c9ecc270ce8bb1cd98923c",
+      "pngDimensions": [
+        390,
+        844
+      ],
+      "viewportCssPixels": [
+        390,
+        844
+      ],
+      "theme": "light",
+      "fullPage": false,
+      "rootViewed": true,
+      "originalBytesUnchanged": true
+    }
+  ],
+  "rawObservationHashes": [
+    {
+      "basename": "desktop-observation.json",
+      "bytes": 1813,
+      "sha256": "acc25a271bdaa6cceffbeb1e496ff14a5e3d4e848caf835443ea98efcda1668e",
+      "originalOutsideCheckout": true,
+      "rawNotRepublished": true
+    },
+    {
+      "basename": "valid-source-observation.json",
+      "bytes": 430,
+      "sha256": "6034036ef611f7c4d4c9f92b69b82880ab826e45ccff086181f60af070409639",
+      "originalOutsideCheckout": true,
+      "rawNotRepublished": true
+    },
+    {
+      "basename": "invalid-source-observation.json",
+      "bytes": 473,
+      "sha256": "ef475bce7fbfbfe7a3b77329e5ca4a431bd79d8f08985fc3954630c998c04669",
+      "originalOutsideCheckout": true,
+      "rawNotRepublished": true
+    },
+    {
+      "basename": "mobile-observation.json",
+      "bytes": 2174,
+      "sha256": "e8aa5ae9d14f4aa953c0fa52c3fd3312c3c1aec85baf97e1935756dfa18d6e3e",
+      "originalOutsideCheckout": true,
+      "rawNotRepublished": true
+    },
+    {
+      "basename": "mobile-table-right-observation.json",
+      "bytes": 436,
+      "sha256": "0208c99e11c70ea9b7e205155982b9226eec8374df5b8fa6c5496a792c9fc290",
+      "originalOutsideCheckout": true,
+      "rawNotRepublished": true
+    }
+  ],
+  "desktop": {
+    "viewport": [
+      1440,
+      1100
+    ],
+    "theme": "light",
+    "pageWidth": 1440,
+    "codeBlocks": [
+      {
+        "sourceId": "a",
+        "completeDeclaredCodeTextMatches": true,
+        "clientWidth": 588,
+        "scrollWidth": 588
+      },
+      {
+        "sourceId": "b",
+        "completeDeclaredCodeTextMatches": true,
+        "clientWidth": 588,
+        "scrollWidth": 588
+      },
+      {
+        "sourceId": "valid",
+        "completeDeclaredCodeTextMatches": true,
+        "clientWidth": 1236,
+        "scrollWidth": 1236
+      }
+    ],
+    "scope": "Three code blocks text matches complete declared excerpts; clientWidth equals scrollWidth."
+  },
+  "validSource": {
+    "sourceId": "right",
+    "path": "tests/001/07-a-b.hintful.diff",
+    "lines": [
+      5,
+      15
+    ],
+    "revision": "826f50b9488b27058e0f29a38108c97ebc78790d",
+    "fixedUrl": "https://github.com/svenssonaxel/diff-format/blob/826f50b9488b27058e0f29a38108c97ebc78790d/tests/001/07-a-b.hintful.diff#L5-L15",
+    "completeDeclaredRangeTextFoundInCard": true,
+    "actionReportedByRoot": "pointer hover; external link not opened"
+  },
+  "invalidSource": {
+    "sourceId": "invalid-left",
+    "path": "tests/001/11-a-b.invalid.hintful.diff",
+    "lines": [
+      16,
+      19
+    ],
+    "revision": "826f50b9488b27058e0f29a38108c97ebc78790d",
+    "fixedUrl": "https://github.com/svenssonaxel/diff-format/blob/826f50b9488b27058e0f29a38108c97ebc78790d/tests/001/11-a-b.invalid.hintful.diff#L16-L19",
+    "completeDeclaredRangeTextFoundInCard": true,
+    "actionReportedByRoot": "pointer hover; external link not opened"
+  },
+  "mobile": {
+    "viewport": [
+      390,
+      844
+    ],
+    "theme": "light",
+    "pageWidth": 390,
+    "tables": [
+      {
+        "index": 0,
+        "tableWidth": 432,
+        "scrollContainer": {
+          "clientWidth": 332,
+          "scrollWidth": 432,
+          "initialScrollLeft": 0
+        }
+      },
+      {
+        "index": 1,
+        "tableWidth": 332,
+        "scrollContainer": {
+          "clientWidth": 332,
+          "scrollWidth": 332,
+          "initialScrollLeft": 0
+        }
+      },
+      {
+        "index": 2,
+        "tableWidth": 332,
+        "scrollContainer": {
+          "clientWidth": 332,
+          "scrollWidth": 332,
+          "initialScrollLeft": 0
+        }
+      }
+    ],
+    "codeBlocks": [
+      {
+        "sourceId": "a",
+        "completeDeclaredCodeTextMatches": true,
+        "clientWidth": 330,
+        "scrollWidth": 330
+      },
+      {
+        "sourceId": "b",
+        "completeDeclaredCodeTextMatches": true,
+        "clientWidth": 330,
+        "scrollWidth": 330
+      },
+      {
+        "sourceId": "valid",
+        "completeDeclaredCodeTextMatches": true,
+        "clientWidth": 330,
+        "scrollWidth": 330
+      }
+    ],
+    "firstTableWheel": {
+      "reportedActions": "Root moved mouse over the table and sent mouse.wheel(180,0); not a touch gesture.",
+      "observedScrollLeft": 100,
+      "clientWidth": 332,
+      "scrollWidth": 432,
+      "fullTableTextUnchanged": true,
+      "visualObservationReportedByRoot": "The source column becomes visible; the left identity column moves outside the current horizontal viewport."
+    }
+  },
+  "limits": [
+    "Five original PNGs were viewed by root agent, not human acceptance.",
+    "First mobile table requires horizontal scrolling; not all columns are simultaneously visible.",
+    "Actual mouse wheel is not a physical touch gesture test.",
+    "No external link activation, keyboard traversal, OS clipboard, assistive-technology or upstream execution was performed.",
+    "Static Explainer finalize browser-check remains not-run; these selected observations are not a full browser gate."
+  ]
+}

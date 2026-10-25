@@ -1,0 +1,355 @@
+{
+  "schema_version": 1,
+  "diagram_type": "explainer",
+  "meta": {
+    "id": "hintful-stages",
+    "title": "删 3 在哪一段？S 又是什么？",
+    "locale": "zh-CN",
+    "style": "clean",
+    "quality_profile": "standard",
+    "repository": {
+      "url": "https://github.com/svenssonaxel/diff-format",
+      "revision": "826f50b9488b27058e0f29a38108c97ebc78790d"
+    }
+  },
+  "answer": {
+    "summary": "3 在第二段被删。enclosing if 是 patch 的中间文本名，不是最终文件里的代码。",
+    "reasons": [
+      "A 与 S 都含 1/2/3，B 只含 1/2。",
+      "第一段的新侧是 S；第二段的旧侧仍是同一个 S。",
+      "S 是格式里的声明，不是第三份 Git 修订。"
+    ],
+    "scope": "固定格式例826f · S为派生说明 · 未运行Python或validator"
+  },
+  "panels": [
+    {
+      "id": "three-forms",
+      "title": "三行先分清：哪些是文件？",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "stage-table",
+          "type": "comparison",
+          "labelColumn": "文本身份",
+          "columns": [
+            "外层形式",
+            "列表内容",
+            "原文来源"
+          ],
+          "rows": [
+            {
+              "id": "stage-a",
+              "label": "A · 原文件",
+              "cells": [
+                {
+                  "text": "没有外层 if"
+                },
+                {
+                  "text": "1 / 2 / 3"
+                },
+                {
+                  "text": "[完整 A](source:a)"
+                }
+              ]
+            },
+            {
+              "id": "stage-s",
+              "label": "S · 声明中间态",
+              "cells": [
+                {
+                  "text": "if True"
+                },
+                {
+                  "text": "1 / 2 / 3"
+                },
+                {
+                  "text": "[第一段新侧](source:right) / [第二段旧侧](source:left)"
+                }
+              ]
+            },
+            {
+              "id": "stage-b",
+              "label": "B · 原文件",
+              "cells": [
+                {
+                  "text": "if True"
+                },
+                {
+                  "text": "1 / 2"
+                },
+                {
+                  "text": "[完整 B](source:b)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s-identity",
+          "type": "prose",
+          "text": "S 是本页对 `enclosing if` 的简称。这个名字写在 patch 的片段标记里，不会作为代码写入 B。两侧 S 内容相同，第二段才删掉列表项 3。"
+        }
+      ]
+    },
+    {
+      "id": "file-a",
+      "title": "A：完整原文件",
+      "span": 6,
+      "blocks": [
+        {
+          "id": "code-a",
+          "type": "code",
+          "source": "a",
+          "language": "python"
+        }
+      ]
+    },
+    {
+      "id": "file-b",
+      "title": "B：完整最终文件",
+      "span": 6,
+      "blocks": [
+        {
+          "id": "code-b",
+          "type": "code",
+          "source": "b",
+          "language": "python"
+        }
+      ]
+    },
+    {
+      "id": "two-declarations",
+      "title": "删 3 的标记落在哪一段？",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "side-table",
+          "type": "comparison",
+          "labelColumn": "patch 声明段",
+          "columns": [
+            "比较的两侧",
+            "这段表达什么"
+          ],
+          "rows": [
+            {
+              "id": "right-declaration",
+              "label": "第 5–15 行 · >enclosing if",
+              "cells": [
+                {
+                  "text": "A → 新侧 S"
+                },
+                {
+                  "text": "加 if True 与缩进；列表仍有 3。"
+                }
+              ]
+            },
+            {
+              "id": "left-declaration",
+              "label": "第 16–24 行 · <enclosing if",
+              "cells": [
+                {
+                  "text": "旧侧 S → B"
+                },
+                {
+                  "text": "删逗号和列表项 3；保留包裹。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "patch-reading",
+          "type": "prose",
+          "text": "标记 `>` 把新侧切到命名片段，`<` 把旧侧切到命名片段；无名称的标记切回文件流。这里只说明比较结构；实际编辑时间和程序执行结果未知。[片段规则](source:rules)"
+        },
+        {
+          "id": "valid-patch",
+          "type": "code",
+          "source": "valid",
+          "language": "text"
+        }
+      ]
+    },
+    {
+      "id": "invalid-example",
+      "title": "无效反例另看：同名却不同内容",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "invalid-note",
+          "type": "prose",
+          "text": "另一份完整文件用同一个 `enclosing if` 名字，第一段写 `if True`，第二段却写 `if False`。它不接入上面的 A—S—B 说明。"
+        },
+        {
+          "id": "invalid-table",
+          "type": "comparison",
+          "labelColumn": "同名片段位置",
+          "columns": [
+            "条件文本",
+            "来源"
+          ],
+          "rows": [
+            {
+              "id": "invalid-right-row",
+              "label": "第一段的新侧 S",
+              "cells": [
+                {
+                  "text": "if True"
+                },
+                {
+                  "text": "[invalid 第 6 行](source:invalid-right)"
+                }
+              ]
+            },
+            {
+              "id": "invalid-left-row",
+              "label": "第二段的旧侧 S",
+              "cells": [
+                {
+                  "text": "if False"
+                },
+                {
+                  "text": "[invalid 第 17 行](source:invalid-left)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hdf-rule",
+          "type": "callout",
+          "level": "note",
+          "title": "HDF15：同名片段的内容必须一致",
+          "text": "规范和官方测试目录把这份文件归为无效。调用 validateSnippets 的是 validator 入口；terminal visualizer 只负责展示。[规范](source:rules) [测试分类](source:catalog) [validator](source:validator) [visualizer](source:visualizer)"
+        },
+        {
+          "id": "boundary",
+          "type": "prose",
+          "text": "本页只读取固定材料和声明的字节范围，没有上游拒绝回执，也不证明重构保持行为。完整原始文件、许可与审计范围在实验 README 中。"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "a",
+      "title": "A · 完整4行原文件",
+      "path": "tests/001/a/file.py",
+      "lines": [
+        1,
+        4
+      ],
+      "revision": "826f50b9488b27058e0f29a38108c97ebc78790d"
+    },
+    {
+      "id": "b",
+      "title": "B · 完整4行最终文件",
+      "path": "tests/001/b/file.py",
+      "lines": [
+        1,
+        4
+      ],
+      "revision": "826f50b9488b27058e0f29a38108c97ebc78790d"
+    },
+    {
+      "id": "right",
+      "title": "valid · 新侧命名 S",
+      "path": "tests/001/07-a-b.hintful.diff",
+      "lines": [
+        5,
+        15
+      ],
+      "revision": "826f50b9488b27058e0f29a38108c97ebc78790d"
+    },
+    {
+      "id": "left",
+      "title": "valid · 旧侧同名 S",
+      "path": "tests/001/07-a-b.hintful.diff",
+      "lines": [
+        16,
+        24
+      ],
+      "revision": "826f50b9488b27058e0f29a38108c97ebc78790d"
+    },
+    {
+      "id": "valid",
+      "title": "完整 valid patch（原文件保留末尾换行）",
+      "path": "tests/001/07-a-b.hintful.diff",
+      "lines": [
+        1,
+        24
+      ],
+      "revision": "826f50b9488b27058e0f29a38108c97ebc78790d"
+    },
+    {
+      "id": "invalid-right",
+      "title": "invalid · 第一段 True",
+      "path": "tests/001/11-a-b.invalid.hintful.diff",
+      "lines": [
+        5,
+        8
+      ],
+      "revision": "826f50b9488b27058e0f29a38108c97ebc78790d"
+    },
+    {
+      "id": "invalid-left",
+      "title": "invalid · 第二段 False",
+      "path": "tests/001/11-a-b.invalid.hintful.diff",
+      "lines": [
+        16,
+        19
+      ],
+      "revision": "826f50b9488b27058e0f29a38108c97ebc78790d"
+    },
+    {
+      "id": "rules",
+      "title": "命名片段规则与 HDF15",
+      "path": "MAIN.md",
+      "lines": [
+        67,
+        80
+      ],
+      "revision": "826f50b9488b27058e0f29a38108c97ebc78790d"
+    },
+    {
+      "id": "catalog",
+      "title": "官方测试对07和11的分类",
+      "path": "tests/README.md",
+      "lines": [
+        28,
+        45
+      ],
+      "revision": "826f50b9488b27058e0f29a38108c97ebc78790d"
+    },
+    {
+      "id": "validator",
+      "title": "validator pipeline",
+      "path": "implementations/python3/implementation.py",
+      "lines": [
+        1175,
+        1179
+      ],
+      "revision": "826f50b9488b27058e0f29a38108c97ebc78790d"
+    },
+    {
+      "id": "visualizer",
+      "title": "terminal visualizer pipeline",
+      "path": "implementations/python3/implementation.py",
+      "lines": [
+        1191,
+        1194
+      ],
+      "revision": "826f50b9488b27058e0f29a38108c97ebc78790d"
+    },
+    {
+      "id": "license",
+      "title": "完整上游多选许可",
+      "url": "https://github.com/svenssonaxel/diff-format/blob/826f50b9488b27058e0f29a38108c97ebc78790d/LICENSE.md"
+    },
+    {
+      "id": "contributors",
+      "title": "原版权归属",
+      "url": "https://github.com/svenssonaxel/diff-format/blob/826f50b9488b27058e0f29a38108c97ebc78790d/CONTRIBUTORS.md"
+    }
+  ]
+}

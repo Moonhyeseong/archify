@@ -1,0 +1,293 @@
+{
+  "kind": "derived portable fixed-content evidence, not original CLI or upstream validation receipts",
+  "productBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "upstreamRevision": "826f50b9488b27058e0f29a38108c97ebc78790d",
+  "licenseChoice": "Apache-2.0, one of the licenses offered by original LICENSE.md; original LICENSE.md and CONTRIBUTORS.md retained",
+  "sourceFiles": 10,
+  "externalApacheLicenseText": {
+    "path": "licenses/Apache-2.0.txt",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+    "bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  "audit": {
+    "command": "node experiments/hintful-stages/audit.mjs",
+    "status": "pass",
+    "checks": 9,
+    "rawStdout": {
+      "bytes": 875,
+      "sha256": "66b7639017cc8aa496bd719a2405d0d0c32d84ad8c815d6e4261b7a211189eba"
+    },
+    "scope": "Only explicit byte spans from four fixed SHA-bound inputs plus generated HTML; no arbitrary patch parser or Python execution"
+  },
+  "finalize": {
+    "command": "normal public finalize explainer with fixed source Git objects, standard quality",
+    "status": "pass",
+    "gates": {
+      "validate": "pass",
+      "deliver": "pass",
+      "check": "pass",
+      "browser-check": "not-run"
+    },
+    "diagnostics": [],
+    "browserCheck": {
+      "requested": false,
+      "ran": false
+    },
+    "specification": {
+      "sha256": "b11f3fee17271da1c7cfdfb29426c4c823f396e3a98d26f8ecf3bb238acf6982",
+      "bytes": 9829
+    },
+    "artifact": {
+      "sha256": "5cf708c77624c01259a0abd37f3d6d4a97f430225413b3626cecdf08e3e8a0b7",
+      "bytes": 377646
+    },
+    "rawReceipt": {
+      "bytes": 10429,
+      "sha256": "acb18fa6383b55342bbd422e4045ab0c500268aa154c13106e81c29d3b1221cd"
+    },
+    "rawStdout": {
+      "bytes": 1255,
+      "sha256": "8830d2b4e89b6e93ac0ecafee79dd24198c78284cdf7d6992b55d97faed17b9c"
+    },
+    "visualReview": "not-requested",
+    "updateNoticeRequired": false
+  },
+  "failuresAndRevisions": [
+    {
+      "stage": "first source preparation",
+      "exitCode": 1,
+      "reason": "EOF LF was incorrectly counted as source line25. Changed declared range to actual1–24; original fixture bytes unchanged; all gates not-run in initial result."
+    },
+    {
+      "stage": "initial successful delivery",
+      "reason": "One writing-qualification warning in comparison/execution boundary. Rephrased sentence only; original warning/input/HTML/receipt preserved; final0diagnostics."
+    },
+    {
+      "stage": "first factual audit",
+      "exitCode": 1,
+      "reason": "Audit counted row-label TH as TD. Corrected TD indexes; product, source fixtures and final HTML unchanged."
+    }
+  ],
+  "upstreamPythonExecuted": false,
+  "upstreamValidatorExecuted": false,
+  "invalidClassification": "HDF15/specification and official test catalogue only; no upstream rejection receipt",
+  "visualEvidence": {
+    "kind": "root actual selected browser observations, separate from automated gates",
+    "capture": {
+      "path": "screenshots/capture-summary.json",
+      "bytes": 7279,
+      "sha256": "6966dc630250d8e66e87e0274c60fe103a595d872f9c0b4b8fe6aeeb1493d407"
+    },
+    "rootViewedOriginalPngs": 5,
+    "privateOriginalObservationRecords": 5,
+    "scope": "Desktop light and two pointer source cards (valid light, invalid dark), plus mobile light and actual wheel scrolling. First table requires horizontal scroll; left identity column moves outside viewport when source column is shown.",
+    "notClaimed": [
+      "original observations republished as raw",
+      "touch gesture",
+      "keyboard traversal",
+      "external link activation",
+      "OS clipboard",
+      "AT",
+      "full browser gate",
+      "upstream execution",
+      "human acceptance"
+    ]
+  },
+  "rawBindings": {
+    "attempt1-input.json": {
+      "bytes": 9838,
+      "sha256": "490309f045f7c4a3ec97b3155835548a3df398943b634be80a285aa16229adbc"
+    },
+    "attempt1-stdout.json": {
+      "bytes": 1062,
+      "sha256": "e47dd6d8c9dbe3f695299702e9ecd077a030cfdb5a417139ed334d6ae2c9d019"
+    },
+    "attempt1-stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "before-copy-edit/input.json": {
+      "bytes": 9835,
+      "sha256": "8f8c8919ab94eaeeab5f66c8b5b7ad209c3de365fb6ee33907e9f6346f41b130"
+    },
+    "before-copy-edit/explainer.html": {
+      "bytes": 378610,
+      "sha256": "a46794e1bb9a20b383a8156391397467ebd60dc89d740c782eb69fc0188f87c0"
+    },
+    "before-copy-edit/delivery.json": {
+      "bytes": 3969,
+      "sha256": "bbbf70625cc4f528eadc51b89818120774f54dc4b67fcd0f70a7b63cff41c6ca"
+    },
+    "before-copy-edit/finalize.json": {
+      "bytes": 12102,
+      "sha256": "604b29ff8f064ccfecd48a42130fa1065c923f7bdb562cb080437d0674579728"
+    },
+    "before-copy-edit/stdout.json": {
+      "bytes": 1806,
+      "sha256": "15fdc68f5836ffbdba05733d01c4593845f79ce0b1b865d9e42cbfdb5b641281"
+    },
+    "before-copy-edit/stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit-first.mjs": {
+      "bytes": 7138,
+      "sha256": "1a85d38f9ad4b78a5edde06cf3fd0282eca0d797d948c3f7fddb5af5936b33ca"
+    },
+    "audit-first.stdout.json": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit-first.stderr": {
+      "bytes": 1151,
+      "sha256": "264c18da6f003255e8c1061af566e15acc4b93064ce5436c45f981419ce7edcc"
+    },
+    "audit.stdout.json": {
+      "bytes": 875,
+      "sha256": "66b7639017cc8aa496bd719a2405d0d0c32d84ad8c815d6e4261b7a211189eba"
+    },
+    "audit.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "finalize-copy.json": {
+      "bytes": 10429,
+      "sha256": "acb18fa6383b55342bbd422e4045ab0c500268aa154c13106e81c29d3b1221cd"
+    },
+    "finalize-copy.stdout.json": {
+      "bytes": 1255,
+      "sha256": "8830d2b4e89b6e93ac0ecafee79dd24198c78284cdf7d6992b55d97faed17b9c"
+    },
+    "finalize-copy.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "explainer.delivery.json": {
+      "bytes": 3969,
+      "sha256": "7ccb7eab6e1061512905d818536050a76b99e11e5aaba797f386f2fbc04950f2"
+    }
+  },
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 9680,
+      "sha256": "3f152836e8b5ab08ad3873f08cbe8c84427cfd6e419ec5fcd76911e0c04efc06"
+    },
+    {
+      "path": "audit-result.json",
+      "bytes": 875,
+      "sha256": "66b7639017cc8aa496bd719a2405d0d0c32d84ad8c815d6e4261b7a211189eba"
+    },
+    {
+      "path": "audit.mjs",
+      "bytes": 7213,
+      "sha256": "c96600ad9922d2b2274ca0f594ed2654cc9ca331771a2803c4071b2ba8b44247"
+    },
+    {
+      "path": "explainer.html",
+      "bytes": 377646,
+      "sha256": "5cf708c77624c01259a0abd37f3d6d4a97f430225413b3626cecdf08e3e8a0b7"
+    },
+    {
+      "path": "explainer.json",
+      "bytes": 9829,
+      "sha256": "b11f3fee17271da1c7cfdfb29426c4c823f396e3a98d26f8ecf3bb238acf6982"
+    },
+    {
+      "path": "facts.json",
+      "bytes": 7157,
+      "sha256": "6629d731a7075a4f39193ab131b489b860e488448e7c8e9faf9f1b905d9f1334"
+    },
+    {
+      "path": "licenses/Apache-2.0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "screenshots/capture-summary.json",
+      "bytes": 7279,
+      "sha256": "6966dc630250d8e66e87e0274c60fe103a595d872f9c0b4b8fe6aeeb1493d407"
+    },
+    {
+      "path": "screenshots/desktop-light.png",
+      "bytes": 374496,
+      "sha256": "de149eaa8cc69a6c99cc07eecb51c3e46f8f55c325af1860f2b54a1516d526e2"
+    },
+    {
+      "path": "screenshots/invalid-source-dark.png",
+      "bytes": 182166,
+      "sha256": "bd4ec42081b13c564d4d663561653d6b19f89c28508ac59c467913605095725d"
+    },
+    {
+      "path": "screenshots/mobile-light.png",
+      "bytes": 362527,
+      "sha256": "d2342af3f1d6d674fb6bc5a607b774a0b0ea99c4ef741fa13846b679655e131f"
+    },
+    {
+      "path": "screenshots/mobile-table-right.png",
+      "bytes": 83092,
+      "sha256": "06c05cb9477bebd99f14bbdc4ec535ad73f2af8da3c9ecc270ce8bb1cd98923c"
+    },
+    {
+      "path": "screenshots/valid-source-light.png",
+      "bytes": 184496,
+      "sha256": "b7e5ec42ef9d538e9f50124f46ef9385b5fcd453b369f042f4efea89c22ce726"
+    },
+    {
+      "path": "source-manifest.json",
+      "bytes": 3278,
+      "sha256": "162ad08991c2cb2908c8a1ae465fdd9a40be9373a15b4552fe91251bc5000b42"
+    },
+    {
+      "path": "upstream/CONTRIBUTORS.md",
+      "bytes": 40,
+      "sha256": "527c704aab660b73057cb0f2ff762ce9528ef019afd8173c5a08c9ab82ad901f"
+    },
+    {
+      "path": "upstream/LICENSE.md",
+      "bytes": 884,
+      "sha256": "e7260c06628bc478152847efb2ca4bd29730cdda048220cde365dd9fd693d5dc"
+    },
+    {
+      "path": "upstream/MAIN.md",
+      "bytes": 25203,
+      "sha256": "4107b9160c21bf85b7b004af862d7ea81b0eb9474bf319d02e6ddb28ecefebae"
+    },
+    {
+      "path": "upstream/implementations/python3/implementation.py",
+      "bytes": 49381,
+      "sha256": "c1032bfa84dc2b94694053fdc59a37d62361690d81863fc2a74acf9acb2f96b7"
+    },
+    {
+      "path": "upstream/tests/001/07-a-b.hintful.diff",
+      "bytes": 310,
+      "sha256": "aaa1abddb4283af03f7af56ca60cbd7a82ecf1f93bb9b21a3e256eef04445f19"
+    },
+    {
+      "path": "upstream/tests/001/11-a-b.invalid.hintful.diff",
+      "bytes": 311,
+      "sha256": "1934717d10df8a8c786a27a47b12a27fd567f9187323177b4e065c6e0d32d634"
+    },
+    {
+      "path": "upstream/tests/001/a/file.py",
+      "bytes": 53,
+      "sha256": "1e99918f7dbe30fe1d61b00e37310b6096009e3a20b0f95a8c02e685b007b7c1"
+    },
+    {
+      "path": "upstream/tests/001/b/file.py",
+      "bytes": 61,
+      "sha256": "7a6b16c1108e0ef29bb64112cee106de11206ecd766586b2c82fb46d2c46ebc7"
+    },
+    {
+      "path": "upstream/tests/README.md",
+      "bytes": 9392,
+      "sha256": "a0c05599c686516f8413929a016fd0d6eaf0b081f30a2406e514f3b720379808"
+    },
+    {
+      "path": "upstream/tests/run-tests",
+      "bytes": 30490,
+      "sha256": "8422c10e6b3ff9993ce2e807acc6cea5f0ac4c0e349bbe15bc1b4ed2b06b2b51"
+    }
+  ]
+}
