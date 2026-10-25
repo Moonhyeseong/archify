@@ -40,7 +40,7 @@
 | [Diagnostic locations](https://github.com/tt-a1i/archify/tree/codex/lab-diagnostic-locations/experiments/diagnostic-locations) | 同文诊断显示已有行号/节点/路径，preview保留旧图并指出坏输入 | `67328d7d` | [实际连续预览](https://github.com/tt-a1i/archify/blob/codex/lab-diagnostic-locations/experiments/diagnostic-locations/screenshots/live-preview-needs-fix.png) | 29诊断、19core、2preview、7真实Chrome检查；独立6；JSON字节不变，双ZIP一致；同一浏览器验证rev1→needs-fix |
 | [Finder result descriptions](https://github.com/tt-a1i/archify/tree/codex/lab-finder-context/experiments/finder-context) | 8个同名搜索结果通过既有ID/类型/耗时说明获得不同可访问描述 | `5b7701c1` | [实际UI与AX证据](https://github.com/tt-a1i/archify/tree/codex/lab-finder-context/experiments/finder-context/screenshots) | 13browser/toolbar、19core、2generatedfocused、golden/ZIP通过；8条实际AX与键盘选择核实；非VoiceOver/NVDA接受 |
 | [Delivery witness](https://github.com/tt-a1i/archify/tree/codex/lab-delivery-witness/experiments/delivery-witness) | 同msgId、同t的两次投递保留seq/dup与原始patch，不以时间去重 | `f2aa251e` | [实际证据页](https://github.com/tt-a1i/archify/blob/codex/lab-delivery-witness/experiments/delivery-witness/screenshots/witness.png) | 零共享代码；固定官方模拟fixture选段；2页四阶段通过，独立源/语义复核；小字与错误图例已修，旧图保留；非本次运行/用户收益 |
-| [Waterfall status text](https://github.com/tt-a1i/archify/tree/codex/lab-waterfall-status/experiments/waterfall-status) | 已提供error/cancelled同时显示在行尾、节点说明和可访问名称 | `e20acd6d` | [实际前后图](https://github.com/tt-a1i/archify/tree/codex/lab-waterfall-status/experiments/waterfall-status) | 局部renderer；34focused/core、2产物四阶段、ZIP/package通过；两个旧例byte-identical；实际AX/Passport/浅深色；构造输入，非真人AT |
+| [Waterfall status text](https://github.com/tt-a1i/archify/tree/codex/lab-waterfall-status/experiments/waterfall-status) | 已提供error/cancelled同时显示在行尾、节点说明和可访问名称 | `68311bb8` | [新dev实际前后图](https://github.com/tt-a1i/archify/tree/codex/lab-waterfall-status/experiments/waterfall-status/refresh-dev-10b4) | 基线10b4；34focused/core，XML初缺依赖后单独3pass；原生/精确ZIP四阶段；无状态两例相同；7真实图/DOM与AX分列；构造输入、非真人AT |
 | [Retained size](https://github.com/tt-a1i/archify/tree/codex/lab-retained-size/experiments/retained-size) | Twiggy自身165B+直接支配子项4B=保留169B，避免跨层重复计数 | `a0c76fc8` | [实际解释页](https://github.com/tt-a1i/archify/blob/codex/lab-retained-size/experiments/retained-size/screenshots/explanation.png) | 零共享代码；固定上游golden；Tree四阶段、Explainer三阶段通过/自动browser未跑；单一模型绑定已修，旧图保留；非删减实测 |
 | [Lasso witness](https://github.com/tt-a1i/archify/tree/codex/lab-lasso-witness/experiments/lasso-witness) | 三位置反例保留有限前缀和无限后缀的显式闭合入口 | `900fe5a3` | [实际原文与图对照](https://github.com/tt-a1i/archify/tree/codex/lab-lasso-witness/experiments/lasso-witness) | 零共享代码；固定上游选段；3页四阶段通过；实际回环遮挡已通过输入修复，旧图保留；未运行checker/未验证用户收益 |
 | [Workflow self-loop](https://github.com/tt-a1i/archify/tree/codex/lab-workflow-self-loop/experiments/workflow-self-loop) | 同一节点同时作为起点和终点，正确外绕回接不再被误拒 | `eb299b15` | [实际回环](https://github.com/tt-a1i/archify/blob/codex/lab-workflow-self-loop/experiments/workflow-self-loop/screenshots/explicit-loop.png) | 局部compiler；145focused/core、独立8、四旧例逐字一致、ZIP/抽包四阶段通过；必要折返守卫，既有auto候选也可用，未扩搜索 |
@@ -112,6 +112,8 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 2026-10-25 18:14:23核Diff line numbers新head `28f9f95d` 与Preview dashed ink新head `ca4baa1d`：都包含固定dev10b4祖先，远端head一致，Actions runs/check-runs均为0。本文本不把未运行CI写成通过。
 
+2026-10-25 18:37核Waterfall status新head `68311bb8`：远端一致，包含固定dev10b4，精确head的Actions runs/check-runs均为0。本地原生/精确ZIP四阶段与真实图片不代替远端CI。
+
 ## 正在推进
 
 | 方向 | 来源与目标 | 状态 |
@@ -119,10 +121,11 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 新内容实验 | fq字节区间与位解释视图 | byte-views已推b844ecb2，计入第34项；完整97B官方fixture/golden与四张真实截图，冻结67f基线 |
 | 新产品实验 | source-only图节点的键盘激活 | d81830d3已推，计入第35项；真实基线可Tab但Enter/Space不激活，候选补等价动作与button角色；5图及独立审查完成 |
 | 已有候选刷新 | Diff行号 / Preview虚线文字 | 两条既有分支均已整合固定dev10b4并完成独立终审：28f9f95d/ca4baa1d已推，新旧证据身份分列 |
-| 新一轮发现 | Shell阅读 / CSS来源解释 | 第8轮12个新来源、4个深入源码，0直接实施建议；第9轮继续一手调研，已有键盘实际缺口已独立修复 |
+| 已有候选刷新 | Waterfall状态 / Finder结果描述 | Waterfall已推68311bb8；Finder已完成新基线实际AX/键盘/截图，正在收尾共享生成物与独立审查 |
+| 新一轮发现 | Shell / CSS / Notebook / 构建阅读 | 第9轮13个新来源，未增加实现；第10轮12个新来源，Notebook与task occurrence两个内容实验在制作，源码卡审计无确认新缺陷；继续配置来源方向 |
 | 既有实验真实输出 | Recipe stages / State contract | State官方fixture实导出已推f7269e09；Recipe官方test有效输入dump已推062dee5d，自然完整示例拒绝并保留；历史synthetic不改称实跑 |
 | 新发现修复 | Explainer复制结果与手工恢复 | Clipboard outcome已推送68866954，来源、基线/候选和实际截图见第33项 |
-| 浏览页更新 | 第35项及两项CSS候选的新基线图片 | 当前固定34版完整可用；两项刷新已发布，正在一起生成35版，不把当前19项浏览器观察自动算到下一版 |
+| 浏览页更新 | 35项固定实验图片 | c23d585c已发布：35原图，当前11项观测/4新截图，390px和深色明确复用34同模板历史；固定来源与限制保留 |
 | 既有实验补证据 | DBML与Plan actions | DBML已补上primary key同义写法接受；原拒绝记录保留；完整plan fixture转换证据不变 |
 | 已排除的重复实现 | Mutation报告reader | 原viewer已有文件搜索、状态筛选、diff、测试关联和单HTML打包；只保留研究，不另建reader |
 | 新dev影响核对 | 许可声明与finalize源范围修复 | [15:41迁移](base-refresh-1541.md) / [16:18交付逻辑](base-refresh-1618.md)：分别核对实际diff；旧证据保留原身份，新整合按影响验证 |
@@ -184,6 +187,11 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 图节点、来源卡与键盘交接的实际缺口 | [Reading handoff audit](scouts/reading-handoff-audit.md) |
 | 类型展开、回指与求解候选 | [Type reading round 8](scouts/type-reading-round8.md) |
 | 匹配过程、接受条件与截断 | [Matching reading round 8](scouts/matching-reading-round8.md) |
+| Shell原文、展开与参数边界 | [Shell reading round 9](scouts/shell-reading-round9.md) |
+| 样式贡献、上下文与来源 | [Style reading round 9](scouts/style-reading-round9.md) |
+| Notebook位置、源码与保存输出 | [Notebook reading round 10](scouts/notebook-reading-round10.md) |
+| 构建打印位置与任务身份 | [Build reading round 10](scouts/build-reading-round10.md) |
+| 长源码与多来源交接窄审计 | [Source reading audit round 10](scouts/source-reading-audit-round10.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
 报告中的上游声明、局部源码核实、计划中的实验和已经执行的结果分别标注。未推荐方向也保留原因，避免反复研究；没有把上游宣传、星数或作者截图当作 Archify 的效果证明。
