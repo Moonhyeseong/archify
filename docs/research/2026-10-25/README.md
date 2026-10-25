@@ -10,7 +10,7 @@
 
 2026-10-25 16:18（台北）再次核对：dev 已合入 [#1100](https://github.com/tt-a1i/archify/pull/1100)，推进到 [`67f12389`](https://github.com/tt-a1i/archify/commit/67f12389212c54b3122da60e2813c7f8dab7ab2f)，main 仍为 `51a29177`。这次修改 finalize 的源码范围修复、候选文件保留及相关交付逻辑；Copy identity、CLI reading tour 和 Clipboard outcome 保留实际冻结的 `3f95f034` 基线，不把既有结果改称新 dev 验证。
 
-## 已推送的 35 个实验
+## 已推送的 36 个实验
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
@@ -53,6 +53,7 @@
 | [Clipboard outcome](https://github.com/tt-a1i/archify/tree/codex/lab-clipboard-outcome/experiments/clipboard-outcome) | 复制不可用时保留可选择的内容，恢复后重试不重复包装问题 | `68866954` | [实际失败恢复](https://github.com/tt-a1i/archify/blob/codex/lab-clipboard-outcome/experiments/clipboard-outcome/screenshots/missing-ask-candidate.png) | 基线3f95；8种API边界、邻近32/core19、canonical双ZIP/抽包通过；同一真实PR输入基线/候选三阶段通过；API受控注入实测，未写OS clipboard；自动browser未请求 |
 | [Byte views](https://github.com/tt-a1i/archify/tree/codex/lab-byte-views/experiments/byte-views) | 分清IHDR的25B物理字段与已有type内的4个bit解释，避免重复求和 | `b844ecb2` | [实际解释页](https://github.com/tt-a1i/archify/blob/codex/lab-byte-views/experiments/byte-views/screenshots/explainer-overview.png) | 固定67f；完整97B官方fixture/golden、独立字节观察8事实检查；Tree四阶段/Explainer三静态阶段通过，root四图及citation hover/Escape；未运行fq/CRC/解压 |
 | [Source keyboard activation](https://github.com/tt-a1i/archify/tree/codex/lab-source-keyboard/experiments/source-keyboard) | 同一源码预览节点的Enter/Space执行已有鼠标开原图动作，AX提供button语义 | `d81830d3` | [实际Enter打开结果](https://github.com/tt-a1i/archify/blob/codex/lab-source-keyboard/experiments/source-keyboard/screenshots/candidate-enter-viewer.png) | 基线10b4；6browser/15renderer/19core、生成/235项ZIP通过；真实前后AX/按键/返回与5图；Tab及focus原本已有，误判已撤回；4docs继承freshness单列，无AT接受 |
+| [Notebook occurrences](https://github.com/tt-a1i/archify/tree/codex/lab-notebook-occurrences/experiments/notebook-occurrences) | 六个重复文本cell按位置保留，分清源码改变与保存输出改变 | `2090b0ff` | [实际六行对照页](https://github.com/tt-a1i/archify/blob/codex/lab-notebook-occurrences/experiments/notebook-occurrences/screenshots/explainer-overview.png) | 内容限定固定nbdime三完整fixture；11事实审计，Tree四阶段/Explainer三阶段且browser未跑；4真实图/DOM字段核实；无kernel/nbdime执行、稳定ID或因果推断 |
 
 这三十三项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
 
@@ -114,6 +115,8 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 2026-10-25 18:37核Waterfall status新head `68311bb8`：远端一致，包含固定dev10b4，精确head的Actions runs/check-runs均为0。本地原生/精确ZIP四阶段与真实图片不代替远端CI。
 
+2026-10-25 18:42核Notebook occurrences `2090b0ff`：远端一致，精确head的Actions runs/check-runs均为0。新内容基于固定dev10b4，仅新增实验目录；当前图片总览仍是35项固定快照，第36项可从上表直达。
+
 ## 正在推进
 
 | 方向 | 来源与目标 | 状态 |
@@ -122,7 +125,7 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 新产品实验 | source-only图节点的键盘激活 | d81830d3已推，计入第35项；真实基线可Tab但Enter/Space不激活，候选补等价动作与button角色；5图及独立审查完成 |
 | 已有候选刷新 | Diff行号 / Preview虚线文字 | 两条既有分支均已整合固定dev10b4并完成独立终审：28f9f95d/ca4baa1d已推，新旧证据身份分列 |
 | 已有候选刷新 | Waterfall状态 / Finder结果描述 | Waterfall已推68311bb8；Finder已完成新基线实际AX/键盘/截图，正在收尾共享生成物与独立审查 |
-| 新一轮发现 | Shell / CSS / Notebook / 构建阅读 | 第9轮13个新来源，未增加实现；第10轮12个新来源，Notebook与task occurrence两个内容实验在制作，源码卡审计无确认新缺陷；继续配置来源方向 |
+| 新一轮发现 | Shell / CSS / Notebook / 构建阅读 | 第9轮13个新来源，未增加实现；第10轮12个新来源，Notebook已推2090b0ff，task occurrence在修复实际预览文字问题；源码卡审计无确认新缺陷；第11轮配置来源完成6源调研并制作一个固定内容例 |
 | 既有实验真实输出 | Recipe stages / State contract | State官方fixture实导出已推f7269e09；Recipe官方test有效输入dump已推062dee5d，自然完整示例拒绝并保留；历史synthetic不改称实跑 |
 | 新发现修复 | Explainer复制结果与手工恢复 | Clipboard outcome已推送68866954，来源、基线/候选和实际截图见第33项 |
 | 浏览页更新 | 35项固定实验图片 | c23d585c已发布：35原图，当前11项观测/4新截图，390px和深色明确复用34同模板历史；固定来源与限制保留 |
@@ -192,6 +195,7 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | Notebook位置、源码与保存输出 | [Notebook reading round 10](scouts/notebook-reading-round10.md) |
 | 构建打印位置与任务身份 | [Build reading round 10](scouts/build-reading-round10.md) |
 | 长源码与多来源交接窄审计 | [Source reading audit round 10](scouts/source-reading-audit-round10.md) |
+| 配置叠加、幸存值与错误来源 | [Config reading round 11](scouts/config-reading-round11.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
 报告中的上游声明、局部源码核实、计划中的实验和已经执行的结果分别标注。未推荐方向也保留原因，避免反复研究；没有把上游宣传、星数或作者截图当作 Archify 的效果证明。
