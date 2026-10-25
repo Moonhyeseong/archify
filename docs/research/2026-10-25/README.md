@@ -102,6 +102,8 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
+| 新一轮发现 | 代码导航、图阅读、差异比较 | 第5轮报告完成：按实际源码/fixture与PR1102、1103排重，本轮0新增实现；没有独立收益证据的机制保留研究 |
+| 既有实验真实输出 | Recipe stages / State contract | 评估固定官方工具的隔离导出；当前历史synthetic身份保持，未预填成功 |
 | 新发现修复 | Explainer复制结果与手工恢复 | Clipboard outcome已推送68866954，来源、基线/候选和实际截图见第33项 |
 | 浏览页更新 | 新增4项及DBML/Migration更新 | 33项快照已完成静态独立重建与浅深色/390px真实浏览器检查，旧版证据继续绑定原提交 |
 | 既有实验补证据 | DBML与Plan actions | DBML已补上primary key同义写法接受；原拒绝记录保留；完整plan fixture转换证据不变 |
@@ -153,6 +155,10 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 值、对象身份与局部计算解释 | [Visual explanation small tools](scouts/visual-explanation-smalltools.md) |
 | 渐进解释、分叉判断与表达式上下文 | [Adjacent discovery round 3](scouts/adjacent-discovery-round3.md) |
 | 范围比较与条件上下文 | [Code-reading utilities round 4](scouts/code-reading-utilities-round4.md) |
+| 代码导航与多调用点 | [Code navigation round 5](scouts/code-navigation-round5.md) |
+| 折叠状态、汇总边与层级阅读 | [Graph reading round 5](scouts/graph-reading-round5.md) |
+| 比较策略、移动身份与空白阅读 | [Comparison reading round 5](scouts/comparison-reading-round5.md) |
+| 既有来源、diff、code块静态窄核 | [Source block reading audit](scouts/source-block-reading-audit.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
 报告中的上游声明、局部源码核实、计划中的实验和已经执行的结果分别标注。未推荐方向也保留原因，避免反复研究；没有把上游宣传、星数或作者截图当作 Archify 的效果证明。
