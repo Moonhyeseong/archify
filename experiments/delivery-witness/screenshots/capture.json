@@ -1,0 +1,32 @@
+{
+  "kind": "actual-root-browser-capture-after-legend-fix",
+  "browser": "Ego Lite / Chromium",
+  "viewport": {
+    "width": 1440,
+    "height": 1000,
+    "deviceScaleFactor": 1
+  },
+  "images": [
+    {
+      "image": "witness.png",
+      "source": "../witness.html",
+      "sourceSha256": "74df4d5f8d5aab909e98f34b52d29f2f195ca400175595392ca4de9fe7f7ba4a",
+      "sha256": "058ca918baa58c651bb43181e28d1f933cda44a2a62935aa4479c5fe92a68f01",
+      "width": 1440,
+      "height": 1731,
+      "capturedAt": "2026-10-25T05:54:11.615Z"
+    },
+    {
+      "image": "sequence.png",
+      "source": "../delivery.sequence.html",
+      "sourceSha256": "1824b5f79e50374b8f6164d513fbb65fe43180811b7c203c7b09d4873da6f08d",
+      "sha256": "80dbcebcbfc487afc196f4b9eea40b288a1cf340997a3ec363a6f4af081ac187",
+      "width": 1440,
+      "height": 1096,
+      "capturedAt": "2026-10-25T05:54:11.816Z"
+    }
+  ],
+  "superseded": "before-legend-fix/capture.json",
+  "limits": "Actual fixed public simulation-fixture excerpt; not a new simulation run, production trace, human acceptance or measured reading benefit.",
+  "agentVisualReview": "Coordinator viewed both final screenshots: two neutral message arrows, distinct seq/dup labels and raw source lines retained. Earlier primary-path legend defect is preserved separately."
+}

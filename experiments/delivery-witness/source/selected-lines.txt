@@ -1,0 +1,8 @@
+L1 {"kind":"header","v":2,"seed":3,"nodes":2,"unit":"ms","network":{"latency":[5,5],"dropRate":0,"duplicateRate":1,"partitions":[{"groups":[[1],[2]],"start":45,"end":60}]}}
+L7 {"t":10,"seq":5,"kind":"send","from":1,"to":2,"msgId":0,"msg":{"type":"ping","n":1,"tag":"a\"b\\c\n"}}
+L14 {"t":15,"seq":12,"kind":"deliver","msgId":0}
+L15 {"t":15,"seq":13,"kind":"send","from":2,"to":1,"msgId":2,"msg":{"type":"pong"}}
+L16 {"t":15,"seq":14,"kind":"state","node":2,"patch":{"got":1}}
+L17 {"t":15,"seq":15,"kind":"deliver","msgId":0,"dup":true}
+L18 {"t":15,"seq":16,"kind":"send","from":2,"to":1,"msgId":3,"msg":{"type":"pong"}}
+L19 {"t":15,"seq":17,"kind":"state","node":2,"patch":{"got":2}}

@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "diagram_type": "explainer",
+  "meta": {
+    "title": "同一模拟时间，不是同一个事件",
+    "id": "delivery-witness",
+    "locale": "zh-CN",
+    "output": "witness.html"
+  },
+  "answer": {
+    "summary": "msgId=0 在 **t=15 ms 有两条 deliver 记录**，seq 分别是 12 和 15。",
+    "reasons": [
+      "同一时刻还记录了两个 raw state.patch：seq=14 的 got=1、seq=17 的 got=2。",
+      "只看后一个 patch 会漏掉中间记录；这些片段不是完整状态快照。"
+    ],
+    "scope": "官方 Moirae 模拟 fixture 选段，非本次运行、非生产 trace。仅按原始 msgId/seq 关联；不由相同 t 或相邻行推断因果。"
+  },
+  "panels": [
+    {
+      "id": "delivery",
+      "title": "两条投递记录，共用一次 send 的端点",
+      "blocks": [
+        {
+          "id": "delivery-diagram",
+          "type": "diagram",
+          "diagramType": "sequence",
+          "spec": {
+            "schema_version": 1,
+            "diagram_type": "sequence",
+            "meta": {
+              "title": "msgId 0：同刻两次投递记录",
+              "subtitle": "官方模拟 fixture，非本次运行。端点取 send seq=5；箭头仅表示 deliver，y 间隔不是时间差。",
+              "locale": "zh-CN",
+              "output": "experiments/delivery-witness/delivery.sequence.html",
+              "viewBox": [
+                900,
+                500
+              ],
+              "animation": "none",
+              "quality_profile": "showcase"
+            },
+            "participants": [
+              {
+                "id": "n1",
+                "type": "backend",
+                "label": "Node 1"
+              },
+              {
+                "id": "n2",
+                "type": "backend",
+                "label": "Node 2"
+              }
+            ],
+            "messages": [
+              {
+                "id": "delivery-12",
+                "from": "n1",
+                "to": "n2",
+                "y": 190,
+                "label": "msgId=0 / seq=12 / t=15ms / dup: not supplied",
+                "variant": "default"
+              },
+              {
+                "id": "delivery-15",
+                "from": "n1",
+                "to": "n2",
+                "y": 300,
+                "label": "msgId=0 / seq=15 / t=15ms / dup=true",
+                "variant": "default"
+              }
+            ]
+          }
+        },
+        {
+          "id": "delivery-rule",
+          "type": "callout",
+          "text": "箭头仅表示 deliver。Node 1→Node 2 从 L7 的同 msgId send 投影；deliver 原行没有 from/to。纵向间隔仅为阅读次序。",
+          "level": "note"
+        }
+      ]
+    },
+    {
+      "id": "records",
+      "title": "按原 seq 读，别把 t 当事件身份",
+      "blocks": [
+        {
+          "id": "event-ledger",
+          "type": "comparison",
+          "columns": [
+            "原始位置 / 事件",
+            "模拟时间",
+            "字段摘录"
+          ],
+          "rows": [
+            {
+              "id": "row-0",
+              "label": "send",
+              "cells": [
+                {
+                  "text": "L7 · seq=5"
+                },
+                {
+                  "text": "t=10 ms"
+                },
+                {
+                  "text": "from=1 · to=2 · msgId=0"
+                }
+              ]
+            },
+            {
+              "id": "row-1",
+              "label": "deliver",
+              "cells": [
+                {
+                  "text": "L14 · seq=12"
+                },
+                {
+                  "text": "t=15 ms"
+                },
+                {
+                  "text": "msgId=0 · dup: not supplied"
+                }
+              ]
+            },
+            {
+              "id": "row-2",
+              "label": "raw patch",
+              "cells": [
+                {
+                  "text": "L16 · seq=14"
+                },
+                {
+                  "text": "t=15 ms"
+                },
+                {
+                  "text": "node=2 · patch={\"got\":1}"
+                }
+              ]
+            },
+            {
+              "id": "row-3",
+              "label": "deliver",
+              "cells": [
+                {
+                  "text": "L17 · seq=15"
+                },
+                {
+                  "text": "t=15 ms"
+                },
+                {
+                  "text": "msgId=0 · dup=true"
+                }
+              ]
+            },
+            {
+              "id": "row-4",
+              "label": "raw patch",
+              "cells": [
+                {
+                  "text": "L19 · seq=17"
+                },
+                {
+                  "text": "t=15 ms"
+                },
+                {
+                  "text": "node=2 · patch={\"got\":2}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "raw-boundary",
+          "type": "callout",
+          "text": "seq=13 / L15 与 seq=16 / L18 是 Node 2 另发 pong 的记录，表中未展开，完整原行在下方。state.patch 没有 msgId；这里不声称某条 deliver 导致某个 patch。",
+          "level": "note"
+        }
+      ]
+    },
+    {
+      "id": "source-lines",
+      "title": "完整选中原行与边界",
+      "blocks": [
+        {
+          "id": "selected-source",
+          "type": "snippet",
+          "language": "text",
+          "title": "L1、L7、L14–L19；前缀 L 是作者行号，后面 JSON 未改写",
+          "text": "L1 {\"kind\":\"header\",\"v\":2,\"seed\":3,\"nodes\":2,\"unit\":\"ms\",\"network\":{\"latency\":[5,5],\"dropRate\":0,\"duplicateRate\":1,\"partitions\":[{\"groups\":[[1],[2]],\"start\":45,\"end\":60}]}}\nL7 {\"t\":10,\"seq\":5,\"kind\":\"send\",\"from\":1,\"to\":2,\"msgId\":0,\"msg\":{\"type\":\"ping\",\"n\":1,\"tag\":\"a\\\"b\\\\c\\n\"}}\nL14 {\"t\":15,\"seq\":12,\"kind\":\"deliver\",\"msgId\":0}\nL15 {\"t\":15,\"seq\":13,\"kind\":\"send\",\"from\":2,\"to\":1,\"msgId\":2,\"msg\":{\"type\":\"pong\"}}\nL16 {\"t\":15,\"seq\":14,\"kind\":\"state\",\"node\":2,\"patch\":{\"got\":1}}\nL17 {\"t\":15,\"seq\":15,\"kind\":\"deliver\",\"msgId\":0,\"dup\":true}\nL18 {\"t\":15,\"seq\":16,\"kind\":\"send\",\"from\":2,\"to\":1,\"msgId\":3,\"msg\":{\"type\":\"pong\"}}\nL19 {\"t\":15,\"seq\":17,\"kind\":\"state\",\"node\":2,\"patch\":{\"got\":2}}"
+        },
+        {
+          "id": "limits",
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "原文件共 98 行；本页未展示其他消息、初始完整状态及后续故障。完整 engine.jsonl 随实验保存。",
+            "msgId=0 在完整 fixture 中有 1 send、2 deliver、0 drop；这不是协议一般保证。",
+            "第一条 deliver 缺少 dup 字段，不能补成 false。第二条原文为 dup=true。",
+            "不调用上游 stateAt(node,t)，不折叠 patch、不把 null 解释成业务 null；上游 patch 合同中 null 表示删除字段。",
+            "这里只核对内容表达；不据此声称用户收益或人类、跨浏览器、生产验收。本轮 browser-check 结果见实验摘要。"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "upstream-fixture",
+      "title": "Moirae engine.jsonl · Apache-2.0 · 固定官方模拟 fixture",
+      "url": "https://github.com/pchrysostomou/moirae/blob/a289c00cedb8716bd4a6db6b47042b875c22936b/crates/moirae-trace/tests/fixtures/engine.jsonl",
+      "revision": "a289c00cedb8716bd4a6db6b47042b875c22936b",
+      "lines": [
+        1,
+        19
+      ]
+    },
+    {
+      "id": "trace-contract",
+      "title": "Moirae trace.ts：事件与 patch 合同",
+      "url": "https://github.com/pchrysostomou/moirae/blob/a289c00cedb8716bd4a6db6b47042b875c22936b/packages/core/src/trace.ts",
+      "revision": "a289c00cedb8716bd4a6db6b47042b875c22936b"
+    }
+  ]
+}

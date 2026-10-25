@@ -1,0 +1,33 @@
+{
+  "kind": "superseded-actual-capture-before-legend-fix",
+  "browser": "Ego Lite / Chromium",
+  "viewport": {
+    "width": 1440,
+    "height": 1000,
+    "deviceScaleFactor": 1
+  },
+  "images": [
+    {
+      "image": "witness.png",
+      "source": "witness.html",
+      "sourceSha256": "3da9022c98c65be8b77aa802100bee091b2dab4e9365df6254283cf78c5823bf",
+      "sha256": "d5a55e1bb338933788a7915ae88f4d33b730ca69a966987765de32c41159766f",
+      "width": 1440,
+      "height": 1731,
+      "capturedAt": "2026-10-25T05:52:14.058Z",
+      "sourceRetained": true
+    },
+    {
+      "image": "sequence.png",
+      "source": "delivery.sequence.html",
+      "sourceSha256": "d69079b3a2d2a653a7e8ae34acb1b348fd3ef185b5f8480ed001ad12737e3f57",
+      "sha256": "45e2ea26a7e1be54c3d7a04e177cd7267c90aee120057f40dbbc70c26a7a9165",
+      "width": 1440,
+      "height": 1096,
+      "capturedAt": "2026-10-25T05:52:14.264Z",
+      "sourceRetained": true
+    }
+  ],
+  "limits": "Actual images of the fixed public simulation-fixture excerpt; not a new simulation run, production trace, human acceptance or measured reading benefit.",
+  "reason": "Second deliver used primary emphasis; automatic legend called it a primary-path request, incorrectly suggesting a different message category. Both records are deliver."
+}

@@ -1,0 +1,122 @@
+{
+  "kind": "portable-validation-summary",
+  "not_raw_receipts": true,
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "runtime": "Node 22",
+  "results": [
+    {
+      "type": "sequence",
+      "status": "pass",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "diagnostics": [],
+      "visualReview": "not-requested",
+      "browserCheck": {
+        "requested": true,
+        "ran": true
+      },
+      "specification": {
+        "path": "experiments/delivery-witness/delivery.sequence.json",
+        "sha256": "dad684bbd1464b14190f2acd2e82b9fb2cf8b66a4f7cf739910d754dcee1709c"
+      },
+      "artifact": {
+        "path": "experiments/delivery-witness/delivery.sequence.html",
+        "sha256": "1824b5f79e50374b8f6164d513fbb65fe43180811b7c203c7b09d4873da6f08d"
+      },
+      "durationMs": 2928
+    },
+    {
+      "type": "explainer",
+      "status": "pass",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "diagnostics": [],
+      "visualReview": "not-requested",
+      "browserCheck": {
+        "requested": true,
+        "ran": true
+      },
+      "specification": {
+        "path": "experiments/delivery-witness/witness.explainer.json",
+        "sha256": "562ef3bfec5da66377554ec40c131082d369db65048f4b959535349cc55b25d2"
+      },
+      "artifact": {
+        "path": "experiments/delivery-witness/witness.html",
+        "sha256": "74df4d5f8d5aab909e98f34b52d29f2f195ca400175595392ca4de9fe7f7ba4a"
+      },
+      "durationMs": 24515
+    }
+  ],
+  "content_audit": {
+    "ok": true,
+    "checks": [
+      "source SHA and 98-line count",
+      "complete selected lines with author prefixes",
+      "all full-file msg0 records exactly 1send/2deliver/0drop",
+      "dup absent versus true",
+      "raw patch values and no msgId",
+      "embedded native spec equals standalone spec",
+      "two delivery arrows retain joined endpoints",
+      "Explainer snippet equals selected complete lines",
+      "generated HTML contains no personal absolute paths",
+      "final HTML embedded canonical document/native spec/raw-context bindings",
+      "neutral default variants on both deliveries; generated native SVG has ordinary-message legend and no primary-request legend; original labels unchanged"
+    ]
+  },
+  "attempts": [
+    {
+      "stage": "first render",
+      "result": "failed authored schema: animation static, height450, callout tone",
+      "resolution": "animation none, height500, callout level; no runtime change"
+    },
+    {
+      "stage": "first Explainer finalize",
+      "result": "source-document-binding failed at meta.output",
+      "resolution": "use portable basename witness.html, re-render/finalize; no HTML patch"
+    },
+    {
+      "stage": "Explainer browser-check",
+      "result": "failed native preview minimum text 8.75px",
+      "resolution": "removed small sublabel/note; same facts placed in normal arrow labels; endpoint source in subtitle/callout. No runtime/HTML edits."
+    },
+    {
+      "stage": "root initial-image review",
+      "result": "release blocker: second deliver emphasis generated misleading primary-request legend",
+      "resolution": "both delivery arrows use neutral default; dup=true remains literal label; Explainer embedded spec synchronized",
+      "superseded_artifact_hashes": {
+        "delivery.sequence.html": "d69079b3a2d2a653a7e8ae34acb1b348fd3ef185b5f8480ed001ad12737e3f57",
+        "witness.html": "3da9022c98c65be8b77aa802100bee091b2dab4e9365df6254283cf78c5823bf"
+      },
+      "superseded_images": "root retains initial screenshots as visual-review evidence; they are not final-version acceptance"
+    }
+  ],
+  "raw_receipts": "retained outside checkout; this summary is authored and explicitly not an original receipt",
+  "scope": "content-only native Sequence + Explainer; no human benefit or root visual acceptance claimed",
+  "files_sha256": {
+    "delivery.sequence.html": "1824b5f79e50374b8f6164d513fbb65fe43180811b7c203c7b09d4873da6f08d",
+    "projection-receipt.json": "eafc386f1dda9b1b45726b1b81ad61211a4e09fcc1fe6680b956814126e858f7",
+    "witness.explainer.json": "562ef3bfec5da66377554ec40c131082d369db65048f4b959535349cc55b25d2",
+    "README.md": "af7837f4ef6703c4c1704f4c4465566d9f8359c88ea015ac93aee597723b6483",
+    "delivery.sequence.json": "dad684bbd1464b14190f2acd2e82b9fb2cf8b66a4f7cf739910d754dcee1709c",
+    "witness.html": "74df4d5f8d5aab909e98f34b52d29f2f195ca400175595392ca4de9fe7f7ba4a",
+    "NOTICE.md": "8862ffe03589ae6535b1b38f181c83563db845c3c3917345d2a69e8a99420362",
+    "source/engine.jsonl": "e7443336e0b219938b0d9732b5bbb1333093984a4706f2ac1ce29638af4809b3",
+    "source/MOIRAE-LICENSE": "e06268d3c3580c68d4f1a062a374784d52caf6498777acaf4b9a90892c33919f",
+    "source/selected-lines.txt": "e42cad2adb7de988281251f3cdb7c7b85bd4603b5d4211c4b17b946e94afc2ea"
+  },
+  "independent_review": {
+    "status": "pass-no-semantic-blocker",
+    "scope": "pinned upstream bytes/license, exact selected lines, final HTML document/native spec/raw snippet bindings",
+    "browser_or_user_acceptance": false,
+    "legend_correction": "pass: both actual main/native SVG legends neutral only; labels, exact raw lines, bindings and final hashes checked"
+  },
+  "publicationDocumentation": "Coordinator added final screenshots, their review scope and the retained earlier legend defect to README after code/content gates; runtime and final HTML were unchanged."
+}

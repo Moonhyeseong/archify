@@ -1,0 +1,97 @@
+{
+  "kind": "authored-field-projection-receipt",
+  "not_a_parser_output": true,
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "upstream_commit": "a289c00cedb8716bd4a6db6b47042b875c22936b",
+  "source_path": "source/engine.jsonl",
+  "upstream_path": "crates/moirae-trace/tests/fixtures/engine.jsonl",
+  "source_sha256": "e7443336e0b219938b0d9732b5bbb1333093984a4706f2ac1ce29638af4809b3",
+  "source_line_count": 98,
+  "selected_complete_lines": [
+    1,
+    7,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "selected_lines_file": "source/selected-lines.txt",
+  "selection_roles": {
+    "1": "unit/version/config context",
+    "7": "msg0 send; sole endpoint source",
+    "14": "msg0 deliver; dup absent",
+    "15": "intervening send msg2; raw context only",
+    "16": "node2 raw patch; no msgId",
+    "17": "msg0 deliver dup=true",
+    "18": "intervening send msg3; raw context only",
+    "19": "node2 raw patch; no msgId"
+  },
+  "diagram_arrows": [
+    {
+      "id": "delivery-12",
+      "record_line": 14,
+      "record_seq": 12,
+      "endpoint_source_line": 7,
+      "endpoint_source_seq": 5,
+      "joined_only_by": "msgId=0",
+      "label_fields": [
+        "msgId",
+        "seq",
+        "t",
+        "dup presence or value"
+      ],
+      "not_supplied": [
+        "dup"
+      ],
+      "authored_y": 190,
+      "kind": "diagram title/callout explicitly defines arrows as deliver"
+    },
+    {
+      "id": "delivery-15",
+      "record_line": 17,
+      "record_seq": 15,
+      "endpoint_source_line": 7,
+      "endpoint_source_seq": 5,
+      "joined_only_by": "msgId=0",
+      "label_fields": [
+        "msgId",
+        "seq",
+        "t",
+        "dup presence or value"
+      ],
+      "authored_y": 300,
+      "kind": "diagram title/callout explicitly defines arrows as deliver"
+    }
+  ],
+  "raw_patch_lines": [
+    16,
+    19
+  ],
+  "no_patch_causal_link_claimed": true,
+  "complete_msg0_records_in_full_source": {
+    "send_lines": [
+      7
+    ],
+    "deliver_lines": [
+      14,
+      17
+    ],
+    "drop_lines": []
+  },
+  "selected_field_accounting": {
+    "all_selected_fields": "retained byte-for-byte after L<n> prefix in selected-lines.txt and Explainer snippet",
+    "send.msg": "not expanded in diagram/table; fully retained in raw L7",
+    "header.network/seed/v/nodes": "only unit used by presentation; remainder retained raw, not interpreted",
+    "deliver.from/to": "absent; never added to raw, only derived diagram endpoints from send",
+    "state.patch": "raw fragments; not folded or completed",
+    "omitted_full_file_lines": "all except selected_complete_lines; complete source included"
+  },
+  "generated_outputs": [
+    "delivery.sequence.html",
+    "witness.html"
+  ],
+  "screenshots": "owned by root; not yet captured",
+  "presentation": "Both deliver arrows use the same neutral default variant. dup=true is a literal event field, not a primary-path message category."
+}
