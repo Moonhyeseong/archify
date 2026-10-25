@@ -1,0 +1,43 @@
+{
+  "repository": "https://github.com/tox-dev/pipdeptree",
+  "revision": "45c43e2616d97484dfb6b16e1d5cfee3626086b8",
+  "license": "MIT",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1064,
+      "sha256": "611bc7a9f93574c2fef86067b73a55f754e06f6acf081c1c8652a68f8686f289",
+      "url": "https://github.com/tox-dev/pipdeptree/blob/45c43e2616d97484dfb6b16e1d5cfee3626086b8/LICENSE"
+    },
+    {
+      "path": "rust/tests/public_api/graph.rs",
+      "bytes": 14343,
+      "sha256": "9db09320c8cf8bf1d077f9eeee7f10b4b0f6a08732c5953f36ef3ffaacda44b3",
+      "url": "https://github.com/tox-dev/pipdeptree/blob/45c43e2616d97484dfb6b16e1d5cfee3626086b8/rust/tests/public_api/graph.rs"
+    },
+    {
+      "path": "rust/tests/public_api/graph/extras.rs",
+      "bytes": 11200,
+      "sha256": "452438706d5b708d84915012b077514c27e77dcd6c462364be4b0a7622f63a06",
+      "url": "https://github.com/tox-dev/pipdeptree/blob/45c43e2616d97484dfb6b16e1d5cfee3626086b8/rust/tests/public_api/graph/extras.rs"
+    },
+    {
+      "path": "rust/tests/public_api/common.rs",
+      "bytes": 10049,
+      "sha256": "7c569cc198a4a68f42e353b324b43b2de7e768cd08af77bbf7f8bc4fb75148e7",
+      "url": "https://github.com/tox-dev/pipdeptree/blob/45c43e2616d97484dfb6b16e1d5cfee3626086b8/rust/tests/public_api/common.rs"
+    },
+    {
+      "path": "rust/src/graph/mod.rs",
+      "bytes": 26908,
+      "sha256": "1f1d706068c4d5b9887e503b8c44eb5125c1ede4571bf43a9720b96ddc287742",
+      "url": "https://github.com/tox-dev/pipdeptree/blob/45c43e2616d97484dfb6b16e1d5cfee3626086b8/rust/src/graph/mod.rs"
+    },
+    {
+      "path": "rust/src/graph/extras.rs",
+      "bytes": 4659,
+      "sha256": "c795a93ffef7827a487d43164af2a28648d9eda46694891ec106eb806dfdd846",
+      "url": "https://github.com/tox-dev/pipdeptree/blob/45c43e2616d97484dfb6b16e1d5cfee3626086b8/rust/src/graph/extras.rs"
+    }
+  ]
+}

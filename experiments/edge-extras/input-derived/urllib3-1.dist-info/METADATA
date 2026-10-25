@@ -1,0 +1,4 @@
+Name: urllib3
+Version: 1
+Requires-Dist: pysocks; extra == 'socks'
+Provides-Extra: socks

@@ -1,0 +1,3 @@
+Name: selenium
+Version: 1
+Requires-Dist: urllib3[socks]

@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "四份记录，三条声明关系",
+    "subtitle": "箭头只表示 Requires-Dist 声明；显示模式不增删这些原始声明。未运行上游。",
+    "locale": "zh-CN",
+    "output": "experiments/edge-extras/output/metadata.html",
+    "animation": "none",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/tox-dev/pipdeptree",
+      "revision": "45c43e2616d97484dfb6b16e1d5cfee3626086b8"
+    },
+    "legend": {
+      "entries": {
+        "backend": {
+          "label": "METADATA 测试记录"
+        }
+      }
+    }
+  },
+  "components": [
+    {
+      "id": "selenium",
+      "type": "backend",
+      "icon": "none",
+      "label": "selenium · 1",
+      "explanation": "官方临时 METADATA 测试记录，版本值 1 非真实 release。\nName: selenium\nVersion: 1\nRequires-Dist: urllib3[socks]\n",
+      "pos": [
+        30,
+        60
+      ],
+      "size": [
+        180,
+        76
+      ],
+      "sources": [
+        {
+          "path": "rust/tests/public_api/graph.rs",
+          "line": 402,
+          "end_line": 405,
+          "label": "完整官方 METADATA 字面量"
+        }
+      ]
+    },
+    {
+      "id": "requests",
+      "type": "backend",
+      "icon": "none",
+      "label": "requests · 1",
+      "explanation": "官方临时 METADATA 测试记录，版本值 1 非真实 release。\nName: requests\nVersion: 1\nRequires-Dist: urllib3\n",
+      "pos": [
+        30,
+        270
+      ],
+      "size": [
+        180,
+        76
+      ],
+      "sources": [
+        {
+          "path": "rust/tests/public_api/graph.rs",
+          "line": 406,
+          "end_line": 409,
+          "label": "完整官方 METADATA 字面量"
+        }
+      ]
+    },
+    {
+      "id": "urllib3",
+      "type": "backend",
+      "icon": "none",
+      "label": "urllib3 · 1",
+      "explanation": "官方临时 METADATA 测试记录，版本值 1 非真实 release。\nName: urllib3\nVersion: 1\nRequires-Dist: pysocks; extra == 'socks'\nProvides-Extra: socks\n",
+      "pos": [
+        350,
+        165
+      ],
+      "size": [
+        180,
+        76
+      ],
+      "sources": [
+        {
+          "path": "rust/tests/public_api/graph.rs",
+          "line": 410,
+          "end_line": 418,
+          "label": "完整官方 METADATA 字面量"
+        }
+      ]
+    },
+    {
+      "id": "pysocks",
+      "type": "backend",
+      "icon": "none",
+      "label": "pysocks · 1",
+      "explanation": "官方临时 METADATA 测试记录，版本值 1 非真实 release。\nName: pysocks\nVersion: 1\n",
+      "pos": [
+        700,
+        165
+      ],
+      "size": [
+        180,
+        76
+      ],
+      "sources": [
+        {
+          "path": "rust/tests/public_api/graph.rs",
+          "line": 419,
+          "end_line": 419,
+          "label": "完整官方 METADATA 字面量"
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "selenium-request",
+      "from": "selenium",
+      "to": "urllib3",
+      "label": "urllib3[socks]",
+      "route": "straight"
+    },
+    {
+      "id": "requests-request",
+      "from": "requests",
+      "to": "urllib3",
+      "label": "urllib3",
+      "route": "straight"
+    },
+    {
+      "id": "socks-condition",
+      "from": "urllib3",
+      "to": "pysocks",
+      "label": "extra == 'socks'",
+      "route": "straight"
+    }
+  ],
+  "cards": []
+}

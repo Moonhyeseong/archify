@@ -1,0 +1,144 @@
+{
+  "kind": "derived-fixed-fixture-audit",
+  "upstreamExecuted": false,
+  "revision": "45c43e2616d97484dfb6b16e1d5cfee3626086b8",
+  "originalFiles": 6,
+  "metadata": [
+    {
+      "directory": "selenium-1.dist-info",
+      "name": "selenium",
+      "version": "1",
+      "requires": [
+        "urllib3[socks]"
+      ],
+      "providesExtra": [],
+      "bytes": 56,
+      "sha256": "24b3c296c72b331c7e62679d8b2cf2da0552d3d49861ad8ef39a1022aa144cb5"
+    },
+    {
+      "directory": "requests-1.dist-info",
+      "name": "requests",
+      "version": "1",
+      "requires": [
+        "urllib3"
+      ],
+      "providesExtra": [],
+      "bytes": 49,
+      "sha256": "d0782fc7a8fc5e5b1831e2bc3eab7f53a23bb2d1a42636daad89d3c69a271bb0"
+    },
+    {
+      "directory": "urllib3-1.dist-info",
+      "name": "urllib3",
+      "version": "1",
+      "requires": [
+        "pysocks; extra == 'socks'"
+      ],
+      "providesExtra": [
+        "socks"
+      ],
+      "bytes": 88,
+      "sha256": "03468d48d388d642a734bb24b36db1088a213092f0587f5fa7a1311aa1c46b18"
+    },
+    {
+      "directory": "pysocks-1.dist-info",
+      "name": "pysocks",
+      "version": "1",
+      "requires": [],
+      "providesExtra": [],
+      "bytes": 25,
+      "sha256": "4f6ecf0513ec5287f159c633d2121590c971a755d99a32822b193c4c471cc94e"
+    }
+  ],
+  "declarationRelations": [
+    {
+      "from": "selenium",
+      "to": "urllib3",
+      "raw": "urllib3[socks]",
+      "requestedExtras": [
+        "socks"
+      ],
+      "predicate": null
+    },
+    {
+      "from": "requests",
+      "to": "urllib3",
+      "raw": "urllib3",
+      "requestedExtras": [],
+      "predicate": null
+    },
+    {
+      "from": "urllib3",
+      "to": "pysocks",
+      "raw": "pysocks; extra == 'socks'",
+      "requestedExtras": [],
+      "predicate": "extra == 'socks'"
+    }
+  ],
+  "upstreamBooleanExpectations": {
+    "explicit": {
+      "selenium": true,
+      "requests": false
+    },
+    "active": {
+      "selenium": true,
+      "requests": true
+    }
+  },
+  "sourceRanges": {
+    "fixture": [
+      "rust/tests/public_api/graph.rs",
+      400,
+      421
+    ],
+    "modes": [
+      "rust/tests/public_api/graph/extras.rs",
+      352,
+      369
+    ],
+    "selection": [
+      "rust/src/graph/mod.rs",
+      660,
+      687
+    ],
+    "active": [
+      "rust/src/graph/extras.rs",
+      83,
+      122
+    ],
+    "harness": [
+      "rust/tests/public_api/common.rs",
+      303,
+      326
+    ]
+  },
+  "checks": {
+    "originalBytes": "pass",
+    "fourDecodedMetadata": "pass",
+    "twoModeExpectations": "pass",
+    "fourNodesThreeRelations": "pass",
+    "allFivePreparedSourcesExact": "pass",
+    "sourceRangesWithinOriginalFiles": "pass",
+    "sourceText": "pass",
+    "oneNativeSpec": "pass",
+    "nativeHtmlAndSvgExact": "pass",
+    "compiledFourRows": "pass"
+  },
+  "artifacts": {
+    "metadata.architecture.json": {
+      "bytes": 3439,
+      "sha256": "a65ad4b8e123ade6460ed08a3fef3503062d363a0483def0605694e8cd390973"
+    },
+    "question.archify.md": {
+      "bytes": 3480,
+      "sha256": "0353f247442d4abb9fbddd65c0032eef4299b41196c762de8716a0415490a782"
+    },
+    "output/metadata.html": {
+      "bytes": 858304,
+      "sha256": "e40d57951bf10e06ebb603b40054105ac08784ec871247cbea93649d69a9312c"
+    },
+    "output/explanation.html": {
+      "bytes": 648456,
+      "sha256": "652527523d90e7373ff119e3ae0309fa50acd448dd5147ba480da5da0cb3d7a8"
+    }
+  }
+}

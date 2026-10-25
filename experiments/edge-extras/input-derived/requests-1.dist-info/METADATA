@@ -1,0 +1,3 @@
+Name: requests
+Version: 1
+Requires-Dist: urllib3

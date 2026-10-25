@@ -1,0 +1,642 @@
+{
+  "kind": "authored-portable-summary-derived-from-private-receipts",
+  "softwareBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "upstreamRevision": "45c43e2616d97484dfb6b16e1d5cfee3626086b8",
+  "upstreamExecuted": false,
+  "liveInstallation": false,
+  "packageOrProductChanged": false,
+  "toolchain": {
+    "node": "22.23.2",
+    "dependencies": "reused existing dependency directories through temporary symlinks, not installed"
+  },
+  "current": {
+    "native": {
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "browserCheck": {
+        "requested": true,
+        "ran": true
+      },
+      "finalizeDiagnosticSummary": {
+        "total": 0,
+        "shown": 0,
+        "truncated": false
+      },
+      "finalizeDiagnosticsByCode": {},
+      "rawBrowserDiagnosticsByCode": {},
+      "rawBrowserDiagnosticCount": 0,
+      "readability": "pass",
+      "containment": "pass"
+    },
+    "explainer": {
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "fail"
+      },
+      "browserCheck": {
+        "requested": true,
+        "ran": true
+      },
+      "finalizeDiagnosticSummary": {
+        "total": 28,
+        "shown": 8,
+        "truncated": true,
+        "omittedByCode": {
+          "explainer/browser-keyboard-traversal": 20
+        }
+      },
+      "finalizeDiagnosticsByCode": {
+        "explainer/browser-keyboard-traversal": 8
+      },
+      "rawBrowserDiagnosticsByCode": {
+        "explainer/browser-keyboard-traversal": 28
+      },
+      "rawBrowserDiagnosticCount": 28,
+      "readability": "pass",
+      "containment": "pass"
+    }
+  },
+  "history": {
+    "nativeMissingRoot": {
+      "gates": {
+        "validate": "fail",
+        "deliver": "not-run",
+        "check": "not-run",
+        "browser-check": "not-run"
+      },
+      "diagnostic": "repository-evidence/root-required",
+      "rawStdout": "archify-edge-extras-native.stdout.json"
+    },
+    "nativeMissingOrigin": {
+      "gates": {
+        "validate": "fail",
+        "deliver": "not-run",
+        "check": "not-run",
+        "browser-check": "not-run"
+      },
+      "browserCheck": {
+        "requested": true,
+        "ran": false
+      },
+      "finalizeDiagnosticSummary": {
+        "total": 1,
+        "shown": 1,
+        "truncated": false
+      },
+      "finalizeDiagnosticsByCode": {
+        "repository-evidence/git-command": 1
+      }
+    },
+    "duplicateTableIdentity": {
+      "stdout": "archify-edge-extras-explainer-first.stdout.json",
+      "code": "explainer/duplicate-id",
+      "allGates": "not-run"
+    },
+    "beforeFit": {
+      "native": {
+        "gates": {
+          "validate": "pass",
+          "deliver": "pass",
+          "check": "pass",
+          "browser-check": "pass"
+        },
+        "browserCheck": {
+          "requested": true,
+          "ran": true
+        },
+        "finalizeDiagnosticSummary": {
+          "total": 0,
+          "shown": 0,
+          "truncated": false
+        },
+        "finalizeDiagnosticsByCode": {},
+        "rawBrowserDiagnosticsByCode": {},
+        "rawBrowserDiagnosticCount": 0,
+        "readability": "pass",
+        "containment": "pass"
+      },
+      "explainer": {
+        "gates": {
+          "validate": "pass",
+          "deliver": "pass",
+          "check": "pass",
+          "browser-check": "fail"
+        },
+        "browserCheck": {
+          "requested": true,
+          "ran": true
+        },
+        "finalizeDiagnosticSummary": {
+          "total": 30,
+          "shown": 8,
+          "truncated": true,
+          "omittedByCode": {
+            "explainer/browser-keyboard-traversal": 21,
+            "explainer/browser-readability": 1
+          }
+        },
+        "finalizeDiagnosticsByCode": {
+          "explainer/browser-keyboard-traversal": 7,
+          "explainer/browser-readability": 1
+        },
+        "rawBrowserDiagnosticsByCode": {
+          "explainer/browser-keyboard-traversal": 28,
+          "explainer/browser-readability": 6
+        },
+        "rawBrowserDiagnosticCount": 34,
+        "readability": "fail",
+        "containment": "pass"
+      },
+      "repair": "only two authored x coordinates reduce viewBox width1010 to920; no semantic or label changes"
+    },
+    "auditPreparation": {
+      "observation": "Initial extractor matched an earlier case::explicit in the same full test file and asserted wrong case count; scoped extraction to the named test function. No producer run or product change."
+    }
+  },
+  "rootVisualReview": {
+    "status": "root-actual-pointer-and-visual-observations",
+    "receipt": "screenshots/root-capture-summary.json",
+    "receiptKind": "root-authored derived summary; raw observations kept private",
+    "viewedAllSelectedPngs": true,
+    "selectedPngs": 6,
+    "authorOperatedBrowser": false,
+    "keyboardGateOverride": false
+  },
+  "screenshots": {
+    "kind": "root-authored-actual-browser-observation-summary",
+    "browser": "Ego TaskSpace 4 / Chromium",
+    "date": "2026-10-25",
+    "artifactHashes": {
+      "explanation.html": "652527523d90e7373ff119e3ae0309fa50acd448dd5147ba480da5da0cb3d7a8",
+      "metadata.html": "e40d57951bf10e06ebb603b40054105ac08784ec871247cbea93649d69a9312c"
+    },
+    "screenshots": [
+      {
+        "file": "explainer-desktop-light.png",
+        "bytes": 390048,
+        "sha256": "3959663f67401eafab510ed33d3b1b0f987c50bb566361ab527447c2cfc60b8b",
+        "imageSize": [
+          1440,
+          2690
+        ]
+      },
+      {
+        "file": "explainer-interactive-dark.png",
+        "bytes": 103378,
+        "sha256": "41a29047753c385e85360217f0b11fb969f804be4ee22e7a3c5af331e6d273ec",
+        "imageSize": [
+          1440,
+          1000
+        ]
+      },
+      {
+        "file": "explainer-mobile-light.png",
+        "bytes": 347196,
+        "sha256": "6adb4276f89ab6a90185ab5eca00d9accb7a09acbde574b10ce4e94b76c94744",
+        "imageSize": [
+          390,
+          3493
+        ]
+      },
+      {
+        "file": "mobile-table-right-light.png",
+        "bytes": 66518,
+        "sha256": "7ec7c265c9c20a0fa6c8e1fbb2b2fb9aa9dbe2f1816e87367c444b852f17d075",
+        "imageSize": [
+          390,
+          844
+        ]
+      },
+      {
+        "file": "native-node-dark.png",
+        "bytes": 143458,
+        "sha256": "820319c3e212d13483461adff5e0533e9960e49bd68de75648f4b4fcc157c7a2",
+        "imageSize": [
+          1440,
+          1000
+        ]
+      },
+      {
+        "file": "native-explanation-dark-ready.png",
+        "bytes": 114347,
+        "sha256": "cace633cdb92414be5dd210fe47e96fc99ad1d445ce8d1445ca1999c32a42c5b",
+        "imageSize": [
+          1440,
+          1000
+        ]
+      }
+    ],
+    "observations": [
+      {
+        "file": "desktop-observations.json",
+        "bytes": 2168,
+        "sha256": "17b6420a4ff29066e3a872810b45f19e1ca3b66fe13ec439a09b0e97c4c3a131"
+      },
+      {
+        "file": "mobile-observations.json",
+        "bytes": 1611,
+        "sha256": "cc29fd46ca0022e27f899fdecd1364f92d66a680f0974bd63ea8119088a36ae7"
+      },
+      {
+        "file": "mobile-table-right-observations.json",
+        "bytes": 958,
+        "sha256": "dcf18d0aaf4bd046b6001a70500777c8928f109baaf4bf6a9e0cdda146d25081"
+      },
+      {
+        "file": "native-observations.json",
+        "bytes": 1437,
+        "sha256": "fbd2f1deb62dee6b590c84c50f3274dba6f5c534db5bd7cb5246570f86991a5c"
+      },
+      {
+        "file": "native-explanation-ready-observations.json",
+        "bytes": 761,
+        "sha256": "208dd4ee77e285e445e2cf26c62a0bc2ba56bd57185103eaa89861f5895774c7"
+      }
+    ],
+    "viewedAllSelectedPngs": true,
+    "checks": [
+      "Desktop 1440x1000 light full-page: all four mode rows and complete authored code are present; full screenshot1440x2690, document width1440.",
+      "Opened interactive native diagram from actual Explainer button, dark1440x1000: four nodes, same urllib3, three declaration labels; modal close button subsequently worked.",
+      "Mobile390x844 light full-page390x3493: document width390; mode table scroll container332 with scrollWidth586. Whole table is not simultaneously visible.",
+      "Mobile table right view: DOM-controlled scrollLeft253.5 (not a touch gesture); last header and yes/no/yes/yes cells inside visible horizontal and vertical bounds. Left columns are then clipped by table viewport.",
+      "Standalone native actual #node-urllib3 click opens Passport:1out/2in, conditional predicate and fixed source locationL410-418. Explain button reveals authored complete urllib3 METADATA values in a paragraph.",
+      "Images opened using view_image. No external source-link navigation or OS clipboard action."
+    ],
+    "limitations": [
+      "Explainer machine browser gate retains28keyboard diagnostics. This pointer/visual check does not override it.",
+      "Mobile diagram thumbnail has small text and shows the existing open-interactive hint. Mobile native full interactive acceptance not covered.",
+      "No root full keyboard traversal, Back/Forward, assistive-tech, human or upstream runtime validation.",
+      "Mode table contains upstream expected results, not root execution of pipdeptree.",
+      "Root citation click navigated to source footer; no SourceCard popup/excerpt interaction is claimed."
+    ],
+    "retainedAttempts": [
+      {
+        "kind": "selector-failure",
+        "detail": "button:text-is urllib3 matched0 on embedded/standalone attempts; subsequent fresh DOM identified #node-urllib3 and actual native click succeeded."
+      },
+      {
+        "kind": "sidebar-click",
+        "detail": "Embedded sidebar ref click did not expose a Passport in subsequent snapshot; do not claim it did."
+      },
+      {
+        "kind": "screenshot-before-transition-completed",
+        "file": {
+          "file": "native-explanation-dark.png",
+          "bytes": 100666,
+          "sha256": "f08f6748b9f6a871782be07d987527270248c150f7d0f8531b75dfaa8a7f7c94",
+          "imageSize": [
+            1440,
+            1000
+          ]
+        },
+        "detail": "First Explain screenshot caught empty transition panel. Kept unchanged privately; selected final ready screenshot waited for finite animations to settle."
+      }
+    ],
+    "publishedReceiptGuidance": "Summary is authored and derived; raw observations with file URLs remain private. Selected PNGs may be copied unchanged."
+  },
+  "limitations": [
+    "Official controlled METADATA fixture, not production installed inventory",
+    "Upstream test expectations are not a run in this experiment",
+    "Active display does not establish install/request history or version compatibility",
+    "Explainer keyboard browser gate remains failed; no checker patches applied",
+    "No human, cross-browser or reader-benefit acceptance established"
+  ],
+  "publicFiles": {
+    "NOTICE.md": {
+      "bytes": 854,
+      "sha256": "d9186bb35204d0843d0bd4932545aeee55bb914c3629ed5c26bf73a72b9eb017"
+    },
+    "README.md": {
+      "bytes": 9408,
+      "sha256": "33a0834c01c9021adca8aaa644b8ecc56878894f487b2d810580766ff62313f1"
+    },
+    "audit-facts.py": {
+      "bytes": 7621,
+      "sha256": "e759ce38c79aa0439c291d6b63c6dc1d2b9ff921b08e4396fb2f2acb96d5d5b6"
+    },
+    "fact-audit.json": {
+      "bytes": 3411,
+      "sha256": "38de779fcef932444a6a29d9048129b70dcc25145a2b0411c89cdbe9bbaa70d5"
+    },
+    "input-derived/README.md": {
+      "bytes": 297,
+      "sha256": "dc46056783c4fd91d3758d059277850a5307fef1aa251e455299628a90a93568"
+    },
+    "input-derived/pysocks-1.dist-info/METADATA": {
+      "bytes": 25,
+      "sha256": "4f6ecf0513ec5287f159c633d2121590c971a755d99a32822b193c4c471cc94e"
+    },
+    "input-derived/requests-1.dist-info/METADATA": {
+      "bytes": 49,
+      "sha256": "d0782fc7a8fc5e5b1831e2bc3eab7f53a23bb2d1a42636daad89d3c69a271bb0"
+    },
+    "input-derived/selenium-1.dist-info/METADATA": {
+      "bytes": 56,
+      "sha256": "24b3c296c72b331c7e62679d8b2cf2da0552d3d49861ad8ef39a1022aa144cb5"
+    },
+    "input-derived/urllib3-1.dist-info/METADATA": {
+      "bytes": 88,
+      "sha256": "03468d48d388d642a734bb24b36db1088a213092f0587f5fa7a1311aa1c46b18"
+    },
+    "ledger.md": {
+      "bytes": 2319,
+      "sha256": "d8963f213f4319f7d0a82787f980feaa34549ea9a607cf21be0821bbc5ba4f46"
+    },
+    "metadata.architecture.json": {
+      "bytes": 3439,
+      "sha256": "a65ad4b8e123ade6460ed08a3fef3503062d363a0483def0605694e8cd390973"
+    },
+    "output/explanation.html": {
+      "bytes": 648456,
+      "sha256": "652527523d90e7373ff119e3ae0309fa50acd448dd5147ba480da5da0cb3d7a8"
+    },
+    "output/metadata.html": {
+      "bytes": 858304,
+      "sha256": "e40d57951bf10e06ebb603b40054105ac08784ec871247cbea93649d69a9312c"
+    },
+    "question.archify.md": {
+      "bytes": 3480,
+      "sha256": "0353f247442d4abb9fbddd65c0032eef4299b41196c762de8716a0415490a782"
+    },
+    "screenshots/explainer-desktop-light.png": {
+      "bytes": 390048,
+      "sha256": "3959663f67401eafab510ed33d3b1b0f987c50bb566361ab527447c2cfc60b8b"
+    },
+    "screenshots/explainer-interactive-dark.png": {
+      "bytes": 103378,
+      "sha256": "41a29047753c385e85360217f0b11fb969f804be4ee22e7a3c5af331e6d273ec"
+    },
+    "screenshots/explainer-mobile-light.png": {
+      "bytes": 347196,
+      "sha256": "6adb4276f89ab6a90185ab5eca00d9accb7a09acbde574b10ce4e94b76c94744"
+    },
+    "screenshots/mobile-table-right-light.png": {
+      "bytes": 66518,
+      "sha256": "7ec7c265c9c20a0fa6c8e1fbb2b2fb9aa9dbe2f1816e87367c444b852f17d075"
+    },
+    "screenshots/native-explanation-dark-ready.png": {
+      "bytes": 114347,
+      "sha256": "cace633cdb92414be5dd210fe47e96fc99ad1d445ce8d1445ca1999c32a42c5b"
+    },
+    "screenshots/native-node-dark.png": {
+      "bytes": 143458,
+      "sha256": "820319c3e212d13483461adff5e0533e9960e49bd68de75648f4b4fcc157c7a2"
+    },
+    "screenshots/root-capture-summary.json": {
+      "bytes": 5233,
+      "sha256": "28c7d8f98cdcd982b83a3f77062db7cce4086c8419d049485d3a494de4cd378a"
+    },
+    "upstream/LICENSE": {
+      "bytes": 1064,
+      "sha256": "611bc7a9f93574c2fef86067b73a55f754e06f6acf081c1c8652a68f8686f289"
+    },
+    "upstream/manifest.json": {
+      "bytes": 1875,
+      "sha256": "3afc1b26db6fa901e565e4e9a29016fd76b1b0253bc1828160f98a669fb0d2ed"
+    },
+    "upstream/rust/src/graph/extras.rs": {
+      "bytes": 4659,
+      "sha256": "c795a93ffef7827a487d43164af2a28648d9eda46694891ec106eb806dfdd846"
+    },
+    "upstream/rust/src/graph/mod.rs": {
+      "bytes": 26908,
+      "sha256": "1f1d706068c4d5b9887e503b8c44eb5125c1ede4571bf43a9720b96ddc287742"
+    },
+    "upstream/rust/tests/public_api/common.rs": {
+      "bytes": 10049,
+      "sha256": "7c569cc198a4a68f42e353b324b43b2de7e768cd08af77bbf7f8bc4fb75148e7"
+    },
+    "upstream/rust/tests/public_api/graph/extras.rs": {
+      "bytes": 11200,
+      "sha256": "452438706d5b708d84915012b077514c27e77dcd6c462364be4b0a7622f63a06"
+    },
+    "upstream/rust/tests/public_api/graph.rs": {
+      "bytes": 14343,
+      "sha256": "9db09320c8cf8bf1d077f9eeee7f10b4b0f6a08732c5953f36ef3ffaacda44b3"
+    }
+  },
+  "privateRawReceiptHashes": {
+    "archify-edge-extras-before-fit/explanation.html": {
+      "bytes": 648489,
+      "sha256": "3c85f021bb7a40c9133b3d4b8cc367de9168780a7164f0f492752c1aa68e43ff"
+    },
+    "archify-edge-extras-before-fit/metadata.architecture.json": {
+      "bytes": 3439,
+      "sha256": "10b1c9b3854d48fdc0572651b3c0cd99b739da42bd0eb3e1cde6c33351917670"
+    },
+    "archify-edge-extras-before-fit/metadata.html": {
+      "bytes": 858305,
+      "sha256": "e8f7a81e9cf159ff6dc7b75ad84f5f7dd55821c210950106e22b54c021c89de1"
+    },
+    "archify-edge-extras-before-fit/question.archify.md": {
+      "bytes": 3480,
+      "sha256": "0353f247442d4abb9fbddd65c0032eef4299b41196c762de8716a0415490a782"
+    },
+    "archify-edge-extras-current": {
+      "bytes": 77,
+      "sha256": "6b0027da3b791920d5fc1649c15fda0598800c58433e43d61aa4e5295d19d83f"
+    },
+    "archify-edge-extras-explainer-first.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "archify-edge-extras-explainer-first.stdout.json": {
+      "bytes": 1653,
+      "sha256": "c6dc71182912970a7b749dde3d1ade18199749e7180c4455787ecee45bcfb76f"
+    },
+    "archify-edge-extras-explainer-fit/explanation.browser-check.json": {
+      "bytes": 742656,
+      "sha256": "43fab8356af5810417431ca7e826a84187d7c17f0d7dff0b5928e4e253f77e1b"
+    },
+    "archify-edge-extras-explainer-fit/explanation.finalize-summary.json": {
+      "bytes": 9432,
+      "sha256": "e7fa04a8b4eb051740645dc3b1c218e94b8ba326f4009406323dd83889f9adfe"
+    },
+    "archify-edge-extras-explainer-fit/explanation.finalize.json": {
+      "bytes": 845377,
+      "sha256": "d9565b95af31d896b0b09d543bd41c1a337e330b17c89bd015c1f167afb4c653"
+    },
+    "archify-edge-extras-explainer-fit.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "archify-edge-extras-explainer-fit.stdout.json": {
+      "bytes": 7540,
+      "sha256": "2c5a20e0e32a64952525af74d7d336e4c097cfc546753f3baa87e6bba4d02404"
+    },
+    "archify-edge-extras-explainer-ready/explanation.browser-check.json": {
+      "bytes": 758387,
+      "sha256": "ac2bdd0ad9f1e37ec1de4a8a2d6b96b3b6c72dbc539073e0ccf6a7c7ca816e45"
+    },
+    "archify-edge-extras-explainer-ready/explanation.finalize-summary.json": {
+      "bytes": 9355,
+      "sha256": "57698c6a4c881901c626a25ab8e0e4e1dd188dab7bbb04f452f2ea9107e9a3e5"
+    },
+    "archify-edge-extras-explainer-ready/explanation.finalize.json": {
+      "bytes": 864460,
+      "sha256": "0a54187ed75814ba505b8108baf4d7bbdc6b90d46b176369283dda22dd5fcf82"
+    },
+    "archify-edge-extras-explainer-ready.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "archify-edge-extras-explainer-ready.stdout.json": {
+      "bytes": 7455,
+      "sha256": "026b8d7264dedb27d94a6aee93552c3fe4552782b60671cb03f377fe005f73fe"
+    },
+    "archify-edge-extras-final-delivery/explanation.delivery.json": {
+      "bytes": 2610,
+      "sha256": "edf2cf3e54fd4f79be3adad25aea864ab4a671831dc60c03e9ec009a9f03411b"
+    },
+    "archify-edge-extras-final-delivery/metadata.delivery.json": {
+      "bytes": 643,
+      "sha256": "51e89455b3d096ce8a351a5a2cee2e65e431dd15432686df0eb01ef328d7fba2"
+    },
+    "archify-edge-extras-first.archify.md": {
+      "bytes": 3423,
+      "sha256": "de5d81ac96fd296f97036d5d702beebfa82cef847518d403d87e238145ffef19"
+    },
+    "archify-edge-extras-native-final/metadata.finalize-summary.json": {
+      "bytes": 2232,
+      "sha256": "96714f93212ca3d5b9b4892a834278657f6979445b82e6ebfed19e965c08b72e"
+    },
+    "archify-edge-extras-native-final/metadata.finalize.json": {
+      "bytes": 4147,
+      "sha256": "ebae26a529db2e1a0e497e34dbaa6c24881a48d6cee8637efe6cb25a0704c419"
+    },
+    "archify-edge-extras-native-final.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "archify-edge-extras-native-final.stdout.json": {
+      "bytes": 1810,
+      "sha256": "d334bdc87f8aff6a90329569ed6acd5e7ed0e3eafd52fb5fa1d5536d03d63a6c"
+    },
+    "archify-edge-extras-native-fit/metadata.browser-check.json": {
+      "bytes": 21813,
+      "sha256": "90c2d3e390899bddc74ce4332dbe7ed9a15f1f4e70e6f7dff06a2a494eee23b4"
+    },
+    "archify-edge-extras-native-fit/metadata.finalize-summary.json": {
+      "bytes": 1512,
+      "sha256": "ed767c54db5ba08f38ce85ed2e013ceb897f31fd054ac53b7f888319adf2efdd"
+    },
+    "archify-edge-extras-native-fit/metadata.finalize.json": {
+      "bytes": 36087,
+      "sha256": "f811c27fc35b42de4b3e69cd8ccac47c70ee3a623b1933e88fd86f60494cf490"
+    },
+    "archify-edge-extras-native-fit.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "archify-edge-extras-native-fit.stdout.json": {
+      "bytes": 1270,
+      "sha256": "d6301fd1b01e786756120a57c9b1fe97ec9ec1912bea8b01c48baf45df00470e"
+    },
+    "archify-edge-extras-native-ready/metadata.browser-check.json": {
+      "bytes": 21806,
+      "sha256": "de825a8ccd9267665599d5256964cbfe8b416f7a9ec8374bcd7b9df06033b50b"
+    },
+    "archify-edge-extras-native-ready/metadata.finalize-summary.json": {
+      "bytes": 1518,
+      "sha256": "733a8f67f8a772b4bde6f8793fe1e0b7fc7f85924d8b1f91c4a31774744cfdbc"
+    },
+    "archify-edge-extras-native-ready/metadata.finalize.json": {
+      "bytes": 36109,
+      "sha256": "3c228e26038015b1c2fe6862edfb0a434fdfc20cadbb6963d1152fb6c15b502a"
+    },
+    "archify-edge-extras-native-ready.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "archify-edge-extras-native-ready.stdout.json": {
+      "bytes": 1276,
+      "sha256": "28184ffa2ab06b9ab32b2a7c575531ff33ad1153ea7706924af28cfd919ac868"
+    },
+    "archify-edge-extras-native-receipts/metadata.finalize-summary.json": {
+      "bytes": 2178,
+      "sha256": "5ad2f6a9fc13ad22f6767ab43508e72844ed8cb0f09e360e4b57b68e96ddc9e7"
+    },
+    "archify-edge-extras-native-receipts/metadata.finalize.json": {
+      "bytes": 3981,
+      "sha256": "93942f1dc002b877c03fa3857b582c8f454e30e1a8b670713f1832da7ff71b19"
+    },
+    "archify-edge-extras-native.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "archify-edge-extras-native.stdout.json": {
+      "bytes": 1823,
+      "sha256": "72bb572076a14d1db36b0ab097658bd1c092568d78080610d0ca6c2e1cbd2bb6"
+    },
+    "archify-edge-extras-root-20261025/desktop-observations.json": {
+      "bytes": 2168,
+      "sha256": "17b6420a4ff29066e3a872810b45f19e1ca3b66fe13ec439a09b0e97c4c3a131"
+    },
+    "archify-edge-extras-root-20261025/explainer-desktop-light.png": {
+      "bytes": 390048,
+      "sha256": "3959663f67401eafab510ed33d3b1b0f987c50bb566361ab527447c2cfc60b8b"
+    },
+    "archify-edge-extras-root-20261025/explainer-interactive-dark.png": {
+      "bytes": 103378,
+      "sha256": "41a29047753c385e85360217f0b11fb969f804be4ee22e7a3c5af331e6d273ec"
+    },
+    "archify-edge-extras-root-20261025/explainer-mobile-light.png": {
+      "bytes": 347196,
+      "sha256": "6adb4276f89ab6a90185ab5eca00d9accb7a09acbde574b10ce4e94b76c94744"
+    },
+    "archify-edge-extras-root-20261025/interactive-node-snapshot.txt": {
+      "bytes": 9601,
+      "sha256": "bb1a9308ceecf336728c9bf57ed68ae7f99daa9fb2a2d5b6d95b524d602f9c91"
+    },
+    "archify-edge-extras-root-20261025/mobile-observations.json": {
+      "bytes": 1611,
+      "sha256": "cc29fd46ca0022e27f899fdecd1364f92d66a680f0974bd63ea8119088a36ae7"
+    },
+    "archify-edge-extras-root-20261025/mobile-table-right-light.png": {
+      "bytes": 66518,
+      "sha256": "7ec7c265c9c20a0fa6c8e1fbb2b2fb9aa9dbe2f1816e87367c444b852f17d075"
+    },
+    "archify-edge-extras-root-20261025/mobile-table-right-observations.json": {
+      "bytes": 958,
+      "sha256": "dcf18d0aaf4bd046b6001a70500777c8928f109baaf4bf6a9e0cdda146d25081"
+    },
+    "archify-edge-extras-root-20261025/native-explanation-dark-ready.png": {
+      "bytes": 114347,
+      "sha256": "cace633cdb92414be5dd210fe47e96fc99ad1d445ce8d1445ca1999c32a42c5b"
+    },
+    "archify-edge-extras-root-20261025/native-explanation-dark.png": {
+      "bytes": 100666,
+      "sha256": "f08f6748b9f6a871782be07d987527270248c150f7d0f8531b75dfaa8a7f7c94"
+    },
+    "archify-edge-extras-root-20261025/native-explanation-observations.json": {
+      "bytes": 1076,
+      "sha256": "90e593f537cfea07279f51ceca9a7d97a0037bec2487675799b2c4453d07cca0"
+    },
+    "archify-edge-extras-root-20261025/native-explanation-ready-observations.json": {
+      "bytes": 761,
+      "sha256": "208dd4ee77e285e445e2cf26c62a0bc2ba56bd57185103eaa89861f5895774c7"
+    },
+    "archify-edge-extras-root-20261025/native-node-dark.png": {
+      "bytes": 143458,
+      "sha256": "820319c3e212d13483461adff5e0533e9960e49bd68de75648f4b4fcc157c7a2"
+    },
+    "archify-edge-extras-root-20261025/native-observations.json": {
+      "bytes": 1437,
+      "sha256": "fbd2f1deb62dee6b590c84c50f3274dba6f5c534db5bd7cb5246570f86991a5c"
+    },
+    "archify-edge-extras-root-20261025/root-capture-summary.json": {
+      "bytes": 5233,
+      "sha256": "28c7d8f98cdcd982b83a3f77062db7cce4086c8419d049485d3a494de4cd378a"
+    },
+    "archify-edge-extras-source-byte-binding.json": {
+      "bytes": 1117,
+      "sha256": "06eacee1072251cc1ab4672e7dad3bec878e0b048b3d1c97c6e9a305b5c8fc5c"
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "kind": "root-authored-actual-browser-observation-summary",
+  "browser": "Ego TaskSpace 4 / Chromium",
+  "date": "2026-10-25",
+  "artifactHashes": {
+    "explanation.html": "652527523d90e7373ff119e3ae0309fa50acd448dd5147ba480da5da0cb3d7a8",
+    "metadata.html": "e40d57951bf10e06ebb603b40054105ac08784ec871247cbea93649d69a9312c"
+  },
+  "screenshots": [
+    {
+      "file": "explainer-desktop-light.png",
+      "bytes": 390048,
+      "sha256": "3959663f67401eafab510ed33d3b1b0f987c50bb566361ab527447c2cfc60b8b",
+      "imageSize": [
+        1440,
+        2690
+      ]
+    },
+    {
+      "file": "explainer-interactive-dark.png",
+      "bytes": 103378,
+      "sha256": "41a29047753c385e85360217f0b11fb969f804be4ee22e7a3c5af331e6d273ec",
+      "imageSize": [
+        1440,
+        1000
+      ]
+    },
+    {
+      "file": "explainer-mobile-light.png",
+      "bytes": 347196,
+      "sha256": "6adb4276f89ab6a90185ab5eca00d9accb7a09acbde574b10ce4e94b76c94744",
+      "imageSize": [
+        390,
+        3493
+      ]
+    },
+    {
+      "file": "mobile-table-right-light.png",
+      "bytes": 66518,
+      "sha256": "7ec7c265c9c20a0fa6c8e1fbb2b2fb9aa9dbe2f1816e87367c444b852f17d075",
+      "imageSize": [
+        390,
+        844
+      ]
+    },
+    {
+      "file": "native-node-dark.png",
+      "bytes": 143458,
+      "sha256": "820319c3e212d13483461adff5e0533e9960e49bd68de75648f4b4fcc157c7a2",
+      "imageSize": [
+        1440,
+        1000
+      ]
+    },
+    {
+      "file": "native-explanation-dark-ready.png",
+      "bytes": 114347,
+      "sha256": "cace633cdb92414be5dd210fe47e96fc99ad1d445ce8d1445ca1999c32a42c5b",
+      "imageSize": [
+        1440,
+        1000
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "file": "desktop-observations.json",
+      "bytes": 2168,
+      "sha256": "17b6420a4ff29066e3a872810b45f19e1ca3b66fe13ec439a09b0e97c4c3a131"
+    },
+    {
+      "file": "mobile-observations.json",
+      "bytes": 1611,
+      "sha256": "cc29fd46ca0022e27f899fdecd1364f92d66a680f0974bd63ea8119088a36ae7"
+    },
+    {
+      "file": "mobile-table-right-observations.json",
+      "bytes": 958,
+      "sha256": "dcf18d0aaf4bd046b6001a70500777c8928f109baaf4bf6a9e0cdda146d25081"
+    },
+    {
+      "file": "native-observations.json",
+      "bytes": 1437,
+      "sha256": "fbd2f1deb62dee6b590c84c50f3274dba6f5c534db5bd7cb5246570f86991a5c"
+    },
+    {
+      "file": "native-explanation-ready-observations.json",
+      "bytes": 761,
+      "sha256": "208dd4ee77e285e445e2cf26c62a0bc2ba56bd57185103eaa89861f5895774c7"
+    }
+  ],
+  "viewedAllSelectedPngs": true,
+  "checks": [
+    "Desktop 1440x1000 light full-page: all four mode rows and complete authored code are present; full screenshot1440x2690, document width1440.",
+    "Opened interactive native diagram from actual Explainer button, dark1440x1000: four nodes, same urllib3, three declaration labels; modal close button subsequently worked.",
+    "Mobile390x844 light full-page390x3493: document width390; mode table scroll container332 with scrollWidth586. Whole table is not simultaneously visible.",
+    "Mobile table right view: DOM-controlled scrollLeft253.5 (not a touch gesture); last header and yes/no/yes/yes cells inside visible horizontal and vertical bounds. Left columns are then clipped by table viewport.",
+    "Standalone native actual #node-urllib3 click opens Passport:1out/2in, conditional predicate and fixed source locationL410-418. Explain button reveals authored complete urllib3 METADATA values in a paragraph.",
+    "Images opened using view_image. No external source-link navigation or OS clipboard action."
+  ],
+  "limitations": [
+    "Explainer machine browser gate retains28keyboard diagnostics. This pointer/visual check does not override it.",
+    "Mobile diagram thumbnail has small text and shows the existing open-interactive hint. Mobile native full interactive acceptance not covered.",
+    "No root full keyboard traversal, Back/Forward, assistive-tech, human or upstream runtime validation.",
+    "Mode table contains upstream expected results, not root execution of pipdeptree.",
+    "Root citation click navigated to source footer; no SourceCard popup/excerpt interaction is claimed."
+  ],
+  "retainedAttempts": [
+    {
+      "kind": "selector-failure",
+      "detail": "button:text-is urllib3 matched0 on embedded/standalone attempts; subsequent fresh DOM identified #node-urllib3 and actual native click succeeded."
+    },
+    {
+      "kind": "sidebar-click",
+      "detail": "Embedded sidebar ref click did not expose a Passport in subsequent snapshot; do not claim it did."
+    },
+    {
+      "kind": "screenshot-before-transition-completed",
+      "file": {
+        "file": "native-explanation-dark.png",
+        "bytes": 100666,
+        "sha256": "f08f6748b9f6a871782be07d987527270248c150f7d0f8531b75dfaa8a7f7c94",
+        "imageSize": [
+          1440,
+          1000
+        ]
+      },
+      "detail": "First Explain screenshot caught empty transition panel. Kept unchanged privately; selected final ready screenshot waited for finite animations to settle."
+    }
+  ],
+  "publishedReceiptGuidance": "Summary is authored and derived; raw observations with file URLs remain private. Selected PNGs may be copied unchanged."
+}
