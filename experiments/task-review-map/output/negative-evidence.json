@@ -1,0 +1,11 @@
+{
+  "kind": "portable-negative-command-evidence",
+  "scenario": "Agent ref contains parent traversal",
+  "command": "node review-map.mjs <repo> <unsafe-review.json> <fresh-output>",
+  "exitCode": 2,
+  "diagnostic": {
+    "status": "failed",
+    "message": "Unsafe repository-relative path"
+  },
+  "outputCreated": false
+}

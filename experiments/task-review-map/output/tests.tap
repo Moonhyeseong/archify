@@ -1,0 +1,100 @@
+TAP version 13
+# Subtest: real Git changes map both sides, additions, deletion and literal bracket path
+ok 1 - real Git changes map both sides, additions, deletion and literal bracket path
+  ---
+  duration_ms: 365.748208
+  type: 'test'
+  ...
+# Subtest: head-only explanation leaves removed lines partial; absent node leaves hunk unexplained
+ok 2 - head-only explanation leaves removed lines partial; absent node leaves hunk unexplained
+  ---
+  duration_ms: 361.270625
+  type: 'test'
+  ...
+# Subtest: unchanged lines and out-of-bounds refs never gain matches or coverage
+ok 3 - unchanged lines and out-of-bounds refs never gain matches or coverage
+  ---
+  duration_ms: 414.249834
+  type: 'test'
+  ...
+# Subtest: missing and wrong-side references remain visible as failures
+ok 4 - missing and wrong-side references remain visible as failures
+  ---
+  duration_ms: 417.775
+  type: 'test'
+  ...
+# Subtest: traversal, absolute, control, metadata and pathspec injection fail before output writes
+ok 5 - traversal, absolute, control, metadata and pathspec injection fail before output writes
+  ---
+  duration_ms: 453.76975
+  type: 'test'
+  ...
+# Subtest: fixed commits required; duplicate IDs and invalid edges rejected
+ok 6 - fixed commits required; duplicate IDs and invalid edges rejected
+  ---
+  duration_ms: 141.1415
+  type: 'test'
+  ...
+# Subtest: external diff, textconv, fsmonitor, replacement refs and inherited Git selectors do not change reads
+ok 7 - external diff, textconv, fsmonitor, replacement refs and inherited Git selectors do not change reads
+  ---
+  duration_ms: 415.546958
+  type: 'test'
+  ...
+# Subtest: symlink and binary changes remain unresolved, never read filesystem targets
+ok 8 - symlink and binary changes remain unresolved, never read filesystem targets
+  ---
+  duration_ms: 482.493375
+  type: 'test'
+  ...
+# Subtest: CLI nonzero receipt for incomplete mapping and no publication on malformed input
+ok 9 - CLI nonzero receipt for incomplete mapping and no publication on malformed input
+  ---
+  duration_ms: 501.939333
+  type: 'test'
+  ...
+# Subtest: agent prose is literal and code is passed to native escaped snippet/diff blocks
+ok 10 - agent prose is literal and code is passed to native escaped snippet/diff blocks
+  ---
+  duration_ms: 399.203459
+  type: 'test'
+  ...
+# Subtest: existing output, input alias and symlink destinations cannot overwrite a victim
+ok 11 - existing output, input alias and symlink destinations cannot overwrite a victim
+  ---
+  duration_ms: 1205.7075
+  type: 'test'
+  ...
+# Subtest: partial output failure removes only owned files and preserves foreign entries
+ok 12 - partial output failure removes only owned files and preserves foreign entries
+  ---
+  duration_ms: 497.468125
+  type: 'test'
+  ...
+# Subtest: source URLs encode parentheses and punctuation in real Git paths
+ok 13 - source URLs encode parentheses and punctuation in real Git paths
+  ---
+  duration_ms: 513.024459
+  type: 'test'
+  ...
+# Subtest: repository ignoreSubmodules config cannot hide changed gitlinks from the ledger
+ok 14 - repository ignoreSubmodules config cannot hide changed gitlinks from the ledger
+  ---
+  duration_ms: 559.365833
+  type: 'test'
+  ...
+# Subtest: relative diff config and a nested caller cannot narrow repository coverage
+ok 15 - relative diff config and a nested caller cannot narrow repository coverage
+  ---
+  duration_ms: 473.797959
+  type: 'test'
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 15
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7271.132291

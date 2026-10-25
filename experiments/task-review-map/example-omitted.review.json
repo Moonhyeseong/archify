@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "repository": "https://github.com/tt-a1i/archify",
+  "base": "de004edf47228b6134fd3d29ef91cd5e010c867b",
+  "head": "ed62bfefaf490e831259261fdc12f985267590fb",
+  "title": "少解释了报告改动，会被指出来吗？",
+  "author": "Codex 实验作者（手写历史变更解释，未经原提交作者确认）",
+  "nodes": [
+    {
+      "id": "before-guard",
+      "label": "原逻辑：直接绑定评分",
+      "why": "我的解释：原逻辑尝试绑定已保存的人工评分，没有先检查最终产物是否真的交付。这里只引用被删除的一行。",
+      "ref": {
+        "path": "benchmarks/diagram-quality/comparison.mjs",
+        "side": "base",
+        "start": 137,
+        "end": 137
+      }
+    },
+    {
+      "id": "guard",
+      "label": "新增：交付条件",
+      "why": "我的解释：只有 delivered 才复用历史评分，否则记录评分无法绑定的缺测原因。此代码引用吻合不能证明所有评分流程正确。",
+      "ref": {
+        "path": "benchmarks/diagram-quality/comparison.mjs",
+        "side": "head",
+        "start": 137,
+        "end": 139
+      }
+    },
+    {
+      "id": "regression",
+      "label": "回归测试：缺失产物",
+      "why": "我的解释：新增测试构造历史评分但缺少产物的情形，断言无人工分并保留报告。这里只审阅测试源码，本实验没有执行该历史测试。",
+      "ref": {
+        "path": "test/diagram-quality-comparison.test.mjs",
+        "side": "head",
+        "start": 85,
+        "end": 95
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "before-guard",
+      "to": "guard",
+      "label": "声明：替换"
+    },
+    {
+      "from": "regression",
+      "to": "guard",
+      "label": "声明：测试关联"
+    }
+  ]
+}

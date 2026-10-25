@@ -1,0 +1,191 @@
+{
+  "version": 1,
+  "kind": "portable-evidence-summary",
+  "note": "Projection of actual local receipts; not an original receipt or a physical current-provenance assertion. Original receipts stay outside checkout.",
+  "baseline": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "historicalBase": "de004edf47228b6134fd3d29ef91cd5e010c867b",
+  "historicalHead": "ed62bfefaf490e831259261fdc12f985267590fb",
+  "runs": [
+    {
+      "name": "complete",
+      "input": "example.review.json",
+      "mappingExitCode": 0,
+      "mapping": {
+        "files": 3,
+        "hunks": 3,
+        "referenceMatches": 5,
+        "invalidReferences": 0,
+        "unexplainedHunks": 0,
+        "unresolvedFiles": 0
+      },
+      "renderCommand": "node archify/bin/archify.mjs finalize explainer <output>/explainer.json <output>/review.html --out-dir <private-evidence-dir> --json",
+      "commandExitCode": 0,
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "not-run"
+      },
+      "hashes": {
+        "review.html": "5030320a69aa15e109ae8d2f43f3b501173303348d1b25981115eff05baee337",
+        "mapping.json": "e04fea9bb1b29fce4926311c6101ad12d8d8d98efaa5eb2f0659a4828557b4cf",
+        "explainer.json": "925d1d21967b6340b22e3608a032647e010afc60b06ae0097f96f9c3738a54c3",
+        "diagram.json": "73921591e33a28336630982e47356fb0436a4bfdea974cb094d3592ae7863dc9"
+      },
+      "diagnostics": [
+        {
+          "code": "explainer/writing-de-chain",
+          "severity": "warning",
+          "message": "This sentence chains 3 “的” modifiers, so the head noun arrives late."
+        },
+        {
+          "code": "explainer/writing-sentence-length",
+          "severity": "warning",
+          "message": "Sentence has 52 reading units, above the configured zh limit of 50."
+        }
+      ],
+      "browserNote": "Not rerun for source-scope copy correction. Prior browser failure is retained under previousBrowserEvidence and its original artifact hash.",
+      "finalSourceEvidence": "After the top-literal pathspec correction, final mapping/Explainer/diagram bytes were rebuilt and exactly matched the rendered demo inputs. Final focused suite 15/15 passed."
+    },
+    {
+      "name": "omitted",
+      "input": "example-omitted.review.json",
+      "mappingExitCode": 1,
+      "mapping": {
+        "files": 3,
+        "hunks": 3,
+        "referenceMatches": 3,
+        "invalidReferences": 0,
+        "unexplainedHunks": 1,
+        "unresolvedFiles": 0
+      },
+      "renderCommand": "node archify/bin/archify.mjs finalize explainer <output>/explainer.json <output>/review.html --out-dir <private-evidence-dir> --json",
+      "commandExitCode": 0,
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "not-run"
+      },
+      "hashes": {
+        "review.html": "802cc58c1897670d309f7a158ace8761372be11e58ef54ed7ec95916b977b50d",
+        "mapping.json": "2f24c3695771c7c5082c6602a1d6b5aef3b1d333ecfc2d2f57fd85637eac5c46",
+        "explainer.json": "c8dfe34e6f87ae577acbff142b85aff00a5ea49e6f182494533dfddd4a668a19",
+        "diagram.json": "0daaad2b7cac3d770f3b077c354974627baf4df77a1feb9bebc37be4265644b2"
+      },
+      "diagnostics": [
+        {
+          "code": "explainer/writing-de-chain",
+          "severity": "warning",
+          "message": "This sentence chains 3 “的” modifiers, so the head noun arrives late."
+        },
+        {
+          "code": "explainer/writing-sentence-length",
+          "severity": "warning",
+          "message": "Sentence has 58 reading units, above the configured zh limit of 50."
+        }
+      ],
+      "browserNote": "Not rerun for source-scope copy correction. Prior browser failure is retained under previousBrowserEvidence and its original artifact hash.",
+      "finalSourceEvidence": "After the top-literal pathspec correction, final mapping/Explainer/diagram bytes were rebuilt and exactly matched the rendered demo inputs. Final focused suite 15/15 passed."
+    }
+  ],
+  "previousBrowserEvidence": [
+    {
+      "name": "complete",
+      "artifactSha256": "a7d6409f5673cb73283f917a0da8cec061e1e581e195e4fdda09ccbac8631c1c",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "fail"
+      },
+      "diagnostics": [
+        {
+          "code": "explainer/browser-keyboard-traversal",
+          "severity": "error",
+          "message": "This active control was not reached by Tab or native radio ArrowRight navigation. A Archify把你想理解、规划或分享的事，变成可以互动的可视化作品。"
+        },
+        {
+          "code": "explainer/browser-readability",
+          "severity": "error",
+          "message": "Rendered text is 9.343525179856115px, below 10px."
+        },
+        {
+          "code": "explainer/browser-diagram-fit",
+          "severity": "error",
+          "message": "The native preview cannot fit its complete graph at the required text size."
+        },
+        {
+          "code": "explainer/browser-diagram-text",
+          "severity": "error",
+          "message": "Native diagram text is below its viewport reading floor (10px; 75% of body at 1440)."
+        }
+      ],
+      "note": "Earlier artifact, before repository-scope copy correction. Its browser failure is preserved as earlier evidence, not a current-artifact browser run."
+    },
+    {
+      "name": "omitted",
+      "artifactSha256": "b53284ea8f879279213059436d050ce2ddce0b0bdc85f0b23dd332802caca6de",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "fail"
+      },
+      "diagnostics": [
+        {
+          "code": "explainer/browser-keyboard-traversal",
+          "severity": "error",
+          "message": "This active control was not reached by Tab or native radio ArrowRight navigation. A Archify把你想理解、规划或分享的事，变成可以互动的可视化作品。"
+        },
+        {
+          "code": "explainer/browser-readability",
+          "severity": "error",
+          "message": "Rendered text is 9.849489795918368px, below 10px."
+        },
+        {
+          "code": "explainer/browser-diagram-fit",
+          "severity": "error",
+          "message": "The native preview cannot fit its complete graph at the required text size."
+        },
+        {
+          "code": "explainer/browser-diagram-text",
+          "severity": "error",
+          "message": "Native diagram text is below its viewport reading floor (10px; 75% of body at 1440)."
+        }
+      ],
+      "note": "Earlier artifact, before repository-scope copy correction. Its browser failure is preserved as earlier evidence, not a current-artifact browser run."
+    }
+  ],
+  "previousAttempts": [
+    {
+      "stage": "prepare",
+      "diagnostic": "explainer/native-schema/required",
+      "result": "fail",
+      "resolution": "Added portable native meta.output before successful delivery."
+    },
+    {
+      "stage": "prepare-omitted",
+      "diagnostic": "explainer/diagram-render",
+      "result": "fail",
+      "resolution": "Increased actual graph column clearance from 60 to 140 px; later validate/deliver/check pass."
+    }
+  ],
+  "focusedTests": {
+    "command": "node --test experiments/task-review-map/review-map.test.mjs",
+    "passed": 15,
+    "failed": 0,
+    "skipped": 0
+  },
+  "implementationSha256": {
+    "review-map.mjs": "c8392ace0c3402915b054c89458295f1da6081c07dc882c91602e1fde1ca4aab",
+    "build-demo.mjs": "b41dfc0e2909e20101c32bcf8895f05cad8aa8bcfa80824041f216ad8d153473",
+    "review-map.test.mjs": "8b6c1d8f09d9bf1c992a13ccc9951587c4d4621667cd7d443fbe4935a826b170"
+  },
+  "incrementalReview": {
+    "issue": "Local diff.ignoreSubmodules=all could hide changed gitlinks; diff.relative could narrow paths from a nested caller.",
+    "fix": "Both diff commands override ignoreSubmodules and relative; ls-tree uses full-tree; deterministic hunk alignment disables indent heuristic. Pathspecs also use top,literal: no-relative alone only controls display and does not eliminate the caller cwd prefix. A failing nested-call regression exposed this during the fix; final full suite passed after top-literal correction.",
+    "beforeFix": "Two focused regressions failed against the previous source; full final suite passed after fix.",
+    "sourceScope": "Page scope now uses the declared input repository rather than a hard-coded Archify label."
+  }
+}

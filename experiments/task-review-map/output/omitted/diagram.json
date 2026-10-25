@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "output": "change-map.html",
+    "title": "声明的变更关系 · 点击节点读 why",
+    "subtitle": "关系由 Agent 编写，未通过静态或运行分析验证"
+  },
+  "components": [
+    {
+      "id": "before-guard",
+      "type": "backend",
+      "label": "原逻辑：直接绑定评分",
+      "sublabel": "Agent 声明",
+      "pos": [
+        40,
+        60
+      ],
+      "size": [
+        240,
+        86
+      ]
+    },
+    {
+      "id": "guard",
+      "type": "backend",
+      "label": "新增：交付条件",
+      "sublabel": "Agent 声明",
+      "pos": [
+        420,
+        60
+      ],
+      "size": [
+        240,
+        86
+      ]
+    },
+    {
+      "id": "regression",
+      "type": "backend",
+      "label": "回归测试：缺失产物",
+      "sublabel": "Agent 声明",
+      "pos": [
+        800,
+        60
+      ],
+      "size": [
+        240,
+        86
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "before-guard",
+      "to": "guard",
+      "label": "声明：替换"
+    },
+    {
+      "from": "regression",
+      "to": "guard",
+      "label": "声明：测试关联"
+    }
+  ]
+}

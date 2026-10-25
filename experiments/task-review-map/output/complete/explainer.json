@@ -1,0 +1,409 @@
+{
+  "schema_version": 1,
+  "diagram_type": "explainer",
+  "meta": {
+    "id": "task-review-map",
+    "title": "缺失产物时，历史评分还能算数吗？",
+    "locale": "zh-CN",
+    "style": "clean"
+  },
+  "answer": {
+    "summary": "变更范围已记账，代码仍待审阅。",
+    "reasons": [
+      "点击图中节点查看 Agent 的 why，下面保留真实 Git diff。",
+      "先处理未解释 hunk，再判断声明是否正确。",
+      "本实验未执行历史测试，不表示变更已通过验收。"
+    ],
+    "scope": "tt-a1i/archify · 作者声明 · de004edf → ed62bfef"
+  },
+  "panels": [
+    {
+      "id": "map",
+      "title": "先看这次改动，再看尚未解释的部分",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "warning",
+          "type": "callout",
+          "level": "warning",
+          "title": "引用吻合 ≠ 语义正确 ≠ 测试通过",
+          "text": "why 与关系均为 Codex 实验作者（手写历史变更解释，未经原提交作者确认） 的声明；本工具只核对固定 Git 对象和变更行。测试：未执行。"
+        },
+        {
+          "id": "overview",
+          "type": "prose",
+          "text": "3 个文件 · 3 个 hunk · 5 个引用吻合 · 0 个无效引用 · 0 个未完整解释 hunk · 0 个不支持的文件。"
+        },
+        {
+          "id": "change-map",
+          "type": "diagram",
+          "diagramType": "architecture",
+          "spec": {
+            "schema_version": 1,
+            "diagram_type": "architecture",
+            "meta": {
+              "output": "change-map.html",
+              "title": "声明的变更关系 · 点击节点读 why",
+              "subtitle": "关系由 Agent 编写，未通过静态或运行分析验证"
+            },
+            "components": [
+              {
+                "id": "before-guard",
+                "type": "backend",
+                "label": "原逻辑：直接绑定评分",
+                "sublabel": "Agent 声明",
+                "pos": [
+                  40,
+                  60
+                ],
+                "size": [
+                  240,
+                  86
+                ]
+              },
+              {
+                "id": "guard",
+                "type": "backend",
+                "label": "新增：交付条件",
+                "sublabel": "Agent 声明",
+                "pos": [
+                  420,
+                  60
+                ],
+                "size": [
+                  240,
+                  86
+                ]
+              },
+              {
+                "id": "regression",
+                "type": "backend",
+                "label": "回归测试：缺失产物",
+                "sublabel": "Agent 声明",
+                "pos": [
+                  800,
+                  60
+                ],
+                "size": [
+                  240,
+                  86
+                ]
+              },
+              {
+                "id": "before-report",
+                "type": "backend",
+                "label": "原报告：无缺测字段",
+                "sublabel": "Agent 声明",
+                "pos": [
+                  40,
+                  240
+                ],
+                "size": [
+                  240,
+                  86
+                ]
+              },
+              {
+                "id": "report",
+                "type": "backend",
+                "label": "报告展示缺测原因",
+                "sublabel": "Agent 声明",
+                "pos": [
+                  420,
+                  240
+                ],
+                "size": [
+                  240,
+                  86
+                ]
+              }
+            ],
+            "connections": [
+              {
+                "from": "before-guard",
+                "to": "guard",
+                "label": "声明：替换"
+              },
+              {
+                "from": "regression",
+                "to": "guard",
+                "label": "声明：测试关联"
+              },
+              {
+                "from": "guard",
+                "to": "report",
+                "label": "声明：缺测呈现"
+              },
+              {
+                "from": "before-report",
+                "to": "report",
+                "label": "声明：替换"
+              }
+            ]
+          },
+          "nodeBlocks": {
+            "before-guard": "why-before-guard",
+            "guard": "why-guard",
+            "regression": "why-regression",
+            "before-report": "why-before-report",
+            "report": "why-report"
+          }
+        },
+        {
+          "id": "tour",
+          "type": "steps",
+          "items": [
+            {
+              "id": "step-before-guard",
+              "text": "原逻辑：直接绑定评分",
+              "detail": "reference-matches · 我的解释：原逻辑尝试绑定已保存的人工评分，没有先检查最终产物是否真的交付。这里只引用被删除的一行。",
+              "target": {
+                "diagram": "change-map",
+                "node": "before-guard"
+              }
+            },
+            {
+              "id": "step-guard",
+              "text": "新增：交付条件",
+              "detail": "reference-matches · 我的解释：只有 delivered 才复用历史评分，否则记录评分无法绑定的缺测原因。此代码引用吻合不能证明所有评分流程正确。",
+              "target": {
+                "diagram": "change-map",
+                "node": "guard"
+              }
+            },
+            {
+              "id": "step-regression",
+              "text": "回归测试：缺失产物",
+              "detail": "reference-matches · 我的解释：新增测试构造历史评分但缺少产物的情形，断言无人工分并保留报告。这里只审阅测试源码，本实验没有执行该历史测试。",
+              "target": {
+                "diagram": "change-map",
+                "node": "regression"
+              }
+            },
+            {
+              "id": "step-before-report",
+              "text": "原报告：无缺测字段",
+              "detail": "reference-matches · 我的解释：原报告的详情对象未列出 evidence.missing。这里引用被替换的一行，供审阅前后变化。",
+              "target": {
+                "diagram": "change-map",
+                "node": "before-report"
+              }
+            },
+            {
+              "id": "step-report",
+              "text": "报告展示缺测原因",
+              "detail": "reference-matches · 我的解释：报告详情新增 evidenceMissing，供读者看到历史评分没有绑定的原因。具体页面效果仍需独立浏览器验收。",
+              "target": {
+                "diagram": "change-map",
+                "node": "report"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "node-before-guard",
+      "title": "原逻辑：直接绑定评分",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "why-before-guard",
+          "type": "prose",
+          "text": "Agent 声明（Codex 实验作者（手写历史变更解释，未经原提交作者确认））：我的解释：原逻辑尝试绑定已保存的人工评分，没有先检查最终产物是否真的交付。这里只引用被删除的一行。"
+        },
+        {
+          "id": "status-before-guard",
+          "type": "callout",
+          "level": "note",
+          "title": "引用吻合",
+          "text": "Range contains changed lines in the stated Git side. Semantic meaning and test results are not checked. 引用：base:benchmarks/diagram-quality/comparison.mjs:137–137。"
+        },
+        {
+          "id": "code-before-guard",
+          "type": "snippet",
+          "title": "base · benchmarks/diagram-quality/comparison.mjs · L137–L137",
+          "language": "text",
+          "text": "   for(const review of original.human?.reviews??[])receipt=attachHumanReview(receipt,review);"
+        },
+        {
+          "id": "link-before-guard",
+          "type": "prose",
+          "text": "[查看固定 revision 的源码](https://github.com/tt-a1i/archify/blob/de004edf47228b6134fd3d29ef91cd5e010c867b/benchmarks/diagram-quality/comparison.mjs#L137-L137)"
+        },
+        {
+          "id": "diff-before-guard-0",
+          "type": "diff",
+          "caption": "真实 Git diff · benchmarks/diagram-quality/comparison.mjs · range-accounted",
+          "text": "@@ -137 +137,3 @@ export async function compareFromFiles({plan:planFile,output,reviews:reviewFile}\n-   for(const review of original.human?.reviews??[])receipt=attachHumanReview(receipt,review);\n+   const storedReviews=original.human?.reviews??[];\n+   if(receipt.delivery.status==='delivered')for(const review of storedReviews)receipt=attachHumanReview(receipt,review);\n+   else if(storedReviews.length)evidence.missing.push('stored human reviews not bound: final artifact unavailable');"
+        }
+      ]
+    },
+    {
+      "id": "node-guard",
+      "title": "新增：交付条件",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "why-guard",
+          "type": "prose",
+          "text": "Agent 声明（Codex 实验作者（手写历史变更解释，未经原提交作者确认））：我的解释：只有 delivered 才复用历史评分，否则记录评分无法绑定的缺测原因。此代码引用吻合不能证明所有评分流程正确。"
+        },
+        {
+          "id": "status-guard",
+          "type": "callout",
+          "level": "note",
+          "title": "引用吻合",
+          "text": "Range contains changed lines in the stated Git side. Semantic meaning and test results are not checked. 引用：head:benchmarks/diagram-quality/comparison.mjs:137–139。"
+        },
+        {
+          "id": "code-guard",
+          "type": "snippet",
+          "title": "head · benchmarks/diagram-quality/comparison.mjs · L137–L139",
+          "language": "text",
+          "text": "   const storedReviews=original.human?.reviews??[];\n   if(receipt.delivery.status==='delivered')for(const review of storedReviews)receipt=attachHumanReview(receipt,review);\n   else if(storedReviews.length)evidence.missing.push('stored human reviews not bound: final artifact unavailable');"
+        },
+        {
+          "id": "link-guard",
+          "type": "prose",
+          "text": "[查看固定 revision 的源码](https://github.com/tt-a1i/archify/blob/ed62bfefaf490e831259261fdc12f985267590fb/benchmarks/diagram-quality/comparison.mjs#L137-L139)"
+        },
+        {
+          "id": "diff-guard-0",
+          "type": "diff",
+          "caption": "真实 Git diff · benchmarks/diagram-quality/comparison.mjs · range-accounted",
+          "text": "@@ -137 +137,3 @@ export async function compareFromFiles({plan:planFile,output,reviews:reviewFile}\n-   for(const review of original.human?.reviews??[])receipt=attachHumanReview(receipt,review);\n+   const storedReviews=original.human?.reviews??[];\n+   if(receipt.delivery.status==='delivered')for(const review of storedReviews)receipt=attachHumanReview(receipt,review);\n+   else if(storedReviews.length)evidence.missing.push('stored human reviews not bound: final artifact unavailable');"
+        }
+      ]
+    },
+    {
+      "id": "node-regression",
+      "title": "回归测试：缺失产物",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "why-regression",
+          "type": "prose",
+          "text": "Agent 声明（Codex 实验作者（手写历史变更解释，未经原提交作者确认））：我的解释：新增测试构造历史评分但缺少产物的情形，断言无人工分并保留报告。这里只审阅测试源码，本实验没有执行该历史测试。"
+        },
+        {
+          "id": "status-regression",
+          "type": "callout",
+          "level": "note",
+          "title": "引用吻合",
+          "text": "Range contains changed lines in the stated Git side. Semantic meaning and test results are not checked. 引用：head:test/diagram-quality-comparison.test.mjs:85–95。"
+        },
+        {
+          "id": "code-regression",
+          "type": "snippet",
+          "title": "head · test/diagram-quality-comparison.test.mjs · L85–L95",
+          "language": "text",
+          "text": "test('stored ratings with a missing artifact do not abort the comparison or gain human credit',async t=>{\n const dir=temp(t),{plan,write}=comparisonFixture(dir);\n const receipt=JSON.parse(fs.readFileSync(path.join(dir,'base.json')));\n receipt.human={status:'completed',reviews:[{taskId:'one',artifactHash:receipt.artifactHash,status:'completed',reviewerId:'historical-rater',rubricVersion:'diagram-quality-human-v1',independent:true,ratings:{readability:4,hierarchy:4,layout:4,style:4,aesthetics:4}}]};\n write('base.json',receipt);delete plan.runs[0].artifact;write('plan.json',plan);\n const {comparison}=await compareFromFiles({plan:path.join(dir,'plan.json'),output:path.join(dir,'out')});\n const row=comparison.pairs[0].base;\n assert.equal(row.delivery.status,'unverified');assert.equal(row.scores.human,null);\n assert.ok(row.evidence.missing.some(reason=>reason.includes('stored human reviews')));\n assert.ok(fs.existsSync(path.join(dir,'out/index.html')));\n});"
+        },
+        {
+          "id": "link-regression",
+          "type": "prose",
+          "text": "[查看固定 revision 的源码](https://github.com/tt-a1i/archify/blob/ed62bfefaf490e831259261fdc12f985267590fb/test/diagram-quality-comparison.test.mjs#L85-L95)"
+        },
+        {
+          "id": "diff-regression-0",
+          "type": "diff",
+          "caption": "真实 Git diff · test/diagram-quality-comparison.test.mjs · range-accounted",
+          "text": "@@ -84,0 +85,11 @@ test('malformed generated JSON remains a recorded failure with inspectable candi\n+test('stored ratings with a missing artifact do not abort the comparison or gain human credit',async t=>{\n+ const dir=temp(t),{plan,write}=comparisonFixture(dir);\n+ const receipt=JSON.parse(fs.readFileSync(path.join(dir,'base.json')));\n+ receipt.human={status:'completed',reviews:[{taskId:'one',artifactHash:receipt.artifactHash,status:'completed',reviewerId:'historical-rater',rubricVersion:'diagram-quality-human-v1',independent:true,ratings:{readability:4,hierarchy:4,layout:4,style:4,aesthetics:4}}]};\n+ write('base.json',receipt);delete plan.runs[0].artifact;write('plan.json',plan);\n+ const {comparison}=await compareFromFiles({plan:path.join(dir,'plan.json'),output:path.join(dir,'out')});\n+ const row=comparison.pairs[0].base;\n+ assert.equal(row.delivery.status,'unverified');assert.equal(row.scores.human,null);\n+ assert.ok(row.evidence.missing.some(reason=>reason.includes('stored human reviews')));\n+ assert.ok(fs.existsSync(path.join(dir,'out/index.html')));\n+});"
+        }
+      ]
+    },
+    {
+      "id": "node-before-report",
+      "title": "原报告：无缺测字段",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "why-before-report",
+          "type": "prose",
+          "text": "Agent 声明（Codex 实验作者（手写历史变更解释，未经原提交作者确认））：我的解释：原报告的详情对象未列出 evidence.missing。这里引用被替换的一行，供审阅前后变化。"
+        },
+        {
+          "id": "status-before-report",
+          "type": "callout",
+          "level": "note",
+          "title": "引用吻合",
+          "text": "Range contains changed lines in the stated Git side. Semantic meaning and test results are not checked. 引用：base:benchmarks/diagram-quality/score-report.mjs:55–55。"
+        },
+        {
+          "id": "code-before-report",
+          "type": "snippet",
+          "title": "base · benchmarks/diagram-quality/score-report.mjs · L55–L55",
+          "language": "text",
+          "text": " const defects={semanticMeasurements:row.semanticMeasurements??null,semanticDefects:row.semanticDefects??[],layoutDetails:row.layoutDetails??null,sourceEvidence:row.sourceEvidence??null,missing:row.missing??[],human:row.human??null};"
+        },
+        {
+          "id": "link-before-report",
+          "type": "prose",
+          "text": "[查看固定 revision 的源码](https://github.com/tt-a1i/archify/blob/de004edf47228b6134fd3d29ef91cd5e010c867b/benchmarks/diagram-quality/score-report.mjs#L55-L55)"
+        },
+        {
+          "id": "diff-before-report-0",
+          "type": "diff",
+          "caption": "真实 Git diff · benchmarks/diagram-quality/score-report.mjs · range-accounted",
+          "text": "@@ -55 +55 @@ function evidenceArm(row,name,revision) {\n- const defects={semanticMeasurements:row.semanticMeasurements??null,semanticDefects:row.semanticDefects??[],layoutDetails:row.layoutDetails??null,sourceEvidence:row.sourceEvidence??null,missing:row.missing??[],human:row.human??null};\n+ const defects={evidenceMissing:evidence.missing??[],semanticMeasurements:row.semanticMeasurements??null,semanticDefects:row.semanticDefects??[],layoutDetails:row.layoutDetails??null,sourceEvidence:row.sourceEvidence??null,missing:row.missing??[],human:row.human??null};"
+        }
+      ]
+    },
+    {
+      "id": "node-report",
+      "title": "报告展示缺测原因",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "why-report",
+          "type": "prose",
+          "text": "Agent 声明（Codex 实验作者（手写历史变更解释，未经原提交作者确认））：我的解释：报告详情新增 evidenceMissing，供读者看到历史评分没有绑定的原因。具体页面效果仍需独立浏览器验收。"
+        },
+        {
+          "id": "status-report",
+          "type": "callout",
+          "level": "note",
+          "title": "引用吻合",
+          "text": "Range contains changed lines in the stated Git side. Semantic meaning and test results are not checked. 引用：head:benchmarks/diagram-quality/score-report.mjs:55–55。"
+        },
+        {
+          "id": "code-report",
+          "type": "snippet",
+          "title": "head · benchmarks/diagram-quality/score-report.mjs · L55–L55",
+          "language": "text",
+          "text": " const defects={evidenceMissing:evidence.missing??[],semanticMeasurements:row.semanticMeasurements??null,semanticDefects:row.semanticDefects??[],layoutDetails:row.layoutDetails??null,sourceEvidence:row.sourceEvidence??null,missing:row.missing??[],human:row.human??null};"
+        },
+        {
+          "id": "link-report",
+          "type": "prose",
+          "text": "[查看固定 revision 的源码](https://github.com/tt-a1i/archify/blob/ed62bfefaf490e831259261fdc12f985267590fb/benchmarks/diagram-quality/score-report.mjs#L55-L55)"
+        },
+        {
+          "id": "diff-report-0",
+          "type": "diff",
+          "caption": "真实 Git diff · benchmarks/diagram-quality/score-report.mjs · range-accounted",
+          "text": "@@ -55 +55 @@ function evidenceArm(row,name,revision) {\n- const defects={semanticMeasurements:row.semanticMeasurements??null,semanticDefects:row.semanticDefects??[],layoutDetails:row.layoutDetails??null,sourceEvidence:row.sourceEvidence??null,missing:row.missing??[],human:row.human??null};\n+ const defects={evidenceMissing:evidence.missing??[],semanticMeasurements:row.semanticMeasurements??null,semanticDefects:row.semanticDefects??[],layoutDetails:row.layoutDetails??null,sourceEvidence:row.sourceEvidence??null,missing:row.missing??[],human:row.human??null};"
+        }
+      ]
+    },
+    {
+      "id": "unexplained",
+      "title": "尚未解释 · 0 个 hunk",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "gap-meaning",
+          "type": "prose",
+          "text": "范围记账要求 base 的删除行与 head 的新增行都被声明覆盖。范围覆盖不衡量解释质量；请审查 why 是否准确。"
+        },
+        {
+          "id": "no-gaps",
+          "type": "prose",
+          "text": "未发现范围记账缺口；仍需人工审查语义与真实执行证据。"
+        }
+      ]
+    }
+  ],
+  "sources": []
+}

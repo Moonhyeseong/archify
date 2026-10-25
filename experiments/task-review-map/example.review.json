@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "repository": "https://github.com/tt-a1i/archify",
+  "base": "de004edf47228b6134fd3d29ef91cd5e010c867b",
+  "head": "ed62bfefaf490e831259261fdc12f985267590fb",
+  "title": "缺失产物时，历史评分还能算数吗？",
+  "author": "Codex 实验作者（手写历史变更解释，未经原提交作者确认）",
+  "nodes": [
+    { "id": "before-guard", "label": "原逻辑：直接绑定评分", "why": "我的解释：原逻辑尝试绑定已保存的人工评分，没有先检查最终产物是否真的交付。这里只引用被删除的一行。", "ref": { "path": "benchmarks/diagram-quality/comparison.mjs", "side": "base", "start": 137, "end": 137 } },
+    { "id": "guard", "label": "新增：交付条件", "why": "我的解释：只有 delivered 才复用历史评分，否则记录评分无法绑定的缺测原因。此代码引用吻合不能证明所有评分流程正确。", "ref": { "path": "benchmarks/diagram-quality/comparison.mjs", "side": "head", "start": 137, "end": 139 } },
+    { "id": "regression", "label": "回归测试：缺失产物", "why": "我的解释：新增测试构造历史评分但缺少产物的情形，断言无人工分并保留报告。这里只审阅测试源码，本实验没有执行该历史测试。", "ref": { "path": "test/diagram-quality-comparison.test.mjs", "side": "head", "start": 85, "end": 95 } },
+    { "id": "before-report", "label": "原报告：无缺测字段", "why": "我的解释：原报告的详情对象未列出 evidence.missing。这里引用被替换的一行，供审阅前后变化。", "ref": { "path": "benchmarks/diagram-quality/score-report.mjs", "side": "base", "start": 55, "end": 55 } },
+    { "id": "report", "label": "报告展示缺测原因", "why": "我的解释：报告详情新增 evidenceMissing，供读者看到历史评分没有绑定的原因。具体页面效果仍需独立浏览器验收。", "ref": { "path": "benchmarks/diagram-quality/score-report.mjs", "side": "head", "start": 55, "end": 55 } }
+  ],
+  "edges": [
+    { "from": "before-guard", "to": "guard", "label": "声明：替换" },
+    { "from": "regression", "to": "guard", "label": "声明：测试关联" },
+    { "from": "guard", "to": "report", "label": "声明：缺测呈现" },
+    { "from": "before-report", "to": "report", "label": "声明：替换" }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "captureDate": "2026-10-25",
+  "method": "Ego Lite Chromium page screenshot",
+  "viewport": {
+    "width": 1440,
+    "height": 1000,
+    "deviceScaleFactor": 1
+  },
+  "appearance": "System light / Clean",
+  "captures": [
+    {
+      "artifact": {
+        "path": "../output/complete/review.html",
+        "sha256": "5030320a69aa15e109ae8d2f43f3b501173303348d1b25981115eff05baee337"
+      },
+      "image": {
+        "path": "complete.png",
+        "sha256": "a4eecfbc017d28018e8ee9c37daf7bcb3c1a518051106824d8c9e3e10e2afb72",
+        "width": 1440,
+        "height": 4753
+      },
+      "fullPage": true
+    },
+    {
+      "artifact": {
+        "path": "../output/omitted/review.html",
+        "sha256": "802cc58c1897670d309f7a158ace8761372be11e58ef54ed7ec95916b977b50d"
+      },
+      "image": {
+        "path": "omitted.png",
+        "sha256": "21c3355ac93da719cf1ccae3ce47b3ed14aebbef46f4ff7fc9e792764a1ae271",
+        "width": 1440,
+        "height": 3505
+      },
+      "fullPage": true
+    }
+  ],
+  "review": {
+    "by": "Codex coordinating agent",
+    "observations": [
+      "Both pages show a native change map, source ranges and actual Git diff.",
+      "The omitted example visibly retains one unexplained hunk.",
+      "Agent statements are separated from reference matching.",
+      "Browser traversal has a recorded failure on the prior artifact; current scope-copy-only revision did not rerun that gate."
+    ],
+    "humanAcceptance": "pending"
+  }
+}
