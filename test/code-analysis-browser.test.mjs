@@ -237,7 +237,8 @@ test('Code Analysis Atlas draws the analyzed tree, focuses a module and hands a 
     assert.equal(response.exceptionDetails, undefined, response.exceptionDetails?.exception?.description);
     return response.result?.value;
   };
-  const until = (condition, what) => run(`new Promise((resolve, reject) => { const deadline = Date.now() + 15000; const poll = () => {
+  // Under the 15 s protocol timeout, so a stuck wait reports what it waited for.
+  const until = (condition, what) => run(`new Promise((resolve, reject) => { const deadline = Date.now() + 10000; const poll = () => {
     if (${condition}) return resolve(true);
     if (Date.now() > deadline) return reject(new Error(${JSON.stringify(what)}));
     setTimeout(poll, 25);
@@ -253,6 +254,8 @@ test('Code Analysis Atlas draws the analyzed tree, focuses a module and hands a 
   const atlas = JSON.parse(await run("document.getElementById('bauify-atlas-data').textContent"));
   await until(`document.documentElement.getAttribute('data-bauify-atlas-drawn') === '${atlas.edges.length}'`, 'atlas did not draw');
   assert.ok(atlas.edges.length > 0 && atlas.functions.length > 0, 'the fixture has dependencies and functions to draw');
+  assert.equal(await run("document.documentElement.getAttribute('data-bauify-atlas-animating')"), 'true', 'the opening reveal runs');
+  await until("!document.documentElement.hasAttribute('data-bauify-atlas-animating')", 'the opening reveal did not finish');
   assert.equal(await run("getComputedStyle(document.getElementById('bauify-reader')).display"), 'none', 'the Classic reader steps aside');
   // The circle is painted: a good share of pixels in its bounding square are not transparent.
   const painted = await run(`(() => { const c = document.querySelector('#bauify-atlas canvas'), x = c.getContext('2d');
@@ -265,6 +268,28 @@ test('Code Analysis Atlas draws the analyzed tree, focuses a module and hands a 
   const focused = await run("document.documentElement.getAttribute('data-bauify-atlas-focus')");
   assert.ok(atlas.modules.some(m => m.id === focused), 'a module is focused');
   assert.match(await run("document.querySelector('#bauify-atlas .selected h4').textContent"), new RegExp(atlas.modules.find(m => m.id === focused).label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
+
+  // A selected import cycle gets a light that travels around it: the canvas keeps changing.
+  const canvasSum = "(() => { const c = document.querySelector('#bauify-atlas canvas'), d = c.getContext('2d').getImageData(0, 0, c.width, c.height).data; let n = 0; for (let i = 0; i < d.length; i += 16) n += d[i] + d[i + 1] + d[i + 2] + d[i + 3]; return n; })()";
+  const cycle = atlas.findings.findIndex(f => f.kind === 'cycle');
+  assert.notEqual(cycle, -1, 'the fixture reports an import cycle');
+  await run(`document.querySelector('#bauify-atlas [data-finding="${cycle}"]').click()`);
+  await until("!document.documentElement.hasAttribute('data-bauify-atlas-animating')", 'the selection cross-fade did not finish');
+  assert.equal(await run("document.documentElement.getAttribute('data-bauify-atlas-flow')"), 'on');
+  const before = await run(canvasSum);
+  await run('new Promise(resolve => setTimeout(resolve, 250))');
+  assert.notEqual(await run(canvasSum), before, 'the cycle light moves');
+  // With reduced motion the same selection is drawn at once and stays still.
+  await send('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: 'reduce' }] });
+  await run(`document.querySelector('#bauify-atlas [data-finding="${cycle}"]').click()`);
+  await run(`document.querySelector('#bauify-atlas [data-finding="${cycle}"]').click()`);
+  assert.equal(await run("document.documentElement.hasAttribute('data-bauify-atlas-animating')"), false, 'no cross-fade with reduced motion');
+  await run('new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)))');
+  assert.equal(await run("document.documentElement.getAttribute('data-bauify-atlas-flow')"), 'off');
+  const still = await run(canvasSum);
+  await run('new Promise(resolve => setTimeout(resolve, 250))');
+  assert.equal(await run(canvasSum), still, 'nothing moves with reduced motion');
+  await send('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: 'no-preference' }] });
 
   // A complex function selected in the Atlas opens with its source in the Classic view.
   const complex = atlas.findings.findIndex(f => f.kind === 'function');
