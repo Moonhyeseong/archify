@@ -6,7 +6,7 @@
 
 共同实验基线：[dev `82c7e0f0`](https://github.com/tt-a1i/archify/commit/82c7e0f089a02a4d514714adf37dc2061682da5f)，2026-10-25 已重新核对远端仍为该 revision。下面的“已推送”只表示远程实验分支可审查，不能等同于合入、发布或人类验收。
 
-## 已推送的 14 个实验
+## 已推送的 15 个实验
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
@@ -27,7 +27,9 @@
 | [Plan actions](https://github.com/tt-a1i/archify/tree/codex/lab-plan-actions/experiments/plan-actions) | 分别看两种 replacement 顺序，保留 unknown/sensitive/null 路径与 deferred/complete | `640fa6ff` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-plan-actions/experiments/plan-actions/screenshots/explainer.png) | 16 tests；render/finalize 通过，自动 browser 未请求；synthetic，所有 before/after 值不入产物 |
 | [Recipe stages](https://github.com/tt-a1i/archify/tree/codex/lab-recipe-stages/experiments/recipe-stages) | Just dump 的 priors 只改一值，直观看出同一依赖由 before 移到 after | `10164864` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-recipe-stages/experiments/recipe-stages/screenshots/priors-2.png) | 10 tests；四份产物四阶段通过；固定上游形状的原创 synthetic，没有执行 Just |
 
-这十四项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
+| [Relation reference](https://github.com/tt-a1i/archify/tree/codex/lab-relation-reference/experiments/relation-reference) | 复制当前 pinned 关系的原始方向、标签、节点 ID 与明确身份，便于准确引用 | `6d7cd594` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-relation-reference/experiments/relation-reference/screenshots/candidate-light.png) | 共享 Viewer；focused 62/62，最后 Focus 16/16，core 19/19、generated/ZIP 一致；独立复核；真实 OS clipboard 与用户收益未验证 |
+
+这十五项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
 
 GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确远端 head 的 Actions runs/check-runs 均为 0。当前 [CI 配置](https://github.com/tt-a1i/archify/blob/82c7e0f089a02a4d514714adf37dc2061682da5f/.github/workflows/ci.yml) 只对 main/dev push 自动运行，另外支持 PR/manual。这里的实验分支 push 没有提供远端 CI 通过证据；上表测试均按实际本地来源记录。
 
@@ -43,13 +45,19 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | --- | --- |
 | <img width="540" alt="State：声明与未声明 actual screenshot" src="https://raw.githubusercontent.com/tt-a1i/archify/cc8c75bc15484098bf64aead799a34870981ccac/experiments/state-contract/screenshots/state-contract.png"> | <img width="540" alt="Decision：保留异议 actual screenshot" src="https://raw.githubusercontent.com/tt-a1i/archify/bdbdf9a9b5b97c556c5f85547279021b7446a05c/experiments/decision-thread/screenshots/sequence.png"> |
 
+## 保留证据但暂不推荐的原型
+
+[Relation return 分支](https://github.com/tt-a1i/archify/tree/codex/lab-relation-return/experiments/relation-return)（`e323d30f`）保留实际前后 HTML、[截图](https://github.com/tt-a1i/archify/blob/codex/lab-relation-return/experiments/relation-return/screenshots/candidate-destination-light.png)、可应用的候选 patch 与验证摘要。该分支只新增实验文件，**没有共享 Viewer 产品改动**。
+
+在原有 production-deployment 图中，目标 Passport 的 Incoming 行本来就能一步回到来源；新增 Back 按钮同样是一步。既有代表性 Architecture 样例的检查也未找到来源行因长列表而被遮挡的实证。56/56 focused 与独立 18/18 Focus 说明兼容性边界，不能说明更好用，因此暂不引入额外状态和按钮；不为证明收益而另造极端场景。
+
 ## 正在推进
 
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
-| Relation reference | Navbuddy/Drawio 小交互；复制当前 pinned 关系的方向、标签和明确 ID | 共享 Viewer 实验中，保留现有 Copy Link，不另写 clipboard helper |
-| Relation return | Navbuddy 的回来源思路；关系列表跳转后单步回来源节点 | 共享 Viewer 实验中；不扩展为 Atlas history/camera 或跨图返回 |
-| 后续发现 | 测试与代码之间的可解释证据关系 | 第六批持续调研；不把 coverage 当正确性或静态关系当实际执行 |
+| Test failure map | pytest-json-report；分别展示阶段结果与真正提供的位置证据 | 独立审查修正中：nodeid 路径不能冒充继承测试的定义文件 |
+| Test context map | coverage.py 完整 context label 与显式 sidecar 的行×测试上下文矩阵 | 实现与独立审查中；不按 pipe 拆身份，不推断测试结果或正确性 |
+| 后续发现 | 小众源码导航、图比较和阅读交互 | 第七批两路持续搜索；不设星数门槛，不为数量增加功能 |
 
 ## 一手调研报告
 
