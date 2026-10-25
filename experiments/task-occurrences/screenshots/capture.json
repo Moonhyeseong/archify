@@ -1,0 +1,241 @@
+{
+  "kind": "derived safe root-browser evidence summary",
+  "capturedAt": "2026-10-25T10:57:01.970Z",
+  "secondCapturedAt": "2026-10-25T10:58:09.130Z",
+  "artifacts": {
+    "explanation.html": {
+      "basename": "explanation.html",
+      "bytes": 682434,
+      "sha256": "d10eeda28faccc4c8f95bed699e5e4c67b259006d7f3a2d66af92122aa9a3b48"
+    },
+    "dependencies.html": {
+      "basename": "dependencies.html",
+      "bytes": 872759,
+      "sha256": "420c9b26c1cefa2816c091b85100f22c7ec8eff02b81aa81babf3c12e6c186a7"
+    }
+  },
+  "screenshots": [
+    {
+      "path": "screenshots/overview.png",
+      "basename": "overview.png",
+      "bytes": 168552,
+      "sha256": "f7b2378b674a63375fe892b2f69121ca509fc7c9b4441458dc99c96e0151b36c",
+      "pngDimensions": [
+        1440,
+        1100
+      ],
+      "viewportCssPixels": [
+        1440,
+        1100
+      ],
+      "theme": "light",
+      "rootViewed": true,
+      "artifact": "explanation.html"
+    },
+    {
+      "path": "screenshots/full.png",
+      "basename": "full.png",
+      "bytes": 415750,
+      "sha256": "c9968a7af6fbc3a0747f56e2e1dff93af34e6355d0a87fe09882bc49ec18188a",
+      "pngDimensions": [
+        1440,
+        3092
+      ],
+      "viewportCssPixels": [
+        1440,
+        1100
+      ],
+      "theme": "light",
+      "rootViewed": true,
+      "artifact": "explanation.html"
+    },
+    {
+      "path": "screenshots/position-5.png",
+      "basename": "position-5.png",
+      "bytes": 180012,
+      "sha256": "0cb8fae2dcf8d29bce1a5770a87db58dc953f87f4d67191aa31cf7554d1f2174",
+      "pngDimensions": [
+        1440,
+        1100
+      ],
+      "viewportCssPixels": [
+        1440,
+        1100
+      ],
+      "theme": "light",
+      "rootViewed": true,
+      "artifact": "explanation.html"
+    },
+    {
+      "path": "screenshots/position-7.png",
+      "basename": "position-7.png",
+      "bytes": 180503,
+      "sha256": "d47a17506a2950a1d77bca44d44e2183dc4c307db0005e57aa0a2ae2ee805128",
+      "pngDimensions": [
+        1440,
+        1100
+      ],
+      "viewportCssPixels": [
+        1440,
+        1100
+      ],
+      "theme": "light",
+      "rootViewed": true,
+      "artifact": "explanation.html"
+    },
+    {
+      "path": "screenshots/native.png",
+      "basename": "native.png",
+      "bytes": 121896,
+      "sha256": "d2e964725bb75674db64b3b863832664f8c8e18b12601f2f8626be48b4bb6759",
+      "pngDimensions": [
+        1440,
+        1161
+      ],
+      "viewportCssPixels": [
+        1440,
+        1100
+      ],
+      "theme": "light",
+      "rootViewed": true,
+      "artifact": "dependencies.html"
+    }
+  ],
+  "overview": {
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "documentHeight": 3092,
+    "tableRows": [
+      {
+        "text": "1\t\n:dependsOnIncluded\n\t\n入口\n\t\n首次打印",
+        "link": "focus=t1"
+      },
+      {
+        "text": "2\t\n:assemble\n\t\n:dependsOnIncluded\n\t\n首次打印",
+        "link": "focus=t2"
+      },
+      {
+        "text": "3\t\n:jar\n\t\n:assemble\n\t\n首次打印",
+        "link": "focus=t3"
+      },
+      {
+        "text": "4\t\n:classes\n\t\n:jar\n\t\n首次打印",
+        "link": "focus=t4"
+      },
+      {
+        "text": "5\t\n:compileJava\n\t\n:classes\n\t\n首次打印",
+        "link": "focus=t5"
+      },
+      {
+        "text": "6\t\n:processResources\n\t\n:classes\n\t\n首次打印",
+        "link": "focus=t6"
+      },
+      {
+        "text": "7\t\n:compileJava\n\t\n:jar\n\t\n* · 与位置 5 同一身份",
+        "link": "focus=t5"
+      },
+      {
+        "text": "8\t\n:includedProject:taskInIncludedProject\n\t\n:dependsOnIncluded\n\t\n首次打印",
+        "link": "focus=t7"
+      },
+      {
+        "text": "9\t\n:includedProject:build\n\t\n:includedProject:taskInIncludedProject\n\t\n首次打印",
+        "link": "focus=t8"
+      },
+      {
+        "text": "10\t\n:includedProject:assemble\n\t\n:includedProject:build\n\t\n首次打印",
+        "link": "focus=t9"
+      },
+      {
+        "text": "11\t\n:includedProject:check\n\t\n:includedProject:build\n\t\n首次打印",
+        "link": "focus=t10"
+      }
+    ],
+    "all11RowsMatchAuthoredLedger": true,
+    "sameTargetForPositions5And7": true
+  },
+  "native": {
+    "viewport": {
+      "width": 1440,
+      "height": 1100
+    },
+    "documentHeight": 1161,
+    "svgTaskPaths": [
+      ":dependsOnIncluded",
+      ":assemble",
+      ":jar",
+      ":classes",
+      ":compileJava",
+      ":processResources",
+      ":includedProject:taskInIncludedProject",
+      ":includedProject:build",
+      ":includedProject:assemble",
+      ":includedProject:check"
+    ]
+  },
+  "pointerInteractions": [
+    {
+      "printedPosition": 5,
+      "action": "Root pointer-clicked the table task link; native modal Passport observed.",
+      "nodeId": "t5",
+      "taskPath": ":compileJava",
+      "outgoing": 0,
+      "incoming": 2,
+      "incomingTaskPaths": [
+        ":classes",
+        ":jar"
+      ],
+      "pinnedSourceRevision": "84cda7f0ce2363c96b1b26713ad34558519bdf05",
+      "pinnedSourcePath": "src/test/groovy/com/dorongold/gradle/tasktree/TaskTreeTaskTest.groovy",
+      "pinnedSourceLine": 373,
+      "sourceReferenceMeaning": "Entity Passport points to its first expected occurrence; occurrence7 original line remains separately recorded in mapping.json.",
+      "zoomTextObservedInAx": [
+        "116%"
+      ],
+      "rawSnapshot": {
+        "basename": "position-5.snapshot.json",
+        "bytes": 15567,
+        "sha256": "d9ca7d679e035bcde91c25cfd9470e35642b596d9286b68de165c9edb78aab79"
+      }
+    },
+    {
+      "printedPosition": 7,
+      "action": "Root pointer-clicked the table task link; native modal Passport observed.",
+      "nodeId": "t5",
+      "taskPath": ":compileJava",
+      "outgoing": 0,
+      "incoming": 2,
+      "incomingTaskPaths": [
+        ":classes",
+        ":jar"
+      ],
+      "pinnedSourceRevision": "84cda7f0ce2363c96b1b26713ad34558519bdf05",
+      "pinnedSourcePath": "src/test/groovy/com/dorongold/gradle/tasktree/TaskTreeTaskTest.groovy",
+      "pinnedSourceLine": 373,
+      "sourceReferenceMeaning": "Entity Passport points to its first expected occurrence; occurrence7 original line remains separately recorded in mapping.json.",
+      "zoomTextObservedInAx": [
+        "112%"
+      ],
+      "rawSnapshot": {
+        "basename": "position-7.snapshot.json",
+        "bytes": 15480,
+        "sha256": "ecf9d02eb955771b4f2fd96688e4847f87786d86f5bf5527ea46af71f5a98d13"
+      }
+    }
+  ],
+  "rawChecks": {
+    "basename": "checks.json",
+    "bytes": 3019,
+    "sha256": "806919a2f020f096bd3115f042ca8d4511d50bb12b2c9c606b8ece73129ece46"
+  },
+  "driverCorrection": "First close selector data-close=diagram matched zero; actual DOM button data-close-diagram used. No artifact change.",
+  "limits": [
+    "Root captured and individually viewed five original PNGs; this worker checked hashes/IHDR and derived selected observations, without operating Ego.",
+    "Pointer clicks only; this does not supersede sixteen keyboard-traversal failures or prove keyboard/touch/AT/human acceptance.",
+    "Snapshot zoom text and screenshot timing can differ (about110/116%); do not treat the two captures as pixel-aligned camera views.",
+    "Raw AX snapshots retain private file URIs and remain outside the checkout; no raw snapshots published.",
+    "No Gradle, Groovy or Java execution; official expected remains the data source."
+  ]
+}

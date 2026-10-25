@@ -1,0 +1,17 @@
+
+------------------------------------------------------------
+
+:dependsOnIncluded
++--- :assemble
+|    \\--- :jar
+|         +--- :classes
+|         |    +--- :compileJava
+|         |    \\--- :processResources
+|         \\--- :compileJava *
+\\--- :includedProject:taskInIncludedProject
+     \\--- :includedProject:build
+          +--- :includedProject:assemble
+          \\--- :includedProject:check
+
+
+(*) - subtree omitted (printed previously)

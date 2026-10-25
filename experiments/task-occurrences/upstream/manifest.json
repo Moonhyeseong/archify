@@ -1,0 +1,121 @@
+{
+  "repository": "https://github.com/dorongold/gradle-task-tree",
+  "revision": "84cda7f0ce2363c96b1b26713ad34558519bdf05",
+  "fixedFixtureDirectory": "src/test/resources/samples/multiproject/",
+  "fixtureFiles": 8,
+  "execution": "Not run. Original bytes copied from fixed Git objects; scripts and Gradle files are source material only.",
+  "files": [
+    {
+      "path": "source/src/test/resources/samples/multiproject/api/src/main/java/org/gradle/sample/api/Person.java",
+      "upstreamPath": "src/test/resources/samples/multiproject/api/src/main/java/org/gradle/sample/api/Person.java",
+      "sourceUrl": "https://github.com/dorongold/gradle-task-tree/blob/84cda7f0ce2363c96b1b26713ad34558519bdf05/src/test/resources/samples/multiproject/api/src/main/java/org/gradle/sample/api/Person.java",
+      "bytes": 112,
+      "sha256": "23db36dec5b1d14211c246a66677d576273fe45c350bdef3ad07cd1dd78fcfbc",
+      "role": "complete multiproject fixture"
+    },
+    {
+      "path": "source/src/test/resources/samples/multiproject/api/src/main/java/org/gradle/sample/apiImpl/PersonImpl.java",
+      "upstreamPath": "src/test/resources/samples/multiproject/api/src/main/java/org/gradle/sample/apiImpl/PersonImpl.java",
+      "sourceUrl": "https://github.com/dorongold/gradle-task-tree/blob/84cda7f0ce2363c96b1b26713ad34558519bdf05/src/test/resources/samples/multiproject/api/src/main/java/org/gradle/sample/apiImpl/PersonImpl.java",
+      "bytes": 759,
+      "sha256": "95e490091fd72fb541afb26099c8835dd432c3c340a3f9730de2759890a11a17",
+      "role": "complete multiproject fixture"
+    },
+    {
+      "path": "source/src/test/resources/samples/multiproject/build.gradle",
+      "upstreamPath": "src/test/resources/samples/multiproject/build.gradle",
+      "sourceUrl": "https://github.com/dorongold/gradle-task-tree/blob/84cda7f0ce2363c96b1b26713ad34558519bdf05/src/test/resources/samples/multiproject/build.gradle",
+      "bytes": 638,
+      "sha256": "59124b8ea6e61744963ce382483bea501e398cde7d861b5608196046320de7bc",
+      "role": "complete multiproject fixture"
+    },
+    {
+      "path": "source/src/test/resources/samples/multiproject/includedProject/build.gradle",
+      "upstreamPath": "src/test/resources/samples/multiproject/includedProject/build.gradle",
+      "sourceUrl": "https://github.com/dorongold/gradle-task-tree/blob/84cda7f0ce2363c96b1b26713ad34558519bdf05/src/test/resources/samples/multiproject/includedProject/build.gradle",
+      "bytes": 210,
+      "sha256": "dfb75cb28a1036eabf4b1a26d8a5116938b54dcc9aac16612ee966bafeee849c",
+      "role": "complete multiproject fixture"
+    },
+    {
+      "path": "source/src/test/resources/samples/multiproject/includedProject/settings.gradle",
+      "upstreamPath": "src/test/resources/samples/multiproject/includedProject/settings.gradle",
+      "sourceUrl": "https://github.com/dorongold/gradle-task-tree/blob/84cda7f0ce2363c96b1b26713ad34558519bdf05/src/test/resources/samples/multiproject/includedProject/settings.gradle",
+      "bytes": 38,
+      "sha256": "290eeca4243910b04902f920dda91df0e240e3de5845dbe5400af0fa331cb391",
+      "role": "complete multiproject fixture"
+    },
+    {
+      "path": "source/src/test/resources/samples/multiproject/services/personService/src/main/java/org/gradle/sample/services/PersonService.java",
+      "upstreamPath": "src/test/resources/samples/multiproject/services/personService/src/main/java/org/gradle/sample/services/PersonService.java",
+      "sourceUrl": "https://github.com/dorongold/gradle-task-tree/blob/84cda7f0ce2363c96b1b26713ad34558519bdf05/src/test/resources/samples/multiproject/services/personService/src/main/java/org/gradle/sample/services/PersonService.java",
+      "bytes": 359,
+      "sha256": "a88cfd057d902a9e4dd0f0e833803195a2b9292d3093dbd62737d1ce5665091b",
+      "role": "complete multiproject fixture"
+    },
+    {
+      "path": "source/src/test/resources/samples/multiproject/settings.gradle",
+      "upstreamPath": "src/test/resources/samples/multiproject/settings.gradle",
+      "sourceUrl": "https://github.com/dorongold/gradle-task-tree/blob/84cda7f0ce2363c96b1b26713ad34558519bdf05/src/test/resources/samples/multiproject/settings.gradle",
+      "bytes": 119,
+      "sha256": "e8c7a7c613f628e32e0c21ea219cedba45302b1e0fc1c38652be795c34a9b554",
+      "role": "complete multiproject fixture"
+    },
+    {
+      "path": "source/src/test/resources/samples/multiproject/shared/src/main/java/org/gradle/sample/shared/Helper.java",
+      "upstreamPath": "src/test/resources/samples/multiproject/shared/src/main/java/org/gradle/sample/shared/Helper.java",
+      "sourceUrl": "https://github.com/dorongold/gradle-task-tree/blob/84cda7f0ce2363c96b1b26713ad34558519bdf05/src/test/resources/samples/multiproject/shared/src/main/java/org/gradle/sample/shared/Helper.java",
+      "bytes": 156,
+      "sha256": "f3760eb3c786236c817c1704995c28b0bdcd4724ecc00c2f975f5dc3d9cc641b",
+      "role": "complete multiproject fixture"
+    },
+    {
+      "path": "source/LICENSE",
+      "upstreamPath": "LICENSE",
+      "sourceUrl": "https://github.com/dorongold/gradle-task-tree/blob/84cda7f0ce2363c96b1b26713ad34558519bdf05/LICENSE",
+      "bytes": 11358,
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+      "role": "license or owning consumer/test source"
+    },
+    {
+      "path": "source/src/test/groovy/com/dorongold/gradle/tasktree/TaskTreeTaskTest.groovy",
+      "upstreamPath": "src/test/groovy/com/dorongold/gradle/tasktree/TaskTreeTaskTest.groovy",
+      "sourceUrl": "https://github.com/dorongold/gradle-task-tree/blob/84cda7f0ce2363c96b1b26713ad34558519bdf05/src/test/groovy/com/dorongold/gradle/tasktree/TaskTreeTaskTest.groovy",
+      "bytes": 25033,
+      "sha256": "b5e241184c0128c9b1f3dbf2c0e14d84d3f57867c2abd609b718e4b45a56bdab",
+      "role": "license or owning consumer/test source"
+    },
+    {
+      "path": "source/src/main/groovy/com/dorongold/gradle/tasktree/TaskTreeTaskBase.groovy",
+      "upstreamPath": "src/main/groovy/com/dorongold/gradle/tasktree/TaskTreeTaskBase.groovy",
+      "sourceUrl": "https://github.com/dorongold/gradle-task-tree/blob/84cda7f0ce2363c96b1b26713ad34558519bdf05/src/main/groovy/com/dorongold/gradle/tasktree/TaskTreeTaskBase.groovy",
+      "bytes": 8121,
+      "sha256": "742435371f0ee1970f948b725baea1029cb6ba78a9df32183baf954b9d40f929",
+      "role": "license or owning consumer/test source"
+    },
+    {
+      "path": "source/src/main/groovy/com/dorongold/gradle/tasktree/TaskTreePlugin.groovy",
+      "upstreamPath": "src/main/groovy/com/dorongold/gradle/tasktree/TaskTreePlugin.groovy",
+      "sourceUrl": "https://github.com/dorongold/gradle-task-tree/blob/84cda7f0ce2363c96b1b26713ad34558519bdf05/src/main/groovy/com/dorongold/gradle/tasktree/TaskTreePlugin.groovy",
+      "bytes": 2973,
+      "sha256": "38f87d9cadfdfe477d7059af15a4ee2b3ff0f078e92a8b89eb441a264bb3a54e",
+      "role": "license or owning consumer/test source"
+    },
+    {
+      "path": "source/src/main/groovy/utils/TaskGraphUtils.groovy",
+      "upstreamPath": "src/main/groovy/utils/TaskGraphUtils.groovy",
+      "sourceUrl": "https://github.com/dorongold/gradle-task-tree/blob/84cda7f0ce2363c96b1b26713ad34558519bdf05/src/main/groovy/utils/TaskGraphUtils.groovy",
+      "bytes": 2601,
+      "sha256": "e1ddbbc38d5eabbc1e5b689dba4115b84db32453dfaeba6c14b03dba5409ab84",
+      "role": "license or owning consumer/test source"
+    },
+    {
+      "path": "source/src/main/groovy/com/dorongold/gradle/tasktree/NodeAction.groovy",
+      "upstreamPath": "src/main/groovy/com/dorongold/gradle/tasktree/NodeAction.groovy",
+      "sourceUrl": "https://github.com/dorongold/gradle-task-tree/blob/84cda7f0ce2363c96b1b26713ad34558519bdf05/src/main/groovy/com/dorongold/gradle/tasktree/NodeAction.groovy",
+      "bytes": 3283,
+      "sha256": "1703ce02a2890a689762d304cf71a42eb5ab308d1be18b19e6936f124d3ddab3",
+      "role": "license or owning consumer/test source"
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "kind": "derived fixed-fixture occurrence ledger",
+  "sourceRepository": "https://github.com/dorongold/gradle-task-tree",
+  "sourceRevision": "84cda7f0ce2363c96b1b26713ad34558519bdf05",
+  "sourcePath": "src/test/groovy/com/dorongold/gradle/tasktree/TaskTreeTaskTest.groovy",
+  "sourceFunction": "static String expectedOutputWithIncludedBuildTask()",
+  "extraction": "Exact triple-single-quoted expected literal; replace only Groovy escaped backslash pairs; common indentation=0 so stripIndent changes no characters. Not a Gradle stdout export.",
+  "meaning": "Print position and task identity are different. Edges mean parent task depends on child task, not execution order.",
+  "occurrences": [
+    {
+      "position": 1,
+      "taskPath": ":dependsOnIncluded",
+      "nodeId": "t1",
+      "parentPath": null,
+      "depth": 0,
+      "printedPreviously": false,
+      "firstPosition": 1,
+      "expectedLine": 4,
+      "sourceLine": 369
+    },
+    {
+      "position": 2,
+      "taskPath": ":assemble",
+      "nodeId": "t2",
+      "parentPath": ":dependsOnIncluded",
+      "depth": 1,
+      "printedPreviously": false,
+      "firstPosition": 2,
+      "expectedLine": 5,
+      "sourceLine": 370
+    },
+    {
+      "position": 3,
+      "taskPath": ":jar",
+      "nodeId": "t3",
+      "parentPath": ":assemble",
+      "depth": 2,
+      "printedPreviously": false,
+      "firstPosition": 3,
+      "expectedLine": 6,
+      "sourceLine": 371
+    },
+    {
+      "position": 4,
+      "taskPath": ":classes",
+      "nodeId": "t4",
+      "parentPath": ":jar",
+      "depth": 3,
+      "printedPreviously": false,
+      "firstPosition": 4,
+      "expectedLine": 7,
+      "sourceLine": 372
+    },
+    {
+      "position": 5,
+      "taskPath": ":compileJava",
+      "nodeId": "t5",
+      "parentPath": ":classes",
+      "depth": 4,
+      "printedPreviously": false,
+      "firstPosition": 5,
+      "expectedLine": 8,
+      "sourceLine": 373
+    },
+    {
+      "position": 6,
+      "taskPath": ":processResources",
+      "nodeId": "t6",
+      "parentPath": ":classes",
+      "depth": 4,
+      "printedPreviously": false,
+      "firstPosition": 6,
+      "expectedLine": 9,
+      "sourceLine": 374
+    },
+    {
+      "position": 7,
+      "taskPath": ":compileJava",
+      "nodeId": "t5",
+      "parentPath": ":jar",
+      "depth": 3,
+      "printedPreviously": true,
+      "firstPosition": 5,
+      "expectedLine": 10,
+      "sourceLine": 375
+    },
+    {
+      "position": 8,
+      "taskPath": ":includedProject:taskInIncludedProject",
+      "nodeId": "t7",
+      "parentPath": ":dependsOnIncluded",
+      "depth": 1,
+      "printedPreviously": false,
+      "firstPosition": 8,
+      "expectedLine": 11,
+      "sourceLine": 376
+    },
+    {
+      "position": 9,
+      "taskPath": ":includedProject:build",
+      "nodeId": "t8",
+      "parentPath": ":includedProject:taskInIncludedProject",
+      "depth": 2,
+      "printedPreviously": false,
+      "firstPosition": 9,
+      "expectedLine": 12,
+      "sourceLine": 377
+    },
+    {
+      "position": 10,
+      "taskPath": ":includedProject:assemble",
+      "nodeId": "t9",
+      "parentPath": ":includedProject:build",
+      "depth": 3,
+      "printedPreviously": false,
+      "firstPosition": 10,
+      "expectedLine": 13,
+      "sourceLine": 378
+    },
+    {
+      "position": 11,
+      "taskPath": ":includedProject:check",
+      "nodeId": "t10",
+      "parentPath": ":includedProject:build",
+      "depth": 3,
+      "printedPreviously": false,
+      "firstPosition": 11,
+      "expectedLine": 14,
+      "sourceLine": 379
+    }
+  ],
+  "identities": {
+    ":dependsOnIncluded": {
+      "nodeId": "t1",
+      "firstPosition": 1
+    },
+    ":assemble": {
+      "nodeId": "t2",
+      "firstPosition": 2
+    },
+    ":jar": {
+      "nodeId": "t3",
+      "firstPosition": 3
+    },
+    ":classes": {
+      "nodeId": "t4",
+      "firstPosition": 4
+    },
+    ":compileJava": {
+      "nodeId": "t5",
+      "firstPosition": 5
+    },
+    ":processResources": {
+      "nodeId": "t6",
+      "firstPosition": 6
+    },
+    ":includedProject:taskInIncludedProject": {
+      "nodeId": "t7",
+      "firstPosition": 8
+    },
+    ":includedProject:build": {
+      "nodeId": "t8",
+      "firstPosition": 9
+    },
+    ":includedProject:assemble": {
+      "nodeId": "t9",
+      "firstPosition": 10
+    },
+    ":includedProject:check": {
+      "nodeId": "t10",
+      "firstPosition": 11
+    }
+  },
+  "edges": [
+    {
+      "fromPath": ":dependsOnIncluded",
+      "toPath": ":assemble"
+    },
+    {
+      "fromPath": ":assemble",
+      "toPath": ":jar"
+    },
+    {
+      "fromPath": ":jar",
+      "toPath": ":classes"
+    },
+    {
+      "fromPath": ":classes",
+      "toPath": ":compileJava"
+    },
+    {
+      "fromPath": ":classes",
+      "toPath": ":processResources"
+    },
+    {
+      "fromPath": ":jar",
+      "toPath": ":compileJava"
+    },
+    {
+      "fromPath": ":dependsOnIncluded",
+      "toPath": ":includedProject:taskInIncludedProject"
+    },
+    {
+      "fromPath": ":includedProject:taskInIncludedProject",
+      "toPath": ":includedProject:build"
+    },
+    {
+      "fromPath": ":includedProject:build",
+      "toPath": ":includedProject:assemble"
+    },
+    {
+      "fromPath": ":includedProject:build",
+      "toPath": ":includedProject:check"
+    }
+  ],
+  "counts": {
+    "printedPositions": 11,
+    "taskIdentities": 10,
+    "dependencies": 10
+  },
+  "observedExecutionCount": null,
+  "compileJavaLeafInThisExpected": true
+}

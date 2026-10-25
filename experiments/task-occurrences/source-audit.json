@@ -1,0 +1,42 @@
+{
+  "kind": "derived fixed-fixture source audit",
+  "status": "pass",
+  "sourceRevision": "84cda7f0ce2363c96b1b26713ad34558519bdf05",
+  "sourceFilesVerified": 14,
+  "completeFixtureFiles": 8,
+  "expectedLiteralSha256": "f08b69bbbf9403396710fd5d96c1714b3316e50dcaf1e9615142bb970a2fe4d1",
+  "expectedDisplaySha256": "cae3a4f1d0721dd018e32af471adde3149dab58f500b1dc6f7fe414469f4b761",
+  "printedPositions": 11,
+  "taskIdentities": 10,
+  "dependencies": 10,
+  "compileJavaPositions": [
+    5,
+    7
+  ],
+  "compileJavaParents": [
+    ":classes",
+    ":jar"
+  ],
+  "compileJavaIsLeafInExpected": true,
+  "observedExecutions": null,
+  "limits": "Text extraction and authored coverage only; no Gradle/Groovy execution or reader-benefit test.",
+  "artifacts": {
+    "singleSpecMatchesEmbedded": true,
+    "embeddedChildHtmlEqualsStandalone": true,
+    "embeddedSvgEqualsStandalone": true,
+    "draftTextMatchesPreparedSourceText": true,
+    "compiledTableMatchesAll11Occurrences": true,
+    "repositoryExcerptsAndFullFileDigestsMatch": true,
+    "preparedSourceIds": [
+      "expected",
+      "identity",
+      "plan",
+      "print",
+      "skip"
+    ],
+    "declaredAndPreparedSourcesExactlyMatch": true,
+    "allSourceRangesInBounds": true,
+    "nativeSha256": "420c9b26c1cefa2816c091b85100f22c7ec8eff02b81aa81babf3c12e6c186a7",
+    "explainerSha256": "d10eeda28faccc4c8f95bed699e5e4c67b259006d7f3a2d66af92122aa9a3b48"
+  }
+}

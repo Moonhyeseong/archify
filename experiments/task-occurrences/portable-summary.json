@@ -1,0 +1,777 @@
+{
+  "kind": "derived portable evidence summary",
+  "software": {
+    "repository": "https://github.com/tt-a1i/archify",
+    "revision": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+    "version": "3.2.1-dev.1",
+    "license": "Apache-2.0",
+    "node": "22.23.2",
+    "workingTreeScope": "Only experiments/task-occurrences; no shared code, dependencies, Skill or ZIP changed."
+  },
+  "input": {
+    "repository": "https://github.com/dorongold/gradle-task-tree",
+    "revision": "84cda7f0ce2363c96b1b26713ad34558519bdf05",
+    "license": "Apache-2.0",
+    "fixtureFiles": 8,
+    "sourceLicenseConsumerAndTestFiles": 14,
+    "provenance": "Bundled original Git bytes plus literal/derived expected from official test; no Gradle/Groovy/Java execution or natural build stdout.",
+    "manifest": "upstream/manifest.json"
+  },
+  "projection": {
+    "printedPositions": 11,
+    "taskIdentities": 10,
+    "dependencyEdges": 10,
+    "compileJavaPositions": [
+      5,
+      7
+    ],
+    "compileJavaParents": [
+      ":classes",
+      ":jar"
+    ],
+    "compileJavaLeafInExpected": true,
+    "observedExecutionCount": null,
+    "sourceAudit": {
+      "sha256": "b89623289e62ddd88f34d6443698663aab10b778e07c32a12df014b657d80f81",
+      "bytes": 1419
+    },
+    "native": "output/dependencies.html",
+    "explainer": "output/explanation.html",
+    "singleSpecMatchesEmbedded": true,
+    "childHtmlAndSvgMatchStandalone": true
+  },
+  "verification": {
+    "type": "Authored-content source/coverage audit plus existing public native/Explainer finalize; no new test suite, no upstream build run.",
+    "finalNative": {
+      "status": "pass",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "browserCheck": {
+        "requested": true,
+        "ran": true
+      },
+      "diagnosticSummary": {
+        "total": 0,
+        "shown": 0,
+        "truncated": false
+      },
+      "shownDiagnosticCodes": {},
+      "stdout": {
+        "sha256": "fc2c8719daf8ce83967d0f29f63c0abd23a2edf248f4732cf2857ff169ddc63d",
+        "bytes": 1388
+      }
+    },
+    "finalExplainer": {
+      "status": "fail",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "fail"
+      },
+      "browserCheck": {
+        "requested": true,
+        "ran": true
+      },
+      "diagnosticSummary": {
+        "total": 16,
+        "shown": 8,
+        "truncated": true,
+        "omittedByCode": {
+          "explainer/browser-keyboard-traversal": 8
+        }
+      },
+      "shownDiagnosticCodes": {
+        "explainer/browser-keyboard-traversal": 8
+      },
+      "stdout": {
+        "sha256": "db396d7b9900a76a0ca63b23c39a47dc5b9ecc20525881a1dc7281412de76199",
+        "bytes": 7897
+      }
+    },
+    "finalExplainerFullBrowser": {
+      "status": "fail",
+      "requested": true,
+      "ran": true,
+      "totalDiagnostics": 16,
+      "codes": {
+        "explainer/browser-keyboard-traversal": 16
+      },
+      "compactShown": 8,
+      "compactOmitted": 8,
+      "readability": "pass",
+      "containment": "pass",
+      "diagramFitFailures": 0,
+      "fixesAttempted": "No shared keyboard/gate changes and no source/link deletion.",
+      "limits": "Machine gate failure retained; screenshots/source review are separate and do not supersede it."
+    }
+  },
+  "attempts": {
+    "native": {
+      "status": "pass",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "browserCheck": {
+        "requested": true,
+        "ran": true
+      },
+      "diagnosticSummary": {
+        "total": 0,
+        "shown": 0,
+        "truncated": false
+      },
+      "shownDiagnosticCodes": {},
+      "stdout": {
+        "sha256": "c24eea90ea251c73721e5c26418006dc07bc6910aa5831f4f73fcb38c7774542",
+        "bytes": 1364
+      }
+    },
+    "native-final": {
+      "status": "pass",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "browserCheck": {
+        "requested": true,
+        "ran": true
+      },
+      "diagnosticSummary": {
+        "total": 0,
+        "shown": 0,
+        "truncated": false
+      },
+      "shownDiagnosticCodes": {},
+      "stdout": {
+        "sha256": "440f4c46b62fa0d993247fd1a4423e92cdeef89c7877eef034bea79164591122",
+        "bytes": 1382
+      }
+    },
+    "native-caption": {
+      "status": "pass",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "browserCheck": {
+        "requested": true,
+        "ran": true
+      },
+      "diagnosticSummary": {
+        "total": 0,
+        "shown": 0,
+        "truncated": false
+      },
+      "shownDiagnosticCodes": {},
+      "stdout": {
+        "sha256": "fc2c8719daf8ce83967d0f29f63c0abd23a2edf248f4732cf2857ff169ddc63d",
+        "bytes": 1388
+      }
+    },
+    "first-explainer": {
+      "status": "fail",
+      "gates": {
+        "validate": "not-run",
+        "deliver": "not-run",
+        "check": "not-run",
+        "browser-check": "not-run"
+      },
+      "browserCheck": {
+        "requested": true,
+        "ran": false
+      },
+      "diagnosticSummary": {},
+      "shownDiagnosticCodes": {
+        "explainer/inline-emphasis": 1,
+        "explainer/writing-verdict-emphasis": 1,
+        "explainer/writing-qualification": 1
+      },
+      "stdout": {
+        "sha256": "2f0aa03f0992a51b0addd4a41205f45a5f6307edc8e9e405d2567d139e96a769",
+        "bytes": 2313
+      }
+    },
+    "explainer": {
+      "status": "fail",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "fail"
+      },
+      "browserCheck": {
+        "requested": true,
+        "ran": true
+      },
+      "diagnosticSummary": {
+        "total": 32,
+        "shown": 8,
+        "truncated": true,
+        "omittedByCode": {
+          "explainer/browser-keyboard-traversal": 9,
+          "explainer/browser-readability": 9,
+          "explainer/browser-diagram-fit": 3,
+          "explainer/browser-diagram-text": 3
+        }
+      },
+      "shownDiagnosticCodes": {
+        "explainer/browser-keyboard-traversal": 3,
+        "explainer/browser-readability": 3,
+        "explainer/browser-diagram-fit": 1,
+        "explainer/browser-diagram-text": 1
+      },
+      "stdout": {
+        "sha256": "69a26437cbb63b0d9476b6c612b65ac51c46b6729462654f5cf148ae7cd770f5",
+        "bytes": 11525
+      }
+    },
+    "explainer-final": {
+      "status": "fail",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "fail"
+      },
+      "browserCheck": {
+        "requested": true,
+        "ran": true
+      },
+      "diagnosticSummary": {
+        "total": 16,
+        "shown": 8,
+        "truncated": true,
+        "omittedByCode": {
+          "explainer/browser-keyboard-traversal": 6,
+          "explainer/browser-readability": 2
+        }
+      },
+      "shownDiagnosticCodes": {
+        "explainer/browser-keyboard-traversal": 6,
+        "explainer/browser-readability": 2
+      },
+      "stdout": {
+        "sha256": "e2c5334f43bb607801904fcb1a8f2b2a211e60576faf4abc204316d33d841a13",
+        "bytes": 7576
+      }
+    },
+    "explainer-caption": {
+      "status": "fail",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "fail"
+      },
+      "browserCheck": {
+        "requested": true,
+        "ran": true
+      },
+      "diagnosticSummary": {
+        "total": 12,
+        "shown": 8,
+        "truncated": true,
+        "omittedByCode": {
+          "explainer/browser-keyboard-traversal": 4
+        }
+      },
+      "shownDiagnosticCodes": {
+        "explainer/browser-keyboard-traversal": 8
+      },
+      "stdout": {
+        "sha256": "a61de9b3b1a5065fe2d598e5afd0a2f2946556d3db63f38302b25e60931edc0d",
+        "bytes": 7892
+      }
+    },
+    "explainer-source-range": {
+      "status": "fail",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "fail"
+      },
+      "browserCheck": {
+        "requested": true,
+        "ran": true
+      },
+      "diagnosticSummary": {
+        "total": 16,
+        "shown": 8,
+        "truncated": true,
+        "omittedByCode": {
+          "explainer/browser-keyboard-traversal": 8
+        }
+      },
+      "shownDiagnosticCodes": {
+        "explainer/browser-keyboard-traversal": 8
+      },
+      "stdout": {
+        "sha256": "db396d7b9900a76a0ca63b23c39a47dc5b9ecc20525881a1dc7281412de76199",
+        "bytes": 7897
+      }
+    }
+  },
+  "sourceRangeCorrection": {
+    "oldRange": [
+      59,
+      86
+    ],
+    "actualFileLines": 76,
+    "finalRange": [
+      59,
+      76
+    ],
+    "oldOptionalCitationWasPlain": true,
+    "finalAllFiveRepoSourcesPinnedAndVerified": true,
+    "beforeArtifactSha256": "048a54f057a2f1a7f14d84fc0b9062a7caa977471af4ddc9870bbbec22520512",
+    "afterArtifactSha256": "d10eeda28faccc4c8f95bed699e5e4c67b259006d7f3a2d66af92122aa9a3b48",
+    "evidenceMeaning": "Prior source-audit KeyError recorded as explicitly derived note with original HTML/draft/receipts; correction reran real finalize, no ignored fallback."
+  },
+  "layoutRepairs": {
+    "initial": "Tiny duplicate position/scope text caused preview readability/fit failure; preserved private initial artifacts.",
+    "pathLabels": "Use full task paths; facts retained in main table and Passport. Repeated eight-pixel relation words still failed readability.",
+    "uniformCaption": "Same dependency meaning moved to one explicit caption; all ten directed relationships, nodes and eleven source positions retained. No runtime font patch."
+  },
+  "rawReceipts": {
+    "publicSummaryIsDerived": true,
+    "originalsStoredOutsideCheckout": true,
+    "files": {
+      "first-explainer-stdout.json": {
+        "sha256": "2f0aa03f0992a51b0addd4a41205f45a5f6307edc8e9e405d2567d139e96a769",
+        "bytes": 2313
+      },
+      "capture-summary.py": {
+        "sha256": "0f77bda70637e523caa5e4b74573c19508ade9da16b14b4e2aa99b9d45567870",
+        "bytes": 4125
+      },
+      "native-caption-stderr.txt": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "explainer-caption-stdout.json": {
+        "sha256": "a61de9b3b1a5065fe2d598e5afd0a2f2946556d3db63f38302b25e60931edc0d",
+        "bytes": 7892
+      },
+      "explainer-stdout.json": {
+        "sha256": "69a26437cbb63b0d9476b6c612b65ac51c46b6729462654f5cf148ae7cd770f5",
+        "bytes": 11525
+      },
+      "whitespace-raw.log": {
+        "sha256": "19d43ba274ec8415b8266b41dfdb404aab1c575627ef3928d5705b6fa1b161ec",
+        "bytes": 3488
+      },
+      "native-stdout.json": {
+        "sha256": "c24eea90ea251c73721e5c26418006dc07bc6910aa5831f4f73fcb38c7774542",
+        "bytes": 1364
+      },
+      "native-final-stdout.json": {
+        "sha256": "440f4c46b62fa0d993247fd1a4423e92cdeef89c7877eef034bea79164591122",
+        "bytes": 1382
+      },
+      "first-question.archify.md": {
+        "sha256": "1985ace0b3614e54ee3c7efd747cdd85b2f1a79379d4d3e38a578f60a4179668",
+        "bytes": 4614
+      },
+      "explainer-source-range-stdout.json": {
+        "sha256": "db396d7b9900a76a0ca63b23c39a47dc5b9ecc20525881a1dc7281412de76199",
+        "bytes": 7897
+      },
+      "explainer-stderr.txt": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "explainer-source-range-stderr.txt": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "explainer-final-stdout.json": {
+        "sha256": "e2c5334f43bb607801904fcb1a8f2b2a211e60576faf4abc204316d33d841a13",
+        "bytes": 7576
+      },
+      "native-final-stderr.txt": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "explainer-caption-stderr.txt": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "first-explainer-stderr.txt": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "native-caption-stdout.json": {
+        "sha256": "fc2c8719daf8ce83967d0f29f63c0abd23a2edf248f4732cf2857ff169ddc63d",
+        "bytes": 1388
+      },
+      "source-fetch.log": {
+        "sha256": "cb308c3cf6f42da8c5c505bb2120ffd8a5ec87af18e511074d3a1762a796985b",
+        "bytes": 127
+      },
+      "source-audit-final.json": {
+        "sha256": "77dcf3535a94dc703a49fe15369c91d0b321c2d9418144410fdf6be8a8ad21ee",
+        "bytes": 1218
+      },
+      "source-audit-final-complete.json": {
+        "sha256": "b89623289e62ddd88f34d6443698663aab10b778e07c32a12df014b657d80f81",
+        "bytes": 1419
+      },
+      "explainer-final-stderr.txt": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "native-stderr.txt": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "explainer-final-receipts/explanation.browser-check.json": {
+        "sha256": "2383a76a33c4e6213fa6f113c65976ec97a7b980bee8889e5cf0be64bbe37769",
+        "bytes": 868951
+      },
+      "explainer-final-receipts/explanation.finalize.json": {
+        "sha256": "0b1ce7467a8dd9b43db2ba2cb90f9f4115b17313ca29bdd94185cd33c77f0c0e",
+        "bytes": 967359
+      },
+      "explainer-final-receipts/explanation.finalize-summary.json": {
+        "sha256": "376a67e5020708e26b435736acef671e0160fde87d31efdf7c371a5810d6c244",
+        "bytes": 9476
+      },
+      "native-caption-receipts/dependencies.browser-check.json": {
+        "sha256": "9e5c670bd22c8a72798385720242afa60730d36f3f77c39f65d7af777059ffd2",
+        "bytes": 21082
+      },
+      "native-caption-receipts/dependencies.finalize.json": {
+        "sha256": "7717b51e8304886057f54358da2eee1e4fee53d96c9870d1e8671759e790f2de",
+        "bytes": 35392
+      },
+      "native-caption-receipts/dependencies.finalize-summary.json": {
+        "sha256": "94ae04b2f194bc883bdb3123580f4f90a876a338e33b1e1e684c0354a745b16c",
+        "bytes": 1630
+      },
+      "initial/explanation.delivery.json": {
+        "sha256": "b03bb415bd11ce274d25733b912ca5791ede1558f46edaf6441839367f7b94ca",
+        "bytes": 2514
+      },
+      "initial/explainer-stdout.json": {
+        "sha256": "69a26437cbb63b0d9476b6c612b65ac51c46b6729462654f5cf148ae7cd770f5",
+        "bytes": 11525
+      },
+      "initial/native-stdout.json": {
+        "sha256": "c24eea90ea251c73721e5c26418006dc07bc6910aa5831f4f73fcb38c7774542",
+        "bytes": 1364
+      },
+      "initial/task-identities.architecture.json": {
+        "sha256": "54ea2c9cfb5db10ebdcfa73b5c48bc97bf68422fff46c282b0addb43eb8c9c09",
+        "bytes": 8615
+      },
+      "initial/dependencies.delivery.json": {
+        "sha256": "7835c03455be894fca8e70855df9592885c0b0e711db59376d634d4d66d6089b",
+        "bytes": 674
+      },
+      "initial/explanation.html": {
+        "sha256": "32dcdbf7e92f3e2c68dd7bb9d6b2b6a5bbc97888b2fa511e5358976859395d0a",
+        "bytes": 696183
+      },
+      "initial/dependencies.html": {
+        "sha256": "f84b27b45c8a712973b87de7e596fe979801d1a7103bf5ab438ddc86fad364de",
+        "bytes": 879922
+      },
+      "explainer-caption-receipts/explanation.browser-check.json": {
+        "sha256": "e73ee84114ba7e018a7b4e9aeef3a3f9c6185eb3a99e7927621dc587c109b3a9",
+        "bytes": 760853
+      },
+      "explainer-caption-receipts/explanation.finalize.json": {
+        "sha256": "089014c164fda43e695fbcac98cfdd15f28b4a4b15e3f56bb28645900a7b1a99",
+        "bytes": 844632
+      },
+      "explainer-caption-receipts/explanation.finalize-summary.json": {
+        "sha256": "88520f1440f7db762d11a60b4dfd27c40fc0083292e7ce09c101130381403571",
+        "bytes": 9784
+      },
+      "explainer-source-range-receipts/explanation.browser-check.json": {
+        "sha256": "942e321146d6ab887d4bcf081eedd480730ec0fbdad030505a6c5effff36fd36",
+        "bytes": 774744
+      },
+      "explainer-source-range-receipts/explanation.finalize.json": {
+        "sha256": "a5ace23eea5170bd4007eef2d3708467b4ae9f118741d751572744f9b2e9da48",
+        "bytes": 864225
+      },
+      "explainer-source-range-receipts/explanation.finalize-summary.json": {
+        "sha256": "275c0d5b3787e9000d03005baf3a5ce54d6a2746074e69aad014948b31a55ab4",
+        "bytes": 9789
+      },
+      "final-delivery/explanation.delivery.json": {
+        "sha256": "29dd4e6eefc747b4eb8fd2ebfcec757c5d10145d6e3928bd3c6506bf02a04fea",
+        "bytes": 2842
+      },
+      "final-delivery/dependencies.delivery.json": {
+        "sha256": "9316c2fa5584dbebd5acc05b73a46222146a5c11251de0f7aa5a732f630078f7",
+        "bytes": 674
+      },
+      "native-final-receipts/dependencies.browser-check.json": {
+        "sha256": "9629e6b6ebf5706cce911c6e3a224f056baf6dd95bd0169278e59942491edfda",
+        "bytes": 21404
+      },
+      "native-final-receipts/dependencies.finalize.json": {
+        "sha256": "9a96ce5f9f7cc3b7fa1811f4aed877178e52069907e13d55b83b69be98af225d",
+        "bytes": 35896
+      },
+      "native-final-receipts/dependencies.finalize-summary.json": {
+        "sha256": "9695500d8769d53981fe3242974a69792536aa3fe5257451624ded5408952812",
+        "bytes": 1624
+      },
+      "pre-source-range/explanation.delivery.json": {
+        "sha256": "2791d21d07eef0e287c165967cc8514466e4bb3ccf2911343553e44a15f7f27e",
+        "bytes": 2514
+      },
+      "pre-source-range/audit-observation.derived.json": {
+        "sha256": "28146b838ffa40f2cab3c63b7f37289bb41d330a2a5b36a3a5cdd16bc3b6a04d",
+        "bytes": 511
+      },
+      "pre-source-range/question.archify.md": {
+        "sha256": "0a6d2e890d5adc737734a7c70b2937cbd901b5008a882ec186e5201bfa485d3b",
+        "bytes": 4628
+      },
+      "pre-source-range/explanation.html": {
+        "sha256": "048a54f057a2f1a7f14d84fc0b9062a7caa977471af4ddc9870bbbec22520512",
+        "bytes": 676097
+      },
+      "explainer-receipts/explanation.browser-check.json": {
+        "sha256": "ffce2fe1ffe5286f701d34fd760474bb894d66c3a352df4f2999735fbefb7fa1",
+        "bytes": 1281049
+      },
+      "explainer-receipts/explanation.finalize.json": {
+        "sha256": "678b87568f6f4b68079cd890f41cc3a9e4a671a75adc7d031f5bc77d9748c3b8",
+        "bytes": 1479987
+      },
+      "explainer-receipts/explanation.finalize-summary.json": {
+        "sha256": "a32e2772b9778e6917b95c89faec284924f99fd02c828a1dd50152e0630ee5bb",
+        "bytes": 17093
+      },
+      "native-receipts/dependencies.browser-check.json": {
+        "sha256": "625fb82d0d831bfbea8a33887ebca7f1d98f54740af052fdedd0e8cd41e610b3",
+        "bytes": 21386
+      },
+      "native-receipts/dependencies.finalize.json": {
+        "sha256": "75ac30b9ae3727baf83670c4e0ea13bdfac02437a1354b5d60c952c1bc36c806",
+        "bytes": 35852
+      },
+      "native-receipts/dependencies.finalize-summary.json": {
+        "sha256": "ae7116d41cb2345a1552616dea0af7ef1a99b5a8eb8e8e2e0d6cf217e0c33c35",
+        "bytes": 1606
+      },
+      "path-labels-before-caption/native-final-stdout.json": {
+        "sha256": "440f4c46b62fa0d993247fd1a4423e92cdeef89c7877eef034bea79164591122",
+        "bytes": 1382
+      },
+      "path-labels-before-caption/explainer-final-stdout.json": {
+        "sha256": "e2c5334f43bb607801904fcb1a8f2b2a211e60576faf4abc204316d33d841a13",
+        "bytes": 7576
+      },
+      "path-labels-before-caption/task-identities.architecture.json": {
+        "sha256": "aa5aa02460c5990a9497a07493851a332ca6778dae4186ba9447264e2b694255",
+        "bytes": 8007
+      },
+      "path-labels-before-caption/explanation.html": {
+        "sha256": "1d2aaddaeb8b7a91e0ec921a1d31af272e47a0e4b2738f448be46a7a2ff66f92",
+        "bytes": 685809
+      },
+      "path-labels-before-caption/dependencies.html": {
+        "sha256": "6cb85838e9c5ca3e72794831dd0e8e0715f58cb984093982cd5db2d800edc1e5",
+        "bytes": 876319
+      }
+    }
+  },
+  "publicFiles": {
+    "expected-tree.txt": {
+      "sha256": "cae3a4f1d0721dd018e32af471adde3149dab58f500b1dc6f7fe414469f4b761",
+      "bytes": 438
+    },
+    "source-audit.json": {
+      "sha256": "b89623289e62ddd88f34d6443698663aab10b778e07c32a12df014b657d80f81",
+      "bytes": 1419
+    },
+    "verify-source.py": {
+      "sha256": "4ca4ad96e89f71b1b48cc289cc182e3b363556a7af3e1f393684ba8623d0d4d9",
+      "bytes": 8422
+    },
+    "README.md": {
+      "sha256": "064f47046bac485a40ad043032ba3ed40b16dc105f060c6a4ec719dc87109d04",
+      "bytes": 8762
+    },
+    "mapping.json": {
+      "sha256": "6dcace0c3863df0ef02b27797dfc0c9a88eb9a9e075c7971a1592491ea4e2137",
+      "bytes": 5461
+    },
+    "expected-literal.txt": {
+      "sha256": "f08b69bbbf9403396710fd5d96c1714b3316e50dcaf1e9615142bb970a2fe4d1",
+      "bytes": 444
+    },
+    "task-identities.architecture.json": {
+      "sha256": "106bf966172ddfa8da9dc6478f250fe5ea4d3c1325bbaf84fd4faf12e9e1d119",
+      "bytes": 7764
+    },
+    "question.archify.md": {
+      "sha256": "e3f64c9a382f5ac808f8e90cf360d10e417ba7dbaf547ea081a3afb3af269e52",
+      "bytes": 4628
+    },
+    "ledger.md": {
+      "sha256": "1e7e119a713cb105c96b14dcc0d380e5c8d33689b14530d3b114f046506d5968",
+      "bytes": 1992
+    },
+    "NOTICE.md": {
+      "sha256": "0f6600cd7a7a0e85257ab1811c6617e01b3022ab23f5ebc33cba386cac1c3c3b",
+      "bytes": 1485
+    },
+    "screenshots/position-5.png": {
+      "sha256": "0cb8fae2dcf8d29bce1a5770a87db58dc953f87f4d67191aa31cf7554d1f2174",
+      "bytes": 180012
+    },
+    "screenshots/overview.png": {
+      "sha256": "f7b2378b674a63375fe892b2f69121ca509fc7c9b4441458dc99c96e0151b36c",
+      "bytes": 168552
+    },
+    "screenshots/position-7.png": {
+      "sha256": "d47a17506a2950a1d77bca44d44e2183dc4c307db0005e57aa0a2ae2ee805128",
+      "bytes": 180503
+    },
+    "screenshots/native.png": {
+      "sha256": "d2e964725bb75674db64b3b863832664f8c8e18b12601f2f8626be48b4bb6759",
+      "bytes": 121896
+    },
+    "screenshots/capture.json": {
+      "sha256": "c0fcc73cabaf2d8bff93b209ec7c21a722fdce06cd0c09be28b9a337af92eac9",
+      "bytes": 7419
+    },
+    "screenshots/full.png": {
+      "sha256": "c9968a7af6fbc3a0747f56e2e1dff93af34e6355d0a87fe09882bc49ec18188a",
+      "bytes": 415750
+    },
+    "output/explanation.html": {
+      "sha256": "d10eeda28faccc4c8f95bed699e5e4c67b259006d7f3a2d66af92122aa9a3b48",
+      "bytes": 682434
+    },
+    "output/dependencies.html": {
+      "sha256": "420c9b26c1cefa2816c091b85100f22c7ec8eff02b81aa81babf3c12e6c186a7",
+      "bytes": 872759
+    },
+    "upstream/manifest.json": {
+      "sha256": "9f716e9dc25470720d73f924d3013c1dce0cc05342e88a062b2da1c64dc4c2c4",
+      "bytes": 7945
+    },
+    "upstream/source/LICENSE": {
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+      "bytes": 11358
+    },
+    "upstream/source/src/main/groovy/utils/TaskGraphUtils.groovy": {
+      "sha256": "e1ddbbc38d5eabbc1e5b689dba4115b84db32453dfaeba6c14b03dba5409ab84",
+      "bytes": 2601
+    },
+    "upstream/source/src/main/groovy/com/dorongold/gradle/tasktree/TaskTreePlugin.groovy": {
+      "sha256": "38f87d9cadfdfe477d7059af15a4ee2b3ff0f078e92a8b89eb441a264bb3a54e",
+      "bytes": 2973
+    },
+    "upstream/source/src/main/groovy/com/dorongold/gradle/tasktree/NodeAction.groovy": {
+      "sha256": "1703ce02a2890a689762d304cf71a42eb5ab308d1be18b19e6936f124d3ddab3",
+      "bytes": 3283
+    },
+    "upstream/source/src/main/groovy/com/dorongold/gradle/tasktree/TaskTreeTaskBase.groovy": {
+      "sha256": "742435371f0ee1970f948b725baea1029cb6ba78a9df32183baf954b9d40f929",
+      "bytes": 8121
+    },
+    "upstream/source/src/test/groovy/com/dorongold/gradle/tasktree/TaskTreeTaskTest.groovy": {
+      "sha256": "b5e241184c0128c9b1f3dbf2c0e14d84d3f57867c2abd609b718e4b45a56bdab",
+      "bytes": 25033
+    },
+    "upstream/source/src/test/resources/samples/multiproject/build.gradle": {
+      "sha256": "59124b8ea6e61744963ce382483bea501e398cde7d861b5608196046320de7bc",
+      "bytes": 638
+    },
+    "upstream/source/src/test/resources/samples/multiproject/settings.gradle": {
+      "sha256": "e8c7a7c613f628e32e0c21ea219cedba45302b1e0fc1c38652be795c34a9b554",
+      "bytes": 119
+    },
+    "upstream/source/src/test/resources/samples/multiproject/includedProject/build.gradle": {
+      "sha256": "dfb75cb28a1036eabf4b1a26d8a5116938b54dcc9aac16612ee966bafeee849c",
+      "bytes": 210
+    },
+    "upstream/source/src/test/resources/samples/multiproject/includedProject/settings.gradle": {
+      "sha256": "290eeca4243910b04902f920dda91df0e240e3de5845dbe5400af0fa331cb391",
+      "bytes": 38
+    },
+    "upstream/source/src/test/resources/samples/multiproject/services/personService/src/main/java/org/gradle/sample/services/PersonService.java": {
+      "sha256": "a88cfd057d902a9e4dd0f0e833803195a2b9292d3093dbd62737d1ce5665091b",
+      "bytes": 359
+    },
+    "upstream/source/src/test/resources/samples/multiproject/api/src/main/java/org/gradle/sample/apiImpl/PersonImpl.java": {
+      "sha256": "95e490091fd72fb541afb26099c8835dd432c3c340a3f9730de2759890a11a17",
+      "bytes": 759
+    },
+    "upstream/source/src/test/resources/samples/multiproject/api/src/main/java/org/gradle/sample/api/Person.java": {
+      "sha256": "23db36dec5b1d14211c246a66677d576273fe45c350bdef3ad07cd1dd78fcfbc",
+      "bytes": 112
+    },
+    "upstream/source/src/test/resources/samples/multiproject/shared/src/main/java/org/gradle/sample/shared/Helper.java": {
+      "sha256": "f3760eb3c786236c817c1704995c28b0bdcd4724ecc00c2f975f5dc3d9cc641b",
+      "bytes": 156
+    }
+  },
+  "screenshots": {
+    "status": "root final capture and pointer observations complete",
+    "capture": {
+      "sha256": "c0fcc73cabaf2d8bff93b209ec7c21a722fdce06cd0c09be28b9a337af92eac9",
+      "bytes": 7419
+    },
+    "imageCount": 5,
+    "rootViewedEveryImage": true,
+    "allHashesAndPngDimensionsCheckedByThisAgent": true,
+    "pointerTargets": [
+      5,
+      7
+    ],
+    "observedSameNode": "t5",
+    "nativeOutgoing": 0,
+    "nativeIncoming": 2,
+    "incomingTaskPaths": [
+      ":classes",
+      ":jar"
+    ],
+    "sourceLine": 373,
+    "rawChecksAndSnapshots": {
+      "position-7.snapshot.json": {
+        "sha256": "ecf9d02eb955771b4f2fd96688e4847f87786d86f5bf5527ea46af71f5a98d13",
+        "bytes": 15480
+      },
+      "checks.json": {
+        "sha256": "806919a2f020f096bd3115f042ca8d4511d50bb12b2c9c606b8ece73129ece46",
+        "bytes": 3019
+      },
+      "position-5.snapshot.json": {
+        "sha256": "d9ca7d679e035bcde91c25cfd9470e35642b596d9286b68de165c9edb78aab79",
+        "bytes": 15567
+      }
+    },
+    "browserOperatedByThisAgent": false,
+    "limits": "Pointer-only; camera/zoom not pixel-aligned; sixteen keyboard failures retained. Raw AX/checks stay external, selected public capture is derived."
+  },
+  "claims": {
+    "upstreamExecuted": false,
+    "buildScheduleOrDurationClaimed": false,
+    "userBenefitMeasured": false,
+    "humanAcceptanceClaimed": false,
+    "committedOrPushedByThisAgent": false
+  }
+}

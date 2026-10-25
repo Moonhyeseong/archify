@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "两个父任务，共用一个 compileJava",
+    "subtitle": "所有箭头：父任务依赖目标任务。上游计划树 expected，未运行 Gradle。",
+    "locale": "zh-CN",
+    "output": "experiments/task-occurrences/output/dependencies.html",
+    "quality_profile": "showcase",
+    "animation": "none",
+    "repository": {
+      "url": "https://github.com/dorongold/gradle-task-tree",
+      "revision": "84cda7f0ce2363c96b1b26713ad34558519bdf05"
+    },
+    "legend": {
+      "entries": {
+        "backend": {
+          "label": "任务身份"
+        }
+      }
+    }
+  },
+  "components": [
+    {
+      "id": "t1",
+      "type": "backend",
+      "label": ":dependsOnIncluded",
+      "explanation": "任务身份：:dependsOnIncluded。原 expected 中打印位置为 1。图展示计划依赖，不提供实际执行次数。",
+      "pos": [
+        40,
+        285
+      ],
+      "size": [
+        190,
+        72
+      ],
+      "sources": [
+        {
+          "path": "src/test/groovy/com/dorongold/gradle/tasktree/TaskTreeTaskTest.groovy",
+          "line": 369,
+          "end_line": 369,
+          "label": "官方 expected 原行"
+        }
+      ]
+    },
+    {
+      "id": "t2",
+      "type": "backend",
+      "label": ":assemble",
+      "explanation": "任务身份：:assemble。原 expected 中打印位置为 2。图展示计划依赖，不提供实际执行次数。",
+      "pos": [
+        330,
+        175
+      ],
+      "size": [
+        150,
+        72
+      ],
+      "sources": [
+        {
+          "path": "src/test/groovy/com/dorongold/gradle/tasktree/TaskTreeTaskTest.groovy",
+          "line": 370,
+          "end_line": 370,
+          "label": "官方 expected 原行"
+        }
+      ]
+    },
+    {
+      "id": "t3",
+      "type": "backend",
+      "label": ":jar",
+      "explanation": "任务身份：:jar。原 expected 中打印位置为 3。图展示计划依赖，不提供实际执行次数。",
+      "pos": [
+        580,
+        175
+      ],
+      "size": [
+        150,
+        72
+      ],
+      "sources": [
+        {
+          "path": "src/test/groovy/com/dorongold/gradle/tasktree/TaskTreeTaskTest.groovy",
+          "line": 371,
+          "end_line": 371,
+          "label": "官方 expected 原行"
+        }
+      ]
+    },
+    {
+      "id": "t4",
+      "type": "backend",
+      "label": ":classes",
+      "explanation": "任务身份：:classes。原 expected 中打印位置为 4。图展示计划依赖，不提供实际执行次数。",
+      "pos": [
+        830,
+        25
+      ],
+      "size": [
+        150,
+        72
+      ],
+      "sources": [
+        {
+          "path": "src/test/groovy/com/dorongold/gradle/tasktree/TaskTreeTaskTest.groovy",
+          "line": 372,
+          "end_line": 372,
+          "label": "官方 expected 原行"
+        }
+      ]
+    },
+    {
+      "id": "t5",
+      "type": "backend",
+      "label": ":compileJava",
+      "explanation": "任务身份：:compileJava。原 expected 中打印位置为 5、7。图展示计划依赖，不提供实际执行次数。位置 7 的星号表示先前已打印。此例 compileJava 是叶子，没有未显示的后续任务。",
+      "pos": [
+        1080,
+        175
+      ],
+      "size": [
+        150,
+        72
+      ],
+      "sources": [
+        {
+          "path": "src/test/groovy/com/dorongold/gradle/tasktree/TaskTreeTaskTest.groovy",
+          "line": 373,
+          "end_line": 373,
+          "label": "官方 expected 原行"
+        }
+      ]
+    },
+    {
+      "id": "t6",
+      "type": "backend",
+      "label": ":processResources",
+      "explanation": "任务身份：:processResources。原 expected 中打印位置为 6。图展示计划依赖，不提供实际执行次数。",
+      "pos": [
+        1080,
+        25
+      ],
+      "size": [
+        150,
+        72
+      ],
+      "sources": [
+        {
+          "path": "src/test/groovy/com/dorongold/gradle/tasktree/TaskTreeTaskTest.groovy",
+          "line": 374,
+          "end_line": 374,
+          "label": "官方 expected 原行"
+        }
+      ]
+    },
+    {
+      "id": "t7",
+      "type": "backend",
+      "label": ":includedProject:taskInIncludedProject",
+      "explanation": "任务身份：:includedProject:taskInIncludedProject。原 expected 中打印位置为 8。图展示计划依赖，不提供实际执行次数。",
+      "pos": [
+        300,
+        445
+      ],
+      "size": [
+        310,
+        72
+      ],
+      "sources": [
+        {
+          "path": "src/test/groovy/com/dorongold/gradle/tasktree/TaskTreeTaskTest.groovy",
+          "line": 376,
+          "end_line": 376,
+          "label": "官方 expected 原行"
+        }
+      ]
+    },
+    {
+      "id": "t8",
+      "type": "backend",
+      "label": ":includedProject:build",
+      "explanation": "任务身份：:includedProject:build。原 expected 中打印位置为 9。图展示计划依赖，不提供实际执行次数。",
+      "pos": [
+        760,
+        445
+      ],
+      "size": [
+        185,
+        72
+      ],
+      "sources": [
+        {
+          "path": "src/test/groovy/com/dorongold/gradle/tasktree/TaskTreeTaskTest.groovy",
+          "line": 377,
+          "end_line": 377,
+          "label": "官方 expected 原行"
+        }
+      ]
+    },
+    {
+      "id": "t9",
+      "type": "backend",
+      "label": ":includedProject:assemble",
+      "explanation": "任务身份：:includedProject:assemble。原 expected 中打印位置为 10。图展示计划依赖，不提供实际执行次数。",
+      "pos": [
+        1080,
+        370
+      ],
+      "size": [
+        205,
+        72
+      ],
+      "sources": [
+        {
+          "path": "src/test/groovy/com/dorongold/gradle/tasktree/TaskTreeTaskTest.groovy",
+          "line": 378,
+          "end_line": 378,
+          "label": "官方 expected 原行"
+        }
+      ]
+    },
+    {
+      "id": "t10",
+      "type": "backend",
+      "label": ":includedProject:check",
+      "explanation": "任务身份：:includedProject:check。原 expected 中打印位置为 11。图展示计划依赖，不提供实际执行次数。",
+      "pos": [
+        1080,
+        520
+      ],
+      "size": [
+        185,
+        72
+      ],
+      "sources": [
+        {
+          "path": "src/test/groovy/com/dorongold/gradle/tasktree/TaskTreeTaskTest.groovy",
+          "line": 379,
+          "end_line": 379,
+          "label": "官方 expected 原行"
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "d1",
+      "from": "t1",
+      "to": "t2"
+    },
+    {
+      "id": "d2",
+      "from": "t2",
+      "to": "t3"
+    },
+    {
+      "id": "d3",
+      "from": "t3",
+      "to": "t4"
+    },
+    {
+      "id": "d4",
+      "from": "t4",
+      "to": "t5",
+      "variant": "emphasis"
+    },
+    {
+      "id": "d5",
+      "from": "t4",
+      "to": "t6"
+    },
+    {
+      "id": "d6",
+      "from": "t3",
+      "to": "t5",
+      "variant": "emphasis"
+    },
+    {
+      "id": "d7",
+      "from": "t1",
+      "to": "t7"
+    },
+    {
+      "id": "d8",
+      "from": "t7",
+      "to": "t8"
+    },
+    {
+      "id": "d9",
+      "from": "t8",
+      "to": "t9"
+    },
+    {
+      "id": "d10",
+      "from": "t8",
+      "to": "t10"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "一份身份，两处引用",
+      "items": [
+        "classes 与 jar 均依赖 :compileJava。",
+        "位置 5、7 指同一个任务；星号不是执行次数。"
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "来源边界",
+      "items": [
+        "依赖来自官方计划树 expected。",
+        "没有运行 Gradle，也没有调度、耗时或执行成功记录。"
+      ]
+    }
+  ]
+}
