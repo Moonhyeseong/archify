@@ -1,0 +1,343 @@
+{
+  "version": 1,
+  "kind": "derived-evidence-summary",
+  "note": "Projection of local command receipts and root Ego browser observations. Original command receipts and browser JSON remain outside the checkout; this file is not an original CLI receipt.",
+  "baseline": "3f95f0349c8276db71509ca239461b6fe9d00f9f",
+  "frozenInput": {
+    "path": "input/explainer.json",
+    "sha256": "060fe0536b626f480ec3fa3f3bf81f3a41ad0bb76f640db362dc5a8f095dc3d1",
+    "origin": "Existing task-review-map/pr-1097/authored-layout/explainer.json, copied byte-for-byte; not a new historical PR inspection."
+  },
+  "artifacts": {
+    "base": {
+      "path": "base/review.html",
+      "sha256": "0fc95d5983b49e45187fd377fe67d7f95a84d2a4b36ee92ac72e215ee68aa288",
+      "bytes": 655138
+    },
+    "candidate": {
+      "path": "candidate/review.html",
+      "sha256": "b5a926255998d420fadd22904b779e66f74607f057ccbe1fd62c922f4ed8c1f1",
+      "bytes": 655699
+    }
+  },
+  "pairing": {
+    "quality": "showcase",
+    "preparedBundleEqual": true,
+    "onlyOuterReaderDiff": true,
+    "baseReaderSha256": "e495d020eb932cbb5894bffcc683788ac3b9ff895ad56a47cd98c1b87a9e1097",
+    "candidateReaderSha256": "59308c1b716f90db8e5560b876dc8a4cc86d75b02c47f523e1ff608c4c2fc479",
+    "staticGates": {
+      "validate": "pass",
+      "deliver": "pass",
+      "check": "pass",
+      "browser-check": "not-requested"
+    },
+    "warningCountEach": 7
+  },
+  "tests": {
+    "testSourceSha256": "d9727a5be6ddeb94592a4319de8bce24d39fa456a56bd1ae3db2a9f4575754e8",
+    "matchedBase": {
+      "leafCases": 8,
+      "leafPass": 2,
+      "leafFail": 6,
+      "tapTestsIncludingParent": 9,
+      "tapPass": 2,
+      "tapFail": 7
+    },
+    "matchedCandidate": {
+      "leafCases": 8,
+      "leafPass": 8,
+      "tapTestsIncludingParent": 9,
+      "tapPass": 9,
+      "skip": 0
+    },
+    "independentCandidate": {
+      "tapPass": 9,
+      "skip": 0
+    },
+    "neighborBrowserAndRenderer": {
+      "pass": 32,
+      "fail": 0,
+      "skip": 0
+    },
+    "core": {
+      "pass": 19,
+      "fail": 0,
+      "skip": 0
+    },
+    "generated": "pass",
+    "extractedPackageSmoke": "pass",
+    "runtime": {
+      "node": "22.23.2",
+      "zlib": "1.3.1-e00f703",
+      "platform": "macOS arm64"
+    },
+    "scope": "Controlled Clipboard API boundaries, not actual OS clipboard integration; no full repository suite or hosted CI claimed."
+  },
+  "package": {
+    "sha256": "46327220748ba97cd1e056cc8b425b4233e80f1c789617baaebb64d74a06c31f",
+    "entries": 224,
+    "repeatBuildByteIdentical": true,
+    "changedEntriesAgainstBase": [
+      "archify/explainer/reader.js"
+    ]
+  },
+  "docsFreshness": [
+    {
+      "name": "finalize-delivery",
+      "quality": "standard",
+      "exitCode": 0,
+      "beforeSha256": "f5e8b38535039ffced65502d87534019909c31c43fac86425351804f10aeced6",
+      "afterSha256": "e5e18bce0c111babeae0b65f8f79528114823d11b5a76a055fab3af182160e6b",
+      "beforeContainsBaseReader": false,
+      "afterContainsCandidateReader": true,
+      "expectedBaseEqualsPrevious": false,
+      "sourceTextEqual": true,
+      "documentEqual": true,
+      "childSpecsEqual": {
+        "finalize-gates": true
+      },
+      "nativeSvgEqual": {
+        "finalize-gates": true
+      }
+    },
+    {
+      "name": "first-rental",
+      "quality": "standard",
+      "exitCode": 0,
+      "beforeSha256": "62e6aecbcb5f5ec62f65c375e6e47c8e71355558eedeefbb825aecd9bdaa5206",
+      "afterSha256": "61fceb503b8b71f9fb18600bdbf4e6f591f1f3d86bc29e30acf945bfbd6343de",
+      "beforeContainsBaseReader": false,
+      "afterContainsCandidateReader": true,
+      "expectedBaseEqualsPrevious": false,
+      "sourceTextEqual": true,
+      "documentEqual": true,
+      "childSpecsEqual": {
+        "rent-flow": true
+      },
+      "nativeSvgEqual": {
+        "rent-flow": true
+      }
+    },
+    {
+      "name": "p99-tail-latency",
+      "quality": "standard",
+      "exitCode": 0,
+      "beforeSha256": "f2657385d7c4971975726ce56e14cb62ac0f97e5ebed72dc05b0a15dc07ee0cb",
+      "afterSha256": "783a2dac0135bac6893e9318830bba1e0b25e8f0ad7db7712cb827d799e0b044",
+      "beforeContainsBaseReader": false,
+      "afterContainsCandidateReader": true,
+      "expectedBaseEqualsPrevious": false,
+      "sourceTextEqual": true,
+      "documentEqual": true,
+      "childSpecsEqual": {
+        "p99-triage": true
+      },
+      "nativeSvgEqual": {
+        "p99-triage": true
+      }
+    },
+    {
+      "name": "tls-first-visit",
+      "quality": "standard",
+      "exitCode": 0,
+      "beforeSha256": "dbd57bee0bb12ed83df184fb11c425155d968c711e9f0a07ddd47c7dd254eff1",
+      "afterSha256": "a298e6ca16f01f89d3d6b20d5425717352cb44df3f12c2617893198b05d43db5",
+      "beforeContainsBaseReader": false,
+      "afterContainsCandidateReader": true,
+      "expectedBaseEqualsPrevious": false,
+      "sourceTextEqual": true,
+      "documentEqual": true,
+      "childSpecsEqual": {
+        "tls-visit": true
+      },
+      "nativeSvgEqual": {
+        "tls-visit": true
+      }
+    }
+  ],
+  "rootEgo": {
+    "viewport": {
+      "width": 1280,
+      "height": 1000,
+      "deviceScaleFactor": 1
+    },
+    "theme": "light",
+    "injectedApiBoundary": true,
+    "actualOsClipboardWrite": false,
+    "callsNote": "Browser probe counters accumulate within each mode across code, Ask and retry; writeExact=false with an absent API is expected, not a failed write attempt.",
+    "base": {
+      "sourceRecord": "base-browser.json",
+      "sourceRecordSha256": "31120c6e5a83b0f5998a6e12b5eb6d6120ccdaa32804fa19c2922b14363e8d7c",
+      "htmlSha256": "0fc95d5983b49e45187fd377fe67d7f95a84d2a4b36ee92ac72e215ee68aa288",
+      "records": [
+        {
+          "mode": "missing",
+          "code": {
+            "label": "已复制",
+            "toast": "",
+            "apiCallsCumulative": 0,
+            "writeExact": false
+          },
+          "ask": {
+            "open": false,
+            "focused": false,
+            "fullySelected": false,
+            "areaExact": false,
+            "writeExact": false,
+            "toast": "已复制，粘贴给 agent 即可",
+            "apiCallsCumulative": 0
+          },
+          "retry": null
+        },
+        {
+          "mode": "reject",
+          "code": {
+            "label": "复制",
+            "toast": "复制失败。",
+            "apiCallsCumulative": 1,
+            "writeExact": true
+          },
+          "ask": {
+            "open": true,
+            "focused": true,
+            "fullySelected": true,
+            "areaExact": true,
+            "writeExact": true,
+            "toast": "复制失败。",
+            "apiCallsCumulative": 2
+          },
+          "retry": {
+            "closed": true,
+            "editedMessageExact": false,
+            "apiCallsCumulative": 3
+          }
+        },
+        {
+          "mode": "success",
+          "code": {
+            "label": "已复制",
+            "toast": "",
+            "apiCallsCumulative": 1,
+            "writeExact": true
+          },
+          "ask": {
+            "open": false,
+            "focused": false,
+            "fullySelected": false,
+            "areaExact": false,
+            "writeExact": true,
+            "toast": "已复制，粘贴给 agent 即可",
+            "apiCallsCumulative": 2
+          },
+          "retry": null
+        }
+      ]
+    },
+    "candidate": {
+      "sourceRecord": "candidate-browser.json",
+      "sourceRecordSha256": "9905a4d02ea1864b81acb9380e13bc74509e6fde15351ed646f658a129d0a2f3",
+      "htmlSha256": "b5a926255998d420fadd22904b779e66f74607f057ccbe1fd62c922f4ed8c1f1",
+      "records": [
+        {
+          "mode": "missing",
+          "code": {
+            "label": "复制",
+            "toast": "复制失败，请选中代码后手工复制。",
+            "apiCallsCumulative": 0,
+            "writeExact": false
+          },
+          "ask": {
+            "open": true,
+            "focused": true,
+            "fullySelected": true,
+            "areaExact": true,
+            "writeExact": false,
+            "toast": "复制失败，请手工复制已选中的完整消息。",
+            "apiCallsCumulative": 0
+          },
+          "retry": {
+            "closed": true,
+            "editedMessageExact": true,
+            "apiCallsCumulative": 1
+          }
+        },
+        {
+          "mode": "reject",
+          "code": {
+            "label": "复制",
+            "toast": "复制失败，请选中代码后手工复制。",
+            "apiCallsCumulative": 1,
+            "writeExact": true
+          },
+          "ask": {
+            "open": true,
+            "focused": true,
+            "fullySelected": true,
+            "areaExact": true,
+            "writeExact": true,
+            "toast": "复制失败，请手工复制已选中的完整消息。",
+            "apiCallsCumulative": 2
+          },
+          "retry": {
+            "closed": true,
+            "editedMessageExact": true,
+            "apiCallsCumulative": 3
+          }
+        },
+        {
+          "mode": "success",
+          "code": {
+            "label": "已复制",
+            "toast": "",
+            "apiCallsCumulative": 1,
+            "writeExact": true
+          },
+          "ask": {
+            "open": false,
+            "focused": false,
+            "fullySelected": false,
+            "areaExact": false,
+            "writeExact": true,
+            "toast": "已复制，粘贴给 agent 即可",
+            "apiCallsCumulative": 2
+          },
+          "retry": null
+        }
+      ]
+    },
+    "screenshots": [
+      {
+        "name": "missing-ask-base.png",
+        "sha256": "5e1ff5787adaab3290952091f4a9b011b92883c5f25a7cdf55df4cb5199dda64",
+        "bytes": 232905,
+        "writtenAtFromFileMtime": "2026-10-25T08:13:41.922310+00:00",
+        "width": 1280,
+        "height": 1000,
+        "rootViewed": true,
+        "path": "screenshots/missing-ask-base.png"
+      },
+      {
+        "name": "missing-ask-candidate.png",
+        "sha256": "071e0e1919089bbd1145025085edd0d950eb62cfd4c2d639aeee2963393fe201",
+        "bytes": 284229,
+        "writtenAtFromFileMtime": "2026-10-25T08:15:07.592315+00:00",
+        "width": 1280,
+        "height": 1000,
+        "rootViewed": true,
+        "path": "screenshots/missing-ask-candidate.png"
+      },
+      {
+        "name": "missing-code-candidate.png",
+        "sha256": "fffbf792f70ec9709aa700c9a9faf4394399540d299c986c7509ad2baec8c4f1",
+        "bytes": 166696,
+        "writtenAtFromFileMtime": "2026-10-25T08:15:03.546641+00:00",
+        "width": 1280,
+        "height": 1000,
+        "rootViewed": true,
+        "path": "screenshots/missing-code-candidate.png"
+      }
+    ],
+    "timestampNote": "writtenAtFromFileMtime is derived from PNG file metadata, not an independent screen capture clock."
+  }
+}

@@ -32,6 +32,56 @@ test('formal renderer retains keyboard navigation, static reading and print mode
 });
 test.after(()=>fs.rmSync(dir,{recursive:true,force:true}));
 
+test('Explainer copy outcomes remain truthful and failed questions stay manually copyable',{skip:!chrome},async t=>{
+ const {renderExplainer}=await import('../archify/explainer/render.mjs');
+ const doc=formalDocument(),code='const message = "α <cache> & \\n";\nreturn message;';
+ doc.panels[0].blocks.push({id:'copy-code',type:'snippet',language:'js',text:code});
+ const file=artifact('clipboard-outcomes',renderExplainer(doc,{preparedSources:{sources:{example:{id:'example',title:'Example'}}},sourceText:JSON.stringify(doc)}));
+ const browser=new ChromeVisualBrowser(chrome);
+ try {
+  for(const mode of ['success','reject','missing','throw'])for(const action of ['code','question'])await t.test(`${action}: ${mode}`,async()=>{
+   await browser.resetPage();await inspectPublicHtml(browser,{artifactPath:file,width:1440,keyboard:false});
+   const result=await pageValue(browser,`(async()=>{
+    const mode=${JSON.stringify(mode)},action=${JSON.stringify(action)},errors=[];
+    window.addEventListener('error',event=>errors.push(event.message));
+    let calls=0,copied=null;
+    Object.defineProperty(navigator,'clipboard',{configurable:true,value:mode==='missing'?undefined:{writeText:text=>{
+      calls++;copied=text;
+      if(mode==='throw')throw new Error('clipboard probe');
+      return mode==='success'?Promise.resolve():Promise.reject(new Error('clipboard probe'));
+    }}});
+    const code=document.querySelector('#copy-code pre code'),button=document.querySelector('#copy-code [data-copy]');
+    if(action==='code')button.click();
+    else {document.querySelector('#why .ask-button').click();document.querySelector('.ask-dialog textarea').value='Keep α & <cache> exactly.';document.querySelector('.ask-dialog [type=submit]').click();}
+    await new Promise(resolve=>setTimeout(resolve,0));
+    const dialog=document.querySelector('.ask-dialog'),area=dialog.querySelector('textarea');
+    const result={calls,copied,errors,code:code.textContent,label:button.textContent,toast:document.querySelector('#toast').textContent,
+      open:dialog.open,manual:area.value,selected:area.value.slice(area.selectionStart,area.selectionEnd),focused:document.activeElement===area};
+    if(action==='question'&&mode!=='success'){
+      area.value+=${JSON.stringify('\nManual edit α')};
+      Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:text=>{copied=text;return Promise.resolve();}}});
+      dialog.querySelector('[type=submit]').click();await new Promise(resolve=>setTimeout(resolve,0));
+      result.retry={copied,open:dialog.open};
+    }
+    return result;
+   })()`);
+   assert.deepEqual(result.errors,[],'clipboard boundaries must not escape as page errors');
+   assert.equal(result.calls,mode==='missing'?0:1);
+   assert.equal(result.code,code,'the original code remains available for manual copying');
+   if(action==='code'){
+    if(mode==='success'){assert.equal(result.copied,code);assert.equal(result.label,'Copied');}
+    else {assert.notEqual(result.label,'Copied');assert.match(result.toast,/Copy failed/);assert.match(result.toast,/select.*copy/i);}
+   }else{
+    const message=mode==='missing'?result.manual:result.copied;
+    assert.match(message,/Page: "A test explanation"/);assert.match(message,/Panel 1 "Why does it work\?" \(ID: why\)/);
+    assert.match(message,/Question: Keep α & <cache> exactly\./);assert.match(message,/patch explainer/);
+    if(mode==='success'){assert.equal(result.open,false);assert.match(result.toast,/Copied/);}
+    else {assert.equal(result.open,true);assert.equal(result.manual,message);assert.equal(result.selected,message);assert.equal(result.focused,true);assert.doesNotMatch(result.toast,/Copied/);assert.equal(result.retry.copied,message+'\nManual edit α','retry copies the editable full message without wrapping it as a new question');assert.equal(result.retry.open,false);}
+   }
+  });
+ }finally{await browser.close();}
+});
+
 test('retry layout and referenced node explanations remain readable and keyboard accessible after a prose edit',{skip:!chrome},async()=>{
  const {renderExplainer}=await import('../archify/explainer/render.mjs');
  const {compileExplainerDiagram,prepareExplainerDiagrams}=await import('../archify/explainer/diagrams.mjs');

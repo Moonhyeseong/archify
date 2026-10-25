@@ -521,9 +521,20 @@
       }));
     });
   }
+  async function copyText(text) {
+    try {
+      const clipboard = navigator.clipboard;
+      if (typeof clipboard?.writeText !== 'function') return false;
+      await clipboard.writeText(text);
+      return true;
+    } catch { return false; }
+  }
   all('[data-copy]').forEach(button=>button.addEventListener('click',()=>{
     const text = button.closest('figure').querySelector('pre code').textContent;
-    Promise.resolve(navigator.clipboard?.writeText(text)).then(()=>{button.textContent = words.copied;setTimeout(()=>{button.textContent = words.copy;},1600);},()=>notify(say('Copy failed.','复制失败。')));
+    copyText(text).then(copied=>{
+      if (copied) { button.textContent = words.copied;setTimeout(()=>{button.textContent = words.copy;},1600); }
+      else notify(say('Copy failed. Select the code and copy it manually.','复制失败，请选中代码后手工复制。'));
+    });
   }));
   // Follow-up questions: a reader asks about a panel, or about selected text in it, and copies a
   // message that names the page, the panel ID and the quote, so the agent can revise just that panel.
@@ -533,11 +544,11 @@
     dialog.innerHTML = `<form method="dialog"><header><div><h2 id="ask-title">${words.ask}</h2><p class="ask-where"></p></div><button type="button" class="ask-close" data-ask-cancel aria-label="${words.askCancel}"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg></button></header><blockquote hidden></blockquote><div class="ask-chips" role="group" aria-label="${words.askQuestion}">${words.askChips.map(chip=>`<button type="button" data-chip>${chip}</button>`).join('')}</div><textarea rows="4" aria-labelledby="ask-title" placeholder="${words.askPlaceholder}"></textarea><footer><p class="ask-note">${words.askNote}</p><button type="button" data-ask-cancel>${words.askCancel}</button><button type="submit" class="primary">${words.askCopy}<kbd>${mac ? '⌘↵' : 'Ctrl ↵'}</kbd></button></footer></form>`;
     document.body.append(dialog);
     const area = dialog.querySelector('textarea'), quoteBox = dialog.querySelector('blockquote');
-    let context = null;
+    let context = null, manualMessage = false;
     const open = (panel, quote = '') => {
       const number = panel.id === 'answer' ? words.answer : panel.querySelector('.panel-id')?.textContent.trim();
       const title = panel.id === 'answer' ? words.answer : panel.dataset.title || panel.querySelector('h2')?.textContent.trim();
-      context = {panel,quote,number,title};
+      context = {panel,quote,number,title}; manualMessage = false;
       dialog.querySelector('.ask-where').textContent = panel.id === 'answer' ? title : say(`Panel ${number} · ${title}`,`面板 ${number} · ${title}`);
       all('[data-chip]',dialog).forEach(chip=>chip.setAttribute('aria-pressed','false'));
       quoteBox.hidden = !quote; quoteBox.textContent = quote;
@@ -564,8 +575,11 @@
         `${words.askQuestion}${say(': ','：')}${area.value.trim() || words.askChips[0]}`,
         ...(panel.id === 'answer' ? [] : [words.askPatch]),
       ];
-      const text = lines.join('\n');
-      Promise.resolve(navigator.clipboard?.writeText(text)).then(()=>{ dialog.close(); notify(words.askCopied); },()=>{ area.value = text; area.select(); });
+      const text = manualMessage ? area.value : lines.join('\n');
+      copyText(text).then(copied=>{
+        if (copied) { dialog.close(); notify(words.askCopied); }
+        else { manualMessage = true; area.value = text; area.focus(); area.select(); notify(say('Copy failed. Copy the selected message manually.','复制失败，请手工复制已选中的完整消息。')); }
+      });
     });
     all('.panel').forEach(panel=>{
       const button = document.createElement('button'); button.type = 'button'; button.className = 'ask-button interactive'; button.textContent = words.ask;

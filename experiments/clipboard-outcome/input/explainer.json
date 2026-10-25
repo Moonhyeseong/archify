@@ -1,0 +1,477 @@
+{
+  "schema_version": 1,
+  "diagram_type": "explainer",
+  "meta": {
+    "id": "task-review-map",
+    "title": "PR #1097：诊断修复、测试同步与尚未核对的安装包",
+    "locale": "zh-CN",
+    "style": "clean"
+  },
+  "answer": {
+    "summary": "这次改动仍有待解释或核对的部分。",
+    "reasons": [
+      "点击图中节点查看 Agent 的 why，下面保留真实 Git diff。",
+      "先处理未解释 hunk，再判断声明是否正确。",
+      "本实验未执行历史测试，不表示变更已通过验收。"
+    ],
+    "scope": "tt-a1i/archify · 作者声明 · 82c7e0f0 → 5f012ab7"
+  },
+  "panels": [
+    {
+      "id": "map",
+      "title": "先看这次改动，再看尚未解释的部分",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "warning",
+          "type": "callout",
+          "level": "warning",
+          "title": "引用吻合 ≠ 语义正确 ≠ 测试通过",
+          "text": "why 与关系均为 Codex 独立阅读声明（依据公开 PR，未经原作者确认） 的声明；本工具只核对固定 Git 对象和变更行。测试：未执行。"
+        },
+        {
+          "id": "overview",
+          "type": "prose",
+          "text": "4 个文件 · 5 个 hunk · 6 个引用吻合 · 0 个无效引用 · 0 个未完整解释 hunk · 1 个不支持的文件。"
+        },
+        {
+          "id": "change-map",
+          "type": "diagram",
+          "diagramType": "architecture",
+          "spec": {
+            "schema_version": 1,
+            "diagram_type": "architecture",
+            "meta": {
+              "output": "change-map.html",
+              "title": "声明的变更关系 · 点击节点读 why",
+              "subtitle": "关系由 Agent 编写，未通过静态或运行分析验证"
+            },
+            "components": [
+              {
+                "id": "before-normalization",
+                "type": "backend",
+                "label": "原逻辑：换行被正规化消耗",
+                "sublabel": "Agent 声明",
+                "pos": [
+                  40,
+                  60
+                ],
+                "size": [
+                  240,
+                  86
+                ]
+              },
+              {
+                "id": "preserve-lines",
+                "type": "backend",
+                "label": "修复：保留已接受换行",
+                "sublabel": "Agent 声明",
+                "pos": [
+                  360,
+                  60
+                ],
+                "size": [
+                  240,
+                  86
+                ]
+              },
+              {
+                "id": "finalize-regression",
+                "type": "backend",
+                "label": "公开 finalize 诊断回归",
+                "sublabel": "Agent 声明",
+                "pos": [
+                  40,
+                  220
+                ],
+                "size": [
+                  240,
+                  86
+                ]
+              },
+              {
+                "id": "compile-regression",
+                "type": "backend",
+                "label": "编译诊断与有效 SVG 对照",
+                "sublabel": "Agent 声明",
+                "pos": [
+                  360,
+                  220
+                ],
+                "size": [
+                  240,
+                  86
+                ]
+              },
+              {
+                "id": "before-close",
+                "type": "backend",
+                "label": "原测试：关闭后立即切换",
+                "sublabel": "Agent 声明",
+                "pos": [
+                  40,
+                  380
+                ],
+                "size": [
+                  240,
+                  86
+                ]
+              },
+              {
+                "id": "await-close",
+                "type": "backend",
+                "label": "测试同步：等待 close 事件",
+                "sublabel": "Agent 声明",
+                "pos": [
+                  360,
+                  380
+                ],
+                "size": [
+                  240,
+                  86
+                ]
+              }
+            ],
+            "connections": [
+              {
+                "from": "before-normalization",
+                "to": "preserve-lines",
+                "label": "声明：替换"
+              },
+              {
+                "from": "finalize-regression",
+                "to": "preserve-lines",
+                "label": "声明：诊断测试关联"
+              },
+              {
+                "from": "compile-regression",
+                "to": "preserve-lines",
+                "label": "声明：编译测试关联"
+              },
+              {
+                "from": "before-close",
+                "to": "await-close",
+                "label": "声明：测试同步替换"
+              }
+            ]
+          },
+          "nodeBlocks": {
+            "before-normalization": "why-before-normalization",
+            "preserve-lines": "why-preserve-lines",
+            "finalize-regression": "why-finalize-regression",
+            "compile-regression": "why-compile-regression",
+            "before-close": "why-before-close",
+            "await-close": "why-await-close"
+          }
+        },
+        {
+          "id": "tour",
+          "type": "steps",
+          "items": [
+            {
+              "id": "step-before-normalization",
+              "text": "原逻辑：换行被正规化消耗",
+              "detail": "reference-matches · 我的阅读：原代码替换 showData 与 slice 文本时没有单独保留已接受的换行。此引用仅供核对被替换的源码，不代表本实验执行过错误复现。",
+              "target": {
+                "diagram": "change-map",
+                "node": "before-normalization"
+              }
+            },
+            {
+              "id": "step-preserve-lines",
+              "text": "修复：保留已接受换行",
+              "detail": "reference-matches · 我的阅读：新增 gap/breaks 处理保留 CR/LF，使诊断可继续映射作者行。这里只核对变更引用，不能据此证明所有诊断正确。",
+              "target": {
+                "diagram": "change-map",
+                "node": "preserve-lines"
+              }
+            },
+            {
+              "id": "step-finalize-regression",
+              "text": "公开 finalize 诊断回归",
+              "detail": "reference-matches · 我的阅读：测试源码增加两种 malformed pie 输入，要求失败、原始行号和不交付 HTML。这是测试源码关联，本实验未执行 PR 的测试。",
+              "target": {
+                "diagram": "change-map",
+                "node": "finalize-regression"
+              }
+            },
+            {
+              "id": "step-compile-regression",
+              "text": "编译诊断与有效 SVG 对照",
+              "detail": "reference-matches · 我的阅读：新增 LF/CRLF 诊断行与有效格式 SVG 等价断言。这些断言表达测试意图，不是本实验取得的执行结果。",
+              "target": {
+                "diagram": "change-map",
+                "node": "compile-regression"
+              }
+            },
+            {
+              "id": "step-before-close",
+              "text": "原测试：关闭后立即切换",
+              "detail": "reference-matches · 我的阅读：原测试关闭弹窗后直接聚焦下一步骤；引用这一删除行以区分产品修复与测试同步调整。",
+              "target": {
+                "diagram": "change-map",
+                "node": "before-close"
+              }
+            },
+            {
+              "id": "step-await-close",
+              "text": "测试同步：等待 close 事件",
+              "detail": "reference-matches · 我的阅读：新增 closeStep 等待 close 事件，再进行下一步操作；此 hunk 是浏览器测试同步调整，不是 pie runtime 实现，也不能据此声称 CI 已通过。",
+              "target": {
+                "diagram": "change-map",
+                "node": "await-close"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "node-before-normalization",
+      "title": "原逻辑：换行被正规化消耗",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "why-before-normalization",
+          "type": "prose",
+          "text": "Agent 声明（Codex 独立阅读声明（依据公开 PR，未经原作者确认））：我的阅读：原代码替换 showData 与 slice 文本时没有单独保留已接受的换行。此引用仅供核对被替换的源码，不代表本实验执行过错误复现。"
+        },
+        {
+          "id": "status-before-normalization",
+          "type": "callout",
+          "level": "note",
+          "title": "引用吻合",
+          "text": "Range contains changed lines in the stated Git side. Semantic meaning and test results are not checked. 引用：base:archify/explainer/charts.mjs:20–20。"
+        },
+        {
+          "id": "code-before-normalization",
+          "type": "snippet",
+          "title": "base · archify/explainer/charts.mjs · L20–L20",
+          "language": "text",
+          "text": "  return text.replace(/^(\\s*pie)\\s+showData\\b/u, '$1').replace(slice, (_, indent, label, value) => { const share = Math.round(Number(value) / total * 100); return `${indent}\"${label} · ${value}${/\\p{Script=Han}/u.test(label) ? `（${share}%）` : ` (${share}%)`}\" : ${value}`; });"
+        },
+        {
+          "id": "link-before-normalization",
+          "type": "prose",
+          "text": "[查看固定 revision 的源码](https://github.com/tt-a1i/archify/blob/82c7e0f089a02a4d514714adf37dc2061682da5f/archify/explainer/charts.mjs#L20-L20)"
+        },
+        {
+          "id": "diff-before-normalization-0",
+          "type": "diff",
+          "caption": "真实 Git diff · archify/explainer/charts.mjs · range-accounted",
+          "text": "@@ -20 +20,6 @@ function pieLegend(text) {\n-  return text.replace(/^(\\s*pie)\\s+showData\\b/u, '$1').replace(slice, (_, indent, label, value) => { const share = Math.round(Number(value) / total * 100); return `${indent}\"${label} · ${value}${/\\p{Script=Han}/u.test(label) ? `（${share}%）` : ` (${share}%)`}\" : ${value}`; });\n+  return text.replace(/^(\\s*pie)(\\s+)showData\\b/u, (_, pie, gap) => pie + gap.replace(/[^\\r\\n]/g, '')).replace(slice, (matched, indent, label, value) => {\n+    const share = Math.round(Number(value) / total * 100);\n+    // Keep accepted multiline whitespace without dropping diagnostic lines.\n+    const breaks = matched.slice(indent.length + label.length + 2).replace(/[^\\r\\n]/g, '');\n+    return `${indent}\"${label} · ${value}${/\\p{Script=Han}/u.test(label) ? `（${share}%）` : ` (${share}%)`}\" : ${value}${breaks}`;\n+  });"
+        }
+      ]
+    },
+    {
+      "id": "node-preserve-lines",
+      "title": "修复：保留已接受换行",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "why-preserve-lines",
+          "type": "prose",
+          "text": "Agent 声明（Codex 独立阅读声明（依据公开 PR，未经原作者确认））：我的阅读：新增 gap/breaks 处理保留 CR/LF，使诊断可继续映射作者行。这里只核对变更引用，不能据此证明所有诊断正确。"
+        },
+        {
+          "id": "status-preserve-lines",
+          "type": "callout",
+          "level": "note",
+          "title": "引用吻合",
+          "text": "Range contains changed lines in the stated Git side. Semantic meaning and test results are not checked. 引用：head:archify/explainer/charts.mjs:20–25。"
+        },
+        {
+          "id": "code-preserve-lines",
+          "type": "snippet",
+          "title": "head · archify/explainer/charts.mjs · L20–L25",
+          "language": "text",
+          "text": "  return text.replace(/^(\\s*pie)(\\s+)showData\\b/u, (_, pie, gap) => pie + gap.replace(/[^\\r\\n]/g, '')).replace(slice, (matched, indent, label, value) => {\n    const share = Math.round(Number(value) / total * 100);\n    // Keep accepted multiline whitespace without dropping diagnostic lines.\n    const breaks = matched.slice(indent.length + label.length + 2).replace(/[^\\r\\n]/g, '');\n    return `${indent}\"${label} · ${value}${/\\p{Script=Han}/u.test(label) ? `（${share}%）` : ` (${share}%)`}\" : ${value}${breaks}`;\n  });"
+        },
+        {
+          "id": "link-preserve-lines",
+          "type": "prose",
+          "text": "[查看固定 revision 的源码](https://github.com/tt-a1i/archify/blob/5f012ab74911781e4a2a38fba791801d6e5afef7/archify/explainer/charts.mjs#L20-L25)"
+        },
+        {
+          "id": "diff-preserve-lines-0",
+          "type": "diff",
+          "caption": "真实 Git diff · archify/explainer/charts.mjs · range-accounted",
+          "text": "@@ -20 +20,6 @@ function pieLegend(text) {\n-  return text.replace(/^(\\s*pie)\\s+showData\\b/u, '$1').replace(slice, (_, indent, label, value) => { const share = Math.round(Number(value) / total * 100); return `${indent}\"${label} · ${value}${/\\p{Script=Han}/u.test(label) ? `（${share}%）` : ` (${share}%)`}\" : ${value}`; });\n+  return text.replace(/^(\\s*pie)(\\s+)showData\\b/u, (_, pie, gap) => pie + gap.replace(/[^\\r\\n]/g, '')).replace(slice, (matched, indent, label, value) => {\n+    const share = Math.round(Number(value) / total * 100);\n+    // Keep accepted multiline whitespace without dropping diagnostic lines.\n+    const breaks = matched.slice(indent.length + label.length + 2).replace(/[^\\r\\n]/g, '');\n+    return `${indent}\"${label} · ${value}${/\\p{Script=Han}/u.test(label) ? `（${share}%）` : ` (${share}%)`}\" : ${value}${breaks}`;\n+  });"
+        }
+      ]
+    },
+    {
+      "id": "node-finalize-regression",
+      "title": "公开 finalize 诊断回归",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "why-finalize-regression",
+          "type": "prose",
+          "text": "Agent 声明（Codex 独立阅读声明（依据公开 PR，未经原作者确认））：我的阅读：测试源码增加两种 malformed pie 输入，要求失败、原始行号和不交付 HTML。这是测试源码关联，本实验未执行 PR 的测试。"
+        },
+        {
+          "id": "status-finalize-regression",
+          "type": "callout",
+          "level": "note",
+          "title": "引用吻合",
+          "text": "Range contains changed lines in the stated Git side. Semantic meaning and test results are not checked. 引用：head:test/explainer-charts.test.mjs:35–41。"
+        },
+        {
+          "id": "code-finalize-regression",
+          "type": "snippet",
+          "title": "head · test/explainer-charts.test.mjs · L35–L41",
+          "language": "text",
+          "text": "  for (const chart of ['pie\\n  \"a\": 1\\n\\n  \"b\": x', 'pie\\nshowData\\n  \"a\": 1\\n  \"b\": x']) {\n    const failure = finalize(t, chart);\n    assert.notEqual(failure.status, 0);\n    assert.ok(failure.receipt.diagnostics.some(d => d.code === 'explainer/chart'\n      && d.subject.line === 13 && /line 4\\b/.test(d.message)));\n    assert.equal(failure.html, null);\n  }"
+        },
+        {
+          "id": "link-finalize-regression",
+          "type": "prose",
+          "text": "[查看固定 revision 的源码](https://github.com/tt-a1i/archify/blob/5f012ab74911781e4a2a38fba791801d6e5afef7/test/explainer-charts.test.mjs#L35-L41)"
+        },
+        {
+          "id": "diff-finalize-regression-0",
+          "type": "diff",
+          "caption": "真实 Git diff · test/explainer-charts.test.mjs · range-accounted",
+          "text": "@@ -34,0 +35,7 @@ test('explainer chart fences send native diagram types to shorthand and locate s\n+  for (const chart of ['pie\\n  \"a\": 1\\n\\n  \"b\": x', 'pie\\nshowData\\n  \"a\": 1\\n  \"b\": x']) {\n+    const failure = finalize(t, chart);\n+    assert.notEqual(failure.status, 0);\n+    assert.ok(failure.receipt.diagnostics.some(d => d.code === 'explainer/chart'\n+      && d.subject.line === 13 && /line 4\\b/.test(d.message)));\n+    assert.equal(failure.html, null);\n+  }"
+        }
+      ]
+    },
+    {
+      "id": "node-compile-regression",
+      "title": "编译诊断与有效 SVG 对照",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "why-compile-regression",
+          "type": "prose",
+          "text": "Agent 声明（Codex 独立阅读声明（依据公开 PR，未经原作者确认））：我的阅读：新增 LF/CRLF 诊断行与有效格式 SVG 等价断言。这些断言表达测试意图，不是本实验取得的执行结果。"
+        },
+        {
+          "id": "status-compile-regression",
+          "type": "callout",
+          "level": "note",
+          "title": "引用吻合",
+          "text": "Range contains changed lines in the stated Git side. Semantic meaning and test results are not checked. 引用：head:test/explainer-charts.test.mjs:87–118。"
+        },
+        {
+          "id": "code-compile-regression",
+          "type": "snippet",
+          "title": "head · test/explainer-charts.test.mjs · L87–L118",
+          "language": "text",
+          "text": "\n\ntest('pie diagnostics retain authored blank and showData lines', async () => {\n  const { compileExplainerChart } = await import('../archify/explainer/charts.mjs');\n  for (const newline of ['\\n', '\\r\\n']) {\n    for (const lines of [\n      ['pie', '  \"a\" : 1', '', '  \"b\": x'],\n      ['pie', 'showData', '  \"a\": 1', '  \"b\": x'],\n      ['pie showData', '  \"a\": 1', '', '  \"b\": x'],\n      ['pie', '  \"a\": 1', '', '', '  \"b\": x'],\n      ['pie', '  \"a\":', '1', '  \"b\": x'],\n      ['pie', '  \"a\"', ': 1', '  \"b\": x'],\n    ]) {\n      const result = compileExplainerChart(lines.join(newline));\n      assert.equal(result.line, lines.length, JSON.stringify(lines));\n      assert.match(result.error, new RegExp(`line ${lines.length}\\\\b`));\n      assert.equal(result.svg, undefined);\n    }\n  }\n  const canonical = compileExplainerChart('pie\\n  \"A\":60\\n  \"B\":40').svg;\n  assert.equal(typeof canonical, 'string');\n  for (const input of [\n    'pie showData\\n  \"A\":60\\n  \"B\":40',\n    'pie\\nshowData\\n  \"A\":60\\n  \"B\":40',\n    'pie\\n  \"A\":60\\n\\n  \"B\":40',\n    'pie\\n  \"A\":\\n60\\n  \"B\":40',\n    'pie\\n  \"A\"\\n:60\\n  \"B\":40',\n  ]) {\n    assert.equal(compileExplainerChart(input).svg, canonical);\n    assert.equal(compileExplainerChart(input.replaceAll('\\n', '\\r\\n')).svg, canonical);\n  }\n});"
+        },
+        {
+          "id": "link-compile-regression",
+          "type": "prose",
+          "text": "[查看固定 revision 的源码](https://github.com/tt-a1i/archify/blob/5f012ab74911781e4a2a38fba791801d6e5afef7/test/explainer-charts.test.mjs#L87-L118)"
+        },
+        {
+          "id": "diff-compile-regression-0",
+          "type": "diff",
+          "caption": "真实 Git diff · test/explainer-charts.test.mjs · range-accounted",
+          "text": "@@ -79,0 +87,32 @@ test('a blank data cell is missing data, never drawn as zero', async () => {\n+\n+\n+test('pie diagnostics retain authored blank and showData lines', async () => {\n+  const { compileExplainerChart } = await import('../archify/explainer/charts.mjs');\n+  for (const newline of ['\\n', '\\r\\n']) {\n+    for (const lines of [\n+      ['pie', '  \"a\" : 1', '', '  \"b\": x'],\n+      ['pie', 'showData', '  \"a\": 1', '  \"b\": x'],\n+      ['pie showData', '  \"a\": 1', '', '  \"b\": x'],\n+      ['pie', '  \"a\": 1', '', '', '  \"b\": x'],\n+      ['pie', '  \"a\":', '1', '  \"b\": x'],\n+      ['pie', '  \"a\"', ': 1', '  \"b\": x'],\n+    ]) {\n+      const result = compileExplainerChart(lines.join(newline));\n+      assert.equal(result.line, lines.length, JSON.stringify(lines));\n+      assert.match(result.error, new RegExp(`line ${lines.length}\\\\b`));\n+      assert.equal(result.svg, undefined);\n+    }\n+  }\n+  const canonical = compileExplainerChart('pie\\n  \"A\":60\\n  \"B\":40').svg;\n+  assert.equal(typeof canonical, 'string');\n+  for (const input of [\n+    'pie showData\\n  \"A\":60\\n  \"B\":40',\n+    'pie\\nshowData\\n  \"A\":60\\n  \"B\":40',\n+    'pie\\n  \"A\":60\\n\\n  \"B\":40',\n+    'pie\\n  \"A\":\\n60\\n  \"B\":40',\n+    'pie\\n  \"A\"\\n:60\\n  \"B\":40',\n+  ]) {\n+    assert.equal(compileExplainerChart(input).svg, canonical);\n+    assert.equal(compileExplainerChart(input.replaceAll('\\n', '\\r\\n')).svg, canonical);\n+  }\n+});"
+        }
+      ]
+    },
+    {
+      "id": "node-before-close",
+      "title": "原测试：关闭后立即切换",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "why-before-close",
+          "type": "prose",
+          "text": "Agent 声明（Codex 独立阅读声明（依据公开 PR，未经原作者确认））：我的阅读：原测试关闭弹窗后直接聚焦下一步骤；引用这一删除行以区分产品修复与测试同步调整。"
+        },
+        {
+          "id": "status-before-close",
+          "type": "callout",
+          "level": "note",
+          "title": "引用吻合",
+          "text": "Range contains changed lines in the stated Git side. Semantic meaning and test results are not checked. 引用：base:test/explainer-browser.test.mjs:101–101。"
+        },
+        {
+          "id": "code-before-close",
+          "type": "snippet",
+          "title": "base · test/explainer-browser.test.mjs · L101–L101",
+          "language": "text",
+          "text": "  const first=await focusStep(1,['api'],['api-to-redis-1']);await keyboardActivate(browser,'[data-close-diagram]');const second=await focusStep(2,['redis'],['redis-to-api-1']);assert.equal(second.targetId,first.targetId,'The second step must update the existing native iframe');await keyboardActivate(browser,'[data-close-diagram]');const reopened=await focusStep(1,['api'],['api-to-redis-1']);assert.equal(reopened.targetId,first.targetId);await keyboardActivate(browser,'[data-close-diagram]');"
+        },
+        {
+          "id": "link-before-close",
+          "type": "prose",
+          "text": "[查看固定 revision 的源码](https://github.com/tt-a1i/archify/blob/82c7e0f089a02a4d514714adf37dc2061682da5f/test/explainer-browser.test.mjs#L101-L101)"
+        },
+        {
+          "id": "diff-before-close-0",
+          "type": "diff",
+          "caption": "真实 Git diff · test/explainer-browser.test.mjs · range-accounted",
+          "text": "@@ -101 +109 @@ test('native step opens the complete Viewer and focuses exact nodes and edges wi\n-  const first=await focusStep(1,['api'],['api-to-redis-1']);await keyboardActivate(browser,'[data-close-diagram]');const second=await focusStep(2,['redis'],['redis-to-api-1']);assert.equal(second.targetId,first.targetId,'The second step must update the existing native iframe');await keyboardActivate(browser,'[data-close-diagram]');const reopened=await focusStep(1,['api'],['api-to-redis-1']);assert.equal(reopened.targetId,first.targetId);await keyboardActivate(browser,'[data-close-diagram]');\n+  const first=await focusStep(1,['api'],['api-to-redis-1']);await closeStep();const second=await focusStep(2,['redis'],['redis-to-api-1']);assert.equal(second.targetId,first.targetId,'The second step must update the existing native iframe');await closeStep();const reopened=await focusStep(1,['api'],['api-to-redis-1']);assert.equal(reopened.targetId,first.targetId);await closeStep();"
+        }
+      ]
+    },
+    {
+      "id": "node-await-close",
+      "title": "测试同步：等待 close 事件",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "why-await-close",
+          "type": "prose",
+          "text": "Agent 声明（Codex 独立阅读声明（依据公开 PR，未经原作者确认））：我的阅读：新增 closeStep 等待 close 事件，再进行下一步操作；此 hunk 是浏览器测试同步调整，不是 pie runtime 实现，也不能据此声称 CI 已通过。"
+        },
+        {
+          "id": "status-await-close",
+          "type": "callout",
+          "level": "note",
+          "title": "引用吻合",
+          "text": "Range contains changed lines in the stated Git side. Semantic meaning and test results are not checked. 引用：head:test/explainer-browser.test.mjs:99–109。"
+        },
+        {
+          "id": "code-await-close",
+          "type": "snippet",
+          "title": "head · test/explainer-browser.test.mjs · L99–L109",
+          "language": "text",
+          "text": "  const closeStep=async()=>{\n   // dialog.close() queues close; the reader restores opener focus in that\n   // event. Finish it before the next helper focuses its requested step.\n   await pageValue(browser,`(()=>{const dialog=document.querySelector('#diagram-dialog');window.__nativeCloseResult=new Promise(resolve=>{const state=closed=>({closed,open:dialog.open,activeElement:document.activeElement?.outerHTML?.slice(0,400)});const finish=()=>{clearTimeout(timeout);resolve(state(true));};const timeout=setTimeout(()=>{dialog.removeEventListener('close',finish);resolve(state(false));},5000);dialog.addEventListener('close',finish,{once:true});});})()`);\n   await keyboardActivate(browser,'[data-close-diagram]');\n   const closed=await pageValue(browser,'(async()=>{const result=await window.__nativeCloseResult;delete window.__nativeCloseResult;return result;})()');\n   assert.equal(closed.closed,true,JSON.stringify(closed));assert.equal(closed.open,false,JSON.stringify(closed));\n  };\n  // Closing the modal makes the next step reachable. Reopening uses the same\n  // iframe with a different target, and the third opening changes it back. Actual child DOM selection is the proof, not the host's last ack.\n  const first=await focusStep(1,['api'],['api-to-redis-1']);await closeStep();const second=await focusStep(2,['redis'],['redis-to-api-1']);assert.equal(second.targetId,first.targetId,'The second step must update the existing native iframe');await closeStep();const reopened=await focusStep(1,['api'],['api-to-redis-1']);assert.equal(reopened.targetId,first.targetId);await closeStep();"
+        },
+        {
+          "id": "link-await-close",
+          "type": "prose",
+          "text": "[查看固定 revision 的源码](https://github.com/tt-a1i/archify/blob/5f012ab74911781e4a2a38fba791801d6e5afef7/test/explainer-browser.test.mjs#L99-L109)"
+        },
+        {
+          "id": "diff-await-close-0",
+          "type": "diff",
+          "caption": "真实 Git diff · test/explainer-browser.test.mjs · range-accounted",
+          "text": "@@ -98,0 +99,8 @@ test('native step opens the complete Viewer and focuses exact nodes and edges wi\n+  const closeStep=async()=>{\n+   // dialog.close() queues close; the reader restores opener focus in that\n+   // event. Finish it before the next helper focuses its requested step.\n+   await pageValue(browser,`(()=>{const dialog=document.querySelector('#diagram-dialog');window.__nativeCloseResult=new Promise(resolve=>{const state=closed=>({closed,open:dialog.open,activeElement:document.activeElement?.outerHTML?.slice(0,400)});const finish=()=>{clearTimeout(timeout);resolve(state(true));};const timeout=setTimeout(()=>{dialog.removeEventListener('close',finish);resolve(state(false));},5000);dialog.addEventListener('close',finish,{once:true});});})()`);\n+   await keyboardActivate(browser,'[data-close-diagram]');\n+   const closed=await pageValue(browser,'(async()=>{const result=await window.__nativeCloseResult;delete window.__nativeCloseResult;return result;})()');\n+   assert.equal(closed.closed,true,JSON.stringify(closed));assert.equal(closed.open,false,JSON.stringify(closed));\n+  };"
+        },
+        {
+          "id": "diff-await-close-1",
+          "type": "diff",
+          "caption": "真实 Git diff · test/explainer-browser.test.mjs · range-accounted",
+          "text": "@@ -101 +109 @@ test('native step opens the complete Viewer and focuses exact nodes and edges wi\n-  const first=await focusStep(1,['api'],['api-to-redis-1']);await keyboardActivate(browser,'[data-close-diagram]');const second=await focusStep(2,['redis'],['redis-to-api-1']);assert.equal(second.targetId,first.targetId,'The second step must update the existing native iframe');await keyboardActivate(browser,'[data-close-diagram]');const reopened=await focusStep(1,['api'],['api-to-redis-1']);assert.equal(reopened.targetId,first.targetId);await keyboardActivate(browser,'[data-close-diagram]');\n+  const first=await focusStep(1,['api'],['api-to-redis-1']);await closeStep();const second=await focusStep(2,['redis'],['redis-to-api-1']);assert.equal(second.targetId,first.targetId,'The second step must update the existing native iframe');await closeStep();const reopened=await focusStep(1,['api'],['api-to-redis-1']);assert.equal(reopened.targetId,first.targetId);await closeStep();"
+        }
+      ]
+    },
+    {
+      "id": "unexplained",
+      "title": "尚未解释 · 0 个 hunk",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "gap-meaning",
+          "type": "prose",
+          "text": "范围记账要求 base 的删除行与 head 的新增行都被声明覆盖。范围覆盖不衡量解释质量；请审查 why 是否准确。"
+        },
+        {
+          "id": "unsupported-0",
+          "type": "callout",
+          "level": "warning",
+          "text": "archify.zip: Blob exceeds 1 MiB experiment limit"
+        }
+      ]
+    }
+  ],
+  "sources": []
+}
