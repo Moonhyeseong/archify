@@ -239,6 +239,12 @@ provider is part of Focus ownership, not a second initialization step.
   clipboard/fallback results and 1600ms feedback. Older feedback callbacks still
   render the then-current copy action; no generation or cancellation policy is
   added. Fallback textarea cleanup and promise return values are unchanged.
+- A valid pinned relationship also exposes Copy reference in its existing Passport.
+  It uses the shared `copyReaderText` helper for plain text with real endpoint
+  labels/IDs, the raw relationship label (explicitly Unlabelled when absent),
+  and the authored relationship ID (or not provided). Same-direction parallel
+  order is labelled per-artifact and is not a stable ID or execution order.
+  Copying preserves semantic selection, camera, URL and canonical exports.
 
 | State or surface | Owner and dependencies |
 | --- | --- |

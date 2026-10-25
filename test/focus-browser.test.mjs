@@ -47,6 +47,13 @@ test('Focus preserves semantic selection, relationships, reachability and shared
   }
   variant('graph', graphSetup);
   variant('no-geometry', graphSetup + `document.querySelector('[data-edge-key="f"] path').remove();`);
+  variant('reference', graphSetup + `
+    fixtureSvg.querySelectorAll('[data-edge-key="d"],[data-edge-key="e"]').forEach(edge=>edge.setAttribute('data-edge-label','send "order"\\nnext'));
+    fixtureSvg.querySelectorAll('[data-edge-key="h"]').forEach(edge=>edge.removeAttribute('data-edge-id'));
+    fixtureSvg.querySelector('[data-node-id="cdn"]').setAttribute('data-node-label','Same label');
+    fixtureSvg.querySelector('[data-node-id="api"]').setAttribute('data-node-label','Same label');
+    fixtureSvg.insertAdjacentHTML('beforeend','<path data-edge-key="j" data-edge-id="edge-j" data-edge-from="api" data-edge-to="cdn" data-edge-label="response" d="M 515 210 L 245 210"/>');
+  `);
   const browser = desktopBrowser(chrome);
   t.after(() => browser.close());
   const session = await browser.sessionPromise;
@@ -227,6 +234,65 @@ test('Focus preserves semantic selection, relationships, reachability and shared
     assert.equal(clearedFeedback.canCopy, false);
 
   });
+  await t.test('pinned relationship reference uses the real button and preserves raw identity and reading state',async()=>{
+    await load('reference');
+    assert.equal(await run(`document.getElementById('btn-relationship-reference').hidden`),true);
+    await run(`window.referenceCopies=[];Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:value=>{referenceCopies.push(value);return Promise.resolve();}}})`);
+    const cases=[['d','edge-d','cdn','api','1/2'],['e','edge-e','cdn','api','2/2'],['j','edge-j','api','cdn','1/1'],['g','edge-g','api','api','1/1'],['h',null,'db','cache','1/1']];
+    for(const [key,id,from,to,ordinal] of cases){
+      await run(`Archify.focus.inspectRelationship(${JSON.stringify(key)},{toggle:false})`);await stable();
+      const before=await run(`({active:Archify.focus.active(),relation:Archify.focus.relationship(),camera:Archify.view.state(),hash:location.hash,svg:document.querySelector('.diagram-container>svg').outerHTML})`);
+      assert.equal(await run(`document.getElementById('btn-relationship-reference').hidden`),false);
+      await click('#btn-relationship-reference');
+      const after=await run(`({active:Archify.focus.active(),relation:Archify.focus.relationship(),camera:Archify.view.state(),hash:location.hash,svg:document.querySelector('.diagram-container>svg').outerHTML})`);
+      assert.deepEqual(after,before,'copy cannot navigate, select, mutate SVG or change camera/hash');
+      const copy=await run(`({text:referenceCopies.at(-1),feedback:document.getElementById('btn-relationship-reference').textContent,aria:document.getElementById('btn-relationship-reference').getAttribute('aria-label')})`);
+      const fromLabel=['cdn','api'].includes(from)?'Same label':from,toLabel=['cdn','api'].includes(to)?'Same label':to;
+      assert.ok(copy.text.includes('From: '+JSON.stringify(fromLabel)+' ['+JSON.stringify(from)+']'));
+      assert.ok(copy.text.includes('To: '+JSON.stringify(toLabel)+' ['+JSON.stringify(to)+']'));
+      assert.ok(copy.text.includes('Authored relationship ID: '+(id?JSON.stringify(id):'not provided')));
+      assert.ok(copy.text.includes('Parallel in this direction: '+ordinal+' (artifact order; not a stable ID)'));
+      assert.ok(copy.text.includes(['d','e'].includes(key)?'Relationship: '+JSON.stringify('send "order"\nnext'):key==='j'?'Relationship: "response"':'Relationship: Unlabelled (no authored label)'));
+      assert.equal(copy.feedback,'Copied');assert.equal(copy.aria,'Pinned relationship reference copied');
+      records.push({scenario:'relationship-reference-'+key,...copy});
+    }
+    await run('Archify.focus.set("users",{toggle:false})');await stable();
+    assert.equal(await run(`document.getElementById('btn-relationship-reference').hidden`),true);
+  });
+
+  await t.test('reference feedback cannot leak across a new pin and mobile actions remain inside the viewport',async()=>{
+    await load('reference');await run(`Archify.focus.inspectRelationship('d',{toggle:false});Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:()=>new Promise(resolve=>{window.resolveReference=resolve;})}})`);await stable();
+    await click('#btn-relationship-reference');
+    await run(`Archify.focus.inspectRelationship('e',{toggle:false});resolveReference()`);await stable();
+    assert.equal(await run(`document.getElementById('btn-relationship-reference').textContent`),'Copy reference');
+    for(const theme of ['dark','light']){
+      await load('reference',{width:390,theme});await run(`Archify.focus.inspectRelationship('d',{toggle:false})`);await stable();
+      const bounds=await run(`['btn-relationship-reference','btn-focus-clear'].map(id=>{const button=document.getElementById(id),r=button.getBoundingClientRect();return {id,visible:!button.hidden,left:r.left,right:r.right,top:r.top,bottom:r.bottom};})`);
+      for(const r of bounds){assert.equal(r.visible,true);assert.ok(r.left>=-1&&r.right<=391&&r.top>=-1&&r.bottom<=901,JSON.stringify(r));}
+      records.push({scenario:'relationship-reference-mobile-'+theme,bounds});
+    }
+    await load('reference');
+    await run(`document.querySelectorAll('[data-edge-key="e"]').forEach(edge=>edge.setAttribute('data-edge-id','edge-d'))`);
+    assert.equal(await run(`Archify.focus.inspectRelationship('d',{toggle:false})`),false);
+    assert.equal(await run(`document.getElementById('btn-relationship-reference').hidden`),true);
+  });
+
+  await t.test('reference fallback reports real success/failure and inherits the existing fallback focus behavior',async()=>{
+    for(const mode of ['reject','missing','false','throw']){
+      await load('reference');await run(`Archify.focus.inspectRelationship('h',{toggle:false})`);await stable();
+      await run(`window.referenceFallbackText=null;Object.defineProperty(navigator,'clipboard',{configurable:true,value:${mode==='missing'?'undefined':`{writeText:()=>Promise.reject(new Error('denied'))}`}});document.execCommand=()=>{referenceFallbackText=document.querySelector('textarea[readonly]').value;${mode==='throw'?`throw new Error('denied')`:`return ${mode==='false'?'false':'true'}`}}`);
+      const before=await run(`({active:Archify.focus.active(),camera:Archify.view.state(),hash:location.hash})`);
+      await click('#btn-relationship-reference');
+      const value=await run(`({feedback:document.getElementById('btn-relationship-reference').textContent,aria:document.getElementById('btn-relationship-reference').getAttribute('aria-label'),remaining:document.querySelectorAll('textarea[readonly]').length,text:referenceFallbackText,focused:document.activeElement.id})`);
+      assert.equal(value.feedback,['false','throw'].includes(mode)?'Copy failed':'Copied');
+      assert.equal(value.aria,['false','throw'].includes(mode)?'Could not copy pinned relationship reference':'Pinned relationship reference copied');
+      assert.equal(value.remaining,0);assert.ok(value.text.includes('Authored relationship ID: not provided'));
+      assert.deepEqual(await run(`({active:Archify.focus.active(),camera:Archify.view.state(),hash:location.hash})`),before);
+      // #862 owns the shared fallback focus repair; this candidate does not import it.
+      records.push({scenario:'relationship-reference-fallback-'+mode,...value});
+    }
+  });
+
   await t.test('real pulse completion and motion transitions preserve static relationship state',async()=>{
     await load('graph',{reduced:false});await run(`Archify.motionGovernor.resume();Archify.focus.inspectRelationshipById('edge-d')`);assert.equal(await run(`document.querySelectorAll('[data-relationship-pulse-overlay]').length`),1);
     await run(`focusWait(()=>pulseEvents.some(e=>e.type==='animationend'&&e.trusted))`);assert.equal((await snapshot('pulse-ended')).pulse,0);

@@ -1,0 +1,79 @@
+{
+  "kind": "portable-experiment-evidence-summary",
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "candidate": "uncommitted isolated working tree; source hashes identify this evidence",
+  "artifacts": {
+    "base.html": "3ee797c5806a5aeda056eae8e20d4f8e8fc2c1258de5f9194f7ba5aa10bdec7c",
+    "candidate.html": "f10224fd9324d76e686ee42331e4183102db2ef2f7b1ce9158a39a66c5586b76",
+    "parallel-base.html": "7f30619bbe459363ebac0b800329c61dfaf1e1d5c385e3bef692444c0ec38c67",
+    "parallel-candidate.html": "079b9144a16910d7d3a77ea24b247d4c5cc228db62d49c56751f0723aae00024",
+    "parallel.architecture.json": "5703dcaf86e2d61bce03768ff96599388c46c7578388f5b555501406b86006b4"
+  },
+  "sources": {
+    "viewer/focus.js": "4134f0eaffd899ec81137cef35fbae2308b3a14fb4532fad3fe69154228eeb65",
+    "viewer/template.source.html": "475372d871fbd92b0426aafdc4586f43ee69c4ff6ed704c7f3a21740d1f91bc3",
+    "test/focus-browser.test.mjs": "7078c63a1b9c8674aef2b90072fc373e7e46fd26ebb41d6ff8d7897988d54a32",
+    "archify/assets/template.html": "410d586153ddc39a4166e1bd573b4ebbe338e5df04881c8727a86de60acb07ab",
+    "archify/locales/en.json": "199d29fe892acb692ee15dee7ac301cf38c9fcf569c3706fca8508b0c2f0d1dc",
+    "archify/locales/zh-CN.json": "8eb1971c526d6b19ae13aa9afcf08bd81ccc9a08a5694e47b11da5d64e275184",
+    "archify/locales/zh-TW.json": "776f39e969f7af78a3e8394c6260cfb445fe0a88c651429932e555cea016c751",
+    "archify/locales/es.json": "188ef3172da444aaa515e2d8df69b427c7316d118783746f8907f2c71be97d35",
+    "archify/locales/ko.json": "e7101250229931a2726ac9f4b56b2105eb4361161f089add8f2fc20ac485daf2",
+    "archify/locales/ar.json": "140394e403532937c8734b2fe8fb390913587a68118b5d54b9a0dda64a4d5797"
+  },
+  "productionInput": {
+    "path": "archify/examples/production-deployment.architecture.json",
+    "sha256": "610a5614667e8f108bdcf1769c9d7af5c3ce0fb62be3ea50550b10eb752e4bda",
+    "modified": false
+  },
+  "toolchain": {
+    "node": "22.23.2",
+    "zlib": "1.3.1-e00f703"
+  },
+  "verification": {
+    "focused": {
+      "passed": 62,
+      "failed": 0,
+      "skipped": 0,
+      "files": [
+        "focus-browser",
+        "reading-address-browser",
+        "export-cleanup-browser",
+        "i18n"
+      ],
+      "note": "Same final production sources; afterwards removed only an assertion that incorrectly required the known fallback focus-loss bug."
+    },
+    "finalFocus": {
+      "passed": 16,
+      "failed": 0,
+      "skipped": 0,
+      "note": "Actual new button pointer path, controlled clipboard modern/fallback outcomes, identity, no SVG/selection/camera/hash changes, stale pin feedback and mobile bounds."
+    },
+    "generated": "pass",
+    "core": {
+      "passed": 19,
+      "failed": 0,
+      "skipped": 0
+    },
+    "zip": {
+      "sha256": "7aa89f76397797b707f2447562af53684aa41d949993359bfd482113d58a2df3",
+      "secondBuildByteIdentical": true
+    },
+    "diffCheck": "pass"
+  },
+  "baselineKnownIssue": {
+    "issue": "https://github.com/tt-a1i/archify/pull/862",
+    "stateAtLookup": "OPEN",
+    "description": "Shared copyReaderText fallback loses control focus after temporary textarea removal. Helper unchanged; focus observed, not asserted as required."
+  },
+  "setupAttempt": {
+    "initialArchivedPrefixCi": "failed npm lockfile discovery; no lockfile modified",
+    "resolution": "Baseline renderer used the same unchanged dependency installation as candidate via a disposable snapshot-only node_modules link."
+  },
+  "limits": [
+    "Controlled clipboard boundaries are not real OS clipboard acceptance.",
+    "No real-user timing, human visual acceptance, merge, release, deployment or live installation.",
+    "No full test:full, cross-platform package matrix or remote CI.",
+    "Raw receipts/logs remain outside checkout; this summary is a projection, not an unredacted receipt."
+  ]
+}

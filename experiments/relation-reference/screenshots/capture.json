@@ -1,0 +1,105 @@
+{
+  "kind": "portable-browser-capture-summary",
+  "date": "2026-10-25",
+  "captureTool": "ego-browser",
+  "taskSpace": 4,
+  "images": [
+    {
+      "image": "base-light.png",
+      "sha256": "8183006876eb0158ce8604912eb946a8d78d86cb2f1924e9bb261647ed10b91b",
+      "width": 1440,
+      "height": 900,
+      "source": "../parallel-base.html",
+      "sourceSha256": "7f30619bbe459363ebac0b800329c61dfaf1e1d5c385e3bef692444c0ec38c67",
+      "capturedAtUtc": "2026-10-25T05:09:02.877980+00:00",
+      "viewportCss": [
+        1440,
+        900
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "theme": "light",
+      "preset": "Blueprint",
+      "motion": "Still"
+    },
+    {
+      "image": "candidate-dark.png",
+      "sha256": "a4d7369e40edb342e713ceb08a975b1ee27386cf70b21d6dd5b37beec775b8c0",
+      "width": 1440,
+      "height": 900,
+      "source": "../parallel-candidate.html",
+      "sourceSha256": "079b9144a16910d7d3a77ea24b247d4c5cc228db62d49c56751f0723aae00024",
+      "capturedAtUtc": "2026-10-25T05:09:03.452014+00:00",
+      "viewportCss": [
+        1440,
+        900
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "theme": "dark",
+      "preset": "Blueprint",
+      "motion": "Still"
+    },
+    {
+      "image": "candidate-light.png",
+      "sha256": "4668ed911139e606f4acd91fc63825701a3c0f9dec219677c2515d72624bdb34",
+      "width": 1440,
+      "height": 900,
+      "source": "../parallel-candidate.html",
+      "sourceSha256": "079b9144a16910d7d3a77ea24b247d4c5cc228db62d49c56751f0723aae00024",
+      "capturedAtUtc": "2026-10-25T05:09:03.164093+00:00",
+      "viewportCss": [
+        1440,
+        900
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "theme": "light",
+      "preset": "Blueprint",
+      "motion": "Still"
+    },
+    {
+      "image": "candidate-mobile-dark.png",
+      "sha256": "f3e36d19fa48d671ef11508a3ba7281d607f993caac2996e6fab8a64af70df26",
+      "width": 390,
+      "height": 844,
+      "source": "../parallel-candidate.html",
+      "sourceSha256": "079b9144a16910d7d3a77ea24b247d4c5cc228db62d49c56751f0723aae00024",
+      "capturedAtUtc": "2026-10-25T05:09:04.003580+00:00",
+      "viewportCss": [
+        390,
+        844
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "theme": "dark",
+      "preset": "Blueprint",
+      "motion": "Still"
+    },
+    {
+      "image": "candidate-mobile-light.png",
+      "sha256": "a4c6145d034dd331473c144907fed3bfab8aaff41eb9bdf68f8c18b7aef6477f",
+      "width": 390,
+      "height": 844,
+      "source": "../parallel-candidate.html",
+      "sourceSha256": "079b9144a16910d7d3a77ea24b247d4c5cc228db62d49c56751f0723aae00024",
+      "capturedAtUtc": "2026-10-25T05:09:03.721818+00:00",
+      "viewportCss": [
+        390,
+        844
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "theme": "light",
+      "preset": "Blueprint",
+      "motion": "Still"
+    }
+  ],
+  "agentVisualReview": [
+    "The parent agent inspected desktop and 390px screenshots of the real pinned relationship UI. Desktop baseline/candidate were captured with the viewport set before navigation.",
+    "The copy reference control fits the inspected Passport. Existing mobile bottom-toolbar horizontal overflow remains visible; this is not a full mobile acceptance claim.",
+    "These captures do not exercise the OS clipboard. Controlled copy outcomes are recorded separately in observations.json."
+  ],
+  "humanAcceptance": "pending",
+  "imageGeneration": "none: actual browser screenshots"
+}

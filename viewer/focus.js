@@ -26,6 +26,7 @@
       var downstreamCount = document.getElementById('focus-reach-downstream-count');
       var relationshipList = document.getElementById('relationship-lens-list');
       var copyBtn = document.getElementById('btn-focus-copy');
+      var referenceBtn = document.getElementById('btn-relationship-reference');
       var relationsBtn = document.getElementById('btn-focus-relations');
       var clearBtn = document.getElementById('btn-focus-clear');
       var moveBtn = document.getElementById('btn-focus-move');
@@ -482,6 +483,9 @@
       }
       function renderRelationshipCopyAction() {
         var record = pinnedRelationshipRecord();
+        referenceBtn.hidden = !record;
+        referenceBtn.textContent = viewerText('viewer.passport.reference');
+        referenceBtn.setAttribute('aria-label', viewerText('viewer.passport.reference.aria'));
         if (record && record.id) {
           copyBtn.textContent = viewerText('viewer.passport.copyRelation');
           copyBtn.setAttribute('aria-label', viewerText('viewer.passport.copyPinned'));
@@ -1273,6 +1277,9 @@
         });
         edges().forEach(function (edge) { edge.removeAttribute('data-focus-match'); });
         chip.hidden = true;
+        referenceBtn.hidden = true;
+        referenceBtn.textContent = viewerText('viewer.passport.reference');
+        referenceBtn.setAttribute('aria-label', viewerText('viewer.passport.reference.aria'));
         label.textContent = '';
         detail.textContent = '';
         detail.hidden = true;
@@ -1393,6 +1400,36 @@
         return setMany([id], options);
       }
 
+      // Reader text keeps authored identity separate from per-artifact ordering.
+      // Quoted values preserve raw labels, including whitespace and newlines.
+      function copyRelationshipReference() {
+        var record = pinnedRelationshipRecord();
+        if (!record) return Promise.resolve(false);
+        var parallel = relationshipHitRecords().filter(function (candidate) {
+          return candidate.from === record.from && candidate.to === record.to;
+        });
+        var ordinal = parallel.findIndex(function (candidate) { return candidate.key === record.key; }) + 1;
+        var value = [
+          'From: ' + JSON.stringify(record.fromLabel) + ' [' + JSON.stringify(record.from) + ']',
+          'Relationship: ' + (record.labelValue ? JSON.stringify(record.labelValue) : 'Unlabelled (no authored label)'),
+          'To: ' + JSON.stringify(record.toLabel) + ' [' + JSON.stringify(record.to) + ']',
+          'Authored relationship ID: ' + (record.id ? JSON.stringify(record.id) : 'not provided'),
+          'Parallel in this direction: ' + ordinal + '/' + parallel.length + ' (artifact order; not a stable ID)'
+        ].join('\n');
+        return copyReaderText(value).then(function (copied) {
+          if (pinnedRelationshipKey !== record.key) return copied;
+          referenceBtn.textContent = viewerText(copied ? 'viewer.common.copied' : 'viewer.common.copyFailed');
+          referenceBtn.setAttribute('aria-label', viewerText(copied ? 'viewer.passport.reference.success' : 'viewer.passport.reference.failed'));
+          window.setTimeout(function () {
+            if (pinnedRelationshipKey === record.key) {
+              referenceBtn.textContent = viewerText('viewer.passport.reference');
+              referenceBtn.setAttribute('aria-label', viewerText('viewer.passport.reference.aria'));
+            }
+          }, 1600);
+          return copied;
+        });
+      }
+
       function copyFocusLink() {
         if (activeIds.length !== 1) return Promise.resolve(false);
         var record = pinnedRelationshipRecord();
@@ -1447,6 +1484,7 @@
       moveBtn.addEventListener('keydown', moveLensWithKeyboard);
       clearBtn.addEventListener('click', function () { clear({ restoreFocus: true }); });
       copyBtn.addEventListener('click', copyFocusLink);
+      referenceBtn.addEventListener('click', copyRelationshipReference);
       upstreamBtn.addEventListener('click', function () { applyReachability('upstream'); });
       downstreamBtn.addEventListener('click', function () { applyReachability('downstream'); });
       relationsBtn.addEventListener('click', function () {

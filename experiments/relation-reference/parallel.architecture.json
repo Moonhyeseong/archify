@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {"title":"Same names, different relationships", "subtitle":"Authored IDs distinguish parallel requests; the cache edge is unlabelled and has no authored ID.", "output":"parallel.html", "visual_preset":"blueprint", "animation":"trace"},
+  "components": [
+    {"id":"api-primary","type":"frontend","label":"Order API","sublabel":"request producer","pos":[90,220],"size":[170,70]},
+    {"id":"api-replica","type":"backend","label":"Order API","sublabel":"request receiver","pos":[570,220],"size":[170,70]},
+    {"id":"cache","type":"database","label":"Cache","pos":[950,220],"size":[140,70]}
+  ],
+  "connections": [
+    {"id":"write-order","from":"api-primary","to":"api-replica","label":"write order","route":"straight"},
+    {"id":"retry-order","from":"api-primary","to":"api-replica","label":"retry order","fromSide":"top","toSide":"top","via":[[175,120],[655,120]],"labelAt":[405,104]},
+    {"id":"order-response","from":"api-replica","to":"api-primary","label":"order response","fromSide":"bottom","toSide":"bottom","via":[[655,390],[175,390]],"labelAt":[405,410]},
+    {"from":"api-replica","to":"cache","route":"straight"}
+  ]
+}

@@ -1,0 +1,106 @@
+[
+  {
+    "scenario": "relationship-reference-d",
+    "text": "From: \"Same label\" [\"cdn\"]\nRelationship: \"send \\\"order\\\"\\nnext\"\nTo: \"Same label\" [\"api\"]\nAuthored relationship ID: \"edge-d\"\nParallel in this direction: 1/2 (artifact order; not a stable ID)",
+    "feedback": "Copied",
+    "aria": "Pinned relationship reference copied"
+  },
+  {
+    "scenario": "relationship-reference-e",
+    "text": "From: \"Same label\" [\"cdn\"]\nRelationship: \"send \\\"order\\\"\\nnext\"\nTo: \"Same label\" [\"api\"]\nAuthored relationship ID: \"edge-e\"\nParallel in this direction: 2/2 (artifact order; not a stable ID)",
+    "feedback": "Copied",
+    "aria": "Pinned relationship reference copied"
+  },
+  {
+    "scenario": "relationship-reference-j",
+    "text": "From: \"Same label\" [\"api\"]\nRelationship: \"response\"\nTo: \"Same label\" [\"cdn\"]\nAuthored relationship ID: \"edge-j\"\nParallel in this direction: 1/1 (artifact order; not a stable ID)",
+    "feedback": "Copied",
+    "aria": "Pinned relationship reference copied"
+  },
+  {
+    "scenario": "relationship-reference-g",
+    "text": "From: \"Same label\" [\"api\"]\nRelationship: Unlabelled (no authored label)\nTo: \"Same label\" [\"api\"]\nAuthored relationship ID: \"edge-g\"\nParallel in this direction: 1/1 (artifact order; not a stable ID)",
+    "feedback": "Copied",
+    "aria": "Pinned relationship reference copied"
+  },
+  {
+    "scenario": "relationship-reference-h",
+    "text": "From: \"db\" [\"db\"]\nRelationship: Unlabelled (no authored label)\nTo: \"cache\" [\"cache\"]\nAuthored relationship ID: not provided\nParallel in this direction: 1/1 (artifact order; not a stable ID)",
+    "feedback": "Copied",
+    "aria": "Pinned relationship reference copied"
+  },
+  {
+    "scenario": "relationship-reference-mobile-dark",
+    "bounds": [
+      {
+        "id": "btn-relationship-reference",
+        "visible": true,
+        "left": 263.75,
+        "right": 352,
+        "top": 352.53125,
+        "bottom": 374.125
+      },
+      {
+        "id": "btn-focus-clear",
+        "visible": true,
+        "left": 324,
+        "right": 352,
+        "top": 297.1875,
+        "bottom": 325.1875
+      }
+    ]
+  },
+  {
+    "scenario": "relationship-reference-mobile-light",
+    "bounds": [
+      {
+        "id": "btn-relationship-reference",
+        "visible": true,
+        "left": 263.75,
+        "right": 352,
+        "top": 352.53125,
+        "bottom": 374.125
+      },
+      {
+        "id": "btn-focus-clear",
+        "visible": true,
+        "left": 324,
+        "right": 352,
+        "top": 297.1875,
+        "bottom": 325.1875
+      }
+    ]
+  },
+  {
+    "scenario": "relationship-reference-fallback-reject",
+    "feedback": "Copied",
+    "aria": "Pinned relationship reference copied",
+    "remaining": 0,
+    "text": "From: \"db\" [\"db\"]\nRelationship: Unlabelled (no authored label)\nTo: \"cache\" [\"cache\"]\nAuthored relationship ID: not provided\nParallel in this direction: 1/1 (artifact order; not a stable ID)",
+    "focused": ""
+  },
+  {
+    "scenario": "relationship-reference-fallback-missing",
+    "feedback": "Copied",
+    "aria": "Pinned relationship reference copied",
+    "remaining": 0,
+    "text": "From: \"db\" [\"db\"]\nRelationship: Unlabelled (no authored label)\nTo: \"cache\" [\"cache\"]\nAuthored relationship ID: not provided\nParallel in this direction: 1/1 (artifact order; not a stable ID)",
+    "focused": ""
+  },
+  {
+    "scenario": "relationship-reference-fallback-false",
+    "feedback": "Copy failed",
+    "aria": "Could not copy pinned relationship reference",
+    "remaining": 0,
+    "text": "From: \"db\" [\"db\"]\nRelationship: Unlabelled (no authored label)\nTo: \"cache\" [\"cache\"]\nAuthored relationship ID: not provided\nParallel in this direction: 1/1 (artifact order; not a stable ID)",
+    "focused": ""
+  },
+  {
+    "scenario": "relationship-reference-fallback-throw",
+    "feedback": "Copy failed",
+    "aria": "Could not copy pinned relationship reference",
+    "remaining": 0,
+    "text": "From: \"db\" [\"db\"]\nRelationship: Unlabelled (no authored label)\nTo: \"cache\" [\"cache\"]\nAuthored relationship ID: not provided\nParallel in this direction: 1/1 (artifact order; not a stable ID)",
+    "focused": ""
+  }
+]
