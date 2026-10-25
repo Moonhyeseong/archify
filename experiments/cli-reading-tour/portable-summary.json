@@ -1,0 +1,162 @@
+{
+  "recordType": "Derived portable selected validation summary, NOT an original Archify receipt",
+  "archifyBase": "3f95f0349c8276db71509ca239461b6fe9d00f9f",
+  "branch": "codex/lab-cli-reading-tour",
+  "upstream": {
+    "repository": "https://github.com/kyooosukedn/walkthrough",
+    "commit": "a373526c92bd1d4c3953370b9a57f19e4fb15d08",
+    "license": "MIT",
+    "classification": "fixed source reading, not an upstream run"
+  },
+  "node": "v22.23.3",
+  "command": "node archify/bin/archify.mjs finalize explainer experiments/cli-reading-tour/cli-reading-tour.archify.md experiments/cli-reading-tour/output/tour.html --repo-root <fixed-upstream-checkout> --out-dir <private-receipts> --json",
+  "finalize": {
+    "status": "pass",
+    "gates": {
+      "validate": "pass",
+      "deliver": "pass",
+      "check": "pass",
+      "browser-check": "not-run"
+    },
+    "diagnosticCodes": [],
+    "browserCheck": {
+      "requested": false,
+      "ran": false
+    },
+    "visualReview": "not-requested",
+    "rawStdoutSha256": "d7057670361a884d2b41bdf017792b919015fb62c70342974cf2e20739105b89",
+    "specificationSha256": "5eec8481a740baec23a8898d6f4885315c5f327551aa156592d25afbf789275d",
+    "artifactSha256": "7814b929dd002ea2b1083575899cf0739ce83effd84488251cf85addb7bce190"
+  },
+  "staticEvidence": {
+    "originalFiles": "7 full files/license match pinned Git objects",
+    "sourceCards": "11 excerpts match exact inclusive ranges; file hashes bind full files",
+    "nativeMap": "10 nodes, 9 edges; each node maps to one declared source ID",
+    "preparedText": "equals current authored MD",
+    "paths": "public HTML has no /Users or /tmp strings",
+    "checks": "source-checks.json"
+  },
+  "history": [
+    {
+      "issue": "Initial prose promised focus on preview nodes without a verified Tabstop.",
+      "beforeHtmlSha256": "64c0ace1af28a142c90246326ed19619eaca690d8661ca31041510c230592a6f",
+      "resolution": "Changed only prose to node hover plus pinned source citation links; no product behavior changed. Sources/native diagram unchanged.",
+      "beforeEvidence": "Original draft/HTML/raw receipts retained outside checkout; root kept first captures in temporary history."
+    }
+  ],
+  "runtimeNotExecuted": [
+    "upstream CLI",
+    "scanner",
+    "HTTP service",
+    "LLM",
+    "upstream browser UI",
+    "user code/repository scan"
+  ],
+  "testPolicy": "Content-only fixed source artifact: no general parser/behavior or test changes; no full/upstream suites run.",
+  "screenshots": {
+    "capture": "screenshots/capture.json",
+    "recordType": "derived portable summary of actual coordinating-agent captures",
+    "status": "final artifact visually reviewed; three original PNGs copied unchanged",
+    "actualChecks": [
+      "full page and overview viewed",
+      "Start Walk + Next twice reaches 3/4",
+      "hover HTTP response pinned source card",
+      "Escape hides source card"
+    ],
+    "notClaimed": [
+      "preview-node Tab navigation",
+      "automated browser gate",
+      "upstream execution",
+      "human acceptance",
+      "learning speed"
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "0227c5f8b668658934974a27df0dc8ad07f9bfeb35038c0f245e10e6d4245180",
+      "bytes": 5911
+    },
+    {
+      "path": "cli-reading-tour.archify.md",
+      "sha256": "5eec8481a740baec23a8898d6f4885315c5f327551aa156592d25afbf789275d",
+      "bytes": 6754
+    },
+    {
+      "path": "output/tour.html",
+      "sha256": "7814b929dd002ea2b1083575899cf0739ce83effd84488251cf85addb7bce190",
+      "bytes": 686303
+    },
+    {
+      "path": "screenshots/capture.json",
+      "sha256": "28fca3017da96c5aadb615d816e8e942b6b7bda130026ddffce10834a2c794a8",
+      "bytes": 2101
+    },
+    {
+      "path": "screenshots/full-page.png",
+      "sha256": "738660d3555c92a4176f5677a8968426e980d9fae1935a2a511afbbf98ae841a",
+      "bytes": 551804
+    },
+    {
+      "path": "screenshots/overview.png",
+      "sha256": "a265689106b4ac384afb4cbd55d000b2094b0d7a0fe66bc1d46bfd8b29106803",
+      "bytes": 222565
+    },
+    {
+      "path": "screenshots/source-card.png",
+      "sha256": "39e4d494b75d38d1e361a0c25a247c71455ac6135f95b6628eef2aa96808995d",
+      "bytes": 292869
+    },
+    {
+      "path": "source/LICENSE",
+      "sha256": "ab38918f782845f71ae56421e8cfc629b31a53701f8b5087eaa36788b6a4b37b",
+      "bytes": 1071
+    },
+    {
+      "path": "source/manifest.json",
+      "sha256": "4f377b8aec60db32b2184131f97ac52a243a9266e18e940b6e6ec7c4c4784edb",
+      "bytes": 2801
+    },
+    {
+      "path": "source/packages/cli/package.json",
+      "sha256": "32a3c1c1c0004e73a8eb6a8e9a66a7ba5a2a7563d31260e6564e48d1700c19b6",
+      "bytes": 1185
+    },
+    {
+      "path": "source/packages/cli/src/index.ts",
+      "sha256": "eaedcca0d16b6b24e31139d70d574f3e600f0a4264e849d8b7ac8c047b747ae8",
+      "bytes": 6084
+    },
+    {
+      "path": "source/packages/scanner/src/output/json.ts",
+      "sha256": "d47cbb5586d044826920c6d9e026ddebc70b2283f02ce45a42a35c8fc24b5d10",
+      "bytes": 316
+    },
+    {
+      "path": "source/packages/visualizer/src/App.tsx",
+      "sha256": "5b212aa1cf0e6c2df7bcad10d3fd5aa4151a3cce3107a39329d0d5d775d411c2",
+      "bytes": 5265
+    },
+    {
+      "path": "source/packages/visualizer/src/data/context.tsx",
+      "sha256": "623c43ae534749ab1a2a5b669fe8db956d540c8b4c79742c5d2dc4731d712fdd",
+      "bytes": 1205
+    },
+    {
+      "path": "source/packages/visualizer/src/data/loader.ts",
+      "sha256": "86eda68d14a3b35b65e300c7a455684af5142ec1bda69dbf50f127b71d74f9ee",
+      "bytes": 1838
+    },
+    {
+      "path": "source-checks.json",
+      "sha256": "ffb8ddf032605df659b26750e7e2900942803d130b1828e8dd27149d1815469d",
+      "bytes": 5841
+    }
+  ],
+  "whitespace": {
+    "allStagedExitCode": 2,
+    "generatedHtmlTrailingWhitespaceFindings": 12,
+    "excludingGeneratedHtmlExitCode": 0,
+    "generatedBytesEdited": false
+  }
+}

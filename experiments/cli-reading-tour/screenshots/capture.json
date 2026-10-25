@@ -1,0 +1,58 @@
+{
+  "recordType": "Derived portable capture summary from actual coordinating-agent screenshots, not the original capture record",
+  "capturedAt": "2026-10-25T08:09:34.667Z",
+  "viewport": {
+    "width": 1440,
+    "height": 1100,
+    "deviceScaleFactor": 1
+  },
+  "theme": "light",
+  "artifact": "output/tour.html",
+  "artifactSha256": "7814b929dd002ea2b1083575899cf0739ce83effd84488251cf85addb7bce190",
+  "artifactBytes": 686303,
+  "rawCaptureSha256": "68af41529a0bfd9e301c21aad5a880efb4e522e7fce2ff8785363d2d96c87c2e",
+  "originalCaptureLocation": "outside checkout in temporary history",
+  "reviewer": "coordinating Codex agent; not human acceptance",
+  "rootViewed": true,
+  "images": [
+    {
+      "path": "screenshots/overview.png",
+      "sha256": "a265689106b4ac384afb4cbd55d000b2094b0d7a0fe66bc1d46bfd8b29106803",
+      "bytes": 222565,
+      "width": 1440,
+      "height": 1100,
+      "rootViewed": true
+    },
+    {
+      "path": "screenshots/full-page.png",
+      "sha256": "738660d3555c92a4176f5677a8968426e980d9fae1935a2a511afbbf98ae841a",
+      "bytes": 551804,
+      "width": 1440,
+      "height": 2318,
+      "rootViewed": true
+    },
+    {
+      "path": "screenshots/source-card.png",
+      "sha256": "39e4d494b75d38d1e361a0c25a247c71455ac6135f95b6628eef2aa96808995d",
+      "bytes": 292869,
+      "width": 1440,
+      "height": 1100,
+      "rootViewed": true
+    }
+  ],
+  "interaction": {
+    "coordinatingAgentObservation": "Start Walk, Next twice reached step 3/4; hover response node showed fixed source card; Escape hid card. No external source link clicked.",
+    "sourceVisible": true,
+    "sourceHref": "https://github.com/kyooosukedn/walkthrough/blob/a373526c92bd1d4c3953370b9a57f19e4fb15d08/packages/cli/src/index.ts#L84-L98",
+    "hiddenAfterEscape": true,
+    "executionScope": "Archify page interaction only; no upstream Walkthrough execution"
+  },
+  "notClaimed": [
+    "preview-node keyboard Tab support",
+    "all possible interactions",
+    "automated browser-check gate",
+    "reading efficiency",
+    "upstream server or scan success",
+    "human acceptance"
+  ]
+}

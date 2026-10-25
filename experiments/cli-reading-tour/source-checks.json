@@ -1,0 +1,169 @@
+{
+  "recordType": "Derived fixed-source/data binding checks, not an upstream program run",
+  "repository": "https://github.com/kyooosukedn/walkthrough",
+  "revision": "a373526c92bd1d4c3953370b9a57f19e4fb15d08",
+  "archifyBase": "3f95f0349c8276db71509ca239461b6fe9d00f9f",
+  "sourceFiles": "7 full files/license byte-equal to fixed Git blobs",
+  "sourceCards": [
+    {
+      "id": "cli-scan",
+      "path": "packages/cli/src/index.ts",
+      "lines": [
+        47,
+        60
+      ],
+      "fileSha256": "eaedcca0d16b6b24e31139d70d574f3e600f0a4264e849d8b7ac8c047b747ae8",
+      "fileBytes": 6084,
+      "excerptSha256": "adb84b9a0871aef48162128f8911706496716c7fa02d0061f34aa54f8000afee",
+      "excerptBytes": 418
+    },
+    {
+      "id": "json-return",
+      "path": "packages/cli/src/index.ts",
+      "lines": [
+        62,
+        66
+      ],
+      "fileSha256": "eaedcca0d16b6b24e31139d70d574f3e600f0a4264e849d8b7ac8c047b747ae8",
+      "fileBytes": 6084,
+      "excerptSha256": "54cc4c492d597734a11246501d8408116ec69027a3050294c41905cc0088c4d0",
+      "excerptBytes": 125
+    },
+    {
+      "id": "file-mode",
+      "path": "packages/cli/src/index.ts",
+      "lines": [
+        68,
+        80
+      ],
+      "fileSha256": "eaedcca0d16b6b24e31139d70d574f3e600f0a4264e849d8b7ac8c047b747ae8",
+      "fileBytes": 6084,
+      "excerptSha256": "3dbd3f1524d3a91a8023ca9a451e15c856d3dd6c869db8d4d02f5e868a262e03",
+      "excerptBytes": 345
+    },
+    {
+      "id": "write-file",
+      "path": "packages/scanner/src/output/json.ts",
+      "lines": [
+        4,
+        8
+      ],
+      "fileSha256": "d47cbb5586d044826920c6d9e026ddebc70b2283f02ce45a42a35c8fc24b5d10",
+      "fileBytes": 316,
+      "excerptSha256": "bee5e3eebfc4a93a2ea531e2194ae63018a6668cd2d7f6c38a1a581d0c474901",
+      "excerptBytes": 224
+    },
+    {
+      "id": "http-snapshot",
+      "path": "packages/cli/src/index.ts",
+      "lines": [
+        84,
+        98
+      ],
+      "fileSha256": "eaedcca0d16b6b24e31139d70d574f3e600f0a4264e849d8b7ac8c047b747ae8",
+      "fileBytes": 6084,
+      "excerptSha256": "86310fb32f9fe5d9efb20e12254ab81013f9d0a229fc1d67e591bdbb8f0dbb30",
+      "excerptBytes": 756
+    },
+    {
+      "id": "no-bundle",
+      "path": "packages/cli/src/index.ts",
+      "lines": [
+        101,
+        105
+      ],
+      "fileSha256": "eaedcca0d16b6b24e31139d70d574f3e600f0a4264e849d8b7ac8c047b747ae8",
+      "fileBytes": 6084,
+      "excerptSha256": "9a95554ef78aaefa8f635a7793f496547462da4c6251d471017c78694d2d766c",
+      "excerptBytes": 306
+    },
+    {
+      "id": "browser-fetch",
+      "path": "packages/visualizer/src/data/loader.ts",
+      "lines": [
+        19,
+        30
+      ],
+      "fileSha256": "86eda68d14a3b35b65e300c7a455684af5142ec1bda69dbf50f127b71d74f9ee",
+      "fileBytes": 1838,
+      "excerptSha256": "295b9d1b172028b94aa34ff42d8879238f1731da872ab2c961823ce9d5d2145d",
+      "excerptBytes": 419
+    },
+    {
+      "id": "provider-state",
+      "path": "packages/visualizer/src/data/context.tsx",
+      "lines": [
+        30,
+        43
+      ],
+      "fileSha256": "623c43ae534749ab1a2a5b669fe8db956d540c8b4c79742c5d2dc4731d712fdd",
+      "fileBytes": 1205,
+      "excerptSha256": "1955ebd6afbfb37fdf9f1daf02412d583076135a4be5c2b489833d8b66c230db",
+      "excerptBytes": 382
+    },
+    {
+      "id": "start-guard",
+      "path": "packages/visualizer/src/App.tsx",
+      "lines": [
+        36,
+        40
+      ],
+      "fileSha256": "5b212aa1cf0e6c2df7bcad10d3fd5aa4151a3cce3107a39329d0d5d775d411c2",
+      "fileBytes": 5265,
+      "excerptSha256": "476a035c6beefaf31226289858207632fd8ff4adaba823b8b52bb23924cdf0a9",
+      "excerptBytes": 182
+    },
+    {
+      "id": "start-run",
+      "path": "packages/visualizer/src/App.tsx",
+      "lines": [
+        53,
+        56
+      ],
+      "fileSha256": "5b212aa1cf0e6c2df7bcad10d3fd5aa4151a3cce3107a39329d0d5d775d411c2",
+      "fileBytes": 5265,
+      "excerptSha256": "1dbbb7c060dda35ada277bf7e017228ea70a406f988b0d34ccc0f13d9df62a9f",
+      "excerptBytes": 81
+    },
+    {
+      "id": "welcome-gate",
+      "path": "packages/visualizer/src/App.tsx",
+      "lines": [
+        95,
+        103
+      ],
+      "fileSha256": "5b212aa1cf0e6c2df7bcad10d3fd5aa4151a3cce3107a39329d0d5d775d411c2",
+      "fileBytes": 5265,
+      "excerptSha256": "9272b0d7eafe4a275e7d986d2d159f33cc643bc25ba13cdb80e049e76376978f",
+      "excerptBytes": 247
+    }
+  ],
+  "nodeSourceMap": {
+    "scan": "cli-scan",
+    "json-mode": "json-return",
+    "stdout-return": "json-return",
+    "file-write": "file-mode",
+    "no-serve-mode": "file-mode",
+    "file-return": "file-mode",
+    "snapshot": "http-snapshot",
+    "response": "http-snapshot",
+    "browser-data": "browser-fetch",
+    "start": "start-guard"
+  },
+  "binding": "10 native nodes all bind one declared SourceCard; document and native node IDs match; 11 source excerpts equal Git ranges",
+  "preparedSourceTextEqualsDraft": true,
+  "publicPaths": "no /Users or /tmp strings",
+  "semanticScope": "static source call/write/branch reading; no upstream CLI/server/browser execution",
+  "unmodeledBranches": [
+    "target not found",
+    "scan/write failures",
+    "port conflict",
+    "HTTP/static file errors",
+    "missing visualizer bundle raw HTML branch",
+    "network/data validation failure"
+  ],
+  "authorInterpretation": "Node labels/diagram grouping/read order are authored; source evidence fixes the stated call/return/argument facts, not actual execution or performance.",
+  "currentDraftSha256": "5eec8481a740baec23a8898d6f4885315c5f327551aa156592d25afbf789275d",
+  "currentHtmlSha256": "7814b929dd002ea2b1083575899cf0739ce83effd84488251cf85addb7bce190",
+  "readerInteractionBoundary": "SourceCard node hover is supported; preview nodes have no own Tabstop. No node keyboard-focus promise. Source citations retain pinned range links."
+}
