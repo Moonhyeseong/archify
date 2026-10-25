@@ -780,16 +780,18 @@ ${artifactCss}
 .proof-tools{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:16px 0 10px}.view-switch{display:inline-flex;padding:3px;border:1px solid var(--d-line);border-radius:8px;background:#0a141e}.view-switch button,.utility,.review-step{border:0;border-radius:6px;background:transparent;color:var(--d-muted);padding:8px 14px;font:700 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;cursor:pointer}.view-switch button[aria-selected="true"]{background:#173047;color:#fff}.utility{border:1px solid var(--d-line)}.view-switch button:focus-visible,.utility:focus-visible,.review-step:focus-visible,.change-row:focus-visible{outline:2px solid var(--d-focus);outline-offset:2px}.utility:disabled,.review-step:disabled{cursor:not-allowed;opacity:.45}.legend{display:flex;gap:16px;color:var(--d-muted);font:650 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace}.legend span{display:inline-flex;align-items:center;gap:6px}.legend i{width:22px;border-top:3px solid currentColor}.legend .add{color:var(--d-add)}.legend .remove{color:var(--d-remove)}.legend .remove i{border-top-style:dashed}.legend .change{color:var(--d-change)}.legend .change i{border-top-style:dotted}.legend .move{color:var(--d-move)}.legend .move i{border-top-style:double}
 .provenance-change{display:flex;align-items:center;gap:12px;margin:14px 0 0;padding:10px 13px;border:1px solid rgba(125,211,252,.45);border-radius:8px;background:rgba(125,211,252,.07);color:var(--d-muted);font:650 11px/1.35 ui-monospace,SFMono-Regular,Menlo,monospace}.provenance-change strong{color:var(--d-focus)}.provenance-change span{margin-left:auto;color:var(--d-muted)}
 .review-strip{display:grid;grid-template-columns:auto auto auto auto minmax(0,1fr);align-items:center;gap:5px;margin:0 0 10px;padding:7px 8px;border-block:1px solid var(--d-line);font-family:ui-monospace,SFMono-Regular,Menlo,monospace}.review-step{min-height:34px;border:1px solid var(--d-line);padding-inline:11px}.review-step[aria-pressed="true"]{border-color:var(--d-focus);color:var(--d-ink)}.review-status{min-width:0;padding-left:9px;color:var(--d-muted);font-size:10px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.review-status strong{color:var(--d-ink);font-weight:750}.review-status[data-state="unavailable"]{color:var(--d-remove)}
+.review-values{margin:0 0 10px;padding:10px 12px;border:1px solid var(--d-line);border-radius:6px;font-size:11px;line-height:1.5}.review-values[hidden]{display:none}.review-values>strong{display:block;margin-bottom:6px;overflow-wrap:anywhere}.review-values dl{margin:0}.review-value{display:grid;grid-template-columns:70px minmax(0,1fr);gap:10px}.review-value+.review-value{margin-top:6px}.review-value dt{color:var(--d-muted)}.review-value dd{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;margin:0}.review-value small{display:block;color:var(--d-muted);font-size:9px}.review-value code{white-space:pre-wrap;overflow-wrap:anywhere}.review-values p{margin:6px 0 0;color:var(--d-muted)}
 .canvas{overflow:hidden;border:1px solid var(--d-line);border-radius:10px;background:#09141e;padding:12px;min-height:520px}.canvas svg{display:block;width:100%;height:auto;max-height:72vh}.canvas[hidden]{display:none}.snapshot-frame{display:block;width:100%;height:min(76vh,920px);min-height:620px;border:0;border-radius:6px;background:#071019}.canvas[data-view="base"],.canvas[data-view="head"]{padding:0}.canvas[data-view="delta"] [data-delta-state="same"]{opacity:.38}.canvas[data-delta-review-active]{--review-same-opacity:.14;--review-change-opacity:.28}.canvas[data-delta-review-active] [data-delta-state="same"]{opacity:var(--review-same-opacity)!important}.canvas[data-delta-review-active] [data-delta-state]:not([data-delta-state="same"]):not([data-delta-review-current]){opacity:var(--review-change-opacity)!important}.canvas[data-delta-review-active] [data-delta-review-current]{opacity:1!important;transition:opacity .16s ease-out}g[data-node-id][data-delta-state="added"]>rect:last-of-type{stroke:var(--d-add)!important;stroke-width:3!important}g[data-node-id][data-delta-state="removed"]>rect:last-of-type{stroke:var(--d-remove)!important;stroke-width:3!important;stroke-dasharray:7 5}g[data-node-id][data-delta-state="changed"]>rect:last-of-type{stroke:var(--d-change)!important;stroke-width:3!important;stroke-dasharray:2 3}g[data-node-id][data-delta-state="moved"]>rect:last-of-type,g[data-node-id][data-delta-state="moved-from"]>rect:last-of-type{stroke:var(--d-move)!important;stroke-width:3!important;stroke-dasharray:8 3 2 3}g[data-node-id][data-delta-state="moved-from"],path[data-delta-state="moved-from"]{opacity:.42}path[data-delta-state="added"]{stroke:var(--d-add)!important;stroke-width:3!important}path[data-delta-state="removed"]{stroke:var(--d-remove)!important;stroke-width:3!important;stroke-dasharray:7 5!important}path[data-delta-state="changed"]{stroke:var(--d-change)!important;stroke-width:3!important;stroke-dasharray:2 3!important}path[data-delta-state="rerouted"],path[data-delta-state="moved-from"]{stroke:var(--d-move)!important;stroke-width:2.5!important;stroke-dasharray:8 3 2 3!important}.delta-node-marker circle{fill:#071019;stroke:currentColor;stroke-width:1.5}.delta-node-marker text,.delta-edge-marker,.delta-boundary-marker{fill:currentColor;font:800 9px ui-monospace,SFMono-Regular,Menlo,monospace}[data-delta-state="added"] .delta-node-marker,.delta-edge-marker[data-delta-state="added"],.delta-boundary-marker[data-delta-state="added"]{color:var(--d-add)}[data-delta-state="removed"] .delta-node-marker,.delta-edge-marker[data-delta-state="removed"],.delta-boundary-marker[data-delta-state="removed"]{color:var(--d-remove)}[data-delta-state="changed"] .delta-node-marker,.delta-edge-marker[data-delta-state="changed"],.delta-boundary-marker[data-delta-state="changed"]{color:var(--d-change)}[data-delta-state="moved"] .delta-node-marker,[data-delta-state="moved-from"] .delta-node-marker,.delta-edge-marker[data-delta-state="moved-from"],.delta-edge-marker[data-delta-state="rerouted"],.delta-boundary-marker[data-delta-state="geometry-changed"]{color:var(--d-move)}.delta-edge-marker,.delta-boundary-marker{paint-order:stroke;stroke:#071019;stroke-width:3px}
 rect[data-graph-role="structural-frame"][data-delta-state="added"]{stroke:var(--d-add)!important;stroke-width:2.5!important}rect[data-graph-role="structural-frame"][data-delta-state="removed"]{stroke:var(--d-remove)!important;stroke-width:2.5!important;stroke-dasharray:7 5!important}rect[data-graph-role="structural-frame"][data-delta-state="changed"]{stroke:var(--d-change)!important;stroke-width:2.5!important;stroke-dasharray:2 3!important}rect[data-graph-role="structural-frame"][data-delta-state="moved-from"]{stroke:var(--d-move)!important;stroke-width:2!important;stroke-dasharray:8 3 2 3!important;opacity:.42}text[data-delta-boundary-state="added"]{fill:var(--d-add)!important}text[data-delta-boundary-state="removed"]{fill:var(--d-remove)!important}text[data-delta-boundary-state="changed"]{fill:var(--d-change)!important}text[data-delta-boundary-state="moved-from"]{fill:var(--d-move)!important;opacity:.55}
 details{margin-top:12px;border:1px solid var(--d-line);border-radius:9px;background:#0a141e}summary{padding:13px 15px;cursor:pointer;font-weight:700}.changes{list-style:none;margin:0;padding:0 8px 8px}.changes li{border-top:1px solid rgba(138,160,181,.16)}.change-row{display:grid;grid-template-columns:30px 90px minmax(140px,1fr) minmax(100px,.7fr) minmax(120px,.8fr) minmax(140px,1.2fr);gap:10px;width:100%;margin:0;padding:9px 7px;border:0;border-radius:5px;background:transparent;color:inherit;font:inherit;font-size:11px;text-align:left;align-items:baseline;cursor:pointer}.change-row:hover{background:rgba(125,211,252,.06)}.change-row[aria-current="step"]{background:rgba(125,211,252,.1);box-shadow:inset 0 0 0 1px var(--d-focus)}.change-row:disabled{cursor:default}.token{font:800 13px/1 ui-monospace,SFMono-Regular,Menlo,monospace}.changes code,.change-row>span:last-child{color:var(--d-muted)}.proof-foot{display:flex;justify-content:space-between;gap:24px;margin-top:14px;color:var(--d-muted);font:650 10px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace}
 html[data-theme="dark"] body{background:#071019!important;background-image:none!important}html[data-theme="light"]{color-scheme:light;--d-ink:#10283c;--d-muted:#587187;--d-line:#c8d6e2;--d-focus:#006b8f}html[data-theme="light"] body{background:#eef3f7!important;background-image:none!important;color:var(--d-ink)}html[data-theme="light"] .metric,html[data-theme="light"] .view-switch,html[data-theme="light"] details{background:#fff}html[data-theme="light"] .canvas{background:#f8fbfd}html[data-theme="light"] .view-switch button[aria-selected="true"]{background:#dbeaf5;color:#10283c}html[data-theme="light"] .delta-node-marker circle{fill:#fff}html[data-preset="blueprint"] body{background-image:none!important}
-@media(max-width:760px){.proof-page{width:100%;padding:12px}.proof-head{grid-template-columns:1fr;gap:14px;align-items:start}.proof-head h1{font-size:32px}.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%}.metric{min-width:0}.provenance-change{align-items:flex-start;flex-wrap:wrap}.provenance-change span{width:100%;margin-left:0}.proof-tools{align-items:stretch;flex-wrap:wrap;gap:8px}.view-switch{display:flex;flex:1 1 100%}.view-switch button{flex:1;padding-inline:8px}.legend{flex-wrap:wrap;gap:8px}.proof-tools>div:last-child{margin-left:auto}.review-strip{grid-template-columns:auto auto auto auto}.review-status{grid-column:1/-1;padding:4px 2px 0}.canvas{min-height:0;padding:6px;overflow:auto}.canvas svg{min-width:720px;max-height:none}.snapshot-frame{min-width:720px}.changes{overflow-x:auto}.change-row{min-width:820px}.proof-foot{flex-direction:column;gap:4px}}
-@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.canvas[data-delta-review-active] [data-delta-review-current]{transition:none!important}}@media print{body{min-width:0;background:#fff;color:#111}.proof-page{width:100%;padding:0}.proof-tools,.review-strip,details{display:none!important}.canvas{display:none!important}.canvas[data-view="delta"]{display:block!important;border:0}.canvas[data-view="delta"] [data-delta-state="same"]{opacity:1!important;transition:none!important}.canvas[data-delta-review-active]{--review-same-opacity:1;--review-change-opacity:1}.canvas[data-delta-review-active] [data-delta-review-current]{opacity:1!important;transition:none!important}.proof-foot{color:#444}}
+@media(max-width:760px){.proof-page{width:100%;padding:12px}.proof-head{grid-template-columns:1fr;gap:14px;align-items:start}.proof-head h1{font-size:32px}.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%}.metric{min-width:0}.provenance-change{align-items:flex-start;flex-wrap:wrap}.provenance-change span{width:100%;margin-left:0}.proof-tools{align-items:stretch;flex-wrap:wrap;gap:8px}.view-switch{display:flex;flex:1 1 100%}.view-switch button{flex:1;padding-inline:8px}.legend{flex-wrap:wrap;gap:8px}.proof-tools>div:last-child{margin-left:auto}.review-strip{grid-template-columns:auto auto auto auto}.review-status{grid-column:1/-1;padding:4px 2px 0}.canvas{min-height:0;padding:6px;overflow:auto}.canvas svg{min-width:720px;max-height:none}.snapshot-frame{min-width:720px}.changes{overflow-x:auto;container-type:inline-size}.changes li{min-width:820px}.change-row{min-width:820px}.review-values{position:sticky;left:8px;width:100cqi}.review-value{grid-template-columns:1fr;gap:2px}.proof-foot{flex-direction:column;gap:4px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.canvas[data-delta-review-active] [data-delta-review-current]{transition:none!important}}@media print{body{min-width:0;background:#fff;color:#111}.proof-page{width:100%;padding:0}.proof-tools,.review-strip,.review-values,details{display:none!important}.canvas{display:none!important}.canvas[data-view="delta"]{display:block!important;border:0}.canvas[data-view="delta"] [data-delta-state="same"]{opacity:1!important;transition:none!important}.canvas[data-delta-review-active]{--review-same-opacity:1;--review-change-opacity:1}.canvas[data-delta-review-active] [data-delta-review-current]{opacity:1!important;transition:none!important}.proof-foot{color:#444}}
 </style></head>
 <body><main class="proof-page"><header class="proof-head"><div><p class="eyebrow">ARCHITECTURE DELTA · ${proof}</p><h1>See what changed<br>before you merge.</h1><p class="subtitle">${esc(receipt.base.title)} → ${esc(receipt.head.title)}</p></div><div class="metrics"><div class="metric add"><strong>${total(receipt.summary, 'added')}</strong><span>ADDED</span></div><div class="metric remove"><strong>${total(receipt.summary, 'removed')}</strong><span>REMOVED</span></div><div class="metric change"><strong>${changed}</strong><span>CHANGED</span></div></div></header>${provenanceNotice}
 <div class="proof-tools"><div class="view-switch" role="tablist" aria-label="Architecture snapshot"><button role="tab" data-target="base" aria-selected="false">Before</button><button role="tab" data-target="delta" aria-selected="true">Delta</button><button role="tab" data-target="head" aria-selected="false">After</button></div><div class="legend"><span class="add"><i></i>+ ADD</span><span class="remove"><i></i>− DEL</span><span class="change"><i></i>~ MOD</span><span class="move"><i></i>↔ MOVE</span></div><div><button class="utility" id="export-svg" type="button">Export SVG</button> <button class="utility" id="share-card" type="button">Share Card</button> <button class="utility" id="preset" type="button">Preset</button> <button class="utility" id="theme" type="button">Theme</button></div></div>
 <nav class="review-strip" aria-label="Authored change review"><button class="review-step" id="review-overview" type="button" disabled>Overview</button><button class="review-step" id="review-previous" type="button" aria-label="Previous authored change" disabled>←</button><button class="review-step" id="review-play" type="button" aria-pressed="false"${rows.length ? '' : ' disabled'}>Review</button><button class="review-step" id="review-next" type="button" aria-label="Next authored change" disabled>→</button><div class="review-status" id="review-status" role="status" aria-live="polite">Overview · ${rows.length} authored ${provenanceChanged ? 'graph changes · provenance changed' : 'changes'}</div></nav>
+<section class="review-values" id="review-values" aria-label="Selected change values" hidden></section>
 <section class="canvas" data-view="base" hidden>${baseView}</section><section class="canvas" data-view="delta">${deltaSvg}</section><section class="canvas" data-view="head" hidden>${headView}</section>
 <details${rows.length <= 10 ? ' open' : ''}><summary>Exact authored changes · ${rows.length}</summary><ul class="changes">${rowHtml}</ul></details>
 <footer class="proof-foot"><span>Stable IDs only · completeness: complete · ${proof}</span><span>Authored IR only · no risk or mergeability inference</span></footer></main>
@@ -805,6 +807,7 @@ html[data-theme="dark"] body{background:#071019!important;background-image:none!
   const playButton = document.querySelector('#review-play');
   const nextButton = document.querySelector('#review-next');
   const status = document.querySelector('#review-status');
+  const values = document.querySelector('#review-values');
   const receiptNode = document.querySelector('#archify-compare-receipt');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const exportCss = ${safeJson(artifactCss)};
@@ -818,6 +821,64 @@ html[data-theme="dark"] body{background:#071019!important;background-image:none!
   function show(id) {
     tabs.forEach((tab) => tab.setAttribute('aria-selected', String(tab.dataset.target === id)));
     views.forEach((view) => { view.hidden = view.dataset.view !== id; });
+    values.hidden = id !== 'delta' || !values.childElementCount;
+  }
+
+  function clearValues() {
+    values.textContent = '';
+    values.hidden = true;
+  }
+
+  function fieldValue(source, side, field) {
+    const absent = side === 'base' ? source.status === 'added' : source.status === 'removed';
+    if (absent) return source.kind === 'relationship' ? 'Relationship not present' : 'Component not present';
+    const snapshot = source.kind === 'relationship' ? source[side] : source;
+    const value = snapshot && snapshot[source.kind === 'relationship' ? field : side + 'Label'];
+    if (typeof value !== 'string') return 'Unavailable in receipt';
+    return value === '' ? (field === 'label' ? 'Empty or not supplied' : 'Unavailable in receipt') : value;
+  }
+
+  function renderValues(source) {
+    clearValues();
+    const heading = document.createElement('strong');
+    heading.textContent = source.kind.charAt(0).toUpperCase() + source.kind.slice(1) + ' [' + source.id + ']';
+    values.appendChild(heading);
+    const supported = source.kind === 'relationship' ? ['from', 'to', 'label'] : source.kind === 'component' ? ['label'] : [];
+    const fields = supported.filter((field) => source.status === 'added' || source.status === 'removed' || source.changedFields.includes('/' + field));
+    const list = document.createElement('dl');
+    fields.forEach((field) => {
+      const row = document.createElement('div');
+      row.className = 'review-value';
+      row.dataset.changeField = '/' + field;
+      const name = document.createElement('dt');
+      name.textContent = field === 'from' ? 'From' : field === 'to' ? 'To' : 'Label';
+      const pair = document.createElement('dd');
+      ['base', 'head'].forEach((side, index) => {
+        if (index) {
+          const arrow = document.createElement('span');
+          arrow.textContent = '→';
+          arrow.setAttribute('aria-hidden', 'true');
+          pair.appendChild(arrow);
+        }
+        const value = document.createElement('span');
+        const caption = document.createElement('small');
+        caption.textContent = index ? 'After' : 'Before';
+        const text = document.createElement('code');
+        text.textContent = fieldValue(source, side, field);
+        value.append(caption, text);
+        pair.appendChild(value);
+      });
+      row.append(name, pair);
+      list.appendChild(row);
+    });
+    values.appendChild(list);
+    const unavailable = source.changedFields.filter((field) => !supported.includes(field.slice(1)));
+    if (unavailable.length || !fields.length) {
+      const note = document.createElement('p');
+      note.textContent = 'Old/new values are not included in this receipt' + (unavailable.length ? ' for ' + unavailable.join(', ') : ' for this change') + '.';
+      values.appendChild(note);
+    }
+    values.hidden = false;
   }
 
   function stopPlayback() {
@@ -832,6 +893,7 @@ html[data-theme="dark"] body{background:#071019!important;background-image:none!
 
   function failReview() {
     stopPlayback();
+    clearValues();
     reviewAvailable = false;
     activeIndex = -1;
     deltaCanvas?.removeAttribute('data-delta-review-active');
@@ -936,6 +998,8 @@ html[data-theme="dark"] body{background:#071019!important;background-image:none!
     const row = rowButtons[index];
     const matches = exactTargets(row);
     if (!targetsMatch(reviewSources[index], row, matches)) { failReview(); return false; }
+    renderValues(reviewSources[index]);
+    row.after(values);
     show('delta');
     deltaCanvas.querySelectorAll('[data-delta-review-current]').forEach((element) => element.removeAttribute('data-delta-review-current'));
     matches.forEach((element) => element.setAttribute('data-delta-review-current', 'true'));
@@ -956,6 +1020,7 @@ html[data-theme="dark"] body{background:#071019!important;background-image:none!
   function overview() {
     if (!reviewAvailable) { failReview(); return; }
     stopPlayback();
+    clearValues();
     activeIndex = -1;
     deltaCanvas.removeAttribute('data-delta-review-active');
     deltaCanvas.querySelectorAll('[data-delta-review-current]').forEach((element) => element.removeAttribute('data-delta-review-current'));

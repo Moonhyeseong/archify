@@ -30,6 +30,19 @@ node archify/bin/archify.mjs compare architecture archify/examples/checkout-plat
 bytes. Rebuild other affected examples and distribution outputs according to
 [Contributing](../CONTRIBUTING.md#packages-and-generated-artifacts).
 
+The standalone Delta shell is owned by `archify/delta/architecture-delta.mjs`.
+Selecting an exact change row displays the receipt's recorded old/new values
+beside that row: relationship `from`, `to`, `label`, and component labels only.
+Other changed fields explicitly state that the receipt does not record values.
+Normalized blank labels are `Empty or not supplied`; an added/removed entity's
+absent side is distinct from unavailable or malformed values. Details use text
+nodes, retain the existing review identity checks, clear on Overview or identity
+failure, and stay outside canonical SVG and share-card exports. The Delta shell
+retains its existing English-only UI and independent Before/After explorers.
+On narrow screens the value panel stays within the horizontally scrollable
+list's visible area without changing its scroll position; the wide change rows
+retain their existing layout.
+
 Assembly inserts JavaScript fragments verbatim at fixed markers.
 The CSS fragment is authored at column zero and reindented four spaces when it
 is inserted into the shell's `<style>` block; this preserves the delivered

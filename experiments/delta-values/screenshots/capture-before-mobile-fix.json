@@ -1,0 +1,47 @@
+{
+  "kind": "portable-browser-regression-observation",
+  "status": "failed visual reading at horizontal scroll offset",
+  "images": [
+    {
+      "image": "candidate-persist-order-mobile-dark-before-fix.png",
+      "sha256": "1c76b0b018189c0596ea60b77633109575bb4a3e53592579d7e56fce57ed8c26",
+      "width": 390,
+      "height": 844,
+      "source": "../regressions/mobile-before-fix.html",
+      "sourceSha256": "c06a50630f32f4e14416905d4d4a1c31e9b4d76339d09fdb6382632b31f3b267",
+      "capturedAtUtc": "2026-10-25T05:20:54.755Z",
+      "viewportCss": [
+        390,
+        844
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "theme": "dark",
+      "prefersReducedMotion": true,
+      "selectedChange": "persist-order",
+      "interaction": "Open Exact authored changes, then click the named existing relationship row."
+    },
+    {
+      "image": "candidate-persist-order-mobile-light-before-fix.png",
+      "sha256": "0988119421d1b216d9abbe556f775cf702a4fbd2b3e4eeeb6181afd899dc7476",
+      "width": 390,
+      "height": 844,
+      "source": "../regressions/mobile-before-fix.html",
+      "sourceSha256": "c06a50630f32f4e14416905d4d4a1c31e9b4d76339d09fdb6382632b31f3b267",
+      "capturedAtUtc": "2026-10-25T05:20:58.467Z",
+      "viewportCss": [
+        390,
+        844
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "theme": "light",
+      "prefersReducedMotion": true,
+      "selectedChange": "persist-order",
+      "interaction": "Open Exact authored changes, then click the named existing relationship row."
+    }
+  ],
+  "observation": "At 390px, real row selection scrolled the existing horizontal list; the new value panel remained outside the visible scrollport. Before/After values could not be read.",
+  "sourceOwnerSha256": "0135bed0ca1fdad2e9c81c053ae688ee147d3083d1b8da375a9503c2c4c2780c",
+  "humanAcceptance": "not claimed"
+}

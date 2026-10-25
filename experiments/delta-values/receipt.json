@@ -1,0 +1,127 @@
+{
+  "date": "2026-10-25",
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "candidate": "uncommitted experimental branch; artifact and source digests below",
+  "disposition": "experimental candidate for user review; no merge or release acceptance",
+  "sha256": {
+    "archify/delta/architecture-delta.mjs": "7252958ee6db727313fc9d8a8c29646fe70494ebfde6f255cee6360180826115",
+    "test/architecture-delta-values-browser.test.mjs": "a529c1a667a5790c8e5d0efb9726582f913a9ac4d38155ce7705456a19012163",
+    "scripts/browser-test-inventory.mjs": "8dadba52cc47903bca4cebc5ec9686e16b13934137c647c827b957d01c311a7d",
+    "experiments/delta-values/base.html": "bb2a76c1f38a65d546992b03fc46d2357257162f7301eeadde7af4ed08e784af",
+    "experiments/delta-values/candidate.html": "968997fb76bb08bf760c3d7bcce31fa26d8e01db6e8d6e061226187f4fff068d",
+    "archify/examples/checkout-platform.base.architecture.json": "81d55a2e86fc39f6473b32dfba986a12d3b7a705a95821844865b1dc831c9fe7",
+    "archify/examples/checkout-platform.head.architecture.json": "eb4ae056035dd3316414a5d7f6599525107b5d1af7bedbd905460ade77daf5c6",
+    "archify.zip": "a22f53a45df00e7ae2695ddb3c53367660b606944e134cc37413e50a53af2fc8",
+    "test/architecture-delta.test.mjs": "e8e2ea759595491b1f0b2b7bac6620b263fd68c549355edbc8a122cc974af62a"
+  },
+  "runtime": {
+    "node": "22.23.2",
+    "zlib": "1.3.1-e00f703",
+    "browser": "Google Chrome 152.0.7977.169 extended"
+  },
+  "fixedInputs": {
+    "base": "archify/examples/checkout-platform.base.architecture.json",
+    "head": "archify/examples/checkout-platform.head.architecture.json",
+    "edited": false
+  },
+  "conditions": {
+    "browserChecks": {
+      "viewports": [
+        [
+          1440,
+          900
+        ],
+        [
+          390,
+          900
+        ]
+      ],
+      "themes": [
+        "dark",
+        "light"
+      ],
+      "motion": "prefers-reduced-motion: reduce",
+      "preset": "existing classic",
+      "additionalViewport": [
+        390,
+        844
+      ]
+    },
+    "screenshots": "parent review session controls its actual viewport/theme; see screenshot filenames"
+  },
+  "verification": {
+    "focusedNode": {
+      "passed": 67,
+      "failed": 0,
+      "skipped": 0,
+      "scope": [
+        "architecture-delta.test.mjs",
+        "architecture-delta-literals.test.mjs",
+        "architecture-delta-markers.test.mjs",
+        "browser-gate.test.mjs"
+      ],
+      "note": "final rerun after narrow layout fix and retirement of obsolete exact-CSS-source assertion"
+    },
+    "focusedBrowser": {
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "scope": [
+        "architecture-delta-values-browser.test.mjs"
+      ],
+      "includes": "390x844 horizontal scroll at 300 and rightmost 504 in both themes; each caption/value text Range rect and hit target visible; scroll preserved"
+    },
+    "independentBrowser": {
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "scope": [
+        "architecture-delta-values-browser.test.mjs"
+      ],
+      "additionalProbe": "old artifact light scroll300 all five texts invisible; fixed light300/light504/dark504 all text ranges visible and hit-testable; scroll unchanged"
+    },
+    "receiptFacts": "base and fixed candidate compare receipts identical after removing artifact metadata",
+    "zipFreshness": "canonical Node/zlib; second tracked-source build byte-identical after narrow layout fix",
+    "generated": "passed after narrow layout fix",
+    "coreSmoke": {
+      "passed": 19,
+      "failed": 0,
+      "skipped": 0,
+      "reused": "ordinary ten-renderer runtime unchanged by Delta-only CSS fix; fresh compare/static and browser evidence covers changed owner"
+    },
+    "diffCheck": "passed"
+  },
+  "supportedFields": {
+    "relationship": [
+      "from",
+      "to",
+      "label"
+    ],
+    "component": [
+      "label"
+    ]
+  },
+  "limits": [
+    "The receipt normalizes missing and empty relationship labels to the same empty string",
+    "Other field values are not in this receipt; no inference from SVG or source",
+    "Existing review identity checks are preserved, not a cryptographic tamper guarantee",
+    "No user efficiency measurement",
+    "No full repository, cross-platform or remote CI acceptance",
+    "No merge, release, deployment or live installation"
+  ],
+  "regressions": [
+    {
+      "artifact": "regressions/mobile-before-fix.html",
+      "sha256": "c06a50630f32f4e14416905d4d4a1c31e9b4d76339d09fdb6382632b31f3b267",
+      "reportedBy": "parent actual Ego-browser capture at 390px",
+      "earlierBrowserResult": {
+        "passed": 4,
+        "failed": 0,
+        "skipped": 0,
+        "limitation": "test helper aligned horizontal scroll to start and checked panel bounds; did not cover nonzero horizontal scroll"
+      },
+      "frozenArtifactWitness": "same new regression test fails as expected at scrollLeft=300: Label/Before/SQL/After/SQL tx all invisible and not hit-testable",
+      "testImprovement": "Removed the obsolete exact CSS source spelling assertion; the real browser regression now protects horizontal overflow and visible captions/values at nonzero scroll"
+    }
+  ]
+}

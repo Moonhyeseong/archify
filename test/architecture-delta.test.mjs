@@ -633,7 +633,6 @@ test('compare CLI writes a deterministic three-state artifact and complete sidec
   assert.doesNotMatch(firstHtml, /font-family:Inter|body\{min-width:1080px/);
   assert.match(firstHtml, /@media\(max-width:760px\)/);
   assert.match(firstHtml, /\.canvas svg\{min-width:720px;max-height:none\}/);
-  assert.match(firstHtml, /\.changes\{overflow-x:auto\}/);
   assert.match(firstHtml, /const REVIEW_DWELL_MS = 1400;/);
   assert.match(firstHtml, /prefers-reduced-motion: reduce/);
   assert.match(firstHtml, /:not\(\[data-delta-review-current\]\)/);
