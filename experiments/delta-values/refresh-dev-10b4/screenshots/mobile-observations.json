@@ -1,0 +1,98 @@
+[
+  {
+    "note": "Scroll position established using DOM scrollIntoView/scrollLeft as a controlled setup; activation used real mouse input at a hit-tested visible point. Not a touch gesture test.",
+    "setup": {
+      "x": 195,
+      "y": 601.046875,
+      "scroll": 300,
+      "maxScroll": 504,
+      "hit": true
+    },
+    "result": {
+      "theme": "light",
+      "viewport": [
+        390,
+        844
+      ],
+      "width": 390,
+      "scroll": 300,
+      "selected": "relationship:persist-order",
+      "text": "Relationship [persist-order]LabelBeforeSQL→AfterSQL tx",
+      "leaves": [
+        {
+          "text": "Label",
+          "visible": true,
+          "hit": true
+        },
+        {
+          "text": "Before",
+          "visible": true,
+          "hit": true
+        },
+        {
+          "text": "SQL",
+          "visible": true,
+          "hit": true
+        },
+        {
+          "text": "After",
+          "visible": true,
+          "hit": true
+        },
+        {
+          "text": "SQL tx",
+          "visible": true,
+          "hit": true
+        }
+      ]
+    }
+  },
+  {
+    "note": "Scroll position established using DOM scrollIntoView/scrollLeft as a controlled setup; activation used real mouse input at a hit-tested visible point. Not a touch gesture test.",
+    "setup": {
+      "x": 191,
+      "y": 601.046875,
+      "scroll": 504,
+      "maxScroll": 504,
+      "hit": true
+    },
+    "result": {
+      "theme": "dark",
+      "viewport": [
+        390,
+        844
+      ],
+      "width": 390,
+      "scroll": 504,
+      "selected": "relationship:persist-order",
+      "text": "Relationship [persist-order]LabelBeforeSQL→AfterSQL tx",
+      "leaves": [
+        {
+          "text": "Label",
+          "visible": true,
+          "hit": true
+        },
+        {
+          "text": "Before",
+          "visible": true,
+          "hit": true
+        },
+        {
+          "text": "SQL",
+          "visible": true,
+          "hit": true
+        },
+        {
+          "text": "After",
+          "visible": true,
+          "hit": true
+        },
+        {
+          "text": "SQL tx",
+          "visible": true,
+          "hit": true
+        }
+      ]
+    }
+  }
+]

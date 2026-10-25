@@ -1,0 +1,701 @@
+[
+  {
+    "scenario": "initial",
+    "hidden": true,
+    "text": "",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "light-390-persist",
+    "hidden": false,
+    "text": "Relationship [persist-order]LabelBeforeSQL→AfterSQL tx",
+    "selected": "relationship:persist-order",
+    "adjacent": "relationship:persist-order",
+    "fields": [
+      {
+        "field": "/label",
+        "values": [
+          "SQL",
+          "SQL tx"
+        ]
+      }
+    ],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "next-to-geometry",
+    "hidden": false,
+    "text": "Component [queue]Old/new values are not included in this receipt for /pos.",
+    "selected": "component:queue",
+    "adjacent": "component:queue",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "previous-to-label",
+    "hidden": false,
+    "text": "Relationship [persist-order]LabelBeforeSQL→AfterSQL tx",
+    "selected": "relationship:persist-order",
+    "adjacent": "relationship:persist-order",
+    "fields": [
+      {
+        "field": "/label",
+        "values": [
+          "SQL",
+          "SQL tx"
+        ]
+      }
+    ],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "light-390-authorize",
+    "hidden": false,
+    "text": "Relationship [authorize-payment]FromBeforeorders→AfterfraudOld/new values are not included in this receipt for /fromSide, /toSide, /via.",
+    "selected": "relationship:authorize-payment",
+    "adjacent": "relationship:authorize-payment",
+    "fields": [
+      {
+        "field": "/from",
+        "values": [
+          "orders",
+          "fraud"
+        ]
+      }
+    ],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "unsupported-sublabel",
+    "hidden": false,
+    "text": "Component [checkout]Old/new values are not included in this receipt for /sublabel.",
+    "selected": "component:checkout",
+    "adjacent": "component:checkout",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "before-tab",
+    "hidden": true,
+    "text": "Component [checkout]Old/new values are not included in this receipt for /sublabel.",
+    "selected": "component:checkout",
+    "adjacent": "component:checkout",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "delta-tab",
+    "hidden": false,
+    "text": "Component [checkout]Old/new values are not included in this receipt for /sublabel.",
+    "selected": "component:checkout",
+    "adjacent": "component:checkout",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "overview",
+    "hidden": true,
+    "text": "",
+    "adjacent": "component:checkout",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "initial",
+    "hidden": true,
+    "text": "",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "light-1440-persist",
+    "hidden": false,
+    "text": "Relationship [persist-order]LabelBeforeSQL→AfterSQL tx",
+    "selected": "relationship:persist-order",
+    "adjacent": "relationship:persist-order",
+    "fields": [
+      {
+        "field": "/label",
+        "values": [
+          "SQL",
+          "SQL tx"
+        ]
+      }
+    ],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "next-to-geometry",
+    "hidden": false,
+    "text": "Component [queue]Old/new values are not included in this receipt for /pos.",
+    "selected": "component:queue",
+    "adjacent": "component:queue",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "previous-to-label",
+    "hidden": false,
+    "text": "Relationship [persist-order]LabelBeforeSQL→AfterSQL tx",
+    "selected": "relationship:persist-order",
+    "adjacent": "relationship:persist-order",
+    "fields": [
+      {
+        "field": "/label",
+        "values": [
+          "SQL",
+          "SQL tx"
+        ]
+      }
+    ],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "light-1440-authorize",
+    "hidden": false,
+    "text": "Relationship [authorize-payment]FromBeforeorders→AfterfraudOld/new values are not included in this receipt for /fromSide, /toSide, /via.",
+    "selected": "relationship:authorize-payment",
+    "adjacent": "relationship:authorize-payment",
+    "fields": [
+      {
+        "field": "/from",
+        "values": [
+          "orders",
+          "fraud"
+        ]
+      }
+    ],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "unsupported-sublabel",
+    "hidden": false,
+    "text": "Component [checkout]Old/new values are not included in this receipt for /sublabel.",
+    "selected": "component:checkout",
+    "adjacent": "component:checkout",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "before-tab",
+    "hidden": true,
+    "text": "Component [checkout]Old/new values are not included in this receipt for /sublabel.",
+    "selected": "component:checkout",
+    "adjacent": "component:checkout",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "delta-tab",
+    "hidden": false,
+    "text": "Component [checkout]Old/new values are not included in this receipt for /sublabel.",
+    "selected": "component:checkout",
+    "adjacent": "component:checkout",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "overview",
+    "hidden": true,
+    "text": "",
+    "adjacent": "component:checkout",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "initial",
+    "hidden": true,
+    "text": "",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "dark-390-persist",
+    "hidden": false,
+    "text": "Relationship [persist-order]LabelBeforeSQL→AfterSQL tx",
+    "selected": "relationship:persist-order",
+    "adjacent": "relationship:persist-order",
+    "fields": [
+      {
+        "field": "/label",
+        "values": [
+          "SQL",
+          "SQL tx"
+        ]
+      }
+    ],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "next-to-geometry",
+    "hidden": false,
+    "text": "Component [queue]Old/new values are not included in this receipt for /pos.",
+    "selected": "component:queue",
+    "adjacent": "component:queue",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "previous-to-label",
+    "hidden": false,
+    "text": "Relationship [persist-order]LabelBeforeSQL→AfterSQL tx",
+    "selected": "relationship:persist-order",
+    "adjacent": "relationship:persist-order",
+    "fields": [
+      {
+        "field": "/label",
+        "values": [
+          "SQL",
+          "SQL tx"
+        ]
+      }
+    ],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "dark-390-authorize",
+    "hidden": false,
+    "text": "Relationship [authorize-payment]FromBeforeorders→AfterfraudOld/new values are not included in this receipt for /fromSide, /toSide, /via.",
+    "selected": "relationship:authorize-payment",
+    "adjacent": "relationship:authorize-payment",
+    "fields": [
+      {
+        "field": "/from",
+        "values": [
+          "orders",
+          "fraud"
+        ]
+      }
+    ],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "unsupported-sublabel",
+    "hidden": false,
+    "text": "Component [checkout]Old/new values are not included in this receipt for /sublabel.",
+    "selected": "component:checkout",
+    "adjacent": "component:checkout",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "before-tab",
+    "hidden": true,
+    "text": "Component [checkout]Old/new values are not included in this receipt for /sublabel.",
+    "selected": "component:checkout",
+    "adjacent": "component:checkout",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "delta-tab",
+    "hidden": false,
+    "text": "Component [checkout]Old/new values are not included in this receipt for /sublabel.",
+    "selected": "component:checkout",
+    "adjacent": "component:checkout",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "overview",
+    "hidden": true,
+    "text": "",
+    "adjacent": "component:checkout",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "initial",
+    "hidden": true,
+    "text": "",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "dark-1440-persist",
+    "hidden": false,
+    "text": "Relationship [persist-order]LabelBeforeSQL→AfterSQL tx",
+    "selected": "relationship:persist-order",
+    "adjacent": "relationship:persist-order",
+    "fields": [
+      {
+        "field": "/label",
+        "values": [
+          "SQL",
+          "SQL tx"
+        ]
+      }
+    ],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "next-to-geometry",
+    "hidden": false,
+    "text": "Component [queue]Old/new values are not included in this receipt for /pos.",
+    "selected": "component:queue",
+    "adjacent": "component:queue",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "previous-to-label",
+    "hidden": false,
+    "text": "Relationship [persist-order]LabelBeforeSQL→AfterSQL tx",
+    "selected": "relationship:persist-order",
+    "adjacent": "relationship:persist-order",
+    "fields": [
+      {
+        "field": "/label",
+        "values": [
+          "SQL",
+          "SQL tx"
+        ]
+      }
+    ],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "dark-1440-authorize",
+    "hidden": false,
+    "text": "Relationship [authorize-payment]FromBeforeorders→AfterfraudOld/new values are not included in this receipt for /fromSide, /toSide, /via.",
+    "selected": "relationship:authorize-payment",
+    "adjacent": "relationship:authorize-payment",
+    "fields": [
+      {
+        "field": "/from",
+        "values": [
+          "orders",
+          "fraud"
+        ]
+      }
+    ],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "unsupported-sublabel",
+    "hidden": false,
+    "text": "Component [checkout]Old/new values are not included in this receipt for /sublabel.",
+    "selected": "component:checkout",
+    "adjacent": "component:checkout",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "before-tab",
+    "hidden": true,
+    "text": "Component [checkout]Old/new values are not included in this receipt for /sublabel.",
+    "selected": "component:checkout",
+    "adjacent": "component:checkout",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "delta-tab",
+    "hidden": false,
+    "text": "Component [checkout]Old/new values are not included in this receipt for /sublabel.",
+    "selected": "component:checkout",
+    "adjacent": "component:checkout",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "overview",
+    "hidden": true,
+    "text": "",
+    "adjacent": "component:checkout",
+    "fields": [],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "horizontal-scroll-light-300",
+    "beforeScroll": 300,
+    "scroll": 300,
+    "leaves": [
+      {
+        "text": "Label",
+        "visible": true,
+        "hit": true
+      },
+      {
+        "text": "Before",
+        "visible": true,
+        "hit": true
+      },
+      {
+        "text": "SQL",
+        "visible": true,
+        "hit": true
+      },
+      {
+        "text": "After",
+        "visible": true,
+        "hit": true
+      },
+      {
+        "text": "SQL tx",
+        "visible": true,
+        "hit": true
+      }
+    ]
+  },
+  {
+    "scenario": "horizontal-scroll-light-end",
+    "beforeScroll": 504,
+    "scroll": 504,
+    "leaves": [
+      {
+        "text": "Label",
+        "visible": true,
+        "hit": true
+      },
+      {
+        "text": "Before",
+        "visible": true,
+        "hit": true
+      },
+      {
+        "text": "SQL",
+        "visible": true,
+        "hit": true
+      },
+      {
+        "text": "After",
+        "visible": true,
+        "hit": true
+      },
+      {
+        "text": "SQL tx",
+        "visible": true,
+        "hit": true
+      }
+    ]
+  },
+  {
+    "scenario": "horizontal-scroll-dark-300",
+    "beforeScroll": 300,
+    "scroll": 300,
+    "leaves": [
+      {
+        "text": "Label",
+        "visible": true,
+        "hit": true
+      },
+      {
+        "text": "Before",
+        "visible": true,
+        "hit": true
+      },
+      {
+        "text": "SQL",
+        "visible": true,
+        "hit": true
+      },
+      {
+        "text": "After",
+        "visible": true,
+        "hit": true
+      },
+      {
+        "text": "SQL tx",
+        "visible": true,
+        "hit": true
+      }
+    ]
+  },
+  {
+    "scenario": "horizontal-scroll-dark-end",
+    "beforeScroll": 504,
+    "scroll": 504,
+    "leaves": [
+      {
+        "text": "Label",
+        "visible": true,
+        "hit": true
+      },
+      {
+        "text": "Before",
+        "visible": true,
+        "hit": true
+      },
+      {
+        "text": "SQL",
+        "visible": true,
+        "hit": true
+      },
+      {
+        "text": "After",
+        "visible": true,
+        "hit": true
+      },
+      {
+        "text": "SQL tx",
+        "visible": true,
+        "hit": true
+      }
+    ]
+  },
+  {
+    "scenario": "literal-edge",
+    "hidden": false,
+    "text": "Relationship [persist-order]LabelBefore中文 <img src=x onerror=\"window.literalExecuted=true\"> $& ${literal} `tick`→AfterEmpty or not supplied",
+    "selected": "relationship:persist-order",
+    "adjacent": "relationship:persist-order",
+    "fields": [
+      {
+        "field": "/label",
+        "values": [
+          "中文 <img src=x onerror=\"window.literalExecuted=true\"> $& ${literal} `tick`",
+          "Empty or not supplied"
+        ]
+      }
+    ],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "literal-component",
+    "hidden": false,
+    "text": "Component [checkout]LabelBefore中文 <img src=x onerror=\"window.literalExecuted=true\"> $& ${literal} `tick`→After新名称",
+    "selected": "component:checkout",
+    "adjacent": "component:checkout",
+    "fields": [
+      {
+        "field": "/label",
+        "values": [
+          "中文 <img src=x onerror=\"window.literalExecuted=true\"> $& ${literal} `tick`",
+          "新名称"
+        ]
+      }
+    ],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "added",
+    "hidden": false,
+    "text": "Relationship [fraud-check]FromBeforeRelationship not present→AftercheckoutToBeforeRelationship not present→AfterfraudLabelBeforeRelationship not present→AfterUnavailable in receipt",
+    "selected": "relationship:fraud-check",
+    "adjacent": "relationship:fraud-check",
+    "fields": [
+      {
+        "field": "/from",
+        "values": [
+          "Relationship not present",
+          "checkout"
+        ]
+      },
+      {
+        "field": "/to",
+        "values": [
+          "Relationship not present",
+          "fraud"
+        ]
+      },
+      {
+        "field": "/label",
+        "values": [
+          "Relationship not present",
+          "Unavailable in receipt"
+        ]
+      }
+    ],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "removed",
+    "hidden": false,
+    "text": "Relationship [session-read]FromBeforecheckout→AfterRelationship not presentToBeforecache→AfterRelationship not presentLabelBeforesession→AfterRelationship not present",
+    "selected": "relationship:session-read",
+    "adjacent": "relationship:session-read",
+    "fields": [
+      {
+        "field": "/from",
+        "values": [
+          "checkout",
+          "Relationship not present"
+        ]
+      },
+      {
+        "field": "/to",
+        "values": [
+          "cache",
+          "Relationship not present"
+        ]
+      },
+      {
+        "field": "/label",
+        "values": [
+          "session",
+          "Relationship not present"
+        ]
+      }
+    ],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "malformed-side",
+    "hidden": false,
+    "text": "Relationship [persist-order]LabelBeforeUnavailable in receipt→AfterUnavailable in receipt",
+    "selected": "relationship:persist-order",
+    "adjacent": "relationship:persist-order",
+    "fields": [
+      {
+        "field": "/label",
+        "values": [
+          "Unavailable in receipt",
+          "Unavailable in receipt"
+        ]
+      }
+    ],
+    "errors": [],
+    "external": []
+  },
+  {
+    "scenario": "identity-mismatch",
+    "hidden": true,
+    "text": "",
+    "adjacent": "relationship:persist-order",
+    "fields": [],
+    "errors": [],
+    "external": []
+  }
+]

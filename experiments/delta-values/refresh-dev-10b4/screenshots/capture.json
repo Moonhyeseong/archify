@@ -1,0 +1,176 @@
+{
+  "kind": "derived root actual-browser capture binding; not compare/finalize/OS/AT acceptance",
+  "artifacts": [
+    {
+      "path": "base.html",
+      "sha256": "9aa3d75cbdf665bd9e7fc6bc184e39eb15cb687e08ed87573a53caafe6880141",
+      "bytes": 2429777
+    },
+    {
+      "path": "candidate.html",
+      "sha256": "65f2bcd7242db14f2e536cac29ade9d0b0558f809570e95af524cbfb0a2d9017",
+      "bytes": 2433758
+    }
+  ],
+  "pictures": [
+    {
+      "path": "screenshots/base-persist-light.png",
+      "sha256": "a3bd96939e44b47ad40eeed79d176e42f6d13cff1282af137c6649cc36643dde",
+      "bytes": 135415,
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "viewportCssPixels": [
+        1440,
+        1000
+      ],
+      "theme": "light",
+      "artifact": "base.html",
+      "rootViewed": true,
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "screenshots/candidate-persist-light.png",
+      "sha256": "fcadacd769f12e7e18f57394ad6e6348157f32893998743ffe7d52b49271d4f1",
+      "bytes": 134462,
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "viewportCssPixels": [
+        1440,
+        1000
+      ],
+      "theme": "light",
+      "artifact": "candidate.html",
+      "rootViewed": true,
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "screenshots/candidate-authorize-light.png",
+      "sha256": "92d91040d3e35acd83c8867ad2302d0fe7ee14ac7cace8c7124461e4e2b12c88",
+      "bytes": 139026,
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "viewportCssPixels": [
+        1440,
+        1000
+      ],
+      "theme": "light",
+      "artifact": "candidate.html",
+      "rootViewed": true,
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "screenshots/candidate-persist-dark.png",
+      "sha256": "1b5f8da4f875f7cfd7f647efaf31ed0275714b9070836162a8635608843c0470",
+      "bytes": 119335,
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "viewportCssPixels": [
+        1440,
+        1000
+      ],
+      "theme": "dark",
+      "artifact": "candidate.html",
+      "rootViewed": true,
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "screenshots/candidate-mobile-light-scroll.png",
+      "sha256": "d0cf33688620eccd2192b31bb7e0887933da98d9452634e036e6a1a647cfd09c",
+      "bytes": 54325,
+      "pngDimensions": [
+        390,
+        844
+      ],
+      "viewportCssPixels": [
+        390,
+        844
+      ],
+      "theme": "light",
+      "artifact": "candidate.html",
+      "rootViewed": true,
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "screenshots/candidate-mobile-dark-scroll.png",
+      "sha256": "838d1d2cfa5379d0f377a184826c402e0093452763395204cb3294894b8d2f4b",
+      "bytes": 42934,
+      "pngDimensions": [
+        390,
+        844
+      ],
+      "viewportCssPixels": [
+        390,
+        844
+      ],
+      "theme": "dark",
+      "artifact": "candidate.html",
+      "rootViewed": true,
+      "originalBytesUnchanged": true
+    }
+  ],
+  "originalObservationCopies": [
+    {
+      "path": "screenshots/desktop-observations.json",
+      "sha256": "9f357d81fa2a03e0627dce1e47707550a243490c5031db90bb9cd00641ca64a0",
+      "bytes": 2057,
+      "recordCount": 4,
+      "byteCopiedFromOriginal": true
+    },
+    {
+      "path": "screenshots/mobile-observations.json",
+      "sha256": "886bf77bc3f6bfdf7db7fb28d3460de8d3d6c1828ab48b7f99e5a56db7398edd",
+      "bytes": 2198,
+      "recordCount": 2,
+      "byteCopiedFromOriginal": true
+    }
+  ],
+  "actionsReportedByRoot": {
+    "desktop": "Expanded summary then actual click of change row; 1440×1000, light plus candidate persist dark.",
+    "mobile": "DOM scrollIntoView/scrollLeft establishes controlled pressure condition, then real mouse click at hit-tested visible point; 390×844 light300 and dark504; not touch gestures."
+  },
+  "observedScope": {
+    "desktopRecords": 4,
+    "mobileRecords": 2,
+    "baseSelectedValuesAbsent": true,
+    "candidateLabelValues": [
+      "SQL",
+      "SQL tx"
+    ],
+    "candidateFromValues": [
+      "orders",
+      "fraud"
+    ],
+    "unsupportedOldNewFields": [
+      "/fromSide",
+      "/toSide",
+      "/via"
+    ],
+    "mobileScrollBeforeAfter": [
+      [
+        300,
+        300
+      ],
+      [
+        504,
+        504
+      ]
+    ],
+    "mobileFiveTextRangesVisibleAndHit": true,
+    "mobilePageWidth": 390
+  },
+  "limits": [
+    "Six original PNGs viewed by root agent; not human acceptance.",
+    "Root checked selected states and narrow reading only, not the whole compare contract or full browser gate.",
+    "Horizontal pressure setup is programmatic DOM scrolling; activation is real mouse, not touch gesture testing.",
+    "No external/OS clipboard or assistive-technology operation is claimed.",
+    "Historical pictures and failure witness remain bound to old candidate."
+  ]
+}

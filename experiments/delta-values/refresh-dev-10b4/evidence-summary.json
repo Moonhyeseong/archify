@@ -1,0 +1,268 @@
+{
+  "kind": "derived refreshed Delta value evidence; original CLI/test logs outside checkout",
+  "softwareBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "historicalCandidate": "4c35456b23b5452ca3f620672a8b52545979c945",
+  "sourceBindings": {
+    "archify/delta/architecture-delta.mjs": {
+      "sha256": "ff5c77c76b538ec659efcc82ddd3473f3b52b8e147be58a606265d6dcca3902b",
+      "bytes": 83280
+    },
+    "test/architecture-delta-values-browser.test.mjs": {
+      "sha256": "a529c1a667a5790c8e5d0efb9726582f913a9ac4d38155ce7705456a19012163",
+      "bytes": 13277
+    },
+    "archify.zip": {
+      "sha256": "8a0648876eba7cb503e8c955ebf3ed2fcddebfd5eba181c703c029fb42fcc695",
+      "bytes": 6988416
+    },
+    "examples/checkout-platform-delta.html": {
+      "sha256": "9787bb89c1f1e8dc5b133e341d5321fe32a11d842be68b99021ad506deb51e39",
+      "bytes": 2433648
+    },
+    "examples/checkout-platform-delta.receipt.json": {
+      "sha256": "b712105a92c8d582254e8d5e2e453179163bb475da25ffcc20e80658b0f322f0",
+      "bytes": 5291
+    }
+  },
+  "inputs": [
+    {
+      "repoPath": "archify/examples/checkout-platform.base.architecture.json",
+      "revision": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+      "gitBlob": "0f4537f43472b92d54a4ccf54845928fdc1e2642",
+      "sha256": "81d55a2e86fc39f6473b32dfba986a12d3b7a705a95821844865b1dc831c9fe7",
+      "bytes": 2279
+    },
+    {
+      "repoPath": "archify/examples/checkout-platform.head.architecture.json",
+      "revision": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+      "gitBlob": "ba384386eb0d0296cdee8ad5b61f36dc4d50c104",
+      "sha256": "eb4ae056035dd3316414a5d7f6599525107b5d1af7bedbd905460ade77daf5c6",
+      "bytes": 2413
+    }
+  ],
+  "generatedPairs": {
+    "base": {
+      "html": {
+        "path": "base.html",
+        "sha256": "9aa3d75cbdf665bd9e7fc6bc184e39eb15cb687e08ed87573a53caafe6880141",
+        "bytes": 2429777
+      },
+      "receipt": {
+        "path": "base.receipt.json",
+        "sha256": "4505d7d8736dd1f5b4d4e43150c079a2e7b75439728d059bd83d62ea197fcafe",
+        "bytes": 5291
+      },
+      "publicCompare": {
+        "status": "pass",
+        "quality": "standard"
+      },
+      "publicCheck": {
+        "ok": true,
+        "provenance": "unknown"
+      }
+    },
+    "candidate": {
+      "html": {
+        "path": "candidate.html",
+        "sha256": "65f2bcd7242db14f2e536cac29ade9d0b0558f809570e95af524cbfb0a2d9017",
+        "bytes": 2433758
+      },
+      "receipt": {
+        "path": "candidate.receipt.json",
+        "sha256": "1fd795cc1d0657fe2b56612bce5445929ac1a7f7212fc59a16ac1723e3294a1b",
+        "bytes": 5291
+      },
+      "publicCompare": {
+        "status": "pass",
+        "quality": "standard"
+      },
+      "publicCheck": {
+        "ok": true,
+        "provenance": "unknown"
+      }
+    }
+  },
+  "receiptFactsEqualExceptArtifact": true,
+  "finalizeBoundary": "No compare/delta finalize type exists in the current single-input finalize contract. These are actual compare and public check receipts, not four-stage finalize success.",
+  "tests": {
+    "candidateBrowser": {
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "observations": 46
+    },
+    "focusedDeltaLiteralMarkersBrowserGateTranslations": {
+      "passed": 73,
+      "failed": 0,
+      "skipped": 0
+    },
+    "coreSmoke": {
+      "passed": 19,
+      "failed": 0,
+      "skipped": 0
+    },
+    "generated": "Viewer, brand marks, validators, release identity: four commands pass; full golden not run",
+    "baselineSameBrowserSuite": {
+      "passed": 0,
+      "failed": 5,
+      "skipped": 0,
+      "scope": "Existing base has no selected-value DOM; four child cases plus parent fail. Not five independent defects or proof baseline lacks every later assertion."
+    }
+  },
+  "checkedExampleQuality": "showcase, matching existing reproducibility contract; normal public compare regenerate",
+  "archiveSmoke": {
+    "publicCompare": "pass",
+    "htmlByteIdenticalToPublicCandidate": true,
+    "receiptFactsEqualExceptArtifact": true,
+    "artifact": {
+      "sha256": "65f2bcd7242db14f2e536cac29ade9d0b0558f809570e95af524cbfb0a2d9017",
+      "bytes": 2433758
+    }
+  },
+  "corrections": [
+    "Initial checked-in example regeneration omitted its existing showcase quality; first selected suite had72pass1fail reproducibility. Regenerated via public compare --quality showcase, unchanged test then final73pass.",
+    "First local setup assumed an empty dependency location; existing real installed dependency directories were preserved and reused. No install or lock change."
+  ],
+  "history": {
+    "originalExperimentFilesUnchanged": 22,
+    "originalCommit": "4c35456b23b5452ca3f620672a8b52545979c945"
+  },
+  "visualEvidence": {
+    "kind": "root real browser review separate from machine suite",
+    "capture": "screenshots/capture.json",
+    "rootViewedOriginalPngs": 6,
+    "originalObservationRecords": {
+      "desktop": 4,
+      "mobile": 2
+    },
+    "scope": "Selected actual clicks at1440×1000 and two390×844 mouse clicks after DOM scroll pressure setup; not touch/whole compare gate/OS/AT."
+  },
+  "limits": [
+    "Existing label empty/missing normalization remains Empty or not supplied.",
+    "Unsupported receipt fields are unavailable; translations classification retained, no extra old/new fields invented.",
+    "No schema, diff classification, canonical SVG, share-card or camera contract change.",
+    "No upstream execution, full suite, hosted CI, cross-platform, AT, release or live-install acceptance."
+  ],
+  "rawBindings": {
+    "base-check.stdout": {
+      "sha256": "9e9045c0ab74ef5f8346ad2544d1b5305783d5c1dbf92b08e0c53139cc9c2057",
+      "bytes": 2884
+    },
+    "checked-example-showcase.stdout.json": {
+      "sha256": "b712105a92c8d582254e8d5e2e453179163bb475da25ffcc20e80658b0f322f0",
+      "bytes": 5291
+    },
+    "candidate-check.stdout": {
+      "sha256": "351e76c39ff67bfa8397c2d17164bdfff82a8a1ab9d38b0e38d86a57f00656f3",
+      "bytes": 2889
+    },
+    "core.log": {
+      "sha256": "40a0c1e2cf6cd2897d2dc1cc9acd5627562ff9a84bf27bce0bf753402835f1ba",
+      "bytes": 4282
+    },
+    "focused-tests.log": {
+      "sha256": "6c96759ca5698fd4faa02c90175d78fb46bfc0cb5a338f38bcf6834d210708b6",
+      "bytes": 16095
+    },
+    "viewer.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "brand.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "focused-tests-before-example-quality-fix.log": {
+      "sha256": "509a3065ac1fa8bd51181ab7c2722c4de5de79c241fe57d030d1cb4d08d5fe7a",
+      "bytes": 5200939
+    },
+    "archive-compare.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "candidate-check.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "zip-check.json": {
+      "sha256": "e435eadffcb37e9ec657cd3ea27bdfdef2c6457364eb1b0bfaa745483c87136f",
+      "bytes": 386
+    },
+    "second-zip.log": {
+      "sha256": "8238c406741ea55745b0d33632a938ba28db0d2e3712e94c02e4e414b1ebb28b",
+      "bytes": 206
+    },
+    "identity.log": {
+      "sha256": "0a5812d3e14dd70da9fb04b7671e107688e987b3d19a0a3a42ee69bae22cc7dc",
+      "bytes": 33
+    },
+    "base-compare.stdout.json": {
+      "sha256": "4505d7d8736dd1f5b4d4e43150c079a2e7b75439728d059bd83d62ea197fcafe",
+      "bytes": 5291
+    },
+    "candidate-compare.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "created-links.json": {
+      "sha256": "9f9dd4c1f05697dfcf5d22d0e77d60dfb47c1e22de18736366a282dfe9b821d7",
+      "bytes": 224
+    },
+    "base-check.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "validators.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "first-zip.log": {
+      "sha256": "e0ab834043b5709b600d8921e24d59d77717f8a4e241ba95e801a6b851a7233a",
+      "bytes": 204
+    },
+    "base-compare.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "checked-example-showcase.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "candidate-compare.stdout.json": {
+      "sha256": "1fd795cc1d0657fe2b56612bce5445929ac1a7f7212fc59a16ac1723e3294a1b",
+      "bytes": 5291
+    },
+    "checked-example-compare.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "checked-example-compare.stdout.json": {
+      "sha256": "1fd795cc1d0657fe2b56612bce5445929ac1a7f7212fc59a16ac1723e3294a1b",
+      "bytes": 5291
+    },
+    "browser-tests.log": {
+      "sha256": "fdbb6fb48abee5831d3a3df1b101545d55a7fc7dad7f27cf149eb86b72c0bce9",
+      "bytes": 1502
+    },
+    "base-browser-tests.log": {
+      "sha256": "b67d7a30b21bd92c83c92cec37fcfc66a8e408fee83c1ee94a1c12639b6a5d29",
+      "bytes": 14940
+    },
+    "archive-compare.stdout.json": {
+      "sha256": "1fd795cc1d0657fe2b56612bce5445929ac1a7f7212fc59a16ac1723e3294a1b",
+      "bytes": 5291
+    },
+    "archive-smoke.receipt.json": {
+      "sha256": "1fd795cc1d0657fe2b56612bce5445929ac1a7f7212fc59a16ac1723e3294a1b",
+      "bytes": 5291
+    },
+    "browser/observations.json": {
+      "sha256": "454584dc6426bc1f165eafa2e9d65dda6c3bc4097283ecf5f591d59e131cc653",
+      "bytes": 16549
+    },
+    "base-browser/observations.json": {
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    }
+  }
+}

@@ -1,0 +1,90 @@
+[
+  {
+    "scenario": "base-persist-light",
+    "theme": "light",
+    "viewport": [
+      1440,
+      1000
+    ],
+    "width": 1440,
+    "selected": "relationship:persist-order",
+    "status": "07 / 11 · Relationship · SQL tx [persist-order] · semantic",
+    "values": null,
+    "scroll": 0
+  },
+  {
+    "scenario": "candidate-persist-light",
+    "theme": "light",
+    "viewport": [
+      1440,
+      1000
+    ],
+    "width": 1440,
+    "selected": "relationship:persist-order",
+    "status": "07 / 11 · Relationship · SQL tx [persist-order] · semantic",
+    "values": {
+      "hidden": false,
+      "text": "Relationship [persist-order]LabelBeforeSQL→AfterSQL tx",
+      "fields": [
+        {
+          "field": "/label",
+          "values": [
+            "SQL",
+            "SQL tx"
+          ]
+        }
+      ]
+    },
+    "scroll": 0
+  },
+  {
+    "scenario": "candidate-authorize-light",
+    "theme": "light",
+    "viewport": [
+      1440,
+      1000
+    ],
+    "width": 1440,
+    "selected": "relationship:authorize-payment",
+    "status": "06 / 11 · Relationship · authorize [authorize-payment] · geometry, topology",
+    "values": {
+      "hidden": false,
+      "text": "Relationship [authorize-payment]FromBeforeorders→AfterfraudOld/new values are not included in this receipt for /fromSide, /toSide, /via.",
+      "fields": [
+        {
+          "field": "/from",
+          "values": [
+            "orders",
+            "fraud"
+          ]
+        }
+      ]
+    },
+    "scroll": 0
+  },
+  {
+    "scenario": "candidate-persist-dark",
+    "theme": "dark",
+    "viewport": [
+      1440,
+      1000
+    ],
+    "width": 1440,
+    "selected": "relationship:persist-order",
+    "status": "07 / 11 · Relationship · SQL tx [persist-order] · semantic",
+    "values": {
+      "hidden": false,
+      "text": "Relationship [persist-order]LabelBeforeSQL→AfterSQL tx",
+      "fields": [
+        {
+          "field": "/label",
+          "values": [
+            "SQL",
+            "SQL tx"
+          ]
+        }
+      ]
+    },
+    "scroll": 0
+  }
+]

@@ -1,0 +1,77 @@
+{
+  "kind": "derived refreshed artifact ledger; no self-reference",
+  "softwareBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "historicalCandidate": "4c35456b23b5452ca3f620672a8b52545979c945",
+  "files": {
+    "README.md": {
+      "sha256": "d511dcc69798c3dcae8537fc6ca9bda11dbf097454c7c765b32d2d3d0b40823a",
+      "bytes": 8860
+    },
+    "base.html": {
+      "sha256": "9aa3d75cbdf665bd9e7fc6bc184e39eb15cb687e08ed87573a53caafe6880141",
+      "bytes": 2429777
+    },
+    "base.receipt.json": {
+      "sha256": "4505d7d8736dd1f5b4d4e43150c079a2e7b75439728d059bd83d62ea197fcafe",
+      "bytes": 5291
+    },
+    "candidate.html": {
+      "sha256": "65f2bcd7242db14f2e536cac29ade9d0b0558f809570e95af524cbfb0a2d9017",
+      "bytes": 2433758
+    },
+    "candidate.receipt.json": {
+      "sha256": "1fd795cc1d0657fe2b56612bce5445929ac1a7f7212fc59a16ac1723e3294a1b",
+      "bytes": 5291
+    },
+    "evidence-summary.json": {
+      "sha256": "08469586b56fe30d6a1b1eb64e5f5b2bc9a5fdc529511c7e8f81067db61badaf",
+      "bytes": 9787
+    },
+    "observations.json": {
+      "sha256": "454584dc6426bc1f165eafa2e9d65dda6c3bc4097283ecf5f591d59e131cc653",
+      "bytes": 16549
+    },
+    "screenshots/base-persist-light.png": {
+      "sha256": "a3bd96939e44b47ad40eeed79d176e42f6d13cff1282af137c6649cc36643dde",
+      "bytes": 135415
+    },
+    "screenshots/candidate-authorize-light.png": {
+      "sha256": "92d91040d3e35acd83c8867ad2302d0fe7ee14ac7cace8c7124461e4e2b12c88",
+      "bytes": 139026
+    },
+    "screenshots/candidate-mobile-dark-scroll.png": {
+      "sha256": "838d1d2cfa5379d0f377a184826c402e0093452763395204cb3294894b8d2f4b",
+      "bytes": 42934
+    },
+    "screenshots/candidate-mobile-light-scroll.png": {
+      "sha256": "d0cf33688620eccd2192b31bb7e0887933da98d9452634e036e6a1a647cfd09c",
+      "bytes": 54325
+    },
+    "screenshots/candidate-persist-dark.png": {
+      "sha256": "1b5f8da4f875f7cfd7f647efaf31ed0275714b9070836162a8635608843c0470",
+      "bytes": 119335
+    },
+    "screenshots/candidate-persist-light.png": {
+      "sha256": "fcadacd769f12e7e18f57394ad6e6348157f32893998743ffe7d52b49271d4f1",
+      "bytes": 134462
+    },
+    "screenshots/capture.json": {
+      "sha256": "c4f59906146aaefd0077cdd6309000d20622a47d22d6e85b46d5b4deb7d3aabb",
+      "bytes": 4833
+    },
+    "screenshots/desktop-observations.json": {
+      "sha256": "9f357d81fa2a03e0627dce1e47707550a243490c5031db90bb9cd00641ca64a0",
+      "bytes": 2057
+    },
+    "screenshots/mobile-observations.json": {
+      "sha256": "886bf77bc3f6bfdf7db7fb28d3460de8d3d6c1828ab48b7f99e5a56db7398edd",
+      "bytes": 2198
+    },
+    "zip-summary.json": {
+      "sha256": "e435eadffcb37e9ec657cd3ea27bdfdef2c6457364eb1b0bfaa745483c87136f",
+      "bytes": 386
+    }
+  },
+  "historicalOriginalFilesUnchanged": 22,
+  "screenshots": "six root original PNGs plus two original safe observations; selected-state checks separate from machine suites"
+}
