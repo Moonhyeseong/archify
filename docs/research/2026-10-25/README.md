@@ -47,6 +47,8 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 2026-10-25 13:56（台北）增量核对：main/dev仍未变；Finder result descriptions `5b7701c1` 与 Delivery witness `f2aa251e` 两个精确远端head同样都是Actions runs=0、check-runs=0。
 
+2026-10-25 14:09:48（台北），main/dev仍未变；Waterfall status text `e20acd6d`、Retained size `a0c76fc8` 及两个补充实跑证据后的head Test context map `9d6b4e3a`、Test failure map `bb5e7bdb` 均核对远端一致，精确head的Actions runs=0、check-runs=0。
+
 ## 图片速览
 
 以下四张直接来自对应分支的实际产物。点击名称查看完整说明；其余实验的图片见上表。
