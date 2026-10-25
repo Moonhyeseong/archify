@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "diagram_type": "erd",
+  "meta": {
+    "title": "DBML schema — experimental import",
+    "output": "dbml-erd.html",
+    "subtitle": "Experimental DBML subset · schema projection, not executable DDL",
+    "locale": "en",
+    "visual_preset": "blueprint"
+  },
+  "layout": {
+    "mode": "grid",
+    "gapX": 100,
+    "gapY": 70
+  },
+  "entities": [
+    {
+      "id": "orders",
+      "label": "orders",
+      "row": 0,
+      "col": 0,
+      "attributes": [
+        {
+          "name": "id",
+          "type": "bigint",
+          "key": "pk"
+        },
+        {
+          "name": "order_code",
+          "type": "varchar(32)",
+          "key": "uk"
+        },
+        {
+          "name": "total_amount",
+          "type": "numeric(12,2)"
+        },
+        {
+          "name": "placed_at",
+          "type": "timestamptz"
+        }
+      ]
+    },
+    {
+      "id": "payment_attempts",
+      "label": "payment_attempts",
+      "row": 0,
+      "col": 1,
+      "attributes": [
+        {
+          "name": "id",
+          "type": "bigint",
+          "key": "pk"
+        },
+        {
+          "name": "order_id",
+          "type": "bigint",
+          "key": "fk",
+          "references": "orders.id"
+        },
+        {
+          "name": "provider_token",
+          "type": "varchar(64)",
+          "key": "uk"
+        },
+        {
+          "name": "attempted_at",
+          "type": "timestamptz"
+        }
+      ]
+    },
+    {
+      "id": "unmatched_payments",
+      "label": "unmatched_payments",
+      "row": 1,
+      "col": 0,
+      "attributes": [
+        {
+          "name": "id",
+          "type": "bigint",
+          "key": "pk"
+        },
+        {
+          "name": "order_id",
+          "type": "bigint",
+          "key": "fk",
+          "references": "orders.id"
+        },
+        {
+          "name": "bank_reference",
+          "type": "varchar(48)",
+          "key": "uk"
+        },
+        {
+          "name": "received_at",
+          "type": "timestamptz"
+        }
+      ]
+    },
+    {
+      "id": "payment_receipts",
+      "label": "payment_receipts",
+      "row": 1,
+      "col": 1,
+      "attributes": [
+        {
+          "name": "id",
+          "type": "bigint",
+          "key": "pk"
+        },
+        {
+          "name": "payment_id",
+          "type": "bigint",
+          "key": [
+            "fk",
+            "uk"
+          ],
+          "references": "payment_attempts.id"
+        },
+        {
+          "name": "issued_at",
+          "type": "timestamptz"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "id": "order_attempts",
+      "from": "orders",
+      "to": "payment_attempts",
+      "label": "order_id",
+      "fromCardinality": "one",
+      "toCardinality": "many",
+      "fromOptional": false,
+      "toOptional": true
+    },
+    {
+      "id": "matching_order",
+      "from": "unmatched_payments",
+      "to": "orders",
+      "label": "order_id",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "fromOptional": true,
+      "toOptional": true
+    },
+    {
+      "id": "issued_receipt",
+      "from": "payment_attempts",
+      "to": "payment_receipts",
+      "label": "payment_id",
+      "fromCardinality": "one",
+      "toCardinality": "one",
+      "fromOptional": false,
+      "toOptional": true
+    }
+  ],
+  "cards": [
+    {
+      "dot": "amber",
+      "title": "Read the relationship ends",
+      "items": [
+        "A circle marks zero allowed rows at that endpoint. A parent may have zero dependents.",
+        "FK columns without not null are nullable by DBML default. Nullable FKs make the parent endpoint optional.",
+        "This is a bounded structure projection. It does not execute migrations or infer delete/update actions."
+      ]
+    }
+  ]
+}

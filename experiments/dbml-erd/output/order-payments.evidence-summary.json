@@ -1,0 +1,88 @@
+{
+  "kind": "portable-experiment-summary",
+  "notice": "Manually structured portable summary derived from raw CLI receipts, not an original Archify receipt. Raw receipts remain outside the checkout, unchanged.",
+  "date": "2026-10-25",
+  "baseCommit": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "source": "synthetic fixture authored for this experiment",
+  "node": "v22.23.3",
+  "formatSource": {
+    "repository": "https://github.com/holistics/dbml",
+    "commit": "0c34d8514ae7ebb457549531ef4fa5dab839c4fa",
+    "license": "Apache-2.0",
+    "implementation": "Independent reader; no upstream runtime or copied source."
+  },
+  "files": [
+    {
+      "path": "experiments/dbml-erd/dbml-to-erd.mjs",
+      "sha256": "f1d5024ad1e434855c84d5332bbab4b94b8c403bc23bc661d9e341c6b94d015e",
+      "bytes": 12869
+    },
+    {
+      "path": "experiments/dbml-erd/dbml-to-erd.test.mjs",
+      "sha256": "0d9f4536ec329465ee011ae25a23a861e6a7a277af2a2307bb4b69d7a8fcf51b",
+      "bytes": 9443
+    },
+    {
+      "path": "experiments/dbml-erd/fixtures/order-payments.dbml",
+      "sha256": "2b1539e41dcde93c15b09274e1d75898734df5dfafee0c73bdb81212688b4ec6",
+      "bytes": 835
+    },
+    {
+      "path": "experiments/dbml-erd/output/order-payments.erd.json",
+      "sha256": "6d69eda0d1b134ebd9b74091a01cf4a00b44fbe61df465f0b61cb03f43f58fc3",
+      "bytes": 3755
+    },
+    {
+      "path": "experiments/dbml-erd/output/order-payments.html",
+      "sha256": "55845a66b5344440e89d368a39458961269c98690b9ea3a6e460aa217dacdaae",
+      "bytes": 830590
+    }
+  ],
+  "verification": {
+    "tests": {
+      "pass": 39,
+      "fail": 0,
+      "skipped": 0
+    },
+    "publicRender": {
+      "exitCode": 0,
+      "quality": "showcase"
+    },
+    "publicFinalize": {
+      "ok": true,
+      "status": "pass",
+      "stages": {
+        "validate": {
+          "status": "pass",
+          "exitCode": 0
+        },
+        "deliver": {
+          "status": "pass",
+          "exitCode": 0
+        },
+        "check": {
+          "status": "pass",
+          "exitCode": 0
+        },
+        "browser-check": {
+          "status": "pass",
+          "exitCode": 0
+        }
+      },
+      "diagnostics": [],
+      "rawReceiptSha256": "30d00f7151b6321afb4a85248e0972ec6f28f97c10551c20885beb23d40efb2e",
+      "browserCheck": {
+        "requested": true,
+        "ran": true
+      },
+      "visualReview": "not-requested"
+    },
+    "screenshots": "pending main agent capture; not claimed by this summary"
+  },
+  "commands": [
+    "node --test experiments/dbml-erd/dbml-to-erd.test.mjs",
+    "node experiments/dbml-erd/dbml-to-erd.mjs experiments/dbml-erd/fixtures/order-payments.dbml <fresh-output.erd.json>",
+    "node archify/bin/archify.mjs render erd experiments/dbml-erd/output/order-payments.erd.json experiments/dbml-erd/output/order-payments.html --quality showcase",
+    "node archify/bin/archify.mjs finalize erd experiments/dbml-erd/output/order-payments.erd.json experiments/dbml-erd/output/order-payments.html --receipt <external-evidence-dir>/order-payments.finalize.receipt.json --out-dir <external-evidence-dir> --quality showcase --json"
+  ]
+}

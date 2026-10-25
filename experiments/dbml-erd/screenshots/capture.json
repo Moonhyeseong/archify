@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "captureDate": "2026-10-25",
+  "method": "Ego Lite Chromium page screenshot",
+  "viewport": {
+    "width": 1440,
+    "height": 1000,
+    "deviceScaleFactor": 1
+  },
+  "appearance": "light / Blueprint / Still",
+  "captures": [
+    {
+      "artifact": {
+        "path": "../output/order-payments.html",
+        "sha256": "55845a66b5344440e89d368a39458961269c98690b9ea3a6e460aa217dacdaae"
+      },
+      "image": {
+        "path": "order-payments.png",
+        "sha256": "2bca71308e4bae9e0f11adfd1276225c28a92ac39376d902f0c2c8b1b5f50342",
+        "width": 1440,
+        "height": 1000
+      },
+      "fullPage": false
+    }
+  ],
+  "review": {
+    "by": "Codex coordinating agent",
+    "observations": [
+      "All four tables and three relationships are visible.",
+      "PK, FK, UK and optional-end markers are distinguishable in this fixture.",
+      "Input is an original synthetic schema; no database was read or changed."
+    ],
+    "humanAcceptance": "pending"
+  }
+}

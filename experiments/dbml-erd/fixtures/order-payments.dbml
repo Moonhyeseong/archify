@@ -1,0 +1,32 @@
+// Synthetic model authored for this experiment; no production data.
+// An order may await payment; an unassigned payment can exist before matching.
+Table orders {
+  id bigint [pk]
+  order_code varchar(32) [unique]
+  total_amount numeric(12,2)
+  placed_at timestamptz
+}
+
+Table payment_attempts {
+  id bigint [pk]
+  order_id bigint [not null]
+  provider_token varchar(64) [unique]
+  attempted_at timestamptz
+}
+
+Table unmatched_payments {
+  id bigint [pk]
+  order_id bigint
+  bank_reference varchar(48) [unique]
+  received_at timestamptz
+}
+
+Table payment_receipts {
+  id bigint [pk]
+  payment_id bigint [unique, not null]
+  issued_at timestamptz
+}
+
+Ref order_attempts: orders.id < payment_attempts.order_id
+Ref matching_order: unmatched_payments.order_id > orders.id
+Ref issued_receipt: payment_attempts.id - payment_receipts.payment_id
