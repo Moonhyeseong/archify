@@ -7,6 +7,7 @@ import hashlib
 from html.parser import HTMLParser
 import json
 from pathlib import Path
+import re
 import subprocess
 
 
@@ -22,11 +23,22 @@ class Page(HTMLParser):
         self.in_script = False
         self.remote_resources = []
         self.anchors = []
+        self.group_cards = Counter()
+        self.group = None
+        self.filters = {}
+        self.filter = None
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == "section" and "data-group" in attrs:
+            self.group = attrs["data-group"]
         if tag == "article" and attrs.get("class") == "card":
             self.cards += 1
+            assert self.group is not None
+            self.group_cards[self.group] += 1
+        if tag == "button" and "data-filter" in attrs:
+            self.filter = attrs["data-filter"]
+            self.filters[self.filter] = ""
         if tag == "img" and attrs.get("src"):
             self.images.append(attrs["src"])
         for key in ("src", "srcset", "poster"):
@@ -41,10 +53,16 @@ class Page(HTMLParser):
             self.scripts.append("")
 
     def handle_endtag(self, tag):
+        if tag == "section":
+            self.group = None
+        if tag == "button":
+            self.filter = None
         if tag == "script":
             self.in_script = False
 
     def handle_data(self, data):
+        if self.filter is not None:
+            self.filters[self.filter] += data
         if self.in_script:
             self.scripts[-1] += data
 
@@ -58,7 +76,14 @@ def main():
     manifest = json.loads(manifest_raw)
     page = Page()
     page.feed(raw.decode())
-    assert page.cards == len(page.images) == len(manifest["items"]) == 27
+    expected_count = len(manifest["items"])
+    assert expected_count > 0
+    assert page.cards == len(page.images) == expected_count
+    assert page.cards == manifest["summary"]["experiments"]
+    assert len(page.images) == manifest["summary"]["images"]
+    assert dict(page.group_cards) == manifest["summary"]["groupCounts"]
+    filter_counts = {key: int(re.search(r"(\d+)$", text.strip()).group(1)) for key, text in page.filters.items()}
+    assert filter_counts == {"all": expected_count, **manifest["summary"]["groupCounts"]}
     assert not page.remote_resources, page.remote_resources
     embedded_hashes = Counter()
     for image in page.images:
@@ -79,6 +104,7 @@ def main():
         "htmlSha256": hashlib.sha256(raw).hexdigest(),
         "manifestSha256": hashlib.sha256(manifest_raw).hexdigest(),
         "htmlBytes": len(raw), "experiments": page.cards, "originalPngs": len(page.images),
+        "groupCounts": dict(page.group_cards), "filterCountsMatchActualCards": True,
         "allEmbeddedPngHashesMatchManifest": True,
         "allFixedAndBranchLinksPresent": True, "externalResourceReferences": 0,
         "javascriptSyntax": "pass", "browserInteractions": "not-run-by-builder",

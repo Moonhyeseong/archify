@@ -21,13 +21,13 @@ dialog{position:fixed;inset:0;margin:auto;width:min(1400px,calc(100% - 40px));ma
 <div class="shell">
 <header class="mast"><div class="brand">Archify<span>Research / 2026-10-25</span></div><div class="mast-actions"><a href="https://github.com/tt-a1i/archify/blob/__HUB_COMMIT__/docs/research/2026-10-25/README.md" target="_blank" rel="noopener noreferrer">固定 hub 说明 ↗</a><button id="theme" class="plain-button" type="button" aria-pressed="false">切换深色</button></div></header>
 <main>
-<section class="hero" aria-labelledby="title"><div><p class="eyebrow">27 EXPERIMENTS · ORIGINAL PNG EVIDENCE</p><h1 id="title">实验图片索引</h1><p class="intro">先看实际产物，再决定读哪个分支。按问题与验证边界筛选；每张图保留原始字节，可离线展开完整图。</p></div><p class="scope-note"><strong>已推送，不等于已验收。</strong>这里是 27 个独立实验的固定提交快照。测试、浏览器观测、CI 与用户效果分别记录；没有统一评分或成功率。</p></section>
-<div class="controls" aria-label="筛选实验"><div class="filters" role="group" aria-label="实验分组"><button class="filter" type="button" data-filter="all" aria-pressed="true">全部<span>27</span></button><button class="filter" type="button" data-filter="product" aria-pressed="false">产品交互<span>7</span></button><button class="filter" type="button" data-filter="offline" aria-pressed="false">离线适配<span>15</span></button><button class="filter" type="button" data-filter="content" aria-pressed="false">内容示例<span>5</span></button></div><div class="search"><label for="query">搜索</label><input id="query" type="search" placeholder="名称、问题、来源或限制" autocomplete="off"></div></div>
-<noscript><p class="noscript">27 项内容可直接阅读。筛选和完整图弹窗需要 JavaScript；固定提交链接仍可主动打开。</p></noscript>
-<div class="result-bar"><span id="result-count" role="status" aria-live="polite">显示 27 / 27 项</span><span>27 张原始 PNG · 卡片预览均为 CSS 裁切</span></div>
+<section class="hero" aria-labelledby="title"><div><p class="eyebrow">__EXPERIMENT_COUNT__ EXPERIMENTS · ORIGINAL PNG EVIDENCE</p><h1 id="title">实验图片索引</h1><p class="intro">先看实际产物，再决定读哪个分支。按问题与验证边界筛选；每张图保留原始字节，可离线展开完整图。</p></div><p class="scope-note"><strong>已推送，不等于已验收。</strong>这里是 __EXPERIMENT_COUNT__ 个独立实验的固定提交快照。测试、浏览器观测、CI 与用户效果分别记录；没有统一评分或成功率。</p></section>
+<div class="controls" aria-label="筛选实验"><div class="filters" role="group" aria-label="实验分组"><!-- FILTERS --></div><div class="search"><label for="query">搜索</label><input id="query" type="search" placeholder="名称、问题、来源或限制" autocomplete="off"></div></div>
+<noscript><p class="noscript">__EXPERIMENT_COUNT__ 项内容可直接阅读。筛选和完整图弹窗需要 JavaScript；固定提交链接仍可主动打开。</p></noscript>
+<div class="result-bar"><span id="result-count" role="status" aria-live="polite">显示 __EXPERIMENT_COUNT__ / __EXPERIMENT_COUNT__ 项</span><span>__IMAGE_COUNT__ 张原始 PNG · 卡片预览均为 CSS 裁切</span></div>
 <div id="experiments" tabindex="-1"><!-- GALLERY --></div>
 <section id="empty" class="empty" hidden><h2>没有匹配的实验</h2><p>试试不同关键词，或回到全部分组。</p><button id="reset" class="plain-button" type="button">清空搜索与筛选</button></section>
-<aside class="deferred" aria-labelledby="deferred-title"><h2 id="deferred-title">暂缓 · 不计入这 27 项</h2><!-- DEFERRED --></aside>
+<aside class="deferred" aria-labelledby="deferred-title"><h2 id="deferred-title">暂缓 · 不计入这 __EXPERIMENT_COUNT__ 项</h2><!-- DEFERRED --></aside>
 </main>
 <footer class="foot"><p>图片来自实际 Chromium 截图或原生 PNG 导出，不是设计稿。长图预览会裁切，弹窗可查看完整原图及原始尺寸。页面没有网络请求、分析或远程依赖；GitHub 只在你点击外链时打开。图片与来源固定提交见 manifest。</p><a href="manifest.json">来源与 SHA-256 清单</a></footer>
 </div>
@@ -36,6 +36,7 @@ dialog{position:fixed;inset:0;margin:auto;width:min(1400px,calc(100% - 40px));ma
 'use strict';
 const filters = [...document.querySelectorAll('[data-filter]')];
 const groups = [...document.querySelectorAll('[data-group]')];
+const totalExperiments = document.querySelectorAll('.card').length;
 const query = document.querySelector('#query');
 let activeFilter = 'all';
 function applyFilter() {
@@ -54,7 +55,7 @@ function applyFilter() {
     total += visible;
   }
   for (const filter of filters) filter.setAttribute('aria-pressed', String(filter.dataset.filter === activeFilter));
-  document.querySelector('#result-count').textContent = `显示 ${total} / 27 项`;
+  document.querySelector('#result-count').textContent = `显示 ${total} / ${totalExperiments} 项`;
   document.querySelector('#empty').hidden = total !== 0;
 }
 for (const filter of filters) filter.addEventListener('click', () => { activeFilter = filter.dataset.filter; applyFilter(); });

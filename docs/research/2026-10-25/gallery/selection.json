@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "https://github.com/tt-a1i/archify",
-  "hubCommit": "e6f61df1af80efd24fdb7abc7f99f9abf9faee9a",
+  "hubCommit": "77184273a18d70dd971a384f88b8a2ae0bf8d8d7",
   "hubPath": "docs/research/2026-10-25/README.md",
   "visualSourcePaths": [
     "website/src/styles/site.css",
@@ -65,13 +65,13 @@
     },
     {
       "id": "dbml-erd",
-      "commit": "feab6ae685692630d6d837622dc7bdcb57a09679",
+      "commit": "d0472cc3a5065e2a1c4ba239927ae74a1d2320fd",
       "branch": "codex/lab-dbml-erd",
       "directory": "experiments/dbml-erd",
       "group": "offline",
-      "inputKind": "原创 synthetic",
+      "inputKind": "原创 synthetic / 官方输入拒绝",
       "imagePath": "experiments/dbml-erd/screenshots/order-payments.png",
-      "imageCaption": "原创订单 / 支付样例，保留键与引用方向。"
+      "imageCaption": "图仍是原创订单样例；新增两个完整官方输入均拒绝、没有伪造产物。"
     },
     {
       "id": "change-coupling",
@@ -145,13 +145,13 @@
     },
     {
       "id": "plan-actions",
-      "commit": "640fa6fff3285d35da814cedff6f0b75ae3d39ba",
+      "commit": "729d3a0374189234e1bdfe5d6fc7f7190c894e0e",
       "branch": "codex/lab-plan-actions",
       "directory": "experiments/plan-actions",
       "group": "offline",
-      "inputKind": "原创 synthetic",
-      "imagePath": "experiments/plan-actions/screenshots/explainer.png",
-      "imageCaption": "资源自己的 replacement 顺序与路径类别。"
+      "inputKind": "固定官方 plan fixture",
+      "imagePath": "experiments/plan-actions/upstream-example/screenshots/explainer.png",
+      "imageCaption": "完整官方 fixture 的单资源 delete → create；未执行 Terraform。"
     },
     {
       "id": "recipe-stages",
@@ -292,6 +292,26 @@
       "inputKind": "固定 PEV2 样例",
       "imagePath": "experiments/plan-row-counts/screenshots/explainer.png",
       "imageCaption": "每循环平均行数与累计输出分开解释。"
+    },
+    {
+      "id": "diff-line-numbers",
+      "commit": "88b0dcb069d89657798e5f1208a90bb2b768fe98",
+      "branch": "codex/lab-diff-line-numbers",
+      "directory": "experiments/diff-line-numbers",
+      "group": "product",
+      "inputKind": "真实 PR / CSS 局部修复",
+      "imagePath": "experiments/diff-line-numbers/screenshots/candidate-1280-light.png",
+      "imageCaption": "真实 PR 的三位行号保持单行；长代码仍可横滚。"
+    },
+    {
+      "id": "keyboard-traversal",
+      "commit": "d930863147cd6adfb5d4275f011c06caf4b24f92",
+      "branch": "codex/lab-keyboard-traversal",
+      "directory": "experiments/keyboard-traversal",
+      "group": "product",
+      "inputKind": "固定 HTML / 门禁测量",
+      "imagePath": "experiments/keyboard-traversal/screenshots/tab-65-footer.png",
+      "imageCaption": "同一 HTML 真实 Tab65 到 footer；没有视觉改版，原 mapping false / ZIP 未解析不变。"
     }
   ],
   "deferred": {

@@ -1,70 +1,81 @@
 {
-  "kind": "derived browser evidence summary; raw interaction observations retained outside checkout",
+  "kind": "derived browser evidence summary for current 29-item gallery; raw observations kept outside checkout",
   "html": {
     "path": "index.html",
-    "sha256": "731877a954e904d3c73a9c7ae754bc75a810b174cd792e8c4fed87774d1f48eb"
+    "sha256": "7fc4a81cc0d06b31f74588813d784f7361e2e8b4d5e8863793a4c83aba37e959"
   },
-  "manifestSha256": "9b799d058b2913ec107b38e1cb19abcfc5e8892d87ec0ba8a594e2252d89b151",
+  "manifestSha256": "fe7ed7e50e44f43e0053f2b77915abb8fbae6d96c8ae7f45ed6087281d68817e",
   "observedAt": [
-    "2026-10-25T06:36:20.863Z",
-    "2026-10-25T06:36:47.352Z",
-    "2026-10-25T06:37:35.189Z",
-    "2026-10-25T06:38:04.969Z"
+    "2026-10-25T07:32:05.268Z",
+    "2026-10-25T07:33:26.634Z"
   ],
-  "environment": "Ego Lite Chromium through existing task space; desktop viewport emulation, mouse and keyboard; not physical phone or assistive technology acceptance",
-  "checks": {
-    "filters": {
-      "product": 7,
-      "offline": 15,
-      "content": 5,
-      "all": 27
+  "environment": "Ego Lite Chromium; keyboard and mouse; desktop viewport emulation, not physical touch or screen-reader acceptance",
+  "checks": [
+    {
+      "case": "all",
+      "count": "显示 29 / 29 项",
+      "cards": 29
     },
-    "searchAndFilter": {
-      "query": "Task review",
-      "group": "offline",
-      "matches": [
-        "Task review map"
+    {
+      "case": "product",
+      "count": "显示 9 / 29 项",
+      "visible": 9
+    },
+    {
+      "case": "offline",
+      "count": "显示 15 / 29 项",
+      "visible": 15
+    },
+    {
+      "case": "content",
+      "count": "显示 5 / 29 项",
+      "visible": 5
+    },
+    {
+      "case": "new-keyboard",
+      "count": "显示 1 / 29 项",
+      "titles": [
+        "Keyboard traversal"
       ]
     },
-    "emptyAndReset": "0 matches displays empty state; reset restores 27 and focuses query",
-    "mobilePageWidth": {
-      "innerWidth": 390,
-      "scrollWidth": 390
+    {
+      "case": "keyboard-image",
+      "imageWidth": 1280,
+      "source": "https://github.com/tt-a1i/archify/blob/d930863147cd6adfb5d4275f011c06caf4b24f92/experiments/keyboard-traversal/screenshots/tab-65-footer.png"
     },
-    "dialog": "Fit-width image and original-size scroll available; Escape closes and restores opener focus",
-    "longImage": {
-      "naturalWidth": 1440,
-      "naturalHeight": 1904,
-      "settledScrollTop": 1352,
-      "maximumScrollTop": 1352
+    {
+      "case": "keyboard-escape-focus",
+      "open": false,
+      "focus": "查看 Keyboard traversal 完整原图"
     },
-    "nativeModalTabTraversal": [
-      {
-        "focusId": "",
-        "tag": "BODY",
-        "documentFocused": false,
-        "insideDialog": false
-      },
-      {
-        "focusId": "original-size",
-        "tag": "BUTTON",
-        "documentFocused": true,
-        "insideDialog": true
-      },
-      {
-        "focusId": "close-image",
-        "tag": "BUTTON",
-        "documentFocused": true,
-        "insideDialog": true
-      }
-    ],
-    "nativeModalNote": "Tab after the last link visits browser chrome (document.hasFocus=false), then returns to original-size and close buttons. No background page control became focused. No custom focus trap added."
-  },
+    {
+      "case": "diff-image",
+      "imageWidth": 1280,
+      "source": "https://github.com/tt-a1i/archify/blob/88b0dcb069d89657798e5f1208a90bb2b768fe98/experiments/diff-line-numbers/screenshots/candidate-1280-light.png"
+    },
+    {
+      "case": "empty",
+      "count": "显示 0 / 29 项",
+      "shown": true
+    },
+    {
+      "case": "reset",
+      "count": "显示 29 / 29 项",
+      "focus": "query"
+    },
+    {
+      "case": "mobile-width",
+      "width": 390,
+      "scrollWidth": 390,
+      "count": "显示 29 / 29 项"
+    }
+  ],
   "screenshots": [
     {
       "path": "screenshots/desktop-light.png",
-      "sha256": "e41471ee3173e94b0fa76c4888ae9df70b1e08892dc7ace758d8b5a906c21879",
-      "bytes": 274296,
+      "sha256": "154060be67787ad7b3e387072091149f1cc24d3c362b4eaa98d025bdfaef8351",
+      "bytes": 274997,
+      "capturedAt": "2026-10-25T07:32:00.992056+00:00",
       "viewportCssPixels": [
         1440,
         1100
@@ -77,8 +88,9 @@
     },
     {
       "path": "screenshots/desktop-dark.png",
-      "sha256": "7ac6ff96b2bcdbf28f14072bb8f7795361877823c72e0455d7d11023321d1cfe",
-      "bytes": 276658,
+      "sha256": "afbbd99e8b45078fe4fca376ca417b8c0aa50f44a91c23b68925ce646ae2259e",
+      "bytes": 277317,
+      "capturedAt": "2026-10-25T07:33:26.369803+00:00",
       "viewportCssPixels": [
         1440,
         1100
@@ -91,8 +103,9 @@
     },
     {
       "path": "screenshots/mobile-light.png",
-      "sha256": "e44f968d9889390c8caeb0d2497f93d4ca311bdcd81924720c5d1512ca97a878",
-      "bytes": 84727,
+      "sha256": "32bd01f8209cb627b75af8b5165b48e578701084f128a5a8919e74485d95a5fc",
+      "bytes": 85309,
+      "capturedAt": "2026-10-25T07:33:26.634489+00:00",
       "viewportCssPixels": [
         390,
         844
@@ -105,8 +118,9 @@
     },
     {
       "path": "screenshots/mobile-dark.png",
-      "sha256": "6078bd6af463a9f50a0fbc943076a6181c601889c499bf58251fc5b3edd33285",
-      "bytes": 84509,
+      "sha256": "f5bf4e8ca07f264273bcb5e290c8857b5e1ea43ad36a2f630829a8c06e363729",
+      "bytes": 85105,
+      "capturedAt": "2026-10-25T07:33:26.470083+00:00",
       "viewportCssPixels": [
         390,
         844
@@ -118,38 +132,43 @@
       "rootViewed": true
     },
     {
-      "path": "screenshots/mobile-dialog-fit.png",
-      "sha256": "a717af49866c1908344c75d9f45869a52c1290fc6c3a24c09c9b89f5d91dfb85",
-      "bytes": 79832,
+      "path": "screenshots/keyboard-result.png",
+      "sha256": "aa95d03761ce61c7738757c55d4f058f33cd4a86cf676c75f1f403c50be5ed7b",
+      "bytes": 168571,
+      "capturedAt": "2026-10-25T07:32:05.268449+00:00",
       "viewportCssPixels": [
-        390,
-        844
+        1440,
+        1100
       ],
       "deviceScaleFactor": 1,
       "mobileEmulation": false,
-      "theme": "dark",
-      "state": "Plan row counts; fit width",
+      "theme": "light",
+      "state": "product filter + Keyboard traversal search",
       "rootViewed": true
     },
     {
-      "path": "screenshots/mobile-original-bottom.png",
-      "sha256": "23175a7174fae963d35309b21af3791e0b40ef16ceac5206d95907204c53b74b",
-      "bytes": 57327,
+      "path": "screenshots/diff-dialog.png",
+      "sha256": "7ce32e787c3b696a3283c873ba0a0ce7f6a7a32a7c7f913718fc7e03127e903c",
+      "bytes": 230944,
+      "capturedAt": "2026-10-25T07:33:22.990351+00:00",
       "viewportCssPixels": [
-        390,
-        844
+        1440,
+        1100
       ],
       "deviceScaleFactor": 1,
       "mobileEmulation": false,
-      "theme": "dark",
-      "state": "Plan row counts; original size; keyboard End settled at bottom",
+      "theme": "light",
+      "state": "Diff line numbers complete-image modal, fit width",
       "rootViewed": true
     }
   ],
+  "historicalEvidence": {
+    "commit": "50cc320adffef212f046f065eb2e9e702610a27d",
+    "scope": "27-item version only; original-size/end scrolling and native modal tab observations are not restated as fresh 29-item tests"
+  },
   "limits": [
-    "Only representative interactions and images were visually checked in this gallery; 27 embedded original image bytes were independently verified statically.",
-    "No upstream program, individual experiment HTML, external link, CI, deployment, physical touch, screen reader, or human acceptance was exercised by this gallery check.",
-    "Initial End-key sampling occurred during scrolling; the final settled measurement above establishes reaching the end.",
-    "Static verification.json is the builder receipt and correctly remains browser not-run-by-builder."
+    "Only representative interactions and images were visually checked; all 29 embedded PNG bytes were independently verified statically.",
+    "No external links, upstream programs, individual experiment HTML, CI, deployment, physical touch, screen reader or human acceptance were exercised.",
+    "Static verification.json remains browser not-run-by-builder; this file records coordinator browser observations separately."
   ]
 }

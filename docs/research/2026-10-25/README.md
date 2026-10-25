@@ -10,7 +10,7 @@
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
-[离线图片浏览页](gallery/README.md)：首个固定快照含 27 张原始 PNG，可按分组和关键词筛选、展开完整图；下载 `gallery/index.html` 后可独立打开。固定提交/图片摘要保留在 manifest，桌面与 390px 实际检查见浏览页说明。
+[离线图片浏览页](gallery/README.md)：当前固定快照含 29 张原始 PNG，可按分组和关键词筛选、展开完整图；下载 `gallery/index.html` 后可独立打开。固定提交/图片摘要保留在 manifest，桌面与 390px 实际检查见浏览页说明。
 
 | 实验与远程分支 | 具体价值 | 发布 revision | 实际图片 | 验证与限制 |
 | --- | --- | --- | --- | --- |
@@ -87,7 +87,7 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
 | 新发现修复 | Explainer静态预览的dashed关系可读性 | 已确认同主题关系文字被映为边框色，局部label/path/marker修复实施中，保留节点边框与其他variant |
-| 浏览页更新 | 新增两产品修复及两既有分支证据 | 准备29项新固定快照；当前已发布浏览页仍明确为27项历史快照 |
+| 浏览页更新 | 新增两产品修复及两既有分支证据 | 29项新固定快照已完成真实浏览器检查；历史27版证据保留固定提交链接 |
 | 既有实验补证据 | DBML与Plan actions | 两项补证据均已推送：官方DBML明确拒绝；完整plan fixture转换通过；各自边界见README |
 | 已排除的重复实现 | Mutation报告reader | 原viewer已有文件搜索、状态筛选、diff、测试关联和单HTML打包；只保留研究，不另建reader |
 | 保留候选 | Notebook别名与派生值的不同stale预期 | 6项目只读报告完成；目前无实际notebook交接任务，暂不扩成converter |
@@ -131,6 +131,7 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 并发程序的锁序与等待证据 | [Concurrency evidence small tools](scouts/concurrency-evidence-smalltools.md) |
 | 编译器优化备注、位置与采样来源 | [Compiler remarks small tools](scouts/compiler-remarks-smalltools.md) |
 | 字段offset、padding与对象布局 | [Data layout small tools](scouts/data-layout-smalltools.md) |
+| 相邻项目的审阅小动作 | [Adjacent discovery round 2](scouts/adjacent-discovery-round2.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
 报告中的上游声明、局部源码核实、计划中的实验和已经执行的结果分别标注。未推荐方向也保留原因，避免反复研究；没有把上游宣传、星数或作者截图当作 Archify 的效果证明。

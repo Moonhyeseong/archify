@@ -65,12 +65,14 @@ def main():
         if match:
             name, branch, directory, value, revision, _, limits = match.groups()
             rows[branch] = dict(title=name, directory=directory, value=value, revision=revision, limits=limits)
-    assert len(rows) == len(seed["items"]) == 27
+    experiment_count = len(seed["items"])
+    assert experiment_count > 0 and len(rows) == experiment_count
     assert set(rows) == {item["branch"] for item in seed["items"]}
+    assert len({item["id"] for item in seed["items"]}) == experiment_count
     manifest = {
         "version": 1, "kind": "offline-original-png-gallery", "date": "2026-10-25",
         "repository": seed["repository"], "hub": hub_source,
-        "policy": "27 published experiments from the fixed hub. Original PNG bytes only; card previews are CSS crops. No network request, analytics, dependency or experiment execution. Branch publication is not merge, release, CI success or human acceptance.",
+        "policy": f"{experiment_count} published experiments from the fixed hub. Original PNG bytes only; card previews are CSS crops. No network request, analytics, dependency or experiment execution. Branch publication is not merge, release, CI success or human acceptance.",
         "groups": seed["groups"], "visualSources": [], "items": [], "deferred": seed["deferred"],
     }
     for path in seed["visualSourcePaths"]:
@@ -116,15 +118,25 @@ def main():
     for key, group in seed["groups"].items():
         count = len(cards[key])
         groups_html.append(f'''<section class="group" data-group="{key}" aria-labelledby="heading-{key}"><header class="group-head"><div><h2 id="heading-{key}">{html.escape(group['label'])}<span class="group-count">{count}</span></h2><p>{html.escape(group['description'])}</p></div></header><div class="grid">{''.join(cards[key])}</div></section>''')
-    manifest["summary"] = {"experiments": 27, "images": 27, "pngBytes": total_png_bytes, "groupCounts": {key: len(value) for key, value in cards.items()}, "deferredCountedAsPublished": False}
+    image_count = len(manifest["items"])
+    group_counts = {key: len(value) for key, value in cards.items()}
+    manifest["summary"] = {"experiments": experiment_count, "images": image_count, "pngBytes": total_png_bytes, "groupCounts": group_counts, "deferredCountedAsPublished": False}
     manifest_bytes = (json.dumps(manifest, ensure_ascii=False, indent=2) + "\n").encode()
     (HERE / "manifest.json").write_bytes(manifest_bytes)
     deferred = seed["deferred"]
     deferred_url = link(seed["repository"], "tree", deferred["commit"], deferred["directory"])
     template = (HERE / "template.html").read_text()
     page = template.replace("<!-- GALLERY -->", "\n".join(groups_html)).replace("<!-- DEFERRED -->", f'<a href="{html.escape(deferred_url, quote=True)}" target="_blank" rel="noopener noreferrer">Relation return · {deferred["commit"][:8]} ↗</a><p>{html.escape(deferred["reason"])}</p>')
+    filters = [f'<button class="filter" type="button" data-filter="all" aria-pressed="true">全部<span>{experiment_count}</span></button>']
+    for key, group in seed["groups"].items():
+        filters.append(f'<button class="filter" type="button" data-filter="{html.escape(key, quote=True)}" aria-pressed="false">{html.escape(group["label"])}<span>{group_counts[key]}</span></button>')
+    page = page.replace("<!-- FILTERS -->", "".join(filters)).replace("__EXPERIMENT_COUNT__", str(experiment_count)).replace("__IMAGE_COUNT__", str(image_count))
     page = page.replace("__MANIFEST_SHA__", digest(manifest_bytes)).replace("__HUB_COMMIT__", seed["hubCommit"])
-    assert "<!-- GALLERY -->" not in page and page.count('class="card"') == 27
+    assert all(marker not in page for marker in (
+        "__MANIFEST_SHA__", "__HUB_COMMIT__", "__EXPERIMENT_COUNT__", "__IMAGE_COUNT__",
+        "<!-- GALLERY -->", "<!-- FILTERS -->", "<!-- DEFERRED -->",
+    ))
+    assert page.count('class="card"') == experiment_count
     for forbidden in ("/Users/", "/private/tmp/", "file://", "http://localhost"):
         assert forbidden not in page and forbidden not in manifest_bytes.decode()
     (HERE / "index.html").write_text(page)
