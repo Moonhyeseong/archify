@@ -41,7 +41,6 @@
 | [Lasso witness](https://github.com/tt-a1i/archify/tree/codex/lab-lasso-witness/experiments/lasso-witness) | 三位置反例保留有限前缀和无限后缀的显式闭合入口 | `900fe5a3` | [实际原文与图对照](https://github.com/tt-a1i/archify/tree/codex/lab-lasso-witness/experiments/lasso-witness) | 零共享代码；固定上游选段；3页四阶段通过；实际回环遮挡已通过输入修复，旧图保留；未运行checker/未验证用户收益 |
 | [Workflow self-loop](https://github.com/tt-a1i/archify/tree/codex/lab-workflow-self-loop/experiments/workflow-self-loop) | 同一节点同时作为起点和终点，正确外绕回接不再被误拒 | `eb299b15` | [实际回环](https://github.com/tt-a1i/archify/blob/codex/lab-workflow-self-loop/experiments/workflow-self-loop/screenshots/explicit-loop.png) | 局部compiler；145focused/core、独立8、四旧例逐字一致、ZIP/抽包四阶段通过；必要折返守卫，既有auto候选也可用，未扩搜索 |
 | [Plan row counts](https://github.com/tt-a1i/archify/tree/codex/lab-plan-row-counts/experiments/plan-row-counts) | 每次平均3行×352循环≈1056次输出，保留局部估计差异 | `91e2ffad` | [实际解释页](https://github.com/tt-a1i/archify/blob/codex/lab-plan-row-counts/experiments/plan-row-counts/screenshots/explainer.png) | 零共享代码；固定PEV2样例3节点；Tree四阶段、Explainer三阶段通过/自动browser未跑；非SQL执行/unique rows/调优证明 |
-
 | [Diff line numbers](https://github.com/tt-a1i/archify/tree/codex/lab-diff-line-numbers/experiments/diff-line-numbers) | diff行号保持完整单行，长代码仍可横向滚动 | `88b0dcb0` | [1280px修复后](https://github.com/tt-a1i/archify/blob/codex/lab-diff-line-numbers/experiments/diff-line-numbers/screenshots/candidate-1280-light.png) | 单条CSS；25focused/19core/generated、canonical双ZIP、1280/390浅深8组DOM对照通过；30拆行→0；4实际前后图；完整browsergate未跑，未修改键盘检查 |
 
 这二十八项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
@@ -126,6 +125,7 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 语法树、冲突与失败位置 | [Grammar reading small tools](scouts/grammar-reading-smalltools.md) |
 | 增量构建、缓存与失效传播 | [Rebuild evidence small tools](scouts/rebuild-evidence-smalltools.md) |
 | 并发程序的锁序与等待证据 | [Concurrency evidence small tools](scouts/concurrency-evidence-smalltools.md) |
+| 编译器优化备注、位置与采样来源 | [Compiler remarks small tools](scouts/compiler-remarks-smalltools.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
 报告中的上游声明、局部源码核实、计划中的实验和已经执行的结果分别标注。未推荐方向也保留原因，避免反复研究；没有把上游宣传、星数或作者截图当作 Archify 的效果证明。
