@@ -1,0 +1,14 @@
+{
+  "kind": "static-byte-and-syntax-verification",
+  "htmlSha256": "731877a954e904d3c73a9c7ae754bc75a810b174cd792e8c4fed87774d1f48eb",
+  "manifestSha256": "9b799d058b2913ec107b38e1cb19abcfc5e8892d87ec0ba8a594e2252d89b151",
+  "htmlBytes": 8970796,
+  "experiments": 27,
+  "originalPngs": 27,
+  "allEmbeddedPngHashesMatchManifest": true,
+  "allFixedAndBranchLinksPresent": true,
+  "externalResourceReferences": 0,
+  "javascriptSyntax": "pass",
+  "browserInteractions": "not-run-by-builder",
+  "limits": "Static checks do not establish rendering, image readability, keyboard behavior, device or human acceptance. Browser evidence is recorded separately by the coordinating agent."
+}

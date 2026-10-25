@@ -1,0 +1,155 @@
+{
+  "kind": "derived browser evidence summary; raw interaction observations retained outside checkout",
+  "html": {
+    "path": "index.html",
+    "sha256": "731877a954e904d3c73a9c7ae754bc75a810b174cd792e8c4fed87774d1f48eb"
+  },
+  "manifestSha256": "9b799d058b2913ec107b38e1cb19abcfc5e8892d87ec0ba8a594e2252d89b151",
+  "observedAt": [
+    "2026-10-25T06:36:20.863Z",
+    "2026-10-25T06:36:47.352Z",
+    "2026-10-25T06:37:35.189Z",
+    "2026-10-25T06:38:04.969Z"
+  ],
+  "environment": "Ego Lite Chromium through existing task space; desktop viewport emulation, mouse and keyboard; not physical phone or assistive technology acceptance",
+  "checks": {
+    "filters": {
+      "product": 7,
+      "offline": 15,
+      "content": 5,
+      "all": 27
+    },
+    "searchAndFilter": {
+      "query": "Task review",
+      "group": "offline",
+      "matches": [
+        "Task review map"
+      ]
+    },
+    "emptyAndReset": "0 matches displays empty state; reset restores 27 and focuses query",
+    "mobilePageWidth": {
+      "innerWidth": 390,
+      "scrollWidth": 390
+    },
+    "dialog": "Fit-width image and original-size scroll available; Escape closes and restores opener focus",
+    "longImage": {
+      "naturalWidth": 1440,
+      "naturalHeight": 1904,
+      "settledScrollTop": 1352,
+      "maximumScrollTop": 1352
+    },
+    "nativeModalTabTraversal": [
+      {
+        "focusId": "",
+        "tag": "BODY",
+        "documentFocused": false,
+        "insideDialog": false
+      },
+      {
+        "focusId": "original-size",
+        "tag": "BUTTON",
+        "documentFocused": true,
+        "insideDialog": true
+      },
+      {
+        "focusId": "close-image",
+        "tag": "BUTTON",
+        "documentFocused": true,
+        "insideDialog": true
+      }
+    ],
+    "nativeModalNote": "Tab after the last link visits browser chrome (document.hasFocus=false), then returns to original-size and close buttons. No background page control became focused. No custom focus trap added."
+  },
+  "screenshots": [
+    {
+      "path": "screenshots/desktop-light.png",
+      "sha256": "e41471ee3173e94b0fa76c4888ae9df70b1e08892dc7ace758d8b5a906c21879",
+      "bytes": 274296,
+      "viewportCssPixels": [
+        1440,
+        1100
+      ],
+      "deviceScaleFactor": 1,
+      "mobileEmulation": false,
+      "theme": "light",
+      "state": "all; first viewport",
+      "rootViewed": true
+    },
+    {
+      "path": "screenshots/desktop-dark.png",
+      "sha256": "7ac6ff96b2bcdbf28f14072bb8f7795361877823c72e0455d7d11023321d1cfe",
+      "bytes": 276658,
+      "viewportCssPixels": [
+        1440,
+        1100
+      ],
+      "deviceScaleFactor": 1,
+      "mobileEmulation": false,
+      "theme": "dark",
+      "state": "all; first viewport",
+      "rootViewed": true
+    },
+    {
+      "path": "screenshots/mobile-light.png",
+      "sha256": "e44f968d9889390c8caeb0d2497f93d4ca311bdcd81924720c5d1512ca97a878",
+      "bytes": 84727,
+      "viewportCssPixels": [
+        390,
+        844
+      ],
+      "deviceScaleFactor": 1,
+      "mobileEmulation": false,
+      "theme": "light",
+      "state": "all; first viewport",
+      "rootViewed": true
+    },
+    {
+      "path": "screenshots/mobile-dark.png",
+      "sha256": "6078bd6af463a9f50a0fbc943076a6181c601889c499bf58251fc5b3edd33285",
+      "bytes": 84509,
+      "viewportCssPixels": [
+        390,
+        844
+      ],
+      "deviceScaleFactor": 1,
+      "mobileEmulation": false,
+      "theme": "dark",
+      "state": "all; first viewport",
+      "rootViewed": true
+    },
+    {
+      "path": "screenshots/mobile-dialog-fit.png",
+      "sha256": "a717af49866c1908344c75d9f45869a52c1290fc6c3a24c09c9b89f5d91dfb85",
+      "bytes": 79832,
+      "viewportCssPixels": [
+        390,
+        844
+      ],
+      "deviceScaleFactor": 1,
+      "mobileEmulation": false,
+      "theme": "dark",
+      "state": "Plan row counts; fit width",
+      "rootViewed": true
+    },
+    {
+      "path": "screenshots/mobile-original-bottom.png",
+      "sha256": "23175a7174fae963d35309b21af3791e0b40ef16ceac5206d95907204c53b74b",
+      "bytes": 57327,
+      "viewportCssPixels": [
+        390,
+        844
+      ],
+      "deviceScaleFactor": 1,
+      "mobileEmulation": false,
+      "theme": "dark",
+      "state": "Plan row counts; original size; keyboard End settled at bottom",
+      "rootViewed": true
+    }
+  ],
+  "limits": [
+    "Only representative interactions and images were visually checked in this gallery; 27 embedded original image bytes were independently verified statically.",
+    "No upstream program, individual experiment HTML, external link, CI, deployment, physical touch, screen reader, or human acceptance was exercised by this gallery check.",
+    "Initial End-key sampling occurred during scrolling; the final settled measurement above establishes reaching the end.",
+    "Static verification.json is the builder receipt and correctly remains browser not-run-by-builder."
+  ]
+}

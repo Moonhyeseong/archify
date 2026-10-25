@@ -10,6 +10,8 @@
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
+[离线图片浏览页](gallery/README.md)：27 张原始 PNG，可按分组和关键词筛选、展开完整图；下载 `gallery/index.html` 后可独立打开。固定提交/图片摘要保留在 manifest，桌面与 390px 实际检查见浏览页说明。
+
 | 实验与远程分支 | 具体价值 | 发布 revision | 实际图片 | 验证与限制 |
 | --- | --- | --- | --- | --- |
 | [Task review map](https://github.com/tt-a1i/archify/tree/codex/lab-task-review-map/experiments/task-review-map) | 固定Git改动对应独立声明；真实PR #1097的5hunk已记账与ZIP未解析并列 | `dcedd538` | [真实PR前后布局](https://github.com/tt-a1i/archify/tree/codex/lab-task-review-map/experiments/task-review-map/pr-1097) | 原15 tests复用；新增完整4文件证据，映射exit1；只手工改9坐标修阅读性，原输出保留；3静态gate通过，仍30键盘诊断；未跑PR代码 |
@@ -79,8 +81,7 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
 | 后续发现 | 静态代码路径、语法解析阅读、增量构建解释 | 三路固定来源调研，先核真实fixture与新增价值，不按星数筛选 |
-| 审阅入口 | 27项真实图片的离线浏览页 | 正在检查搜索、分组、完整图片与窄屏阅读 |
-| 测试证据候选 | Mutation的Survived与NoCoverage | 已核固定report与字段合同；继续对照原viewer，尚未决定增加reader |
+| 已排除的重复实现 | Mutation报告reader | 原viewer已有文件搜索、状态筛选、diff、测试关联和单HTML打包；只保留研究，不另建reader |
 | 保留候选 | Notebook别名与派生值的不同stale预期 | 6项目只读报告完成；目前无实际notebook交接任务，暂不扩成converter |
 
 ## 一手调研报告
@@ -115,6 +116,7 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | SQL查询计划与统计口径 | [Query plan small tools](scouts/query-plan-smalltools.md) |
 | Notebook别名、物化值与stale证据 | [Notebook evidence small tools](scouts/notebook-evidence-smalltools.md) |
 | 组件身份、包坐标与出现位置 | [Component identity small tools](scouts/component-identity-smalltools.md) |
+| Mutation状态、源码与测试关联 | [Mutation evidence small tools](scouts/mutation-evidence-smalltools.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
 报告中的上游声明、局部源码核实、计划中的实验和已经执行的结果分别标注。未推荐方向也保留原因，避免反复研究；没有把上游宣传、星数或作者截图当作 Archify 的效果证明。

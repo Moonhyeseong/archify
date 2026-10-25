@@ -1,0 +1,304 @@
+{
+  "version": 1,
+  "repository": "https://github.com/tt-a1i/archify",
+  "hubCommit": "e6f61df1af80efd24fdb7abc7f99f9abf9faee9a",
+  "hubPath": "docs/research/2026-10-25/README.md",
+  "visualSourcePaths": [
+    "website/src/styles/site.css",
+    "website/src/styles/index.css",
+    "website/src/styles/gallery.css"
+  ],
+  "groups": {
+    "product": {
+      "label": "产品交互",
+      "description": "对既有阅读、作者反馈或局部渲染行为的候选改动。"
+    },
+    "offline": {
+      "label": "离线适配",
+      "description": "消费明确提供的格式与记录，复用原生图和解释页。"
+    },
+    "content": {
+      "label": "内容示例",
+      "description": "用固定来源讲清一个问题，不新增共享产品能力。"
+    }
+  },
+  "items": [
+    {
+      "id": "task-review-map",
+      "commit": "dcedd53856b82d3e403a9651dca0e15840496942",
+      "branch": "codex/lab-task-review-map",
+      "directory": "experiments/task-review-map",
+      "group": "offline",
+      "inputKind": "真实 PR / 独立声明",
+      "imagePath": "experiments/task-review-map/pr-1097/screenshots/diagram-and-summary-1280.png",
+      "imageCaption": "完整 PR 的六个阅读声明与步骤；仅手写位置派生。"
+    },
+    {
+      "id": "dependency-map",
+      "commit": "2be2ab55cc9134876158e557e5287ec1912ca718",
+      "branch": "codex/lab-dependency-map",
+      "directory": "experiments/dependency-map",
+      "group": "offline",
+      "inputKind": "固定上游报告",
+      "imagePath": "experiments/dependency-map/screenshots/official.png",
+      "imageCaption": "官方报告的局部依赖视图；其余记录仍在账目中。"
+    },
+    {
+      "id": "trace-waterfall",
+      "commit": "8e65f150b8db6947c98f9b12e37d970014e0ea7e",
+      "branch": "codex/lab-trace-waterfall",
+      "directory": "experiments/trace-waterfall",
+      "group": "offline",
+      "inputKind": "原创 workload 实测",
+      "imagePath": "experiments/trace-waterfall/screenshots/workload.png",
+      "imageCaption": "10 个真实采集操作区间；不推断调用树。"
+    },
+    {
+      "id": "markdown-outline",
+      "commit": "3f156e979476f068b1017eca7fe5539a0ddf11e1",
+      "branch": "codex/lab-markdown-outline",
+      "directory": "experiments/markdown-outline",
+      "group": "offline",
+      "inputKind": "真实公开文档",
+      "imagePath": "experiments/markdown-outline/screenshots/contributing-export.png",
+      "imageCaption": "公开 CONTRIBUTING.md 标题投影的原生 PNG 导出。"
+    },
+    {
+      "id": "dbml-erd",
+      "commit": "feab6ae685692630d6d837622dc7bdcb57a09679",
+      "branch": "codex/lab-dbml-erd",
+      "directory": "experiments/dbml-erd",
+      "group": "offline",
+      "inputKind": "原创 synthetic",
+      "imagePath": "experiments/dbml-erd/screenshots/order-payments.png",
+      "imageCaption": "原创订单 / 支付样例，保留键与引用方向。"
+    },
+    {
+      "id": "change-coupling",
+      "commit": "44dc5cbc324f3aaeff2b8de582412566f1f8b8ab",
+      "branch": "codex/lab-change-coupling",
+      "directory": "experiments/change-coupling",
+      "group": "offline",
+      "inputKind": "原创 synthetic",
+      "imagePath": "experiments/change-coupling/screenshots/coupling.png",
+      "imageCaption": "共变分数与原始计数，不代表调用或因果。"
+    },
+    {
+      "id": "payload-delta",
+      "commit": "823e8705aa0eeef90f46045f52e56651f0c81c1b",
+      "branch": "codex/lab-payload-delta",
+      "directory": "experiments/payload-delta",
+      "group": "offline",
+      "inputKind": "原创 synthetic",
+      "imagePath": "experiments/payload-delta/screenshots/review.png",
+      "imageCaption": "明确提供的 JSON 样本差异，不是流量捕获。"
+    },
+    {
+      "id": "decision-thread",
+      "commit": "bdbdf9a9b5b97c556c5f85547279021b7446a05c",
+      "branch": "codex/lab-decision-thread",
+      "directory": "experiments/decision-thread",
+      "group": "offline",
+      "inputKind": "原创虚构对话",
+      "imagePath": "experiments/decision-thread/screenshots/sequence.png",
+      "imageCaption": "决定、撤回和未解决异议均保留。"
+    },
+    {
+      "id": "migration-plan",
+      "commit": "8a4a1cd4d04865c7606a2ed31c20c98a114d75b1",
+      "branch": "codex/lab-migration-plan",
+      "directory": "experiments/migration-plan",
+      "group": "offline",
+      "inputKind": "原创 synthetic",
+      "imagePath": "experiments/migration-plan/screenshots/migration-plan.png",
+      "imageCaption": "已有计划形状的阅读投影；没有执行 SQL。"
+    },
+    {
+      "id": "state-contract",
+      "commit": "cc8c75bc15484098bf64aead799a34870981ccac",
+      "branch": "codex/lab-state-contract",
+      "directory": "experiments/state-contract",
+      "group": "offline",
+      "inputKind": "原创 synthetic",
+      "imagePath": "experiments/state-contract/screenshots/state-contract.png",
+      "imageCaption": "静态状态 / 事件声明矩阵，没有运行机器。"
+    },
+    {
+      "id": "finder-highlights",
+      "commit": "94c165ee6e5213c67e37a75a0b04496564980801",
+      "branch": "codex/lab-finder-highlights",
+      "directory": "experiments/finder-highlights",
+      "group": "product",
+      "inputKind": "既有固定图",
+      "imagePath": "experiments/finder-highlights/screenshots/candidate-api-light.png",
+      "imageCaption": "输入查询后，列表与画布显示相同匹配节点。"
+    },
+    {
+      "id": "ci-conditions",
+      "commit": "0ec0b8345fcfc97e49117b66fd7f99a198c96604",
+      "branch": "codex/lab-ci-conditions",
+      "directory": "experiments/ci-conditions",
+      "group": "offline",
+      "inputKind": "固定真实 workflow",
+      "imagePath": "experiments/ci-conditions/screenshots/overview.png",
+      "imageCaption": "needs 与条件并读，不预测 job 执行结果。"
+    },
+    {
+      "id": "plan-actions",
+      "commit": "640fa6fff3285d35da814cedff6f0b75ae3d39ba",
+      "branch": "codex/lab-plan-actions",
+      "directory": "experiments/plan-actions",
+      "group": "offline",
+      "inputKind": "原创 synthetic",
+      "imagePath": "experiments/plan-actions/screenshots/explainer.png",
+      "imageCaption": "资源自己的 replacement 顺序与路径类别。"
+    },
+    {
+      "id": "recipe-stages",
+      "commit": "101648642a6ccae67b82a9a48bc4507c3b8a627a",
+      "branch": "codex/lab-recipe-stages",
+      "directory": "experiments/recipe-stages",
+      "group": "offline",
+      "inputKind": "原创 synthetic",
+      "imagePath": "experiments/recipe-stages/screenshots/priors-2.png",
+      "imageCaption": "priors=2 的 before / body / after 解释页。"
+    },
+    {
+      "id": "relation-reference",
+      "commit": "6d7cd59492240952c8ade422ec9014de76fb4164",
+      "branch": "codex/lab-relation-reference",
+      "directory": "experiments/relation-reference",
+      "group": "product",
+      "inputKind": "既有固定图",
+      "imagePath": "experiments/relation-reference/screenshots/candidate-light.png",
+      "imageCaption": "固定关系 Passport 中的 Copy reference。"
+    },
+    {
+      "id": "test-context-map",
+      "commit": "9d6b4e3a85f52f3f6c50ab30338358ebdb2597dd",
+      "branch": "codex/lab-test-context-map",
+      "directory": "experiments/test-context-map",
+      "group": "offline",
+      "inputKind": "固定工具实跑原创 fixture",
+      "imagePath": "experiments/test-context-map/measured/screenshots/matrix.png",
+      "imageCaption": "实际 context 观测矩阵，不自动选择测试。"
+    },
+    {
+      "id": "test-failure-map",
+      "commit": "bb5e7bdb2995e977eeaf12dd8d6187a3ca676db9",
+      "branch": "codex/lab-test-failure-map",
+      "directory": "experiments/test-failure-map",
+      "group": "offline",
+      "inputKind": "固定工具实跑原创 fixture",
+      "imagePath": "experiments/test-failure-map/measured/screenshots/phases.png",
+      "imageCaption": "真实受控 setup / call / teardown 记录。"
+    },
+    {
+      "id": "delta-values",
+      "commit": "4c35456b23b5452ca3f620672a8b52545979c945",
+      "branch": "codex/lab-delta-values",
+      "directory": "experiments/delta-values",
+      "group": "product",
+      "inputKind": "既有 Checkout 比较",
+      "imagePath": "experiments/delta-values/screenshots/candidate-persist-order-light.png",
+      "imageCaption": "exact row 显示 receipt 已保留的 SQL → SQL tx。"
+    },
+    {
+      "id": "source-question-tour",
+      "commit": "94d6a4d05bcc5c6bc86704692eef48b73fd53c25",
+      "branch": "codex/lab-source-question-tour",
+      "directory": "experiments/source-question-tour",
+      "group": "content",
+      "inputKind": "固定源码 / authored 导读",
+      "imagePath": "experiments/source-question-tour/screenshots/question-first-overview.png",
+      "imageCaption": "同五段源码按四个阅读问题组织。"
+    },
+    {
+      "id": "diagnostic-locations",
+      "commit": "67328d7de5cdf7bd894bfb526682cff9fdc2d10b",
+      "branch": "codex/lab-diagnostic-locations",
+      "directory": "experiments/diagnostic-locations",
+      "group": "product",
+      "inputKind": "固定诊断 / 连续预览",
+      "imagePath": "experiments/diagnostic-locations/screenshots/live-preview-needs-fix.png",
+      "imageCaption": "坏输入诊断显示位置，保留先前 verified 图。"
+    },
+    {
+      "id": "finder-context",
+      "commit": "5b7701c170dabf5d204f3d220ebdb9d39fe178d2",
+      "branch": "codex/lab-finder-context",
+      "directory": "experiments/finder-context",
+      "group": "product",
+      "inputKind": "既有 measured 图",
+      "imagePath": "experiments/finder-context/screenshots/candidate-finder.png",
+      "imageCaption": "可见元信息成为同名结果的可访问描述。"
+    },
+    {
+      "id": "delivery-witness",
+      "commit": "f2aa251e4e8f93cd6f409df0adaa1b11b368e2e1",
+      "branch": "codex/lab-delivery-witness",
+      "directory": "experiments/delivery-witness",
+      "group": "content",
+      "inputKind": "固定官方模拟 fixture",
+      "imagePath": "experiments/delivery-witness/screenshots/witness.png",
+      "imageCaption": "相同 msgId / 时间的两条投递仍各有身份。"
+    },
+    {
+      "id": "waterfall-status",
+      "commit": "e20acd6d6c0083f6b6ddecaf7bb250becfbca228",
+      "branch": "codex/lab-waterfall-status",
+      "directory": "experiments/waterfall-status",
+      "group": "product",
+      "inputKind": "原创构造反例",
+      "imagePath": "experiments/waterfall-status/screenshots/overview.png",
+      "imageCaption": "显式 error / cancelled 在行尾成为文字。"
+    },
+    {
+      "id": "retained-size",
+      "commit": "a0c76fc8f090eb194915103e4fc7344ad2ae7184",
+      "branch": "codex/lab-retained-size",
+      "directory": "experiments/retained-size",
+      "group": "content",
+      "inputKind": "固定上游 golden",
+      "imagePath": "experiments/retained-size/screenshots/explanation.png",
+      "imageCaption": "165 B 自身 + 4 B 直接子项 = 169 B retained。"
+    },
+    {
+      "id": "lasso-witness",
+      "commit": "900fe5a3b880328eab3ecd2d21e7864aa6d734c8",
+      "branch": "codex/lab-lasso-witness",
+      "directory": "experiments/lasso-witness",
+      "group": "content",
+      "inputKind": "固定上游反例选段",
+      "imagePath": "experiments/lasso-witness/screenshots/candidate.png",
+      "imageCaption": "三位置的有限前缀和无限 loop 闭合入口。"
+    },
+    {
+      "id": "workflow-self-loop",
+      "commit": "eb299b1568327fb77ce7e8a6dcaab610e2b6af0c",
+      "branch": "codex/lab-workflow-self-loop",
+      "directory": "experiments/workflow-self-loop",
+      "group": "product",
+      "inputKind": "原创几何回归输入",
+      "imagePath": "experiments/workflow-self-loop/screenshots/explicit-loop.png",
+      "imageCaption": "同一节点离开与回接的外绕 self-loop。"
+    },
+    {
+      "id": "plan-row-counts",
+      "commit": "91e2ffadb5cd46fc72d5da978a4b83f8c7dfe521",
+      "branch": "codex/lab-plan-row-counts",
+      "directory": "experiments/plan-row-counts",
+      "group": "content",
+      "inputKind": "固定 PEV2 样例",
+      "imagePath": "experiments/plan-row-counts/screenshots/explainer.png",
+      "imageCaption": "每循环平均行数与累计输出分开解释。"
+    }
+  ],
+  "deferred": {
+    "id": "relation-return",
+    "branch": "codex/lab-relation-return",
+    "commit": "e323d30f1ebf159d992d8f0426296de872ed61b7",
+    "directory": "experiments/relation-return",
+    "reason": "既有 Incoming 行已能一步回到来源；兼容测试通过没有证明额外 Back 按钮更好用。暂不引入额外状态，不计入 27 项。"
+  }
+}
