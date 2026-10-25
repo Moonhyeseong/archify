@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Synthetic co-change evidence",
+    "output": "coupling.html",
+    "subtitle": "One pair per row; shared files repeat. Pair → file = membership, not calls or conditional probability.",
+    "quality_profile": "standard",
+    "legend": {
+      "entries": {
+        "backend": {
+          "label": "File member"
+        },
+        "external": {
+          "label": "Pair evidence"
+        }
+      }
+    }
+  },
+  "layout": {
+    "mode": "grid",
+    "cols": 3,
+    "cellW": 340,
+    "cellH": 92,
+    "gapX": 110,
+    "gapY": 95
+  },
+  "components": [
+    {
+      "id": "pair-1-a",
+      "type": "backend",
+      "label": "src/export.mjs",
+      "sublabel": "File member",
+      "size": [
+        340,
+        92
+      ],
+      "row": 0,
+      "col": 0
+    },
+    {
+      "id": "pair-1",
+      "type": "external",
+      "label": "Pair 1 · score 75",
+      "sublabel": "shared 6 · revs 8/8",
+      "size": [
+        340,
+        92
+      ],
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": "pair-1-b",
+      "type": "backend",
+      "label": "src/reader.mjs",
+      "sublabel": "File member",
+      "size": [
+        340,
+        92
+      ],
+      "row": 0,
+      "col": 2
+    },
+    {
+      "id": "pair-2-a",
+      "type": "backend",
+      "label": "src/format,legacy.mjs",
+      "sublabel": "File member",
+      "size": [
+        340,
+        92
+      ],
+      "row": 1,
+      "col": 0
+    },
+    {
+      "id": "pair-2",
+      "type": "external",
+      "label": "Pair 2 · score 40",
+      "sublabel": "shared 4 · revs 12/8",
+      "size": [
+        340,
+        92
+      ],
+      "row": 1,
+      "col": 1
+    },
+    {
+      "id": "pair-2-b",
+      "type": "backend",
+      "label": "src/reader.mjs",
+      "sublabel": "File member",
+      "size": [
+        340,
+        92
+      ],
+      "row": 1,
+      "col": 2
+    },
+    {
+      "id": "pair-3-a",
+      "type": "backend",
+      "label": "src/render.mjs",
+      "sublabel": "File member",
+      "size": [
+        340,
+        92
+      ],
+      "row": 2,
+      "col": 0
+    },
+    {
+      "id": "pair-3",
+      "type": "external",
+      "label": "Pair 3 · score 50",
+      "sublabel": "shared 5 · revs 12/8",
+      "size": [
+        340,
+        92
+      ],
+      "row": 2,
+      "col": 1
+    },
+    {
+      "id": "pair-3-b",
+      "type": "backend",
+      "label": "src/validate.mjs",
+      "sublabel": "File member",
+      "size": [
+        340,
+        92
+      ],
+      "row": 2,
+      "col": 2
+    }
+  ],
+  "connections": [
+    {
+      "id": "pair-1-member-a",
+      "from": "pair-1",
+      "to": "pair-1-a",
+      "label": "member",
+      "variant": "dashed"
+    },
+    {
+      "id": "pair-1-member-b",
+      "from": "pair-1",
+      "to": "pair-1-b",
+      "label": "member",
+      "variant": "dashed"
+    },
+    {
+      "id": "pair-2-member-a",
+      "from": "pair-2",
+      "to": "pair-2-a",
+      "label": "member",
+      "variant": "dashed"
+    },
+    {
+      "id": "pair-2-member-b",
+      "from": "pair-2",
+      "to": "pair-2-b",
+      "label": "member",
+      "variant": "dashed"
+    },
+    {
+      "id": "pair-3-member-a",
+      "from": "pair-3",
+      "to": "pair-3-a",
+      "label": "member",
+      "variant": "dashed"
+    },
+    {
+      "id": "pair-3-member-b",
+      "from": "pair-3",
+      "to": "pair-3-b",
+      "label": "member",
+      "variant": "dashed"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Evidence boundary",
+      "dot": "amber",
+      "items": [
+        "Each pair is symmetric; arrows mean membership only.",
+        "Files repeat across pair rows. Missing pairs are unknown.",
+        "Original synthetic fixture; no repository was measured."
+      ]
+    }
+  ]
+}

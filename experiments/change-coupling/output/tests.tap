@@ -1,0 +1,88 @@
+TAP version 13
+# Subtest: quoted comma, escaped quote, BOM and CRLF preserve exact CSV values
+ok 1 - quoted comma, escaped quote, BOM and CRLF preserve exact CSV values
+  ---
+  duration_ms: 1.805625
+  type: 'test'
+  ...
+# Subtest: reversing endpoints and counts leaves symmetric evidence unchanged
+ok 2 - reversing endpoints and counts leaves symmetric evidence unchanged
+  ---
+  duration_ms: 0.293708
+  type: 'test'
+  ...
+# Subtest: default output preserves unknown counts, not reconstructed zeroes
+ok 3 - default output preserves unknown counts, not reconstructed zeroes
+  ---
+  duration_ms: 0.113375
+  type: 'test'
+  ...
+# Subtest: identical reversed duplicate collapses; conflicting duplicate fails
+ok 4 - identical reversed duplicate collapses; conflicting duplicate fails
+  ---
+  duration_ms: 0.208708
+  type: 'test'
+  ...
+# Subtest: empty data reports no supplied pairs, never zero coupling
+ok 5 - empty data reports no supplied pairs, never zero coupling
+  ---
+  duration_ms: 0.118833
+  type: 'test'
+  ...
+# Subtest: score is integer symmetric average formula, not conditional probability
+ok 6 - score is integer symmetric average formula, not conditional probability
+  ---
+  duration_ms: 0.154792
+  type: 'test'
+  ...
+# Subtest: invalid values, inconsistent counts and schema ambiguity fail closed
+ok 7 - invalid values, inconsistent counts and schema ambiguity fail closed
+  ---
+  duration_ms: 0.194625
+  type: 'test'
+  ...
+# Subtest: malformed CSV is rejected, quoted newlines parse but paths reject controls
+ok 8 - malformed CSV is rejected, quoted newlines parse but paths reject controls
+  ---
+  duration_ms: 0.076708
+  type: 'test'
+  ...
+# Subtest: size limits are explicit and do not silently truncate a graph
+ok 9 - size limits are explicit and do not silently truncate a graph
+  ---
+  duration_ms: 0.56975
+  type: 'test'
+  ...
+# Subtest: CLI parsing failure preserves prior output and returns nonzero JSON error
+ok 10 - CLI parsing failure preserves prior output and returns nonzero JSON error
+  ---
+  duration_ms: 64.386875
+  type: 'test'
+  ...
+# Subtest: unquoted path whitespace is original identity, not a trim alias
+ok 11 - unquoted path whitespace is original identity, not a trim alias
+  ---
+  duration_ms: 0.192542
+  type: 'test'
+  ...
+# Subtest: valid input refuses existing output symlink and preserves victim bytes
+ok 12 - valid input refuses existing output symlink and preserves victim bytes
+  ---
+  duration_ms: 132.021125
+  type: 'test'
+  ...
+# Subtest: empty-report unknown state passes the real public renderer
+ok 13 - empty-report unknown state passes the real public renderer
+  ---
+  duration_ms: 594.801
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 871.763333

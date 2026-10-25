@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "captureDate": "2026-10-25",
+  "browser": "Ego Lite Chromium",
+  "viewport": {
+    "width": 1440,
+    "height": 1000,
+    "deviceScaleFactor": 1
+  },
+  "appearance": "light / Classic / Still for native Viewer; System light / Clean for Explainer",
+  "captures": [
+    {
+      "artifact": {
+        "path": "../output/coupling.html",
+        "sha256": "b98c7fa3a5c2ba4ca199fc40d508dad1f22a75f626f1fe2ea6e8f3caba4511fe"
+      },
+      "image": {
+        "path": "coupling.png",
+        "sha256": "33f31677c4141d3596f7677f32914e568bcbc8b8c273c7e506ae490b63164749",
+        "width": 1440,
+        "height": 1000
+      },
+      "method": "page screenshot"
+    },
+    {
+      "artifact": {
+        "path": "../output/explainer.html",
+        "sha256": "29393e3f995e29f577df86fe0aeafd556bf7cf32e881f516d8bbca553a03abff"
+      },
+      "image": {
+        "path": "explainer.png",
+        "sha256": "5ee317929703234b0b6bb8b8b5b37440a0a6ca3babb97ee9b5534129697d1d13",
+        "width": 1440,
+        "height": 1579
+      },
+      "method": "page screenshot; full page"
+    }
+  ],
+  "review": {
+    "by": "Codex coordinating agent",
+    "observations": [
+      "Native pair rows and file labels are legible and explicitly synthetic.",
+      "Membership arrows do not claim call direction or causality.",
+      "The Explainer inline preview shows a readability warning and offers the full Viewer; the native diagram is the primary review image."
+    ],
+    "humanAcceptance": "pending"
+  }
+}

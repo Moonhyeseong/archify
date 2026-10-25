@@ -1,0 +1,90 @@
+{
+  "recordType": "Portable validation summary, not an original Archify receipt",
+  "baseRevision": "82c7e0f0",
+  "fixture": "synthetic; no repository measured; no Code Maat process executed",
+  "commands": [
+    {
+      "command": [
+        "node",
+        "experiments/change-coupling/adapter.mjs",
+        "experiments/change-coupling/fixtures/synthetic.csv",
+        "experiments/change-coupling/fixtures/synthetic.metadata.json",
+        "experiments/change-coupling/run-0a0ca7a2-0d31-4b68-b927-6ee1541f813b"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "archify/bin/archify.mjs",
+        "render",
+        "architecture",
+        "experiments/change-coupling/run-0a0ca7a2-0d31-4b68-b927-6ee1541f813b/coupling.architecture.json",
+        "experiments/change-coupling/run-0a0ca7a2-0d31-4b68-b927-6ee1541f813b/coupling.html",
+        "--quality",
+        "standard"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "archify/bin/archify.mjs",
+        "finalize",
+        "explainer",
+        "experiments/change-coupling/run-0a0ca7a2-0d31-4b68-b927-6ee1541f813b/coupling.archify.md",
+        "experiments/change-coupling/run-0a0ca7a2-0d31-4b68-b927-6ee1541f813b/explainer.html",
+        "--out-dir",
+        "<temporary-receipt-directory>",
+        "--json"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "not-run"
+  },
+  "visualReview": "not-requested",
+  "artifacts": {
+    "coupling.architecture.json": {
+      "sha256": "ee5ecf61ff142a7245b7912265a5d8a7ad901596344877261bba5f2dd2dc898a"
+    },
+    "coupling.html": {
+      "sha256": "b98c7fa3a5c2ba4ca199fc40d508dad1f22a75f626f1fe2ea6e8f3caba4511fe"
+    },
+    "coupling.archify.md": {
+      "sha256": "0a55983e2a6831953b1a320323ca98f93d13442fd4309705f0f7fd54e1a54e15"
+    },
+    "explainer.html": {
+      "sha256": "29393e3f995e29f577df86fe0aeafd556bf7cf32e881f516d8bbca553a03abff"
+    },
+    "evidence.json": {
+      "sha256": "f12c90c6f339c0a545a9ac17d785946a576b9a8afffdceca6fd6bac719333bff"
+    }
+  },
+  "historicalFailures": [
+    {
+      "stage": "render",
+      "reason": "First draft omitted meta.output."
+    },
+    {
+      "stage": "finalize",
+      "reason": "First draft native node label overflow; fixed by explicit node size."
+    },
+    {
+      "stage": "independent-review",
+      "reason": "Existing output symlink could overwrite unrelated target; fixed by requiring new output directory, exclusive file creation, and actual victim-preservation regression. Unquoted CSV path trimming also fixed."
+    }
+  ],
+  "rawReceiptPolicy": "Original local receipts retained outside checkout. This summary selects phase results and hashes without rewriting original receipts.",
+  "testEvidence": {
+    "command": "node --test experiments/change-coupling/adapter.test.mjs",
+    "passed": 13,
+    "failed": 0,
+    "skipped": 0,
+    "log": "tests.tap"
+  }
+}

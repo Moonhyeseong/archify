@@ -1,0 +1,4 @@
+entity,coupled,degree,average-revs,first-entity-revisions,second-entity-revisions,shared-revisions
+src/render.mjs,src/validate.mjs,50,10,12,8,5
+src/reader.mjs,src/export.mjs,75,8,8,8,6
+"src/format,legacy.mjs",src/reader.mjs,40,10,12,8,4

@@ -1,0 +1,53 @@
+{
+  "adapter": "change-coupling/1",
+  "kind": "synthetic",
+  "inputSha256": "eab1a43a8bdd5cfc0cc9c643742fee59a7704cd955f0009d3e4a7f4bcd700bb0",
+  "suppliedMetadata": {
+    "kind": "synthetic",
+    "description": "Original fictional file pairs; not output of an executed Code Maat process.",
+    "window": null,
+    "filters": null,
+    "repository": null,
+    "revision": null,
+    "formatSource": "Code Maat coupling CSV, verbose-results",
+    "formatSourceCommit": "50537abb8dffa1b1ba4e91a605ee5c558c01b224"
+  },
+  "semantics": "Symmetric co-change score; not calls, causality, conditional probability or predicted impact.",
+  "scope": "Only supplied rows. Missing pairs and files are unknown; empty report means no supplied pairs.",
+  "duplicatesCollapsed": 0,
+  "pairs": [
+    {
+      "a": "src/export.mjs",
+      "b": "src/reader.mjs",
+      "degree": 75,
+      "average": 8,
+      "counts": {
+        "first": 8,
+        "second": 8,
+        "shared": 6
+      }
+    },
+    {
+      "a": "src/format,legacy.mjs",
+      "b": "src/reader.mjs",
+      "degree": 40,
+      "average": 10,
+      "counts": {
+        "first": 12,
+        "second": 8,
+        "shared": 4
+      }
+    },
+    {
+      "a": "src/render.mjs",
+      "b": "src/validate.mjs",
+      "degree": 50,
+      "average": 10,
+      "counts": {
+        "first": 12,
+        "second": 8,
+        "shared": 5
+      }
+    }
+  ]
+}

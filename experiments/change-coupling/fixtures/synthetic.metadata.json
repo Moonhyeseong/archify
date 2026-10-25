@@ -1,0 +1,10 @@
+{
+  "kind": "synthetic",
+  "description": "Original fictional file pairs; not output of an executed Code Maat process.",
+  "window": null,
+  "filters": null,
+  "repository": null,
+  "revision": null,
+  "formatSource": "Code Maat coupling CSV, verbose-results",
+  "formatSourceCommit": "50537abb8dffa1b1ba4e91a605ee5c558c01b224"
+}
