@@ -1,0 +1,24 @@
+{
+  "driverNote": "Initial pointer action at the SVG relation group was intercepted by a rect. After observing unchanged state, explicitly focused the semantic relation target and sent real Enter. This is not a Tab-reachability or pointer-success claim.",
+  "missing": {
+    "text": [
+      "From: \"API Gateway\" [\"gateway\"]\nRelationship: \"VPC route\"\nTo: \"API Pods / AZ-a\" [\"api_a\"]\nAuthored relationship ID: not provided\nParallel in this direction: 1/1 (artifact order; not a stable ID)"
+    ],
+    "hash": "#focus=gateway",
+    "selected": "gateway",
+    "pinned": "2",
+    "focus": "btn-relationship-reference"
+  },
+  "mobile": {
+    "text": [
+      "From: \"Order API\" [\"api-primary\"]\nRelationship: \"retry order\"\nTo: \"Order API\" [\"api-replica\"]\nAuthored relationship ID: \"retry-order\"\nParallel in this direction: 2/2 (artifact order; not a stable ID)"
+    ],
+    "hash": "#relation=retry-order",
+    "width": 390,
+    "viewport": [
+      390,
+      900
+    ],
+    "focus": "btn-relationship-reference"
+  }
+}

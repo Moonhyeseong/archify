@@ -26,6 +26,14 @@ test('Focus preserves semantic selection, relationships, reachability and shared
     files[mode] = path.join(scratch, mode + '.html');
     execFileSync(process.execPath, [path.join(skillRoot, `renderers/${mode}/render-${mode}.mjs`), path.join(skillRoot, 'examples', example), files[mode]]);
   }
+  // Exercise the new Passport explanation beside the retained relationship action
+  // through a real renderer input, rather than replacing its source contract.
+  const explained = JSON.parse(fs.readFileSync(path.join(skillRoot,'examples/web-app.architecture.json'),'utf8'));
+  explained.components.find(node=>node.id==='users').explanation='An authored explanation of the request origin.\n\nCopying a pinned relation must keep this Passport available.';
+  const explainedInput=path.join(scratch,'reference-explained.json');
+  fs.writeFileSync(explainedInput,JSON.stringify(explained));
+  files['reference-explained']=path.join(scratch,'reference-explained.html');
+  execFileSync(process.execPath,[path.join(skillRoot,'renderers/architecture/render-architecture.mjs'),explainedInput,files['reference-explained']]);
   // The graph fixture deliberately exercises DOM fragment contracts outside IR validation.
   const graph = `<g data-edge-key="a" data-edge-id="edge-a" data-edge-from="users" data-edge-to="cdn"></g>
     <path data-edge-key="a" data-edge-id="edge-a" data-edge-from="users" data-edge-to="cdn" d="M 110 180 L 245 180"/>
@@ -111,7 +119,7 @@ test('Focus preserves semantic selection, relationships, reachability and shared
   }
 
   await t.test('five modes expose the same Focus and flowTokens surfaces at cold start',async()=>{
-    const expected=['set','setMany','clear','copyLink','reach','clearReach','reachabilitySnapshot','inspectRelationship','inspectRelationshipById','reposition','relationship','reachability','active'].sort();
+    const expected=['set','setMany','clear','copyLink','explain','explaining','reach','clearReach','reachabilitySnapshot','inspectRelationship','inspectRelationshipById','reposition','relationship','reachability','active'].sort();
     for(const mode of Object.keys(cases)) {
       await load(mode);assert.deepEqual(await run('Object.keys(Archify.focus).sort()'),expected);assert.deepEqual(await run('Object.keys(Archify.flowTokens).sort()'),['create','kind','path']);
       const cold=await snapshot(mode+'-cold');assert.equal(cold.active,null);
@@ -193,8 +201,9 @@ test('Focus preserves semantic selection, relationships, reachability and shared
       await load();await select('cdn');await run(`Archify.focus.reach('downstream',{reveal:false})`);
       const r=await run(`(async()=>{let value;const exec=document.execCommand;Object.defineProperty(navigator,'clipboard',{configurable:true,value:${mode==='missing'?'undefined':`{writeText:text=>{value=text;return ${mode==='success'?'Promise.resolve()':'Promise.reject(new Error("denied"))'};}}`}});
         document.execCommand=()=>{value=document.querySelector('textarea[readonly]').value;${mode==='throw'?'throw new Error("copy denied");':`return ${mode==='false'?'false':'true'};`}};
-        try{const copied=await Archify.focus.copyLink();return {copied,hash:new URL(value).hash,query:new URL(value).search,label:document.getElementById('btn-focus-copy').textContent,remaining:document.querySelectorAll('textarea[readonly]').length};}finally{document.execCommand=exec;}})()`);
-      assert.equal(r.copied,!['false','throw'].includes(mode));assert.equal(r.hash,'#focus=cdn&reach=downstream');assert.match(r.query,/keep=yes/);assert.equal(r.remaining,0);assert.equal(r.label,r.copied?'Copied':'Copy failed');records.push({scenario:'copy-'+mode,...r});
+        const opener=document.getElementById('btn-focus-copy');opener.focus();
+        try{const copied=await Archify.focus.copyLink();return {focusRetained:document.activeElement===opener,copied,hash:new URL(value).hash,query:new URL(value).search,label:document.getElementById('btn-focus-copy').textContent,remaining:document.querySelectorAll('textarea[readonly]').length};}finally{document.execCommand=exec;}})()`);
+      assert.equal(r.focusRetained,true,'copy '+mode+' retains the keyboard opener');assert.equal(r.copied,!['false','throw'].includes(mode));assert.equal(r.hash,'#focus=cdn&reach=downstream');assert.match(r.query,/keep=yes/);assert.equal(r.remaining,0);assert.equal(r.label,r.copied?'Copied':'Copy failed');records.push({scenario:'copy-'+mode,...r});
       await run(`focusWait(()=>document.getElementById('btn-focus-copy').textContent===viewerText('viewer.passport.copy'))`);
     }
     await load();
@@ -287,12 +296,39 @@ test('Focus preserves semantic selection, relationships, reachability and shared
       assert.equal(value.feedback,['false','throw'].includes(mode)?'Copy failed':'Copied');
       assert.equal(value.aria,['false','throw'].includes(mode)?'Could not copy pinned relationship reference':'Pinned relationship reference copied');
       assert.equal(value.remaining,0);assert.ok(value.text.includes('Authored relationship ID: not provided'));
+      assert.equal(value.focused,'btn-relationship-reference');
       assert.deepEqual(await run(`({active:Archify.focus.active(),camera:Archify.view.state(),hash:location.hash})`),before);
-      // #862 owns the shared fallback focus repair; this candidate does not import it.
+      // The merged dev's shared fallback restores the initiating control.
       records.push({scenario:'relationship-reference-fallback-'+mode,...value});
     }
   });
 
+  await t.test('relationship reference coexists with current Passport Explain and compact focus restoration',async()=>{
+    for (const [width,height] of [[390,900],[320,300]]) {
+      await load('reference-explained',{width,theme:'light'});
+      await send('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:false});
+      await run(`Archify.focus.inspectRelationshipById('users-to-cdn')`);await stable();
+      assert.equal(await run(`document.getElementById('btn-relationship-reference').hidden`),false);
+      assert.equal(await run(`document.getElementById('btn-focus-explain').hidden`),false);
+      for(const id of ['btn-relationship-reference','btn-focus-explain']) {
+        await run(`document.getElementById(${JSON.stringify(id)}).scrollIntoView({block:'nearest'})`);await stable();
+        const box=await run(`(()=>{const r=document.getElementById(${JSON.stringify(id)}).getBoundingClientRect();return {left:r.left,right:r.right,top:r.top,bottom:r.bottom}})()`);
+        assert.ok(box.left>=-1&&box.right<=width+1&&box.top>=-1&&box.bottom<=height+1,JSON.stringify({id,width,height,box}));
+      }
+      await click('#btn-focus-explain');
+      assert.equal(await run(`document.getElementById('focus-chip').getAttribute('data-explaining')`),'true');
+      await click('#focus-explanation-back');
+      assert.equal(await run(`document.activeElement.id`),'btn-focus-explain');
+      assert.equal(await run(`Archify.focus.relationship().id`),'users-to-cdn');
+      assert.equal(await run(`document.getElementById('btn-relationship-reference').hidden`),false);
+      await run(`document.getElementById('btn-focus-clear').scrollIntoView({block:'nearest'})`);await stable();
+      await click('#btn-focus-clear');
+      assert.equal(await run(`document.getElementById('btn-relationship-reference').hidden`),true);
+      assert.equal(await run(`document.getElementById('btn-focus-explain').hidden`),true);
+      assert.equal(await run(`document.activeElement.dataset.nodeId`),'users');
+      records.push({scenario:'reference-explanation-compact',width,height});
+    }
+  });
   await t.test('real pulse completion and motion transitions preserve static relationship state',async()=>{
     await load('graph',{reduced:false});await run(`Archify.motionGovernor.resume();Archify.focus.inspectRelationshipById('edge-d')`);assert.equal(await run(`document.querySelectorAll('[data-relationship-pulse-overlay]').length`),1);
     await run(`focusWait(()=>pulseEvents.some(e=>e.type==='animationend'&&e.trusted))`);assert.equal((await snapshot('pulse-ended')).pulse,0);

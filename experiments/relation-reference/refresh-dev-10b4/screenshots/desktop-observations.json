@@ -1,0 +1,168 @@
+[
+  {
+    "arm": "base",
+    "theme": "light",
+    "before": {
+      "theme": "light",
+      "hash": "#relation=write-order",
+      "selected": "api-primary",
+      "pinned": "0",
+      "reference": [],
+      "zoom": "FULL100%",
+      "viewBox": "0 0 1130 482",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "width": 1440
+    },
+    "copy": null,
+    "after": {
+      "theme": "light",
+      "hash": "#relation=write-order",
+      "selected": "api-primary",
+      "pinned": "0",
+      "reference": [],
+      "zoom": "FULL100%",
+      "viewBox": "0 0 1130 482",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "width": 1440
+    }
+  },
+  {
+    "arm": "candidate",
+    "theme": "light",
+    "before": {
+      "theme": "light",
+      "hash": "#relation=write-order",
+      "selected": "api-primary",
+      "pinned": "0",
+      "reference": [
+        {
+          "hidden": false,
+          "text": "Copy reference",
+          "label": "Copy readable text reference to pinned relationship"
+        }
+      ],
+      "zoom": "FULL100%",
+      "viewBox": "0 0 1130 482",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "width": 1440
+    },
+    "copy": {
+      "captured": [
+        "From: \"Order API\" [\"api-primary\"]\nRelationship: \"write order\"\nTo: \"Order API\" [\"api-replica\"]\nAuthored relationship ID: \"write-order\"\nParallel in this direction: 1/2 (artifact order; not a stable ID)"
+      ],
+      "focus": "btn-relationship-reference"
+    },
+    "after": {
+      "theme": "light",
+      "hash": "#relation=write-order",
+      "selected": "api-primary",
+      "pinned": "0",
+      "reference": [
+        {
+          "hidden": false,
+          "text": "Copied",
+          "label": "Pinned relationship reference copied"
+        }
+      ],
+      "zoom": "FULL100%",
+      "viewBox": "0 0 1130 482",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "width": 1440
+    }
+  },
+  {
+    "arm": "base",
+    "theme": "dark",
+    "before": {
+      "theme": "dark",
+      "hash": "#relation=write-order",
+      "selected": "api-primary",
+      "pinned": "0",
+      "reference": [],
+      "zoom": "FULL100%",
+      "viewBox": "0 0 1130 482",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "width": 1440
+    },
+    "copy": null,
+    "after": {
+      "theme": "dark",
+      "hash": "#relation=write-order",
+      "selected": "api-primary",
+      "pinned": "0",
+      "reference": [],
+      "zoom": "FULL100%",
+      "viewBox": "0 0 1130 482",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "width": 1440
+    }
+  },
+  {
+    "arm": "candidate",
+    "theme": "dark",
+    "before": {
+      "theme": "dark",
+      "hash": "#relation=write-order",
+      "selected": "api-primary",
+      "pinned": "0",
+      "reference": [
+        {
+          "hidden": false,
+          "text": "Copy reference",
+          "label": "Copy readable text reference to pinned relationship"
+        }
+      ],
+      "zoom": "FULL100%",
+      "viewBox": "0 0 1130 482",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "width": 1440
+    },
+    "copy": {
+      "captured": [
+        "From: \"Order API\" [\"api-primary\"]\nRelationship: \"write order\"\nTo: \"Order API\" [\"api-replica\"]\nAuthored relationship ID: \"write-order\"\nParallel in this direction: 1/2 (artifact order; not a stable ID)"
+      ],
+      "focus": "btn-relationship-reference"
+    },
+    "after": {
+      "theme": "dark",
+      "hash": "#relation=write-order",
+      "selected": "api-primary",
+      "pinned": "0",
+      "reference": [
+        {
+          "hidden": false,
+          "text": "Copied",
+          "label": "Pinned relationship reference copied"
+        }
+      ],
+      "zoom": "FULL100%",
+      "viewBox": "0 0 1130 482",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "width": 1440
+    }
+  }
+]

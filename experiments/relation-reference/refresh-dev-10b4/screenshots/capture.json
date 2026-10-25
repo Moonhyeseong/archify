@@ -1,0 +1,161 @@
+{
+  "kind": "derived capture binding for actual root browser observations; not a CLI receipt",
+  "pathBase": "experiments/relation-reference/refresh-dev-10b4",
+  "artifacts": {
+    "production-base.html": {
+      "sha256": "4bf1363f798ee3d8e02b4191697f78454c64b28a4ac46744db502255f2867143",
+      "bytes": 883018
+    },
+    "production-candidate.html": {
+      "sha256": "89d73d257b8ffcff12f4f7633e9fb21b4817cc1018fbb62b90d7837af601f3c7",
+      "bytes": 885939
+    },
+    "parallel-base.html": {
+      "sha256": "0552a10a9c666e0dbadb3401d2901c83b8b96399584513e185dc25cb6e29b4b5",
+      "bytes": 858464
+    },
+    "parallel-candidate.html": {
+      "sha256": "af1df2faa21b1dd4a9792bc857b169fa2a0230108bd7db606e07a441cea0517c",
+      "bytes": 861385
+    }
+  },
+  "images": [
+    {
+      "path": "screenshots/parallel-base-dark.png",
+      "sha256": "cee483eddc02a58ab392160c98e8091274cf5d42cc474f8276d659134d1cf570",
+      "bytes": 169157,
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "rootViewed": true,
+      "uneditedOriginalBytes": true,
+      "sourceFileModifiedAtUtc": "2026-10-25T11:34:10.952252+00:00",
+      "artifact": "parallel-base.html",
+      "theme": "dark",
+      "viewportCssPixels": [
+        1440,
+        1000
+      ],
+      "state": "write-order pin"
+    },
+    {
+      "path": "screenshots/parallel-base-light.png",
+      "sha256": "99094784cbf59022955ae10a4ede3761c81a0901f887fedc046ec8512355f6d4",
+      "bytes": 174053,
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "rootViewed": true,
+      "uneditedOriginalBytes": true,
+      "sourceFileModifiedAtUtc": "2026-10-25T11:34:09.366378+00:00",
+      "artifact": "parallel-base.html",
+      "theme": "light",
+      "viewportCssPixels": [
+        1440,
+        1000
+      ],
+      "state": "write-order pin"
+    },
+    {
+      "path": "screenshots/parallel-candidate-dark.png",
+      "sha256": "f323a728cf7fc898a1b01ed0ebe0d96ddac21a86f7f54a5221240e5ba1424582",
+      "bytes": 170439,
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "rootViewed": true,
+      "uneditedOriginalBytes": true,
+      "sourceFileModifiedAtUtc": "2026-10-25T11:34:11.173702+00:00",
+      "artifact": "parallel-candidate.html",
+      "theme": "dark",
+      "viewportCssPixels": [
+        1440,
+        1000
+      ],
+      "state": "write-order pin"
+    },
+    {
+      "path": "screenshots/parallel-candidate-light.png",
+      "sha256": "09119cc7e73daac48d141d86d57ec129f430ccc5538a90f87cd68e6b96ed173e",
+      "bytes": 175258,
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "rootViewed": true,
+      "uneditedOriginalBytes": true,
+      "sourceFileModifiedAtUtc": "2026-10-25T11:34:09.580556+00:00",
+      "artifact": "parallel-candidate.html",
+      "theme": "light",
+      "viewportCssPixels": [
+        1440,
+        1000
+      ],
+      "state": "write-order pin"
+    },
+    {
+      "path": "screenshots/parallel-candidate-mobile.png",
+      "sha256": "66cca77311a382e6e2ae212a6e2a91a05f649585e972ba21c1223d8b345182fc",
+      "bytes": 84273,
+      "pngDimensions": [
+        390,
+        900
+      ],
+      "rootViewed": true,
+      "uneditedOriginalBytes": true,
+      "sourceFileModifiedAtUtc": "2026-10-25T11:36:34.784275+00:00",
+      "artifact": "parallel-candidate.html",
+      "viewportCssPixels": [
+        390,
+        900
+      ],
+      "state": "retry-order clicked and copied; 2/2 in the same direction"
+    },
+    {
+      "path": "screenshots/production-candidate-no-authored-id.png",
+      "sha256": "b1d3dd5e0d79c79a466e6e6ebf60662a1cee719f2f07a3359e89903cbb873b2b",
+      "bytes": 192547,
+      "pngDimensions": [
+        1237,
+        838
+      ],
+      "rootViewed": true,
+      "uneditedOriginalBytes": true,
+      "sourceFileModifiedAtUtc": "2026-10-25T11:36:34.586198+00:00",
+      "artifact": "production-candidate.html",
+      "viewportCssPixels": null,
+      "viewportNote": "Invocation restored without resetting viewport; PNG is actually 1237x838. Do not label this arm 1440x1000.",
+      "state": "missing authored ID; explicit semantic focus followed by real Enter after failed pointer attempt"
+    }
+  ],
+  "rawObservations": {
+    "screenshots/desktop-observations.json": "Original safe JSON copied byte-for-byte from root records",
+    "screenshots/identity-observations.json": "Original safe JSON copied byte-for-byte from root records"
+  },
+  "rawBindings": {
+    "identity-observations.json": {
+      "sha256": "e14f3f22fdc51a7f1f517ab34cc76654acaee938931f74844ce51e22a85b51e1",
+      "bytes": 1040
+    },
+    "desktop-observations.json": {
+      "sha256": "f0240e86927c2ee47a0d61b6c4568fd22a8ce3bd9e0d4d97b57ceda64e929adf",
+      "bytes": 3865
+    }
+  },
+  "observed": {
+    "desktop": "Four actual base/candidate light/dark arms, 1440x1000; original direction and write-order 1/2 reference; selected node/pin/hash/zoom/viewBox unchanged before/after.",
+    "noAuthoredId": "Production output explicitly says not provided and artifact order 1/1. Initial SVG-group pointer attempt was intercepted by a rect and did not pin; then explicit semantic focus plus real Enter succeeded. Not a Tab-reachability or pointer-success proof.",
+    "mobile": "Actual retry-order click then reference copy; 390x900/page width390; original direction and 2/2.",
+    "clipboard": "navigator.clipboard.writeText injected to collect strings only; no OS clipboard write.",
+    "explain": "Not exercised by root in this browser round: both fixed inputs have no authored explanation. New-dev Explain/compact/back co-preservation is established separately by focused automated tests."
+  },
+  "limits": [
+    "Six original PNGs captured and visually inspected by coordinating root; author did not use Ego.",
+    "No OS clipboard, physical device, assistive-technology, cross-browser, human acceptance or efficiency claim.",
+    "Machine finalize/browser gates and actual root browser observations are separate evidence.",
+    "Production PNG dimensions are 1237x838; that arm has no fresh viewport reset/measurement claim."
+  ]
+}
