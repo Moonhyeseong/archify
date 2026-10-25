@@ -10,13 +10,13 @@
 
 2026-10-25 16:18（台北）再次核对：dev 已合入 [#1100](https://github.com/tt-a1i/archify/pull/1100)，推进到 [`67f12389`](https://github.com/tt-a1i/archify/commit/67f12389212c54b3122da60e2813c7f8dab7ab2f)，main 仍为 `51a29177`。这次修改 finalize 的源码范围修复、候选文件保留及相关交付逻辑；Copy identity、CLI reading tour 和 Clipboard outcome 保留实际冻结的 `3f95f034` 基线，不把既有结果改称新 dev 验证。
 
-最新状态另见[19:20–19:21晚间GitHub快照](github-status-latest-evening.md)：main/dev、部署等待、实验精确head和PR状态分别记账，不把Actions/check-runs为0当通过。 20:53:28（台北）最新只读快照确认dev/main仍为10b4/51a29177，CI状态与19:20相同（dev成功、main部署等待）；#1103/#1015/#998 heads不变，未发现晚间新增PR。原始API响应留checkout外，不补造部署完成或候选CI通过。
+最新状态另见[19:20–19:21晚间GitHub快照](github-status-latest-evening.md)：main/dev、部署等待、实验精确head和PR状态分别记账，不把Actions/check-runs为0当通过。 20:53:28（台北）最新只读快照确认dev/main仍为10b4/51a29177，CI状态与19:20相同（dev成功、main部署等待）；#1103/#1015/#998 heads不变，未发现晚间新增PR。原始API响应留checkout外，不补造部署完成或候选CI通过。 最新核对见[22:07–22:09 GitHub状态](github-status-2207.md)：main51a29177/dev10b4及重点PR身份不变，dev CI成功、main部署仍waiting；最新release仍v3.2.0。
 
-## 已推送的 46 个实验
+## 已推送的 49 个实验
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
-[离线图片浏览页](gallery/README.md)：39项图片快照，当前46个独立远程实验分支；图片页仍固定hub fc701742的39项/39张原始PNG（12/15/12），新增Notebook/Config/Benchmark/Task，并刷新Finder/Waterfall/Workflow/Keyboard/Clipboard五图。当前实际核1440×1100浅色四筛选、九项搜索/完整原图字节/天然尺寸/固定来源/原始尺寸与Esc返回；390×844浅色卡片、深色dialog及空结果/reset、桌面深色另有实测，20项观测/7图已绑定。模板逐字不变；历史35/34/33/29/27证据按固定提交保留，未将截图内实验内容当新产品测试或AT/OS剪贴板验收。 新增Edge extras、Line notes、Static uses、Hintful stages、Spatial focus、Maybe initialized和Load filter七项尚未纳入图片快照；Finder canvas、Relation reference、Diagnostic locations、Delta values的四个新refresh head也未替换gallery旧图，不将它们混称为同一来源快照。
+[离线图片浏览页](gallery/README.md)：当前49个独立远程实验分支，图片页为46项固定快照（13产品交互/15离线适配/18内容）。gallery已发布于hub `89ecc847caa0dac61553e772081e0459cf16c2b6`，source hub固定 `60b748c83470be4c30d8869991e7f2ac82905462`，HTML SHA-256 `85e9877b6386b6dbe884baf549fb28bdad183ef0f3925dd443b8981ba40982dd`。本版6张新截图与当前筛选/主题/窄屏观察另记；十一项完整图、原始尺寸及Escape操作限定复用旧HTML `35096438…ecd1`，不称在新页重跑十一遍，适用性及独立READY见gallery说明。39项历史证据保留；新增Witness groups/Patch outcome/Segment origins三项尚未纳入图片页，待本批补至49，不称当前已是49项gallery。
 
 | 实验与远程分支 | 具体价值 | 发布 revision | 实际图片 | 验证与限制 |
 | --- | --- | --- | --- | --- |
@@ -66,6 +66,9 @@
 | [Spatial focus](https://github.com/tt-a1i/archify/tree/codex/lab-spatial-focus/experiments/spatial-focus) | 屏内完整可见语义node用plain Arrow移动DOM焦点，保留选择/hash/camera，Tree及Route排除 | `08af0911` | [页面](https://github.com/tt-a1i/archify/blob/08af09117396b4d2b62774215bc48d8bd516386f/experiments/spatial-focus/architecture-candidate.html) / [原PNG](https://github.com/tt-a1i/archify/blob/08af09117396b4d2b62774215bc48d8bd516386f/experiments/spatial-focus/screenshots/architecture-candidate-settled-right-light.png) / [固定README](https://github.com/tt-a1i/archify/blob/08af09117396b4d2b62774215bc48d8bd516386f/experiments/spatial-focus/README.md) | 基线10b4；当前Route+spatial16pass、exact包7pass/smoke/CLI四阶段，generated/235双ZIP通过；6root实图；先前Route抢键及Infinity词法失败保留，邻近/core复用scope单列，非overlay遮挡/效率保证 |
 | [Maybe initialized](https://github.com/tt-a1i/archify/tree/codex/lab-maybe-initialized/experiments/maybe-initialized) | RustOwl官方expected与概念I/U/union状态表分开，绿色波浪不表示一次执行状态 | `61d43f93` | [页面](https://github.com/tt-a1i/archify/blob/61d43f93ee9d11d30d2a239f80e1b2976539d850/experiments/maybe-initialized/output/explanation.html) / [原PNG](https://github.com/tt-a1i/archify/blob/61d43f93ee9d11d30d2a239f80e1b2976539d850/experiments/maybe-initialized/screenshots/desktop-light.png) / [固定README](https://github.com/tt-a1i/archify/blob/61d43f93ee9d11d30d2a239f80e1b2976539d850/experiments/maybe-initialized/README.md) | 基线10b4，29实验文件/28public绑定，完整MPL-2.0源码/原snapshot与derived材料边界保留；normal finalize前三阶段pass/browser48keyboard失败；root4终版图，未编译/未执行上游，不抵消失败 |
 | [Load filter](https://github.com/tt-a1i/archify/tree/codex/lab-load-filter/experiments/load-filter) | enabled最终名单不证明先前未load/invoke，官方True expected与默认False源码推断分列 | `d2ff5f8c` | [中文页面](https://github.com/tt-a1i/archify/blob/d2ff5f8c2cce954d5e20b6dd8970f027f52d46c0/experiments/load-filter/explainer.html) / [原PNG](https://github.com/tt-a1i/archify/blob/d2ff5f8c2cce954d5e20b6dd8970f027f52d46c0/experiments/load-filter/screenshots/desktop-light.png) / [固定README](https://github.com/tt-a1i/archify/blob/d2ff5f8c2cce954d5e20b6dd8970f027f52d46c0/experiments/load-filter/README.md) | 基线10b4；20staged/19public绑定、独立READY；normal finalize三阶段0诊断/browser未请求；4root图，手机两表局部横溢及pre长行保留，未运行Python/插件/metadata discovery，来源URL非verified excerpt |
+| [Witness groups](https://github.com/tt-a1i/archify/tree/codex/lab-witness-groups/experiments/witness-groups) | 同一输出的平面来源清单与共同/替代见证组合并排，组数不是执行数 | `861ec022` | [固定README](https://github.com/tt-a1i/archify/blob/861ec02283bcd32c8315aa7b5f8b5ef9678dda27/experiments/witness-groups/README.md) / [中文页面](https://github.com/tt-a1i/archify/blob/861ec02283bcd32c8315aa7b5f8b5ef9678dda27/experiments/witness-groups/explainer.html) / [原PNG](https://github.com/tt-a1i/archify/blob/861ec02283bcd32c8315aa7b5f8b5ef9678dda27/experiments/witness-groups/screenshots/desktop-light.png) | 基线10b4；32文件/31public/28raw，16MIT完整原件与9verified来源；normal三阶段0诊断/browser未请求，6事实/root4图；无DB/SQL/上游执行，非概率或现实因果 |
+| [Patch outcome](https://github.com/tt-a1i/archify/tree/codex/lab-patch-outcome/experiments/patch-outcome) | 官方两个true不证明结果等于最初目标B，A/B/I/E完整literal分列 | `b5f7d7b1` | [固定README](https://github.com/tt-a1i/archify/blob/b5f7d7b11482fb272fb88fbfdcb9e864407eabdf/experiments/patch-outcome/README.md) / [中文页面](https://github.com/tt-a1i/archify/blob/b5f7d7b11482fb272fb88fbfdcb9e864407eabdf/experiments/patch-outcome/explainer.html) / [原PNG](https://github.com/tt-a1i/archify/blob/b5f7d7b11482fb272fb88fbfdcb9e864407eabdf/experiments/patch-outcome/screenshots/desktop-light.png) | 基线10b4；19文件/18binding，完整Apache-2.0来源与固定literal位置；normal三阶段+1writing warning/browser未请求，10事实/root4图；无上游patch运行，不是任意补丁parser或等价证明 |
+| [Segment origins](https://github.com/tt-a1i/archify/tree/codex/lab-segment-origins/experiments/segment-origins) | 同一source-map查询因GLB/LUB选择不同段原点，不补逐字符偏移 | `6d2b0312` | [固定README](https://github.com/tt-a1i/archify/blob/6d2b0312ebf011e3aa51835f52f9427125f0f2a3/experiments/segment-origins/README.md) / [中文页面](https://github.com/tt-a1i/archify/blob/6d2b0312ebf011e3aa51835f52f9427125f0f2a3/experiments/segment-origins/explainer.html) / [原PNG](https://github.com/tt-a1i/archify/blob/6d2b0312ebf011e3aa51835f52f9427125f0f2a3/experiments/segment-origins/screenshots/desktop-light.png) | 基线10b4；19文件/18ledger、独立READY；normal三阶段0诊断/browser未请求、7事实/root4图；仅来源元数据，未mapper运行；手机首表432/332横滚0→100后右name可读左query裁掉，完整source JSON未横滚 |
 
 上述前33项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
 
@@ -147,6 +150,14 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 2026-10-25 Load filter `d2ff5f8c2cce954d5e20b6dd8970f027f52d46c0` 已推、远端精确一致且clean，独立终审READY；协调者于UTC13:44:26核精确head的Actions runs/check-runs均为0，不称CI绿。当前46个独立远程实验，图片gallery仍为固定fc701742的39项快照，7个新增与4个后续refresh未纳入，待单独冻结再重建。
 
+2026-10-25 Witness groups `861ec02283bcd32c8315aa7b5f8b5ef9678dda27`、Patch outcome `b5f7d7b11482fb272fb88fbfdcb9e864407eabdf` 已推、远端exact且clean，独立READY；UTC14:05:19精确head均Actions runs=0、check-runs=0，不称CI通过。main51a29177/dev10b4未变。当前48项，gallery仍是46项固定快照。
+
+2026-10-25 Segment origins固定head `6d2b0312ebf011e3aa51835f52f9427125f0f2a3` 已推、远端精确一致且clean，独立终审READY；当前49个已实现并已推实验。协调者于UTC14:14:08核精确head的Actions runs=0、check-runs=0，不称CI通过。图片总览当前仍46项，本批只补三新项至49，完成后暂停。
+
+## 本批收尾后暂停
+
+用户已要求当前批完成后暂停；范围冻结为49个已实现实验及已启动报告、GitHub快照和图片总览收尾。**无新研究启动、无新实施**；不设置下一轮。
+
 ## 正在推进
 
 | 方向 | 来源与目标 | 状态 |
@@ -164,7 +175,9 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 只读研究 | Round20 / Round21 | Round20报告已完成并修正L152–163及priority/clip边界；Round21完成5个新来源，最多保留Stevedore内容候选，不称已实施或验证 |
 | 已发布内容 | maybe-initialized | 已推61d43f93计入第45项，独立终审READY；RustOwl上游expected/derived快照与概念union分开，MPL边界保留；前三阶段pass仍有48条键盘失败，不称完整browser通过 |
 | 已发布内容 | load-filter | 已推d2ff5f8c计入第46项，独立最终READY；最终HTML3334dc29…94d2、4root图、2表局部横溢及源码长行边界保留，normal三阶段并非完整browser gate |
-| 本地内容实验 | Witness groups | 新内容进行中，围绕共同/替代见证组；未published，不计入46已发布，不提前宣称第47项交付或验证完成 |
+| 已发布内容 | Witness groups / Patch outcome | 已推861ec022/b5f7d7b1，计入第47/48项；独立READY，正常三阶段与未请求browser范围/原件/实图分别记账 |
+| 已发布内容 | Segment origins | 已推6d2b0312计入第49项，独立终审READY；仅固定fixture原点策略内容，无mapper执行，手机局部横滚/来源元数据边界见表 |
+| 研究收尾 | Round24 / Round25 / Round26 / Round27 | Round24/25已READY；Round26完成，仅保留原创URL-only候选未实施，GPL原件私有；Round27仍在收尾，不提前称完成。无新实施 |
 | 适配器影响盘点 | 15个离线方向对dev10b4 | 静态未见确定格式破坏；五个build helper在更换基线后须更新运行身份记录，旧输入与转换证据继续绑定原版本，不批量刷新 |
 | 已有候选刷新 | Keyboard traversal / Clipboard outcome | 已推c96e8aa7/0e4a2c71；同一task页candidate实际41/41可达，原dev37/41；Clipboard受控API前后及全文恢复已核，CI与真实OS剪贴板另列 |
 | 已有候选刷新 | Relation reference / Finder canvas matches / Diagnostic locations | 已推d5691a02/ed04916f/b6679399；固定dev10b4新Passport、IME/drilldown及来源规则保留，独立复核/实图完成；各自旧证据原字节不变；Delta也已推a0a9ba77，compare/check与非finalize边界另列 |
@@ -255,6 +268,9 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 符号候选、插件筛选与查询结果 | [Round 21 symbol reading](scouts/round21-symbol-reading.md) |
 | 图阅读交互与已有能力排重 | [Round 22 graph reading interactions](scouts/round22-graph-reading-interactions.md)（0新增产品动作） |
 | 来源清单与共同/替代见证组 | [Round 23 lineage reading](scouts/round23-lineage-reading.md)（最多一个内容候选，未实施） |
+| 补丁应用状态与目标文本身份 | [Round 24 change reading](scouts/round24-change-reading.md) |
+| 查询映射原点与字符来源边界 | [Round 25 origin mapping reading](scouts/round25-origin-mapping-reading.md) |
+| 覆盖数字背后的计量对象 | [Round 26 coverage reading](scouts/round26-coverage-reading.md)（研究完成，仅原创URL-only候选未实施，GPL原件私有） |
 | 15个适配器对新dev的实际影响 | [Round 17 adapter dev impact](scouts/round17-adapter-dev-impact.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
