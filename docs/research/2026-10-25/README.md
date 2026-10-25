@@ -112,7 +112,7 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
 | 新内容实验 | fq字节区间与位解释视图 | byte-views已推b844ecb2，计入第34项；完整97B官方fixture/golden与四张真实截图，冻结67f基线 |
-| 新产品实验 | source-only图节点到来源的键盘交接 | 实际CLI tour十节点已有hover、没有Tab入口；已对#1015/#997/Atlas及旧keyboard实验查重，正从新dev10b4实现独立source-keyboard分支，尚未推送或计入34项 |
+| 新产品实验 | source-only图节点的键盘激活 | 最新浏览器确认Tab与来源卡已有；Enter不打开原图、Space只滚页。静态不可达推断已撤回，正从dev10b4修按钮语义及等价激活，尚未推送或计入34项 |
 | 新一轮发现 | 调试回放与图内标注阅读 | 第7轮14个新来源，4个深入源码；本轮0直接实施建议，保留具体再评估条件；图节点到来源的键盘交接正在核查 |
 | 既有实验真实输出 | Recipe stages / State contract | State官方fixture实导出已推f7269e09；Recipe官方test有效输入dump已推062dee5d，自然完整示例拒绝并保留；历史synthetic不改称实跑 |
 | 新发现修复 | Explainer复制结果与手工恢复 | Clipboard outcome已推送68866954，来源、基线/候选和实际截图见第33项 |
@@ -176,6 +176,8 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 标注、完整文字与局部导出 | [Annotation reading round 7](scouts/annotation-reading-round7.md) |
 | 新dev与11项产品候选的行为交集 | [Product overlap at dev10b4](scouts/product-overlap-dev-1731.md) |
 | 图节点、来源卡与键盘交接的实际缺口 | [Reading handoff audit](scouts/reading-handoff-audit.md) |
+| 类型展开、回指与求解候选 | [Type reading round 8](scouts/type-reading-round8.md) |
+| 匹配过程、接受条件与截断 | [Matching reading round 8](scouts/matching-reading-round8.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
 报告中的上游声明、局部源码核实、计划中的实验和已经执行的结果分别标注。未推荐方向也保留原因，避免反复研究；没有把上游宣传、星数或作者截图当作 Archify 的效果证明。
