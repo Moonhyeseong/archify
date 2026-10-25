@@ -144,7 +144,8 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 新一轮发现 | Shell / CSS / Notebook / 构建阅读 | 第9轮13个新来源，未增加实现；第10轮12个新来源，Notebook已推2090b0ff，task occurrence已推caffb4aa并补5实图，保留最终16键盘诊断；源码卡审计无确认新缺陷；第11轮配置来源已推14867942 |
 | 新一轮发现 | Benchmark / 语法 / 并发阅读 | 第12轮6新来源，benchstat已推7b8258cd；第13轮语法/并发共4新来源，暂不增实现；第14轮6个新图交互项目，未确认新实施缺口 |
 | 新一轮发现 | 第15轮行为/构建、第16轮条件代码/解析身份 | 研究阶段均0项启动；preview重新打开边界亦不新开修复。后续单独选定edge-extras有界固定fixture内容，现已推1db953a7计入第40项；研究原结论不改，不新增parser或声称生产事故 |
-| 新一轮发现 | 第18轮局部阅读 / 第19轮控制与数据阅读 | 两份已完成研究分别保留行注释往返与静态use-chain内容方向；line-notes、static-uses为两个本地进行中实验，均base10b4、仅experiments，不改产品/ZIP，不计入40已发布；第18轮另两报告待作者完成 |
+| 新一轮发现 | 第18轮局部阅读 / 第19轮控制与数据阅读 | 第18轮局部阅读、结构差异、小图交互三报告及第19轮控制/数据报告已完成；line-notes、static-uses为两个本地进行中实验，均base10b4、仅experiments，不改产品/ZIP，不计入40已发布；结构差异报告最多保留一个Hintful内容候选，未称已实施或验证 |
+| 本地产品原型 | spatial-focus屏内空间方向浏览 | 已新建base10b4并实施中的独立原型；只让屏内完整可见的语义node用plain Arrow移动DOM focus，排除Tree，不改选择/hash/camera。小图交互研究阶段最多保留此一个候选，不宣称实现已验，不计入40已发布 |
 | 适配器影响盘点 | 15个离线方向对dev10b4 | 静态未见确定格式破坏；五个build helper在更换基线后须更新运行身份记录，旧输入与转换证据继续绑定原版本，不批量刷新 |
 | 已有候选刷新 | Keyboard traversal / Clipboard outcome | 已推c96e8aa7/0e4a2c71；同一task页candidate实际41/41可达，原dev37/41；Clipboard受控API前后及全文恢复已核，CI与真实OS剪贴板另列 |
 | 已有候选刷新 | Relation reference / Finder canvas matches / Diagnostic locations | 已推d5691a02/ed04916f/b6679399；固定dev10b4新Passport、IME/drilldown及来源规则保留，独立复核/实图完成；各自旧证据原字节不变；Delta也已推a0a9ba77，compare/check与非finalize边界另列 |
@@ -228,6 +229,8 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 包身份、解析上下文与edge extras | [Round 16 resolution identity](scouts/round16-resolution-identity.md) |
 | Preview重新打开的既有边界 | [Round 16 preview reopen boundary](scouts/round16-preview-reopen-boundary.md) |
 | 本地代码阅读与行注释往返 | [Round 18 local reading](scouts/round18-local-reading-smalltools.md) |
+| 局部结构差异与声明中间态 | [Round 18 structural diff reading](scouts/round18-structural-diff-reading.md) |
+| 屏内空间方向浏览与关系阅读 | [Round 18 small graph interaction](scouts/round18-small-graph-interaction.md) |
 | 控制路径、数据依赖与实际执行 | [Round 19 control/data reading](scouts/round19-control-data-reading.md) |
 | 15个适配器对新dev的实际影响 | [Round 17 adapter dev impact](scouts/round17-adapter-dev-impact.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
