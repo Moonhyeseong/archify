@@ -69,7 +69,9 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
-| 后续发现 | Rust/Go代码阅读、离线图交换与状态文字 | 新两路源码/来源调研；只读核实Waterfall已有状态表达，确认缺口再实施 |
+| Waterfall状态文字 | 已提供error/cancelled只在颜色及全局图例体现 | 构造反例已实测；局部renderer候选已生成，独立复核与实际AX/Passport检查中 |
+| Retained size解释页 | Twiggy官方golden中的165B自身与169B保留子树 | 用原生Tree/Explainer制作固定来源样例，不引入二进制分析器 |
+| 后续发现 | 模型检查反例、重复状态与loop witness阅读 | 新一轮源码/来源调研，先去重再判断价值 |
 
 ## 一手调研报告
 
@@ -97,6 +99,8 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 图的可访问性、身份与键盘阅读 | [Accessible graph small tools](scouts/accessible-graph-smalltools.md) |
 | 执行步骤、消息投递与逻辑顺序 | [Execution reading small tools](scouts/execution-reading-smalltools.md) |
 | 数据血缘与变换证据 | [Lineage evidence small tools](scouts/lineage-evidence-smalltools.md) |
+| Rust/Go代码阅读与构建解释 | [Native code reading small tools](scouts/native-code-reading-smalltools.md) |
+| 离线图交换、关系身份与来源链接 | [Graph exchange small tools](scouts/graph-exchange-smalltools.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
 报告中的上游声明、局部源码核实、计划中的实验和已经执行的结果分别标注。未推荐方向也保留原因，避免反复研究；没有把上游宣传、星数或作者截图当作 Archify 的效果证明。
