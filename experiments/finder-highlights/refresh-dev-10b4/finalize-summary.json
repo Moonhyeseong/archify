@@ -1,0 +1,119 @@
+{
+  "format": "Portable derived projection, not original receipts. Raw originals retained outside checkout.",
+  "runs": [
+    {
+      "arm": "repository",
+      "rawStdout": {
+        "basename": "finalize.stdout.json",
+        "sha256": "0f8af73515290804a04d8dc744734a997b8963252ee3a0b401a109dc46d9d719",
+        "bytes": 1352
+      },
+      "rawReceipt": {
+        "basename": "candidate.finalize.json",
+        "sha256": "4195299e4479d931eb81a5a5e53c138369e286b0b295617d970459829b8b6699",
+        "bytes": 36091
+      },
+      "status": "pass",
+      "specification": {
+        "sha256": "610a5614667e8f108bdcf1769c9d7af5c3ce0fb62be3ea50550b10eb752e4bda",
+        "bytes": 4734
+      },
+      "artifact": {
+        "sha256": "885b4aa532f319ec6d3916822602d10c85b5036951c268360a4b3716006f6067",
+        "bytes": 884004
+      },
+      "quality": "standard",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "stages": {
+        "validate": {
+          "status": "pass",
+          "exitCode": 0
+        },
+        "deliver": {
+          "status": "pass",
+          "exitCode": 0
+        },
+        "check": {
+          "status": "pass",
+          "exitCode": 0
+        },
+        "browser-check": {
+          "status": "pass",
+          "exitCode": 0
+        }
+      },
+      "browserCheck": {
+        "requested": true,
+        "ran": true
+      },
+      "diagnosticSummary": {
+        "total": 0,
+        "shown": 0,
+        "truncated": false
+      },
+      "visualReview": "not-requested"
+    },
+    {
+      "arm": "exact-canonical-archive",
+      "rawStdout": {
+        "basename": "archive-finalize.stdout.json",
+        "sha256": "3669944c0805810aa23069f8f8c8297b2519b8961003f8d5ed0baeeb625cfa1d",
+        "bytes": 1318
+      },
+      "rawReceipt": {
+        "basename": "exact-archive.finalize.json",
+        "sha256": "d4c66f8baf84a9b9bc0a62b99d097c97a156808fe9f500bd4e15f9541f0f853b",
+        "bytes": 35574
+      },
+      "status": "pass",
+      "specification": {
+        "sha256": "610a5614667e8f108bdcf1769c9d7af5c3ce0fb62be3ea50550b10eb752e4bda",
+        "bytes": 4734
+      },
+      "artifact": {
+        "sha256": "885b4aa532f319ec6d3916822602d10c85b5036951c268360a4b3716006f6067",
+        "bytes": 884004
+      },
+      "quality": "standard",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "stages": {
+        "validate": {
+          "status": "pass",
+          "exitCode": 0
+        },
+        "deliver": {
+          "status": "pass",
+          "exitCode": 0
+        },
+        "check": {
+          "status": "pass",
+          "exitCode": 0
+        },
+        "browser-check": {
+          "status": "pass",
+          "exitCode": 0
+        }
+      },
+      "browserCheck": {
+        "requested": true,
+        "ran": true
+      },
+      "diagnosticSummary": {
+        "total": 0,
+        "shown": 0,
+        "truncated": false
+      },
+      "visualReview": "not-requested"
+    }
+  ]
+}

@@ -1,0 +1,863 @@
+{
+  "format": "portable derived generated comparison; raw normal generation logs retained outside checkout",
+  "base": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "baselineMethod": "Archived dev source, normal same-parameter generators. No manual HTML edits.",
+  "primaryAllInlineSvgBytesEqual": true,
+  "generatedHtmlPairs": [
+    {
+      "path": "archify/examples/class-payment-processors-rendered.html",
+      "baseFresh": {
+        "sha256": "4e54967f432e640e4d8cacb4e299d36e8ddb611db972a577b616176303a33b8b",
+        "bytes": 904396
+      },
+      "candidateFresh": {
+        "sha256": "f8985b651e0f58866e9a66c3969f724a11b80cb132f3f2b147b5df60c5592609",
+        "bytes": 905382
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "archify/examples/class-payments-rendered.html",
+      "baseFresh": {
+        "sha256": "e966c4f840b30ef88990889e76c4a2f01f1309a32935f085bb0d72c7cf3f4e12",
+        "bytes": 870135
+      },
+      "candidateFresh": {
+        "sha256": "937bbbf192d79ff32560414d54ffa97b1879f89a175db903d19c3fde7513217e",
+        "bytes": 871121
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "archify/examples/dataflow-product-analytics.html",
+      "baseFresh": {
+        "sha256": "ec2e22be03cf611a7484a5cf2c47f5e251eaf7e112eee758addde08ec25df220",
+        "bytes": 873215
+      },
+      "candidateFresh": {
+        "sha256": "d8a7ffcbfeb51b1476390d6264364f76e5da82d3cdedda020f62ac919a361736",
+        "bytes": 874201
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "archify/examples/drilldown-api-dataflow.html",
+      "baseFresh": {
+        "sha256": "f35a5dbd8d47d49a22b4c2541bd2a30e84fa83cc5ab9980ff263d4d687513041",
+        "bytes": 858352
+      },
+      "candidateFresh": {
+        "sha256": "5e3fe298d9b511e51574ad9f68bcda1139da2594608a2f6a83bbbb6d12f1f703",
+        "bytes": 859338
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "archify/examples/drilldown-api-sequence.html",
+      "baseFresh": {
+        "sha256": "7a605112ca70f9941ecf5aea2751cdefdaafd45fa3684563980b2d5a5f866713",
+        "bytes": 857907
+      },
+      "candidateFresh": {
+        "sha256": "99a461f5680122d6efab3d52423bf5e0075a864f0946c97cda93dbd85405e0a3",
+        "bytes": 858893
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "archify/examples/drilldown-integrations.html",
+      "baseFresh": {
+        "sha256": "ee0d7c9464306a77f10817903082bfdfa85e2b94d1539443250887aaec098f6e",
+        "bytes": 861388
+      },
+      "candidateFresh": {
+        "sha256": "f9d32372d66fb3688dfb85406040844a90d9692b728114879acfad23957933af",
+        "bytes": 862374
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "archify/examples/drilldown-overview.html",
+      "baseFresh": {
+        "sha256": "6fe595d30af0cedcfc82183b1ee6e4ab2d5510426614180495806dee825de233",
+        "bytes": 858963
+      },
+      "candidateFresh": {
+        "sha256": "6a99dc66f9b6daabf99b2afe19e1cd3318243e8ca9c544c4c2fb137f75ced6e9",
+        "bytes": 859949
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "archify/examples/drilldown-platform.html",
+      "baseFresh": {
+        "sha256": "3217fe70ce9551d36606fb0616bd690ba8d02d35360931bbd68a2af0cfc2b47a",
+        "bytes": 859974
+      },
+      "candidateFresh": {
+        "sha256": "2b31ba5ed60e10005f387d6adda0c31cf86b2ea532ade6104ed0810becbb8a34",
+        "bytes": 860960
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "archify/examples/erd-orders-rendered.html",
+      "baseFresh": {
+        "sha256": "312396216941ec5fafd43156373aaac47b0bf4ef895f57ccb49f1740a7b86101",
+        "bytes": 890619
+      },
+      "candidateFresh": {
+        "sha256": "0aae3d2dbe37a837c50ed03ad2ec8aeb0e454bd996fa19b42beeb7f8681a148f",
+        "bytes": 891605
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "archify/examples/lifecycle-agent-run.html",
+      "baseFresh": {
+        "sha256": "56458c04ba2c35fa4fcc6b9c2e220b008fab2d19d61a0af52d8b94adebe3c281",
+        "bytes": 877023
+      },
+      "candidateFresh": {
+        "sha256": "bca5abcc031f416ed01ce53d933fbb31bca1d0461b1a73d745067202ff9be539",
+        "bytes": 878009
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "archify/examples/sequence-cache-miss-request.html",
+      "baseFresh": {
+        "sha256": "24179b611a5e1c6387e7e6368847138d7d345a132261958492fcd49314b54148",
+        "bytes": 870928
+      },
+      "candidateFresh": {
+        "sha256": "0ae347445e8cb32893a4f0e6e44ba2c75dbb8c48bb8d9536c22662c6211edc92",
+        "bytes": 871914
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "archify/examples/subscription-billing-rendered.html",
+      "baseFresh": {
+        "sha256": "33a2b22228dda5ec5bff1e58aca61c8ffb35ac31191401e08492e37e909467fd",
+        "bytes": 913572
+      },
+      "candidateFresh": {
+        "sha256": "230e461c06ab5e1831ed4a65dbbe64fdd2c8e0a92d6f97de9d4d1fe1ef7421d6",
+        "bytes": 914558
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "archify/examples/timeline-archify-dev-activity-rendered.html",
+      "baseFresh": {
+        "sha256": "5d208d39075a3bb27a22ab6d98bf37e8630850d6f31ae83bb75d1b4fc2fe1dbd",
+        "bytes": 895870
+      },
+      "candidateFresh": {
+        "sha256": "9fc8f18d183ce03b331c35cc17583a1793ea89bb020f2a08b6011fab1e15ceab",
+        "bytes": 896856
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "archify/examples/timeline-payment-incident-rendered.html",
+      "baseFresh": {
+        "sha256": "c79faf8f8b28a8deb498ede1046604af9fa889e735bdb4d10b2315cb9e9d023a",
+        "bytes": 863457
+      },
+      "candidateFresh": {
+        "sha256": "27994cb0682e0cf093ff665142e021af35abec6570176cfd05932fe2ec8bede5",
+        "bytes": 864443
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "archify/examples/tree-archify-repository-rendered.html",
+      "baseFresh": {
+        "sha256": "e0987993e76d298beb554e715379aebd0ea14dd11e078a4341752397e74970f5",
+        "bytes": 906720
+      },
+      "candidateFresh": {
+        "sha256": "4c2e7f99ed8504c454f55f6682663868b6a27a5c36ea9f056482a1292ba51165",
+        "bytes": 907706
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "archify/examples/tree-payment-platform-rendered.html",
+      "baseFresh": {
+        "sha256": "46dd7282eceec765ffae95af41d27221b1635f8be0906a3f0f2b0c97a93bd183",
+        "bytes": 869079
+      },
+      "candidateFresh": {
+        "sha256": "fd0d9fe9a30efcbde4622e9f09207d114dac66465bd50e71737cb90df8b9db89",
+        "bytes": 870065
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "archify/examples/waterfall-checkout-request-rendered.html",
+      "baseFresh": {
+        "sha256": "2e60d716118993cb994208ae9e04b80071a8529b41a7df4cf6a36b96f3064fb5",
+        "bytes": 862746
+      },
+      "candidateFresh": {
+        "sha256": "a98acdd84b57b5af6184763a5d85c77949c109af9ec45c1af133a848dac4eff5",
+        "bytes": 863732
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "archify/examples/waterfall-example-rebuild-rendered.html",
+      "baseFresh": {
+        "sha256": "713657486fdc26480ebb30df1676a763a55c76d19ef0c924db7e58a11781bb8d",
+        "bytes": 892564
+      },
+      "candidateFresh": {
+        "sha256": "a32e7d7fc4fdee04f2af4d5300a71b82c63d8329d1ab2fcd26e30053283a4d97",
+        "bytes": 893550
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "archify/examples/web-app-rendered.html",
+      "baseFresh": {
+        "sha256": "6634294ad509b10f72a7d341e8721fe1549ec65ef73c4a0c4c4752f0afa37f90",
+        "bytes": 875557
+      },
+      "candidateFresh": {
+        "sha256": "7c0ad78ff6a821cec05dd421ddf584f0c803c6e9e1082bddd6c62ed33242a465",
+        "bytes": 876543
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "archify/examples/workflow-agent-tool-call-rendered.html",
+      "baseFresh": {
+        "sha256": "83df7b1ff5e70299f86d24b4e4d484d61ba8d060f7bc734304c50087301b0967",
+        "bytes": 880640
+      },
+      "candidateFresh": {
+        "sha256": "6d586cb5508db2e0917051d7aa36e3fb26ac0014de8bae2a1c6a0f5c0c3693b7",
+        "bytes": 881626
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "docs/gallery/artifacts/agent-run.lifecycle.html",
+      "baseFresh": {
+        "sha256": "56458c04ba2c35fa4fcc6b9c2e220b008fab2d19d61a0af52d8b94adebe3c281",
+        "bytes": 877023
+      },
+      "candidateFresh": {
+        "sha256": "bca5abcc031f416ed01ce53d933fbb31bca1d0461b1a73d745067202ff9be539",
+        "bytes": 878009
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "docs/gallery/artifacts/agent-tool-call.workflow.html",
+      "baseFresh": {
+        "sha256": "83df7b1ff5e70299f86d24b4e4d484d61ba8d060f7bc734304c50087301b0967",
+        "bytes": 880640
+      },
+      "candidateFresh": {
+        "sha256": "6d586cb5508db2e0917051d7aa36e3fb26ac0014de8bae2a1c6a0f5c0c3693b7",
+        "bytes": 881626
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "docs/gallery/artifacts/async-job-roundtrip.sequence.html",
+      "baseFresh": {
+        "sha256": "afdf96be17cdc9ae527cb03ff8832acd70705d4a3cad53cc582f4c98ebc77fef",
+        "bytes": 871274
+      },
+      "candidateFresh": {
+        "sha256": "89486616dfeb2a43a278914cac3c31b485e2798ae8983d1b0293d4c9e278d316",
+        "bytes": 872260
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "docs/gallery/artifacts/cache-miss.sequence.html",
+      "baseFresh": {
+        "sha256": "24179b611a5e1c6387e7e6368847138d7d345a132261958492fcd49314b54148",
+        "bytes": 870928
+      },
+      "candidateFresh": {
+        "sha256": "0ae347445e8cb32893a4f0e6e44ba2c75dbb8c48bb8d9536c22662c6211edc92",
+        "bytes": 871914
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "docs/gallery/artifacts/checkout-request.waterfall.html",
+      "baseFresh": {
+        "sha256": "2e60d716118993cb994208ae9e04b80071a8529b41a7df4cf6a36b96f3064fb5",
+        "bytes": 862746
+      },
+      "candidateFresh": {
+        "sha256": "a98acdd84b57b5af6184763a5d85c77949c109af9ec45c1af133a848dac4eff5",
+        "bytes": 863732
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "docs/gallery/artifacts/deployment-release.lifecycle.html",
+      "baseFresh": {
+        "sha256": "eb4400030afb14ad1ac7f049aab0424d6e23fff761120f5787b8e4e98bf6890e",
+        "bytes": 884048
+      },
+      "candidateFresh": {
+        "sha256": "ebbb4ffaccd68969fa40f126622ffa4078cd54d494164e95f94207369ef40253",
+        "bytes": 885034
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "docs/gallery/artifacts/event-stream.dataflow.html",
+      "baseFresh": {
+        "sha256": "cb675c282bffca189cf45ab053aaa68725689bb4883749b848da05a1e0dc3494",
+        "bytes": 877135
+      },
+      "candidateFresh": {
+        "sha256": "a17df517026c26e22d8f7c6bac57ca987339cc4d556d166f0f03d39edba97dd9",
+        "bytes": 878121
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "docs/gallery/artifacts/incident-response.workflow.html",
+      "baseFresh": {
+        "sha256": "900f09acf9b880c9ca6634bb674554e5730af6abb95ca0b1dd349d387c0b4f57",
+        "bytes": 873600
+      },
+      "candidateFresh": {
+        "sha256": "6b4d30faba05b93f6f9da41995a941ed3cca1895fc9212e12aa1d6ada3254938",
+        "bytes": 874586
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "docs/gallery/artifacts/orders.erd.html",
+      "baseFresh": {
+        "sha256": "312396216941ec5fafd43156373aaac47b0bf4ef895f57ccb49f1740a7b86101",
+        "bytes": 890619
+      },
+      "candidateFresh": {
+        "sha256": "0aae3d2dbe37a837c50ed03ad2ec8aeb0e454bd996fa19b42beeb7f8681a148f",
+        "bytes": 891605
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "docs/gallery/artifacts/payment-incident.timeline.html",
+      "baseFresh": {
+        "sha256": "c79faf8f8b28a8deb498ede1046604af9fa889e735bdb4d10b2315cb9e9d023a",
+        "bytes": 863457
+      },
+      "candidateFresh": {
+        "sha256": "27994cb0682e0cf093ff665142e021af35abec6570176cfd05932fe2ec8bede5",
+        "bytes": 864443
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "docs/gallery/artifacts/payment-platform.tree.html",
+      "baseFresh": {
+        "sha256": "46dd7282eceec765ffae95af41d27221b1635f8be0906a3f0f2b0c97a93bd183",
+        "bytes": 869079
+      },
+      "candidateFresh": {
+        "sha256": "fd0d9fe9a30efcbde4622e9f09207d114dac66465bd50e71737cb90df8b9db89",
+        "bytes": 870065
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "docs/gallery/artifacts/payments.class.html",
+      "baseFresh": {
+        "sha256": "e966c4f840b30ef88990889e76c4a2f01f1309a32935f085bb0d72c7cf3f4e12",
+        "bytes": 870135
+      },
+      "candidateFresh": {
+        "sha256": "937bbbf192d79ff32560414d54ffa97b1879f89a175db903d19c3fde7513217e",
+        "bytes": 871121
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "docs/gallery/artifacts/product-analytics.dataflow.html",
+      "baseFresh": {
+        "sha256": "ec2e22be03cf611a7484a5cf2c47f5e251eaf7e112eee758addde08ec25df220",
+        "bytes": 873215
+      },
+      "candidateFresh": {
+        "sha256": "d8a7ffcbfeb51b1476390d6264364f76e5da82d3cdedda020f62ac919a361736",
+        "bytes": 874201
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "docs/gallery/artifacts/production-deployment.architecture.html",
+      "baseFresh": {
+        "sha256": "3fa981dad4c929f30d40ffb2f77c21f029e6d4723c06b6f1945742f42c0fe1d1",
+        "bytes": 883018
+      },
+      "candidateFresh": {
+        "sha256": "6f0e523194d0f99f6fdb6128cac20fd8bcd25ef498187c00b24e983bfaee53ec",
+        "bytes": 884004
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "docs/gallery/artifacts/release-delivery.workflow.html",
+      "baseFresh": {
+        "sha256": "d793992bf147c3a907ae23785649c1e4ef68ed1b01d2ae6ea06c2402c64c64a5",
+        "bytes": 876200
+      },
+      "candidateFresh": {
+        "sha256": "9c5b78aa65b160b55ec49056ab1b87ddf26304db5f26232b6d7de3694acc3507",
+        "bytes": 877186
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "docs/gallery/artifacts/web-app.architecture.html",
+      "baseFresh": {
+        "sha256": "6634294ad509b10f72a7d341e8721fe1549ec65ef73c4a0c4c4752f0afa37f90",
+        "bytes": 875557
+      },
+      "candidateFresh": {
+        "sha256": "7c0ad78ff6a821cec05dd421ddf584f0c803c6e9e1082bddd6c62ed33242a465",
+        "bytes": 876543
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "examples/class-payment-processors-rendered.html",
+      "baseFresh": {
+        "sha256": "4e54967f432e640e4d8cacb4e299d36e8ddb611db972a577b616176303a33b8b",
+        "bytes": 904396
+      },
+      "candidateFresh": {
+        "sha256": "f8985b651e0f58866e9a66c3969f724a11b80cb132f3f2b147b5df60c5592609",
+        "bytes": 905382
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "examples/class-payments-rendered.html",
+      "baseFresh": {
+        "sha256": "e966c4f840b30ef88990889e76c4a2f01f1309a32935f085bb0d72c7cf3f4e12",
+        "bytes": 870135
+      },
+      "candidateFresh": {
+        "sha256": "937bbbf192d79ff32560414d54ffa97b1879f89a175db903d19c3fde7513217e",
+        "bytes": 871121
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "examples/dataflow-product-analytics.html",
+      "baseFresh": {
+        "sha256": "ec2e22be03cf611a7484a5cf2c47f5e251eaf7e112eee758addde08ec25df220",
+        "bytes": 873215
+      },
+      "candidateFresh": {
+        "sha256": "d8a7ffcbfeb51b1476390d6264364f76e5da82d3cdedda020f62ac919a361736",
+        "bytes": 874201
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "examples/drilldown-api-dataflow.html",
+      "baseFresh": {
+        "sha256": "f35a5dbd8d47d49a22b4c2541bd2a30e84fa83cc5ab9980ff263d4d687513041",
+        "bytes": 858352
+      },
+      "candidateFresh": {
+        "sha256": "5e3fe298d9b511e51574ad9f68bcda1139da2594608a2f6a83bbbb6d12f1f703",
+        "bytes": 859338
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "examples/drilldown-api-sequence.html",
+      "baseFresh": {
+        "sha256": "7a605112ca70f9941ecf5aea2751cdefdaafd45fa3684563980b2d5a5f866713",
+        "bytes": 857907
+      },
+      "candidateFresh": {
+        "sha256": "99a461f5680122d6efab3d52423bf5e0075a864f0946c97cda93dbd85405e0a3",
+        "bytes": 858893
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "examples/drilldown-integrations.html",
+      "baseFresh": {
+        "sha256": "ee0d7c9464306a77f10817903082bfdfa85e2b94d1539443250887aaec098f6e",
+        "bytes": 861388
+      },
+      "candidateFresh": {
+        "sha256": "f9d32372d66fb3688dfb85406040844a90d9692b728114879acfad23957933af",
+        "bytes": 862374
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "examples/drilldown-overview.html",
+      "baseFresh": {
+        "sha256": "6fe595d30af0cedcfc82183b1ee6e4ab2d5510426614180495806dee825de233",
+        "bytes": 858963
+      },
+      "candidateFresh": {
+        "sha256": "6a99dc66f9b6daabf99b2afe19e1cd3318243e8ca9c544c4c2fb137f75ced6e9",
+        "bytes": 859949
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "examples/drilldown-platform.html",
+      "baseFresh": {
+        "sha256": "3217fe70ce9551d36606fb0616bd690ba8d02d35360931bbd68a2af0cfc2b47a",
+        "bytes": 859974
+      },
+      "candidateFresh": {
+        "sha256": "2b31ba5ed60e10005f387d6adda0c31cf86b2ea532ade6104ed0810becbb8a34",
+        "bytes": 860960
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "examples/erd-orders-rendered.html",
+      "baseFresh": {
+        "sha256": "312396216941ec5fafd43156373aaac47b0bf4ef895f57ccb49f1740a7b86101",
+        "bytes": 890619
+      },
+      "candidateFresh": {
+        "sha256": "0aae3d2dbe37a837c50ed03ad2ec8aeb0e454bd996fa19b42beeb7f8681a148f",
+        "bytes": 891605
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "examples/lifecycle-agent-run.html",
+      "baseFresh": {
+        "sha256": "56458c04ba2c35fa4fcc6b9c2e220b008fab2d19d61a0af52d8b94adebe3c281",
+        "bytes": 877023
+      },
+      "candidateFresh": {
+        "sha256": "bca5abcc031f416ed01ce53d933fbb31bca1d0461b1a73d745067202ff9be539",
+        "bytes": 878009
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "examples/sequence-cache-miss-request.html",
+      "baseFresh": {
+        "sha256": "24179b611a5e1c6387e7e6368847138d7d345a132261958492fcd49314b54148",
+        "bytes": 870928
+      },
+      "candidateFresh": {
+        "sha256": "0ae347445e8cb32893a4f0e6e44ba2c75dbb8c48bb8d9536c22662c6211edc92",
+        "bytes": 871914
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "examples/subscription-billing-rendered.html",
+      "baseFresh": {
+        "sha256": "33a2b22228dda5ec5bff1e58aca61c8ffb35ac31191401e08492e37e909467fd",
+        "bytes": 913572
+      },
+      "candidateFresh": {
+        "sha256": "230e461c06ab5e1831ed4a65dbbe64fdd2c8e0a92d6f97de9d4d1fe1ef7421d6",
+        "bytes": 914558
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "examples/timeline-archify-dev-activity-rendered.html",
+      "baseFresh": {
+        "sha256": "5d208d39075a3bb27a22ab6d98bf37e8630850d6f31ae83bb75d1b4fc2fe1dbd",
+        "bytes": 895870
+      },
+      "candidateFresh": {
+        "sha256": "9fc8f18d183ce03b331c35cc17583a1793ea89bb020f2a08b6011fab1e15ceab",
+        "bytes": 896856
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "examples/timeline-payment-incident-rendered.html",
+      "baseFresh": {
+        "sha256": "c79faf8f8b28a8deb498ede1046604af9fa889e735bdb4d10b2315cb9e9d023a",
+        "bytes": 863457
+      },
+      "candidateFresh": {
+        "sha256": "27994cb0682e0cf093ff665142e021af35abec6570176cfd05932fe2ec8bede5",
+        "bytes": 864443
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "examples/tree-archify-repository-rendered.html",
+      "baseFresh": {
+        "sha256": "e0987993e76d298beb554e715379aebd0ea14dd11e078a4341752397e74970f5",
+        "bytes": 906720
+      },
+      "candidateFresh": {
+        "sha256": "4c2e7f99ed8504c454f55f6682663868b6a27a5c36ea9f056482a1292ba51165",
+        "bytes": 907706
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "examples/tree-payment-platform-rendered.html",
+      "baseFresh": {
+        "sha256": "46dd7282eceec765ffae95af41d27221b1635f8be0906a3f0f2b0c97a93bd183",
+        "bytes": 869079
+      },
+      "candidateFresh": {
+        "sha256": "fd0d9fe9a30efcbde4622e9f09207d114dac66465bd50e71737cb90df8b9db89",
+        "bytes": 870065
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "examples/waterfall-checkout-request-rendered.html",
+      "baseFresh": {
+        "sha256": "2e60d716118993cb994208ae9e04b80071a8529b41a7df4cf6a36b96f3064fb5",
+        "bytes": 862746
+      },
+      "candidateFresh": {
+        "sha256": "a98acdd84b57b5af6184763a5d85c77949c109af9ec45c1af133a848dac4eff5",
+        "bytes": 863732
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "examples/waterfall-example-rebuild-rendered.html",
+      "baseFresh": {
+        "sha256": "713657486fdc26480ebb30df1676a763a55c76d19ef0c924db7e58a11781bb8d",
+        "bytes": 892564
+      },
+      "candidateFresh": {
+        "sha256": "a32e7d7fc4fdee04f2af4d5300a71b82c63d8329d1ab2fcd26e30053283a4d97",
+        "bytes": 893550
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "examples/web-app-rendered.html",
+      "baseFresh": {
+        "sha256": "6634294ad509b10f72a7d341e8721fe1549ec65ef73c4a0c4c4752f0afa37f90",
+        "bytes": 875557
+      },
+      "candidateFresh": {
+        "sha256": "7c0ad78ff6a821cec05dd421ddf584f0c803c6e9e1082bddd6c62ed33242a465",
+        "bytes": 876543
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "examples/web-app.html",
+      "baseFresh": {
+        "sha256": "6634294ad509b10f72a7d341e8721fe1549ec65ef73c4a0c4c4752f0afa37f90",
+        "bytes": 875557
+      },
+      "candidateFresh": {
+        "sha256": "7c0ad78ff6a821cec05dd421ddf584f0c803c6e9e1082bddd6c62ed33242a465",
+        "bytes": 876543
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    },
+    {
+      "path": "examples/workflow-agent-tool-call-rendered.html",
+      "baseFresh": {
+        "sha256": "83df7b1ff5e70299f86d24b4e4d484d61ba8d060f7bc734304c50087301b0967",
+        "bytes": 880640
+      },
+      "candidateFresh": {
+        "sha256": "6d586cb5508db2e0917051d7aa36e3fb26ac0014de8bae2a1c6a0f5c0c3693b7",
+        "bytes": 881626
+      },
+      "allInlineSvgBytesEqual": true,
+      "svgElements": 1,
+      "trackedDevEqualsBaseFresh": true
+    }
+  ],
+  "historicalExperimentFiles": [
+    {
+      "path": "experiments/finder-highlights/README.md",
+      "sha256": "456439d413caff18f9260d96983355165dfb16dbd80191960c1cb905b3818a17",
+      "bytes": 5166
+    },
+    {
+      "path": "experiments/finder-highlights/base.html",
+      "sha256": "3ee797c5806a5aeda056eae8e20d4f8e8fc2c1258de5f9194f7ba5aa10bdec7c",
+      "bytes": 837413
+    },
+    {
+      "path": "experiments/finder-highlights/candidate.html",
+      "sha256": "0bd5874060be8d881b62a8a2072c4c78ce47b872836a1d36387dd90f0f836c84",
+      "bytes": 838399
+    },
+    {
+      "path": "experiments/finder-highlights/observations.json",
+      "sha256": "79bc72cac3567fb3569ee6a8f27b37596afed534e1fb540f6d4a213464ff7bb0",
+      "bytes": 31650
+    },
+    {
+      "path": "experiments/finder-highlights/receipt.json",
+      "sha256": "fa8a388b8362148aa27cae9b9ca52036126e06373afdbb565660056d04f0c67f",
+      "bytes": 2235
+    },
+    {
+      "path": "experiments/finder-highlights/screenshots/base-api-light.png",
+      "sha256": "063c6b79990dcad052936c98a097b22a421890b317d89833ae4e34e980f748e6",
+      "bytes": 191313
+    },
+    {
+      "path": "experiments/finder-highlights/screenshots/base-platform-dark.png",
+      "sha256": "90ca5c16c0db942d72946271271bee0cd48622ceb71ee65d44d1af394a32e702",
+      "bytes": 191498
+    },
+    {
+      "path": "experiments/finder-highlights/screenshots/candidate-api-light.png",
+      "sha256": "a65846b41a45869d37e8c9cb28da5f2e4eb0b39ed945b3a72455e6546159f836",
+      "bytes": 192766
+    },
+    {
+      "path": "experiments/finder-highlights/screenshots/candidate-platform-dark.png",
+      "sha256": "f49e1555216fd3c19b5fd8b7980bd57c91339ee086d95580c0263ee0beacc4d7",
+      "bytes": 192673
+    },
+    {
+      "path": "experiments/finder-highlights/screenshots/capture.json",
+      "sha256": "def5db9955679340f821bd31e40a79a19be76976c415e5159b53dcc5b9ea8084",
+      "bytes": 2871
+    }
+  ],
+  "notes": [
+    "SVG byte equality is static authored geometry evidence, not complete HTML equality or browser acceptance.",
+    "Normal Gallery regeneration resolved merge conflicts. Changed manifest hashes follow HTML regeneration.",
+    "Unchanged docs/cases and other tracked historical HTML outside the selected generators are not claimed refreshed."
+  ]
+}

@@ -1,0 +1,460 @@
+[
+  {
+    "arm": "base",
+    "theme": "light",
+    "before": {
+      "theme": "light",
+      "query": "",
+      "closed": false,
+      "list": [
+        "clients",
+        "edge",
+        "gateway",
+        "api_a",
+        "api_b",
+        "redis",
+        "postgres",
+        "events",
+        "worker",
+        "replica",
+        "audit",
+        "observability"
+      ],
+      "markers": [],
+      "hash": "",
+      "zoom": "READ100%",
+      "svgGeometry": {
+        "viewBox": "0 0 1376 790",
+        "parentStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;"
+      },
+      "selected": []
+    },
+    "matched": {
+      "theme": "light",
+      "query": "API",
+      "closed": false,
+      "list": [
+        "gateway",
+        "api_a",
+        "api_b"
+      ],
+      "markers": [],
+      "hash": "",
+      "zoom": "READ100%",
+      "svgGeometry": {
+        "viewBox": "0 0 1376 790",
+        "parentStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;"
+      },
+      "selected": []
+    },
+    "absent": {
+      "theme": "light",
+      "query": "unmatched-20261025",
+      "closed": false,
+      "list": [],
+      "markers": [],
+      "hash": "",
+      "zoom": "READ100%",
+      "svgGeometry": {
+        "viewBox": "0 0 1376 790",
+        "parentStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;"
+      },
+      "selected": []
+    },
+    "cleared": {
+      "theme": "light",
+      "query": "",
+      "closed": false,
+      "list": [
+        "clients",
+        "edge",
+        "gateway",
+        "api_a",
+        "api_b",
+        "redis",
+        "postgres",
+        "events",
+        "worker",
+        "replica",
+        "audit",
+        "observability"
+      ],
+      "markers": [],
+      "hash": "",
+      "zoom": "READ100%",
+      "svgGeometry": {
+        "viewBox": "0 0 1376 790",
+        "parentStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;"
+      },
+      "selected": []
+    },
+    "closed": {
+      "theme": "light",
+      "query": "",
+      "closed": true,
+      "list": [
+        "gateway",
+        "api_a",
+        "api_b"
+      ],
+      "markers": [],
+      "hash": "",
+      "zoom": "READ100%",
+      "svgGeometry": {
+        "viewBox": "0 0 1376 790",
+        "parentStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;"
+      },
+      "selected": []
+    }
+  },
+  {
+    "arm": "candidate",
+    "theme": "light",
+    "before": {
+      "theme": "light",
+      "query": "",
+      "closed": false,
+      "list": [
+        "clients",
+        "edge",
+        "gateway",
+        "api_a",
+        "api_b",
+        "redis",
+        "postgres",
+        "events",
+        "worker",
+        "replica",
+        "audit",
+        "observability"
+      ],
+      "markers": [],
+      "hash": "",
+      "zoom": "READ100%",
+      "svgGeometry": {
+        "viewBox": "0 0 1376 790",
+        "parentStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;"
+      },
+      "selected": []
+    },
+    "matched": {
+      "theme": "light",
+      "query": "API",
+      "closed": false,
+      "list": [
+        "gateway",
+        "api_a",
+        "api_b"
+      ],
+      "markers": [
+        {
+          "id": "gateway",
+          "outline": "rgb(8, 127, 156) solid 2px"
+        },
+        {
+          "id": "api_a",
+          "outline": "rgb(8, 127, 156) solid 2px"
+        },
+        {
+          "id": "api_b",
+          "outline": "rgb(8, 127, 156) solid 2px"
+        }
+      ],
+      "hash": "",
+      "zoom": "READ100%",
+      "svgGeometry": {
+        "viewBox": "0 0 1376 790",
+        "parentStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;"
+      },
+      "selected": []
+    },
+    "absent": {
+      "theme": "light",
+      "query": "unmatched-20261025",
+      "closed": false,
+      "list": [],
+      "markers": [],
+      "hash": "",
+      "zoom": "READ100%",
+      "svgGeometry": {
+        "viewBox": "0 0 1376 790",
+        "parentStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;"
+      },
+      "selected": []
+    },
+    "cleared": {
+      "theme": "light",
+      "query": "",
+      "closed": false,
+      "list": [
+        "clients",
+        "edge",
+        "gateway",
+        "api_a",
+        "api_b",
+        "redis",
+        "postgres",
+        "events",
+        "worker",
+        "replica",
+        "audit",
+        "observability"
+      ],
+      "markers": [],
+      "hash": "",
+      "zoom": "READ100%",
+      "svgGeometry": {
+        "viewBox": "0 0 1376 790",
+        "parentStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;"
+      },
+      "selected": []
+    },
+    "closed": {
+      "theme": "light",
+      "query": "",
+      "closed": true,
+      "list": [
+        "gateway",
+        "api_a",
+        "api_b"
+      ],
+      "markers": [],
+      "hash": "",
+      "zoom": "READ100%",
+      "svgGeometry": {
+        "viewBox": "0 0 1376 790",
+        "parentStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;"
+      },
+      "selected": []
+    }
+  },
+  {
+    "arm": "base",
+    "theme": "dark",
+    "before": {
+      "theme": "dark",
+      "query": "",
+      "closed": false,
+      "list": [
+        "clients",
+        "edge",
+        "gateway",
+        "api_a",
+        "api_b",
+        "redis",
+        "postgres",
+        "events",
+        "worker",
+        "replica",
+        "audit",
+        "observability"
+      ],
+      "markers": [],
+      "hash": "",
+      "zoom": "READ100%",
+      "svgGeometry": {
+        "viewBox": "0 0 1376 790",
+        "parentStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;"
+      },
+      "selected": []
+    },
+    "matched": {
+      "theme": "dark",
+      "query": "platform",
+      "closed": false,
+      "list": [
+        "gateway",
+        "redis",
+        "events"
+      ],
+      "markers": [],
+      "hash": "",
+      "zoom": "READ100%",
+      "svgGeometry": {
+        "viewBox": "0 0 1376 790",
+        "parentStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;"
+      },
+      "selected": []
+    },
+    "absent": {
+      "theme": "dark",
+      "query": "unmatched-20261025",
+      "closed": false,
+      "list": [],
+      "markers": [],
+      "hash": "",
+      "zoom": "READ100%",
+      "svgGeometry": {
+        "viewBox": "0 0 1376 790",
+        "parentStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;"
+      },
+      "selected": []
+    },
+    "cleared": {
+      "theme": "dark",
+      "query": "",
+      "closed": false,
+      "list": [
+        "clients",
+        "edge",
+        "gateway",
+        "api_a",
+        "api_b",
+        "redis",
+        "postgres",
+        "events",
+        "worker",
+        "replica",
+        "audit",
+        "observability"
+      ],
+      "markers": [],
+      "hash": "",
+      "zoom": "READ100%",
+      "svgGeometry": {
+        "viewBox": "0 0 1376 790",
+        "parentStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;"
+      },
+      "selected": []
+    },
+    "closed": {
+      "theme": "dark",
+      "query": "",
+      "closed": true,
+      "list": [
+        "gateway",
+        "redis",
+        "events"
+      ],
+      "markers": [],
+      "hash": "",
+      "zoom": "READ100%",
+      "svgGeometry": {
+        "viewBox": "0 0 1376 790",
+        "parentStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;"
+      },
+      "selected": []
+    }
+  },
+  {
+    "arm": "candidate",
+    "theme": "dark",
+    "before": {
+      "theme": "dark",
+      "query": "",
+      "closed": false,
+      "list": [
+        "clients",
+        "edge",
+        "gateway",
+        "api_a",
+        "api_b",
+        "redis",
+        "postgres",
+        "events",
+        "worker",
+        "replica",
+        "audit",
+        "observability"
+      ],
+      "markers": [],
+      "hash": "",
+      "zoom": "READ100%",
+      "svgGeometry": {
+        "viewBox": "0 0 1376 790",
+        "parentStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;"
+      },
+      "selected": []
+    },
+    "matched": {
+      "theme": "dark",
+      "query": "platform",
+      "closed": false,
+      "list": [
+        "gateway",
+        "redis",
+        "events"
+      ],
+      "markers": [
+        {
+          "id": "gateway",
+          "outline": "rgb(102, 217, 239) solid 2px"
+        },
+        {
+          "id": "redis",
+          "outline": "rgb(102, 217, 239) solid 2px"
+        },
+        {
+          "id": "events",
+          "outline": "rgb(102, 217, 239) solid 2px"
+        }
+      ],
+      "hash": "",
+      "zoom": "READ100%",
+      "svgGeometry": {
+        "viewBox": "0 0 1376 790",
+        "parentStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;"
+      },
+      "selected": []
+    },
+    "absent": {
+      "theme": "dark",
+      "query": "unmatched-20261025",
+      "closed": false,
+      "list": [],
+      "markers": [],
+      "hash": "",
+      "zoom": "READ100%",
+      "svgGeometry": {
+        "viewBox": "0 0 1376 790",
+        "parentStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;"
+      },
+      "selected": []
+    },
+    "cleared": {
+      "theme": "dark",
+      "query": "",
+      "closed": false,
+      "list": [
+        "clients",
+        "edge",
+        "gateway",
+        "api_a",
+        "api_b",
+        "redis",
+        "postgres",
+        "events",
+        "worker",
+        "replica",
+        "audit",
+        "observability"
+      ],
+      "markers": [],
+      "hash": "",
+      "zoom": "READ100%",
+      "svgGeometry": {
+        "viewBox": "0 0 1376 790",
+        "parentStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;"
+      },
+      "selected": []
+    },
+    "closed": {
+      "theme": "dark",
+      "query": "",
+      "closed": true,
+      "list": [
+        "gateway",
+        "redis",
+        "events"
+      ],
+      "markers": [],
+      "hash": "",
+      "zoom": "READ100%",
+      "svgGeometry": {
+        "viewBox": "0 0 1376 790",
+        "parentStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;"
+      },
+      "selected": []
+    }
+  }
+]

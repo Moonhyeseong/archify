@@ -1,0 +1,191 @@
+{
+  "format": "Portable derived capture metadata; original PNG and observations.json copied byte-for-byte.",
+  "capturedDate": "2026-10-25",
+  "source": "Root-operated Ego browser, shared TaskSpace4; actual normal click/fill actions, no programmatic input dispatch. Root reported opening and visually checking all four PNGs.",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "input": {
+    "path": "../input.architecture.json",
+    "sha256": "610a5614667e8f108bdcf1769c9d7af5c3ce0fb62be3ea50550b10eb752e4bda",
+    "bytes": 4734
+  },
+  "artifacts": [
+    {
+      "path": "../base.html",
+      "sha256": "4bf1363f798ee3d8e02b4191697f78454c64b28a4ac46744db502255f2867143",
+      "bytes": 883018
+    },
+    {
+      "path": "../candidate.html",
+      "sha256": "885b4aa532f319ec6d3916822602d10c85b5036951c268360a4b3716006f6067",
+      "bytes": 884004
+    }
+  ],
+  "observations": {
+    "path": "observations.json",
+    "sha256": "5f528c8deb92dacd2e20207e0181388a36096070dbae6f00c2408d63bde2e391",
+    "bytes": 9974,
+    "arms": 4,
+    "statesPerArm": 5
+  },
+  "runs": [
+    {
+      "arm": "base",
+      "theme": "light",
+      "query": "API",
+      "image": {
+        "path": "base-light.png",
+        "sha256": "dc7f27f11f6b5397e253887ff4f9eb6e6cd6fe59167572d43d899cf0467471e1",
+        "bytes": 191331,
+        "width": 1440,
+        "height": 900
+      },
+      "observedStates": [
+        "before",
+        "matched",
+        "absent",
+        "cleared",
+        "closed"
+      ],
+      "matchedIds": [
+        "gateway",
+        "api_a",
+        "api_b"
+      ],
+      "matchedMarkers": [],
+      "markersClearedInBeforeAbsentClearClose": true,
+      "matchedVsBefore": {
+        "rootViewBoxAndParentStyleEqual": true,
+        "zoomTextEqual": true,
+        "hashEqual": true
+      }
+    },
+    {
+      "arm": "candidate",
+      "theme": "light",
+      "query": "API",
+      "image": {
+        "path": "candidate-light.png",
+        "sha256": "8f09f63acf32890006c6e96397cd444e08cf56e3749accd7a4b2f21abe84d51f",
+        "bytes": 192742,
+        "width": 1440,
+        "height": 900
+      },
+      "observedStates": [
+        "before",
+        "matched",
+        "absent",
+        "cleared",
+        "closed"
+      ],
+      "matchedIds": [
+        "gateway",
+        "api_a",
+        "api_b"
+      ],
+      "matchedMarkers": [
+        {
+          "id": "gateway",
+          "outline": "rgb(8, 127, 156) solid 2px"
+        },
+        {
+          "id": "api_a",
+          "outline": "rgb(8, 127, 156) solid 2px"
+        },
+        {
+          "id": "api_b",
+          "outline": "rgb(8, 127, 156) solid 2px"
+        }
+      ],
+      "markersClearedInBeforeAbsentClearClose": true,
+      "matchedVsBefore": {
+        "rootViewBoxAndParentStyleEqual": true,
+        "zoomTextEqual": true,
+        "hashEqual": true
+      }
+    },
+    {
+      "arm": "base",
+      "theme": "dark",
+      "query": "platform",
+      "image": {
+        "path": "base-dark.png",
+        "sha256": "254ed0f0afae5f6966bdbb5e535c1ee4ca24af1cd8e166cd71eb355c7e3dbe5d",
+        "bytes": 191534,
+        "width": 1440,
+        "height": 900
+      },
+      "observedStates": [
+        "before",
+        "matched",
+        "absent",
+        "cleared",
+        "closed"
+      ],
+      "matchedIds": [
+        "gateway",
+        "redis",
+        "events"
+      ],
+      "matchedMarkers": [],
+      "markersClearedInBeforeAbsentClearClose": true,
+      "matchedVsBefore": {
+        "rootViewBoxAndParentStyleEqual": true,
+        "zoomTextEqual": true,
+        "hashEqual": true
+      }
+    },
+    {
+      "arm": "candidate",
+      "theme": "dark",
+      "query": "platform",
+      "image": {
+        "path": "candidate-dark.png",
+        "sha256": "de988e915a039c7dabadabae9121d93df0c860b26146698b35cd9bbf0ecb5d64",
+        "bytes": 192678,
+        "width": 1440,
+        "height": 900
+      },
+      "observedStates": [
+        "before",
+        "matched",
+        "absent",
+        "cleared",
+        "closed"
+      ],
+      "matchedIds": [
+        "gateway",
+        "redis",
+        "events"
+      ],
+      "matchedMarkers": [
+        {
+          "id": "gateway",
+          "outline": "rgb(102, 217, 239) solid 2px"
+        },
+        {
+          "id": "redis",
+          "outline": "rgb(102, 217, 239) solid 2px"
+        },
+        {
+          "id": "events",
+          "outline": "rgb(102, 217, 239) solid 2px"
+        }
+      ],
+      "markersClearedInBeforeAbsentClearClose": true,
+      "matchedVsBefore": {
+        "rootViewBoxAndParentStyleEqual": true,
+        "zoomTextEqual": true,
+        "hashEqual": true
+      }
+    }
+  ],
+  "limits": [
+    "Geometry preservation in this capture is limited to collected root SVG viewBox, parent style, zoom text and hash; it is not a complete internal-camera proof.",
+    "All arms began at initial Fit with no selected node. The historical [data-focus] selector yielded empty selected arrays and does not establish existing-selection preservation.",
+    "DOM and screenshot observations are not screen-reader acceptance or a node-location timing study. Automated harness evidence is separate.",
+    "This records capture-time state and does not assert current branch publication or user acceptance."
+  ]
+}

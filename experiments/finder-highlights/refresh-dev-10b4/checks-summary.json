@@ -1,0 +1,176 @@
+{
+  "format": "Portable derived check summary. Counts are scoped local evidence; no full repository suite or remote CI claim.",
+  "base": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "oldCandidate": "94c165ee6e5213c67e37a75a0b04496564980801",
+  "toolchain": {
+    "node": "22.23.2",
+    "zlib": "1.3.1-e00f703"
+  },
+  "checks": [
+    {
+      "command": "node scripts/run-browser-tests.mjs test/finder-browser.test.mjs test/export-cleanup-browser.test.mjs test/drilldown-context-browser.test.mjs",
+      "pass": 19,
+      "fail": 0,
+      "skip": 0,
+      "log": "browser-tests.log"
+    },
+    {
+      "command": "node scripts/run-tests.mjs --require-files test/core-smoke.test.mjs test/generated-artifact-xml.test.mjs",
+      "pass": 22,
+      "fail": 0,
+      "skip": 0,
+      "log": "core-xml-tests.log"
+    },
+    {
+      "command": "node scripts/run-tests.mjs --require-files test/gallery.test.mjs",
+      "pass": 1,
+      "fail": 0,
+      "skip": 0,
+      "log": "generated-5.log"
+    },
+    {
+      "commands": [
+        "node scripts/generate-viewer.mjs --check",
+        "node archify/scripts/generate-brand-marks.mjs --check",
+        "node archify/scripts/generate-validators.mjs --check",
+        "node scripts/check-release-identity.mjs"
+      ],
+      "passedCommands": 4
+    },
+    {
+      "command": "node test/golden.mjs",
+      "passedChecks": 68,
+      "log": "generated-4.log"
+    },
+    {
+      "command": "temporary actual Chromium same-input probe",
+      "observations": 20,
+      "status": "pass",
+      "inputMechanism": "programmatic DOM input events; existing browser tests separately exercise trusted input"
+    }
+  ],
+  "rawLogBindings": [
+    {
+      "basename": "browser-tests.log",
+      "sha256": "8f5eddd82864146ee095b0f43d326ea436cbd780a7ea231eaf6a616a3a568efd",
+      "bytes": 4728
+    },
+    {
+      "basename": "core-xml-tests.log",
+      "sha256": "a5fdaa16123fdeb5e3b4551e96f46b3c60230843ccc3ebe3d86d7c5f01c18143",
+      "bytes": 4888
+    },
+    {
+      "basename": "probe.log",
+      "sha256": "6beeffa81b9222f987d07efcf39d23c5da1480df0eb8ea8e669fd5c30ead8e2d",
+      "bytes": 57
+    },
+    {
+      "basename": "generate-viewer.log",
+      "sha256": "61517e4ea9605bc8b8bb47116a57d3d71bb467039610df610bee7377bf254c83",
+      "bytes": 39
+    },
+    {
+      "basename": "regenerate.log",
+      "sha256": "6cd5986f4836c65ffd3b5d377d543220f136923a2c0a616fba506c53a7c0b216",
+      "bytes": 7002
+    },
+    {
+      "basename": "regenerate-commands.json",
+      "sha256": "f8d6bae4b587239f14dde73e23a85320e7def722dde82627ce8b51e423cc2b80",
+      "bytes": 3371
+    },
+    {
+      "basename": "base-regenerate.log",
+      "sha256": "e901b7b13b9d6492a0e078059107a23ab6d5fd3f8c79d623f53b3ff9fed390c3",
+      "bytes": 4288
+    },
+    {
+      "basename": "base-regenerate-results.json",
+      "sha256": "aeb4514d7329dd8fa1567ae57f34e4b8c8f987585e1442da2a8de128c3b92cdb",
+      "bytes": 3427
+    },
+    {
+      "basename": "generated-results.json",
+      "sha256": "1fdd0c396369c3503881e74d49c48e82fbe805c7511db5d1641a564d439c780c",
+      "bytes": 1126
+    },
+    {
+      "basename": "zip-first.log",
+      "sha256": "61cfaebabd8c81f68152af801f3fa44827c8a4a532d648661f58a84bcd3b5af9",
+      "bytes": 118
+    },
+    {
+      "basename": "zip-second.log",
+      "sha256": "764210b25fcdcef05e830df699b4bb13f8ecb775e2d63e0b41bb92151283dc68",
+      "bytes": 120
+    },
+    {
+      "basename": "probe.mjs",
+      "sha256": "0c30ae5d2c93239d6319503fbf7a9c53abdd54269f0a319238917777b83edc81",
+      "bytes": 3377
+    },
+    {
+      "basename": "probe-observations.json",
+      "sha256": "bfff4840f4a4348f4bfe09be00fc43828b0c40d803b582df34b9c24b475d87a3",
+      "bytes": 8085
+    },
+    {
+      "basename": "candidate.delivery.json",
+      "sha256": "f1628cc52d684a3ab23cb3b7ee75090563dcf2729bcd64dd3dc177c2fb233956",
+      "bytes": 692
+    },
+    {
+      "basename": "finalize.stdout.json",
+      "sha256": "0f8af73515290804a04d8dc744734a997b8963252ee3a0b401a109dc46d9d719",
+      "bytes": 1352
+    },
+    {
+      "basename": "finalize.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "basename": "archive-finalize.stdout.json",
+      "sha256": "3669944c0805810aa23069f8f8c8297b2519b8961003f8d5ed0baeeb625cfa1d",
+      "bytes": 1318
+    },
+    {
+      "basename": "archive-finalize.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "basename": "generated-0.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "basename": "generated-1.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "basename": "generated-2.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "basename": "generated-3.log",
+      "sha256": "0a5812d3e14dd70da9fb04b7671e107688e987b3d19a0a3a42ee69bae22cc7dc",
+      "bytes": 33
+    },
+    {
+      "basename": "generated-4.log",
+      "sha256": "ea7fa2ed367f147c5a1e5759d35cdde85622413b4660f54771ab006a614204ca",
+      "bytes": 3916
+    },
+    {
+      "basename": "generated-5.log",
+      "sha256": "c330108632acb07c1ebab720f6d9b29a4442c7180b1808c91c026c7e50a092e3",
+      "bytes": 393
+    }
+  ],
+  "ci": "Not run for this candidate. Dev CI is not candidate evidence.",
+  "suiteBoundary": "No full repository suite; browser suite was run after Viewer generation, before final example/Gallery regeneration. Golden/Gallery/fresh SVG comparisons separately verify final generated files. No rerun of unrelated tests."
+}

@@ -1,0 +1,449 @@
+{
+  "mechanism": "Actual automatic Chromium DOM; programmatic input events; not an assistive-technology or user study",
+  "observations": [
+    {
+      "arm": "base",
+      "theme": "light",
+      "query": "API",
+      "results": [
+        "gateway",
+        "api_a",
+        "api_b"
+      ],
+      "matches": [],
+      "view": {
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "mode": "overview"
+      },
+      "focus": null,
+      "hash": "",
+      "outlined": []
+    },
+    {
+      "arm": "base",
+      "theme": "light",
+      "query": "platform",
+      "results": [
+        "gateway",
+        "redis",
+        "events"
+      ],
+      "matches": [],
+      "view": {
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "mode": "overview"
+      },
+      "focus": null,
+      "hash": "",
+      "outlined": []
+    },
+    {
+      "arm": "base",
+      "theme": "light",
+      "query": "no-such-node-8472",
+      "results": [],
+      "matches": [],
+      "view": {
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "mode": "overview"
+      },
+      "focus": null,
+      "hash": "",
+      "outlined": []
+    },
+    {
+      "arm": "base",
+      "theme": "light",
+      "query": "",
+      "results": [
+        "clients",
+        "edge",
+        "gateway",
+        "api_a",
+        "api_b",
+        "redis",
+        "postgres",
+        "events",
+        "worker",
+        "replica",
+        "audit",
+        "observability"
+      ],
+      "matches": [],
+      "view": {
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "mode": "overview"
+      },
+      "focus": null,
+      "hash": "",
+      "outlined": []
+    },
+    {
+      "arm": "base",
+      "theme": "light",
+      "state": "closed",
+      "matches": []
+    },
+    {
+      "arm": "base",
+      "theme": "dark",
+      "query": "API",
+      "results": [
+        "gateway",
+        "api_a",
+        "api_b"
+      ],
+      "matches": [],
+      "view": {
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "mode": "overview"
+      },
+      "focus": null,
+      "hash": "",
+      "outlined": []
+    },
+    {
+      "arm": "base",
+      "theme": "dark",
+      "query": "platform",
+      "results": [
+        "gateway",
+        "redis",
+        "events"
+      ],
+      "matches": [],
+      "view": {
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "mode": "overview"
+      },
+      "focus": null,
+      "hash": "",
+      "outlined": []
+    },
+    {
+      "arm": "base",
+      "theme": "dark",
+      "query": "no-such-node-8472",
+      "results": [],
+      "matches": [],
+      "view": {
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "mode": "overview"
+      },
+      "focus": null,
+      "hash": "",
+      "outlined": []
+    },
+    {
+      "arm": "base",
+      "theme": "dark",
+      "query": "",
+      "results": [
+        "clients",
+        "edge",
+        "gateway",
+        "api_a",
+        "api_b",
+        "redis",
+        "postgres",
+        "events",
+        "worker",
+        "replica",
+        "audit",
+        "observability"
+      ],
+      "matches": [],
+      "view": {
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "mode": "overview"
+      },
+      "focus": null,
+      "hash": "",
+      "outlined": []
+    },
+    {
+      "arm": "base",
+      "theme": "dark",
+      "state": "closed",
+      "matches": []
+    },
+    {
+      "arm": "candidate",
+      "theme": "light",
+      "query": "API",
+      "results": [
+        "gateway",
+        "api_a",
+        "api_b"
+      ],
+      "matches": [
+        "gateway",
+        "api_a",
+        "api_b"
+      ],
+      "view": {
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "mode": "overview"
+      },
+      "focus": null,
+      "hash": "",
+      "outlined": [
+        {
+          "id": "gateway",
+          "style": "solid",
+          "width": "2px"
+        },
+        {
+          "id": "api_a",
+          "style": "solid",
+          "width": "2px"
+        },
+        {
+          "id": "api_b",
+          "style": "solid",
+          "width": "2px"
+        }
+      ]
+    },
+    {
+      "arm": "candidate",
+      "theme": "light",
+      "query": "platform",
+      "results": [
+        "gateway",
+        "redis",
+        "events"
+      ],
+      "matches": [
+        "gateway",
+        "redis",
+        "events"
+      ],
+      "view": {
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "mode": "overview"
+      },
+      "focus": null,
+      "hash": "",
+      "outlined": [
+        {
+          "id": "gateway",
+          "style": "solid",
+          "width": "2px"
+        },
+        {
+          "id": "redis",
+          "style": "solid",
+          "width": "2px"
+        },
+        {
+          "id": "events",
+          "style": "solid",
+          "width": "2px"
+        }
+      ]
+    },
+    {
+      "arm": "candidate",
+      "theme": "light",
+      "query": "no-such-node-8472",
+      "results": [],
+      "matches": [],
+      "view": {
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "mode": "overview"
+      },
+      "focus": null,
+      "hash": "",
+      "outlined": []
+    },
+    {
+      "arm": "candidate",
+      "theme": "light",
+      "query": "",
+      "results": [
+        "clients",
+        "edge",
+        "gateway",
+        "api_a",
+        "api_b",
+        "redis",
+        "postgres",
+        "events",
+        "worker",
+        "replica",
+        "audit",
+        "observability"
+      ],
+      "matches": [],
+      "view": {
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "mode": "overview"
+      },
+      "focus": null,
+      "hash": "",
+      "outlined": []
+    },
+    {
+      "arm": "candidate",
+      "theme": "light",
+      "state": "closed",
+      "matches": []
+    },
+    {
+      "arm": "candidate",
+      "theme": "dark",
+      "query": "API",
+      "results": [
+        "gateway",
+        "api_a",
+        "api_b"
+      ],
+      "matches": [
+        "gateway",
+        "api_a",
+        "api_b"
+      ],
+      "view": {
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "mode": "overview"
+      },
+      "focus": null,
+      "hash": "",
+      "outlined": [
+        {
+          "id": "gateway",
+          "style": "solid",
+          "width": "2px"
+        },
+        {
+          "id": "api_a",
+          "style": "solid",
+          "width": "2px"
+        },
+        {
+          "id": "api_b",
+          "style": "solid",
+          "width": "2px"
+        }
+      ]
+    },
+    {
+      "arm": "candidate",
+      "theme": "dark",
+      "query": "platform",
+      "results": [
+        "gateway",
+        "redis",
+        "events"
+      ],
+      "matches": [
+        "gateway",
+        "redis",
+        "events"
+      ],
+      "view": {
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "mode": "overview"
+      },
+      "focus": null,
+      "hash": "",
+      "outlined": [
+        {
+          "id": "gateway",
+          "style": "solid",
+          "width": "2px"
+        },
+        {
+          "id": "redis",
+          "style": "solid",
+          "width": "2px"
+        },
+        {
+          "id": "events",
+          "style": "solid",
+          "width": "2px"
+        }
+      ]
+    },
+    {
+      "arm": "candidate",
+      "theme": "dark",
+      "query": "no-such-node-8472",
+      "results": [],
+      "matches": [],
+      "view": {
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "mode": "overview"
+      },
+      "focus": null,
+      "hash": "",
+      "outlined": []
+    },
+    {
+      "arm": "candidate",
+      "theme": "dark",
+      "query": "",
+      "results": [
+        "clients",
+        "edge",
+        "gateway",
+        "api_a",
+        "api_b",
+        "redis",
+        "postgres",
+        "events",
+        "worker",
+        "replica",
+        "audit",
+        "observability"
+      ],
+      "matches": [],
+      "view": {
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "mode": "overview"
+      },
+      "focus": null,
+      "hash": "",
+      "outlined": []
+    },
+    {
+      "arm": "candidate",
+      "theme": "dark",
+      "state": "closed",
+      "matches": []
+    }
+  ]
+}
