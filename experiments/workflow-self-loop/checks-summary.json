@@ -1,0 +1,120 @@
+{
+  "kind": "portable derived verification record; raw logs retained outside checkout",
+  "baseRevision": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "sourceBindings": {
+    "archify/renderers/workflow/workflow-compiler.mjs": {
+      "sha256": "4f74e93d936a68b783d248618d498713b070bd90c14a290d02a509bc422e1a18",
+      "bytes": 251506
+    },
+    "test/workflow-compiler-hard-contract.test.mjs": {
+      "sha256": "a5511d4589ce2b818c3b5fac6669bf85d0309d39cb6718dee185697714737f0a",
+      "bytes": 129287
+    },
+    "archify.zip": {
+      "sha256": "db5c60fd634e52e2b3280c97f85186b5c4c451a8cc61345f9f459fb377c2e7f9",
+      "bytes": 5425373
+    }
+  },
+  "runtime": {
+    "node": "22.23.3",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "focused": {
+    "command": "node scripts/run-tests.mjs --require-files test/workflow-compiler-hard-contract.test.mjs test/workflow-routing-clarity.test.mjs test/workflow-route-order.test.mjs test/workflow-port-slot.test.mjs test/workflow-crossing-repair.test.mjs test/core-smoke.test.mjs",
+    "files": 6,
+    "passed": 145,
+    "failed": 0,
+    "skipped": 0,
+    "rawLog": {
+      "sha256": "5bb506f1bda5d157c83ff0225e4543fef1beecd249bcdf9ed41c4e4b36d9fa3c",
+      "bytes": 33103
+    }
+  },
+  "generatedXml": {
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "scope": "reused existing tracked artifact XML evidence; final source changes do not modify those HTML artifacts",
+    "rawLog": {
+      "sha256": "1f46aadf2bc24060b0ca6c91e8e475fb68f4c0646f52a4cb77218a9d949ce66a",
+      "bytes": 765
+    }
+  },
+  "generatedChecks": [
+    {
+      "name": "viewer-check.log",
+      "status": "pass",
+      "rawLog": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "name": "brands-check-retry.log",
+      "status": "pass",
+      "rawLog": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "name": "validators-check-retry.log",
+      "status": "pass",
+      "rawLog": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "name": "release-check.log",
+      "status": "pass",
+      "rawLog": {
+        "sha256": "0a5812d3e14dd70da9fb04b7671e107688e987b3d19a0a3a42ee69bae22cc7dc",
+        "bytes": 33
+      }
+    }
+  ],
+  "initialAttempts": {
+    "environment": "core first could not resolve parse5, then generated XML could not resolve saxes; brand and validator checks could not resolve simple-icons/ajv. Linked existing installed development packages; no install or lockfile changes.",
+    "behavior": "Clearance-only intermediate candidate exposed immediate self-loop retracing. It was rejected in review and the final shared geometric guard prevents it.",
+    "rawLogs": [
+      {
+        "name": "focused.log",
+        "sha256": "b68a142e4bc128728b17b6ee9d86a0a58ed636e5f09eb2510900e7cd310ffc40",
+        "bytes": 24357
+      },
+      {
+        "name": "focused-core.log",
+        "sha256": "94a8d7cd5f23e5464088e692042f6a420de23f1e1d7aad35529f428b45ab5713",
+        "bytes": 29637
+      },
+      {
+        "name": "core-generated.log",
+        "sha256": "c17220f877cc35579604be8c746c03b7c3358446672792d81b1027bcb5fd559a",
+        "bytes": 5605
+      },
+      {
+        "name": "final-focused-core.log",
+        "sha256": "055c669358e8358eaed6a870ed068b845a17112983ade5c742cb4b23371cd953",
+        "bytes": 34450
+      }
+    ]
+  },
+  "solverBudgetCoverage": "Old unpinned self-loop failures were invalid premises after clearance correction. They now protect visible automatic loops; top/top fixtures separately protect real failure attribution and verified fixes. No new real solver-budget-specific coverage claimed.",
+  "visual": {
+    "performedBy": "root agent",
+    "actualChromium": true,
+    "scope": "1440x1000 dark explicit illustrative loop",
+    "humanAcceptance": false,
+    "assistiveTechnologyAcceptance": false,
+    "capture": {
+      "sha256": "d67b4aaeb04b60cb2a22b642ba103f73d29ee2ae87232a4cc933175bc0630786",
+      "bytes": 612
+    },
+    "screenshot": {
+      "sha256": "c48a3d0d70cc76623fd9fdd18ee7f31766f49593d0d88caf8c73730165243028",
+      "bytes": 41189
+    }
+  }
+}

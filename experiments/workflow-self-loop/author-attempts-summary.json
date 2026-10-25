@@ -1,0 +1,206 @@
+{
+  "kind": "portable derived failure classification; original inputs/receipts remain outside checkout",
+  "attempts": [
+    {
+      "input": "first-draft.workflow.json",
+      "inputSHA256": "c0305d575c3b2aa3f9bfaff045439a5f7a8631f4cb484ea487ffd057d3f3aa48",
+      "rawReceiptSHA256": "5bf2d4c76743f67e4d13bfd1bdf15ac5238710e18157402bd7fe10e807d18e67",
+      "classification": "author preset conflicts with perpendicular bottom departure",
+      "ok": false,
+      "diagnostics": [
+        {
+          "code": "workflow/route-preset-conflict",
+          "severity": "error",
+          "message": "Workflow edge \"lasso-closure\" cannot satisfy route preset \"outside-right\": candidate violates perpendicular endpoint-side direction.",
+          "subject": {
+            "diagramType": "workflow",
+            "edge": "lasso-closure",
+            "from": "pos-13",
+            "to": "pos-13",
+            "route": "outside-right"
+          },
+          "evidence": {
+            "invariant": "perpendicular endpoint-side direction",
+            "attemptedCandidateFamily": "outside-right",
+            "points": [
+              [
+                649.2,
+                154
+              ],
+              [
+                862,
+                154
+              ],
+              [
+                862,
+                120
+              ],
+              [
+                739.2,
+                120
+              ]
+            ],
+            "fromSide": "bottom",
+            "toSide": "right",
+            "requiredEndpointStubPx": 8,
+            "requiredInteriorSegmentPx": 16,
+            "requiredDirectClearancePx": 28
+          },
+          "supportedFixes": []
+        }
+      ]
+    },
+    {
+      "input": "repair1.workflow.json",
+      "inputSHA256": "c9ee6cf35c3a561ff7da67b681cddcbf20dc2f3751531beeebb09bcb2d09a970",
+      "rawReceiptSHA256": "8e84264583b0541d396cbcb329d8e265df88604d7c073e449f06dc0d0e329933",
+      "classification": "author point objects violate the required coordinate arrays",
+      "ok": false,
+      "diagnostics": [
+        {
+          "code": "schema/type",
+          "severity": "error",
+          "message": "/edges/2/via/0 (id/label: \"lasso-closure\") must be array",
+          "subject": {
+            "diagramType": "workflow",
+            "path": "/edges/2/via/0",
+            "identity": "lasso-closure"
+          },
+          "evidence": {
+            "keyword": "type",
+            "type": "array"
+          },
+          "supportedFixes": [
+            "use \"array\" at /edges/2/via/0"
+          ]
+        },
+        {
+          "code": "schema/type",
+          "severity": "error",
+          "message": "/edges/2/via/1 (id/label: \"lasso-closure\") must be array",
+          "subject": {
+            "diagramType": "workflow",
+            "path": "/edges/2/via/1",
+            "identity": "lasso-closure"
+          },
+          "evidence": {
+            "keyword": "type",
+            "type": "array"
+          },
+          "supportedFixes": [
+            "use \"array\" at /edges/2/via/1"
+          ]
+        },
+        {
+          "code": "schema/type",
+          "severity": "error",
+          "message": "/edges/2/via/2 (id/label: \"lasso-closure\") must be array",
+          "subject": {
+            "diagramType": "workflow",
+            "path": "/edges/2/via/2",
+            "identity": "lasso-closure"
+          },
+          "evidence": {
+            "keyword": "type",
+            "type": "array"
+          },
+          "supportedFixes": [
+            "use \"array\" at /edges/2/via/2"
+          ]
+        },
+        {
+          "code": "schema/type",
+          "severity": "error",
+          "message": "/edges/2/labelAt (id/label: \"lasso-closure\") must be array",
+          "subject": {
+            "diagramType": "workflow",
+            "path": "/edges/2/labelAt",
+            "identity": "lasso-closure"
+          },
+          "evidence": {
+            "keyword": "type",
+            "type": "array"
+          },
+          "supportedFixes": [
+            "use \"array\" at /edges/2/labelAt"
+          ]
+        }
+      ]
+    },
+    {
+      "input": "repair2.workflow.json",
+      "inputSHA256": "8de56aa2ddb590b829adbed299c9e953abf02d69d9780fc991f9732aa4b827ed",
+      "rawReceiptSHA256": "01bbb5d5bfaaf37a72cf1932cd1fc480963965dcc176c084c4e2782265e371a7",
+      "classification": "product defect: same node has source and target identities; final boundary contact misclassified",
+      "ok": false,
+      "diagnostics": [
+        {
+          "code": "workflow/explicit-pin-conflict",
+          "severity": "error",
+          "message": "Workflow edge \"lasso-closure\" has explicit geometry that violates node clearance.",
+          "subject": {
+            "diagramType": "workflow",
+            "edge": "lasso-closure",
+            "from": "pos-13",
+            "to": "pos-13"
+          },
+          "evidence": {
+            "invariant": "node clearance",
+            "conflictingPins": [
+              {
+                "edge": "lasso-closure",
+                "field": "via",
+                "path": "/edges/2/via",
+                "value": [
+                  [
+                    649.2,
+                    230
+                  ],
+                  [
+                    830,
+                    230
+                  ],
+                  [
+                    830,
+                    120
+                  ]
+                ]
+              },
+              {
+                "edge": "lasso-closure",
+                "field": "fromSide",
+                "path": "/edges/2/fromSide",
+                "value": "bottom"
+              },
+              {
+                "edge": "lasso-closure",
+                "field": "toSide",
+                "path": "/edges/2/toSide",
+                "value": "right"
+              }
+            ],
+            "obstacleNode": "pos-13",
+            "obstacleRole": "source-endpoint",
+            "segmentIndex": 3,
+            "from": [
+              830,
+              120
+            ],
+            "to": [
+              739.2,
+              120
+            ],
+            "clearancePx": 0
+          },
+          "supportedFixes": []
+        }
+      ]
+    }
+  ],
+  "candidateRepair2Compilation": {
+    "ok": true,
+    "inputSHA256": "8de56aa2ddb590b829adbed299c9e953abf02d69d9780fc991f9732aa4b827ed",
+    "rawCompilerReceiptSHA256": "08d0862a0bc21565eaa1d0218a1b733bf3f491281864f86f77ee882ecd22e643",
+    "rawReceiptRetainedOutsideCheckout": true
+  }
+}

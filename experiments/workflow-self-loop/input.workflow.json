@@ -1,0 +1,52 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Explicit self-loop",
+    "subtitle": "Illustrative geometry regression · not a recorded execution",
+    "output": "experiments/workflow-self-loop/candidate.html",
+    "legend": {
+      "mode": "hidden"
+    },
+    "animation": "none"
+  },
+  "lanes": [
+    {
+      "id": "lane",
+      "label": "Lane"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "a",
+      "lane": "lane",
+      "col": 0,
+      "type": "backend",
+      "label": "A",
+      "width": 180
+    }
+  ],
+  "edges": [
+    {
+      "id": "loop",
+      "from": "a",
+      "to": "a",
+      "fromSide": "bottom",
+      "toSide": "right",
+      "via": [
+        [
+          138,
+          190
+        ],
+        [
+          270,
+          190
+        ],
+        [
+          270,
+          119
+        ]
+      ]
+    }
+  ]
+}

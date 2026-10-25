@@ -1,0 +1,68 @@
+{
+  "kind": "portable SHA-256 artifact/source binding",
+  "baseRevision": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "sourceBindings": {
+    "archify/renderers/workflow/workflow-compiler.mjs": {
+      "sha256": "4f74e93d936a68b783d248618d498713b070bd90c14a290d02a509bc422e1a18",
+      "bytes": 251506
+    },
+    "test/workflow-compiler-hard-contract.test.mjs": {
+      "sha256": "a5511d4589ce2b818c3b5fac6669bf85d0309d39cb6718dee185697714737f0a",
+      "bytes": 129287
+    },
+    "archify.zip": {
+      "sha256": "db5c60fd634e52e2b3280c97f85186b5c4c451a8cc61345f9f459fb377c2e7f9",
+      "bytes": 5425373
+    }
+  },
+  "files": {
+    "archive-smoke-finalize-summary.json": {
+      "sha256": "8e872bbf4bb44272ffce221eae860bd15422705533171afe4d1bd27353e2eae2",
+      "bytes": 1138
+    },
+    "author-attempts-summary.json": {
+      "sha256": "85e22fc09b045ce9def591c494157acec442a5cc87ad95dcb52163544b36c5ed",
+      "bytes": 6463
+    },
+    "base-finalize-summary.json": {
+      "sha256": "93f7b071a025a22482e07430c5202f8b238ef913214d033c4ba308bb7619498f",
+      "bytes": 2232
+    },
+    "candidate-finalize-summary.json": {
+      "sha256": "bfe1712530be2c5e027c2f0befa0e0ade9b018ea2c88a803482b1bf76f64fba8",
+      "bytes": 1124
+    },
+    "candidate.html": {
+      "sha256": "56441e405728d21f3584ff142108f89b2ea36c1ec4a1193dba3c5d46760655f6",
+      "bytes": 806854
+    },
+    "checks-summary.json": {
+      "sha256": "70382cd44cd792ce653845edcece2f24bef5a395536c9a39fb4af8515e16e61c",
+      "bytes": 4284
+    },
+    "compatibility-summary.json": {
+      "sha256": "3a5f6575d18b4497f5b40c021db166dee4759f9b2eb0f0ce4c309a9605f4ccc7",
+      "bytes": 7317
+    },
+    "existing-auto.workflow.json": {
+      "sha256": "ff2e0561bf97590fb0f883f9fb1cf5ecbbf5717f42630c1bd86804926c0cf507",
+      "bytes": 788
+    },
+    "input.workflow.json": {
+      "sha256": "ab8105274c3da65cb657db81a7d2054d2248e5575d812cf5f5d24ec999abe4f7",
+      "bytes": 853
+    },
+    "zip-summary.json": {
+      "sha256": "42f6a7c475cd0206ee236358e67cbed9db874b682aeefbdf4a3b5ba8f57a6c56",
+      "bytes": 454
+    },
+    "screenshots/capture.json": {
+      "sha256": "d67b4aaeb04b60cb2a22b642ba103f73d29ee2ae87232a4cc933175bc0630786",
+      "bytes": 612
+    },
+    "screenshots/explicit-loop.png": {
+      "sha256": "c48a3d0d70cc76623fd9fdd18ee7f31766f49593d0d88caf8c73730165243028",
+      "bytes": 41189
+    }
+  }
+}

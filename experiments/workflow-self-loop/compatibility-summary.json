@@ -1,0 +1,292 @@
+{
+  "kind": "portable derived comparison, not raw CLI receipt",
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "examples": [
+    {
+      "file": "archify/examples/agent-tool-call.workflow.json",
+      "inputSHA256": "3f940084d6e1173f90a44ae335f98ca8d9ffd03929125ec40f2c1d584589cf6e",
+      "baseOk": true,
+      "candidateOk": true,
+      "svgEqual": true,
+      "receiptEqual": true,
+      "baseSvgSHA256": "3671e3a874692010697260346583467d5aa22f7668817b0cfab42aa4fedb45e7",
+      "candidateSvgSHA256": "3671e3a874692010697260346583467d5aa22f7668817b0cfab42aa4fedb45e7"
+    },
+    {
+      "file": "archify/examples/holiday-planning.workflow.json",
+      "inputSHA256": "15f6a9864d3119feb86ca9b35c991f35152f1babe01b9fec4b68fcb121a6d7d2",
+      "baseOk": true,
+      "candidateOk": true,
+      "svgEqual": true,
+      "receiptEqual": true,
+      "baseSvgSHA256": "8e0ccd8e9bc3e63fa6c232ac80b07f69fc2713f99c1bec1c2057ecac46fc4d6e",
+      "candidateSvgSHA256": "8e0ccd8e9bc3e63fa6c232ac80b07f69fc2713f99c1bec1c2057ecac46fc4d6e"
+    },
+    {
+      "file": "archify/examples/incident-response.workflow.json",
+      "inputSHA256": "218a92ee1476dcd44844678fef538c7f9b98eade75b8512f1e350e95298d9133",
+      "baseOk": true,
+      "candidateOk": true,
+      "svgEqual": true,
+      "receiptEqual": true,
+      "baseSvgSHA256": "0e444d6a8de406741031328f52be4c5d75570c32d714c01525a72f3c82a5891a",
+      "candidateSvgSHA256": "0e444d6a8de406741031328f52be4c5d75570c32d714c01525a72f3c82a5891a"
+    },
+    {
+      "file": "archify/examples/release-delivery.workflow.json",
+      "inputSHA256": "bd2c5e7691f679f3b897bc66aa335aff1f2c3bb73b11f8dec1bfb9000a26920d",
+      "baseOk": true,
+      "candidateOk": true,
+      "svgEqual": true,
+      "receiptEqual": true,
+      "baseSvgSHA256": "72402c3798e5985c4bc14c34a0070f842d1b2721f8ed3f386641adb38a4b2268",
+      "candidateSvgSHA256": "72402c3798e5985c4bc14c34a0070f842d1b2721f8ed3f386641adb38a4b2268"
+    }
+  ],
+  "existingAutomaticCandidate": {
+    "baseOk": false,
+    "baseDiagnostics": [
+      {
+        "code": "workflow/solver-budget-exhausted",
+        "severity": "error",
+        "message": "Workflow edge \"loop\" has no feasible readable-v2 automatic route.",
+        "subject": {
+          "diagramType": "workflow",
+          "edge": "loop",
+          "from": "a",
+          "to": "a"
+        },
+        "evidence": {
+          "attemptedCandidateFamilies": [
+            "facing-straight",
+            "horizontal-then-vertical",
+            "vertical-then-horizontal",
+            "lane-gap-corridor",
+            "column-gap-corridor",
+            "outside-left",
+            "outside-right",
+            "top-corridor",
+            "bottom-corridor",
+            "lane-gap-corridor",
+            "column-gap-corridor",
+            "lane-gap-corridor",
+            "column-gap-corridor",
+            "lane-gap-corridor",
+            "column-gap-corridor",
+            "lane-gap-corridor",
+            "column-gap-corridor"
+          ],
+          "candidateCount": 17
+        },
+        "supportedFixes": []
+      }
+    ],
+    "candidateOk": true,
+    "candidateReceipt": {
+      "contract": "readable-v2",
+      "viewBox": [
+        812,
+        280
+      ],
+      "requiredViewBox": [
+        812,
+        280
+      ],
+      "columns": [
+        138,
+        258,
+        378,
+        498,
+        618,
+        738
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "lane": "lane",
+          "col": 0,
+          "x": 48,
+          "y": 93,
+          "width": 180,
+          "height": 52
+        }
+      ],
+      "edges": [
+        {
+          "id": "loop",
+          "from": "a",
+          "to": "a",
+          "points": [
+            [
+              228,
+              119
+            ],
+            [
+              244,
+              119
+            ],
+            [
+              244,
+              172
+            ],
+            [
+              138,
+              172
+            ],
+            [
+              138,
+              145
+            ]
+          ]
+        }
+      ],
+      "labels": [],
+      "diagnostics": []
+    }
+  },
+  "formerFailureFixture": {
+    "input": "existing-auto.workflow.json",
+    "sha256": "ff2e0561bf97590fb0f883f9fb1cf5ecbbf5717f42630c1bd86804926c0cf507",
+    "baseOk": false,
+    "baseDiagnostics": [
+      {
+        "code": "workflow/solver-budget-exhausted",
+        "severity": "error",
+        "message": "Workflow edge \"z-self\" has no feasible readable-v2 automatic route.",
+        "subject": {
+          "diagramType": "workflow",
+          "edge": "z-self",
+          "from": "b",
+          "to": "b"
+        },
+        "evidence": {
+          "attemptedCandidateFamilies": [
+            "facing-straight",
+            "horizontal-then-vertical",
+            "vertical-then-horizontal",
+            "lane-gap-corridor",
+            "column-gap-corridor",
+            "outside-left",
+            "outside-right",
+            "top-corridor",
+            "bottom-corridor",
+            "lane-gap-corridor",
+            "column-gap-corridor",
+            "lane-gap-corridor",
+            "column-gap-corridor",
+            "lane-gap-corridor",
+            "column-gap-corridor",
+            "lane-gap-corridor",
+            "column-gap-corridor"
+          ],
+          "candidateCount": 17
+        },
+        "supportedFixes": []
+      }
+    ],
+    "candidateOk": true,
+    "candidateReceipt": {
+      "contract": "readable-v2",
+      "viewBox": [
+        768,
+        280
+      ],
+      "requiredViewBox": [
+        768,
+        280
+      ],
+      "columns": [
+        94,
+        214,
+        334,
+        454,
+        574,
+        694
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "lane": "main",
+          "col": 0,
+          "x": 48,
+          "y": 93,
+          "width": 92,
+          "height": 52
+        },
+        {
+          "id": "b",
+          "lane": "main",
+          "col": 2,
+          "x": 288,
+          "y": 93,
+          "width": 92,
+          "height": 52
+        }
+      ],
+      "edges": [
+        {
+          "id": "a-pinned",
+          "from": "a",
+          "to": "b",
+          "points": [
+            [
+              140,
+              119
+            ],
+            [
+              288,
+              119
+            ]
+          ]
+        },
+        {
+          "id": "z-self",
+          "from": "b",
+          "to": "b",
+          "points": [
+            [
+              380,
+              119
+            ],
+            [
+              396,
+              119
+            ],
+            [
+              396,
+              172
+            ],
+            [
+              334,
+              172
+            ],
+            [
+              334,
+              145
+            ]
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "edge": "a-pinned",
+          "label": "Pinned",
+          "x": 94,
+          "y": 30,
+          "width": 38.8,
+          "height": 14
+        },
+        {
+          "edge": "z-self",
+          "label": "Retry",
+          "x": 365,
+          "y": 162,
+          "width": 34,
+          "height": 14
+        }
+      ],
+      "diagnostics": []
+    }
+  },
+  "companionGuard": "Reject same-node adjacent collinear reversal at both automatic-candidate and explicit-geometry gates; no candidate families added."
+}

@@ -1,0 +1,47 @@
+{
+  "kind": "portable projection of actual raw finalize receipt; not the original receipt",
+  "baseRevision": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "rawReceipt": {
+    "sha256": "2bd301573c15e575189ddaf30de5b5193f01044d75dcf3727dba03b4840571b5",
+    "bytes": 38335,
+    "retainedOutsideCheckout": true
+  },
+  "specification": {
+    "path": "input.workflow.json",
+    "sha256": "ab8105274c3da65cb657db81a7d2054d2248e5575d812cf5f5d24ec999abe4f7",
+    "bytes": 853
+  },
+  "ok": true,
+  "status": "pass",
+  "failedStage": null,
+  "artifact": {
+    "available": true,
+    "path": "temporary archive-smoke.html",
+    "sha256": "56441e405728d21f3584ff142108f89b2ea36c1ec4a1193dba3c5d46760655f6",
+    "bytes": 806854
+  },
+  "stages": {
+    "validate": {
+      "status": "pass",
+      "exitCode": 0
+    },
+    "deliver": {
+      "status": "pass",
+      "exitCode": 0
+    },
+    "check": {
+      "status": "pass",
+      "exitCode": 0
+    },
+    "browser-check": {
+      "status": "pass",
+      "exitCode": 0
+    }
+  },
+  "diagnostics": [],
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReview": "not-requested"
+}

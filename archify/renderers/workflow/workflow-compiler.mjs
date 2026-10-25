@@ -2522,6 +2522,15 @@ function validateReadablePinnedGeometry() {
           }, alternatives.supportedFixes);
         }
       }
+      const backtrackSegment = selfLoopBacktrackSegment(edge, points);
+      if (backtrackSegment !== null) {
+        const alternatives = verifiedRouteGeometryPinAlternatives(edge);
+        throwExplicitPinConflict(edge, 'non-retracing self-loop', {
+          conflictingPins: alternatives.conflictingPins,
+          segmentIndex: backtrackSegment,
+          points: points.slice(backtrackSegment - 1, backtrackSegment + 2).map((point) => [...point]),
+        }, alternatives.supportedFixes);
+      }
       const { fromSide, toSide } = edgeSides(edge);
       if (Array.isArray(edge.via)) {
         const missingChannelPins = presentChannelPins(edge).filter((field) => (
@@ -3348,8 +3357,9 @@ function firstRouteNodeCollision(edge, points) {
       ? 'source-endpoint'
       : node.id === edge.to ? 'target-endpoint' : 'unrelated';
     for (let segmentIndex = 0; segmentIndex <= lastSegment; segmentIndex += 1) {
-      if (endpointRole === 'source-endpoint' && segmentIndex === 0) continue;
-      if (endpointRole === 'target-endpoint' && segmentIndex === lastSegment) continue;
+      // A self-loop owns both endpoint contacts, but no intermediate contact.
+      if (node.id === edge.from && segmentIndex === 0) continue;
+      if (node.id === edge.to && segmentIndex === lastSegment) continue;
       const clearancePx = endpointRole === 'unrelated' ? 2 : 0;
       const from = points[segmentIndex];
       const to = points[segmentIndex + 1];
@@ -3425,11 +3435,25 @@ function orthogonalRoute(points) {
 function routeClearsEndpointNodes(points, from, to) {
   const lastSegment = points.length - 2;
   for (let index = 0; index <= lastSegment; index += 1) {
+    if (from.id === to.id && (index === 0 || index === lastSegment)) continue;
     const segment = { start: points[index], end: points[index + 1] };
     if (index > 0 && segmentIntersectsRect(segment, from)) return false;
     if (index < lastSegment && segmentIntersectsRect(segment, to)) return false;
   }
   return true;
+}
+
+function selfLoopBacktrackSegment(edge, points) {
+  if (edge.from !== edge.to) return null;
+  for (let index = 1; index < points.length - 1; index += 1) {
+    const dx1 = points[index][0] - points[index - 1][0];
+    const dy1 = points[index][1] - points[index - 1][1];
+    const dx2 = points[index + 1][0] - points[index][0];
+    const dy2 = points[index + 1][1] - points[index][1];
+    if ((Math.abs(dy1) <= 0.0001 && Math.abs(dy2) <= 0.0001 && dx1 * dx2 < -0.0001)
+      || (Math.abs(dx1) <= 0.0001 && Math.abs(dx2) <= 0.0001 && dy1 * dy2 < -0.0001)) return index;
+  }
+  return null;
 }
 
 function routeMeetsHardRhythm(points) {
@@ -3688,6 +3712,7 @@ function routeFitsCanvasOrigin(edge, points) {
 function readableCandidateRejection(edge, points, from, to, fromSide, toSide) {
   if (points.length < 2) return 'route endpoints';
   if (!orthogonalRoute(points)) return 'orthogonal non-zero segments';
+  if (selfLoopBacktrackSegment(edge, points) !== null) return 'non-retracing self-loop';
   if (!routeMeetsHardRhythm(points)) return 'readable segment rhythm';
   if (!routeHonorsEndpointSides(points, fromSide, toSide)) return 'perpendicular endpoint-side direction';
   if (!routeClearsEndpointNodes(points, from, to)) return 'node clearance';

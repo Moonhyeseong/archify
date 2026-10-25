@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 
 import { compileWorkflow } from '../archify/renderers/workflow/workflow-compiler.mjs';
+import { segmentIntersectsRect } from '../archify/renderers/shared/geometry.mjs';
 import { spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import os from 'node:os';
@@ -2227,41 +2228,76 @@ test('an explicit standard profile overrides an ambient showcase profile', () =>
   }
 });
 
-test('failed automatic routes retain diagnostics when an earlier route has a label pin', () => {
+function assertVisibleSelfLoop(result, edgeId) {
+  assert.equal(result.ok, true, JSON.stringify(result.diagnostics));
+  const edge = result.receipt.edges.find(({ id }) => id === edgeId);
+  assert.equal(edge.from, edge.to);
+  const node = result.receipt.nodes.find(({ id }) => id === edge.from);
+  assert.ok(new Set(edge.points.map(([x]) => x)).size > 1, 'loop needs horizontal extent');
+  assert.ok(new Set(edge.points.map(([, y]) => y)).size > 1, 'loop needs vertical extent');
+  for (let index = 1; index < edge.points.length - 2; index += 1) {
+    assert.equal(segmentIntersectsRect({ start: edge.points[index], end: edge.points[index + 1] }, node), false,
+      'intermediate segments must stay outside the node');
+  }
+}
+
+test('automatic self-loop preserves an earlier label pin and selects a visible outer turn', () => {
   const document = oneLaneWorkflow([
     { id: 'a-pinned', from: 'a', to: 'b', label: 'Pinned', labelAt: [94, 30] },
     { id: 'z-self', from: 'b', to: 'b', label: 'Retry' },
   ]);
   const authored = clone(document);
   for (const qualityProfile of ['standard', 'showcase']) {
-    // The earlier label pin is valid. The unsolved route must identify itself,
-    // not crash while inspecting rejected candidates or blame the other edge.
     const result = compileWorkflow({ workflow: document, qualityProfile });
-    assert.equal(result.ok, false);
-    assert.equal(result.svg, undefined);
+    assertVisibleSelfLoop(result, 'z-self');
     assert.deepEqual(document, authored);
-    assert.deepEqual(result.diagnostics.map(({ code }) => code), ['workflow/solver-budget-exhausted']);
-    const [diagnostic] = result.diagnostics;
-    assert.equal(diagnostic.subject.edge, 'z-self');
-    assert.ok(diagnostic.evidence.candidateCount > 0);
-    assert.deepEqual(diagnostic.supportedFixes, [], 'do not advertise an unverified repair');
-    assert.deepEqual(result.receipt.diagnostics, result.diagnostics);
+    const label = result.receipt.labels.find(({ edge }) => edge === 'a-pinned');
+    assert.deepEqual([label.x, label.y], [94, 30]);
   }
 });
 
-test('readable-v2 never advertises an unverified blocking-node repair', () => {
+test('readable-v2 unpinned self-loop selects a non-collapsed existing candidate', () => {
   const document = workflow({
     lanes: [{ id: 'main', label: 'Main' }],
     nodes: [{ id: 'a', lane: 'main', col: 0, type: 'backend', label: 'A' }],
     edges: [{ id: 'self', from: 'a', to: 'a' }],
   });
+  assertVisibleSelfLoop(compileWorkflow({ workflow: document, qualityProfile: 'standard' }), 'self');
+});
 
+test('failed endpoint-side routes identify themselves after an earlier label pin', () => {
+  const document = oneLaneWorkflow([
+    { id: 'a-pinned', from: 'a', to: 'b', label: 'Pinned', labelAt: [94, 30] },
+    { id: 'z-self', from: 'a', to: 'a', label: 'Retry', fromSide: 'top', toSide: 'top' },
+  ]);
+  const authored = clone(document);
+  for (const qualityProfile of ['standard', 'showcase']) {
+    const result = compileWorkflow({ workflow: document, qualityProfile });
+    assertExplicitPinConflict(result, 'this top/top candidate set remains infeasible');
+    assert.equal(result.diagnostics[0].subject.edge, 'z-self');
+    assert.equal(result.diagnostics[0].evidence.invariant, 'readable route feasibility with authored endpoint sides');
+    assertSupportedFixesNameChangedEdge(result.diagnostics[0], ['z-self']);
+    assert.deepEqual(document, authored);
+  }
+});
+
+test('readable-v2 self-loop endpoint repairs are verified before being advertised', () => {
+  const document = workflow({
+    lanes: [{ id: 'main', label: 'Main' }],
+    nodes: [{ id: 'a', lane: 'main', col: 0, type: 'backend', label: 'A' }],
+    edges: [{ id: 'self', from: 'a', to: 'a', fromSide: 'top', toSide: 'top' }],
+  });
   const result = compileWorkflow({ workflow: document, qualityProfile: 'standard' });
-  assert.equal(result.ok, false);
-  const diagnostic = result.diagnostics.find(({ code }) => code === 'workflow/solver-budget-exhausted');
-  assert.ok(diagnostic, JSON.stringify(result.diagnostics, null, 2));
-  assert.deepEqual(result.receipt, { contract: result.receipt.contract, diagnostics: result.diagnostics });
-  assert.deepEqual(diagnostic.supportedFixes, []);
+  assertExplicitPinConflict(result, 'this top/top candidate set remains infeasible');
+  const diagnostic = result.diagnostics[0];
+  assertSupportedFixesNameChangedEdge(diagnostic, ['self']);
+  for (const fix of diagnostic.supportedFixes) {
+    const match = fix.match(/^remove (fromSide|toSide) from edge "self" so readable-v2 can replan the remaining endpoint-side pins$/);
+    assert.ok(match, fix);
+    const repaired = clone(document);
+    delete repaired.edges[0][match[1]];
+    assert.equal(compileWorkflow({ workflow: repaired, qualityProfile: 'standard' }).ok, true, fix);
+  }
 });
 
 for (const { name, makeVia } of [
@@ -2819,4 +2855,90 @@ test('rejected fixed-v1 label overflow reports its footprint without changing th
   });
   assert.equal(result.diagnostics[0].code, 'layout/constraint');
   assert.match(result.diagnostics[0].message, /composition\/label-canvas-containment.*right edge by 55px/);
+});
+
+function explicitSelfLoopWorkflow({ obstacle = false } = {}) {
+  const document = workflow({
+    lanes: [{ id: 'main', label: 'M' }],
+    nodes: [
+      { id: 'a', lane: 'main', col: 0, type: 'backend', label: 'A', width: 180 },
+      ...(obstacle ? [{ id: 'b', lane: 'main', col: 2, type: 'backend', label: 'B', width: 180 }] : []),
+    ],
+    edges: [],
+  });
+  const placed = compileWorkflow({ workflow: document });
+  assert.equal(placed.ok, true);
+  const node = placed.receipt.nodes.find(({ id }) => id === 'a');
+  const cx = node.x + node.width / 2;
+  const cy = node.y + node.height / 2;
+  const right = node.x + node.width;
+  const bottom = node.y + node.height;
+  document.edges = [{
+    id: 'loop', from: 'a', to: 'a', fromSide: 'bottom', toSide: 'right',
+    via: [[cx, bottom + 45], [right + 42, bottom + 45], [right + 42, cy]],
+  }];
+  return { document, node, cx, cy, right, bottom, nodes: placed.receipt.nodes };
+}
+
+test('readable-v2 explicit self-loop preserves both endpoint contacts and authored pins', () => {
+  const { document, cx, cy, right, bottom } = explicitSelfLoopWorkflow();
+  const authored = clone(document);
+  for (const qualityProfile of ['standard', 'showcase']) {
+    const result = compileWorkflow({ workflow: document, qualityProfile });
+    assert.equal(result.ok, true, JSON.stringify(result.diagnostics));
+    assert.deepEqual(result.receipt.edges[0].points, [[cx, bottom], ...document.edges[0].via, [right, cy]]);
+    assert.deepEqual(document, authored, 'compilation must preserve supplied topology and pins');
+  }
+});
+
+test('readable-v2 explicit self-loop still rejects intermediate re-entry and unrelated obstacles', () => {
+  const own = explicitSelfLoopWorkflow();
+  own.document.edges[0].via = [
+    [own.cx, own.bottom + 45], [own.right + 42, own.bottom + 45],
+    [own.right + 42, own.cy - 20], [own.cx, own.cy - 20],
+    [own.cx, own.node.y - 40], [own.right + 72, own.node.y - 40],
+    [own.right + 72, own.cy],
+  ];
+  const other = explicitSelfLoopWorkflow({ obstacle: true });
+  const obstacle = other.nodes.find(({ id }) => id === 'b');
+  const obstacleX = obstacle.x + obstacle.width / 2;
+  other.document.edges[0].via = [
+    [other.cx, other.bottom + 45], [obstacleX, other.bottom + 45], [obstacleX, other.cy],
+  ];
+  for (const [fixture, obstacleNode] of [[own, 'a'], [other, 'b']]) {
+    const result = compileWorkflow({ workflow: fixture.document });
+    assertExplicitPinConflict(result, `self-loop collision with ${obstacleNode}`);
+    assert.equal(result.diagnostics[0].evidence.invariant, 'node clearance');
+    assert.equal(result.diagnostics[0].evidence.obstacleNode, obstacleNode);
+    assert.ok(result.diagnostics[0].evidence.segmentIndex > 0);
+  }
+});
+
+test('readable-v2 self-loop keeps endpoint direction checks and ordinary two-node contacts', () => {
+  const { document, right, bottom, cy } = explicitSelfLoopWorkflow();
+  document.edges[0].via = [[right + 42, bottom], [right + 42, cy]];
+  const invalid = compileWorkflow({ workflow: document });
+  assertExplicitPinConflict(invalid, 'horizontal departure from a bottom port');
+  assert.equal(invalid.diagnostics[0].evidence.invariant, 'perpendicular endpoint-side direction');
+
+  const { start, end } = oneLaneAnchors();
+  const ordinary = oneLaneWorkflow([{
+    id: 'ab', from: 'a', to: 'b', fromSide: 'right', toSide: 'left',
+    via: [[(start[0] + end[0]) / 2, start[1]]],
+  }]);
+  const valid = compileWorkflow({ workflow: ordinary });
+  assert.equal(valid.ok, true, JSON.stringify(valid.diagnostics));
+  assert.deepEqual(valid.receipt.edges[0].points[0], start);
+  assert.deepEqual(valid.receipt.edges[0].points.at(-1), end);
+});
+
+
+test('readable-v2 explicit self-loop rejects immediate collinear reversal', () => {
+  const { document, cx, bottom } = explicitSelfLoopWorkflow();
+  document.edges[0].toSide = 'bottom';
+  document.edges[0].via = [[cx, bottom + 45]];
+  const result = compileWorkflow({ workflow: document });
+  assertExplicitPinConflict(result, 'a collapsed out-and-back self-loop');
+  assert.equal(result.diagnostics[0].evidence.invariant, 'non-retracing self-loop');
+  assert.equal(result.diagnostics[0].evidence.segmentIndex, 1);
 });

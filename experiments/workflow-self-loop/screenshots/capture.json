@@ -1,0 +1,14 @@
+{
+  "kind": "actual-Chromium-capture",
+  "artifact": "candidate.html",
+  "artifactSha256": "56441e405728d21f3584ff142108f89b2ea36c1ec4a1193dba3c5d46760655f6",
+  "inputSha256": "ab8105274c3da65cb657db81a7d2054d2248e5575d812cf5f5d24ec999abe4f7",
+  "viewport": {
+    "width": 1440,
+    "height": 1000,
+    "deviceScaleFactor": 1
+  },
+  "capturedAt": "2026-10-25T06:20:50.099Z",
+  "screenshot": "screenshots/explicit-loop.png",
+  "limitations": "Illustrative explicit geometry regression; no runtime event/workload. Base failed to render, so no fabricated base diagram. Agent visual review, not human acceptance."
+}
