@@ -5,12 +5,12 @@
   "repository": "https://github.com/tt-a1i/archify",
   "hub": {
     "path": "docs/research/2026-10-25/README.md",
-    "commit": "77184273a18d70dd971a384f88b8a2ae0bf8d8d7",
-    "sha256": "a32eb429caa5e1e905ca2eb55d4763b675f96151f8d64f75a2a295bf87380e21",
-    "bytes": 27182,
-    "gitBlob": "f72e1a707b1eda7a3e3be3d7ab0206fb8af027ce"
+    "commit": "5c036016395a51e7737f60a4b4e674bf2054931f",
+    "sha256": "cf65626e5c905f9f03b9cde20a2b6fea62279251e7afa16a2b8398fc1c845ac3",
+    "bytes": 32259,
+    "gitBlob": "c9ff6298179e5b31c9cd901f7944e6cb8cf59030"
   },
-  "policy": "29 published experiments from the fixed hub. Original PNG bytes only; card previews are CSS crops. No network request, analytics, dependency or experiment execution. Branch publication is not merge, release, CI success or human acceptance.",
+  "policy": "33 published experiments from the fixed hub. Original PNG bytes only; card previews are CSS crops. No network request, analytics, dependency or experiment execution. Branch publication is not merge, release, CI success or human acceptance.",
   "groups": {
     "product": {
       "label": "产品交互",
@@ -28,21 +28,21 @@
   "visualSources": [
     {
       "path": "website/src/styles/site.css",
-      "commit": "77184273a18d70dd971a384f88b8a2ae0bf8d8d7",
+      "commit": "5c036016395a51e7737f60a4b4e674bf2054931f",
       "sha256": "4a79d3c00465cc93d2fdfe602c5d870523ae6ee033e3f75e61481585f86f89e4",
       "bytes": 15945,
       "gitBlob": "49c84bb5900a5eb98b057e9af76bbc1066c8d0b5"
     },
     {
       "path": "website/src/styles/index.css",
-      "commit": "77184273a18d70dd971a384f88b8a2ae0bf8d8d7",
+      "commit": "5c036016395a51e7737f60a4b4e674bf2054931f",
       "sha256": "f3aaf38823b91e63d08cf1e521ea606331be580a86e20cc9e2cadab38c1bd0fe",
       "bytes": 59111,
       "gitBlob": "e076e38179140bac537a75efaca75c356350a8a2"
     },
     {
       "path": "website/src/styles/gallery.css",
-      "commit": "77184273a18d70dd971a384f88b8a2ae0bf8d8d7",
+      "commit": "5c036016395a51e7737f60a4b4e674bf2054931f",
       "sha256": "a1c896cab6ca6f99baedb6d8d6a608e97e719b02bb763494bd58e3461f8c9eb1",
       "bytes": 23691,
       "gitBlob": "36adfa4eda35c948b0f07bd9fe144beb8ac66656"
@@ -191,38 +191,38 @@
     },
     {
       "id": "dbml-erd",
-      "commit": "d0472cc3a5065e2a1c4ba239927ae74a1d2320fd",
+      "commit": "358c77e05eb54a3f10ad3bcbb8f196eb8f277ccd",
       "branch": "codex/lab-dbml-erd",
       "directory": "experiments/dbml-erd",
       "group": "offline",
-      "inputKind": "原创 synthetic / 官方输入拒绝",
-      "imagePath": "experiments/dbml-erd/screenshots/order-payments.png",
-      "imageCaption": "图仍是原创订单样例；新增两个完整官方输入均拒绝、没有伪造产物。",
+      "inputKind": "完整官方 36B fixture",
+      "imagePath": "experiments/dbml-erd/primary-key-acceptance/screenshots/primary-key.png",
+      "imageCaption": "官方 36B 单表 A：一个 int 主键、零关系；不代表完整 DBML 兼容。",
       "title": "DBML ERD",
-      "value": "从严格 DBML 子集保留键、关系方向和可空性",
-      "limits": "原39 tests/四阶段证据复用；原创synthetic；新增两完整官方fixture均明确拒绝且无输出，保留约束缺口，未扩parser/执行数据库",
+      "value": "保留键、关系方向和可空性；接受官方primary key同义写法",
+      "limits": "已纳新dev；49focused、旧parser两新例失败/新版本通过；完整36B官方输入接受与四阶段通过，127B simple-table仍拒绝；旧拒绝与4表证据不变；未执行数据库",
       "readme": {
         "path": "experiments/dbml-erd/README.md",
-        "commit": "d0472cc3a5065e2a1c4ba239927ae74a1d2320fd",
-        "sha256": "b721ae53e19c2d8afad44b45fa10ae604af816dc72ef44d53c4bd938922f4bfa",
-        "bytes": 12420,
-        "gitBlob": "e03438aa07fae487d3645c8ae8a09291ff15aab0"
+        "commit": "358c77e05eb54a3f10ad3bcbb8f196eb8f277ccd",
+        "sha256": "ce27c41fcc801527c76b6271d7a446e043fd95845d82ac81cf8f875edffb7bf7",
+        "bytes": 14358,
+        "gitBlob": "e14900f7300bf8b9227890920da885e2beba3236"
       },
       "image": {
-        "path": "experiments/dbml-erd/screenshots/order-payments.png",
-        "commit": "d0472cc3a5065e2a1c4ba239927ae74a1d2320fd",
-        "sha256": "2bca71308e4bae9e0f11adfd1276225c28a92ac39376d902f0c2c8b1b5f50342",
-        "bytes": 139638,
-        "gitBlob": "c6cbe99df01314b8654a5cd3a0460e62595941ae",
-        "width": 1440,
-        "height": 1000,
+        "path": "experiments/dbml-erd/primary-key-acceptance/screenshots/primary-key.png",
+        "commit": "358c77e05eb54a3f10ad3bcbb8f196eb8f277ccd",
+        "sha256": "92965fa267810f2a9565a063b0df5778fb221015dcadd306c5fa8beccf060e77",
+        "bytes": 53136,
+        "gitBlob": "ab8a0526663114884c45f235b209cd04758f7931",
+        "width": 1280,
+        "height": 900,
         "mime": "image/png",
-        "caption": "图仍是原创订单样例；新增两个完整官方输入均拒绝、没有伪造产物。",
+        "caption": "官方 36B 单表 A：一个 int 主键、零关系；不代表完整 DBML 兼容。",
         "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
       },
-      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/d0472cc3a5065e2a1c4ba239927ae74a1d2320fd/experiments/dbml-erd",
+      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/358c77e05eb54a3f10ad3bcbb8f196eb8f277ccd/experiments/dbml-erd",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-dbml-erd/experiments/dbml-erd",
-      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/d0472cc3a5065e2a1c4ba239927ae74a1d2320fd/experiments/dbml-erd/screenshots/order-payments.png"
+      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/358c77e05eb54a3f10ad3bcbb8f196eb8f277ccd/experiments/dbml-erd/primary-key-acceptance/screenshots/primary-key.png"
     },
     {
       "id": "change-coupling",
@@ -235,7 +235,7 @@
       "imageCaption": "共变分数与原始计数，不代表调用或因果。",
       "title": "Change coupling",
       "value": "解释 Code Maat CSV 的对称共变分数及原始计数",
-      "limits": "13 tests；render/finalize 通过，自动 browser 未请求；synthetic，非调用或因果网络",
+      "limits": "13 tests；原生图仅render，Explainer finalize通过/browser未请求；synthetic，非调用或因果网络",
       "readme": {
         "path": "experiments/change-coupling/README.md",
         "commit": "44dc5cbc324f3aaeff2b8de582412566f1f8b8ab",
@@ -331,7 +331,7 @@
     },
     {
       "id": "migration-plan",
-      "commit": "8a4a1cd4d04865c7606a2ed31c20c98a114d75b1",
+      "commit": "b9fe3b9b8cfd9e0819e4ae8ff23adc787ee132d0",
       "branch": "codex/lab-migration-plan",
       "directory": "experiments/migration-plan",
       "group": "offline",
@@ -340,17 +340,17 @@
       "imageCaption": "已有计划形状的阅读投影；没有执行 SQL。",
       "title": "Migration plan",
       "value": "阅读 pg-schema-diff 已有计划中的顺序、timeout 配置与原始 hazard",
-      "limits": "14 tests；render/finalize 通过，自动 browser 未请求；无 SQL/数据库执行，synthetic",
+      "limits": "14 tests；Workflow仅render，Explainer finalize通过/browser未请求；无 SQL/数据库执行，synthetic；新提交仅澄清文案",
       "readme": {
         "path": "experiments/migration-plan/README.md",
-        "commit": "8a4a1cd4d04865c7606a2ed31c20c98a114d75b1",
-        "sha256": "e3f4898f1ce02e1abd57d7dcc4557cd661b11d8b17c0f06aaf477f160dbea74e",
-        "bytes": 9255,
-        "gitBlob": "86bd8269f7a111a8a057686a39c3b0d142b1d9e3"
+        "commit": "b9fe3b9b8cfd9e0819e4ae8ff23adc787ee132d0",
+        "sha256": "be298b095a0c47ae7f0357d92b26771b6d733e2510e2e4941f8cf63b7b737f1c",
+        "bytes": 9379,
+        "gitBlob": "ec28d11828f8e5b4dcb67a286345bf4cf61082c6"
       },
       "image": {
         "path": "experiments/migration-plan/screenshots/migration-plan.png",
-        "commit": "8a4a1cd4d04865c7606a2ed31c20c98a114d75b1",
+        "commit": "b9fe3b9b8cfd9e0819e4ae8ff23adc787ee132d0",
         "sha256": "607c94e73aa07a4fbe98eaab468c317e73504944c4ce47bcae673223014c07ca",
         "bytes": 299029,
         "gitBlob": "41e7fc17c8e659213502d2fc7589e636a2d72616",
@@ -360,9 +360,9 @@
         "caption": "已有计划形状的阅读投影；没有执行 SQL。",
         "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
       },
-      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/8a4a1cd4d04865c7606a2ed31c20c98a114d75b1/experiments/migration-plan",
+      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/b9fe3b9b8cfd9e0819e4ae8ff23adc787ee132d0/experiments/migration-plan",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-migration-plan/experiments/migration-plan",
-      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/8a4a1cd4d04865c7606a2ed31c20c98a114d75b1/experiments/migration-plan/screenshots/migration-plan.png"
+      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/b9fe3b9b8cfd9e0819e4ae8ff23adc787ee132d0/experiments/migration-plan/screenshots/migration-plan.png"
     },
     {
       "id": "state-contract",
@@ -1063,6 +1063,146 @@
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/d930863147cd6adfb5d4275f011c06caf4b24f92/experiments/keyboard-traversal",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-keyboard-traversal/experiments/keyboard-traversal",
       "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/d930863147cd6adfb5d4275f011c06caf4b24f92/experiments/keyboard-traversal/screenshots/tab-65-footer.png"
+    },
+    {
+      "id": "preview-dashed-ink",
+      "commit": "36cc35fb446c697046d4f0522253fd7010b2303d",
+      "branch": "codex/lab-preview-dashed-ink",
+      "directory": "experiments/preview-dashed-ink",
+      "group": "product",
+      "inputKind": "固定官方 plan / CSS 对照",
+      "imagePath": "experiments/preview-dashed-ink/screenshots/candidate-light.png",
+      "imageCaption": "同一官方 plan 预览的虚线文字、线与箭头使用阅读颜色；几何未改。",
+      "title": "Preview dashed ink",
+      "value": "Explainer预览的虚线关系文字、线和箭头使用可读颜色，保留节点边框",
+      "limits": "3条CSS映射；2browser/56focused、基线失败、候选四阶段及抽包通过；4张实际浅深对照图；4份旧生成物的既有freshness更新单列，不称全模式可访问性验收",
+      "readme": {
+        "path": "experiments/preview-dashed-ink/README.md",
+        "commit": "36cc35fb446c697046d4f0522253fd7010b2303d",
+        "sha256": "bff56d5cb0d9613e387748019de679daaecc7459b6010b77da04dfb3af4755c1",
+        "bytes": 8238,
+        "gitBlob": "8a75f12765c4c561904b1a80a3aa82a990b81d60"
+      },
+      "image": {
+        "path": "experiments/preview-dashed-ink/screenshots/candidate-light.png",
+        "commit": "36cc35fb446c697046d4f0522253fd7010b2303d",
+        "sha256": "eec4001ffa60ab4ce271857809e857d778093da00c083f3623d0d55288e37263",
+        "bytes": 166286,
+        "gitBlob": "4573c47e248ec2e4a51d47389ff5cc1caf785974",
+        "width": 1440,
+        "height": 1000,
+        "mime": "image/png",
+        "caption": "同一官方 plan 预览的虚线文字、线与箭头使用阅读颜色；几何未改。",
+        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+      },
+      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/36cc35fb446c697046d4f0522253fd7010b2303d/experiments/preview-dashed-ink",
+      "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-preview-dashed-ink/experiments/preview-dashed-ink",
+      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/36cc35fb446c697046d4f0522253fd7010b2303d/experiments/preview-dashed-ink/screenshots/candidate-light.png"
+    },
+    {
+      "id": "copy-identity",
+      "commit": "18d51b8950a9c3713c72044dd6af8e12c9f33e24",
+      "branch": "codex/lab-copy-identity",
+      "directory": "experiments/copy-identity",
+      "group": "content",
+      "inputKind": "标准库观察 / 教学构造",
+      "imagePath": "experiments/copy-identity/screenshots/native.png",
+      "imageCaption": "4 个变量、7 个列表、10 条引用；箭头是引用，不是拷贝时序。",
+      "title": "Copy identity",
+      "value": "内容相等仍可能共享不同对象：别名、浅拷贝、深拷贝的引用对照",
+      "limits": "新dev3f95；标准库独立观察4变量/7list/10引用、6内容检查、两产物四阶段通过；3张实际图；上游教学构造，未运行上游工具/未观察整个heap",
+      "readme": {
+        "path": "experiments/copy-identity/README.md",
+        "commit": "18d51b8950a9c3713c72044dd6af8e12c9f33e24",
+        "sha256": "fb42bd82a3c4f447bc3b01b47964d9cf93f00be78d8969afbaa37bee7887da51",
+        "bytes": 8613,
+        "gitBlob": "14b61256ee9c41eaab82c7b71fdb317f66db13ae"
+      },
+      "image": {
+        "path": "experiments/copy-identity/screenshots/native.png",
+        "commit": "18d51b8950a9c3713c72044dd6af8e12c9f33e24",
+        "sha256": "dda2834e1a955019b7410106b8dda9405a02113d61199518f43f6df07a2a51b2",
+        "bytes": 141495,
+        "gitBlob": "e1ebbb7fc7d8c5c8580f928cb547d8aacce6ce4e",
+        "width": 1440,
+        "height": 1452,
+        "mime": "image/png",
+        "caption": "4 个变量、7 个列表、10 条引用；箭头是引用，不是拷贝时序。",
+        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+      },
+      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/18d51b8950a9c3713c72044dd6af8e12c9f33e24/experiments/copy-identity",
+      "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-copy-identity/experiments/copy-identity",
+      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/18d51b8950a9c3713c72044dd6af8e12c9f33e24/experiments/copy-identity/screenshots/native.png"
+    },
+    {
+      "id": "cli-reading-tour",
+      "commit": "1dff88d331679319442277a4ffc7cd3637bccee2",
+      "branch": "codex/lab-cli-reading-tour",
+      "directory": "experiments/cli-reading-tour",
+      "group": "content",
+      "inputKind": "固定源码 / authored 导读",
+      "imagePath": "experiments/cli-reading-tour/screenshots/overview.png",
+      "imageCaption": "三个 CLI 出口与 HTTP 内存 JSON 快照；静态阅读，不是运行 trace。",
+      "title": "CLI reading tour",
+      "value": "沿真实源码区分三个CLI出口、磁盘JSON、HTTP快照与用户启动",
+      "limits": "新dev3f95；7固定源、11SourceCards、10节点9边；三静态阶段通过/自动browser未请求；实际Walk、hover/Escape及3图；未运行上游服务或scanner",
+      "readme": {
+        "path": "experiments/cli-reading-tour/README.md",
+        "commit": "1dff88d331679319442277a4ffc7cd3637bccee2",
+        "sha256": "0227c5f8b668658934974a27df0dc8ad07f9bfeb35038c0f245e10e6d4245180",
+        "bytes": 5911,
+        "gitBlob": "61b32679cda7b19e1b6c9d9b1df156d61ba8a64c"
+      },
+      "image": {
+        "path": "experiments/cli-reading-tour/screenshots/overview.png",
+        "commit": "1dff88d331679319442277a4ffc7cd3637bccee2",
+        "sha256": "a265689106b4ac384afb4cbd55d000b2094b0d7a0fe66bc1d46bfd8b29106803",
+        "bytes": 222565,
+        "gitBlob": "3e11bc05da3081f3e7c78a6cc6e74b2972710def",
+        "width": 1440,
+        "height": 1100,
+        "mime": "image/png",
+        "caption": "三个 CLI 出口与 HTTP 内存 JSON 快照；静态阅读，不是运行 trace。",
+        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+      },
+      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/1dff88d331679319442277a4ffc7cd3637bccee2/experiments/cli-reading-tour",
+      "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-cli-reading-tour/experiments/cli-reading-tour",
+      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/1dff88d331679319442277a4ffc7cd3637bccee2/experiments/cli-reading-tour/screenshots/overview.png"
+    },
+    {
+      "id": "clipboard-outcome",
+      "commit": "68866954a19cfe3b6599f3c27ff3cb10427f7d44",
+      "branch": "codex/lab-clipboard-outcome",
+      "directory": "experiments/clipboard-outcome",
+      "group": "product",
+      "inputKind": "受控 API 注入 / 既有 PR 输入",
+      "imagePath": "experiments/clipboard-outcome/screenshots/missing-ask-candidate.png",
+      "imageCaption": "API 缺失时保留完整消息供手工恢复；未写 OS 剪贴板。",
+      "title": "Clipboard outcome",
+      "value": "复制不可用时保留可选择的内容，恢复后重试不重复包装问题",
+      "limits": "基线3f95；8种API边界、邻近32/core19、canonical双ZIP/抽包通过；同一真实PR输入基线/候选三阶段通过；API受控注入实测，未写OS clipboard；自动browser未请求",
+      "readme": {
+        "path": "experiments/clipboard-outcome/README.md",
+        "commit": "68866954a19cfe3b6599f3c27ff3cb10427f7d44",
+        "sha256": "5a41eaca0d7cf5cc5992d3343769bd81a7a68dc67110b03380e1f21027dbfe6b",
+        "bytes": 6942,
+        "gitBlob": "5a89bf5c18213afdfb29d9e32f53662fe057c009"
+      },
+      "image": {
+        "path": "experiments/clipboard-outcome/screenshots/missing-ask-candidate.png",
+        "commit": "68866954a19cfe3b6599f3c27ff3cb10427f7d44",
+        "sha256": "071e0e1919089bbd1145025085edd0d950eb62cfd4c2d639aeee2963393fe201",
+        "bytes": 284229,
+        "gitBlob": "c09adb28c56816c2cb90171edb5a68434f2013db",
+        "width": 1280,
+        "height": 1000,
+        "mime": "image/png",
+        "caption": "API 缺失时保留完整消息供手工恢复；未写 OS 剪贴板。",
+        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+      },
+      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/68866954a19cfe3b6599f3c27ff3cb10427f7d44/experiments/clipboard-outcome",
+      "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-clipboard-outcome/experiments/clipboard-outcome",
+      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/68866954a19cfe3b6599f3c27ff3cb10427f7d44/experiments/clipboard-outcome/screenshots/missing-ask-candidate.png"
     }
   ],
   "deferred": {
@@ -1073,13 +1213,13 @@
     "reason": "既有 Incoming 行已能一步回到来源；兼容测试通过没有证明额外 Back 按钮更好用。暂不引入额外状态，不计入 27 项。"
   },
   "summary": {
-    "experiments": 29,
-    "images": 29,
-    "pngBytes": 6958175,
+    "experiments": 33,
+    "images": 33,
+    "pngBytes": 7686248,
     "groupCounts": {
-      "product": 9,
+      "product": 11,
       "offline": 15,
-      "content": 5
+      "content": 7
     },
     "deferredCountedAsPublished": false
   }

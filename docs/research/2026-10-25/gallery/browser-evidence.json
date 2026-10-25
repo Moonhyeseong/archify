@@ -1,81 +1,148 @@
 {
-  "kind": "derived browser evidence summary for current 29-item gallery; raw observations kept outside checkout",
+  "kind": "derived browser evidence for current 33-item gallery; raw observations outside checkout",
   "html": {
     "path": "index.html",
-    "sha256": "7fc4a81cc0d06b31f74588813d784f7361e2e8b4d5e8863793a4c83aba37e959"
+    "sha256": "d37bd42fa244011d841877c2bfcf70ff82f7688ac0f758b634e7ecbc5a6f1569"
   },
-  "manifestSha256": "fe7ed7e50e44f43e0053f2b77915abb8fbae6d96c8ae7f45ed6087281d68817e",
+  "manifestSha256": "55892d8c3b2296d93663f85d6acde33d1a354dabafd7514c7dbb513e6c7eb55e",
   "observedAt": [
-    "2026-10-25T07:32:05.268Z",
-    "2026-10-25T07:33:26.634Z"
+    "2026-10-25T08:36:59.888Z",
+    "2026-10-25T08:37:21.824Z"
   ],
-  "environment": "Ego Lite Chromium; keyboard and mouse; desktop viewport emulation, not physical touch or screen-reader acceptance",
+  "environment": "Ego Lite Chromium; mouse/keyboard with CSS viewport emulation; not physical touch, assistive technology or human acceptance",
   "checks": [
     {
       "case": "all",
-      "count": "显示 29 / 29 项",
-      "cards": 29
+      "count": "显示 33 / 33 项",
+      "visible": 33
     },
     {
       "case": "product",
-      "count": "显示 9 / 29 项",
-      "visible": 9
+      "count": "显示 11 / 33 项",
+      "visible": 11
     },
     {
       "case": "offline",
-      "count": "显示 15 / 29 项",
+      "count": "显示 15 / 33 项",
       "visible": 15
     },
     {
       "case": "content",
-      "count": "显示 5 / 29 项",
-      "visible": 5
+      "count": "显示 7 / 33 项",
+      "visible": 7
     },
     {
-      "case": "new-keyboard",
-      "count": "显示 1 / 29 项",
+      "case": "Preview dashed ink",
+      "count": "显示 1 / 33 项",
+      "visible": 1,
       "titles": [
-        "Keyboard traversal"
+        "Preview dashed ink"
       ]
     },
     {
-      "case": "keyboard-image",
-      "imageWidth": 1280,
-      "source": "https://github.com/tt-a1i/archify/blob/d930863147cd6adfb5d4275f011c06caf4b24f92/experiments/keyboard-traversal/screenshots/tab-65-footer.png"
+      "case": "Copy identity",
+      "count": "显示 1 / 33 项",
+      "visible": 1,
+      "titles": [
+        "Copy identity"
+      ]
     },
     {
-      "case": "keyboard-escape-focus",
+      "case": "CLI reading tour",
+      "count": "显示 1 / 33 项",
+      "visible": 1,
+      "titles": [
+        "CLI reading tour"
+      ]
+    },
+    {
+      "case": "Clipboard outcome",
+      "count": "显示 1 / 33 项",
+      "visible": 1,
+      "titles": [
+        "Clipboard outcome"
+      ]
+    },
+    {
+      "case": "DBML ERD",
+      "count": "显示 1 / 33 项",
+      "visible": 1,
+      "titles": [
+        "DBML ERD"
+      ]
+    },
+    {
+      "case": "dbml-image",
+      "title": "DBML ERD",
+      "description": "官方 36B 单表 A：一个 int 主键、零关系；不代表完整 DBML 兼容。 · 1280 × 900 px · 原 PNG 未编辑",
+      "width": 1280,
+      "source": "https://github.com/tt-a1i/archify/blob/358c77e05eb54a3f10ad3bcbb8f196eb8f277ccd/experiments/dbml-erd/primary-key-acceptance/screenshots/primary-key.png"
+    },
+    {
+      "case": "escape-focus",
       "open": false,
-      "focus": "查看 Keyboard traversal 完整原图"
+      "focus": "查看 DBML ERD 完整原图"
     },
     {
-      "case": "diff-image",
-      "imageWidth": 1280,
-      "source": "https://github.com/tt-a1i/archify/blob/88b0dcb069d89657798e5f1208a90bb2b768fe98/experiments/diff-line-numbers/screenshots/candidate-1280-light.png"
+      "case": "clipboard-image",
+      "title": "Clipboard outcome",
+      "width": 1280,
+      "source": "https://github.com/tt-a1i/archify/blob/68866954a19cfe3b6599f3c27ff3cb10427f7d44/experiments/clipboard-outcome/screenshots/missing-ask-candidate.png"
     },
     {
       "case": "empty",
-      "count": "显示 0 / 29 项",
-      "shown": true
+      "count": "显示 0 / 33 项",
+      "visible": 0,
+      "titles": []
     },
     {
       "case": "reset",
-      "count": "显示 29 / 29 项",
+      "count": "显示 33 / 33 项",
+      "visible": 33
+    },
+    {
+      "case": "reset-focus",
       "focus": "query"
     },
     {
-      "case": "mobile-width",
+      "state": "desktop-light",
+      "width": 1440,
+      "height": 1100,
+      "scrollWidth": 1440,
+      "theme": "light",
+      "count": "显示 33 / 33 项"
+    },
+    {
+      "state": "desktop-dark",
+      "width": 1440,
+      "height": 1100,
+      "scrollWidth": 1440,
+      "theme": "dark",
+      "count": "显示 33 / 33 项"
+    },
+    {
+      "state": "mobile-dark",
       "width": 390,
+      "height": 844,
       "scrollWidth": 390,
-      "count": "显示 29 / 29 项"
+      "theme": "dark",
+      "count": "显示 33 / 33 项"
+    },
+    {
+      "state": "mobile-light",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "theme": "light",
+      "count": "显示 33 / 33 项"
     }
   ],
   "screenshots": [
     {
       "path": "screenshots/desktop-light.png",
-      "sha256": "154060be67787ad7b3e387072091149f1cc24d3c362b4eaa98d025bdfaef8351",
-      "bytes": 274997,
-      "capturedAt": "2026-10-25T07:32:00.992056+00:00",
+      "sha256": "4b80dd1be6b2d3f14f8df52910994bae516f41d83e266cdc309d3325445a3e15",
+      "bytes": 275962,
+      "writtenAtFromFileMtime": "2026-10-25T08:37:19.375170+00:00",
       "viewportCssPixels": [
         1440,
         1100
@@ -83,14 +150,14 @@
       "deviceScaleFactor": 1,
       "mobileEmulation": false,
       "theme": "light",
-      "state": "all; first viewport",
+      "state": "desktop-light",
       "rootViewed": true
     },
     {
       "path": "screenshots/desktop-dark.png",
-      "sha256": "afbbd99e8b45078fe4fca376ca417b8c0aa50f44a91c23b68925ce646ae2259e",
-      "bytes": 277317,
-      "capturedAt": "2026-10-25T07:33:26.369803+00:00",
+      "sha256": "f1ad36e28ca2b43fb7470744383e99ce8ad53e61ea08faacc88d138834058316",
+      "bytes": 277061,
+      "writtenAtFromFileMtime": "2026-10-25T08:37:21.562548+00:00",
       "viewportCssPixels": [
         1440,
         1100
@@ -98,14 +165,14 @@
       "deviceScaleFactor": 1,
       "mobileEmulation": false,
       "theme": "dark",
-      "state": "all; first viewport",
+      "state": "desktop-dark",
       "rootViewed": true
     },
     {
       "path": "screenshots/mobile-light.png",
-      "sha256": "32bd01f8209cb627b75af8b5165b48e578701084f128a5a8919e74485d95a5fc",
-      "bytes": 85309,
-      "capturedAt": "2026-10-25T07:33:26.634489+00:00",
+      "sha256": "b76677fec01fae22cddbe8bd56c60f5aa7ba297dba4aa68c477476a40ff97580",
+      "bytes": 84976,
+      "writtenAtFromFileMtime": "2026-10-25T08:37:21.824431+00:00",
       "viewportCssPixels": [
         390,
         844
@@ -113,14 +180,14 @@
       "deviceScaleFactor": 1,
       "mobileEmulation": false,
       "theme": "light",
-      "state": "all; first viewport",
+      "state": "mobile-light",
       "rootViewed": true
     },
     {
       "path": "screenshots/mobile-dark.png",
-      "sha256": "f5bf4e8ca07f264273bcb5e290c8857b5e1ea43ad36a2f630829a8c06e363729",
-      "bytes": 85105,
-      "capturedAt": "2026-10-25T07:33:26.470083+00:00",
+      "sha256": "2dc83c5aed816d949cd76b86318c87d78c806595714ea244377a842fe57a08ec",
+      "bytes": 84776,
+      "writtenAtFromFileMtime": "2026-10-25T08:37:21.655522+00:00",
       "viewportCssPixels": [
         390,
         844
@@ -128,14 +195,14 @@
       "deviceScaleFactor": 1,
       "mobileEmulation": false,
       "theme": "dark",
-      "state": "all; first viewport",
+      "state": "mobile-dark",
       "rootViewed": true
     },
     {
-      "path": "screenshots/keyboard-result.png",
-      "sha256": "aa95d03761ce61c7738757c55d4f058f33cd4a86cf676c75f1f403c50be5ed7b",
-      "bytes": 168571,
-      "capturedAt": "2026-10-25T07:32:05.268449+00:00",
+      "path": "screenshots/dbml-dialog.png",
+      "sha256": "97e45fe92affaf01f4efda85f78ec589c3a3e79342df61636605dd7c7feab335",
+      "bytes": 85866,
+      "writtenAtFromFileMtime": "2026-10-25T08:36:57.132762+00:00",
       "viewportCssPixels": [
         1440,
         1100
@@ -143,14 +210,14 @@
       "deviceScaleFactor": 1,
       "mobileEmulation": false,
       "theme": "light",
-      "state": "product filter + Keyboard traversal search",
+      "state": "dbml-dialog",
       "rootViewed": true
     },
     {
-      "path": "screenshots/diff-dialog.png",
-      "sha256": "7ce32e787c3b696a3283c873ba0a0ce7f6a7a32a7c7f913718fc7e03127e903c",
-      "bytes": 230944,
-      "capturedAt": "2026-10-25T07:33:22.990351+00:00",
+      "path": "screenshots/clipboard-result.png",
+      "sha256": "1a4a470a4bc4d049c702522cc93355d0fe2a4ca424d2c91540fcec0ca4e095bb",
+      "bytes": 168464,
+      "writtenAtFromFileMtime": "2026-10-25T08:36:59.314058+00:00",
       "viewportCssPixels": [
         1440,
         1100
@@ -158,17 +225,52 @@
       "deviceScaleFactor": 1,
       "mobileEmulation": false,
       "theme": "light",
-      "state": "Diff line numbers complete-image modal, fit width",
+      "state": "clipboard-result",
+      "rootViewed": true
+    },
+    {
+      "path": "screenshots/clipboard-dialog.png",
+      "sha256": "f9d73ef7e89a52a7a16abb8733d692ac8f797a37025e57999bb5a71d55851d2f",
+      "bytes": 273838,
+      "writtenAtFromFileMtime": "2026-10-25T08:36:59.555391+00:00",
+      "viewportCssPixels": [
+        1440,
+        1100
+      ],
+      "deviceScaleFactor": 1,
+      "mobileEmulation": false,
+      "theme": "light",
+      "state": "clipboard-dialog",
       "rootViewed": true
     }
   ],
-  "historicalEvidence": {
-    "commit": "50cc320adffef212f046f065eb2e9e702610a27d",
-    "scope": "27-item version only; original-size/end scrolling and native modal tab observations are not restated as fresh 29-item tests"
-  },
+  "rawObservationBindings": [
+    {
+      "name": "desktop-checks.json",
+      "sha256": "b4a255490eda2dce2f081583d86d8f58fc702710979131a272a1222afdf297a8"
+    },
+    {
+      "name": "viewport-checks.json",
+      "sha256": "9cdf20d00c9f892fd950d9e3b74fe9fe58dbeedbb4515f9330bf7fc666d322ef"
+    }
+  ],
+  "historicalEvidence": [
+    {
+      "commit": "a94bd25bdcf33c386f0e920142c61309e1e8b499",
+      "scope": "29-item version only"
+    },
+    {
+      "commit": "50cc320adffef212f046f065eb2e9e702610a27d",
+      "scope": "27-item version only; original-size End scrolling and detailed modal Tab observations not repeated"
+    }
+  ],
+  "probeCorrections": [
+    "The initial wait for every document image timed out because offscreen thumbnails are lazy loaded; the bounded visible-image wait completed.",
+    "An initial action used a snapshot ref invalidated by CDP viewport override; it stopped before changing a filter. Current observations use stable DOM selectors."
+  ],
   "limits": [
-    "Only representative interactions and images were visually checked; all 29 embedded PNG bytes were independently verified statically.",
-    "No external links, upstream programs, individual experiment HTML, CI, deployment, physical touch, screen reader or human acceptance were exercised.",
-    "Static verification.json remains browser not-run-by-builder; this file records coordinator browser observations separately."
+    "Representative interaction and visual checks only; independent static review verifies all 33 embedded original PNG byte bindings.",
+    "No external links, upstream programs, individual experiment HTML, CI, deployment, physical touch, screen reader or human acceptance exercised.",
+    "Builder verification.json remains a static check; this summary records coordinator browser observations separately."
   ]
 }

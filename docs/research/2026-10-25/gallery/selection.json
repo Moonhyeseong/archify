@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "https://github.com/tt-a1i/archify",
-  "hubCommit": "77184273a18d70dd971a384f88b8a2ae0bf8d8d7",
+  "hubCommit": "5c036016395a51e7737f60a4b4e674bf2054931f",
   "hubPath": "docs/research/2026-10-25/README.md",
   "visualSourcePaths": [
     "website/src/styles/site.css",
@@ -65,13 +65,13 @@
     },
     {
       "id": "dbml-erd",
-      "commit": "d0472cc3a5065e2a1c4ba239927ae74a1d2320fd",
+      "commit": "358c77e05eb54a3f10ad3bcbb8f196eb8f277ccd",
       "branch": "codex/lab-dbml-erd",
       "directory": "experiments/dbml-erd",
       "group": "offline",
-      "inputKind": "原创 synthetic / 官方输入拒绝",
-      "imagePath": "experiments/dbml-erd/screenshots/order-payments.png",
-      "imageCaption": "图仍是原创订单样例；新增两个完整官方输入均拒绝、没有伪造产物。"
+      "inputKind": "完整官方 36B fixture",
+      "imagePath": "experiments/dbml-erd/primary-key-acceptance/screenshots/primary-key.png",
+      "imageCaption": "官方 36B 单表 A：一个 int 主键、零关系；不代表完整 DBML 兼容。"
     },
     {
       "id": "change-coupling",
@@ -105,7 +105,7 @@
     },
     {
       "id": "migration-plan",
-      "commit": "8a4a1cd4d04865c7606a2ed31c20c98a114d75b1",
+      "commit": "b9fe3b9b8cfd9e0819e4ae8ff23adc787ee132d0",
       "branch": "codex/lab-migration-plan",
       "directory": "experiments/migration-plan",
       "group": "offline",
@@ -312,6 +312,46 @@
       "inputKind": "固定 HTML / 门禁测量",
       "imagePath": "experiments/keyboard-traversal/screenshots/tab-65-footer.png",
       "imageCaption": "同一 HTML 真实 Tab65 到 footer；没有视觉改版，原 mapping false / ZIP 未解析不变。"
+    },
+    {
+      "id": "preview-dashed-ink",
+      "commit": "36cc35fb446c697046d4f0522253fd7010b2303d",
+      "branch": "codex/lab-preview-dashed-ink",
+      "directory": "experiments/preview-dashed-ink",
+      "group": "product",
+      "inputKind": "固定官方 plan / CSS 对照",
+      "imagePath": "experiments/preview-dashed-ink/screenshots/candidate-light.png",
+      "imageCaption": "同一官方 plan 预览的虚线文字、线与箭头使用阅读颜色；几何未改。"
+    },
+    {
+      "id": "copy-identity",
+      "commit": "18d51b8950a9c3713c72044dd6af8e12c9f33e24",
+      "branch": "codex/lab-copy-identity",
+      "directory": "experiments/copy-identity",
+      "group": "content",
+      "inputKind": "标准库观察 / 教学构造",
+      "imagePath": "experiments/copy-identity/screenshots/native.png",
+      "imageCaption": "4 个变量、7 个列表、10 条引用；箭头是引用，不是拷贝时序。"
+    },
+    {
+      "id": "cli-reading-tour",
+      "commit": "1dff88d331679319442277a4ffc7cd3637bccee2",
+      "branch": "codex/lab-cli-reading-tour",
+      "directory": "experiments/cli-reading-tour",
+      "group": "content",
+      "inputKind": "固定源码 / authored 导读",
+      "imagePath": "experiments/cli-reading-tour/screenshots/overview.png",
+      "imageCaption": "三个 CLI 出口与 HTTP 内存 JSON 快照；静态阅读，不是运行 trace。"
+    },
+    {
+      "id": "clipboard-outcome",
+      "commit": "68866954a19cfe3b6599f3c27ff3cb10427f7d44",
+      "branch": "codex/lab-clipboard-outcome",
+      "directory": "experiments/clipboard-outcome",
+      "group": "product",
+      "inputKind": "受控 API 注入 / 既有 PR 输入",
+      "imagePath": "experiments/clipboard-outcome/screenshots/missing-ask-candidate.png",
+      "imageCaption": "API 缺失时保留完整消息供手工恢复；未写 OS 剪贴板。"
     }
   ],
   "deferred": {

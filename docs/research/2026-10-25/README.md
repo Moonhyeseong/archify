@@ -14,7 +14,7 @@
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
-[离线图片浏览页](gallery/README.md)：当前固定快照含前 29 项的 29 张原始 PNG，可按分组和关键词筛选、展开完整图；下载 `gallery/index.html` 后可独立打开。固定提交/图片摘要保留在 manifest，桌面与 390px 实际检查见浏览页说明。第 30–33 项的图片见下表独立分支，尚未加入该快照。
+[离线图片浏览页](gallery/README.md)：当前固定快照含 33 项的 33 张原始 PNG，可按分组和关键词筛选、展开完整图；下载 `gallery/index.html` 后可独立打开。固定提交/图片摘要保留在 manifest，桌面与 390px 实际检查见浏览页说明。四个新增项及 DBML/Migration 更新已纳入，历史快照按固定提交保留。
 
 | 实验与远程分支 | 具体价值 | 发布 revision | 实际图片 | 验证与限制 |
 | --- | --- | --- | --- | --- |
@@ -96,12 +96,14 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 2026-10-25 16:30:20（台北）核对Clipboard outcome `68866954`：远端head一致，Actions runs/check-runs均为0；受控浏览器API实测与OS clipboard验收分开。
 
+2026-10-25 16:35的[GitHub状态与查重](github-status-1635.md)确认main/dev未再变；dev精确head CI成功，main测试完成但部署仍等待。新draft #1103与#1102的已有工作已列入下一轮查重，不把它们当成dev已合入能力。
+
 ## 正在推进
 
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
 | 新发现修复 | Explainer复制结果与手工恢复 | Clipboard outcome已推送68866954，来源、基线/候选和实际截图见第33项 |
-| 浏览页更新 | 新增4项及DBML/Migration更新 | 当前29项快照已完成真实浏览器检查；下一版纳入33项，旧版证据继续绑定原提交 |
+| 浏览页更新 | 新增4项及DBML/Migration更新 | 33项快照已完成静态独立重建与浅深色/390px真实浏览器检查，旧版证据继续绑定原提交 |
 | 既有实验补证据 | DBML与Plan actions | DBML已补上primary key同义写法接受；原拒绝记录保留；完整plan fixture转换证据不变 |
 | 已排除的重复实现 | Mutation报告reader | 原viewer已有文件搜索、状态筛选、diff、测试关联和单HTML打包；只保留研究，不另建reader |
 | 新dev影响核对 | 许可声明与finalize源范围修复 | [15:41迁移](base-refresh-1541.md) / [16:18交付逻辑](base-refresh-1618.md)：分别核对实际diff；旧证据保留原身份，新整合按影响验证 |
