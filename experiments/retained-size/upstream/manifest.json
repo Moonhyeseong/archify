@@ -1,0 +1,57 @@
+{
+  "source": "AlexEne/twiggy",
+  "commit": "a624909e389fcb12d6b3b66f1b789b986c681786",
+  "classification": "upstream-committed-golden",
+  "toolExecutedThisSession": false,
+  "files": [
+    {
+      "path": "twiggy/tests/all/expectations/dominators_wee_alloc_subtree_json",
+      "local": "upstream/dominators_wee_alloc_subtree_json",
+      "url": "https://github.com/AlexEne/twiggy/blob/a624909e389fcb12d6b3b66f1b789b986c681786/twiggy/tests/all/expectations/dominators_wee_alloc_subtree_json",
+      "sha256": "5d26ff44bc544f820490bf3a2c52e53b7f66f110fe2f6ea57243f04a9ea1907f",
+      "bytes": 313
+    },
+    {
+      "path": "twiggy/tests/all/dominators_tests.rs",
+      "local": "upstream/dominators_tests.rs",
+      "url": "https://github.com/AlexEne/twiggy/blob/a624909e389fcb12d6b3b66f1b789b986c681786/twiggy/tests/all/dominators_tests.rs",
+      "sha256": "74d9b357daf703c9e56684af9d70f36550ed1fbf880ea07356a581265d87c424",
+      "bytes": 1274
+    },
+    {
+      "path": "LICENSE-MIT",
+      "local": "upstream/LICENSE-MIT",
+      "url": "https://github.com/AlexEne/twiggy/blob/a624909e389fcb12d6b3b66f1b789b986c681786/LICENSE-MIT",
+      "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0",
+      "bytes": 1071
+    },
+    {
+      "path": "LICENSE-APACHE",
+      "local": "upstream/LICENSE-APACHE",
+      "url": "https://github.com/AlexEne/twiggy/blob/a624909e389fcb12d6b3b66f1b789b986c681786/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "bytes": 10847
+    },
+    {
+      "path": "twiggy/Cargo.toml",
+      "local": "upstream/Cargo.toml",
+      "url": "https://github.com/AlexEne/twiggy/blob/a624909e389fcb12d6b3b66f1b789b986c681786/twiggy/Cargo.toml",
+      "sha256": "501dbd9d087f80054653e3e4bb33f79d53d35bda6f50b422be44bd19cd25fb6f",
+      "bytes": 870
+    },
+    {
+      "path": "analyze/analyses/dominators/emit.rs",
+      "local": "upstream/emit.rs",
+      "url": "https://github.com/AlexEne/twiggy/blob/a624909e389fcb12d6b3b66f1b789b986c681786/analyze/analyses/dominators/emit.rs",
+      "sha256": "40849cdbb3483d0bad453b7f7b1435afc5b653352a1a1da052671829aaa49add",
+      "bytes": 8845
+    },
+    {
+      "path": "guide/src/concepts/dominators-and-retained-size.md",
+      "local": "upstream/dominators-and-retained-size.md",
+      "url": "https://github.com/AlexEne/twiggy/blob/a624909e389fcb12d6b3b66f1b789b986c681786/guide/src/concepts/dominators-and-retained-size.md",
+      "sha256": "f0f58e5ab86170afeb40c1a08bd1f3cf797c236a0931418e27afe424a4822074",
+      "bytes": 1772
+    }
+  ]
+}

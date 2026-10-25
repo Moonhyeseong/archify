@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 1,
+  "kind": "derived-portable-summary",
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "node": "v22.23.3",
+  "upstreamToolExecuted": false,
+  "binaryRead": false,
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "45043a305a66541719b685dcbf907ab82e4b671f62bebee0e3967b7399100d41",
+      "bytes": 6517
+    },
+    {
+      "path": "evidence.json",
+      "sha256": "eb31e519b6eef9cd5a0e3ec447c5f5373df5dc64a2d32071ee21dfd793be5c8e",
+      "bytes": 1489
+    },
+    {
+      "path": "output/explainer.html",
+      "sha256": "75c4de81da7278272fa4572a2f5ae8402fedcad39f7396760837538e1250d2e0",
+      "bytes": 497339
+    },
+    {
+      "path": "output/retained-size.html",
+      "sha256": "dc97aaae63692d5b295d2fb153adef231cb10c72e3117fbd2b495fa9af701e0b",
+      "bytes": 809768
+    },
+    {
+      "path": "retained-size.archify.md",
+      "sha256": "8c02cbc7be3f1491b80275de9ed6afe01a0e528c6299b31ce5384d4520e2e9d0",
+      "bytes": 3700
+    },
+    {
+      "path": "retained-size.tree.json",
+      "sha256": "8d6d560c981898bb8a1f2dc32d0b41129355662b59ae68ff107d5c6fd8f9f62e",
+      "bytes": 860
+    },
+    {
+      "path": "screenshots/before-model-binding/capture.json",
+      "sha256": "a801aa653282a69bc8a23848fc43d586c2c438f265b61da2bb89f2dbc8920dbe",
+      "bytes": 933
+    },
+    {
+      "path": "screenshots/before-model-binding/explainer.html",
+      "sha256": "b9e33338ef9ccb1037d4cc1dbfb2d77eda460ebed07cc6570f5548c5105b8158",
+      "bytes": 495727
+    },
+    {
+      "path": "screenshots/before-model-binding/explanation.png",
+      "sha256": "1bc6ef5f5782823ffdf92571188f2bac81c2fbd2668090ba05dffe58f3326f83",
+      "bytes": 333971
+    },
+    {
+      "path": "screenshots/capture.json",
+      "sha256": "7c0242db18dae08e1748f066d88fe3efa6c034b7b2585777b16e646418940a44",
+      "bytes": 1190
+    },
+    {
+      "path": "screenshots/dominator-tree.png",
+      "sha256": "40935b1026defbfa1e75b8c59f42e87ff6e28b61bc3ccf5310ca1889cdb8ace0",
+      "bytes": 94174
+    },
+    {
+      "path": "screenshots/explanation.png",
+      "sha256": "a5e426066c46ba0032d2e43b65018d50068a2c814b9dca303613526165df7a31",
+      "bytes": 333701
+    },
+    {
+      "path": "upstream/Cargo.toml",
+      "sha256": "501dbd9d087f80054653e3e4bb33f79d53d35bda6f50b422be44bd19cd25fb6f",
+      "bytes": 870
+    },
+    {
+      "path": "upstream/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+      "bytes": 10847
+    },
+    {
+      "path": "upstream/LICENSE-MIT",
+      "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0",
+      "bytes": 1071
+    },
+    {
+      "path": "upstream/dominators-and-retained-size.md",
+      "sha256": "f0f58e5ab86170afeb40c1a08bd1f3cf797c236a0931418e27afe424a4822074",
+      "bytes": 1772
+    },
+    {
+      "path": "upstream/dominators_tests.rs",
+      "sha256": "74d9b357daf703c9e56684af9d70f36550ed1fbf880ea07356a581265d87c424",
+      "bytes": 1274
+    },
+    {
+      "path": "upstream/dominators_wee_alloc_subtree_json",
+      "sha256": "5d26ff44bc544f820490bf3a2c52e53b7f66f110fe2f6ea57243f04a9ea1907f",
+      "bytes": 313
+    },
+    {
+      "path": "upstream/emit.rs",
+      "sha256": "40849cdbb3483d0bad453b7f7b1435afc5b653352a1a1da052671829aaa49add",
+      "bytes": 8845
+    },
+    {
+      "path": "upstream/manifest.json",
+      "sha256": "97e845ee4db9df7e0e634c9778436cfbde848252ca849413e63a76a3d11e1fab",
+      "bytes": 2587
+    }
+  ],
+  "stages": [
+    {
+      "type": "tree",
+      "render": {
+        "command": "node archify/bin/archify.mjs render tree experiments/retained-size/retained-size.tree.json experiments/retained-size/output/retained-size.html",
+        "exitCode": 0
+      },
+      "finalize": {
+        "command": "node archify/bin/archify.mjs finalize tree experiments/retained-size/retained-size.tree.json experiments/retained-size/output/retained-size.html --out-dir <private-receipts> --json",
+        "status": "pass",
+        "gates": {
+          "validate": "pass",
+          "deliver": "pass",
+          "check": "pass",
+          "browser-check": "pass"
+        },
+        "diagnosticCodes": [],
+        "browserCheck": {
+          "requested": true,
+          "ran": true
+        },
+        "visualReview": "not-requested",
+        "rawStdoutSha256": "222b79ab750204c921fbbc58224d0219e01a3626a94fecc3c9e1871f33654d98"
+      }
+    },
+    {
+      "type": "explainer",
+      "render": {
+        "command": "node archify/bin/archify.mjs render explainer experiments/retained-size/retained-size.archify.md experiments/retained-size/output/explainer.html",
+        "exitCode": 0
+      },
+      "finalize": {
+        "command": "node archify/bin/archify.mjs finalize explainer experiments/retained-size/retained-size.archify.md experiments/retained-size/output/explainer.html --out-dir <private-receipts> --json",
+        "status": "pass",
+        "gates": {
+          "validate": "pass",
+          "deliver": "pass",
+          "check": "pass",
+          "browser-check": "not-run"
+        },
+        "diagnosticCodes": [],
+        "browserCheck": {
+          "requested": false,
+          "ran": false
+        },
+        "visualReview": "not-requested",
+        "rawStdoutSha256": "545d3d2b792b5540ec9c83d3c24dfad8a27703cee1b3901059f57296bf246e14"
+      }
+    }
+  ],
+  "firstAttempt": {
+    "explainerFinalize": "pass",
+    "warning": "explainer/writing-de-chain",
+    "resolution": "split first paragraph sentence; rerendered and finalized without editing generated HTML"
+  },
+  "evidenceScope": "fixed authored two-node sample; no generic adapter, upstream execution, performance measurement or user acceptance",
+  "screenshots": {
+    "status": "actual screenshots captured and reviewed by coordinating agent",
+    "capture": "screenshots/capture.json",
+    "humanAcceptance": "not-claimed"
+  },
+  "modelBindingRepair": {
+    "finding": "Initial shorthand preview had the same two values and relation but different authored node IDs from standalone/evidence.",
+    "resolution": "Explainer now references retained-size.tree.json directly.",
+    "verified": "preparedDiagrams dominator-tree full spec equals native JSON; prepared.sourceText equals authored draft",
+    "before": "screenshots/before-model-binding/explainer.html",
+    "beforeSha256": "b9e33338ef9ccb1037d4cc1dbfb2d77eda460ebed07cc6570f5548c5105b8158"
+  },
+  "whitespace": {
+    "allStagedFiles": "fail: generated HTML has existing renderer trailing whitespace",
+    "excludingGeneratedHtml": "pass",
+    "generatedBytesChangedToFixWhitespace": false
+  }
+}

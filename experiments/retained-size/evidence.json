@@ -1,0 +1,46 @@
+{
+  "classification": "upstream-committed-golden",
+  "upstreamCommit": "a624909e389fcb12d6b3b66f1b789b986c681786",
+  "reportSha256": "5d26ff44bc544f820490bf3a2c52e53b7f66f110fe2f6ea57243f04a9ea1907f",
+  "selection": {
+    "evidence": "upstream/dominators_tests.rs",
+    "testName": "dominators_wee_alloc_subtree_json",
+    "argv": [
+      "dominators",
+      "./fixtures/wee_alloc.wasm",
+      "-f",
+      "json",
+      "hello"
+    ],
+    "executedThisSession": false
+  },
+  "binaryDigest": null,
+  "binaryDigestStatus": "not-collected; no binary read or executed",
+  "identityScope": "report digest + JSON occurrence pointer; names are not stable IDs",
+  "relation": "immediate dominator, not call",
+  "percentDenominator": "items.size() across analyzed items; not selected subtree; disk-file equality not established",
+  "nodes": [
+    {
+      "authoredNodeId": "report-5d26ff44-item-0",
+      "reportPointer": "/items/0",
+      "values": {
+        "name": "hello",
+        "shallow_size": 165,
+        "shallow_size_percent": 5.857294994675186,
+        "retained_size": 169,
+        "retained_size_percent": 5.999290024849131
+      }
+    },
+    {
+      "authoredNodeId": "report-5d26ff44-item-0-child-0",
+      "reportPointer": "/items/0/children/0",
+      "values": {
+        "name": "type[5]: () -> i32",
+        "shallow_size": 4,
+        "shallow_size_percent": 0.1419950301739439,
+        "retained_size": 4,
+        "retained_size_percent": 0.1419950301739439
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "diagram_type": "tree",
+  "meta": {
+    "title": "165 B 自身 + 4 B 子项 = 169 B retained",
+    "subtitle": "Twiggy committed golden · direct dominator（直接支配），不是调用关系 · 169 B 约占全体分析项 6%，不是子树100%或实测可删大小",
+    "locale": "zh-CN",
+    "output": "retained-size.html",
+    "quality_profile": "standard"
+  },
+  "layout": {
+    "direction": "down",
+    "nodeW": 280,
+    "nodeMaxW": 360,
+    "gapY": 60
+  },
+  "nodes": [
+    {
+      "id": "report-5d26ff44-item-0",
+      "label": "hello",
+      "sublabel": "自身 165 B · retained 169 B · 5.99929%"
+    },
+    {
+      "id": "report-5d26ff44-item-0-child-0",
+      "parent": "report-5d26ff44-item-0",
+      "label": "type[5]: () → i32",
+      "sublabel": "直接支配子项 · 自身 / retained 均为 4 B"
+    }
+  ]
+}

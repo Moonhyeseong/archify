@@ -1,0 +1,28 @@
+{
+  "kind": "actual-Chromium-screenshots",
+  "captures": [
+    {
+      "artifact": "output/explainer.html",
+      "artifactSha256": "b9e33338ef9ccb1037d4cc1dbfb2d77eda460ebed07cc6570f5548c5105b8158",
+      "screenshot": "screenshots/explanation.png",
+      "capturedAt": "2026-10-25T06:05:05.810Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "deviceScaleFactor": 1
+      }
+    },
+    {
+      "artifact": "output/retained-size.html",
+      "artifactSha256": "dc97aaae63692d5b295d2fb153adef231cb10c72e3117fbd2b495fa9af701e0b",
+      "screenshot": "screenshots/dominator-tree.png",
+      "capturedAt": "2026-10-25T06:05:06.033Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "deviceScaleFactor": 1
+      }
+    }
+  ],
+  "limitations": "Upstream committed golden, not a Twiggy run in this experiment; agent visual review only, no user efficiency or human acceptance study."
+}

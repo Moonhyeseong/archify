@@ -1,0 +1,29 @@
+{
+  "kind": "actual-Chromium-screenshots",
+  "captures": [
+    {
+      "artifact": "output/explainer.html",
+      "artifactSha256": "75c4de81da7278272fa4572a2f5ae8402fedcad39f7396760837538e1250d2e0",
+      "screenshot": "screenshots/explanation.png",
+      "capturedAt": "2026-10-25T06:06:10.811Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "deviceScaleFactor": 1
+      }
+    },
+    {
+      "artifact": "output/retained-size.html",
+      "artifactSha256": "dc97aaae63692d5b295d2fb153adef231cb10c72e3117fbd2b495fa9af701e0b",
+      "screenshot": "screenshots/dominator-tree.png",
+      "capturedAt": "2026-10-25T06:05:06.033Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "deviceScaleFactor": 1
+      }
+    }
+  ],
+  "limitations": "Upstream committed golden, not a Twiggy run in this experiment; agent visual review only, no user efficiency or human acceptance study.",
+  "modelBindingRepair": "Explainer now embeds the same retained-size.tree.json spec as standalone native Tree. Original artifact/screenshot/capture retained in before-model-binding/. Standalone HTML byte hash unchanged, so its original screenshot reused."
+}
