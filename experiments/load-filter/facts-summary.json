@@ -1,0 +1,132 @@
+{
+  "kind": "derived-byte-source-dom-summary",
+  "notAnOriginalReceipt": true,
+  "method": "fixed file bytes, source text and actual Chrome DOM only; no Python or upstream code/test executed",
+  "sourceRevision": "849be420e44d47218156adec6ccd9bfa77c4659e",
+  "completeFilesExact": 6,
+  "sourceOrder": {
+    "parentBeforeCheck": true,
+    "loadBeforeOptionalInvoke": true,
+    "defaultInvokeFalse": true
+  },
+  "officialExpectedSource": {
+    "explicitInvokeTrueStatements": 2,
+    "namesT2Assertions": 2
+  },
+  "observations": [
+    {
+      "width": 1440,
+      "theme": "light",
+      "shownSnippetBytesExact": [
+        {
+          "id": "official-code",
+          "sha256": "22514695f238e3c03c1da338d97efcefbc854547d99b65022631fd8e7c63da7b"
+        },
+        {
+          "id": "parent-code",
+          "sha256": "8742a35842b2e2d18acd470997dd9029bdf0955a24935843558eaa3259b62e2e"
+        },
+        {
+          "id": "enabled-code",
+          "sha256": "6d002f0a6bb352f26b918c33371cb7467a155b366075791671ea8333a2c0043f"
+        }
+      ],
+      "officialRows": [
+        "test_enabledep.name == 't2'len(extensions) == 1；names() == ['t2']",
+        "test_enabled_after_loadext.obj and ext.name == 't2'len(extensions) == 1；names() == ['t2']"
+      ],
+      "defaultRows": [
+        "False（默认）不调用None",
+        "True（官方两测试显式）调用；异常时不进入 checkplugin 的返回值"
+      ],
+      "tables": [
+        {
+          "id": "expected-table",
+          "containerWidth": 1238,
+          "tableWidth": 1238
+        },
+        {
+          "id": "order-table",
+          "containerWidth": 1238,
+          "tableWidth": 1238
+        },
+        {
+          "id": "mode-table",
+          "containerWidth": 1238,
+          "tableWidth": 1238
+        }
+      ],
+      "docWidth": 1440,
+      "diagramCount": 0,
+      "sourceLinks": [
+        "https://github.com/openstack/stevedore/blob/849be420e44d47218156adec6ccd9bfa77c4659e/stevedore/tests/test_enabled.py#L17-L44",
+        "https://github.com/openstack/stevedore/blob/849be420e44d47218156adec6ccd9bfa77c4659e/pyproject.toml#L38-L42",
+        "https://github.com/openstack/stevedore/blob/849be420e44d47218156adec6ccd9bfa77c4659e/stevedore/tests/test_extension.py#L30-L41",
+        "https://github.com/openstack/stevedore/blob/849be420e44d47218156adec6ccd9bfa77c4659e/stevedore/extension.py#L329-L341",
+        "https://github.com/openstack/stevedore/blob/849be420e44d47218156adec6ccd9bfa77c4659e/stevedore/enabled.py#L90-L103",
+        "https://github.com/openstack/stevedore/blob/849be420e44d47218156adec6ccd9bfa77c4659e/stevedore/extension.py#L290-L324",
+        "https://github.com/openstack/stevedore/blob/849be420e44d47218156adec6ccd9bfa77c4659e/stevedore/enabled.py#L61-L87",
+        "https://github.com/openstack/stevedore/blob/849be420e44d47218156adec6ccd9bfa77c4659e/stevedore/extension.py#L413-L429"
+      ],
+      "consoleErrors": [],
+      "interactionBoundary": "DOM/source fidelity only; no pointer, keyboard, plugin load or complete browser gate acceptance"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "shownSnippetBytesExact": [
+        {
+          "id": "official-code",
+          "sha256": "22514695f238e3c03c1da338d97efcefbc854547d99b65022631fd8e7c63da7b"
+        },
+        {
+          "id": "parent-code",
+          "sha256": "8742a35842b2e2d18acd470997dd9029bdf0955a24935843558eaa3259b62e2e"
+        },
+        {
+          "id": "enabled-code",
+          "sha256": "6d002f0a6bb352f26b918c33371cb7467a155b366075791671ea8333a2c0043f"
+        }
+      ],
+      "officialRows": [
+        "test_enabledep.name == 't2'len(extensions) == 1；names() == ['t2']",
+        "test_enabled_after_loadext.obj and ext.name == 't2'len(extensions) == 1；names() == ['t2']"
+      ],
+      "defaultRows": [
+        "False（默认）不调用None",
+        "True（官方两测试显式）调用；异常时不进入 checkplugin 的返回值"
+      ],
+      "tables": [
+        {
+          "id": "expected-table",
+          "containerWidth": 332,
+          "tableWidth": 337
+        },
+        {
+          "id": "order-table",
+          "containerWidth": 332,
+          "tableWidth": 332
+        },
+        {
+          "id": "mode-table",
+          "containerWidth": 332,
+          "tableWidth": 384
+        }
+      ],
+      "docWidth": 390,
+      "diagramCount": 0,
+      "sourceLinks": [
+        "https://github.com/openstack/stevedore/blob/849be420e44d47218156adec6ccd9bfa77c4659e/stevedore/tests/test_enabled.py#L17-L44",
+        "https://github.com/openstack/stevedore/blob/849be420e44d47218156adec6ccd9bfa77c4659e/pyproject.toml#L38-L42",
+        "https://github.com/openstack/stevedore/blob/849be420e44d47218156adec6ccd9bfa77c4659e/stevedore/tests/test_extension.py#L30-L41",
+        "https://github.com/openstack/stevedore/blob/849be420e44d47218156adec6ccd9bfa77c4659e/stevedore/extension.py#L329-L341",
+        "https://github.com/openstack/stevedore/blob/849be420e44d47218156adec6ccd9bfa77c4659e/stevedore/enabled.py#L90-L103",
+        "https://github.com/openstack/stevedore/blob/849be420e44d47218156adec6ccd9bfa77c4659e/stevedore/extension.py#L290-L324",
+        "https://github.com/openstack/stevedore/blob/849be420e44d47218156adec6ccd9bfa77c4659e/stevedore/enabled.py#L61-L87",
+        "https://github.com/openstack/stevedore/blob/849be420e44d47218156adec6ccd9bfa77c4659e/stevedore/extension.py#L413-L429"
+      ],
+      "consoleErrors": [],
+      "interactionBoundary": "DOM/source fidelity only; no pointer, keyboard, plugin load or complete browser gate acceptance"
+    }
+  ]
+}

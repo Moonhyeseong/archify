@@ -1,0 +1,261 @@
+{
+  "kind": "derived-root-capture-summary",
+  "notAnOriginalReceipt": true,
+  "html": {
+    "path": "../explainer.html",
+    "sha256": "3334dc29e32f26448d98946b0d34f306f9f3eee86f0298aeadb7b3a643f394d2"
+  },
+  "operator": "root agent using Ego; root viewed all four images",
+  "files": [
+    {
+      "path": "desktop-light.png",
+      "bytes": 477003,
+      "sha256": "cbf3826542353e49e7edc282da7fd60a8228e7b30a3bdeb8a0c0af71bb0d9188",
+      "width": 1440,
+      "height": 3072
+    },
+    {
+      "path": "default-dark.png",
+      "bytes": 207612,
+      "sha256": "570722d85c612fc0970bf2ee232e7194065e5fbd480f4c8394a8d7a13f4de1ab",
+      "width": 1440,
+      "height": 1100
+    },
+    {
+      "path": "mobile-light.png",
+      "bytes": 430927,
+      "sha256": "d1d46f1c2ae182787e463e3b62da069c02a3fab8f98f90078ff7a6c6d8b07626",
+      "width": 390,
+      "height": 4202
+    },
+    {
+      "path": "mobile-default-right-settled.png",
+      "bytes": 109788,
+      "sha256": "166c0da61d9fe89173a277fdb41fb6b1f7aa7c985f927d8f407c08007bd6e218",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "rawBindings": [
+    {
+      "basename": "desktop-observation.json",
+      "bytes": 3403,
+      "sha256": "eaf4fbef7c913c60ef268c13e00b8a930d6fba9c264ddd4862f7ae3b749a05d9"
+    },
+    {
+      "basename": "default-observation.json",
+      "bytes": 3413,
+      "sha256": "08c4a1498f20aac83613e7af39619800871d725e14de2ff4bad250aebc83729d"
+    },
+    {
+      "basename": "mobile-observation.json",
+      "bytes": 3395,
+      "sha256": "e6c508ac83a0e30e46bb40f1b874dcc554367b33dfc4c7ab561320c873d51a13"
+    },
+    {
+      "basename": "mobile-default-settled-observation.json",
+      "bytes": 1330,
+      "sha256": "ffc152ce3120db5d2d362415a51f4a833bf3d564ced8ee3599f13aea13a74cb0"
+    }
+  ],
+  "observations": [
+    {
+      "screenshot": "desktop-light.png",
+      "viewport": [
+        1440,
+        1100
+      ],
+      "theme": "light",
+      "pageWidth": 1440,
+      "hash": "",
+      "scroll": [
+        0,
+        0
+      ],
+      "codes": [
+        {
+          "clientWidth": 1236,
+          "scrollWidth": 1236
+        },
+        {
+          "clientWidth": 1236,
+          "scrollWidth": 1236
+        },
+        {
+          "clientWidth": 1236,
+          "scrollWidth": 1236
+        }
+      ],
+      "tables": [
+        {
+          "width": 1238,
+          "parentWidth": 1238,
+          "parentScrollWidth": 1238,
+          "scrollLeft": 0
+        },
+        {
+          "width": 1238,
+          "parentWidth": 1238,
+          "parentScrollWidth": 1238,
+          "scrollLeft": 0
+        },
+        {
+          "width": 1238,
+          "parentWidth": 1238,
+          "parentScrollWidth": 1238,
+          "scrollLeft": 0
+        }
+      ]
+    },
+    {
+      "screenshot": "default-dark.png",
+      "viewport": [
+        1440,
+        1100
+      ],
+      "theme": "dark",
+      "pageWidth": 1440,
+      "hash": "#default",
+      "scroll": [
+        0,
+        1972
+      ],
+      "codes": [
+        {
+          "clientWidth": 1236,
+          "scrollWidth": 1236
+        },
+        {
+          "clientWidth": 1236,
+          "scrollWidth": 1236
+        },
+        {
+          "clientWidth": 1236,
+          "scrollWidth": 1236
+        }
+      ],
+      "tables": [
+        {
+          "width": 1238,
+          "parentWidth": 1238,
+          "parentScrollWidth": 1238,
+          "scrollLeft": 0
+        },
+        {
+          "width": 1238,
+          "parentWidth": 1238,
+          "parentScrollWidth": 1238,
+          "scrollLeft": 0
+        },
+        {
+          "width": 1238,
+          "parentWidth": 1238,
+          "parentScrollWidth": 1238,
+          "scrollLeft": 0
+        }
+      ]
+    },
+    {
+      "screenshot": "mobile-light.png",
+      "viewport": [
+        390,
+        844
+      ],
+      "theme": "light",
+      "pageWidth": 390,
+      "hash": "",
+      "scroll": [
+        0,
+        0
+      ],
+      "codes": [
+        {
+          "clientWidth": 330,
+          "scrollWidth": 382
+        },
+        {
+          "clientWidth": 330,
+          "scrollWidth": 427
+        },
+        {
+          "clientWidth": 330,
+          "scrollWidth": 449
+        }
+      ],
+      "tables": [
+        {
+          "width": 336.875,
+          "parentWidth": 332,
+          "parentScrollWidth": 337,
+          "scrollLeft": 0
+        },
+        {
+          "width": 332,
+          "parentWidth": 332,
+          "parentScrollWidth": 332,
+          "scrollLeft": 0
+        },
+        {
+          "width": 384.28125,
+          "parentWidth": 332,
+          "parentScrollWidth": 384,
+          "scrollLeft": 0
+        }
+      ]
+    }
+  ],
+  "horizontalWheel": {
+    "screenshot": "mobile-default-right-settled.png",
+    "method": "actual horizontal mouse wheel120 then wait within same invocation before DOM readback and screenshot; not touch",
+    "before": {
+      "viewport": [
+        390,
+        844
+      ],
+      "pageWidth": 390,
+      "hash": "#default",
+      "scroll": [
+        0,
+        3079
+      ],
+      "scrollLeft": 0,
+      "clientWidth": 332,
+      "scrollWidth": 384,
+      "text": "invoke_on_load\t显式调用 plugin\t正常返回给 check 的 obj\nFalse（默认）\t\n不调用\n\t\nNone\n\nTrue（官方两测试显式）\t\n调用；异常时不进入 check\n\t\nplugin 的返回值",
+      "rect": {
+        "x": 29,
+        "y": 153.375,
+        "w": 332,
+        "h": 137.2890625
+      }
+    },
+    "after": {
+      "viewport": [
+        390,
+        844
+      ],
+      "pageWidth": 390,
+      "hash": "#default",
+      "scroll": [
+        0,
+        3079
+      ],
+      "scrollLeft": 52.5,
+      "clientWidth": 332,
+      "scrollWidth": 384,
+      "text": "invoke_on_load\t显式调用 plugin\t正常返回给 check 的 obj\nFalse（默认）\t\n不调用\n\t\nNone\n\nTrue（官方两测试显式）\t\n调用；异常时不进入 check\n\t\nplugin 的返回值",
+      "rect": {
+        "x": 29,
+        "y": 153.375,
+        "w": 332,
+        "h": 137.2890625
+      }
+    },
+    "visualObservation": "obj column visible after scroll; left invoke_on_load column partly clipped",
+    "privateFailedProcess": "Earlier immediate read remained at scrollLeft0; old right image and cross-invocation timeout retained privately, not accepted as scroll success. Ego viewport reset between invocations."
+  },
+  "limits": [
+    "Two mobile tables retain local horizontal overflow; source pre long lines remain unchanged.",
+    "No AT, keyboard, OS, touch device, Python, plugin, upstream tests or user comprehension acceptance."
+  ]
+}

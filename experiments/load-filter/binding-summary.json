@@ -1,0 +1,101 @@
+{
+  "kind": "portable-file-bindings",
+  "runtimeBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 7954,
+      "sha256": "4914aad21a58a8797581271a92594bd42e20477f0ee34538ab0f9c12cf9d9798"
+    },
+    {
+      "path": "audit.mjs",
+      "bytes": 4799,
+      "sha256": "d26d2071e557f7b00952628d9f4f0ee7caed2344d9c222ac8cc04ea8cc3e697d"
+    },
+    {
+      "path": "evidence-summary.json",
+      "bytes": 3989,
+      "sha256": "f444deb963a2286cb3a2677a8972b4f5a786a27cbb6b3fe6fa691877e3437f25"
+    },
+    {
+      "path": "explainer.html",
+      "bytes": 181368,
+      "sha256": "3334dc29e32f26448d98946b0d34f306f9f3eee86f0298aeadb7b3a643f394d2"
+    },
+    {
+      "path": "facts-summary.json",
+      "bytes": 5606,
+      "sha256": "067fc45402ae9ec2201689999d18c9c144d4dda0f1bb96036301e6c4f56fd20f"
+    },
+    {
+      "path": "input.explainer.json",
+      "bytes": 11124,
+      "sha256": "c10a68f1ed3f9f3497d5e10fb505e9443eb2b53b39b1b8a7629b930e1af0566a"
+    },
+    {
+      "path": "prepare.mjs",
+      "bytes": 8382,
+      "sha256": "c77c147c33533a892be91ccc9a203ee153d783edaf76508954de14d55a2a09d4"
+    },
+    {
+      "path": "screenshots/capture.json",
+      "bytes": 6545,
+      "sha256": "10e27eb1d1e44d70d74e82f64e928c24be2fac94ac4bfa8cb746b18a61be6009"
+    },
+    {
+      "path": "screenshots/default-dark.png",
+      "bytes": 207612,
+      "sha256": "570722d85c612fc0970bf2ee232e7194065e5fbd480f4c8394a8d7a13f4de1ab"
+    },
+    {
+      "path": "screenshots/desktop-light.png",
+      "bytes": 477003,
+      "sha256": "cbf3826542353e49e7edc282da7fd60a8228e7b30a3bdeb8a0c0af71bb0d9188"
+    },
+    {
+      "path": "screenshots/mobile-default-right-settled.png",
+      "bytes": 109788,
+      "sha256": "166c0da61d9fe89173a277fdb41fb6b1f7aa7c985f927d8f407c08007bd6e218"
+    },
+    {
+      "path": "screenshots/mobile-light.png",
+      "bytes": 430927,
+      "sha256": "d1d46f1c2ae182787e463e3b62da069c02a3fab8f98f90078ff7a6c6d8b07626"
+    },
+    {
+      "path": "source-manifest.json",
+      "bytes": 2770,
+      "sha256": "2f549abccfd41fdcbd26bf2cb57cbca327f132f3428d874f66c173ffb179f17d"
+    },
+    {
+      "path": "source/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "source/pyproject.toml",
+      "bytes": 2407,
+      "sha256": "487d888a41cd0e52ff0c85f19e11416fa1691e8ba0a39aa97ea2abed8b1ad7c8"
+    },
+    {
+      "path": "source/stevedore/enabled.py",
+      "bytes": 4173,
+      "sha256": "894cd4833adefc6c67ae58d65ba253347f9da0146d534e3ce11a97d4dc461e4c"
+    },
+    {
+      "path": "source/stevedore/extension.py",
+      "bytes": 16895,
+      "sha256": "09c1f96fc982f1568f44495bc4bf3b3efebb43fe5cb0e49ba689c297ec84a7cf"
+    },
+    {
+      "path": "source/stevedore/tests/test_enabled.py",
+      "bytes": 1506,
+      "sha256": "4da45c8ea50e88575ff057998827a3a11619b14fcb411559957d48969837fac2"
+    },
+    {
+      "path": "source/stevedore/tests/test_extension.py",
+      "bytes": 12982,
+      "sha256": "661eb30afcd24c0096ec5d78957a51e357d3557d0312ee6721e2992a7ecd58e5"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "repository": "https://github.com/openstack/stevedore",
+  "revision": "849be420e44d47218156adec6ccd9bfa77c4659e",
+  "license": "Apache-2.0; full unchanged source/LICENSE",
+  "files": [
+    {
+      "path": "LICENSE",
+      "local": "source/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "url": "https://github.com/openstack/stevedore/blob/849be420e44d47218156adec6ccd9bfa77c4659e/LICENSE"
+    },
+    {
+      "path": "stevedore/tests/test_enabled.py",
+      "local": "source/stevedore/tests/test_enabled.py",
+      "bytes": 1506,
+      "sha256": "4da45c8ea50e88575ff057998827a3a11619b14fcb411559957d48969837fac2",
+      "url": "https://github.com/openstack/stevedore/blob/849be420e44d47218156adec6ccd9bfa77c4659e/stevedore/tests/test_enabled.py"
+    },
+    {
+      "path": "stevedore/enabled.py",
+      "local": "source/stevedore/enabled.py",
+      "bytes": 4173,
+      "sha256": "894cd4833adefc6c67ae58d65ba253347f9da0146d534e3ce11a97d4dc461e4c",
+      "url": "https://github.com/openstack/stevedore/blob/849be420e44d47218156adec6ccd9bfa77c4659e/stevedore/enabled.py"
+    },
+    {
+      "path": "stevedore/extension.py",
+      "local": "source/stevedore/extension.py",
+      "bytes": 16895,
+      "sha256": "09c1f96fc982f1568f44495bc4bf3b3efebb43fe5cb0e49ba689c297ec84a7cf",
+      "url": "https://github.com/openstack/stevedore/blob/849be420e44d47218156adec6ccd9bfa77c4659e/stevedore/extension.py"
+    },
+    {
+      "path": "stevedore/tests/test_extension.py",
+      "local": "source/stevedore/tests/test_extension.py",
+      "bytes": 12982,
+      "sha256": "661eb30afcd24c0096ec5d78957a51e357d3557d0312ee6721e2992a7ecd58e5",
+      "url": "https://github.com/openstack/stevedore/blob/849be420e44d47218156adec6ccd9bfa77c4659e/stevedore/tests/test_extension.py"
+    },
+    {
+      "path": "pyproject.toml",
+      "local": "source/pyproject.toml",
+      "bytes": 2407,
+      "sha256": "487d888a41cd0e52ff0c85f19e11416fa1691e8ba0a39aa97ea2abed8b1ad7c8",
+      "url": "https://github.com/openstack/stevedore/blob/849be420e44d47218156adec6ccd9bfa77c4659e/pyproject.toml"
+    }
+  ],
+  "shownSnippets": [
+    {
+      "id": "official-code",
+      "path": "stevedore/tests/test_enabled.py",
+      "lines": [
+        17,
+        44
+      ]
+    },
+    {
+      "id": "parent-code",
+      "path": "stevedore/extension.py",
+      "lines": [
+        329,
+        341
+      ]
+    },
+    {
+      "id": "enabled-code",
+      "path": "stevedore/enabled.py",
+      "lines": [
+        90,
+        103
+      ]
+    }
+  ],
+  "boundary": "Complete selected original files; not a reproduced installed environment. Snippets are literal fixed-file slices; URL source metadata is not CLI verified repository evidence."
+}

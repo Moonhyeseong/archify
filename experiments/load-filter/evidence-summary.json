@@ -1,0 +1,123 @@
+{
+  "kind": "derived-content-experiment-evidence",
+  "runtimeBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "sourceRevision": "849be420e44d47218156adec6ccd9bfa77c4659e",
+  "artifact": {
+    "path": "explainer.html",
+    "bytes": 181368,
+    "sha256": "3334dc29e32f26448d98946b0d34f306f9f3eee86f0298aeadb7b3a643f394d2"
+  },
+  "input": {
+    "path": "input.explainer.json",
+    "sha256": "c10a68f1ed3f9f3497d5e10fb505e9443eb2b53b39b1b8a7629b930e1af0566a",
+    "bytes": 11124
+  },
+  "normalPublicFinalize": true,
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "not-run"
+  },
+  "diagnostics": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "upstreamExecution": false,
+  "wholeBrowserGate": "not requested",
+  "sourceCards": "fixed URL metadata, not verified external Git excerpts",
+  "factsProjection": "facts-summary.json",
+  "rootCapture": {
+    "path": "screenshots/capture.json",
+    "sha256": "10e27eb1d1e44d70d74e82f64e928c24be2fac94ac4bfa8cb746b18a61be6009",
+    "images": 4,
+    "method": "root Ego actual capture and image view; same-invocation wheel then settled DOM readback; no AT/keyboard/OS/upstream execution"
+  },
+  "independentReview": "scout_code_maps completed read-only source/semantics, bounded table-compression and final raw/capture/doc bindings review: source diff, 19 public files, four PNG original bytes/IHDR, four raw observation hashes, HTML/finalize consistency; no rerun, upstream execution, browser, personal PNG viewing or AT acceptance; root image viewing reused",
+  "untrackedDiffCheck": [
+    {
+      "path": "README.md",
+      "exitCode": 1,
+      "whitespaceDiagnosticLines": 0
+    },
+    {
+      "path": "prepare.mjs",
+      "exitCode": 1,
+      "whitespaceDiagnosticLines": 0
+    },
+    {
+      "path": "audit.mjs",
+      "exitCode": 1,
+      "whitespaceDiagnosticLines": 0
+    },
+    {
+      "path": "input.explainer.json",
+      "exitCode": 1,
+      "whitespaceDiagnosticLines": 0
+    },
+    {
+      "path": "explainer.html",
+      "exitCode": 1,
+      "whitespaceDiagnosticLines": 0
+    }
+  ],
+  "noIndexMeaning": "Exit 1 means no-index files differ; consult diagnostic count, no frozen original normalization.",
+  "rawBindings": [
+    {
+      "basename": "finalize-1.stdout.json",
+      "bytes": 2070,
+      "sha256": "b8ee7fcffeb03f3ca11c158964b46d398fd79fa54780bd5680a44e29992bb9f4"
+    },
+    {
+      "basename": "finalize-2.stdout.json",
+      "bytes": 1192,
+      "sha256": "9d83e6a39fb9336d9c3dafa89e8e461549446bbf61f9fbeab1be8a5f840c0522"
+    },
+    {
+      "basename": "finalize-2.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "basename": "explainer.delivery.json",
+      "bytes": 764,
+      "sha256": "1e0244fbd888f8337d1011b2c316df24eccf303006387b70a64c350cceafaf6a"
+    },
+    {
+      "basename": "facts-audit.json",
+      "bytes": 4901,
+      "sha256": "fc1fe17e0ce679832bd1985028cec67ddcd98bad1bf14608d334ef06eb63994e"
+    },
+    {
+      "basename": "facts-audit.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "basename": "finalize-3.stdout.json",
+      "bytes": 1192,
+      "sha256": "37925703b4d2d827a7dc953d1fddf141f69eb9f42ae3e670e089b560b11f85c5"
+    },
+    {
+      "basename": "finalize-3.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "basename": "explainer-3.delivery.json",
+      "bytes": 764,
+      "sha256": "f18e4e7ec577af9fee970cd31c2ceabac4facdd37d96ce617d1799d024461c44"
+    },
+    {
+      "basename": "facts-audit-3.json",
+      "bytes": 5529,
+      "sha256": "5e9095f2775134819245cdd72d8f762d5298d2139453bcd247fa17d0eb256f9f"
+    },
+    {
+      "basename": "facts-audit-3.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}
