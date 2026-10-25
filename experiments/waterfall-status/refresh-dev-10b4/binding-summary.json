@@ -1,0 +1,97 @@
+{
+  "kind": "derived final public/source ledger; no self-reference",
+  "softwareBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "historicalCandidate": "e20acd6d6c0083f6b6ddecaf7bb250becfbca228",
+  "files": {
+    "README.md": {
+      "sha256": "c42750acdb7a7fb59613086a4f84581745e1b19675fd41268c4a501b9ed2cbe7",
+      "bytes": 8231
+    },
+    "archive-finalize-summary.json": {
+      "sha256": "5119f8f8905941d5473a34eed67ac8babbf09a7e324f9e68df40d6bd1006c6ac",
+      "bytes": 1058
+    },
+    "base.html": {
+      "sha256": "32a1a8f8ada68d630fc4607c23a17cafdeec2688cf6b6df7a1ff0b207b2fc9fa",
+      "bytes": 856425
+    },
+    "candidate-finalize-summary.json": {
+      "sha256": "6ae4bb0a3c63a19ca602d9899cd01bb438e2e62180fc1be403717f720f409ec9",
+      "bytes": 1037
+    },
+    "candidate.html": {
+      "sha256": "db973898a4d74065a6a963f24d0bb8cdb925291fc2f29832f8c98069588d87f5",
+      "bytes": 856516
+    },
+    "checks-summary.json": {
+      "sha256": "d513faba5788df7eee864772010f38d3ddebd9b97ce1c00c45b50a818ff29059",
+      "bytes": 10056
+    },
+    "comparison.json": {
+      "sha256": "987fe2bd8f139ba3c304d2eb671eb1d9e4ff14773ca8bcbcf56e511e2bdb622e",
+      "bytes": 5344
+    },
+    "input.waterfall.json": {
+      "sha256": "891141aa7a0d304d0ebd64f396e7c0444cd82f0a9054351103026ea2af3e047b",
+      "bytes": 815
+    },
+    "screenshots/base-dark.png": {
+      "sha256": "8f5707549ed0190af4181142478d891988a2a7bdcb68e7ee685c66cf3cdbab6f",
+      "bytes": 72576
+    },
+    "screenshots/base-light.png": {
+      "sha256": "ee52c35638e8d88f05d894b58fedd19b7b42de1ab51d8dfca5dae3934293554c",
+      "bytes": 78318
+    },
+    "screenshots/base-op_b.png": {
+      "sha256": "1f10d870ec2af20298de2dd9126635dda8785824a8dd2b980fc47f9a4fed25ad",
+      "bytes": 117622
+    },
+    "screenshots/candidate-dark.png": {
+      "sha256": "13ec6d92acffcad984d11cbf180cfb961892f0b15fe51e1089b0fdb9c3f89e49",
+      "bytes": 74335
+    },
+    "screenshots/candidate-light.png": {
+      "sha256": "d149f17fc7e478573091723b5d00fcec2f24ca7febb4554c79e094299b12d409",
+      "bytes": 80162
+    },
+    "screenshots/candidate-op_b.png": {
+      "sha256": "e69fe90f3fb6b4205d58ed817487244226c3c8f278af72a7919b7708728b74d5",
+      "bytes": 120653
+    },
+    "screenshots/candidate-op_c.png": {
+      "sha256": "9022b22271a140a70cc00916eec836a03e892b9670e6defeba5fb502fbe0f7e6",
+      "bytes": 121348
+    },
+    "screenshots/capture-summary.json": {
+      "sha256": "fc90907451aeae89b4b8904f7c199a9e15e86a74639b6bbae57bda5da14601ce",
+      "bytes": 10565
+    },
+    "unchanged-examples.json": {
+      "sha256": "5dcbfe63fa6140f0ded20fc2a860751698f1409c085fc20ee89b68e6daf9702d",
+      "bytes": 1164
+    },
+    "zip-summary.json": {
+      "sha256": "f02ba568e1b9cd25dd4991bd859713b58356cd637f8f6d31ad4460d57963ec3f",
+      "bytes": 581
+    }
+  },
+  "sourceBindings": {
+    "archify/renderers/waterfall/render-waterfall.mjs": {
+      "sha256": "3469a2bd4ec532f42f1a62cf3c8122287a21a84d3acf3a7a0b4d9615c9748010",
+      "bytes": 23416
+    },
+    "test/waterfall-rendering.test.mjs": {
+      "sha256": "deee4ad773f48a10879252ad31d6cb44b56331938fafe384f58e240340ffc34e",
+      "bytes": 13805
+    },
+    "archify.zip": {
+      "sha256": "3011fa5f30bd2d02987430159e9cacf4382c92595c7813bf9e40740c40b4e1f9",
+      "bytes": 6987436
+    },
+    "experiments/waterfall-status/README.md": {
+      "sha256": "1bdefc3a1f8665233f15ddad63ac53582b8acaa69e0bbbe0135cc71fa1e8eeeb",
+      "bytes": 9707
+    }
+  }
+}

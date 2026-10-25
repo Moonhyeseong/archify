@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "diagram_type": "waterfall",
+  "meta": {
+    "title": "Constructed three-row status probe",
+    "subtitle": "Original constructed input for read-only inspection; illustrative timing, not a recorded run.",
+    "output": "probe.html",
+    "evidence": "illustrative",
+    "unit": "ms",
+    "locale": "en"
+  },
+  "spans": [
+    {
+      "id": "op_a",
+      "name": "Operation A",
+      "service": "worker",
+      "start": 0,
+      "duration": 100,
+      "status": "ok"
+    },
+    {
+      "id": "op_b",
+      "name": "Operation B",
+      "service": "worker",
+      "start": 0,
+      "duration": 100,
+      "status": "error"
+    },
+    {
+      "id": "op_c",
+      "name": "Operation C",
+      "service": "worker",
+      "start": 0,
+      "duration": 100,
+      "status": "cancelled"
+    }
+  ]
+}

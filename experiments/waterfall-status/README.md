@@ -72,3 +72,7 @@ node archify/bin/archify.mjs finalize waterfall experiments/waterfall-status/fix
 - [Checks and coverage](evidence/checks-summary.json) record actual scope. No complete-repository/Windows/cross-AT suite, release or live installation occurred.
 
 **Generation benchmark justified exemption:** this is a maintainer-scoped renderer-local exposure of explicit existing status, with no Agent generation or Skill-rule change. Two existing public no-status examples are byte-identical; constructed status cases demonstrate that supplied facts become readable. They do not establish real-Agent authoring benefit, better generation accuracy or saved authoring time. No unrelated benchmark or full-repository test expansion is warranted by this slice.
+
+## Refresh on dev 10b4
+
+[Fresh same-input comparison and evidence](refresh-dev-10b4/README.md) use fixed dev `10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0` and the same standard quality on both sides. The new directory retains seven actual screenshots, separate DOM/native-AX evidence, current focused and finalize results, and a normally rebuilt canonical ZIP comparison. The historical files and results above keep their original revision bindings; only this entry is appended. New software uses Apache-2.0 with retained notices, separately from the pinned historical MIT source.

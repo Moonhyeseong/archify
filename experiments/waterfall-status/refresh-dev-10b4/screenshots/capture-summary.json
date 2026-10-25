@@ -1,0 +1,295 @@
+{
+  "kind": "derived root capture summary; not raw DOM, AX or screen-reader transcript",
+  "softwareBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "input": {
+    "path": "input.waterfall.json",
+    "sha256": "891141aa7a0d304d0ebd64f396e7c0444cd82f0a9054351103026ea2af3e047b",
+    "bytes": 815
+  },
+  "artifacts": {
+    "base": {
+      "path": "base.html",
+      "sha256": "32a1a8f8ada68d630fc4607c23a17cafdeec2688cf6b6df7a1ff0b207b2fc9fa",
+      "bytes": 856425
+    },
+    "candidate": {
+      "path": "candidate.html",
+      "sha256": "db973898a4d74065a6a963f24d0bb8cdb925291fc2f29832f8c98069588d87f5",
+      "bytes": 856516
+    }
+  },
+  "screenshots": [
+    {
+      "path": "screenshots/base-light.png",
+      "sha256": "ee52c35638e8d88f05d894b58fedd19b7b42de1ab51d8dfca5dae3934293554c",
+      "bytes": 78318,
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "viewportCssPixels": [
+        1440,
+        1000
+      ],
+      "rootViewed": true,
+      "state": "base-light"
+    },
+    {
+      "path": "screenshots/candidate-light.png",
+      "sha256": "d149f17fc7e478573091723b5d00fcec2f24ca7febb4554c79e094299b12d409",
+      "bytes": 80162,
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "viewportCssPixels": [
+        1440,
+        1000
+      ],
+      "rootViewed": true,
+      "state": "candidate-light"
+    },
+    {
+      "path": "screenshots/base-dark.png",
+      "sha256": "8f5707549ed0190af4181142478d891988a2a7bdcb68e7ee685c66cf3cdbab6f",
+      "bytes": 72576,
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "viewportCssPixels": [
+        1440,
+        1000
+      ],
+      "rootViewed": true,
+      "state": "base-dark"
+    },
+    {
+      "path": "screenshots/candidate-dark.png",
+      "sha256": "13ec6d92acffcad984d11cbf180cfb961892f0b15fe51e1089b0fdb9c3f89e49",
+      "bytes": 74335,
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "viewportCssPixels": [
+        1440,
+        1000
+      ],
+      "rootViewed": true,
+      "state": "candidate-dark"
+    },
+    {
+      "path": "screenshots/base-op_b.png",
+      "sha256": "1f10d870ec2af20298de2dd9126635dda8785824a8dd2b980fc47f9a4fed25ad",
+      "bytes": 117622,
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "viewportCssPixels": [
+        1440,
+        1000
+      ],
+      "rootViewed": true,
+      "state": "base-op_b"
+    },
+    {
+      "path": "screenshots/candidate-op_b.png",
+      "sha256": "e69fe90f3fb6b4205d58ed817487244226c3c8f278af72a7919b7708728b74d5",
+      "bytes": 120653,
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "viewportCssPixels": [
+        1440,
+        1000
+      ],
+      "rootViewed": true,
+      "state": "candidate-op_b"
+    },
+    {
+      "path": "screenshots/candidate-op_c.png",
+      "sha256": "9022b22271a140a70cc00916eec836a03e892b9670e6defeba5fb502fbe0f7e6",
+      "bytes": 121348,
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "viewportCssPixels": [
+        1440,
+        1000
+      ],
+      "rootViewed": true,
+      "state": "candidate-op_c"
+    }
+  ],
+  "rawFiles": {
+    "base-checks.json": {
+      "sha256": "480b04e63db4f942b31c68bce8b349576f03b102c5e7c4ff5f1ad11bbc82507d",
+      "bytes": 2165
+    },
+    "candidate-checks.json": {
+      "sha256": "785b609c5b99161a417fd75fe764dc1369e5e3ed8a3dc299cbe260f1f23f2283",
+      "bytes": 2577
+    },
+    "base-snapshot.txt": {
+      "sha256": "13bd8cb7476bd4f1cd8ecbbb81a71b9fc13d2eda8e1fbdcc43cbb7ddbcee4cd7",
+      "bytes": 3256
+    },
+    "candidate-snapshot.txt": {
+      "sha256": "56f815209fc346148e9842c7a04f4ffc4e64332f190f21396327358385b7a1ba",
+      "bytes": 3322
+    },
+    "driver-correction.json": {
+      "sha256": "e9b7af2025971a20a7dfa47a45a966f8a503b86449bd1032ac1714d640b9cadf",
+      "bytes": 293
+    }
+  },
+  "observations": {
+    "base": {
+      "capturedAt": "2026-10-25T10:28:20.943Z",
+      "kind": "base",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "records": [
+        {
+          "state": "overview-light",
+          "theme": "light",
+          "nodes": [
+            {
+              "id": "op_a",
+              "label": "Focus Operation A, 0\u2013100 ms \u00b7 100 ms \u00b7 100% of 100 ms wall-clock, worker",
+              "sublabel": "0\u2013100 ms \u00b7 100 ms \u00b7 100% of 100 ms wall-clock",
+              "start": "0",
+              "end": "100",
+              "duration": "100",
+              "status": "ok",
+              "text": "Operation A \u00b7 0\u2013100 ms \u00b7 100 ms \u00b7 100% of 100 ms wall-clock \u00b7 worker\n          \n          \n          \n          \n          Operation A\n          100 ms"
+            },
+            {
+              "id": "op_b",
+              "label": "Focus Operation B, 0\u2013100 ms \u00b7 100 ms \u00b7 100% of 100 ms wall-clock, worker",
+              "sublabel": "0\u2013100 ms \u00b7 100 ms \u00b7 100% of 100 ms wall-clock",
+              "start": "0",
+              "end": "100",
+              "duration": "100",
+              "status": "error",
+              "text": "Operation B \u00b7 0\u2013100 ms \u00b7 100 ms \u00b7 100% of 100 ms wall-clock \u00b7 worker\n          \n          \n          \n          \n          Operation B\n          100 ms"
+            },
+            {
+              "id": "op_c",
+              "label": "Focus Operation C, 0\u2013100 ms \u00b7 100 ms \u00b7 100% of 100 ms wall-clock, worker",
+              "sublabel": "0\u2013100 ms \u00b7 100 ms \u00b7 100% of 100 ms wall-clock",
+              "start": "0",
+              "end": "100",
+              "duration": "100",
+              "status": "cancelled",
+              "text": "Operation C \u00b7 0\u2013100 ms \u00b7 100 ms \u00b7 100% of 100 ms wall-clock \u00b7 worker\n          \n          \n          \n          \n          Operation C\n          100 ms"
+            }
+          ],
+          "svgViewBox": "0 0 1035 233"
+        },
+        {
+          "state": "overview-dark",
+          "theme": "dark"
+        },
+        {
+          "state": "passport",
+          "id": "op_b",
+          "text": "SEMANTIC PASSPORT\nOperation B\n0\u2013100 ms \u00b7 100 ms \u00b7 100% of 100 ms wall-clock\nSECURITY\nworker\nop_b\n0 outgoing \u00b7 0 incoming\nAUTHORED REACH\nUpstream\n0\nDownstream\n0\n\u00d7\nCopy link\n\nNo connected relationships"
+        }
+      ]
+    },
+    "candidate": {
+      "capturedAt": "2026-10-25T10:28:26.878Z",
+      "kind": "candidate",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "records": [
+        {
+          "state": "overview-light",
+          "theme": "light",
+          "nodes": [
+            {
+              "id": "op_a",
+              "label": "Focus Operation A, 0\u2013100 ms \u00b7 100 ms \u00b7 100% of 100 ms wall-clock, worker",
+              "sublabel": "0\u2013100 ms \u00b7 100 ms \u00b7 100% of 100 ms wall-clock",
+              "start": "0",
+              "end": "100",
+              "duration": "100",
+              "status": "ok",
+              "text": "Operation A \u00b7 0\u2013100 ms \u00b7 100 ms \u00b7 100% of 100 ms wall-clock \u00b7 worker\n          \n          \n          \n          \n          Operation A\n          100 ms"
+            },
+            {
+              "id": "op_b",
+              "label": "Focus Operation B, 0\u2013100 ms \u00b7 100 ms \u00b7 Error \u00b7 100% of 100 ms wall-clock, worker",
+              "sublabel": "0\u2013100 ms \u00b7 100 ms \u00b7 Error \u00b7 100% of 100 ms wall-clock",
+              "start": "0",
+              "end": "100",
+              "duration": "100",
+              "status": "error",
+              "text": "Operation B \u00b7 0\u2013100 ms \u00b7 100 ms \u00b7 Error \u00b7 100% of 100 ms wall-clock \u00b7 worker\n          \n          \n          \n          \n          Operation B\n          100 ms \u00b7 Error"
+            },
+            {
+              "id": "op_c",
+              "label": "Focus Operation C, 0\u2013100 ms \u00b7 100 ms \u00b7 Cancelled \u00b7 100% of 100 ms wall-clock, worker",
+              "sublabel": "0\u2013100 ms \u00b7 100 ms \u00b7 Cancelled \u00b7 100% of 100 ms wall-clock",
+              "start": "0",
+              "end": "100",
+              "duration": "100",
+              "status": "cancelled",
+              "text": "Operation C \u00b7 0\u2013100 ms \u00b7 100 ms \u00b7 Cancelled \u00b7 100% of 100 ms wall-clock \u00b7 worker\n          \n          \n          \n          \n          Operation C\n          100 ms \u00b7 Cancelled"
+            }
+          ],
+          "svgViewBox": "0 0 1114 233"
+        },
+        {
+          "state": "overview-dark",
+          "theme": "dark"
+        },
+        {
+          "state": "passport",
+          "id": "op_b",
+          "text": "SEMANTIC PASSPORT\nOperation B\n0\u2013100 ms \u00b7 100 ms \u00b7 Error \u00b7 100% of 100 ms wall-clock\nSECURITY\nworker\nop_b\n0 outgoing \u00b7 0 incoming\nAUTHORED REACH\nUpstream\n0\nDownstream\n0\n\u00d7\nCopy link\n\nNo connected relationships"
+        },
+        {
+          "state": "passport",
+          "id": "op_c",
+          "text": "SEMANTIC PASSPORT\nOperation C\n0\u2013100 ms \u00b7 100 ms \u00b7 Cancelled \u00b7 100% of 100 ms wall-clock\nEXTERNAL\nworker\nop_c\n0 outgoing \u00b7 0 incoming\nAUTHORED REACH\nUpstream\n0\nDownstream\n0\n\u00d7\nCopy link\n\nNo connected relationships"
+        }
+      ]
+    }
+  },
+  "driverCorrection": {
+    "kind": "derived driver failure record",
+    "failure": "Initial passport observation queried aria-label; region actually uses aria-labelledby and returned null. No product defect. Base overview captures were produced; final records and images captured below after inspecting actual DOM."
+  },
+  "limits": [
+    "Seven original PNG bytes were copied unchanged; root captured and viewed each.",
+    "DOM aria-label/sublabel values are not independently screen-reader output.",
+    "The native AX snapshot is accessible-tree text, not spoken output or AT acceptance.",
+    "Status is visible before existing Passport ellipsis; complete wall-clock tail visibility is NOT claimed.",
+    "Canvas width changes 1035 to 1114 to reserve added label text; timing data are unchanged.",
+    "Constructed illustrative input, not a natural incident or measured workload."
+  ],
+  "nativeAXSnapshotDurationTextMatches": {
+    "base": [
+      "100 ms",
+      "100 ms",
+      "100 ms",
+      "100 ms"
+    ],
+    "candidate": [
+      "100 ms",
+      "100 ms",
+      "100 ms \u00b7 Error",
+      "100 ms \u00b7 Cancelled"
+    ]
+  }
+}

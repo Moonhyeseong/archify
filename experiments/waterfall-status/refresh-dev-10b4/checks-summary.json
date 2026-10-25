@@ -1,0 +1,253 @@
+{
+  "kind": "derived scoped verification and historical binding record; not raw logs",
+  "softwareBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "historicalCandidate": "e20acd6d6c0083f6b6ddecaf7bb250becfbca228",
+  "candidateIdentity": "Uncommitted merge. Source/test and artifacts are individually SHA-bound.",
+  "sourceBindings": {
+    "archify/renderers/waterfall/render-waterfall.mjs": {
+      "sha256": "3469a2bd4ec532f42f1a62cf3c8122287a21a84d3acf3a7a0b4d9615c9748010",
+      "bytes": 23416
+    },
+    "test/waterfall-rendering.test.mjs": {
+      "sha256": "deee4ad773f48a10879252ad31d6cb44b56331938fafe384f58e240340ffc34e",
+      "bytes": 13805
+    }
+  },
+  "sourceScope": "Only prior duration/status label change above dev; no schema/locale/Viewer edit, new-dev layout-json stdout drain kept.",
+  "testValue": "Reuse existing visible/semantic text, numeric timing, locale/literal and incomplete-boundary behavior tests. No coordinates frozen or new tests added.",
+  "focusedRun": {
+    "command": "node scripts/run-tests.mjs --require-files test/waterfall-rendering.test.mjs test/core-smoke.test.mjs test/generated-artifact-xml.test.mjs",
+    "passed": 34,
+    "failed": 1,
+    "skipped": 0,
+    "failure": "XML test module failed before execution because local saxes dependency was absent; Waterfall 15 and core 19 passed.",
+    "log": {
+      "sha256": "a935689958be4c40aaf0d4fa65c5cb682bb2f06d295f8af0607060a2c130e080",
+      "bytes": 9032
+    }
+  },
+  "xmlRetry": {
+    "command": "node scripts/run-tests.mjs --require-files test/generated-artifact-xml.test.mjs",
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "repair": "Reused the existing local saxes dependency without installation or lockfile changes; reran only the failed file.",
+    "log": {
+      "sha256": "22799364a2cd47958db4a61ca7895d891ecfa2488ca72e2abf49a3dff9799d63",
+      "bytes": 765
+    }
+  },
+  "baseRegression": {
+    "command": "Same existing explicit-error/cancelled test copied to temporary fixed-dev tree",
+    "passed": 0,
+    "failed": 1,
+    "skipped": 0,
+    "reason": "Expected baseline failure: status-bearing visible and semantic labels still lack Error/Cancelled.",
+    "log": {
+      "sha256": "778b072644ba6fbc3ee354627acee0aad0f2d757642d3f29da17093f823a3cc1",
+      "bytes": 1442
+    }
+  },
+  "generatedChecks": {
+    "commands": [
+      "generate-viewer --check",
+      "generate-brand-marks --check",
+      "generate-validators --check",
+      "check-release-identity"
+    ],
+    "allExitZero": true,
+    "log": {
+      "sha256": "0a5812d3e14dd70da9fb04b7671e107688e987b3d19a0a3a42ee69bae22cc7dc",
+      "bytes": 33
+    }
+  },
+  "unaffectedExamples": "unchanged-examples.json records same-profile base/candidate equality and matching-showcase tracked-dev equality. No generated example refresh is retained.",
+  "historicalFilesPreserved": {
+    "experiments/waterfall-status/base.html": {
+      "sha256": "608f95e84821e36e24016edccf1c447c0bdd3c7251dbd39578b0174c93a28cf2",
+      "bytes": 810820
+    },
+    "experiments/waterfall-status/input.waterfall.json": {
+      "sha256": "891141aa7a0d304d0ebd64f396e7c0444cd82f0a9054351103026ea2af3e047b",
+      "bytes": 815
+    },
+    "experiments/waterfall-status/localized.html": {
+      "sha256": "267495051f959f185259fbb3e4cf4986dce3ec6cc847f8215113d27cfa2b1116",
+      "bytes": 810649
+    },
+    "experiments/waterfall-status/candidate.html": {
+      "sha256": "045a99d1e92eb6fa9bd6c0ffbea1ead07b3eb94499f134389db3c1f3524493da",
+      "bytes": 810911
+    },
+    "experiments/waterfall-status/screenshots/op_c.png": {
+      "sha256": "3f1119305fcc536ed77edac99c5eb3cb380fe47bb87834c8f21586cf85b4b7ad",
+      "bytes": 116599
+    },
+    "experiments/waterfall-status/screenshots/op_b.png": {
+      "sha256": "67f49acdae66634e046928060a6e982c80aaf9c34bc60480b4a5f21094e0d735",
+      "bytes": 120159
+    },
+    "experiments/waterfall-status/screenshots/observation.json": {
+      "sha256": "3f62fde53011a539b910c7e2c83abd5c232fa2e89f73bf7defdaaa850fd06f7f",
+      "bytes": 2351
+    },
+    "experiments/waterfall-status/screenshots/overview-dark.png": {
+      "sha256": "314e2345d3cbaa3c823c5514dc10363d085983e3114f639376871ceb3d30a575",
+      "bytes": 73735
+    },
+    "experiments/waterfall-status/screenshots/overview.png": {
+      "sha256": "15cec88ac2f9268eea9e9aacddd1e88cefc91a57336038cb2acb57537dfad5a3",
+      "bytes": 79605
+    },
+    "experiments/waterfall-status/screenshots/ax.json": {
+      "sha256": "2fcba48d2eef23bb9dd7dcdf7aabac4b2391b00f3ea3d480aa372517802be776",
+      "bytes": 770
+    },
+    "experiments/waterfall-status/evidence/checks-summary.json": {
+      "sha256": "acbfebe7dc7cf4e44fee0ae8d28823c64d4894125dd5fc11f10576d43b319491",
+      "bytes": 1717
+    },
+    "experiments/waterfall-status/evidence/capture-summary.json": {
+      "sha256": "4fb1b8e6aea5dd91d9c7a59f1b521ccdff71d84edd51031646d75df5e1d931a4",
+      "bytes": 2503
+    },
+    "experiments/waterfall-status/evidence/localized.portable-summary.json": {
+      "sha256": "1801f6be32ec8f0a366decd73639838515991e1061debcd56bdecace84505b66",
+      "bytes": 941
+    },
+    "experiments/waterfall-status/evidence/zip-summary.json": {
+      "sha256": "ec56796a6dfe8e9f25d9a9e07650df9c2fa16a1a3b89bf27c588edb28e56dc6d",
+      "bytes": 414
+    },
+    "experiments/waterfall-status/evidence/unchanged-examples.json": {
+      "sha256": "84fb8575a7bf70d1da88bd2149d662098aebb8d1cbf8a275f859df6cd35c6253",
+      "bytes": 964
+    },
+    "experiments/waterfall-status/evidence/candidate.portable-summary.json": {
+      "sha256": "9d4db9008fd561b50a98de7ebb2088cd453ca919369837833956ef255f6eec20",
+      "bytes": 928
+    },
+    "experiments/waterfall-status/evidence/binding-summary.json": {
+      "sha256": "76618244a105d19fa590cdbd0e6f9295c26e5d65360b45805db3289c6359e237",
+      "bytes": 1527
+    },
+    "experiments/waterfall-status/screenshots-base/op_c.png": {
+      "sha256": "e90e3c487d1112ed64c72db0aa8b2b624de58aab3cf81f8d53c36db8b1201515",
+      "bytes": 118783
+    },
+    "experiments/waterfall-status/screenshots-base/op_b.png": {
+      "sha256": "12319fc4a18b13cf0c1a877ed1851dc413b0ae68caceab0f73d76632cd6d039f",
+      "bytes": 119719
+    },
+    "experiments/waterfall-status/screenshots-base/observation.json": {
+      "sha256": "88110710908397819f8b9a27611b2208f391288c066dc2a448951088195e3a03",
+      "bytes": 1888
+    },
+    "experiments/waterfall-status/screenshots-base/overview.png": {
+      "sha256": "98c887ebb21680050000fa7e1802efd65bc8310ca944b724635ea2f61540dc68",
+      "bytes": 77959
+    },
+    "experiments/waterfall-status/fixtures/localized.waterfall.json": {
+      "sha256": "25ca7a8bfc4d4056acaf3896e2684f89f18160299e2a29b550dc77deb6d10197",
+      "bytes": 815
+    }
+  },
+  "rawLogBindings": {
+    "commands.json": {
+      "sha256": "02de02b63804728bbdee7db2522dfcb1f76b5d3a7a98ade01fc4b08849a6a7da",
+      "bytes": 2351
+    },
+    "base-render.stdout": {
+      "sha256": "33ea6674ebf071ada11ca8973d8bde42cf2efc3f1bdb46a3b161ddd1d6c291f5",
+      "bytes": 119
+    },
+    "base-render.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "candidate-render.stdout": {
+      "sha256": "ef7036702031c473919a24c0db0e0466a2f220ab3a9c84b13b45dff947851fbf",
+      "bytes": 124
+    },
+    "candidate-render.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "base-layout.stdout": {
+      "sha256": "185390dcaa9672e858421d21942818a3a3ecbb17943712df10c629168b812fe6",
+      "bytes": 1170
+    },
+    "base-layout.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "candidate-layout.stdout": {
+      "sha256": "b47d8880abcecbec2d8932acd96bb05a3453de9c35b8c28f458d016ca7c9c8c0",
+      "bytes": 1192
+    },
+    "candidate-layout.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "focused-tests.log": {
+      "sha256": "a935689958be4c40aaf0d4fa65c5cb682bb2f06d295f8af0607060a2c130e080",
+      "bytes": 9032
+    },
+    "base-regression.log": {
+      "sha256": "778b072644ba6fbc3ee354627acee0aad0f2d757642d3f29da17093f823a3cc1",
+      "bytes": 1442
+    },
+    "xml-retry.log": {
+      "sha256": "22799364a2cd47958db4a61ca7895d891ecfa2488ca72e2abf49a3dff9799d63",
+      "bytes": 765
+    },
+    "generated-checks.log": {
+      "sha256": "0a5812d3e14dd70da9fb04b7671e107688e987b3d19a0a3a42ee69bae22cc7dc",
+      "bytes": 33
+    },
+    "zip-first.log": {
+      "sha256": "44543853ea5d75b97860cb07246b2d6c7904f8c48c738aaf4edd73e0190fb0fe",
+      "bytes": 124
+    },
+    "zip-second.log": {
+      "sha256": "d11731ad53c6f8277c9f90e2d85a282eaf86fe12f205c612910f6c2d4d9415ef",
+      "bytes": 126
+    },
+    "candidate-finalize.stdout": {
+      "sha256": "f0ee510d5141c11edf40df872932c2b553dd17f718a823319c5c692192c0583c",
+      "bytes": 1340
+    },
+    "candidate-finalize.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "archive-finalize.stdout": {
+      "sha256": "37ae38300cd629f09ecbc8f6b58090f25b248a4e904ad40c7facd5ed036fcd4d",
+      "bytes": 1273
+    },
+    "archive-finalize.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  },
+  "notClaimed": [
+    "Single 37-test passing run",
+    "Full repository/Windows/AT suite",
+    "Natural incident or recorded workload",
+    "Real-Agent authoring or user-efficiency benefit",
+    "New-dev CI as candidate CI",
+    "Human acceptance or live install"
+  ],
+  "historicalREADME": {
+    "original": {
+      "sha256": "2a6c86a1d6fe430fa4fb582fec487cf53b1939438d0634099cb77ae36d8a11fe",
+      "bytes": 9128
+    },
+    "current": {
+      "sha256": "1bdefc3a1f8665233f15ddad63ac53582b8acaa69e0bbbe0135cc71fa1e8eeeb",
+      "bytes": 9707
+    },
+    "originalPrefixPreservedExactly": true,
+    "change": "Only a new refresh entry appended."
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "kind": "derived same-input comparison; not a renderer receipt or actual AX capture",
+  "softwareBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "historicalCandidate": "e20acd6d6c0083f6b6ddecaf7bb250becfbca228",
+  "quality": "standard for both sides",
+  "input": {
+    "path": "input.waterfall.json",
+    "sha256": "891141aa7a0d304d0ebd64f396e7c0444cd82f0a9054351103026ea2af3e047b",
+    "bytes": 815
+  },
+  "artifacts": {
+    "base": {
+      "path": "base.html",
+      "sha256": "32a1a8f8ada68d630fc4607c23a17cafdeec2688cf6b6df7a1ff0b207b2fc9fa",
+      "bytes": 856425
+    },
+    "candidate": {
+      "path": "candidate.html",
+      "sha256": "db973898a4d74065a6a963f24d0bb8cdb925291fc2f29832f8c98069588d87f5",
+      "bytes": 856516
+    }
+  },
+  "rows": {
+    "op_a": {
+      "baseSemanticLabel": "Focus Operation A, 0\u2013100 ms \u00b7 100 ms \u00b7 100% of 100 ms wall-clock, worker",
+      "candidateSemanticLabel": "Focus Operation A, 0\u2013100 ms \u00b7 100 ms \u00b7 100% of 100 ms wall-clock, worker",
+      "baseSublabel": "0\u2013100 ms \u00b7 100 ms \u00b7 100% of 100 ms wall-clock",
+      "candidateSublabel": "0\u2013100 ms \u00b7 100 ms \u00b7 100% of 100 ms wall-clock",
+      "startEndDurationDepthStatusAttributesEqual": true
+    },
+    "op_b": {
+      "baseSemanticLabel": "Focus Operation B, 0\u2013100 ms \u00b7 100 ms \u00b7 100% of 100 ms wall-clock, worker",
+      "candidateSemanticLabel": "Focus Operation B, 0\u2013100 ms \u00b7 100 ms \u00b7 Error \u00b7 100% of 100 ms wall-clock, worker",
+      "baseSublabel": "0\u2013100 ms \u00b7 100 ms \u00b7 100% of 100 ms wall-clock",
+      "candidateSublabel": "0\u2013100 ms \u00b7 100 ms \u00b7 Error \u00b7 100% of 100 ms wall-clock",
+      "startEndDurationDepthStatusAttributesEqual": true
+    },
+    "op_c": {
+      "baseSemanticLabel": "Focus Operation C, 0\u2013100 ms \u00b7 100 ms \u00b7 100% of 100 ms wall-clock, worker",
+      "candidateSemanticLabel": "Focus Operation C, 0\u2013100 ms \u00b7 100 ms \u00b7 Cancelled \u00b7 100% of 100 ms wall-clock, worker",
+      "baseSublabel": "0\u2013100 ms \u00b7 100 ms \u00b7 100% of 100 ms wall-clock",
+      "candidateSublabel": "0\u2013100 ms \u00b7 100 ms \u00b7 Cancelled \u00b7 100% of 100 ms wall-clock",
+      "startEndDurationDepthStatusAttributesEqual": true
+    }
+  },
+  "baseLayout": {
+    "diagram_type": "waterfall",
+    "unit": "ms",
+    "viewBox": [
+      1035,
+      233
+    ],
+    "origin": 0,
+    "wall": 100,
+    "pxPerUnit": 7.6,
+    "axis": {
+      "x0": 196,
+      "x1": 956
+    },
+    "ticks": [
+      {
+        "t": 0,
+        "x": 196
+      },
+      {
+        "t": 20,
+        "x": 348
+      },
+      {
+        "t": 40,
+        "x": 500
+      },
+      {
+        "t": 60,
+        "x": 652
+      },
+      {
+        "t": 80,
+        "x": 804
+      },
+      {
+        "t": 100,
+        "x": 956
+      }
+    ],
+    "rows": [
+      {
+        "id": "op_a",
+        "parent": null,
+        "depth": 0,
+        "start": 0,
+        "end": 100,
+        "open": false,
+        "x0": 196,
+        "x1": 956,
+        "y": 88,
+        "label": "100 ms",
+        "placement": "after"
+      },
+      {
+        "id": "op_b",
+        "parent": null,
+        "depth": 0,
+        "start": 0,
+        "end": 100,
+        "open": false,
+        "x0": 196,
+        "x1": 956,
+        "y": 113,
+        "label": "100 ms",
+        "placement": "after"
+      },
+      {
+        "id": "op_c",
+        "parent": null,
+        "depth": 0,
+        "start": 0,
+        "end": 100,
+        "open": false,
+        "x0": 196,
+        "x1": 956,
+        "y": 138,
+        "label": "100 ms",
+        "placement": "after"
+      }
+    ]
+  },
+  "candidateLayout": {
+    "diagram_type": "waterfall",
+    "unit": "ms",
+    "viewBox": [
+      1114,
+      233
+    ],
+    "origin": 0,
+    "wall": 100,
+    "pxPerUnit": 7.6,
+    "axis": {
+      "x0": 196,
+      "x1": 956
+    },
+    "ticks": [
+      {
+        "t": 0,
+        "x": 196
+      },
+      {
+        "t": 20,
+        "x": 348
+      },
+      {
+        "t": 40,
+        "x": 500
+      },
+      {
+        "t": 60,
+        "x": 652
+      },
+      {
+        "t": 80,
+        "x": 804
+      },
+      {
+        "t": 100,
+        "x": 956
+      }
+    ],
+    "rows": [
+      {
+        "id": "op_a",
+        "parent": null,
+        "depth": 0,
+        "start": 0,
+        "end": 100,
+        "open": false,
+        "x0": 196,
+        "x1": 956,
+        "y": 88,
+        "label": "100 ms",
+        "placement": "after"
+      },
+      {
+        "id": "op_b",
+        "parent": null,
+        "depth": 0,
+        "start": 0,
+        "end": 100,
+        "open": false,
+        "x0": 196,
+        "x1": 956,
+        "y": 113,
+        "label": "100 ms \u00b7 Error",
+        "placement": "after"
+      },
+      {
+        "id": "op_c",
+        "parent": null,
+        "depth": 0,
+        "start": 0,
+        "end": 100,
+        "open": false,
+        "x0": 196,
+        "x1": 956,
+        "y": 138,
+        "label": "100 ms \u00b7 Cancelled",
+        "placement": "after"
+      }
+    ]
+  },
+  "timingCoordinatesAndOpenSemanticsEqual": true,
+  "canvasWidthChangesForAddedLabel": {
+    "base": 1035,
+    "candidate": 1114
+  },
+  "scope": "Constructed illustrative input; not a recorded operation or natural failure. Semantic attributes are DOM output, not actual browser AX evidence."
+}

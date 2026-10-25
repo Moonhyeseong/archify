@@ -1,0 +1,24 @@
+[
+  {
+    "input": "checkout-request.waterfall.json",
+    "baseFreshSHA256": "b0a5b3392b2fd75a55171738b382f862e64a691fa061d0f91617ed53df6b6a2c",
+    "candidateFreshSHA256": "b0a5b3392b2fd75a55171738b382f862e64a691fa061d0f91617ed53df6b6a2c",
+    "bytes": 862746,
+    "freshBaseEqualsCandidate": true,
+    "trackedDevSHA256": "2e60d716118993cb994208ae9e04b80071a8529b41a7df4cf6a36b96f3064fb5",
+    "freshEqualsTrackedDev": false,
+    "matchingShowcaseSHA256": "2e60d716118993cb994208ae9e04b80071a8529b41a7df4cf6a36b96f3064fb5",
+    "matchingShowcaseExactlyEqualsTrackedDev": true
+  },
+  {
+    "input": "example-rebuild.waterfall.json",
+    "baseFreshSHA256": "5b0d4cc6d90a452b490d48dc7869082932804f8f6ab6fd21a9210efeeb6b5f22",
+    "candidateFreshSHA256": "5b0d4cc6d90a452b490d48dc7869082932804f8f6ab6fd21a9210efeeb6b5f22",
+    "bytes": 892564,
+    "freshBaseEqualsCandidate": true,
+    "trackedDevSHA256": "713657486fdc26480ebb30df1676a763a55c76d19ef0c924db7e58a11781bb8d",
+    "freshEqualsTrackedDev": false,
+    "matchingShowcaseSHA256": "713657486fdc26480ebb30df1676a763a55c76d19ef0c924db7e58a11781bb8d",
+    "matchingShowcaseExactlyEqualsTrackedDev": true
+  }
+]

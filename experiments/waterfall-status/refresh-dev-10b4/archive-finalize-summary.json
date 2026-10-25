@@ -1,0 +1,44 @@
+{
+  "kind": "derived selected receipt fields; NOT an original receipt",
+  "softwareBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "rawReceipt": {
+    "sha256": "d1346054a5558ce386534305dbf2f5442d4b322b092381bb4cdd08f85d7d51f7",
+    "bytes": 34238
+  },
+  "quality": "standard",
+  "status": "pass",
+  "specification": {
+    "path": "input.waterfall.json",
+    "sha256": "891141aa7a0d304d0ebd64f396e7c0444cd82f0a9054351103026ea2af3e047b",
+    "bytes": 815
+  },
+  "artifact": {
+    "location": "external exact-archive smoke output",
+    "sha256": "db973898a4d74065a6a963f24d0bb8cdb925291fc2f29832f8c98069588d87f5",
+    "bytes": 856516
+  },
+  "stages": {
+    "validate": {
+      "status": "pass",
+      "exitCode": 0
+    },
+    "deliver": {
+      "status": "pass",
+      "exitCode": 0
+    },
+    "check": {
+      "status": "pass",
+      "exitCode": 0
+    },
+    "browser-check": {
+      "status": "pass",
+      "exitCode": 0
+    }
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "diagnostics": [],
+  "visualReview": "not-requested"
+}
