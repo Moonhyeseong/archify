@@ -1,0 +1,133 @@
+{
+  "format": "payload-delta-lab-evidence/1",
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "node": "22.23.3",
+  "tests": {
+    "pass": 10,
+    "fail": 0,
+    "includesPublicRendererRegression": true
+  },
+  "origin": "Original synthetic inventory samples",
+  "artifacts": [
+    {
+      "file": "review.html",
+      "sha256": "a35df1dda758d53dc36f6964f746abc25f58cdb534f2be4d4270617cbaebeca2",
+      "bytes": 483341
+    },
+    {
+      "file": "call.html",
+      "sha256": "b7d58051b9dc601c0f0939cfda028e3fcdd9498cb81ba619d7794282f634e821",
+      "bytes": 806013
+    }
+  ],
+  "gates": {
+    "sequence": {
+      "ok": true,
+      "status": "pass",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "diagnosticCodes": []
+    },
+    "explainer": {
+      "ok": true,
+      "status": "pass",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "not-run"
+      },
+      "diagnostics": [
+        {
+          "code": "explainer/writing-paragraph-length",
+          "severity": "warning"
+        }
+      ]
+    },
+    "explainerBrowser": {
+      "ok": true,
+      "status": "pass",
+      "diagnosticCodes": []
+    }
+  },
+  "limitations": [
+    "Raw receipts are stored outside the checkout because they contain machine paths.",
+    "Portable summaries are not original Archify delivery receipts.",
+    "No human acceptance or measured reviewer benefit."
+  ],
+  "publicRenderArtifacts": [
+    {
+      "file": "call.render.html",
+      "sha256": "e5b4a545e421714ee6ae2b04800ed29f384b5b1d3ee3951bacfdd091956141a5",
+      "bytes": 806043,
+      "retainedOutsideCheckout": true
+    },
+    {
+      "file": "review.literal.render.html",
+      "sha256": "1e79671b26c442ba0c45e031e393b96a95215848fc25afd4c7a56d4c41cff344",
+      "bytes": 483891,
+      "retainedOutsideCheckout": true
+    }
+  ],
+  "iterationFailures": [
+    {
+      "stage": "explainer parse",
+      "codes": [
+        "explainer/parse-prose"
+      ],
+      "resolution": "Use supported level-two sections, not level-three headings."
+    },
+    {
+      "stage": "explainer validate",
+      "codes": [
+        "explainer/schema-minLength",
+        "explainer/schema-minItems"
+      ],
+      "resolution": "Provide nonempty notes and remove empty intermediate panels."
+    },
+    {
+      "stage": "explainer validate",
+      "codes": [
+        "explainer/duplicate-id"
+      ],
+      "resolution": "Use unique change-N row labels instead of repeated change kind as row identity."
+    }
+  ],
+  "repairRound": {
+    "issue": "Payload Markdown was reinterpreted as links/images, with some valid sample values rejected by rendering. No script execution was observed.",
+    "fix": "Inline code spans in dynamic table cells; reversible control/backtick display encoding; pointers rendered as JSON strings; raw delta retains exact values.",
+    "negativeControls": "Unencoded web link creates an anchor; unencoded image and javascript link fail public render."
+  },
+  "sources": [
+    {
+      "file": "compare.mjs",
+      "sha256": "03d7ca95d384522500b1835a683fcce596ea6b1cfd295c211995e304a7124350"
+    },
+    {
+      "file": "compare.test.mjs",
+      "sha256": "a16bfd5c4a4d91c846056f25c95e9482c156d3c746e2b042a3f61a90813bff57",
+      "testedSha256": "18efd8dabfa3a6a750358e23542c7ab97780b9a723cd84b841ef7568cfd5ac70",
+      "postTestChange": "Removed one trailing space from a test assertion before commit; test behavior unchanged, previous pass reused."
+    },
+    {
+      "file": "sample.json",
+      "sha256": "9dc520e2b4f7f63beecca58c7b0aea8afc1f63e0c65374ac407c38ec3dbdc317"
+    },
+    {
+      "file": "example/review.archify.md",
+      "sha256": "599c8ea6c9a2a5db6988e9379b3170e503387ec2b0506e09a5e78b334605f4dd"
+    },
+    {
+      "file": "example/delta.json",
+      "sha256": "d786552880e8e4df8cfd5330e355dd29862cfd51d8712f8512c554c7b618f4a6"
+    },
+    {
+      "file": "example/call.sequence.json",
+      "sha256": "5ccf7382b99afbc3503737462e727747bcdc67eaeeb9cdb87e66dfa1b72b73ad"
+    }
+  ]
+}

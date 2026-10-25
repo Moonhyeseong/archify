@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "Synthetic API sample comparison",
+    "subtitle": "GET /inventory | arrays: id (sku)",
+    "output": "call.html",
+    "animation": "none"
+  },
+  "participants": [
+    {
+      "id": "caller",
+      "label": "Inventory dashboard",
+      "type": "frontend"
+    },
+    {
+      "id": "callee",
+      "label": "Synthetic inventory API",
+      "type": "backend"
+    }
+  ],
+  "messages": [
+    {
+      "id": "operation",
+      "from": "caller",
+      "to": "callee",
+      "y": 170,
+      "label": "GET /inventory",
+      "variant": "emphasis"
+    },
+    {
+      "id": "policy",
+      "from": "callee",
+      "to": "caller",
+      "y": 235,
+      "label": "Sample delta: 6 records; arrays: id",
+      "variant": "return"
+    }
+  ]
+}

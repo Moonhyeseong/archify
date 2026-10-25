@@ -1,0 +1,118 @@
+{
+  "format": "payload-delta-lab/1",
+  "provenance": "Original synthetic samples; no runtime traffic or schema compatibility inference",
+  "call": {
+    "caller": "Inventory dashboard",
+    "callee": "Synthetic inventory API",
+    "operation": "GET /inventory"
+  },
+  "arrayPolicy": {
+    "mode": "id",
+    "idKey": "sku"
+  },
+  "changes": [
+    {
+      "kind": "modified",
+      "beforePointer": "/count",
+      "afterPointer": "/count",
+      "before": {
+        "present": true,
+        "type": "string",
+        "value": "2"
+      },
+      "after": {
+        "present": true,
+        "type": "number",
+        "value": 2
+      }
+    },
+    {
+      "kind": "removed",
+      "beforePointer": "/cursor",
+      "afterPointer": null,
+      "before": {
+        "present": true,
+        "type": "null",
+        "value": null
+      },
+      "after": {
+        "present": false
+      }
+    },
+    {
+      "kind": "modified",
+      "beforePointer": "/items",
+      "afterPointer": "/items",
+      "before": {
+        "present": true,
+        "type": "array",
+        "value": [
+          {
+            "sku": "A-10",
+            "stock": 12
+          },
+          {
+            "sku": "B-20",
+            "stock": 4
+          }
+        ]
+      },
+      "after": {
+        "present": true,
+        "type": "array",
+        "value": [
+          {
+            "sku": "B-20",
+            "stock": 6
+          },
+          {
+            "sku": "A-10",
+            "stock": 12
+          }
+        ]
+      },
+      "note": "Array membership/order changed; matching by sku"
+    },
+    {
+      "kind": "modified",
+      "beforePointer": "/items/1/stock",
+      "afterPointer": "/items/0/stock",
+      "before": {
+        "present": true,
+        "type": "number",
+        "value": 4
+      },
+      "after": {
+        "present": true,
+        "type": "number",
+        "value": 6
+      }
+    },
+    {
+      "kind": "removed",
+      "beforePointer": "/legacy",
+      "afterPointer": null,
+      "before": {
+        "present": true,
+        "type": "boolean",
+        "value": true
+      },
+      "after": {
+        "present": false
+      }
+    },
+    {
+      "kind": "added",
+      "beforePointer": null,
+      "afterPointer": "/next",
+      "before": {
+        "present": false
+      },
+      "after": {
+        "present": true,
+        "type": "null",
+        "value": null
+      }
+    }
+  ]
+}

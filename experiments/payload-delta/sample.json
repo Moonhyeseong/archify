@@ -1,0 +1,18 @@
+{
+  "caller": "Inventory dashboard",
+  "callee": "Synthetic inventory API",
+  "operation": "GET /inventory",
+  "arrayMode": "id",
+  "idKey": "sku",
+  "before": {
+    "items": [{"sku": "A-10", "stock": 12}, {"sku": "B-20", "stock": 4}],
+    "cursor": null,
+    "legacy": true,
+    "count": "2"
+  },
+  "after": {
+    "items": [{"sku": "B-20", "stock": 6}, {"sku": "A-10", "stock": 12}],
+    "count": 2,
+    "next": null
+  }
+}

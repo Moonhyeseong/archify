@@ -1,0 +1,28 @@
+{
+  "kind": "agent-browser-screenshot-summary",
+  "capturedAt": "2026-10-25T04:57:24.011018+00:00",
+  "method": "Actual Ego Lite browser screenshots; no compositing or image generation",
+  "images": [
+    {
+      "source": "../example/review.html",
+      "sourceSha256": "a35df1dda758d53dc36f6964f746abc25f58cdb534f2be4d4270617cbaebeca2",
+      "image": "review.png",
+      "imageSha256": "3267a8db50d21359328f9e7661eb8c6e016f3d1a77dafe225fadb1d061e192b5",
+      "imagePixels": {
+        "width": 1440,
+        "height": 1847
+      },
+      "viewportCssPixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "deviceScaleFactor": 1,
+      "theme": "light",
+      "preset": "Clean",
+      "fullPage": true
+    }
+  ],
+  "agentVisualReview": "The named call, six delta records and full before/after code cards are visible. Null, MISSING and changed scalar types remain distinct. The pointer table wraps long values; narrow-screen use was not visually checked.",
+  "humanAcceptance": "pending",
+  "limits": "Screenshots establish the shown artifact only; they do not establish upstream execution, production validity or measured user benefit."
+}
