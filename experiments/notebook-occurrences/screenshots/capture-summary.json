@@ -1,0 +1,339 @@
+{
+  "schemaVersion": 1,
+  "kind": "derived root browser capture summary, not raw receipts",
+  "pathBase": "experiments/notebook-occurrences",
+  "tool": "root Ego Chromium, existing shared space; no new space",
+  "artifacts": [
+    {
+      "path": "explainer.html",
+      "bytes": 604268,
+      "sha256": "624ec0601dbd2355d28e6e6a3007d33eb2573eb48ed7a20cc0185c3aeb585fad"
+    },
+    {
+      "path": "notebook-occurrences.html",
+      "bytes": 879602,
+      "sha256": "4e1d55ff25ede4e8a469fdac2f52a748ad99e39dcf24bc56f6834e8b4534ddca"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "upstream/nbdime/tests/files/multilevel-test-base.ipynb",
+      "bytes": 1706,
+      "sha256": "13cd472a33d45987f715db064d51eb3f9fc26381f8aca876adb6a3d734446265"
+    },
+    {
+      "path": "upstream/nbdime/tests/files/multilevel-test-local.ipynb",
+      "bytes": 1707,
+      "sha256": "2d88dbe05ac89d1b9617e97af4fd5c480c155edae6821cdd152e15816c13d6c2"
+    },
+    {
+      "path": "upstream/nbdime/tests/files/multilevel-test-base-local-diff.json",
+      "bytes": 1754,
+      "sha256": "932b57033edbe76a4382ad1cd6a11d7e39f33939a5b648faeec18c748d98a2b3"
+    }
+  ],
+  "images": [
+    {
+      "path": "screenshots/explainer-overview.png",
+      "bytes": 186253,
+      "sha256": "24db235f847663e50468b1f9eae4595629408416a10f30811649e6bca7199137",
+      "pngDimensions": {
+        "width": 1440,
+        "height": 1100
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "fullPage": false,
+      "artifact": "explainer.html",
+      "theme": "light",
+      "rootVisuallyInspected": true
+    },
+    {
+      "path": "screenshots/explainer-full.png",
+      "bytes": 404538,
+      "sha256": "475ad5a8fc77ac90621ce372f9a007a106f6c8a3326cd535f75c116752e2830e",
+      "pngDimensions": {
+        "width": 1440,
+        "height": 2743
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "fullPage": true,
+      "artifact": "explainer.html",
+      "theme": "light",
+      "rootVisuallyInspected": true
+    },
+    {
+      "path": "screenshots/source-card.png",
+      "bytes": 200854,
+      "sha256": "98c1f612bc53b1dbd906569630807bb1478d445d85d1b42a0c6be326c803b35a",
+      "pngDimensions": {
+        "width": 1440,
+        "height": 1100
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "fullPage": false,
+      "artifact": "explainer.html",
+      "theme": "light",
+      "rootVisuallyInspected": true
+    },
+    {
+      "path": "screenshots/native-full.png",
+      "bytes": 233950,
+      "sha256": "a69ced21aae8542b2ea56cd8166ba756bea08602246b267e1c0d45db809967b6",
+      "pngDimensions": {
+        "width": 1440,
+        "height": 1705
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "fullPage": true,
+      "artifact": "notebook-occurrences.html",
+      "theme": "light",
+      "rootVisuallyInspected": true
+    }
+  ],
+  "rawChecks": [
+    {
+      "basename": "explainer-checks.json",
+      "bytes": 1782,
+      "sha256": "b0bf71303ecb030e9ead793440477a8b2bde29bb245ec7f3b857e3d2da1715ba",
+      "observations": {
+        "capturedAt": "2026-10-25T10:34:39.114Z",
+        "overview": {
+          "theme": "light",
+          "title": "改的是哪个 cell，哪些保存输出一起变了？ · Archify",
+          "viewport": {
+            "width": 1440,
+            "height": 1100
+          },
+          "documentHeight": 2743,
+          "table": [
+            [
+              "cells index",
+              "Base source 数组",
+              "Local source 数组",
+              "Base 保存 text/plain",
+              "Local 保存 text/plain",
+              "改变"
+            ],
+            [
+              "0",
+              "[\"def f(x):\\n\", \"    return x**2\"]",
+              "[\"def f(x):\\n\", \"    return x**2\"]",
+              "[]",
+              "[]",
+              "未变"
+            ],
+            [
+              "1",
+              "[\"x = 3\"]",
+              "[\"x = 5\"]",
+              "[]",
+              "[]",
+              "源变化"
+            ],
+            [
+              "2",
+              "[\"f(x)\"]",
+              "[\"f(x)\"]",
+              "[\"9\"]",
+              "[\"25\"]",
+              "保存输出变化"
+            ],
+            [
+              "3",
+              "[\"x = 3\"]",
+              "[\"x = 3\"]",
+              "[]",
+              "[]",
+              "未变"
+            ],
+            [
+              "4",
+              "[\"f(x)\"]",
+              "[\"f(x)\"]",
+              "[\"9\"]",
+              "[\"9\"]",
+              "未变"
+            ],
+            [
+              "5",
+              "[]",
+              "[]",
+              "[]",
+              "[]",
+              "未变"
+            ]
+          ],
+          "firstSourceDecoded": [
+            "def f(x):\n",
+            "    return x**2"
+          ],
+          "firstSourceDecodedCharacterCodes": [
+            [
+              100,
+              101,
+              102,
+              32,
+              102,
+              40,
+              120,
+              41,
+              58,
+              10
+            ],
+            [
+              32,
+              32,
+              32,
+              32,
+              114,
+              101,
+              116,
+              117,
+              114,
+              110,
+              32,
+              120,
+              42,
+              42,
+              50
+            ]
+          ],
+          "inlineCodeWhiteSpace": "normal"
+        }
+      }
+    },
+    {
+      "basename": "source-card-checks.json",
+      "bytes": 352,
+      "sha256": "2aabe63a58def2e1b36126ab07564773fe731ad65f982963e4bf743ff44d59b3",
+      "observations": {
+        "capturedAt": "2026-10-25T10:34:40.382Z",
+        "source": {
+          "text": "完整 Base snapshot\ngithub.com\n1\n打开原文 ↗",
+          "links": [
+            {
+              "text": "打开原文 ↗",
+              "href": "https://github.com/jupyter/nbdime/blob/744c97897e2c33a1b3f04f5834ee6e70478219a2/nbdime/tests/files/multilevel-test-base.ipynb"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "basename": "native-checks.json",
+      "bytes": 2279,
+      "sha256": "52eca82e767de1cda953cee1f44d33eb426f69e4f06bc52a3ced1edcfee8f7c3",
+      "observations": {
+        "capturedAt": "2026-10-25T10:34:40.760Z",
+        "native": {
+          "title": "六个 cell occurrence，不按相同文本合并",
+          "theme": "light",
+          "nodeCount": 15,
+          "nodes": [
+            {
+              "id": "pair",
+              "label": "两份保存快照",
+              "sublabel": "边只表示文件归属，不是执行/依赖"
+            },
+            {
+              "id": "base",
+              "label": "Base snapshot",
+              "sublabel": "完整6 cells · 无 cell IDs"
+            },
+            {
+              "id": "local",
+              "label": "Local snapshot",
+              "sublabel": "完整6 cells · 无 cell IDs"
+            },
+            {
+              "id": "base_c0",
+              "label": "Base cells[0] · 未变",
+              "sublabel": "函数源 · 保存输出 []"
+            },
+            {
+              "id": "base_c1",
+              "label": "Base cells[1] · 源变化",
+              "sublabel": "x = 3 · 保存输出 []"
+            },
+            {
+              "id": "base_c2",
+              "label": "Base cells[2] · 保存输出变化",
+              "sublabel": "f(x) · 保存输出 9"
+            },
+            {
+              "id": "base_c3",
+              "label": "Base cells[3] · 未变",
+              "sublabel": "x = 3 · 保存输出 []"
+            },
+            {
+              "id": "base_c4",
+              "label": "Base cells[4] · 未变",
+              "sublabel": "f(x) · 保存输出 9"
+            },
+            {
+              "id": "base_c5",
+              "label": "Base cells[5] · 未变",
+              "sublabel": "空源 · 输出 [] · count null"
+            },
+            {
+              "id": "local_c0",
+              "label": "Local cells[0] · 未变",
+              "sublabel": "函数源 · 保存输出 []"
+            },
+            {
+              "id": "local_c1",
+              "label": "Local cells[1] · 源变化",
+              "sublabel": "x = 5 · 保存输出 []"
+            },
+            {
+              "id": "local_c2",
+              "label": "Local cells[2] · 保存输出变化",
+              "sublabel": "f(x) · 保存输出 25"
+            },
+            {
+              "id": "local_c3",
+              "label": "Local cells[3] · 未变",
+              "sublabel": "x = 3 · 保存输出 []"
+            },
+            {
+              "id": "local_c4",
+              "label": "Local cells[4] · 未变",
+              "sublabel": "f(x) · 保存输出 9"
+            },
+            {
+              "id": "local_c5",
+              "label": "Local cells[5] · 未变",
+              "sublabel": "空源 · 输出 [] · count null"
+            }
+          ],
+          "documentHeight": 1705
+        }
+      }
+    }
+  ],
+  "observations": [
+    "six rendered table rows retained including empty occurrence 5",
+    "DOM source JSON decoded to LF ord10 and four leading spaces; ordinary visual whitespace may collapse",
+    "15 native Tree nodes include 12 occurrences; edges indicate snapshot containment only",
+    "metadata-only source card points to fixed upstream Base URL; external link not opened"
+  ],
+  "limits": [
+    "root agent visually inspected these four PNGs; no human acceptance or learning benefit claim",
+    "actual root browser actions are separate from Explainer finalize browser-check not-run",
+    "no complete Explainer browser gate, screen-reader, cross-browser, kernel or nbdime execution",
+    "source card is citation metadata, not verified code excerpt",
+    "preset/motion state not recorded in the supplied raw observations; no claim inferred"
+  ]
+}

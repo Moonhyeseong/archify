@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "scope": "fixed factual and rendered-content audit; no kernel/nbdime/browser run",
+  "checks": [
+    "complete upstream byte lengths and digests",
+    "recorded independent observation equals fixed-input read",
+    "only occurrence 1 source and occurrence 2 saved output changed",
+    "duplicate sources remain separate, later saved value stays 9",
+    "all six occurrences, empty last, absent IDs and unchanged counts",
+    "actual rendered table keeps exactly six ordered occurrence rows",
+    "rendered literal source/output JSON exactly decodes to fixed field values",
+    "LF versus JSON escape verified by actual character values",
+    "Tree has only pair/snapshot/occurrence containment edges",
+    "Explainer embeds exactly the same single native Tree model",
+    "generated artifacts contain authored labels and no private path"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "repository": "https://github.com/jupyter/nbdime",
+  "revision": "744c97897e2c33a1b3f04f5834ee6e70478219a2",
+  "license": "BSD-3-Clause; entire LICENSE.md retained",
+  "fixtureKind": "upstream committed regression snapshots and expected diff; not a new execution capture",
+  "files": [
+    {
+      "path": "LICENSE.md",
+      "bytes": 2885,
+      "sha256": "e1f09fb826f2849211dd2e58d9541faf88fb3db04dee89c468f09a59dd00f8b9"
+    },
+    {
+      "path": "nbdime/tests/files/multilevel-test-base.ipynb",
+      "bytes": 1706,
+      "sha256": "13cd472a33d45987f715db064d51eb3f9fc26381f8aca876adb6a3d734446265"
+    },
+    {
+      "path": "nbdime/tests/files/multilevel-test-local.ipynb",
+      "bytes": 1707,
+      "sha256": "2d88dbe05ac89d1b9617e97af4fd5c480c155edae6821cdd152e15816c13d6c2"
+    },
+    {
+      "path": "nbdime/tests/files/multilevel-test-base-local-diff.json",
+      "bytes": 1754,
+      "sha256": "932b57033edbe76a4382ad1cd6a11d7e39f33939a5b648faeec18c748d98a2b3"
+    },
+    {
+      "path": "nbdime/diffing/notebooks.py",
+      "bytes": 18981,
+      "sha256": "9f9739feb52db1673832af609c257dda1f3ac6b258ec4d81f64db8d93657fe37"
+    },
+    {
+      "path": "nbdime/diffing/snakes.py",
+      "bytes": 2989,
+      "sha256": "1293a22f9952383235d617e3489a3c7df37e828a5bf124e1c90949d255e7155f"
+    },
+    {
+      "path": "nbdime/tests/test_cli_apps.py",
+      "bytes": 25797,
+      "sha256": "e293ba7bb25e0deb04222bc5de6e7688489a5786891b7745cc6d267ceaf134c5"
+    }
+  ]
+}

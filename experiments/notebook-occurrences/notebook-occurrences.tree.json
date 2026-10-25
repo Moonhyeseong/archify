@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "diagram_type": "tree",
+  "meta": {
+    "title": "六个 cell occurrence，不按相同文本合并",
+    "subtitle": "固定 Base/Local 两份文件。Tree 只画 snapshot → 数组 occurrence 的归属；跨快照变化以六行表为准。",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "output": "experiments/notebook-occurrences/notebook-occurrences.html"
+  },
+  "layout": {
+    "direction": "right"
+  },
+  "nodes": [
+    {
+      "id": "pair",
+      "label": "两份保存快照",
+      "sublabel": "边只表示文件归属，不是执行/依赖"
+    },
+    {
+      "id": "base",
+      "parent": "pair",
+      "label": "Base snapshot",
+      "sublabel": "完整6 cells · 无 cell IDs"
+    },
+    {
+      "id": "local",
+      "parent": "pair",
+      "label": "Local snapshot",
+      "sublabel": "完整6 cells · 无 cell IDs"
+    },
+    {
+      "id": "base_c0",
+      "parent": "base",
+      "label": "Base cells[0] · 未变",
+      "sublabel": "函数源 · 保存输出 []"
+    },
+    {
+      "id": "base_c1",
+      "parent": "base",
+      "label": "Base cells[1] · 源变化",
+      "sublabel": "x = 3 · 保存输出 []"
+    },
+    {
+      "id": "base_c2",
+      "parent": "base",
+      "label": "Base cells[2] · 保存输出变化",
+      "sublabel": "f(x) · 保存输出 9"
+    },
+    {
+      "id": "base_c3",
+      "parent": "base",
+      "label": "Base cells[3] · 未变",
+      "sublabel": "x = 3 · 保存输出 []"
+    },
+    {
+      "id": "base_c4",
+      "parent": "base",
+      "label": "Base cells[4] · 未变",
+      "sublabel": "f(x) · 保存输出 9"
+    },
+    {
+      "id": "base_c5",
+      "parent": "base",
+      "label": "Base cells[5] · 未变",
+      "sublabel": "空源 · 输出 [] · count null"
+    },
+    {
+      "id": "local_c0",
+      "parent": "local",
+      "label": "Local cells[0] · 未变",
+      "sublabel": "函数源 · 保存输出 []"
+    },
+    {
+      "id": "local_c1",
+      "parent": "local",
+      "label": "Local cells[1] · 源变化",
+      "sublabel": "x = 5 · 保存输出 []"
+    },
+    {
+      "id": "local_c2",
+      "parent": "local",
+      "label": "Local cells[2] · 保存输出变化",
+      "sublabel": "f(x) · 保存输出 25"
+    },
+    {
+      "id": "local_c3",
+      "parent": "local",
+      "label": "Local cells[3] · 未变",
+      "sublabel": "x = 3 · 保存输出 []"
+    },
+    {
+      "id": "local_c4",
+      "parent": "local",
+      "label": "Local cells[4] · 未变",
+      "sublabel": "f(x) · 保存输出 9"
+    },
+    {
+      "id": "local_c5",
+      "parent": "local",
+      "label": "Local cells[5] · 未变",
+      "sublabel": "空源 · 输出 [] · count null"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "哪一层改变？",
+      "items": [
+        "cells[1]：源 x = 3 → x = 5；空输出仍为空。",
+        "cells[2]：源 f(x) 不变；保存 text/plain 9 → 25。",
+        "cells[3]/cells[4]：虽重复相同源文本，源和保存输出都没变。cells[5] 空 cell 仍保留。"
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "位置与执行边界",
+      "items": [
+        "无 cell IDs。snapshot + index 只定位此固定 pair，不承诺跨修订稳定身份。",
+        "两快照 counts 都是 [1,2,3,4,5,null]，不是本轮执行记录。",
+        "没有执行 notebook、nbdime 或 kernel。树边不表示运行顺序、计算依赖、别名或变化原因。"
+      ]
+    }
+  ]
+}

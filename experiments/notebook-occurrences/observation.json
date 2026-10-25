@@ -1,0 +1,260 @@
+{
+  "kind": "independent stdlib fixed-snapshot inspection; no notebook or nbdime execution",
+  "files": [
+    {
+      "role": "base",
+      "path": "upstream/nbdime/tests/files/multilevel-test-base.ipynb",
+      "bytes": 1706,
+      "sha256": "13cd472a33d45987f715db064d51eb3f9fc26381f8aca876adb6a3d734446265"
+    },
+    {
+      "role": "local",
+      "path": "upstream/nbdime/tests/files/multilevel-test-local.ipynb",
+      "bytes": 1707,
+      "sha256": "2d88dbe05ac89d1b9617e97af4fd5c480c155edae6821cdd152e15816c13d6c2"
+    },
+    {
+      "role": "oracle",
+      "path": "upstream/nbdime/tests/files/multilevel-test-base-local-diff.json",
+      "bytes": 1754,
+      "sha256": "932b57033edbe76a4382ad1cd6a11d7e39f33939a5b648faeec18c748d98a2b3"
+    }
+  ],
+  "identityScope": "snapshot + array index only within this fixed pair; no cell IDs/stable-ID claim",
+  "rows": [
+    {
+      "index": 0,
+      "basePointer": "/cells/0",
+      "localPointer": "/cells/0",
+      "base": {
+        "cell_type": "code",
+        "execution_count": 1,
+        "metadata": {
+          "collapsed": true
+        },
+        "outputs": [],
+        "source": [
+          "def f(x):\n",
+          "    return x**2"
+        ]
+      },
+      "local": {
+        "cell_type": "code",
+        "execution_count": 1,
+        "metadata": {
+          "collapsed": true
+        },
+        "outputs": [],
+        "source": [
+          "def f(x):\n",
+          "    return x**2"
+        ]
+      },
+      "changedFields": []
+    },
+    {
+      "index": 1,
+      "basePointer": "/cells/1",
+      "localPointer": "/cells/1",
+      "base": {
+        "cell_type": "code",
+        "execution_count": 2,
+        "metadata": {
+          "collapsed": true
+        },
+        "outputs": [],
+        "source": [
+          "x = 3"
+        ]
+      },
+      "local": {
+        "cell_type": "code",
+        "execution_count": 2,
+        "metadata": {
+          "collapsed": true
+        },
+        "outputs": [],
+        "source": [
+          "x = 5"
+        ]
+      },
+      "changedFields": [
+        "source"
+      ]
+    },
+    {
+      "index": 2,
+      "basePointer": "/cells/2",
+      "localPointer": "/cells/2",
+      "base": {
+        "cell_type": "code",
+        "execution_count": 3,
+        "metadata": {
+          "collapsed": false
+        },
+        "outputs": [
+          {
+            "data": {
+              "text/plain": [
+                "9"
+              ]
+            },
+            "execution_count": 3,
+            "metadata": {},
+            "output_type": "execute_result"
+          }
+        ],
+        "source": [
+          "f(x)"
+        ]
+      },
+      "local": {
+        "cell_type": "code",
+        "execution_count": 3,
+        "metadata": {
+          "collapsed": false
+        },
+        "outputs": [
+          {
+            "data": {
+              "text/plain": [
+                "25"
+              ]
+            },
+            "execution_count": 3,
+            "metadata": {},
+            "output_type": "execute_result"
+          }
+        ],
+        "source": [
+          "f(x)"
+        ]
+      },
+      "changedFields": [
+        "outputs"
+      ]
+    },
+    {
+      "index": 3,
+      "basePointer": "/cells/3",
+      "localPointer": "/cells/3",
+      "base": {
+        "cell_type": "code",
+        "execution_count": 4,
+        "metadata": {
+          "collapsed": true
+        },
+        "outputs": [],
+        "source": [
+          "x = 3"
+        ]
+      },
+      "local": {
+        "cell_type": "code",
+        "execution_count": 4,
+        "metadata": {
+          "collapsed": true
+        },
+        "outputs": [],
+        "source": [
+          "x = 3"
+        ]
+      },
+      "changedFields": []
+    },
+    {
+      "index": 4,
+      "basePointer": "/cells/4",
+      "localPointer": "/cells/4",
+      "base": {
+        "cell_type": "code",
+        "execution_count": 5,
+        "metadata": {
+          "collapsed": false
+        },
+        "outputs": [
+          {
+            "data": {
+              "text/plain": [
+                "9"
+              ]
+            },
+            "execution_count": 5,
+            "metadata": {},
+            "output_type": "execute_result"
+          }
+        ],
+        "source": [
+          "f(x)"
+        ]
+      },
+      "local": {
+        "cell_type": "code",
+        "execution_count": 5,
+        "metadata": {
+          "collapsed": false
+        },
+        "outputs": [
+          {
+            "data": {
+              "text/plain": [
+                "9"
+              ]
+            },
+            "execution_count": 5,
+            "metadata": {},
+            "output_type": "execute_result"
+          }
+        ],
+        "source": [
+          "f(x)"
+        ]
+      },
+      "changedFields": []
+    },
+    {
+      "index": 5,
+      "basePointer": "/cells/5",
+      "localPointer": "/cells/5",
+      "base": {
+        "cell_type": "code",
+        "execution_count": null,
+        "metadata": {
+          "collapsed": true
+        },
+        "outputs": [],
+        "source": []
+      },
+      "local": {
+        "cell_type": "code",
+        "execution_count": null,
+        "metadata": {
+          "collapsed": true
+        },
+        "outputs": [],
+        "source": []
+      },
+      "changedFields": []
+    }
+  ],
+  "executionCountsUnchanged": true,
+  "nonCellNotebookFieldsUnchanged": true,
+  "oracle": {
+    "kind": "upstream committed expected diff; not generated in this run",
+    "sha256": "932b57033edbe76a4382ad1cd6a11d7e39f33939a5b648faeec18c748d98a2b3",
+    "changedCellIndices": [
+      1,
+      2
+    ],
+    "sourceArrayElement": "/cells/1/source/0",
+    "sourceCharacterIndex": 4,
+    "savedOutputMIMEPath": "/cells/2/outputs/0/data/text~1plain",
+    "savedOutputCharacterIndex": 0
+  },
+  "limits": [
+    "no runtime dependencies or causality inferred",
+    "no execution history/freshness/correctness validation",
+    "cell 0 actual LF is preserved in source array and displayed using JSON escape",
+    "no generic notebook alignment or patch application"
+  ]
+}
