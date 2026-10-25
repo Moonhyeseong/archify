@@ -46,11 +46,11 @@
 | [Workflow self-loop](https://github.com/tt-a1i/archify/tree/codex/lab-workflow-self-loop/experiments/workflow-self-loop) | 同节点双端接触保留合法自环，仍拒绝中段碰撞及立即折返 | `9578b8e4` | [新dev实际自环与证据](https://github.com/tt-a1i/archify/tree/codex/lab-workflow-self-loop/experiments/workflow-self-loop/refresh-dev-10b4) | 基线10b4真实拒绝且无HTML；候选/精确ZIP四阶段0诊断、148focused、4generated通过；4shipped SVG/receipt相同；3实图；构造几何回归，不称运行trace或作者节时 |
 | [Plan row counts](https://github.com/tt-a1i/archify/tree/codex/lab-plan-row-counts/experiments/plan-row-counts) | 每次平均3行×352循环≈1056次输出，保留局部估计差异 | `91e2ffad` | [实际解释页](https://github.com/tt-a1i/archify/blob/codex/lab-plan-row-counts/experiments/plan-row-counts/screenshots/explainer.png) | 零共享代码；固定PEV2样例3节点；Tree四阶段、Explainer三阶段通过/自动browser未跑；非SQL执行/unique rows/调优证明 |
 | [Diff line numbers](https://github.com/tt-a1i/archify/tree/codex/lab-diff-line-numbers/experiments/diff-line-numbers) | diff行号保持完整单行，长代码仍可横向滚动 | `28f9f95d` | [新dev实际对照](https://github.com/tt-a1i/archify/blob/codex/lab-diff-line-numbers/experiments/diff-line-numbers/dev10b4/screenshots/candidate-1280-light.png) | 已整合10b4；单CSS、25focused/19core/generated、双ZIP/解包通过；8臂DOM 30拆行→0、4新图；两页3静态gate/同7writing warnings，完整browsergate未跑；4docs保留10b历史 |
-| [Keyboard traversal](https://github.com/tt-a1i/archify/tree/codex/lab-keyboard-traversal/experiments/keyboard-traversal) | 纳入实际Tab额外停点，末尾可达控件不再因过早停止被误报 | `d9308631` | [实际第65步到达footer](https://github.com/tt-a1i/archify/blob/codex/lab-keyboard-traversal/experiments/keyboard-traversal/screenshots/tab-65-footer.png) | 最终focused11、v3算法整file19复用、core19、canonical双ZIP/抽包通过；固定HTML四视口均50/50且0诊断；iframe/date/trap/无限焦点边界保留；非PR验收 |
+| [Keyboard traversal](https://github.com/tt-a1i/archify/tree/codex/lab-keyboard-traversal/experiments/keyboard-traversal) | QA按真实DOM身份继续Tab，避免原生滚动区和动态来源卡导致提前停止误报 | `c96e8aa7` | [新dev实际Tab到页尾](https://github.com/tt-a1i/archify/blob/codex/lab-keyboard-traversal/experiments/keyboard-traversal/refresh-dev-10b4/screenshots/task-footer-tab.png) | 同页PR30→0/task16→0诊断；19browser/19core/4checks、235项ZIP及正负例；root实际47/63 Tab与checker48/64步分列；不改HTML、不代表原PR/Gradle执行或AT |
 | [Preview dashed ink](https://github.com/tt-a1i/archify/tree/codex/lab-preview-dashed-ink/experiments/preview-dashed-ink) | Explainer预览的虚线关系文字、线和箭头使用可读颜色，保留节点边框 | `ca4baa1d` | [新dev浅色对照](https://github.com/tt-a1i/archify/blob/codex/lab-preview-dashed-ink/experiments/preview-dashed-ink/refresh-dev-10b4/screenshots/candidate-light.png) | 已整合10b4；3CSS映射、2browser/57focused/core、4generatedchecks、基线失败、候选和抽包四阶段通过；4新浅深图，旧20实验/4docs保留36cc历史，不称当前docs已重生成 |
 | [Copy identity](https://github.com/tt-a1i/archify/tree/codex/lab-copy-identity/experiments/copy-identity) | 内容相等仍可能共享不同对象：别名、浅拷贝、深拷贝的引用对照 | `18d51b89` | [实际引用图](https://github.com/tt-a1i/archify/blob/codex/lab-copy-identity/experiments/copy-identity/screenshots/native.png) | 新dev3f95；标准库独立观察4变量/7list/10引用、6内容检查、两产物四阶段通过；3张实际图；上游教学构造，未运行上游工具/未观察整个heap |
 | [CLI reading tour](https://github.com/tt-a1i/archify/tree/codex/lab-cli-reading-tour/experiments/cli-reading-tour) | 沿真实源码区分三个CLI出口、磁盘JSON、HTTP快照与用户启动 | `1dff88d3` | [实际阅读页](https://github.com/tt-a1i/archify/blob/codex/lab-cli-reading-tour/experiments/cli-reading-tour/screenshots/overview.png) | 新dev3f95；7固定源、11SourceCards、10节点9边；三静态阶段通过/自动browser未请求；实际Walk、hover/Escape及3图；未运行上游服务或scanner |
-| [Clipboard outcome](https://github.com/tt-a1i/archify/tree/codex/lab-clipboard-outcome/experiments/clipboard-outcome) | 复制不可用时保留可选择的内容，恢复后重试不重复包装问题 | `68866954` | [实际失败恢复](https://github.com/tt-a1i/archify/blob/codex/lab-clipboard-outcome/experiments/clipboard-outcome/screenshots/missing-ask-candidate.png) | 基线3f95；8种API边界、邻近32/core19、canonical双ZIP/抽包通过；同一真实PR输入基线/候选三阶段通过；API受控注入实测，未写OS clipboard；自动browser未请求 |
+| [Clipboard outcome](https://github.com/tt-a1i/archify/tree/codex/lab-clipboard-outcome/experiments/clipboard-outcome) | 复制API缺失/拒绝不误报成功，完整追问保留可手工复制，编辑全文后重试不再包装 | `0e4a2c71` | [新dev实际失败恢复](https://github.com/tt-a1i/archify/blob/codex/lab-clipboard-outcome/experiments/clipboard-outcome/refresh-dev-10b4/screenshots/candidate-missing-ask.png) | 基线10b4；8叶场景、32邻近/19core/generated/235ZIP+解包smoke；4docs正常刷新；3实图与受控API缺失/拒绝/恢复exact；静态3gate同7warnings/browser未跑，非OSclipboard/AT |
 | [Byte views](https://github.com/tt-a1i/archify/tree/codex/lab-byte-views/experiments/byte-views) | 分清IHDR的25B物理字段与已有type内的4个bit解释，避免重复求和 | `b844ecb2` | [实际解释页](https://github.com/tt-a1i/archify/blob/codex/lab-byte-views/experiments/byte-views/screenshots/explainer-overview.png) | 固定67f；完整97B官方fixture/golden、独立字节观察8事实检查；Tree四阶段/Explainer三静态阶段通过，root四图及citation hover/Escape；未运行fq/CRC/解压 |
 | [Source keyboard activation](https://github.com/tt-a1i/archify/tree/codex/lab-source-keyboard/experiments/source-keyboard) | 同一源码预览节点的Enter/Space执行已有鼠标开原图动作，AX提供button语义 | `d81830d3` | [实际Enter打开结果](https://github.com/tt-a1i/archify/blob/codex/lab-source-keyboard/experiments/source-keyboard/screenshots/candidate-enter-viewer.png) | 基线10b4；6browser/15renderer/19core、生成/235项ZIP通过；真实前后AX/按键/返回与5图；Tab及focus原本已有，误判已撤回；4docs继承freshness单列，无AT接受 |
 | [Notebook occurrences](https://github.com/tt-a1i/archify/tree/codex/lab-notebook-occurrences/experiments/notebook-occurrences) | 六个重复文本cell按位置保留，分清源码改变与保存输出改变 | `2090b0ff` | [实际六行对照页](https://github.com/tt-a1i/archify/blob/codex/lab-notebook-occurrences/experiments/notebook-occurrences/screenshots/explainer-overview.png) | 内容限定固定nbdime三完整fixture；11事实审计，Tree四阶段/Explainer三阶段且browser未跑；4真实图/DOM字段核实；无kernel/nbdime执行、稳定ID或因果推断 |
@@ -124,6 +124,8 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 2026-10-25 本次核Workflow新head `9578b8e4`、Benchmark reading `7b8258cd`、Task occurrences `caffb4aa`：远端head一致，精确head的Actions runs/check-runs均为0。Task首次push遇GitHub远端写pack失败，原提交不变，重新查询后重试成功。已发布总数39；固定图片页仍35项，准备下一批更新。
 
+2026-10-25 本次核Keyboard新head `c96e8aa7`、Clipboard新head `0e4a2c71`：远端一致、精确head的Actions runs/check-runs均为0。Clipboard的正常merge提交73fe26dc后，以0e4a2c71补入四份已经核验的生成页；此处绑定最终完整head，未把中间提交称最终交付。总数仍39项。
+
 ## 正在推进
 
 | 方向 | 来源与目标 | 状态 |
@@ -133,8 +135,9 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 已有候选刷新 | Diff行号 / Preview虚线文字 | 两条既有分支均已整合固定dev10b4并完成独立终审：28f9f95d/ca4baa1d已推，新旧证据身份分列 |
 | 已有候选刷新 | Waterfall状态 / Finder结果描述 | Waterfall已推68311bb8；Finder已推e219bc5b，独立审查与新基线实图/AX完成；Workflow自环已推9578b8e4，旧证据原字节保留 |
 | 新一轮发现 | Shell / CSS / Notebook / 构建阅读 | 第9轮13个新来源，未增加实现；第10轮12个新来源，Notebook已推2090b0ff，task occurrence已推caffb4aa并补5实图，保留最终16键盘诊断；源码卡审计无确认新缺陷；第11轮配置来源已推14867942 |
-| 新一轮发现 | Benchmark / 语法 / 并发阅读 | 第12轮6新来源，benchstat已推7b8258cd；第13轮语法/并发共4新来源，暂不增实现；第14轮继续图交互检索 |
-| 已有候选刷新 | Keyboard traversal / Clipboard outcome | 正在整合固定dev10b4；同一task页candidate实际41/41可达，原dev37/41，结果只记在checker分支；Clipboard受控API前后截图待完成 |
+| 新一轮发现 | Benchmark / 语法 / 并发阅读 | 第12轮6新来源，benchstat已推7b8258cd；第13轮语法/并发共4新来源，暂不增实现；第14轮6个新图交互项目，未确认新实施缺口 |
+| 已有候选刷新 | Keyboard traversal / Clipboard outcome | 已推c96e8aa7/0e4a2c71；同一task页candidate实际41/41可达，原dev37/41；Clipboard受控API前后及全文恢复已核，CI与真实OS剪贴板另列 |
+| 已有候选刷新 | Relation reference / Finder canvas matches | 正在按新Passport/IME/drilldown合同整合固定dev10b4；各自独立，保留旧输入与原证据 |
 | 既有实验真实输出 | Recipe stages / State contract | State官方fixture实导出已推f7269e09；Recipe官方test有效输入dump已推062dee5d，自然完整示例拒绝并保留；历史synthetic不改称实跑 |
 | 新发现修复 | Explainer复制结果与手工恢复 | Clipboard outcome已推送68866954，来源、基线/候选和实际截图见第33项 |
 | 浏览页更新 | 35项固定实验图片 | c23d585c已发布：35原图，当前11项观测/4新截图，390px和深色明确复用34同模板历史；固定来源与限制保留 |
@@ -208,6 +211,7 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | Benchmark中心值、区间与比较结论 | [Benchmark reading round 12](scouts/benchmark-reading-round12.md) |
 | Parser输出策略与共享森林计数 | [Parser reading round 13](scouts/parser-reading-round13.md) |
 | 创建关系、上下文与取消请求 | [Concurrency reading round 13](scouts/concurrency-reading-round13.md) |
+| 小型代码图交互、显隐与聚合成员 | [Graph interaction round 14](scouts/graph-interaction-round14.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
 报告中的上游声明、局部源码核实、计划中的实验和已经执行的结果分别标注。未推荐方向也保留原因，避免反复研究；没有把上游宣传、星数或作者截图当作 Archify 的效果证明。
