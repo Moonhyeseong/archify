@@ -12,7 +12,7 @@
 
 | 实验与远程分支 | 具体价值 | 发布 revision | 实际图片 | 验证与限制 |
 | --- | --- | --- | --- | --- |
-| [Task review map](https://github.com/tt-a1i/archify/tree/codex/lab-task-review-map/experiments/task-review-map) | 借鉴 gtindo/task-view，把 Agent 的解释绑定固定 Git diff，列出未解释改动 | `dae6c660` | [遗漏示例](https://github.com/tt-a1i/archify/blob/codex/lab-task-review-map/experiments/task-review-map/screenshots/omitted.png) | 15 tests；validate/deliver/check 通过；当前 browser 未重跑，历史键盘遍历失败按旧 hash 保留 |
+| [Task review map](https://github.com/tt-a1i/archify/tree/codex/lab-task-review-map/experiments/task-review-map) | 借鉴 gtindo/task-view，把 Agent 的解释绑定固定 Git diff，列出未解释改动 | `b9e33974` | [遗漏示例](https://github.com/tt-a1i/archify/blob/codex/lab-task-review-map/experiments/task-review-map/screenshots/omitted.png) | 15 tests；validate/deliver/check 通过；当前 browser 未重跑，历史键盘遍历失败按旧 hash 保留 |
 | [Dependency map](https://github.com/tt-a1i/archify/tree/codex/lab-dependency-map/experiments/dependency-map) | 把 dependency-cruiser 已有报告变成局部原生图，保留未解析与视图外账目 | `2be2ab55` | [官方样例](https://github.com/tt-a1i/archify/blob/codex/lab-dependency-map/experiments/dependency-map/screenshots/official.png) | 6 tests；两图 finalize 四阶段通过；synthetic 的三条绕行建议仍保留 |
 | [Trace waterfall](https://github.com/tt-a1i/archify/tree/codex/lab-trace-waterfall/experiments/trace-waterfall) | 把真实采集的 Chrome X 格式操作区间变成可分享瀑布图 | `8e65f150` | [真实采集](https://github.com/tt-a1i/archify/blob/codex/lab-trace-waterfall/experiments/trace-waterfall/screenshots/workload.png) | 9 tests；四阶段通过；仅 X 子集，不推断调用树或关键路径 |
 | [Markdown outline](https://github.com/tt-a1i/archify/tree/codex/lab-markdown-outline/experiments/markdown-outline) | 标题与源行号直接转原生 Tree，保留文档层级 | `3f156e97` | [原生 PNG 导出](https://github.com/tt-a1i/archify/blob/codex/lab-markdown-outline/experiments/markdown-outline/screenshots/contributing-export.png) | 8 tests；三样例四阶段通过；公开 CONTRIBUTING.md 17 节点，受限 Markdown 子集 |
@@ -25,6 +25,18 @@
 | [Finder canvas matches](https://github.com/tt-a1i/archify/tree/codex/lab-finder-highlights/experiments/finder-highlights) | 输入查询后，列表与画布同步显示匹配节点，保留既有选择与视图 | `94c165ee` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-finder-highlights/experiments/finder-highlights/screenshots/candidate-api-light.png) | 共享 Viewer；作者最终 browser 60/60、core 19/19、generated/ZIP 一致；独立 browser 17/17；有固定输入浅/深色前后图，无效率计时 |
 
 这十一项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
+
+## 图片速览
+
+以下四张直接来自对应分支的实际产物。点击名称查看完整说明；其余实验的图片见上表。
+
+| [Finder：搜索对应画布节点](https://github.com/tt-a1i/archify/tree/codex/lab-finder-highlights/experiments/finder-highlights) | [DBML：键与关系](https://github.com/tt-a1i/archify/tree/codex/lab-dbml-erd/experiments/dbml-erd) |
+| --- | --- |
+| <img width="540" alt="Finder：搜索对应画布节点 actual screenshot" src="https://raw.githubusercontent.com/tt-a1i/archify/94c165ee6e5213c67e37a75a0b04496564980801/experiments/finder-highlights/screenshots/candidate-api-light.png"> | <img width="540" alt="DBML：键与关系 actual screenshot" src="https://raw.githubusercontent.com/tt-a1i/archify/feab6ae685692630d6d837622dc7bdcb57a09679/experiments/dbml-erd/screenshots/order-payments.png"> |
+
+| [State：声明与未声明](https://github.com/tt-a1i/archify/tree/codex/lab-state-contract/experiments/state-contract) | [Decision：保留异议](https://github.com/tt-a1i/archify/tree/codex/lab-decision-thread/experiments/decision-thread) |
+| --- | --- |
+| <img width="540" alt="State：声明与未声明 actual screenshot" src="https://raw.githubusercontent.com/tt-a1i/archify/cc8c75bc15484098bf64aead799a34870981ccac/experiments/state-contract/screenshots/state-contract.png"> | <img width="540" alt="Decision：保留异议 actual screenshot" src="https://raw.githubusercontent.com/tt-a1i/archify/bdbdf9a9b5b97c556c5f85547279021b7446a05c/experiments/decision-thread/screenshots/sequence.png"> |
 
 ## 正在推进
 
