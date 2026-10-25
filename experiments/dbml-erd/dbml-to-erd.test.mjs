@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, writeFileSync, mkdtempSync, rmSync, symlinkSync, linkSync, mkdirSync, statSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdtempSync, rmSync, symlinkSync, linkSync, mkdirSync, statSync, existsSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -49,6 +49,37 @@ test('a shared primary key retains BOTH pk and fk badges', () => {
   assert.equal(model.relationships[0].fromOptional, false);
 });
 
+test('primary key is the same setting as pk for referenced and shared primary keys', () => {
+  const input = spelling => `Table accounts {\n id bigint [${spelling}]\n}\nTable profiles {\n account_id bigint [${spelling}, not null]\n}\nRef: accounts.id - profiles.account_id`;
+  const short = convertDbml(input('pk')), long = convertDbml(input('primary key'));
+  assert.deepEqual(long.entities, short.entities);
+  assert.deepEqual(long.relationships, short.relationships);
+  assert.deepEqual(long.entities[1].attributes[0].key, ['pk', 'fk']);
+  assert.equal(long.relationships[0].fromOptional, false);
+});
+
+test('CLI accepts the complete official primary-key fixture while simple-table remains rejected', () => {
+  const directory = mkdtempSync(join(tmpdir(), 'dbml-erd-official-'));
+  const primary = new URL('./upstream-compatibility/primary_key.in.dbml', import.meta.url);
+  const simple = new URL('./upstream-compatibility/simple-table.dbml', import.meta.url);
+  const original = readFileSync(primary);
+  const run = (input, output) => spawnSync(process.execPath, [new URL('./dbml-to-erd.mjs', import.meta.url).pathname, input.pathname, output], { encoding: 'utf8' });
+  try {
+    const output = join(directory, 'primary.json');
+    const accepted = run(primary, output);
+    assert.equal(accepted.status, 0, accepted.stderr);
+    const model = JSON.parse(readFileSync(output, 'utf8'));
+    assert.deepEqual(model.entities.map(e => ({ id: e.id, attributes: e.attributes })), [{ id: 'A', attributes: [{ name: 'id', type: 'int', key: 'pk' }] }]);
+    assert.deepEqual(model.relationships, []);
+    assert.deepEqual(readFileSync(primary), original, 'The upstream input is consumed without rewriting it');
+    const rejectedOutput = join(directory, 'simple.json');
+    const refused = run(simple, rejectedOutput);
+    assert.equal(refused.status, 1);
+    assert.equal(JSON.parse(refused.stderr).diagnostics[0].code, 'dbml/unsupported-token');
+    assert.equal(existsSync(rejectedOutput), false);
+  } finally { rmSync(directory, { recursive: true, force: true }); }
+});
+
 test('rejects unsupported DBML constructs instead of losing their constraints', async t => {
   const cases = [
     ['indexes', 'Table t {\n id bigint [pk]\n indexes { id [unique] }\n}', 'dbml/syntax'],
@@ -79,6 +110,14 @@ test('rejects ambiguity, invalid references and contradictory cardinality', asyn
     [tables('[unique]') + 'Ref: purchases.account_id > accounts.id', 'dbml/cardinality-conflict'],
     [tables('') + 'Ref: accounts.id - purchases.account_id', 'dbml/one-to-one-key'],
     [tables('[null, not null]'), 'dbml/conflicting-nullability'],
+    ['Table t {\n id int [pk, primary key]\n}', 'dbml/duplicate-setting'],
+    ['Table t {\n id int [primary key, pk]\n}', 'dbml/duplicate-setting'],
+    ['Table t {\n id int [primary key, primary key]\n}', 'dbml/duplicate-setting'],
+    ['Table t {\n id int [primary]\n}', 'dbml/syntax'],
+    ['Table t {\n id int [primary index]\n}', 'dbml/unsupported-setting'],
+    ['Table t {\n id int [primary key, null]\n}', 'dbml/conflicting-nullability'],
+    ['Table t {\n a int [pk]\n b int [primary key]\n}', 'dbml/composite-key'],
+    ['Table a {\n id int [primary key]\n}\nTable b {\n id int [primary key]\n}\nRef: a.id - b.id', 'dbml/pk-fk-nullability'],
     [tables('[unique]') + 'Ref a: accounts.id - purchases.account_id\nRef b: accounts.id - purchases.account_id', 'dbml/multiple-reference'],
     ['Table t {\n id int [pk]\n parent int\n}\nRef: t.parent > t.id', 'dbml/self-reference'],
   ];

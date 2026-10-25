@@ -95,6 +95,7 @@ export function convertDbml(source, { title = 'DBML schema — experimental impo
           do {
             const setting = take('word');
             let value = setting.value;
+            if (value === 'primary') { const next = take('word'); if (next.value !== 'key') fail('dbml/unsupported-setting', 'Expected primary key.', next); value = 'pk'; }
             if (value === 'not') { const next = take('word'); if (next.value !== 'null') fail('dbml/unsupported-setting', 'Expected not null.', next); value = 'not null'; }
             if (!['pk', 'unique', 'null', 'not null'].includes(value)) fail('dbml/unsupported-setting', `Unsupported column setting ${value}.`, setting);
             if (settings.has(value)) fail('dbml/duplicate-setting', `Repeated setting ${value}.`, setting);

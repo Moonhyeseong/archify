@@ -1,0 +1,43 @@
+{
+  "kind": "portable SHA-256 binding; no self-reference",
+  "files": {
+    "primary-key-acceptance/README.md": {
+      "sha256": "91c799b61681297f426697a6eb6bf46d9de7d27b0872d7d7bbb9a65a4d0524df",
+      "bytes": 4795
+    },
+    "primary-key-acceptance/evidence.json": {
+      "sha256": "6cab35247eb652c5340f791fa82b589304f61d6affa4bbbc41a9736c4bc35374",
+      "bytes": 10671
+    },
+    "primary-key-acceptance/primary-key.erd.json": {
+      "sha256": "3983559d3c704e287ed2c221e9a210de7ac2422c5fc956fab1b9a082d1fb7c96",
+      "bytes": 1055
+    },
+    "primary-key-acceptance/primary-key.html": {
+      "sha256": "c773c0be082532567569e7f10976f8eb6e3f77aa28cb81cbe856af848c46e8b6",
+      "bytes": 831687
+    },
+    "primary-key-acceptance/screenshots/capture.json": {
+      "sha256": "a155a3920473afe6e3ba6124ee231c54ef3454921217d6684a3cc620e8f0585c",
+      "bytes": 1186
+    },
+    "primary-key-acceptance/screenshots/primary-key.png": {
+      "sha256": "92965fa267810f2a9565a063b0df5778fb221015dcadd306c5fa8beccf060e77",
+      "bytes": 53136
+    },
+    "README.md": {
+      "sha256": "ce27c41fcc801527c76b6271d7a446e043fd95845d82ac81cf8f875edffb7bf7",
+      "bytes": 14358
+    }
+  },
+  "sourceBindings": {
+    "experiments/dbml-erd/dbml-to-erd.mjs": {
+      "sha256": "1692b6183cfd70ce5fdcab529fd5131e0a37cf98f945b20198764a3e10789a9d",
+      "bytes": 13042
+    },
+    "experiments/dbml-erd/dbml-to-erd.test.mjs": {
+      "sha256": "7f584a4d10a920939d06b346938e131ba1a8fd5d80109186292feedc414e1b83",
+      "bytes": 12176
+    }
+  }
+}

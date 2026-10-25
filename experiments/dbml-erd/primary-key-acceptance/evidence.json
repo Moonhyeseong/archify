@@ -1,0 +1,288 @@
+{
+  "kind": "derived-portable-acceptance-evidence; not an original execution or renderer receipt",
+  "recordedAt": "2026-10-25T07:55:07.255577+00:00",
+  "timeline": {
+    "historicalRejectionRecordingCommit": "d0472cc3a5065e2a1c4ba239927ae74a1d2320fd",
+    "upstreamDevMerged": "3f95f0349c8276db71509ca239461b6fe9d00f9f",
+    "mergeBaseline": "73c0014255b1cbfef9047e008a14b7b1dec1cbe2",
+    "implementationCommit": null,
+    "candidateIdentity": "Uncommitted working tree after the merge; bind implementation by source SHA, not by the merge commit."
+  },
+  "sourceBindings": {
+    "experiments/dbml-erd/dbml-to-erd.mjs": {
+      "sha256": "1692b6183cfd70ce5fdcab529fd5131e0a37cf98f945b20198764a3e10789a9d",
+      "bytes": 13042
+    },
+    "experiments/dbml-erd/dbml-to-erd.test.mjs": {
+      "sha256": "7f584a4d10a920939d06b346938e131ba1a8fd5d80109186292feedc414e1b83",
+      "bytes": 12176
+    }
+  },
+  "officialInput": {
+    "path": "../upstream-compatibility/primary_key.in.dbml",
+    "sha256": "6ecee8c55da3a78b6693a93863ae68af937afbb293586bfe5f0ff1e58771d756",
+    "bytes": 36,
+    "fixedSourceCommit": "0c34d8514ae7ebb457549531ef4fa5dab839c4fa",
+    "transformations": "none; complete original bytes; no final newline",
+    "license": "Apache-2.0; original license retained in upstream-compatibility"
+  },
+  "cli": {
+    "accepted": {
+      "command": "node experiments/dbml-erd/dbml-to-erd.mjs experiments/dbml-erd/upstream-compatibility/primary_key.in.dbml <fresh-primary-key.erd.json>",
+      "exitCode": 0,
+      "output": "primary-key.erd.json",
+      "entities": [
+        {
+          "id": "A",
+          "attributes": [
+            {
+              "name": "id",
+              "type": "int",
+              "key": "pk"
+            }
+          ]
+        }
+      ],
+      "relationships": []
+    },
+    "stillRejected": {
+      "input": "../upstream-compatibility/simple-table.dbml",
+      "sha256": "1b80c6c2db701eaeed7994ee610c84a7dd2d90601e2cb810e90bab9c406a26bc",
+      "bytes": 127,
+      "exitCode": 1,
+      "outputCreated": false,
+      "firstDiagnosticProjection": {
+        "code": "dbml/unsupported-token",
+        "severity": "error",
+        "message": "dbml/unsupported-token at 5:34: Unsupported character \"`\"; quoted names, strings, expressions and optionality operators are outside this subset.",
+        "supportedFixes": [
+          "Use only the documented Table/column/short Ref subset; see experiments/dbml-erd/README.md."
+        ],
+        "line": 5,
+        "column": 34
+      },
+      "subjectOmitted": "Only private local subject.path omitted; original stderr remains unchanged outside checkout."
+    }
+  },
+  "focused": {
+    "command": "node --test experiments/dbml-erd/dbml-to-erd.test.mjs",
+    "passed": 49,
+    "failed": 0,
+    "skipped": 0,
+    "topLevel": 12,
+    "purpose": "Official CLI acceptance and retained rejection; alias equivalence, duplicate/partial/null/composite/PK-FK boundaries, existing output protection."
+  },
+  "baseDiscrimination": {
+    "parserRevision": "d0472cc3a5065e2a1c4ba239927ae74a1d2320fd",
+    "adapter": {
+      "sha256": "f1d5024ad1e434855c84d5332bbab4b94b8c403bc23bc661d9e341c6b94d015e",
+      "bytes": 12869
+    },
+    "test": {
+      "sha256": "7f584a4d10a920939d06b346938e131ba1a8fd5d80109186292feedc414e1b83",
+      "bytes": 12176
+    },
+    "selectedTests": "primary key is the same|CLI accepts the complete",
+    "passed": 0,
+    "failed": 2,
+    "skipped": 0,
+    "interpretation": "Expected failures with the same final tests on the historical parser; not a candidate failure."
+  },
+  "render": {
+    "command": "node archify/bin/archify.mjs render erd <primary-key.erd.json> <primary-key.html> --quality standard",
+    "exitCode": 0
+  },
+  "finalize": {
+    "command": "node archify/bin/archify.mjs finalize erd <primary-key.erd.json> <primary-key.html> --quality standard --out-dir <private-receipts> --receipt <private-finalize.json> --json",
+    "exitCode": 0,
+    "startedAt": "2026-10-25T07:50:54.507Z",
+    "finishedAt": "2026-10-25T07:50:58.494Z",
+    "quality": "standard",
+    "status": "pass",
+    "stages": {
+      "validate": {
+        "status": "pass",
+        "exitCode": 0
+      },
+      "deliver": {
+        "status": "pass",
+        "exitCode": 0
+      },
+      "check": {
+        "status": "pass",
+        "exitCode": 0
+      },
+      "browser-check": {
+        "status": "pass",
+        "exitCode": 0
+      }
+    },
+    "browserCheck": {
+      "requested": true,
+      "ran": true
+    },
+    "diagnostics": [],
+    "visualReview": "not-requested",
+    "specification": {
+      "path": "primary-key.erd.json",
+      "sha256": "3983559d3c704e287ed2c221e9a210de7ac2422c5fc956fab1b9a082d1fb7c96",
+      "bytes": 1055
+    },
+    "artifact": {
+      "path": "primary-key.html",
+      "sha256": "c773c0be082532567569e7f10976f8eb6e3f77aa28cb81cbe856af848c46e8b6",
+      "bytes": 831687
+    },
+    "rawReceipt": {
+      "sha256": "9774c18c688d769bf9384d673ecba376035ec841dabd7e529feb57e1c324582c",
+      "bytes": 34623
+    }
+  },
+  "softwareNotices": {
+    "rendererDev": "3f95f0349c8276db71509ca239461b6fe9d00f9f",
+    "embeddedTextSHA256": "aaf68e81dc6943d75f61a3c55385e59175af091ab1906b82ecca7862a33127a3",
+    "matchesRendererSourceConcatenation": true,
+    "sources": {
+      "archify/NOTICE": {
+        "sha256": "4c88357b600f24214bd6d12ee70e37d66a160c6069bba2aec2d35486f6ff1a3a",
+        "bytes": 1340
+      },
+      "archify/LICENSE": {
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "bytes": 11358
+      },
+      "archify/LICENSE-MIT": {
+        "sha256": "b799ab081703e7821ae5096d2c1abdf14bbdc75e8ea1c4045998c36ed6db9706",
+        "bytes": 1102
+      },
+      "archify/THIRD_PARTY_NOTICES.md": {
+        "sha256": "afe000ec995a2025368ab0017f7f9417df682724970c824ff8f4af5cfac0e9a4",
+        "bytes": 5967
+      }
+    },
+    "note": "Unmodified new-base renderer software notices; historical HTML unchanged."
+  },
+  "preservedHistoricalEvidence": {
+    "upstream-compatibility/sources.json": {
+      "sha256": "e91fa5f823063a744282032cdb8094a09c6c2f32d4295561dbca2febaea54c7c",
+      "bytes": 3013
+    },
+    "upstream-compatibility/rejection-summary.json": {
+      "sha256": "8169a14598753a6b6de2c49cfa57777b429a9dda1316c976e5d21d11738d0a93",
+      "bytes": 3366
+    },
+    "upstream-compatibility/simple-table.dbml": {
+      "sha256": "1b80c6c2db701eaeed7994ee610c84a7dd2d90601e2cb810e90bab9c406a26bc",
+      "bytes": 127
+    },
+    "upstream-compatibility/LICENSE.Apache-2.0": {
+      "sha256": "45fc81806b99adde47bc9085247697788d3f786c6b5304021113d1f44d0e8486",
+      "bytes": 11358
+    },
+    "upstream-compatibility/primary_key.in.dbml": {
+      "sha256": "6ecee8c55da3a78b6693a93863ae68af937afbb293586bfe5f0ff1e58771d756",
+      "bytes": 36
+    }
+  },
+  "oldSuccessfulArtifactsUnchanged": true,
+  "oldSyntheticJsonByteIdentical": true,
+  "rawFiles": {
+    "focused.stdout": {
+      "sha256": "4ed0e38b5e04600e8814da2c60b754bee448617f0d037d5145cac42723f4fec9",
+      "bytes": 7098
+    },
+    "focused.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "base-discrimination.stdout": {
+      "sha256": "78f815bb90aedc73b59ddde628e9a273f27aa1c2c9ca8482644b5f76c6e810d6",
+      "bytes": 2923
+    },
+    "base-discrimination.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "convert-primary.stdout": {
+      "sha256": "aee92701dd892b5acbf6c642cb4a5bb0c8b68a21a8583c92e34fcd5b55e4ae56",
+      "bytes": 172
+    },
+    "convert-primary.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "reject-simple.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "reject-simple.stderr": {
+      "sha256": "8f3d51c0b287e3ba6403e43f344d0f756c4d2005835fba8e924cdaa928fdfbc8",
+      "bytes": 470
+    },
+    "render.stdout": {
+      "sha256": "f309f020f1379cb5cd120f93422e72db7b1ce0378c3ef8c7108fbbe24f541690",
+      "bytes": 116
+    },
+    "render.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "finalize.stdout": {
+      "sha256": "d9fa3a647e9a9b802029547c98dde8cd58f659ef8e4ca7b60176a702ac5f8ca8",
+      "bytes": 1420
+    },
+    "finalize.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "finalize.json": {
+      "sha256": "9774c18c688d769bf9384d673ecba376035ec841dabd7e529feb57e1c324582c",
+      "bytes": 34623
+    },
+    "finalize-summary.json": {
+      "sha256": "fb9f1e8747a0f824b989a3403ce57d2ac18c8c7cda3bfda288e93dac9a8e96fd",
+      "bytes": 1662
+    },
+    "primary-key.delivery.json": {
+      "sha256": "37c78f993c9d0bbc0c79d21541a604f08e8244171017599189488262385c19e4",
+      "bytes": 658
+    },
+    "commands.json": {
+      "sha256": "6ecf0fe5182bbb21e5ea636f4eea1de7a523625ae562633d1333f5b407a81ee9",
+      "bytes": 2438
+    },
+    "model-equivalence.json": {
+      "sha256": "f9a22bde260aaff5ede7c77294aeb379b7ee4cde4f3c07f5d9fa657cb5e6c1b6",
+      "bytes": 39
+    },
+    "receipts/primary-key.browser-check.json": {
+      "sha256": "62af38b6b73428d287e410ed9f420d25989d07df16f09e28a3e6dd918c7b83f9",
+      "bytes": 20955
+    }
+  },
+  "scope": {
+    "productCodeModified": false,
+    "zipRebuilt": false,
+    "upstreamProgramExecuted": false,
+    "databaseExecuted": false,
+    "fullRepositorySuite": "not-run",
+    "liveInstallation": "not-performed",
+    "egoOrTaskSpace": "not-opened",
+    "screenshots": "Actual root Ego screenshot captured and viewed; portable metadata in screenshots/capture.json; not interaction or database acceptance.",
+    "userAcceptance": "not-claimed"
+  },
+  "rawStorage": "Unmodified raw bytes are retained outside checkout, including an identical temporary archive copy. Public summaries do not claim current provenance for relocated receipts.",
+  "screenshots": {
+    "capture": "screenshots/capture.json",
+    "captureSha256": "a155a3920473afe6e3ba6124ee231c54ef3454921217d6684a3cc620e8f0585c",
+    "image": "screenshots/primary-key.png",
+    "imageSha256": "92965fa267810f2a9565a063b0df5778fb221015dcadd306c5fa8beccf060e77",
+    "rootViewed": true,
+    "htmlSha256": "c773c0be082532567569e7f10976f8eb6e3f77aa28cb81cbe856af848c46e8b6"
+  },
+  "generatedBytesPolicy": {
+    "htmlTrailingWhitespaceLines": 15,
+    "unchangedRendererOutput": true,
+    "modifiedTrackedSourceTestMarkdownDiffCheck": "pass; generated HTML is not postprocessed"
+  }
+}

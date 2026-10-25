@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "diagram_type": "erd",
+  "meta": {
+    "title": "DBML schema — experimental import",
+    "output": "dbml-erd.html",
+    "subtitle": "Experimental DBML subset · schema projection, not executable DDL",
+    "locale": "en",
+    "visual_preset": "blueprint"
+  },
+  "layout": {
+    "mode": "grid",
+    "gapX": 100,
+    "gapY": 70
+  },
+  "entities": [
+    {
+      "id": "A",
+      "label": "A",
+      "row": 0,
+      "col": 0,
+      "attributes": [
+        {
+          "name": "id",
+          "type": "int",
+          "key": "pk"
+        }
+      ]
+    }
+  ],
+  "relationships": [],
+  "cards": [
+    {
+      "dot": "amber",
+      "title": "Read the relationship ends",
+      "items": [
+        "A circle marks zero allowed rows at that endpoint. A parent may have zero dependents.",
+        "FK columns without not null are nullable by DBML default. Nullable FKs make the parent endpoint optional.",
+        "This is a bounded structure projection. It does not execute migrations or infer delete/update actions."
+      ]
+    }
+  ]
+}

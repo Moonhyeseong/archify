@@ -1,0 +1,32 @@
+{
+  "kind": "derived portable metadata for an actual Ego Chromium screenshot; raw metadata remains outside checkout",
+  "capturedAt": "2026-10-25T07:55:53.014Z",
+  "html": {
+    "path": "primary-key.html",
+    "sha256": "c773c0be082532567569e7f10976f8eb6e3f77aa28cb81cbe856af848c46e8b6",
+    "bytes": 831687
+  },
+  "image": {
+    "path": "screenshots/primary-key.png",
+    "sha256": "92965fa267810f2a9565a063b0df5778fb221015dcadd306c5fa8beccf060e77",
+    "bytes": 53136
+  },
+  "viewport": {
+    "width": 1280,
+    "height": 900,
+    "deviceScaleFactor": 1
+  },
+  "theme": "light",
+  "preset": "Blueprint",
+  "zoom": "100%",
+  "motion": "Still",
+  "rootViewed": true,
+  "observedBy": "Coordinating root agent captured and viewed the original PNG. Implementing agent did not operate Ego.",
+  "observation": "A.id int has the PK badge; the Primary key legend is visible.",
+  "rawMetadata": {
+    "sha256": "5f3866aa3f58febb82880ff0fadda090b34bbf13bee1b1052755cad7de6b50c9",
+    "bytes": 7441,
+    "retainedOutsideCheckout": true
+  },
+  "limits": "Static appearance of the accepted official fixture only; no new interaction, database execution, human or assistive-technology acceptance."
+}
