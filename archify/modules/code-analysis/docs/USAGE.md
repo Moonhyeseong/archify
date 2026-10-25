@@ -135,9 +135,9 @@ Rules are switched off only with `"ignore": ["rule/code"]`. A config that is not
 
 ## Comparing runs
 
-Every `findings.json` records what the result depends on besides the code: the analyzer version, a digest of the effective config, the rules that ran, the excluded file roles and the files that failed to parse. A comparison (Re-analyze, or `check --compare`/`--out`) lists findings that are new, **no longer detected**, and whose evidence changed, and adds:
+Every `findings.json` records what the result depends on besides the code: the analyzer version, the extractor (its parser or runtime version and the revision of its own logic), a digest of the effective config, the rules that ran, the excluded file roles and the files that failed to parse. A comparison (Re-analyze, or `check --compare`/`--out`) lists findings that are new, **no longer detected**, and whose evidence changed, and adds:
 
-- `comparable`: `true` when both runs measured the same way, `false` with `reasons` (config, rules, analyzer version, scope or parse errors changed), `null` when the earlier run predates this record;
+- `comparable`: `true` when both runs measured the same way, `false` with `reasons` (config, rules, analyzer version, extractor, scope or parse errors changed), `null` when the earlier run predates this record;
 - per finding no longer detected, a `likelyCause` when one is visible: `rule-not-run`, `files-missing` (deleted, renamed or excluded), `parse-error`, or `possibly-renamed` with the new finding ids that cover the same files.
 
 Only a comparable run in which the finding is no longer detected, together with passing project checks, supports saying a problem was fixed. `review.json` keeps `fixed` as an alias of `notDetected` for existing readers.

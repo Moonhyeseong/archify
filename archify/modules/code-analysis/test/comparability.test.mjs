@@ -149,6 +149,29 @@ test('comparison: reordering first-match config maps or changing the extractor i
   assert.deepEqual(comparability(before.findings.analysis, other).reasons.map((r) => r.code), ['adapter-changed']);
 });
 
+test('comparison: a changed extraction logic revision is not comparable; an unrecorded one is reported once', (t) => {
+  const dir = copySource();
+  t.after(() => fs.rmSync(dir, { recursive: true, force: true }));
+  const before = run(dir, loadConfig(CONFIG)).findings.analysis;
+  assert.equal(before.adapterRevision, 1, 'findings record the revision of the raw facts');
+  assert.deepEqual(comparability(before, { ...before }), { comparable: true, reasons: [] });
+
+  const revised = comparability(before, { ...before, adapterRevision: 2 });
+  assert.equal(revised.comparable, false);
+  assert.deepEqual(revised.reasons.map((r) => r.code), ['adapter-changed']);
+  assert.match(revised.reasons[0].message, /revision 1 to 2/);
+
+  // Findings written before revisions were recorded, against a current run.
+  const { adapterRevision: _dropped, ...legacy } = before;
+  const upgraded = comparability(legacy, before);
+  assert.deepEqual(upgraded.reasons.map((r) => r.code), ['adapter-changed']);
+  assert.match(upgraded.reasons[0].message, /unrecorded to 1/);
+
+  const both = comparability(before, { ...before, adapter: 'python@9.9.9', adapterRevision: 2 });
+  assert.equal(both.reasons.length, 1, 'one extractor reason names both changes');
+  assert.match(both.reasons[0].message, /python@9\.9\.9.*revision 1 to 2/);
+});
+
 test('check: an explicit --compare that cannot be read is an input error, not "no comparison"', (t) => {
   const dir = copySource();
   const out = fs.mkdtempSync(path.join(os.tmpdir(), 'archify-compare-'));

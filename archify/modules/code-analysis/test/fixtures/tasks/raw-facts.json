@@ -7,8 +7,9 @@
     "root": ".",
     "url": null,
     "language": "py",
-    "adapter": "python@3.13.16",
-    "snapshotId": "4b2f9e7683538b8a7354c4974ac9f34dfb216b97d349b9584385be9bf97217d1"
+    "adapter": "python@3.13.17",
+    "adapterRevision": 1,
+    "snapshotId": "e414701d6bdde3ea4ac97af50ed6027fd31d94ea18cc91fbf601d10523f866b3"
   },
   "files": [
     {

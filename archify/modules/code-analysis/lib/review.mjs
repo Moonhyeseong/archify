@@ -115,8 +115,15 @@ export function comparability(before, after) {
   const add = (code, message) => reasons.push({ code, message });
   if (before.language !== after.language) add('language-changed', `Language changed from ${before.language} to ${after.language}.`);
   if (before.analyzer?.version !== after.analyzer?.version) add('analyzer-changed', `Analyzer version changed from ${before.analyzer?.version} to ${after.analyzer?.version}.`);
-  // The extractor (Python or TypeScript version) decides what parses and how imports resolve.
-  if (before.adapter !== after.adapter) add('adapter-changed', `Extractor changed from ${before.adapter} to ${after.adapter}.`);
+  // The extractor decides what parses and how dependencies resolve: both the parser or
+  // runtime it uses (adapter) and its own logic (adapterRevision). A run that recorded no
+  // revision cannot be matched to one that did, so the first comparison after upgrading
+  // reports the change.
+  const revision = (context) => context.adapterRevision ?? null;
+  const changes = [];
+  if (before.adapter !== after.adapter) changes.push(`Extractor changed from ${before.adapter} to ${after.adapter}.`);
+  if (revision(before) !== revision(after)) changes.push(`Extraction logic changed from revision ${revision(before) ?? 'unrecorded'} to ${revision(after) ?? 'unrecorded'}.`);
+  if (changes.length) add('adapter-changed', changes.join(' '));
   if (before.configDigest !== after.configDigest) add('config-changed', 'The analysis configuration changed (thresholds, include/exclude, roles, boundaries or ignored rules).');
   const rulesBefore = before.ruleVersions || {}, rulesAfter = after.ruleVersions || {};
   const removed = Object.keys(rulesBefore).filter((r) => !(r in rulesAfter)).sort(compareText);
