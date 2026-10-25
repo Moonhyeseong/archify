@@ -1,0 +1,44 @@
+{
+  "kind": "derived selected receipt fields; NOT an original receipt",
+  "softwareBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "rawReceipt": {
+    "sha256": "83b478756677eafed3bbc21653e77536b1edc14858921cee5a9131ea7cce52d5",
+    "bytes": 38406
+  },
+  "quality": "standard",
+  "status": "pass",
+  "specification": {
+    "path": "input.workflow.json",
+    "sha256": "ab8105274c3da65cb657db81a7d2054d2248e5575d812cf5f5d24ec999abe4f7",
+    "bytes": 853
+  },
+  "stages": {
+    "validate": {
+      "status": "pass",
+      "exitCode": 0
+    },
+    "deliver": {
+      "status": "pass",
+      "exitCode": 0
+    },
+    "check": {
+      "status": "pass",
+      "exitCode": 0
+    },
+    "browser-check": {
+      "status": "pass",
+      "exitCode": 0
+    }
+  },
+  "diagnostics": [],
+  "artifact": {
+    "location": "external exact-archive smoke output",
+    "sha256": "2be2c0852efa749fc917eea5619323190a2f8e193dd77b5394955c55357fc928",
+    "bytes": 852459
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReview": "not-requested"
+}

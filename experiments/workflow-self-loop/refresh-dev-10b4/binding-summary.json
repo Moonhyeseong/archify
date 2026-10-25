@@ -1,0 +1,77 @@
+{
+  "kind": "derived final public/source ledger; no self-reference",
+  "softwareBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "historicalCandidate": "eb299b1568327fb77ce7e8a6dcaab610e2b6af0c",
+  "files": {
+    "README.md": {
+      "sha256": "36db4876fd8ea3777221e5c39a78857ea1f5cc2d48edd1304e9e77e73a0dc843",
+      "bytes": 9346
+    },
+    "archive-finalize-summary.json": {
+      "sha256": "d54445c0269a50c9c14dff5db9f9f8051042fc9383fdc31352b9f8d14685c40d",
+      "bytes": 1057
+    },
+    "base-finalize-summary.json": {
+      "sha256": "63fc0dfcbf2fc169f8b0ed18e5c9ff9f926f12cc5bb68a3272e3768caf67bf46",
+      "bytes": 2065
+    },
+    "candidate-finalize-summary.json": {
+      "sha256": "042ab06fdb6e79403d67bf5306cb8b9c75009b641a6ba0c41bf7ef6041a330b5",
+      "bytes": 1036
+    },
+    "candidate.html": {
+      "sha256": "2be2c0852efa749fc917eea5619323190a2f8e193dd77b5394955c55357fc928",
+      "bytes": 852459
+    },
+    "checks-summary.json": {
+      "sha256": "16533b2fd99d06d92154fbbd740fbe8329a87389b825a0ba389c290842c8f208",
+      "bytes": 7074
+    },
+    "compatibility-summary.json": {
+      "sha256": "0579b52652d942ae7ce1260c90e4e1d787485e5c4faee868bb7974ca729cd497",
+      "bytes": 5659
+    },
+    "input.workflow.json": {
+      "sha256": "ab8105274c3da65cb657db81a7d2054d2248e5575d812cf5f5d24ec999abe4f7",
+      "bytes": 853
+    },
+    "screenshots/candidate-dark-settled.png": {
+      "sha256": "cad90a077e721c96a59463ee9334945e74c5b5bef5786b26e2647621a2c04c38",
+      "bytes": 41652
+    },
+    "screenshots/candidate-light.png": {
+      "sha256": "bf431d202ddcd601556d1d49332e20a3585fa27ba632a06e9f5df0983f1e1a1d",
+      "bytes": 44188
+    },
+    "screenshots/candidate-selected.png": {
+      "sha256": "7582ca5c83faec0b118dd60131c2491ac15744f8b6ecd22bdae4e391912769ce",
+      "bytes": 107591
+    },
+    "screenshots/capture-summary.json": {
+      "sha256": "3e7aa676cdc3aa3c8f66356c0baaa10dc89f3c1a745a2e62b793ea39f4eb5f97",
+      "bytes": 5249
+    },
+    "zip-summary.json": {
+      "sha256": "ee16227e457c6075ad8c701dbf733e0ed9907cb6132de98528a2d2e1bab79ea8",
+      "bytes": 581
+    }
+  },
+  "sourceBindings": {
+    "archify/renderers/workflow/workflow-compiler.mjs": {
+      "sha256": "fa1da221df9c0cb81e5eb3096068925ea16f178103c20209a7994aa79fd08a2d",
+      "bytes": 251891
+    },
+    "test/workflow-compiler-hard-contract.test.mjs": {
+      "sha256": "a5511d4589ce2b818c3b5fac6669bf85d0309d39cb6718dee185697714737f0a",
+      "bytes": 129287
+    },
+    "archify.zip": {
+      "sha256": "2c31e1b3e2a0cf3a63f4b24ea9a2d4581d1eea44be2433ea2853bb740649a4a8",
+      "bytes": 6987722
+    }
+  },
+  "visualEvidence": {
+    "summary": "screenshots/capture-summary.json",
+    "scope": "Three root-agent-captured/viewed original PNGs, safe native-AX excerpts; camera states explicitly differ; no baseline image or human/AT acceptance."
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "kind": "derived safe capture and actual native-AX text summary; NOT raw snapshot or screen-reader transcript",
+  "softwareBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "input": {
+    "path": "input.workflow.json",
+    "sha256": "ab8105274c3da65cb657db81a7d2054d2248e5575d812cf5f5d24ec999abe4f7",
+    "bytes": 853
+  },
+  "artifact": {
+    "path": "candidate.html",
+    "sha256": "2be2c0852efa749fc917eea5619323190a2f8e193dd77b5394955c55357fc928",
+    "bytes": 852459
+  },
+  "screenshots": [
+    {
+      "path": "screenshots/candidate-light.png",
+      "sha256": "bf431d202ddcd601556d1d49332e20a3585fa27ba632a06e9f5df0983f1e1a1d",
+      "bytes": 44188,
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "viewportCssPixels": [
+        1440,
+        1000
+      ],
+      "rootViewed": true,
+      "state": "candidate-light"
+    },
+    {
+      "path": "screenshots/candidate-dark-settled.png",
+      "sha256": "cad90a077e721c96a59463ee9334945e74c5b5bef5786b26e2647621a2c04c38",
+      "bytes": 41652,
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "viewportCssPixels": [
+        1440,
+        1000
+      ],
+      "rootViewed": true,
+      "state": "candidate-dark-settled"
+    },
+    {
+      "path": "screenshots/candidate-selected.png",
+      "sha256": "7582ca5c83faec0b118dd60131c2491ac15744f8b6ecd22bdae4e391912769ce",
+      "bytes": 107591,
+      "pngDimensions": [
+        1440,
+        1000
+      ],
+      "viewportCssPixels": [
+        1440,
+        1000
+      ],
+      "rootViewed": true,
+      "state": "candidate-selected"
+    }
+  ],
+  "rawBindings": {
+    "checks.json": {
+      "sha256": "cdf24b4598820488c627cea083a8d282cadc4d614a7db6064c0640727681736f",
+      "bytes": 1629
+    },
+    "selected.snapshot.json": {
+      "sha256": "f7cd2436e4e49aba7faa6b4710031d088897d031891d7700bae489d058cf8825",
+      "bytes": 3581
+    },
+    "candidate-dark.png": {
+      "sha256": "48e46260158723e868f509485828184d507a63b121721ad85f82a8ce42de2ce6",
+      "bytes": 41018
+    }
+  },
+  "observations": {
+    "capturedAt": "2026-10-25T10:58:33.763Z",
+    "light": {
+      "title": "Explicit self-loop Diagram",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "height": 1000,
+      "text": [
+        "01 / Lane",
+        "A"
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "tag": "g",
+          "role": "button"
+        },
+        {
+          "id": "a",
+          "tag": "BUTTON",
+          "role": null
+        }
+      ],
+      "controls": [
+        "Toggle color theme",
+        "Visual style: Classic. Choose visual style",
+        "Resume motion",
+        "Enter presentation stage",
+        "Export diagram"
+      ]
+    },
+    "dark": {
+      "theme": "dark",
+      "text": [
+        "01 / Lane",
+        "A"
+      ]
+    },
+    "selectionCapturedAt": "2026-10-25T10:59:10.127Z",
+    "selectedSnapshot": "selected.snapshot.json",
+    "settledDarkCapturedAt": "2026-10-25T11:00:18.215Z",
+    "settledDark": {
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "height": 1000,
+      "controls": [
+        {
+          "label": "Visual style: Classic. Choose visual style",
+          "disabled": false,
+          "text": "Classic"
+        },
+        {
+          "label": "Resume motion",
+          "disabled": false,
+          "text": "Still"
+        },
+        {
+          "label": "Export diagram",
+          "disabled": false,
+          "text": "Export"
+        }
+      ]
+    },
+    "publicationImages": [
+      "candidate-light.png",
+      "candidate-dark-settled.png",
+      "candidate-selected.png"
+    ],
+    "initialDark": "candidate-dark.png was captured during UI transition and retained locally; settled frame is selected for publication."
+  },
+  "selectedNativeAXText": {
+    "counts": "0 outgoing \u00b7 0 incoming \u00b7 1 loop",
+    "relationshipGroup": "SELF LOOPS \u00b7 1",
+    "relationshipButtonName": "Self loops: loops back, A",
+    "zoomControlAtSnapshot": "FULL 100% \u00b7 Full diagram detail. Reset diagram view"
+  },
+  "cameraStates": {
+    "selectedImageZoomPercentReportedByCoordinator": 190,
+    "earlierNativeAXSnapshotZoomPercent": 100,
+    "sameCameraStateClaimed": false,
+    "explanation": "Selection triggers autozoom. The native AX snapshot predates the selected screenshot; do not present the selected image as the same overview geometry/zoom."
+  },
+  "publicationChoice": {
+    "excluded": "candidate-dark.png",
+    "reason": "Captured during finite UI transition with Export grey; retained outside checkout.",
+    "publishedInstead": "candidate-dark-settled.png",
+    "settledExportEnabled": true
+  },
+  "limits": [
+    "No baseline HTML was produced; no before image is invented.",
+    "Root agent captured and viewed all three published original PNGs.",
+    "Overview and selected image share viewport dimensions but not camera state.",
+    "Native AX text is distinct from human or spoken screen-reader acceptance.",
+    "Original checks/snapshot may contain private local file locations and remain outside checkout; only selected safe text is published.",
+    "Constructed illustrative geometry regression, not workflow execution."
+  ]
+}

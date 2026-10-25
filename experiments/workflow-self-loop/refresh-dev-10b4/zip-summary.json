@@ -1,0 +1,19 @@
+{
+  "sha256": "2c31e1b3e2a0cf3a63f4b24ea9a2d4581d1eea44be2433ea2853bb740649a4a8",
+  "bytes": 6987722,
+  "entries": 235,
+  "changedMembersFromDev": [
+    "archify/renderers/workflow/workflow-compiler.mjs"
+  ],
+  "crcValid": true,
+  "canonicalDoubleBuildIdentical": true,
+  "packagedCompilerExact": true,
+  "toolchain": {
+    "node": "22.23.2",
+    "zlib": "1.3.1-e00f703"
+  },
+  "kind": "derived canonical package verification; not raw build output",
+  "base": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "experimentsExcluded": true,
+  "allOtherPackagedDevBytesPreserved": true
+}

@@ -1,0 +1,248 @@
+{
+  "kind": "derived actual compiler comparisons; not CLI receipts",
+  "softwareBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "quality": "standard",
+  "examples": [
+    {
+      "file": "archify/examples/agent-tool-call.workflow.json",
+      "inputSHA256": "d67965d50872c97e4ff3476271e645bf19fab6b3ab44e111bdb44b063e3aa36f",
+      "baseOk": true,
+      "candidateOk": true,
+      "svgExactlyEqual": true,
+      "compilerReceiptsExactlyEqual": true,
+      "svgSHA256": "c17dabe638353571a9989b26521f30e0c6cdb80baf6866e3c9ef7a25c8d22cae"
+    },
+    {
+      "file": "archify/examples/holiday-planning.workflow.json",
+      "inputSHA256": "b98354f921ca45842fed235db09fd4f19d94adc16865876f438c0d699d05e1ea",
+      "baseOk": true,
+      "candidateOk": true,
+      "svgExactlyEqual": true,
+      "compilerReceiptsExactlyEqual": true,
+      "svgSHA256": "e56b16823cff56cac07a71c21c163a19c18b2848e26642a938935dcd5a0bf065"
+    },
+    {
+      "file": "archify/examples/incident-response.workflow.json",
+      "inputSHA256": "630be98449925d2716ecb8439f404b2bff5fe65ba905b0ad0baea6d96890c526",
+      "baseOk": true,
+      "candidateOk": true,
+      "svgExactlyEqual": true,
+      "compilerReceiptsExactlyEqual": true,
+      "svgSHA256": "1dd9130d4f38befc87ed8e8fbec55a7ef655d9fbdee37817d01936b6ee61e352"
+    },
+    {
+      "file": "archify/examples/release-delivery.workflow.json",
+      "inputSHA256": "dbd5c174af66296caec372e7214cf4df7158b50a563508e16826b95ab8d1cd6c",
+      "baseOk": true,
+      "candidateOk": true,
+      "svgExactlyEqual": true,
+      "compilerReceiptsExactlyEqual": true,
+      "svgSHA256": "90e0d5eaecd49605a62d375c4937d25b00f388486e2e87cc97ea201050abac42"
+    }
+  ],
+  "existingAutomaticCase": {
+    "file": "experiments/workflow-self-loop/existing-auto.workflow.json",
+    "inputSHA256": "ff2e0561bf97590fb0f883f9fb1cf5ecbbf5717f42630c1bd86804926c0cf507",
+    "baseOk": false,
+    "baseDiagnostics": [
+      {
+        "code": "workflow/solver-budget-exhausted",
+        "severity": "error",
+        "message": "Workflow edge \"z-self\" has no feasible readable-v2 automatic route.",
+        "subject": {
+          "diagramType": "workflow",
+          "edge": "z-self",
+          "from": "b",
+          "to": "b"
+        },
+        "evidence": {
+          "attemptedCandidateFamilies": [
+            "facing-straight",
+            "horizontal-then-vertical",
+            "vertical-then-horizontal",
+            "lane-gap-corridor",
+            "column-gap-corridor",
+            "outside-left",
+            "outside-right",
+            "top-corridor",
+            "bottom-corridor",
+            "lane-gap-corridor",
+            "column-gap-corridor",
+            "lane-gap-corridor",
+            "column-gap-corridor",
+            "lane-gap-corridor",
+            "column-gap-corridor",
+            "lane-gap-corridor",
+            "column-gap-corridor"
+          ],
+          "candidateCount": 17
+        },
+        "supportedFixes": []
+      }
+    ],
+    "candidateOk": true,
+    "candidateReceipt": {
+      "contract": "readable-v2",
+      "viewBox": [
+        768,
+        280
+      ],
+      "requiredViewBox": [
+        768,
+        280
+      ],
+      "columns": [
+        94,
+        214,
+        334,
+        454,
+        574,
+        694
+      ],
+      "nodes": [
+        {
+          "id": "a",
+          "lane": "main",
+          "col": 0,
+          "x": 48,
+          "y": 93,
+          "width": 92,
+          "height": 52
+        },
+        {
+          "id": "b",
+          "lane": "main",
+          "col": 2,
+          "x": 288,
+          "y": 93,
+          "width": 92,
+          "height": 52
+        }
+      ],
+      "edges": [
+        {
+          "id": "a-pinned",
+          "from": "a",
+          "to": "b",
+          "points": [
+            [
+              140,
+              119
+            ],
+            [
+              288,
+              119
+            ]
+          ]
+        },
+        {
+          "id": "z-self",
+          "from": "b",
+          "to": "b",
+          "points": [
+            [
+              380,
+              119
+            ],
+            [
+              396,
+              119
+            ],
+            [
+              396,
+              172
+            ],
+            [
+              334,
+              172
+            ],
+            [
+              334,
+              145
+            ]
+          ]
+        }
+      ],
+      "labels": [
+        {
+          "edge": "a-pinned",
+          "label": "Pinned",
+          "x": 94,
+          "y": 30,
+          "width": 38.8,
+          "height": 14
+        },
+        {
+          "edge": "z-self",
+          "label": "Retry",
+          "x": 365,
+          "y": 162,
+          "width": 34,
+          "height": 14
+        }
+      ],
+      "diagnostics": []
+    }
+  },
+  "primaryCandidateReceipt": {
+    "contract": "readable-v2",
+    "viewBox": [
+      812,
+      280
+    ],
+    "requiredViewBox": [
+      812,
+      280
+    ],
+    "columns": [
+      138,
+      258,
+      378,
+      498,
+      618,
+      738
+    ],
+    "nodes": [
+      {
+        "id": "a",
+        "lane": "lane",
+        "col": 0,
+        "x": 48,
+        "y": 93,
+        "width": 180,
+        "height": 52
+      }
+    ],
+    "edges": [
+      {
+        "id": "loop",
+        "from": "a",
+        "to": "a",
+        "points": [
+          [
+            138,
+            145
+          ],
+          [
+            138,
+            190
+          ],
+          [
+            270,
+            190
+          ],
+          [
+            270,
+            119
+          ],
+          [
+            228,
+            119
+          ]
+        ]
+      }
+    ],
+    "labels": [],
+    "diagnostics": []
+  }
+}

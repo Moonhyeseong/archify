@@ -1,0 +1,172 @@
+{
+  "kind": "derived scoped checks and preserved-history record; not raw logs",
+  "softwareBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "historicalCandidate": "eb299b1568327fb77ce7e8a6dcaab610e2b6af0c",
+  "candidateIdentity": "Merged experiment candidate; final source/artifacts bound independently of future commit.",
+  "sourceBindings": {
+    "archify/renderers/workflow/workflow-compiler.mjs": {
+      "sha256": "fa1da221df9c0cb81e5eb3096068925ea16f178103c20209a7994aa79fd08a2d",
+      "bytes": 251891
+    },
+    "test/workflow-compiler-hard-contract.test.mjs": {
+      "sha256": "a5511d4589ce2b818c3b5fac6669bf85d0309d39cb6718dee185697714737f0a",
+      "bytes": 129287
+    }
+  },
+  "sourceScope": "Prior two endpoint-clearance changes plus shared immediate-reversal guard at explicit and automatic acceptance. No candidate search or schema expansion; new-dev drilldown renderNode retained.",
+  "focused": {
+    "command": "node scripts/run-tests.mjs --require-files test/workflow-compiler-hard-contract.test.mjs test/workflow-routing-clarity.test.mjs test/workflow-route-order.test.mjs test/workflow-port-slot.test.mjs test/workflow-crossing-repair.test.mjs test/core-smoke.test.mjs test/generated-artifact-xml.test.mjs",
+    "passed": 148,
+    "failed": 0,
+    "skipped": 0,
+    "log": {
+      "sha256": "6d35c7bb4b3ccbf977ec4212bcacd557df9b4bf148c0d05abcbfdc5b710e4d13",
+      "bytes": 33719
+    }
+  },
+  "generatedChecks": {
+    "commands": [
+      "generate-viewer --check",
+      "generate-brand-marks --check",
+      "generate-validators --check",
+      "check-release-identity"
+    ],
+    "allExitZero": true,
+    "log": {
+      "sha256": "0a5812d3e14dd70da9fb04b7671e107688e987b3d19a0a3a42ee69bae22cc7dc",
+      "bytes": 33
+    }
+  },
+  "historicalFilesPreserved": {
+    "experiments/workflow-self-loop/checks-summary.json": {
+      "sha256": "70382cd44cd792ce653845edcece2f24bef5a395536c9a39fb4af8515e16e61c",
+      "bytes": 4284
+    },
+    "experiments/workflow-self-loop/compatibility-summary.json": {
+      "sha256": "3a5f6575d18b4497f5b40c021db166dee4759f9b2eb0f0ce4c309a9605f4ccc7",
+      "bytes": 7317
+    },
+    "experiments/workflow-self-loop/input.workflow.json": {
+      "sha256": "ab8105274c3da65cb657db81a7d2054d2248e5575d812cf5f5d24ec999abe4f7",
+      "bytes": 853
+    },
+    "experiments/workflow-self-loop/archive-smoke-finalize-summary.json": {
+      "sha256": "8e872bbf4bb44272ffce221eae860bd15422705533171afe4d1bd27353e2eae2",
+      "bytes": 1138
+    },
+    "experiments/workflow-self-loop/existing-auto.workflow.json": {
+      "sha256": "ff2e0561bf97590fb0f883f9fb1cf5ecbbf5717f42630c1bd86804926c0cf507",
+      "bytes": 788
+    },
+    "experiments/workflow-self-loop/base-finalize-summary.json": {
+      "sha256": "93f7b071a025a22482e07430c5202f8b238ef913214d033c4ba308bb7619498f",
+      "bytes": 2232
+    },
+    "experiments/workflow-self-loop/README.md": {
+      "sha256": "d70529387790372e2c177a90ee4d2eb934f134e184450a7f25db9b52c4861b15",
+      "bytes": 8098
+    },
+    "experiments/workflow-self-loop/zip-summary.json": {
+      "sha256": "42f6a7c475cd0206ee236358e67cbed9db874b682aeefbdf4a3b5ba8f57a6c56",
+      "bytes": 454
+    },
+    "experiments/workflow-self-loop/candidate-finalize-summary.json": {
+      "sha256": "bfe1712530be2c5e027c2f0befa0e0ade9b018ea2c88a803482b1bf76f64fba8",
+      "bytes": 1124
+    },
+    "experiments/workflow-self-loop/candidate.html": {
+      "sha256": "56441e405728d21f3584ff142108f89b2ea36c1ec4a1193dba3c5d46760655f6",
+      "bytes": 806854
+    },
+    "experiments/workflow-self-loop/binding-summary.json": {
+      "sha256": "c42999ccdb9b3c93b2eb984928c4aac7510e99bbc23d6dd12dec386eee3c88c6",
+      "bytes": 2381
+    },
+    "experiments/workflow-self-loop/author-attempts-summary.json": {
+      "sha256": "85e22fc09b045ce9def591c494157acec442a5cc87ad95dcb52163544b36c5ed",
+      "bytes": 6463
+    },
+    "experiments/workflow-self-loop/screenshots/capture.json": {
+      "sha256": "d67b4aaeb04b60cb2a22b642ba103f73d29ee2ae87232a4cc933175bc0630786",
+      "bytes": 612
+    },
+    "experiments/workflow-self-loop/screenshots/explicit-loop.png": {
+      "sha256": "c48a3d0d70cc76623fd9fdd18ee7f31766f49593d0d88caf8c73730165243028",
+      "bytes": 41189
+    }
+  },
+  "rawLogBindings": {
+    "commands.json": {
+      "sha256": "db5572502d1628567ba300baf020d9668c8579c8e3e9d3d1f2e37e79ace5a40b",
+      "bytes": 1388
+    },
+    "base-finalize.stdout": {
+      "sha256": "a3df6c7b52f9bff191ece2ef611b0ef02e9de0bf7f1eaf19f22f5fc2cd99832f",
+      "bytes": 2110
+    },
+    "base-finalize.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "candidate-render.stdout": {
+      "sha256": "8ed7488d75b5eea0220a19cc09ad1092fab3ef058af41ae818a0ba5916d09476",
+      "bytes": 128
+    },
+    "candidate-render.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "focused-tests.log": {
+      "sha256": "6d35c7bb4b3ccbf977ec4212bcacd557df9b4bf148c0d05abcbfdc5b710e4d13",
+      "bytes": 33719
+    },
+    "generated-checks.log": {
+      "sha256": "0a5812d3e14dd70da9fb04b7671e107688e987b3d19a0a3a42ee69bae22cc7dc",
+      "bytes": 33
+    },
+    "zip-first.log": {
+      "sha256": "7329a3500ab30d5f38d7a97178f07e91bd2f072250ee3c734f5b9b1156857392",
+      "bytes": 122
+    },
+    "zip-second.log": {
+      "sha256": "e0c4f79b2d2b8d1418b93b17dbfefd9d8c6c073cec7cbf3c96be363b055ba4b6",
+      "bytes": 124
+    },
+    "candidate-finalize.stdout": {
+      "sha256": "d01952e52f4d7739dab04e7e41775a7ef024a8a1f10816cb555fe2856658eb6b",
+      "bytes": 1343
+    },
+    "candidate-finalize.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "archive-finalize.stdout": {
+      "sha256": "514340d49d12ee7e11bd522d7e2706cec467e1d3a4dafeb8e875d53d576ed503",
+      "bytes": 1271
+    },
+    "archive-finalize.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "compatibility.mjs": {
+      "sha256": "659a67da86a32d77a0e856b2b4e3e23ad9833e93bcb06dd75d6b923377ce4149",
+      "bytes": 2332
+    },
+    "compatibility.stdout": {
+      "sha256": "d339ffe91cee0ac7341880d07c48f8b132381a54639acab753ef3f2c309f2ea7",
+      "bytes": 276
+    },
+    "compatibility.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  },
+  "coverageLimits": [
+    "No full suite, Windows, installation or release.",
+    "New-dev CI is not candidate CI.",
+    "Base produced no HTML; no invented before image.",
+    "Existing old solver-budget failure assertions remain replaced by successful geometry plus separate real top/top failure responsibility; no new solver-budget-specific coverage claimed.",
+    "Four shipped examples compare actual compiler SVG/receipt, not a claim that every Workflow is unchanged.",
+    "Constructed illustrative geometry, not a recorded workflow or measured authoring gain."
+  ]
+}
