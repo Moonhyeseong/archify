@@ -4,13 +4,13 @@
 
 **星数不作为门槛或排序依据。** 每个方向都看实际问题、现有能力、维护成本和来源证据；小项目、早期项目同样纳入。与已有 issue/PR 重复的方向先排除或明确剩余差异。
 
-共同实验基线：[dev `82c7e0f0`](https://github.com/tt-a1i/archify/commit/82c7e0f089a02a4d514714adf37dc2061682da5f)，2026-10-25 已重新核对远端仍为该 revision。下面的“已推送”只表示远程实验分支可审查，不能等同于合入、发布或人类验收。
+前 30 项的共同实验基线：[dev `82c7e0f0`](https://github.com/tt-a1i/archify/commit/82c7e0f089a02a4d514714adf37dc2061682da5f)。2026-10-25 15:41（台北）重新核对 GitHub，dev 已推进到 [`3f95f034`](https://github.com/tt-a1i/archify/commit/3f95f0349c8276db71509ca239461b6fe9d00f9f)，main 为 [`51a29177`](https://github.com/tt-a1i/archify/commit/51a291770851ad27a400cca73c753c166b5e0c65)，分别合入 #1098 / #1099 的 Apache-2.0 与软件声明更新。已有产物及测试继续绑定原基线，不能据此宣称已验证新 dev；后续新实验从更新后的 dev 开始。下面的“已推送”只表示远程实验分支可审查，不能等同于合入、发布或人类验收。
 
-## 已推送的 29 个实验
+## 已推送的 30 个实验
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
-[离线图片浏览页](gallery/README.md)：当前固定快照含 29 张原始 PNG，可按分组和关键词筛选、展开完整图；下载 `gallery/index.html` 后可独立打开。固定提交/图片摘要保留在 manifest，桌面与 390px 实际检查见浏览页说明。
+[离线图片浏览页](gallery/README.md)：当前固定快照含前 29 项的 29 张原始 PNG，可按分组和关键词筛选、展开完整图；下载 `gallery/index.html` 后可独立打开。固定提交/图片摘要保留在 manifest，桌面与 390px 实际检查见浏览页说明。第 30 项的前后图见下表独立分支，尚未加入该快照。
 
 | 实验与远程分支 | 具体价值 | 发布 revision | 实际图片 | 验证与限制 |
 | --- | --- | --- | --- | --- |
@@ -43,8 +43,9 @@
 | [Plan row counts](https://github.com/tt-a1i/archify/tree/codex/lab-plan-row-counts/experiments/plan-row-counts) | 每次平均3行×352循环≈1056次输出，保留局部估计差异 | `91e2ffad` | [实际解释页](https://github.com/tt-a1i/archify/blob/codex/lab-plan-row-counts/experiments/plan-row-counts/screenshots/explainer.png) | 零共享代码；固定PEV2样例3节点；Tree四阶段、Explainer三阶段通过/自动browser未跑；非SQL执行/unique rows/调优证明 |
 | [Diff line numbers](https://github.com/tt-a1i/archify/tree/codex/lab-diff-line-numbers/experiments/diff-line-numbers) | diff行号保持完整单行，长代码仍可横向滚动 | `88b0dcb0` | [1280px修复后](https://github.com/tt-a1i/archify/blob/codex/lab-diff-line-numbers/experiments/diff-line-numbers/screenshots/candidate-1280-light.png) | 单条CSS；25focused/19core/generated、canonical双ZIP、1280/390浅深8组DOM对照通过；30拆行→0；4实际前后图；完整browsergate未跑，未修改键盘检查 |
 | [Keyboard traversal](https://github.com/tt-a1i/archify/tree/codex/lab-keyboard-traversal/experiments/keyboard-traversal) | 纳入实际Tab额外停点，末尾可达控件不再因过早停止被误报 | `d9308631` | [实际第65步到达footer](https://github.com/tt-a1i/archify/blob/codex/lab-keyboard-traversal/experiments/keyboard-traversal/screenshots/tab-65-footer.png) | 最终focused11、v3算法整file19复用、core19、canonical双ZIP/抽包通过；固定HTML四视口均50/50且0诊断；iframe/date/trap/无限焦点边界保留；非PR验收 |
+| [Preview dashed ink](https://github.com/tt-a1i/archify/tree/codex/lab-preview-dashed-ink/experiments/preview-dashed-ink) | Explainer预览的虚线关系文字、线和箭头使用可读颜色，保留节点边框 | `36cc35fb` | [浅色修复后](https://github.com/tt-a1i/archify/blob/codex/lab-preview-dashed-ink/experiments/preview-dashed-ink/screenshots/candidate-light.png) | 3条CSS映射；2browser/56focused、基线失败、候选四阶段及抽包通过；4张实际浅深对照图；4份旧生成物的既有freshness更新单列，不称全模式可访问性验收 |
 
-这二十九项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
+这三十项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
 
 GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确远端 head 的 Actions runs/check-runs 均为 0。当前 [CI 配置](https://github.com/tt-a1i/archify/blob/82c7e0f089a02a4d514714adf37dc2061682da5f/.github/workflows/ci.yml) 只对 main/dev push 自动运行，另外支持 PR/manual。这里的实验分支 push 没有提供远端 CI 通过证据；上表测试均按实际本地来源记录。
 
@@ -82,14 +83,17 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 2026-10-25 15:26（台北）核对Keyboard traversal `d9308631`：远端head吻合，Actions runs/check-runs均为0；本地浏览器观察与远端CI分别记录。
 
+2026-10-25 15:41（台北）核对Preview dashed ink `36cc35fb`：远端head吻合，Actions runs/check-runs均为0。此次同时发现main/dev已更新，旧基线证据保留原身份。
+
 ## 正在推进
 
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
-| 新发现修复 | Explainer静态预览的dashed关系可读性 | 已确认同主题关系文字被映为边框色，局部label/path/marker修复实施中，保留节点边框与其他variant |
+| 新发现修复 | Explainer静态预览的dashed关系可读性 | 已推送第30个独立分支；实际前后图片、独立复核与局部验证完成，见上表 |
 | 浏览页更新 | 新增两产品修复及两既有分支证据 | 29项新固定快照已完成真实浏览器检查；历史27版证据保留固定提交链接 |
 | 既有实验补证据 | DBML与Plan actions | 两项补证据均已推送：官方DBML明确拒绝；完整plan fixture转换通过；各自边界见README |
 | 已排除的重复实现 | Mutation报告reader | 原viewer已有文件搜索、状态筛选、diff、测试关联和单HTML打包；只保留研究，不另建reader |
+| 新dev影响核对 | Apache-2.0与软件声明迁移 | [只读影响记录](base-refresh-1541.md)：导出/生成/打包有变化；旧实验固定版本保留，新整合按需重生与验证 |
 | 保留候选 | Notebook别名与派生值的不同stale预期 | 6项目只读报告完成；目前无实际notebook交接任务，暂不扩成converter |
 
 ## 一手调研报告
