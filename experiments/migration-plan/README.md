@@ -78,7 +78,7 @@ CLI 最多读取 200001 字节来判定 200000 字节上限，拒绝非普通输
 
 另外通过真实公共 renderer 验证：恶意 SQL/hash/type/message 中的 Markdown 链接、图片、pipe、backtick、闭合 code/script 和 directive 都原样显示为代码字面量；parse5 检查没有攻击者链接、图片或 script 节点，timeout 表仍是固定数值内容。空/null 计划也经过真实公共 Workflow render。
 
-最终示例公共 render 成功；finalize 的 validate、deliver、check 通过。browser-check 未请求，原始 visualReview 为 not-requested；视觉验收和截图仍单独记录，不据此声称自动浏览器 gate 通过。产物中未检出个人用户路径。
+最终 Workflow 示例仅运行公共 render，未运行 Workflow finalize；Explainer finalize 的 validate、deliver、check 通过。Explainer browser-check 未请求，原始 visualReview 为 not-requested；视觉验收和截图仍单独记录，不据此声称自动浏览器 gate 通过。产物中未检出个人用户路径。
 
 第一稿采用 Workflow v1，固定列容量拒绝相邻节点；随后改用已有 Workflow v2，并限制6条。首轮空计划测试失败于单元素 mainPath 不符合 schema；现在少于2条时省略可选 mainPath，空/null 真实渲染回归通过。portable summary 保留失败摘要；原始本机日志在 checkout 外。
 
@@ -86,7 +86,7 @@ CLI 最多读取 200001 字节来判定 200000 字节上限，拒绝非普通输
 
 ## Actual browser images
 
-The screenshot exposes the three supplied statements, configured timeouts including zero, empty risk entries and one unknown hazard. The arrows state supplied order only. Native browser-check was not requested; this image review is separate from that gate.
+The screenshot exposes the three supplied statements, configured timeouts including zero, empty risk entries and one unknown hazard. The arrows state supplied order only. The Workflow was rendered, not finalized. Browser-check was not requested for the Explainer finalize; this image review is separate from that gate.
 
 ![migration-plan actual browser screenshot](screenshots/migration-plan.png)
 
