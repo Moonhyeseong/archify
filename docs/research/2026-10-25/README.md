@@ -52,6 +52,8 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 2026-10-25 14:09:48（台北），main/dev仍未变；Waterfall status text `e20acd6d`、Retained size `a0c76fc8` 及两个补充实跑证据后的head Test context map `9d6b4e3a`、Test failure map `bb5e7bdb` 均核对远端一致，精确head的Actions runs=0、check-runs=0。
 
+2026-10-25 14:26:57（台北），main/dev仍未变；Lasso witness `900fe5a3`、Task review map补充PR证据后 `dcedd538`、Workflow self-loop `eb299b15`、Plan row counts `91e2ffad` 远端head均匹配，精确head的Actions runs=0、check-runs=0。这里不把未运行CI写成通过。
+
 ## 图片速览
 
 以下四张直接来自对应分支的实际产物。点击名称查看完整说明；其余实验的图片见上表。
