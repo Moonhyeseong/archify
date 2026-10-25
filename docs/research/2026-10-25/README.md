@@ -80,7 +80,9 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
-| 后续发现 | 静态代码路径、语法解析阅读、增量构建解释 | 三路固定来源调研，先核真实fixture与新增价值，不按星数筛选 |
+| 后续发现 | 并发程序的锁等待、持有与死锁证据 | 持续固定来源调研，不按星数筛选 |
+| 既有实验补证据 | DBML ERD、Plan actions | 查找完整公开上游输入，先验证现有适配合同，不静默删减不支持内容 |
+| 既有失败诊断 | Task review map 的键盘遍历诊断 | 定位真实交互缺陷、输入问题或gate误报；保留现有失败证据 |
 | 已排除的重复实现 | Mutation报告reader | 原viewer已有文件搜索、状态筛选、diff、测试关联和单HTML打包；只保留研究，不另建reader |
 | 保留候选 | Notebook别名与派生值的不同stale预期 | 6项目只读报告完成；目前无实际notebook交接任务，暂不扩成converter |
 
@@ -117,6 +119,9 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | Notebook别名、物化值与stale证据 | [Notebook evidence small tools](scouts/notebook-evidence-smalltools.md) |
 | 组件身份、包坐标与出现位置 | [Component identity small tools](scouts/component-identity-smalltools.md) |
 | Mutation状态、源码与测试关联 | [Mutation evidence small tools](scouts/mutation-evidence-smalltools.md) |
+| 静态代码路径与步骤位置 | [Codeflow evidence small tools](scouts/codeflow-evidence-smalltools.md) |
+| 语法树、冲突与失败位置 | [Grammar reading small tools](scouts/grammar-reading-smalltools.md) |
+| 增量构建、缓存与失效传播 | [Rebuild evidence small tools](scouts/rebuild-evidence-smalltools.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
 报告中的上游声明、局部源码核实、计划中的实验和已经执行的结果分别标注。未推荐方向也保留原因，避免反复研究；没有把上游宣传、星数或作者截图当作 Archify 的效果证明。
