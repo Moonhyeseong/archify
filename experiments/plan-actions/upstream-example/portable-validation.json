@@ -1,0 +1,143 @@
+{
+  "recordType": "Derived portable selected validation summary, NOT an original Archify receipt",
+  "parentHead": "640fa6fff3285d35da814cedff6f0b75ae3d39ba",
+  "baseRevision": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "kind": "upstream committed public test fixture; generation unknown; not this-session Terraform or production execution",
+  "sourceSha256": "582180f5f2a423d2e0f1f77348b0bc57af4e6b7d3a3580ec4c9c8bada2735bb5",
+  "adapter": {
+    "head": "640fa6fff3285d35da814cedff6f0b75ae3d39ba",
+    "sourceSha256": "d61a077787f39699e6a8ca3b92a692fd5e2e76b4bf813ce9e20eb907bfefff5f",
+    "conversion": "Reused the prior full-input /tmp acceptance JSON bytes unchanged",
+    "initialExitCode": 0,
+    "actualPortableCommand": "node experiments/plan-actions/adapter.mjs <complete-downloaded-fixture.json> provided-plan <fresh-temporary-output>",
+    "rawStdoutSha256": "58200511aaaf30737e33989e8073d007b7ace945b6a88dafe82d8b97bc894fbf"
+  },
+  "commands": [
+    {
+      "command": "node archify/bin/archify.mjs render workflow experiments/plan-actions/upstream-example/output/actions.workflow.json experiments/plan-actions/upstream-example/output/actions.html --quality standard",
+      "exitCode": 0,
+      "individualRenderResult": "second invocation captured individually; output matches first render byte-for-byte",
+      "stdoutSha256": "a4422a5d1dfd0c979c33b6c72b920d5c1acf8f803972518636089e247fc11518"
+    },
+    {
+      "command": "node archify/bin/archify.mjs finalize explainer experiments/plan-actions/upstream-example/output/actions.explainer.json experiments/plan-actions/upstream-example/output/explainer.html --out-dir <private-receipts> --json",
+      "exitCode": 0,
+      "rawStdoutSha256": "05b116aa960c0f1c594e893f009d2b341d175e7d7845f82c50afcc3cf26f2f8a"
+    }
+  ],
+  "explainerGates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "not-run"
+  },
+  "explainerDiagnostics": [],
+  "visualReview": "not-requested",
+  "workflowFinalize": "not-requested; existing pipeline uses render standard",
+  "browserCheck": "not-requested/not-run; coordinating agent actual images are separate",
+  "beforeAfterValueChecks": {
+    "jsonOutputs": "all 3 source scalar occurrences / 2 unique strings absent from 3 JSONs; no value trees",
+    "explainerHtml": "zero matches",
+    "nativeHtmlStrictZeroMatchScan": "failed: one 4-character ordinary word coincides with an unchanged renderer JavaScript comment",
+    "nativeDisplayData": "zero matches in static text and attributes; static-comment source and old synthetic HTML independently checked",
+    "details": "value-suppression.json",
+    "generatedBytesEditedToPassScan": false
+  },
+  "sourceRawPlanPolicy": "source/plan.json intentionally includes complete public upstream input; omission policy applies to adapter/renderer outputs, not source archive",
+  "parentReadme": {
+    "path": "experiments/plan-actions/README.md",
+    "oldBytesPreservedAsPrefix": true,
+    "sha256": "3ed8616da25a94e93cba57b64e2f161b111e25a0e9fca692bb6b01ea4310ee03"
+  },
+  "screenshots": {
+    "capture": "screenshots/capture.json",
+    "status": "actual coordinating-agent captures and visual review",
+    "humanAcceptance": "not-claimed"
+  },
+  "tests": "prior same-byte reader result reused; original focused/full suites not rerun",
+  "notRun": [
+    "Terraform/OpenTofu/provider/cloud",
+    "SQL",
+    "upstream programs",
+    "automated browser gate",
+    "deployment/user-efficiency study"
+  ],
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "bcd8fac7ba3bf0942e3f49648fd169210266a81260a27b800e2f6a44221afbab",
+      "bytes": 6762
+    },
+    {
+      "path": "acceptance-evidence.json",
+      "sha256": "84c1c840c69673fcff28ace03d78c28b15872f47d8acc5f41afaf166bbc36531",
+      "bytes": 1999
+    },
+    {
+      "path": "output/actions.explainer.json",
+      "sha256": "817929530bbb0a40560c47c20c501a83006d0a63329c3a4b1df8147efbfc65d2",
+      "bytes": 8081
+    },
+    {
+      "path": "output/actions.html",
+      "sha256": "cea4300de8396b9c84b01bd402d0562f8eb7d8b63c021462939dc93a53501421",
+      "bytes": 809971
+    },
+    {
+      "path": "output/actions.workflow.json",
+      "sha256": "ac8db8467d0c40e06b0a83a88a333354a144f4a3536244bd6e90f8dfbf5c9327",
+      "bytes": 1424
+    },
+    {
+      "path": "output/explainer.html",
+      "sha256": "b6dbbfa395f90c109c9a1894d4e91683050b07e62dae470ff0eef1fcf862e639",
+      "bytes": 499715
+    },
+    {
+      "path": "output/projection.json",
+      "sha256": "c02f3cb7f6749d539a612a1f7fdf6a87b74e15eca919bada3d663eb2882021ac",
+      "bytes": 1795
+    },
+    {
+      "path": "screenshots/actions.png",
+      "sha256": "b91097c5151c003fb02e9e0c80e8709b139e10e6b90e245b4fc88547bee4a4b2",
+      "bytes": 82702
+    },
+    {
+      "path": "screenshots/capture.json",
+      "sha256": "cb0b7ff7419e205ce2ae8b236ce6764b2fb64a2459633810afc6a7bd63c94264",
+      "bytes": 1298
+    },
+    {
+      "path": "screenshots/explainer.png",
+      "sha256": "bd390113a94ed339771ef8cb186af28153da0cc7d84fc4f85816b0c09fcae812",
+      "bytes": 259690
+    },
+    {
+      "path": "source/LICENSE",
+      "sha256": "3128413743d8bf1356ca3e1980433619248f260a7928f3563569aac6d6df4b7b",
+      "bytes": 16757
+    },
+    {
+      "path": "source/manifest.json",
+      "sha256": "12e4d590eb1727be58e4047b2a0b0faa2cbf07d7ecb8c09de44d651684243c2b",
+      "bytes": 2347
+    },
+    {
+      "path": "source/plan.json",
+      "sha256": "582180f5f2a423d2e0f1f77348b0bc57af4e6b7d3a3580ec4c9c8bada2735bb5",
+      "bytes": 1630
+    },
+    {
+      "path": "value-suppression.json",
+      "sha256": "2de3594814c788bcebdfdd3f08024a62aed3e6868f31c95f31ecf5150ae8c13b",
+      "bytes": 1552
+    }
+  ],
+  "whitespace": {
+    "allStagedExitCode": 2,
+    "trailingWhitespaceFindings": 27,
+    "excludingGeneratedHtmlExitCode": 0,
+    "generatedBytesChanged": false
+  }
+}

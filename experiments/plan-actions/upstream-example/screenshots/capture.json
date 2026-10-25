@@ -1,0 +1,41 @@
+{
+  "kind": "actual Ego Chromium screenshots; no upstream execution",
+  "records": [
+    {
+      "html": "output/actions.html",
+      "htmlSha256": "cea4300de8396b9c84b01bd402d0562f8eb7d8b63c021462939dc93a53501421",
+      "image": "screenshots/actions.png",
+      "imageSha256": "b91097c5151c003fb02e9e0c80e8709b139e10e6b90e245b4fc88547bee4a4b2",
+      "imageBytes": 82702,
+      "capturedAt": "2026-10-25T06:52:15.792Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "fullPage": true,
+      "theme": "dark",
+      "rootViewed": true,
+      "state": "default view; still; 100%"
+    },
+    {
+      "html": "output/explainer.html",
+      "htmlSha256": "b6dbbfa395f90c109c9a1894d4e91683050b07e62dae470ff0eef1fcf862e639",
+      "image": "screenshots/explainer.png",
+      "imageSha256": "bd390113a94ed339771ef8cb186af28153da0cc7d84fc4f85816b0c09fcae812",
+      "imageBytes": 259690,
+      "capturedAt": "2026-10-25T06:50:23.295Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "fullPage": true,
+      "theme": "system resolved light",
+      "rootViewed": true,
+      "state": "default view; complete page"
+    }
+  ]
+}

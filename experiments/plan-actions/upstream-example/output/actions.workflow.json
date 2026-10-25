@@ -1,0 +1,65 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Provided per-resource actions",
+    "subtitle": "Each row is one resource. No cross-resource execution timeline or blast-radius inference.",
+    "output": "actions.html",
+    "quality_profile": "standard",
+    "legend": {
+      "entries": {
+        "backend": {
+          "label": "Reported action"
+        },
+        "external": {
+          "label": "Coverage boundary"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "r-1",
+      "label": "Resource 1"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "r-1-a-0",
+      "lane": "r-1",
+      "col": 0,
+      "type": "backend",
+      "label": "delete",
+      "sublabel": "Resource 1",
+      "tag": "replacement sequence"
+    },
+    {
+      "id": "r-1-a-1",
+      "lane": "r-1",
+      "col": 1,
+      "type": "backend",
+      "label": "create",
+      "sublabel": "Resource 1",
+      "tag": "replacement sequence"
+    }
+  ],
+  "edges": [
+    {
+      "from": "r-1-a-0",
+      "to": "r-1-a-1",
+      "label": "then, for this resource",
+      "variant": "dashed"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "amber",
+      "title": "Action order, not global scheduling",
+      "items": [
+        "complete: true · deferred records: 0",
+        "Deferred records are listed separately; not scheduled as action rows.",
+        "No Terraform, cloud query or apply was executed."
+      ]
+    }
+  ]
+}

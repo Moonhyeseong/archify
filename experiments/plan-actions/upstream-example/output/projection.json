@@ -1,0 +1,65 @@
+{
+  "adapter": "plan-actions/1",
+  "kind": "provided-plan",
+  "formatVersion": "1.2",
+  "contract": {
+    "repository": "https://github.com/hashicorp/terraform-json",
+    "commit": "8f4894d138d0fe71436cba6dbc8f16577e9a9e7d",
+    "license": "MPL-2.0",
+    "files": [
+      "plan.go",
+      "action.go"
+    ]
+  },
+  "complete": true,
+  "resourceChangesStatus": "provided",
+  "deferredChangesStatus": "not-provided",
+  "resources": [
+    {
+      "ordinal": 1,
+      "address": "null_resource.example",
+      "type": "null_resource",
+      "change": {
+        "actions": [
+          "delete",
+          "create"
+        ],
+        "valuePolicy": "All before/after values omitted, including non-sensitive scalar values.",
+        "unknownAfterPaths": {
+          "status": "provided",
+          "paths": [
+            [
+              "id"
+            ]
+          ]
+        },
+        "sensitiveBeforePaths": {
+          "status": "provided",
+          "paths": []
+        },
+        "sensitiveAfterPaths": {
+          "status": "provided",
+          "paths": []
+        },
+        "explicitNullBefore": {
+          "status": "inspected-for-null-paths-only",
+          "paths": []
+        },
+        "explicitNullAfter": {
+          "status": "inspected-for-null-paths-only",
+          "paths": []
+        },
+        "replacePaths": {
+          "status": "not-provided",
+          "paths": []
+        },
+        "unprojectedFieldCount": 0
+      },
+      "unprojectedFieldCount": 4
+    }
+  ],
+  "deferred": [],
+  "unprojectedRootFieldCount": 5,
+  "coverage": "Actions and attribute-path categories only. Every before/after value and every unselected field value is omitted; not a filtered plan or full plan audit.",
+  "inputSha256": "582180f5f2a423d2e0f1f77348b0bc57af4e6b7d3a3580ec4c9c8bada2735bb5"
+}

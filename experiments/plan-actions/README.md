@@ -112,3 +112,11 @@ The revised Explainer places both replacement orders and complete/deferred statu
 Capture settings and current HTML/image hashes are in [capture.json](screenshots/capture.json). Images were captured and inspected by the coordinating agent; human acceptance remains pending. No measured reader-efficiency benefit is claimed.
 
 AI assistance: Codex and GPT-6.1 Sol subagents performed research, implementation, focused validation, independent review and documentation. This branch is an experiment awaiting repository-owner acceptance.
+
+## 官方已提交fixture补充（未改adapter）
+
+[upstream-example](upstream-example/README.md) 新增完整MPL-2.0官方公开fixture及原样转换的value-free输出：1个资源的delete → create、unknown id，complete为输入提供的true，deferred与replace_paths缺失保持not-provided。`action_reason`不在投影合同内，仍计入未投影字段；不推断替换原因。输入声明Terraform1.15.0，源生成过程unknown，不是本次工具执行或生产计划。
+
+本补充的 `source/plan.json` 另行附完整公开上游fixture；本README“公开产物不包含原始plan”的承诺指adapter/renderer输出，不包含这个明确授权、附许可的source归档。before/after值不复制到小投影与显示数据；native HTML的静态JS注释与一个4字符普通输入词偶合，严格全字节零匹配检查未通过，模板来源、DOM零命中及未改字节边界均在补充中记录。
+
+既有synthetic源码、测试和产物未改，也未扩大reader合同或重跑全部tests。新例沿用Workflow render standard＋Explainer finalize，自动browser-check未请求；实际图片、许可/来源SHA和derived证据摘要见补充目录。

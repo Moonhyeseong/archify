@@ -1,0 +1,56 @@
+{
+  "recordType": "Derived selected adapter acceptance evidence, not an original runtime receipt",
+  "adapterHead": "640fa6fff3285d35da814cedff6f0b75ae3d39ba",
+  "adapterSha256": "d61a077787f39699e6a8ca3b92a692fd5e2e76b4bf813ce9e20eb907bfefff5f",
+  "inputSha256": "582180f5f2a423d2e0f1f77348b0bc57af4e6b7d3a3580ec4c9c8bada2735bb5",
+  "acceptance": {
+    "exitCode": 0,
+    "stdout": {
+      "ok": true,
+      "resources": 1,
+      "deferred": 0
+    },
+    "formatVersion": "1.2",
+    "reportedTerraformVersion": "1.15.0 (supplied fixture string only)",
+    "actionSequence": [
+      "delete",
+      "create"
+    ],
+    "unknownAfterPaths": [
+      [
+        "id"
+      ]
+    ],
+    "sensitiveMasks": "provided empty path lists; not missing or a runtime nonsensitive guarantee",
+    "complete": "supplied true; not independently validated",
+    "deferred": "collection absent => not-provided; no invented records",
+    "replacePaths": "absent => not-provided; no invented path/reason",
+    "rootUnprojectedFields": 5,
+    "resourceUnprojectedFields": 4,
+    "ordinaryResourcesInSourceAndProjection": 1,
+    "silentTruncation": false,
+    "beforeAfterScalarOccurrencesChecked": 3,
+    "beforeAfterUniqueStringValuesChecked": 2,
+    "allScalarValuesAbsentFromAllThreeOutputJsons": true,
+    "noBeforeAfterTrees": true,
+    "sourceBytesUnchanged": true
+  },
+  "scope": "Reused byte-identical three JSON outputs from the prior read-only /tmp acceptance; full input preserved, no parser changes or upstream execution.",
+  "artifacts": [
+    {
+      "file": "actions.explainer.json",
+      "sha256": "817929530bbb0a40560c47c20c501a83006d0a63329c3a4b1df8147efbfc65d2",
+      "bytes": 8081
+    },
+    {
+      "file": "actions.workflow.json",
+      "sha256": "ac8db8467d0c40e06b0a83a88a333354a144f4a3536244bd6e90f8dfbf5c9327",
+      "bytes": 1424
+    },
+    {
+      "file": "projection.json",
+      "sha256": "c02f3cb7f6749d539a612a1f7fdf6a87b74e15eca919bada3d663eb2882021ac",
+      "bytes": 1795
+    }
+  ]
+}
