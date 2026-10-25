@@ -1,0 +1,290 @@
+{
+  "schema_version": 1,
+  "diagram_type": "explainer",
+  "meta": {
+    "id": "migration-plan",
+    "title": "Synthetic migration plan: read the order and risk evidence",
+    "locale": "en"
+  },
+  "answer": {
+    "summary": "This original synthetic plan demonstrates evidence reading; no database or planner was run.",
+    "reasons": [
+      "Repeated SQL keeps separate statement identity.",
+      "Risk entries and unknown types stay attached to their statement.",
+      "Timeout settings remain separate from measured duration."
+    ],
+    "scope": "3 supplied statements; read-only adapter; no database connection or SQL execution."
+  },
+  "panels": [
+    {
+      "id": "order",
+      "title": "What is the supplied order?",
+      "blocks": [
+        {
+          "id": "ordered-plan",
+          "type": "diagram",
+          "diagramType": "workflow",
+          "spec": {
+            "schema_version": 2,
+            "diagram_type": "workflow",
+            "meta": {
+              "title": "Synthetic migration plan · not executed",
+              "output": "plan.html",
+              "quality_profile": "standard",
+              "legend": {
+                "entries": {
+                  "backend": {
+                    "label": "Planned statement"
+                  },
+                  "external": {
+                    "label": "No supplied statements"
+                  }
+                }
+              }
+            },
+            "lanes": [
+              {
+                "id": "plan",
+                "label": "Supplied statement order"
+              }
+            ],
+            "mainPath": [
+              "statement-1",
+              "statement-2",
+              "statement-3"
+            ],
+            "nodes": [
+              {
+                "id": "statement-1",
+                "lane": "plan",
+                "col": 0,
+                "type": "backend",
+                "label": "Statement 1",
+                "sublabel": "1 risk entries",
+                "tag": "see supplied risks"
+              },
+              {
+                "id": "statement-2",
+                "lane": "plan",
+                "col": 1,
+                "type": "backend",
+                "label": "Statement 2",
+                "sublabel": "0 risk entries",
+                "tag": "no risk entries supplied"
+              },
+              {
+                "id": "statement-3",
+                "lane": "plan",
+                "col": 2,
+                "type": "backend",
+                "label": "Statement 3",
+                "sublabel": "1 risk entries",
+                "tag": "unknown risk type"
+              }
+            ],
+            "edges": [
+              {
+                "from": "statement-1",
+                "to": "statement-2",
+                "label": "then",
+                "variant": "dashed"
+              },
+              {
+                "from": "statement-2",
+                "to": "statement-3",
+                "label": "then",
+                "variant": "dashed"
+              }
+            ],
+            "cards": [
+              {
+                "dot": "amber",
+                "title": "Read-only plan evidence",
+                "items": [
+                  "Order comes from the supplied array; duplicate SQL remains separate.",
+                  "Timeouts are configuration, not measured durations.",
+                  "No SQL, database or planner was executed by this adapter."
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "order-boundary",
+          "type": "prose",
+          "text": "Arrows mean the next statement in the supplied plan. They do not infer table dependencies, success, approval or actual execution."
+        }
+      ]
+    },
+    {
+      "id": "configuration",
+      "title": "Which timeout values were provided?",
+      "blocks": [
+        {
+          "id": "timeouts",
+          "type": "comparison",
+          "labelColumn": "Statement",
+          "columns": [
+            "Statement timeout",
+            "Lock timeout",
+            "Risk entries"
+          ],
+          "rows": [
+            {
+              "id": "timeout-1",
+              "label": "Statement 1",
+              "cells": [
+                {
+                  "text": "1200000 ms"
+                },
+                {
+                  "text": "3000 ms"
+                },
+                {
+                  "text": "1 supplied; 0 unknown types"
+                }
+              ]
+            },
+            {
+              "id": "timeout-2",
+              "label": "Statement 2",
+              "cells": [
+                {
+                  "text": "0 ms"
+                },
+                {
+                  "text": "3000 ms"
+                },
+                {
+                  "text": "No entries supplied"
+                }
+              ]
+            },
+            {
+              "id": "timeout-3",
+              "label": "Statement 3",
+              "cells": [
+                {
+                  "text": "5000 ms"
+                },
+                {
+                  "text": "0 ms"
+                },
+                {
+                  "text": "1 supplied; 1 unknown types"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "time-boundary",
+          "type": "callout",
+          "level": "note",
+          "title": "Configuration values only",
+          "text": "Milliseconds are supplied configuration. Zero remains zero; absent remains unknown. Nothing here measures query duration or estimates lock duration."
+        }
+      ]
+    },
+    {
+      "id": "detail-1",
+      "title": "Statement 1: literal SQL and supplied risks",
+      "blocks": [
+        {
+          "id": "ddl-1",
+          "type": "snippet",
+          "language": "sql",
+          "title": "Statement 1 · not executed",
+          "text": "CREATE INDEX CONCURRENTLY customer_email_idx ON customer(email)"
+        },
+        {
+          "id": "risk-status-1",
+          "type": "prose",
+          "text": "1 supplied risk entries; unknown types stay visible."
+        },
+        {
+          "id": "hazard-1-1",
+          "type": "snippet",
+          "language": "json",
+          "title": "Risk entry 1 · known at pinned source",
+          "text": "{\n  \"type\": \"INDEX_BUILD\",\n  \"message\": \"Synthetic example: index construction may use resources. This was not measured.\"\n}"
+        }
+      ]
+    },
+    {
+      "id": "detail-2",
+      "title": "Statement 2: literal SQL and supplied risks",
+      "blocks": [
+        {
+          "id": "ddl-2",
+          "type": "snippet",
+          "language": "sql",
+          "title": "Statement 2 · not executed",
+          "text": "ALTER TABLE customer ADD CONSTRAINT email_present CHECK (email IS NOT NULL) NOT VALID"
+        },
+        {
+          "id": "risk-status-2",
+          "type": "prose",
+          "text": "No risk entries supplied; not a safety verdict."
+        }
+      ]
+    },
+    {
+      "id": "detail-3",
+      "title": "Statement 3: literal SQL and supplied risks",
+      "blocks": [
+        {
+          "id": "ddl-3",
+          "type": "snippet",
+          "language": "sql",
+          "title": "Statement 3 · not executed",
+          "text": "COMMENT ON TABLE customer IS 'Synthetic evidence example, not executed'"
+        },
+        {
+          "id": "risk-status-3",
+          "type": "prose",
+          "text": "1 supplied risk entries; unknown types stay visible."
+        },
+        {
+          "id": "hazard-3-1",
+          "type": "snippet",
+          "language": "json",
+          "title": "Risk entry 1 · unknown type preserved",
+          "text": "{\n  \"type\": \"EXPERIMENTAL_FUTURE_RISK\",\n  \"message\": \"Original synthetic unknown hazard. Preserve this entry without inventing its meaning.\"\n}"
+        }
+      ]
+    },
+    {
+      "id": "provenance",
+      "title": "What does this plan prove?",
+      "blocks": [
+        {
+          "id": "hash-caption",
+          "type": "prose",
+          "text": "The following is the upstream schema fingerprint as provided. Its algorithm is not assumed to be SHA-256, and the current database state has not been checked."
+        },
+        {
+          "id": "schema-fingerprint",
+          "type": "snippet",
+          "language": "json",
+          "title": "Supplied schema fingerprint",
+          "text": "{\n  \"current_schema_hash\": \"synthetic-placeholder-not-a-database-hash\"\n}"
+        },
+        {
+          "id": "verification-boundary",
+          "type": "callout",
+          "level": "warning",
+          "title": "Validation and approval remain unknown",
+          "text": "The pinned exporter does not serialize SkipValidation. Its absence is not evidence that the plan was validated. Empty hazards do not imply safety. This adapter does not connect to a database, execute SQL, run a planner or grant approval."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "plan-format",
+      "title": "Pinned pg-schema-diff Plan and Statement JSON source",
+      "url": "https://github.com/stripe/pg-schema-diff/blob/9ada4710c28718312557c84cca1be4b2557eed54/pkg/diff/plan.go"
+    }
+  ]
+}

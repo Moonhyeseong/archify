@@ -1,0 +1,86 @@
+{
+  "recordType": "Portable validation summary; not an original Archify receipt",
+  "baseRevision": "82c7e0f0",
+  "fixture": "Original synthetic plan; no database, SQL or planner executed",
+  "commands": [
+    {
+      "command": [
+        "node",
+        "experiments/migration-plan/adapter.mjs",
+        "experiments/migration-plan/fixtures/synthetic.plan.json",
+        "synthetic",
+        "experiments/migration-plan/run-183d85bf-5686-4a53-88bd-5459cc6d57ab"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "archify/bin/archify.mjs",
+        "render",
+        "workflow",
+        "experiments/migration-plan/run-183d85bf-5686-4a53-88bd-5459cc6d57ab/plan.workflow.json",
+        "experiments/migration-plan/run-183d85bf-5686-4a53-88bd-5459cc6d57ab/plan.html",
+        "--quality",
+        "standard"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "archify/bin/archify.mjs",
+        "finalize",
+        "explainer",
+        "experiments/migration-plan/run-183d85bf-5686-4a53-88bd-5459cc6d57ab/plan.explainer.json",
+        "experiments/migration-plan/run-183d85bf-5686-4a53-88bd-5459cc6d57ab/explainer.html",
+        "--out-dir",
+        "<temporary-receipt-directory>",
+        "--json"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "not-run"
+  },
+  "visualReview": "not-requested",
+  "artifacts": {
+    "plan.workflow.json": {
+      "sha256": "7b54322602d2e834e819a6e924883e8bcb5bf0a2e107e9009dfdd86834459c88"
+    },
+    "plan.explainer.json": {
+      "sha256": "c5486d9b9c7e32b44f0ab2cd91ce727fd810d1b1c32528831270ef0209181cf7"
+    },
+    "evidence.json": {
+      "sha256": "caca7f8fcc0fd8e4d729c8477bc1d9a772343a3f7c367ccaceae3bf9b7d9c231"
+    },
+    "plan.html": {
+      "sha256": "680e594616ec8fdc54f5384af5da6b85612f3ff8a4c231272f3a31934ea287f4"
+    },
+    "explainer.html": {
+      "sha256": "11e5ee00e4eb3f092ff11cb226308686e238304b38732b30da57ce6adcedaf9b"
+    }
+  },
+  "artifactLocationNote": "Successful fresh-run artifact bytes/hashes equal the shareable output/ copies. Original receipts stay outside checkout; this selected summary is not a relocated original receipt.",
+  "testEvidence": {
+    "command": "node --test experiments/migration-plan/adapter.test.mjs",
+    "passed": 14,
+    "failed": 0,
+    "skipped": 0,
+    "log": "tests.tap"
+  },
+  "historicalFailures": [
+    {
+      "stage": "render",
+      "reason": "First draft Workflow v1 fixed-column capacity rejected adjacent nodes; used existing Workflow v2 and explicit six-statement cap."
+    },
+    {
+      "stage": "empty-report-test",
+      "reason": "First empty workflow used a one-item mainPath; schema requires at least two. Omit optional mainPath when fewer than two statements; public empty/null render regressions now pass."
+    }
+  ]
+}

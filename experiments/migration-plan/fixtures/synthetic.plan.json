@@ -1,0 +1,27 @@
+{
+  "current_schema_hash": "synthetic-placeholder-not-a-database-hash",
+  "statements": [
+    {
+      "ddl": "CREATE INDEX CONCURRENTLY customer_email_idx ON customer(email)",
+      "timeout_ms": 1200000,
+      "lock_timeout_ms": 3000,
+      "hazards": [
+        {"type":"INDEX_BUILD","message":"Synthetic example: index construction may use resources. This was not measured."}
+      ]
+    },
+    {
+      "ddl": "ALTER TABLE customer ADD CONSTRAINT email_present CHECK (email IS NOT NULL) NOT VALID",
+      "timeout_ms": 0,
+      "lock_timeout_ms": 3000,
+      "hazards": []
+    },
+    {
+      "ddl": "COMMENT ON TABLE customer IS 'Synthetic evidence example, not executed'",
+      "timeout_ms": 5000,
+      "lock_timeout_ms": 0,
+      "hazards": [
+        {"type":"EXPERIMENTAL_FUTURE_RISK","message":"Original synthetic unknown hazard. Preserve this entry without inventing its meaning."}
+      ]
+    }
+  ]
+}

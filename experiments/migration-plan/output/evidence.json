@@ -1,0 +1,87 @@
+{
+  "adapter": "migration-plan/1",
+  "kind": "synthetic",
+  "formatSource": {
+    "repository": "https://github.com/stripe/pg-schema-diff",
+    "commit": "9ada4710c28718312557c84cca1be4b2557eed54",
+    "format": "pkg/diff/plan.go Plan and Statement.MarshalJSON",
+    "license": "MIT"
+  },
+  "semantics": "Supplied plan order and fields, not runtime dependency, safety, validation or approval.",
+  "statementsStatus": "provided",
+  "originalPlan": {
+    "current_schema_hash": "synthetic-placeholder-not-a-database-hash",
+    "statements": [
+      {
+        "ddl": "CREATE INDEX CONCURRENTLY customer_email_idx ON customer(email)",
+        "timeout_ms": 1200000,
+        "lock_timeout_ms": 3000,
+        "hazards": [
+          {
+            "type": "INDEX_BUILD",
+            "message": "Synthetic example: index construction may use resources. This was not measured."
+          }
+        ]
+      },
+      {
+        "ddl": "ALTER TABLE customer ADD CONSTRAINT email_present CHECK (email IS NOT NULL) NOT VALID",
+        "timeout_ms": 0,
+        "lock_timeout_ms": 3000,
+        "hazards": []
+      },
+      {
+        "ddl": "COMMENT ON TABLE customer IS 'Synthetic evidence example, not executed'",
+        "timeout_ms": 5000,
+        "lock_timeout_ms": 0,
+        "hazards": [
+          {
+            "type": "EXPERIMENTAL_FUTURE_RISK",
+            "message": "Original synthetic unknown hazard. Preserve this entry without inventing its meaning."
+          }
+        ]
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "statement-1",
+      "ordinal": 1,
+      "ddl": "CREATE INDEX CONCURRENTLY customer_email_idx ON customer(email)",
+      "timeoutMs": 1200000,
+      "lockTimeoutMs": 3000,
+      "hazardsStatus": "provided",
+      "hazards": [
+        {
+          "type": "INDEX_BUILD",
+          "message": "Synthetic example: index construction may use resources. This was not measured.",
+          "recognizedAtPinnedVersion": true
+        }
+      ]
+    },
+    {
+      "id": "statement-2",
+      "ordinal": 2,
+      "ddl": "ALTER TABLE customer ADD CONSTRAINT email_present CHECK (email IS NOT NULL) NOT VALID",
+      "timeoutMs": 0,
+      "lockTimeoutMs": 3000,
+      "hazardsStatus": "empty",
+      "hazards": []
+    },
+    {
+      "id": "statement-3",
+      "ordinal": 3,
+      "ddl": "COMMENT ON TABLE customer IS 'Synthetic evidence example, not executed'",
+      "timeoutMs": 5000,
+      "lockTimeoutMs": 0,
+      "hazardsStatus": "provided",
+      "hazards": [
+        {
+          "type": "EXPERIMENTAL_FUTURE_RISK",
+          "message": "Original synthetic unknown hazard. Preserve this entry without inventing its meaning.",
+          "recognizedAtPinnedVersion": false
+        }
+      ]
+    }
+  ],
+  "inputSha256": "bdf998ed0aec9ebfc7eb004a6906f98923ec9cf154717897f9dba04fcd6ad6c5"
+}

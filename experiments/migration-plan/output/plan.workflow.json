@@ -1,0 +1,84 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Synthetic migration plan · not executed",
+    "output": "plan.html",
+    "quality_profile": "standard",
+    "legend": {
+      "entries": {
+        "backend": {
+          "label": "Planned statement"
+        },
+        "external": {
+          "label": "No supplied statements"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "plan",
+      "label": "Supplied statement order"
+    }
+  ],
+  "mainPath": [
+    "statement-1",
+    "statement-2",
+    "statement-3"
+  ],
+  "nodes": [
+    {
+      "id": "statement-1",
+      "lane": "plan",
+      "col": 0,
+      "type": "backend",
+      "label": "Statement 1",
+      "sublabel": "1 risk entries",
+      "tag": "see supplied risks"
+    },
+    {
+      "id": "statement-2",
+      "lane": "plan",
+      "col": 1,
+      "type": "backend",
+      "label": "Statement 2",
+      "sublabel": "0 risk entries",
+      "tag": "no risk entries supplied"
+    },
+    {
+      "id": "statement-3",
+      "lane": "plan",
+      "col": 2,
+      "type": "backend",
+      "label": "Statement 3",
+      "sublabel": "1 risk entries",
+      "tag": "unknown risk type"
+    }
+  ],
+  "edges": [
+    {
+      "from": "statement-1",
+      "to": "statement-2",
+      "label": "then",
+      "variant": "dashed"
+    },
+    {
+      "from": "statement-2",
+      "to": "statement-3",
+      "label": "then",
+      "variant": "dashed"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "amber",
+      "title": "Read-only plan evidence",
+      "items": [
+        "Order comes from the supplied array; duplicate SQL remains separate.",
+        "Timeouts are configuration, not measured durations.",
+        "No SQL, database or planner was executed by this adapter."
+      ]
+    }
+  ]
+}

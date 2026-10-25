@@ -1,0 +1,46 @@
+{
+  "kind": "agent-browser-screenshot-summary",
+  "capturedAt": "2026-10-25T04:57:24.017259+00:00",
+  "method": "Actual Ego Lite browser screenshots; no compositing or image generation",
+  "images": [
+    {
+      "source": "../output/explainer.html",
+      "sourceSha256": "11e5ee00e4eb3f092ff11cb226308686e238304b38732b30da57ce6adcedaf9b",
+      "image": "migration-plan.png",
+      "imageSha256": "607c94e73aa07a4fbe98eaab468c317e73504944c4ce47bcae673223014c07ca",
+      "imagePixels": {
+        "width": 1440,
+        "height": 2474
+      },
+      "viewportCssPixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "deviceScaleFactor": 1,
+      "theme": "light",
+      "preset": "Clean",
+      "fullPage": true
+    },
+    {
+      "source": "../output/plan.html",
+      "sourceSha256": "680e594616ec8fdc54f5384af5da6b85612f3ff8a4c231272f3a31934ea287f4",
+      "image": "workflow.png",
+      "imageSha256": "82bd4707cc1ee490c86995bc50f33bccb5bbbf02b007a2727d71e10d5bddedaa",
+      "imagePixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "viewportCssPixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "deviceScaleFactor": 1,
+      "theme": "light",
+      "preset": "Classic",
+      "fullPage": true
+    }
+  ],
+  "agentVisualReview": "The screenshot exposes the three supplied statements, configured timeouts including zero, empty risk entries and one unknown hazard. The arrows state supplied order only. Native browser-check was not requested; this image review is separate from that gate.",
+  "humanAcceptance": "pending",
+  "limits": "Screenshots establish the shown artifact only; they do not establish upstream execution, production validity or measured user benefit."
+}
