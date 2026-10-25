@@ -1,5 +1,13 @@
 # Waterfall: supplied Error and Cancelled statuses become readable per row
 
+Before — original illustrative status probe:
+
+![Baseline: status was not readable in each row](screenshots-base/overview.png)
+
+After — supplied Error and Cancelled words are visible beside their rows:
+
+![Candidate: explicit statuses appear after the duration](screenshots/overview.png)
+
 Explicit `status: error` and `status: cancelled` now append the existing localized status word to the row's duration label. The same label already feeds the semantic sublabel, so the visible row, SVG accessible text and existing Passport/Outline/Finder metadata projections receive the supplied fact. A palette kind such as Security or External is not used as the textual status.
 
 Base: `82c7e0f089a02a4d514714adf37dc2061682da5f`; branch `codex/lab-waterfall-status`. Product change: only `archify/renderers/waterfall/render-waterfall.mjs` plus its existing focused tests and refreshed `archify.zip`. No Viewer, schema, locale, Skill rule or version change.
@@ -61,6 +69,6 @@ node archify/bin/archify.mjs finalize waterfall experiments/waterfall-status/fix
 - [Localized constructed page](localized.html) separately uses zh-CN status words and non-ASCII operation names. It is another illustrative fixture, not an upstream run or an AT acceptance claim. Both candidate and localized pages actually passed public finalize validate/deliver/check/browser-check.
 - Original delivery/finalize/browser receipts contain local paths and remain outside checkout. [Candidate portable summary](evidence/candidate.portable-summary.json) and [localized portable summary](evidence/localized.portable-summary.json) are clearly labeled transcriptions, not original receipts. `visualReview: not-requested` belongs to those automated runs, separate from root's later captures.
 - Canonical ZIP built twice using official **Node 22.23.2 / bundled zlib 1.3.1-e00f703**. Both builds match checked-in `archify.zip`, its renderer matches current source, all member CRCs validate, and experiments are excluded. Exact extracted archive package smoke passes on macOS ([ZIP evidence](evidence/zip-summary.json)).
-- [Checks and coverage](evidence/checks-summary.json) record actual scope. No complete-repository/Windows/cross-AT suite, commit, push, release or live installation occurred.
+- [Checks and coverage](evidence/checks-summary.json) record actual scope. No complete-repository/Windows/cross-AT suite, release or live installation occurred.
 
 **Generation benchmark justified exemption:** this is a maintainer-scoped renderer-local exposure of explicit existing status, with no Agent generation or Skill-rule change. Two existing public no-status examples are byte-identical; constructed status cases demonstrate that supplied facts become readable. They do not establish real-Agent authoring benefit, better generation accuracy or saved authoring time. No unrelated benchmark or full-repository test expansion is warranted by this slice.
