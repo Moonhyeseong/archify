@@ -1,0 +1,65 @@
+{
+  "repository": "https://github.com/google/diff-match-patch",
+  "revision": "62f2e689f498f9c92dbc588c58750addec9b1654",
+  "kind": "fixed upstream test literals and expected assertion; no upstream execution",
+  "values": [
+    {
+      "role": "A",
+      "sourcePath": "javascript/tests/diff_match_patch_test.js",
+      "sourceLine": 902,
+      "columnBytes": [
+        28,
+        72
+      ],
+      "value": "The quick brown fox jumps over the lazy dog.",
+      "bytes": 44
+    },
+    {
+      "role": "B",
+      "sourcePath": "javascript/tests/diff_match_patch_test.js",
+      "sourceLine": 902,
+      "columnBytes": [
+        76,
+        120
+      ],
+      "value": "That quick brown fox jumped over a lazy dog.",
+      "bytes": 44
+    },
+    {
+      "role": "I",
+      "sourcePath": "javascript/tests/diff_match_patch_test.js",
+      "sourceLine": 907,
+      "columnBytes": [
+        38,
+        86
+      ],
+      "value": "The quick red rabbit jumps over the tired tiger.",
+      "bytes": 48
+    },
+    {
+      "role": "E",
+      "sourcePath": "javascript/tests/diff_match_patch_test.js",
+      "sourceLine": 908,
+      "columnBytes": [
+        21,
+        69
+      ],
+      "value": "That quick red rabbit jumped over a tired tiger.",
+      "bytes": 48
+    }
+  ],
+  "expectedFlags": {
+    "value": [
+      true,
+      true
+    ],
+    "sourcePath": "javascript/tests/diff_match_patch_test.js",
+    "sourceLine": 908
+  },
+  "flagsMeaning": "application results for internal patch fragments after patch_splitMax; not output equality",
+  "execution": {
+    "upstream": "not-run",
+    "patch_make": "not-run",
+    "patch_apply": "not-run"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "repository": "https://github.com/google/diff-match-patch",
+  "revision": "62f2e689f498f9c92dbc588c58750addec9b1654",
+  "license": "Apache-2.0",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "gitBlob": "d645695673349e3947e8e5ae42332d0ac3164cd7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2941,
+      "sha256": "7f69dfca6cfa4ca6a952786e5d4474bc44dc3272bfada093a5e039a03cac05d5",
+      "gitBlob": "7850f0820c8bff5675453d62a3a70596218db19d"
+    },
+    {
+      "path": "javascript/diff_match_patch_uncompressed.js",
+      "bytes": 78511,
+      "sha256": "9a79cf031ac7c2e366416181051acb3e6d2cacf79c5354148f4c71ea20c7e4a3",
+      "gitBlob": "88a702c2e232a2b8158f176a4cee9be845def2a2"
+    },
+    {
+      "path": "javascript/diff_match_patch.js",
+      "bytes": 21274,
+      "sha256": "d422c483b926ca7cea768a03c8f0f26ebc69d5041e3deb550d2709dd40fa16ea",
+      "gitBlob": "2fe320a1bb4b32678ceccafa48477e75be17aae5"
+    },
+    {
+      "path": "javascript/tests/diff_match_patch_test.js",
+      "bytes": 39223,
+      "sha256": "8fa7cd7c9c3681cace8dc0d50a68a694b57ad1fd5c5d322b4a957de2bc017a8c",
+      "gitBlob": "109e56adcb0a79d43aca3c3c2acafba6b67b614c"
+    },
+    {
+      "path": "javascript/tests/diff_match_patch_test.html",
+      "bytes": 5071,
+      "sha256": "35bebe1a161c19e232e9d47173efc1937b9a252a11c6e28cfc46a2e2fe201d96",
+      "gitBlob": "46617309cb1d5386acaeff352280cf233d748bca"
+    }
+  ]
+}

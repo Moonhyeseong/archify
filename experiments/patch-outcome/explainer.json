@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "diagram_type": "explainer",
+  "meta": {
+    "id": "patch-outcome",
+    "title": "两个 true，为何不是 B？",
+    "locale": "zh-CN",
+    "style": "clean",
+    "quality_profile": "standard",
+    "repository": {
+      "url": "https://github.com/google/diff-match-patch",
+      "revision": "62f2e689f498f9c92dbc588c58750addec9b1654"
+    }
+  },
+  "answer": {
+    "summary": "两个 true 表示补丁片段应用成功；结果保留输入里的 red rabbit 和 tired tiger，所以不等于原目标 B。",
+    "reasons": [
+      "同一补丁，应用到另一份输入 I。",
+      "官方 expected 保留 I 的不同上下文。"
+    ],
+    "scope": "DMP固定官方测试 · expected非本轮运行结果"
+  },
+  "panels": [
+    {
+      "id": "four-texts",
+      "title": "先分清四份文本",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "roles",
+          "type": "comparison",
+          "labelColumn": "角色",
+          "columns": [
+            "完整文本"
+          ],
+          "rows": [
+            {
+              "id": "role-a",
+              "label": "A · 补丁基准",
+              "cells": [
+                {
+                  "text": "The quick brown fox jumps over the lazy dog."
+                }
+              ]
+            },
+            {
+              "id": "role-b",
+              "label": "B · 原目标",
+              "cells": [
+                {
+                  "text": "That quick brown fox jumped over a lazy dog."
+                }
+              ]
+            },
+            {
+              "id": "role-i",
+              "label": "I · 应用输入",
+              "cells": [
+                {
+                  "text": "The quick red rabbit jumps over the tired tiger."
+                }
+              ]
+            },
+            {
+              "id": "role-e",
+              "label": "E · 官方 expected",
+              "cells": [
+                {
+                  "text": "That quick red rabbit jumped over a tired tiger."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "read-result",
+          "type": "prose",
+          "text": "E 中的 `The` 改成 `That`，`jumps` 改成 `jumped`，`the` 改成 `a`。`red rabbit` 和 `tired tiger` 仍在。[官方断言](source:apply-test)"
+        }
+      ]
+    },
+    {
+      "id": "upstream-case",
+      "title": "同一补丁，换一份输入",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "test-context",
+          "type": "prose",
+          "text": "测试先用 A、B 调用 `patch_make`，再把同一补丁交给不同输入。第三个断言的输出是 E，flags 是 `[true, true]`。"
+        },
+        {
+          "id": "test-code",
+          "type": "code",
+          "source": "apply-test",
+          "language": "javascript"
+        }
+      ]
+    },
+    {
+      "id": "meaning",
+      "title": "true 回答的是应用状态",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "match-mechanism",
+          "type": "prose",
+          "text": "本例匹配成功后，非完全匹配分支把编辑映射到当前输入。[匹配分支](source:matching)"
+        },
+        {
+          "id": "flags-boundary",
+          "type": "prose",
+          "text": "结果标记对应内部拆分后的补丁片段。它们没有断言输出等于 B，也没有判断代码行为。[拆分与返回合同](source:apply-contract)"
+        },
+        {
+          "id": "source-status",
+          "type": "prose",
+          "text": "本页读取固定测试里的 expected；完整测试、消费源码和 Apache-2.0 许可随本实验保存。[完整测试](source:whole-test)"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "apply-test",
+      "title": "官方测试：参数、基准、不同输入与 expected",
+      "path": "javascript/tests/diff_match_patch_test.js",
+      "lines": [
+        892,
+        913
+      ],
+      "revision": "62f2e689f498f9c92dbc588c58750addec9b1654"
+    },
+    {
+      "id": "matching",
+      "title": "非完全匹配：将编辑映射到当前输入",
+      "path": "javascript/diff_match_patch_uncompressed.js",
+      "lines": [
+        1864,
+        1905
+      ],
+      "revision": "62f2e689f498f9c92dbc588c58750addec9b1654"
+    },
+    {
+      "id": "apply-contract",
+      "title": "返回合同与先拆分再逐片段处理",
+      "path": "javascript/diff_match_patch_uncompressed.js",
+      "lines": [
+        1811,
+        1839
+      ],
+      "revision": "62f2e689f498f9c92dbc588c58750addec9b1654"
+    },
+    {
+      "id": "whole-test",
+      "title": "完整官方测试与来源许可",
+      "url": "https://github.com/google/diff-match-patch/blob/62f2e689f498f9c92dbc588c58750addec9b1654/javascript/tests/diff_match_patch_test.js"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "kind": "selected-field derived summary; raw observations retained outside checkout",
+  "artifact": {
+    "path": "../explainer.html",
+    "bytes": 426819,
+    "sha256": "4304f311b4d19c246b5b619b9ad3314ec5f6210ad005189a530d282efea833ee"
+  },
+  "input": {
+    "path": "../explainer.json",
+    "bytes": 4830,
+    "sha256": "924da74e59eb469178dfe4b9bc4f69f5280dd1ddfa3b39c5b33f1c90a7f26518"
+  },
+  "observer": "root coordinator; image views recorded by parent task, not human acceptance",
+  "images": [
+    {
+      "path": "desktop-light.png",
+      "bytes": 288327,
+      "sha256": "9988924a2a11e79720a1a88251cda85aa1e4e054fb3467557ac06ca7d8aa713f",
+      "width": 1440,
+      "height": 1800,
+      "rootViewed": true,
+      "pixelsModified": false
+    },
+    {
+      "path": "source-dark.png",
+      "bytes": 229131,
+      "sha256": "3bdda9faa718e5676fcc7f076e045be65ed9824081e8ae248081c8f2be105c2a",
+      "width": 1440,
+      "height": 1100,
+      "rootViewed": true,
+      "pixelsModified": false
+    },
+    {
+      "path": "mobile-light.png",
+      "bytes": 239926,
+      "sha256": "d21c7a65a1f41141606b271699d332dc79047455bc61a923437f78ba07f2c98a",
+      "width": 390,
+      "height": 2335,
+      "rootViewed": true,
+      "pixelsModified": false
+    },
+    {
+      "path": "mobile-table.png",
+      "bytes": 78465,
+      "sha256": "e55ae6a9a6c291863dc5c119238cb923379b090eb035df1d6dea7204b36a2455",
+      "width": 390,
+      "height": 844,
+      "rootViewed": true,
+      "pixelsModified": false
+    }
+  ],
+  "rawBindings": [
+    {
+      "path": "desktop-observation.json",
+      "bytes": 2875,
+      "sha256": "414b2100a0ab458532cfa916755df673f56590f9626b71ae58493d10909c96ea"
+    },
+    {
+      "path": "mobile-observation.json",
+      "bytes": 1623,
+      "sha256": "24c6fcea8561c177201d5c81a2edb9c9279a30b361deef07f137f51844283bc3"
+    },
+    {
+      "path": "mobile-table-observation.json",
+      "bytes": 454,
+      "sha256": "72cc5665048c97ed4ca1f57c442a56f2bb44dd0fa79e97e473aaffde6cff92a9"
+    },
+    {
+      "path": "source-dark-observation.json",
+      "bytes": 2114,
+      "sha256": "8b2103f9cf3ffb5312c5488605ba7992edafe99aa1b87960e2f4505308c986a7"
+    }
+  ],
+  "observations": {
+    "desktop": {
+      "theme": "light",
+      "viewport": [
+        1440,
+        1100
+      ],
+      "pageWidth": 1440,
+      "tableWidths": [
+        {
+          "client": 1238,
+          "scroll": 1238,
+          "parent": 1238
+        }
+      ],
+      "codeWidths": [
+        {
+          "client": 1236,
+          "scroll": 1236
+        }
+      ]
+    },
+    "sourcePreview": {
+      "theme": "dark",
+      "viewport": [
+        1440,
+        1100
+      ],
+      "hash": "#four-texts",
+      "action": "theme control and panel anchor click, then pointer hover on #four-texts sup.cite a[href=\"#source-apply-test\"]",
+      "previewStartLine": 892,
+      "previewLastNumberedLine": 905,
+      "previewMetrics": {
+        "client": 488,
+        "scroll": 888,
+        "clientHeight": 278,
+        "scrollHeight": 292,
+        "visible": true
+      },
+      "full22LineExcerptVisibleInPopup": false,
+      "flags908VisibleInPopup": false,
+      "fullPageCodeWidths": {
+        "client": 1236,
+        "scroll": 1236,
+        "clientHeight": 452,
+        "scrollHeight": 452
+      }
+    },
+    "mobile": {
+      "theme": "light",
+      "viewport": [
+        390,
+        844
+      ],
+      "pageWidth": 390,
+      "tableWidths": [
+        {
+          "client": 332,
+          "scroll": 332,
+          "parent": 332
+        }
+      ],
+      "codeWidths": [
+        {
+          "client": 330,
+          "scroll": 917
+        }
+      ],
+      "codeHorizontalScrollTested": false
+    },
+    "mobileTable": {
+      "viewport": [
+        390,
+        844
+      ],
+      "pageWidth": 390,
+      "hash": "#four-texts",
+      "tableWidth": 332,
+      "tableScrollWidth": 332,
+      "action": "actual panel navigation to #four-texts",
+      "fourCompleteStringsPresentInDOM": true,
+      "fullTextReadableByWrapping": true
+    }
+  },
+  "scope": {
+    "publicBrowserGate": "not-requested",
+    "keyboard": "not-tested",
+    "AT": "not-tested",
+    "touchGesture": "not-tested",
+    "OSClipboard": "not-tested",
+    "externalNavigation": "not-tested",
+    "upstreamExecution": "not-run",
+    "rawNotRepublished": true
+  }
+}

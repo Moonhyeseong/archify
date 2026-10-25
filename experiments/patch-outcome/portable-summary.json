@@ -1,0 +1,267 @@
+{
+  "schemaVersion": 1,
+  "kind": "derived portable summary; original receipts retained outside checkout",
+  "baseCommit": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "upstreamRevision": "62f2e689f498f9c92dbc588c58750addec9b1654",
+  "upstreamExecution": {
+    "JavaScript": "not-run",
+    "patch_make": "not-run",
+    "patch_apply": "not-run",
+    "testRunner": "not-run"
+  },
+  "finalize": {
+    "status": "pass",
+    "quality": "standard",
+    "gates": {
+      "validate": "pass",
+      "deliver": "pass",
+      "check": "pass",
+      "browser-check": "not-run"
+    },
+    "diagnostics": [
+      {
+        "code": "explainer/writing-qualification",
+        "severity": "warning",
+        "message": "把限定条件写进 scope 或来源",
+        "matched": "本例"
+      }
+    ],
+    "browserCheck": {
+      "requested": false,
+      "ran": false
+    },
+    "visualReview": "not-requested"
+  },
+  "audit": {
+    "status": "pass",
+    "count": 10,
+    "kind": "fixed-source and rendered-content audit; no upstream execution"
+  },
+  "preservedAttempts": [
+    {
+      "name": "bare repository location failure",
+      "status": "fail",
+      "gates": {
+        "validate": "not-run",
+        "deliver": "not-run",
+        "check": "not-run",
+        "browser-check": "not-run"
+      },
+      "diagnosticCodes": [
+        "explainer/repository-location"
+      ]
+    },
+    {
+      "name": "first successful content before two scope wording clarifications",
+      "htmlSha256": "3031f0ae7436a01003411c0a98516e051f9b202e96175f52930db86903ae2d11",
+      "compactReceiptRetained": true
+    },
+    {
+      "name": "first audit wrapper-object assertion error",
+      "status": "fail",
+      "scope": "audit alone; corrected diagrams mapping access, no artifact change"
+    }
+  ],
+  "visualEvidence": {
+    "status": "root-observed",
+    "capture": "screenshots/capture-summary.json",
+    "images": 4,
+    "browserGate": "not-requested",
+    "keyboard": "not-tested",
+    "AT": "not-tested",
+    "touch": "not-tested",
+    "OSClipboard": "not-tested",
+    "externalNavigation": "not-tested",
+    "mobileCodeHorizontalScroll": "not-tested",
+    "sourcePopup": "preview only, not full 22 lines or flags at 908"
+  },
+  "rawBindings": [
+    {
+      "path": "audit-final.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "audit-final.stdout.json",
+      "bytes": 992,
+      "sha256": "6b1da897bcf910639af476a4f2682e393114d45828529ccaed69829f1e615453"
+    },
+    {
+      "path": "audit-first.py",
+      "bytes": 4864,
+      "sha256": "dacf2b3996dd78c30dc608592d601c2fe5cae61f5caf0340ec25d54944bf4d6a"
+    },
+    {
+      "path": "audit.stderr.txt",
+      "bytes": 966,
+      "sha256": "7adaae126f3b3c689a478ff3a236ab2a4413fbd759123dbe23f288cd57ffbf1d"
+    },
+    {
+      "path": "audit.stdout.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "build-input.py",
+      "bytes": 4743,
+      "sha256": "0d126e635f08aa64c2d200a7cc1963868be1dd76bc6c0c05f37ecfa5c9ff3d14"
+    },
+    {
+      "path": "final-explainer.delivery.json",
+      "bytes": 1702,
+      "sha256": "e1b15678d6ca96ed6c45fb8a4a36bc1ca1838aa8959d480e702d6bded741f9dc"
+    },
+    {
+      "path": "final-explainer.finalize-summary.json",
+      "bytes": 2229,
+      "sha256": "d7bb3174d1d477b4ad74c4ceac420eb0992ea22bec1375a0ad6c1cce3921f891"
+    },
+    {
+      "path": "final-explainer.finalize.json",
+      "bytes": 9365,
+      "sha256": "1d09ca0c4558ae7a9a692a53596e5cf02f9f965fc1925c6e3761e774d79227ef"
+    },
+    {
+      "path": "final-finalize.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "final-finalize.stdout.json",
+      "bytes": 1822,
+      "sha256": "a9b17b2ecbcb4cf674e5ad1505d60cee176c824b4961c7425409917895f4eefa"
+    },
+    {
+      "path": "first-finalize.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "first-finalize.stdout.json",
+      "bytes": 1101,
+      "sha256": "fccfe69e56d68b0876ca9d4b6a563ec8b50c1b361e2cd46ed40d6933fa7ba4de"
+    },
+    {
+      "path": "first-success.html",
+      "bytes": 425933,
+      "sha256": "3031f0ae7436a01003411c0a98516e051f9b202e96175f52930db86903ae2d11"
+    },
+    {
+      "path": "first-success.input.json",
+      "bytes": 4842,
+      "sha256": "0b3f4ea3acc97d388eab22990a640365ff882b17e0030944acfef978c76b5a02"
+    },
+    {
+      "path": "second-finalize.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "second-finalize.stdout.json",
+      "bytes": 1275,
+      "sha256": "eeeaf4ec51f15f3a683152d274170887f49d9ff6f15c535851cb5b88c6073b0f"
+    },
+    {
+      "path": "source-checks.json",
+      "bytes": 1316,
+      "sha256": "caac751041bae5cb269e6e9200164c87b4406d2a7211289b498ff6258788c8a2"
+    },
+    {
+      "path": "toolchain.json",
+      "bytes": 78,
+      "sha256": "c41c76bbdffe21da30b4926b0bda82466d47b1a73ede41a6f5b041822d089239"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 7246,
+      "sha256": "ce100f6e4ec95db51cd7c03050b4d629bddf9ef85d20181dfb131aa065d57a7e"
+    },
+    {
+      "path": "audit-result.json",
+      "bytes": 992,
+      "sha256": "6b1da897bcf910639af476a4f2682e393114d45828529ccaed69829f1e615453"
+    },
+    {
+      "path": "audit.py",
+      "bytes": 4876,
+      "sha256": "30ff005ba4cfa180a10eef40f332dc0c17f41318bfcbe9f4c5b7ba8d90e0d893"
+    },
+    {
+      "path": "explainer.html",
+      "bytes": 426819,
+      "sha256": "4304f311b4d19c246b5b619b9ad3314ec5f6210ad005189a530d282efea833ee"
+    },
+    {
+      "path": "explainer.json",
+      "bytes": 4830,
+      "sha256": "924da74e59eb469178dfe4b9bc4f69f5280dd1ddfa3b39c5b33f1c90a7f26518"
+    },
+    {
+      "path": "facts.json",
+      "bytes": 1645,
+      "sha256": "4ce317357f5ceb41172cf8f167467da7ab99355a5a010d95fd60998db0246e9e"
+    },
+    {
+      "path": "screenshots/capture-summary.json",
+      "bytes": 4336,
+      "sha256": "57bfc2f13ea8cf0f1e574da4ef73471f60252c5af3374dc5aec701a6946a6688"
+    },
+    {
+      "path": "screenshots/desktop-light.png",
+      "bytes": 288327,
+      "sha256": "9988924a2a11e79720a1a88251cda85aa1e4e054fb3467557ac06ca7d8aa713f"
+    },
+    {
+      "path": "screenshots/mobile-light.png",
+      "bytes": 239926,
+      "sha256": "d21c7a65a1f41141606b271699d332dc79047455bc61a923437f78ba07f2c98a"
+    },
+    {
+      "path": "screenshots/mobile-table.png",
+      "bytes": 78465,
+      "sha256": "e55ae6a9a6c291863dc5c119238cb923379b090eb035df1d6dea7204b36a2455"
+    },
+    {
+      "path": "screenshots/source-dark.png",
+      "bytes": 229131,
+      "sha256": "3bdda9faa718e5676fcc7f076e045be65ed9824081e8ae248081c8f2be105c2a"
+    },
+    {
+      "path": "source-manifest.json",
+      "bytes": 1520,
+      "sha256": "411c5620a8a9d25d2b62aaba9871314dcf50f6496655ca4b42cec38dc154d504"
+    },
+    {
+      "path": "upstream/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "upstream/README.md",
+      "bytes": 2941,
+      "sha256": "7f69dfca6cfa4ca6a952786e5d4474bc44dc3272bfada093a5e039a03cac05d5"
+    },
+    {
+      "path": "upstream/javascript/diff_match_patch.js",
+      "bytes": 21274,
+      "sha256": "d422c483b926ca7cea768a03c8f0f26ebc69d5041e3deb550d2709dd40fa16ea"
+    },
+    {
+      "path": "upstream/javascript/diff_match_patch_uncompressed.js",
+      "bytes": 78511,
+      "sha256": "9a79cf031ac7c2e366416181051acb3e6d2cacf79c5354148f4c71ea20c7e4a3"
+    },
+    {
+      "path": "upstream/javascript/tests/diff_match_patch_test.html",
+      "bytes": 5071,
+      "sha256": "35bebe1a161c19e232e9d47173efc1937b9a252a11c6e28cfc46a2e2fe201d96"
+    },
+    {
+      "path": "upstream/javascript/tests/diff_match_patch_test.js",
+      "bytes": 39223,
+      "sha256": "8fa7cd7c9c3681cace8dc0d50a68a694b57ad1fd5c5d322b4a957de2bc017a8c"
+    }
+  ]
+}

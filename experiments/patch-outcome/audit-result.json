@@ -1,0 +1,19 @@
+{
+  "kind": "fixed-source and rendered-content audit; no upstream execution",
+  "status": "pass",
+  "checks": [
+    "fixed repository and revision",
+    "six complete fixed Git blobs, Apache terms and both runner inputs retained",
+    "four complete literals are exact observations of fixed source byte spans",
+    "true/true is the upstream expected assertion, not an execution result",
+    "expected E differs from original target B",
+    "public HTML embeds the complete authored input without rewriting",
+    "three fixed Git excerpts and source URLs match full original files",
+    "four rendered table cells preserve complete literal text",
+    "rendered code retains the whole declared test context",
+    "authored input has no diagram or serialized patch and output contains no personal paths"
+  ],
+  "count": 10,
+  "htmlSha256": "4304f311b4d19c246b5b619b9ad3314ec5f6210ad005189a530d282efea833ee",
+  "inputSha256": "924da74e59eb469178dfe4b9bc4f69f5280dd1ddfa3b39c5b33f1c90a7f26518"
+}
