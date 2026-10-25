@@ -1,0 +1,10 @@
+{
+  "templateVersion": 1,
+  "repository": "tt-a1i/archify",
+  "number": 1099,
+  "author": "tt-a1i",
+  "title": "license: adopt Apache-2.0 on stable main",
+  "mergedAt": "2026-10-25T07:36:19Z",
+  "mergeCommit": "51a291770851ad27a400cca73c753c166b5e0c65",
+  "url": "https://github.com/tt-a1i/archify/pull/1099"
+}
