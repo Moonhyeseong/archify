@@ -12,11 +12,11 @@
 
 最新状态另见[19:20–19:21晚间GitHub快照](github-status-latest-evening.md)：main/dev、部署等待、实验精确head和PR状态分别记账，不把Actions/check-runs为0当通过。 20:53:28（台北）最新只读快照确认dev/main仍为10b4/51a29177，CI状态与19:20相同（dev成功、main部署等待）；#1103/#1015/#998 heads不变，未发现晚间新增PR。原始API响应留checkout外，不补造部署完成或候选CI通过。
 
-## 已推送的 43 个实验
+## 已推送的 46 个实验
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
-[离线图片浏览页](gallery/README.md)：39项图片快照，当前43个独立远程实验分支；图片页仍固定hub fc701742的39项/39张原始PNG（12/15/12），新增Notebook/Config/Benchmark/Task，并刷新Finder/Waterfall/Workflow/Keyboard/Clipboard五图。当前实际核1440×1100浅色四筛选、九项搜索/完整原图字节/天然尺寸/固定来源/原始尺寸与Esc返回；390×844浅色卡片、深色dialog及空结果/reset、桌面深色另有实测，20项观测/7图已绑定。模板逐字不变；历史35/34/33/29/27证据按固定提交保留，未将截图内实验内容当新产品测试或AT/OS剪贴板验收。 新增Edge extras、Line notes、Static uses和Hintful stages四项尚未纳入图片快照；Finder canvas、Relation reference、Diagnostic locations、Delta values的四个新refresh head也未替换gallery旧图，不将它们混称为同一来源快照。
+[离线图片浏览页](gallery/README.md)：39项图片快照，当前46个独立远程实验分支；图片页仍固定hub fc701742的39项/39张原始PNG（12/15/12），新增Notebook/Config/Benchmark/Task，并刷新Finder/Waterfall/Workflow/Keyboard/Clipboard五图。当前实际核1440×1100浅色四筛选、九项搜索/完整原图字节/天然尺寸/固定来源/原始尺寸与Esc返回；390×844浅色卡片、深色dialog及空结果/reset、桌面深色另有实测，20项观测/7图已绑定。模板逐字不变；历史35/34/33/29/27证据按固定提交保留，未将截图内实验内容当新产品测试或AT/OS剪贴板验收。 新增Edge extras、Line notes、Static uses、Hintful stages、Spatial focus、Maybe initialized和Load filter七项尚未纳入图片快照；Finder canvas、Relation reference、Diagnostic locations、Delta values的四个新refresh head也未替换gallery旧图，不将它们混称为同一来源快照。
 
 | 实验与远程分支 | 具体价值 | 发布 revision | 实际图片 | 验证与限制 |
 | --- | --- | --- | --- | --- |
@@ -63,6 +63,9 @@
 | [Line notes](https://github.com/tt-a1i/archify/tree/codex/lab-line-notes/experiments/line-notes) | 固定源码行→作者解释→同片段原行往返；相同源码两处不串跳；[固定README](https://github.com/tt-a1i/archify/blob/079d562915a701f8c76b6479e59622432f81ee79/experiments/line-notes/README.md) | `079d5629` | [页面](https://github.com/tt-a1i/archify/blob/079d562915a701f8c76b6479e59622432f81ee79/experiments/line-notes/candidate.html) / [原PNG](https://github.com/tt-a1i/archify/blob/079d562915a701f8c76b6479e59622432f81ee79/experiments/line-notes/screenshots/candidate-desktop-light.png) | 基线10b4，仅experiments后处理原型；源1965B逐字不变；baseline三阶段通过/4footer键盘失败；候选独立审计、5负例、作者四视口与root5图；非normal finalize或strict provenance，非OS clipboard/AT |
 | [Static uses](https://github.com/tt-a1i/archify/tree/codex/lab-static-uses/experiments/static-uses) | 7节点8use边解释Beniget模块定义根的局部静态投影，不是执行分支；[固定README](https://github.com/tt-a1i/archify/blob/7be0711da68d8db0dafaefef0b64894665f8609f/experiments/static-uses/README.md) | `7be0711d` | [页面](https://github.com/tt-a1i/archify/blob/7be0711da68d8db0dafaefef0b64894665f8609f/experiments/static-uses/explainer.html) / [原PNG](https://github.com/tt-a1i/archify/blob/7be0711da68d8db0dafaefef0b64894665f8609f/experiments/static-uses/screenshots/overview-light.png) | 基线10b4；固定官方fixture，未执行上游；native四阶段0诊断/页面三阶段通过且browser未请求，14事实审计/root4图；URL来源元数据非verified snippet，非完整AST/运行trace |
 | [Hintful stages](https://github.com/tt-a1i/archify/tree/codex/lab-hintful-stages/experiments/hintful-stages) | 区分A→命名中间态S→B两段声明，删3在第二段；[固定README](https://github.com/tt-a1i/archify/blob/8d698ceec15a2ea24012135632c4612e5a58e7b5/experiments/hintful-stages/README.md) | `8d698cee` | [中文解释页](https://github.com/tt-a1i/archify/blob/8d698ceec15a2ea24012135632c4612e5a58e7b5/experiments/hintful-stages/explainer.html) / [原PNG](https://github.com/tt-a1i/archify/blob/8d698ceec15a2ea24012135632c4612e5a58e7b5/experiments/hintful-stages/screenshots/desktop-light.png) | 基线10b4，仅25实验文件；固定diff-format826f50完整10Git文件及许可；normal CLI三阶段0诊断/browser未请求，HTML377646B、9审计/root5图；含2来源hover和mobile横向wheel100，非触屏/完整键盘/外链/上游执行 |
+| [Spatial focus](https://github.com/tt-a1i/archify/tree/codex/lab-spatial-focus/experiments/spatial-focus) | 屏内完整可见语义node用plain Arrow移动DOM焦点，保留选择/hash/camera，Tree及Route排除；[固定README](https://github.com/tt-a1i/archify/blob/08af09117396b4d2b62774215bc48d8bd516386f/experiments/spatial-focus/README.md) | `08af0911` | [页面](https://github.com/tt-a1i/archify/blob/08af09117396b4d2b62774215bc48d8bd516386f/experiments/spatial-focus/architecture-candidate.html) / [原PNG](https://github.com/tt-a1i/archify/blob/08af09117396b4d2b62774215bc48d8bd516386f/experiments/spatial-focus/screenshots/architecture-candidate-settled-right-light.png) | 基线10b4；当前Route+spatial16pass、exact包7pass/smoke/CLI四阶段，generated/235双ZIP通过；6root实图；先前Route抢键及Infinity词法失败保留，邻近/core复用scope单列，非overlay遮挡/效率保证 |
+| [Maybe initialized](https://github.com/tt-a1i/archify/tree/codex/lab-maybe-initialized/experiments/maybe-initialized) | RustOwl官方expected与概念I/U/union状态表分开，绿色波浪不表示一次执行状态；[固定README](https://github.com/tt-a1i/archify/blob/61d43f93ee9d11d30d2a239f80e1b2976539d850/experiments/maybe-initialized/README.md) | `61d43f93` | [页面](https://github.com/tt-a1i/archify/blob/61d43f93ee9d11d30d2a239f80e1b2976539d850/experiments/maybe-initialized/output/explanation.html) / [原PNG](https://github.com/tt-a1i/archify/blob/61d43f93ee9d11d30d2a239f80e1b2976539d850/experiments/maybe-initialized/screenshots/desktop-light.png) | 基线10b4，29实验文件/28public绑定，完整MPL-2.0源码/原snapshot与derived材料边界保留；normal finalize前三阶段pass/browser48keyboard失败；root4终版图，未编译/未执行上游，不抵消失败 |
+| [Load filter](https://github.com/tt-a1i/archify/tree/codex/lab-load-filter/experiments/load-filter) | enabled最终名单不证明先前未load/invoke，官方True expected与默认False源码推断分列；[固定README](https://github.com/tt-a1i/archify/blob/d2ff5f8c2cce954d5e20b6dd8970f027f52d46c0/experiments/load-filter/README.md) | `d2ff5f8c` | [中文页面](https://github.com/tt-a1i/archify/blob/d2ff5f8c2cce954d5e20b6dd8970f027f52d46c0/experiments/load-filter/explainer.html) / [原PNG](https://github.com/tt-a1i/archify/blob/d2ff5f8c2cce954d5e20b6dd8970f027f52d46c0/experiments/load-filter/screenshots/desktop-light.png) | 基线10b4；20staged/19public绑定、独立READY；normal finalize三阶段0诊断/browser未请求；4root图，手机两表局部横溢及pre长行保留，未运行Python/插件/metadata discovery，来源URL非verified excerpt |
 
 上述前33项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
 
@@ -140,6 +143,10 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 2026-10-25 Hintful stages固定head `8d698ceec15a2ea24012135632c4612e5a58e7b5` 已推并保持clean，独立reviewer最终READY；协调者核25 staged文件原字节及diff-check通过，精确远端head为Actions runs=0、check-runs=0。当前43个独立远程分支，gallery仍是39项固定快照，不称43项gallery。
 
+2026-10-25 Spatial focus `08af09117396b4d2b62774215bc48d8bd516386f` 与Maybe initialized `61d43f93ee9d11d30d2a239f80e1b2976539d850` 已推、远程精确一致且clean，独立终审READY；协调者核精确head的Actions runs/check-runs均为0，非CI通过。当前45项；Load filter仍待终审及推送，不提前称第46项已发布。gallery继续固定39项来源快照。
+
+2026-10-25 Load filter `d2ff5f8c2cce954d5e20b6dd8970f027f52d46c0` 已推、远端精确一致且clean，独立终审READY；协调者于UTC13:44:26核精确head的Actions runs/check-runs均为0，不称CI绿。当前46个独立远程实验，图片gallery仍为固定fc701742的39项快照，7个新增与4个后续refresh未纳入，待单独冻结再重建。
+
 ## 正在推进
 
 | 方向 | 来源与目标 | 状态 |
@@ -152,11 +159,12 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 新一轮发现 | Benchmark / 语法 / 并发阅读 | 第12轮6新来源，benchstat已推7b8258cd；第13轮语法/并发共4新来源，暂不增实现；第14轮6个新图交互项目，未确认新实施缺口 |
 | 新一轮发现 | 第15轮行为/构建、第16轮条件代码/解析身份 | 研究阶段均0项启动；preview重新打开边界亦不新开修复。后续单独选定edge-extras有界固定fixture内容，现已推1db953a7计入第40项；研究原结论不改，不新增parser或声称生产事故 |
 | 新一轮发现 | 第18轮局部阅读 / 第19轮控制与数据阅读 | 第18轮局部阅读、结构差异、小图交互三报告及第19轮控制/数据报告已完成；line-notes与static-uses已作为第41/42项推送，均base10b4且仅experiments；后处理原型与静态内容投影各自验证范围见上表，不改产品/ZIP |
-| 本地产品原型 | spatial-focus屏内空间方向浏览 | 独立base10b4原型进行中；仅屏内完整可见语义node的plain Arrow移动DOM focus，Tree排除，不选中/hash/camera；Route endpoint按键守卫修正后又修Infinity词法兼容，root正在最后截图，未称最终验收或published，不计入43已发布 |
+| 已发布产品原型 | spatial-focus屏内空间方向浏览 | 已推08af0911计入第44项，独立终审READY；plain Arrow仅移动DOM焦点，Tree/Route排除；当前与复用机器范围、6root图及保留失败见上表，不声明AT/效率收益 |
 | 已发布内容 | Hintful stages | 已推8d698cee计入第43项，独立reviewer最终READY；named intermediate是patch声明中间态，非第三Git commit/运行，invalid另列；CLI/审计/实图各自范围见表 |
 | 只读研究 | Round20 / Round21 | Round20报告已完成并修正L152–163及priority/clip边界；Round21完成5个新来源，最多保留Stevedore内容候选，不称已实施或验证 |
-| 本地内容实验 | maybe-initialized | 已建独立WT/branch，RustOwl表主导内容进行中；区分上游expected与概念state union，未编译/未运行上游，不计入43已发布 |
-| 本地内容实验 | load-filter | 本地进行中；未发布、未填未完成验证结果，不计入43已发布 |
+| 已发布内容 | maybe-initialized | 已推61d43f93计入第45项，独立终审READY；RustOwl上游expected/derived快照与概念union分开，MPL边界保留；前三阶段pass仍有48条键盘失败，不称完整browser通过 |
+| 已发布内容 | load-filter | 已推d2ff5f8c计入第46项，独立最终READY；最终HTML3334dc29…94d2、4root图、2表局部横溢及源码长行边界保留，normal三阶段并非完整browser gate |
+| 本地内容实验 | Witness groups | 新内容进行中，围绕共同/替代见证组；未published，不计入46已发布，不提前宣称第47项交付或验证完成 |
 | 适配器影响盘点 | 15个离线方向对dev10b4 | 静态未见确定格式破坏；五个build helper在更换基线后须更新运行身份记录，旧输入与转换证据继续绑定原版本，不批量刷新 |
 | 已有候选刷新 | Keyboard traversal / Clipboard outcome | 已推c96e8aa7/0e4a2c71；同一task页candidate实际41/41可达，原dev37/41；Clipboard受控API前后及全文恢复已核，CI与真实OS剪贴板另列 |
 | 已有候选刷新 | Relation reference / Finder canvas matches / Diagnostic locations | 已推d5691a02/ed04916f/b6679399；固定dev10b4新Passport、IME/drilldown及来源规则保留，独立复核/实图完成；各自旧证据原字节不变；Delta也已推a0a9ba77，compare/check与非finalize边界另列 |
@@ -245,6 +253,8 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 控制路径、数据依赖与实际执行 | [Round 19 control/data reading](scouts/round19-control-data-reading.md) |
 | 变量状态集合、借用与运行事件 | [Round 20 state/lifetime reading](scouts/round20-state-lifetime-reading.md) |
 | 符号候选、插件筛选与查询结果 | [Round 21 symbol reading](scouts/round21-symbol-reading.md) |
+| 图阅读交互与已有能力排重 | [Round 22 graph reading interactions](scouts/round22-graph-reading-interactions.md)（0新增产品动作） |
+| 来源清单与共同/替代见证组 | [Round 23 lineage reading](scouts/round23-lineage-reading.md)（最多一个内容候选，未实施） |
 | 15个适配器对新dev的实际影响 | [Round 17 adapter dev impact](scouts/round17-adapter-dev-impact.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
