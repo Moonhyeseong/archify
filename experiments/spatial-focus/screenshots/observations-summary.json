@@ -1,0 +1,268 @@
+{
+  "kind": "derived whitelist summary, not original DOM observation records",
+  "settledComparisons": [
+    {
+      "artifact": "architecture-base.html",
+      "rawObservation": "architecture-base-settled-observations.json",
+      "setup": "Same1440x1100 light viewport; fonts ready plus two animation frames before Tab; nine real Tabs from fresh body then ArrowRight",
+      "tabTargets": [
+        "btn-theme",
+        "btn-preset",
+        "btn-motion",
+        "btn-present",
+        "btn-export",
+        "",
+        "",
+        "",
+        "node-users"
+      ],
+      "beforeFocus": {
+        "id": "node-users",
+        "focusVisible": true,
+        "opacity": "1"
+      },
+      "afterFocus": {
+        "id": "node-users",
+        "focusVisible": true,
+        "opacity": "1"
+      },
+      "viewport": [
+        1440,
+        1100
+      ],
+      "theme": "light",
+      "containerBounds": {
+        "x": 32,
+        "y": 92,
+        "w": 1376,
+        "h": 816.8203125
+      },
+      "containerStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;",
+      "svgStyle": "--flow-cycle: 4.800s; transform: translate(0px, 0px) scale(1);",
+      "hash": "",
+      "scroll": [
+        0,
+        0
+      ],
+      "selectionPressedAllFalse": true,
+      "passportAndRegionsUnchanged": true,
+      "cameraStyleUnchanged": true,
+      "intentTraceBefore": "users",
+      "intentTraceAfter": "users"
+    },
+    {
+      "artifact": "architecture-candidate.html",
+      "rawObservation": "architecture-candidate-settled-observations.json",
+      "setup": "Same1440x1100 light viewport; fonts ready plus two animation frames before Tab; nine real Tabs from fresh body then ArrowRight",
+      "tabTargets": [
+        "btn-theme",
+        "btn-preset",
+        "btn-motion",
+        "btn-present",
+        "btn-export",
+        "",
+        "",
+        "",
+        "node-users"
+      ],
+      "beforeFocus": {
+        "id": "node-users",
+        "focusVisible": true,
+        "opacity": "1"
+      },
+      "afterFocus": {
+        "id": "node-cdn",
+        "focusVisible": true,
+        "opacity": "1"
+      },
+      "viewport": [
+        1440,
+        1100
+      ],
+      "theme": "light",
+      "containerBounds": {
+        "x": 32,
+        "y": 92,
+        "w": 1376,
+        "h": 816.8203125
+      },
+      "containerStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;",
+      "svgStyle": "--flow-cycle: 4.800s; transform: translate(0px, 0px) scale(1);",
+      "hash": "",
+      "scroll": [
+        0,
+        0
+      ],
+      "selectionPressedAllFalse": true,
+      "passportAndRegionsUnchanged": true,
+      "cameraStyleUnchanged": true,
+      "intentTraceBefore": "users",
+      "intentTraceAfter": "cdn"
+    },
+    {
+      "artifact": "workflow-base.html",
+      "rawObservation": "workflow-base-settled-observations.json",
+      "setup": "Same1440x1100 light viewport; fonts ready plus two animation frames before Tab; nine real Tabs from fresh body then ArrowRight",
+      "tabTargets": [
+        "btn-theme",
+        "btn-preset",
+        "btn-motion",
+        "btn-present",
+        "btn-export",
+        "",
+        "",
+        "",
+        "node-user"
+      ],
+      "beforeFocus": {
+        "id": "node-user",
+        "focusVisible": true,
+        "opacity": "1"
+      },
+      "afterFocus": {
+        "id": "node-user",
+        "focusVisible": true,
+        "opacity": "1"
+      },
+      "viewport": [
+        1440,
+        1100
+      ],
+      "theme": "light",
+      "containerBounds": {
+        "x": 32,
+        "y": 92,
+        "w": 1376,
+        "h": 914.921875
+      },
+      "containerStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;",
+      "svgStyle": "--flow-cycle: 8.024s; transform: translate(0px, 0px) scale(1);",
+      "hash": "",
+      "scroll": [
+        0,
+        0
+      ],
+      "selectionPressedAllFalse": true,
+      "passportAndRegionsUnchanged": true,
+      "cameraStyleUnchanged": true,
+      "intentTraceBefore": "user",
+      "intentTraceAfter": "user"
+    },
+    {
+      "artifact": "workflow-candidate.html",
+      "rawObservation": "workflow-candidate-settled-observations.json",
+      "setup": "Same1440x1100 light viewport; fonts ready plus two animation frames before Tab; nine real Tabs from fresh body then ArrowRight",
+      "tabTargets": [
+        "btn-theme",
+        "btn-preset",
+        "btn-motion",
+        "btn-present",
+        "btn-export",
+        "",
+        "",
+        "",
+        "node-user"
+      ],
+      "beforeFocus": {
+        "id": "node-user",
+        "focusVisible": true,
+        "opacity": "1"
+      },
+      "afterFocus": {
+        "id": "node-chat",
+        "focusVisible": true,
+        "opacity": "1"
+      },
+      "viewport": [
+        1440,
+        1100
+      ],
+      "theme": "light",
+      "containerBounds": {
+        "x": 32,
+        "y": 92,
+        "w": 1376,
+        "h": 914.921875
+      },
+      "containerStyle": "--archify-scroll-x: 0px; --archify-nav-reserve: 54px;",
+      "svgStyle": "--flow-cycle: 8.024s; transform: translate(0px, 0px) scale(1);",
+      "hash": "",
+      "scroll": [
+        0,
+        0
+      ],
+      "selectionPressedAllFalse": true,
+      "passportAndRegionsUnchanged": true,
+      "cameraStyleUnchanged": true,
+      "intentTraceBefore": "user",
+      "intentTraceAfter": "chat"
+    }
+  ],
+  "selectedFocus": {
+    "rawObservation": "architecture-selected-fit-observations.json",
+    "setup": "Existing Users selection made with Enter; existing 0 key resets camera to100%; t changes theme; two actual ArrowLeft return DOM focus fromLB toUsers before measured Right Right",
+    "focusSequence": [
+      "node-users",
+      "node-cdn",
+      "node-lb"
+    ],
+    "theme": "dark",
+    "viewport": [
+      1440,
+      1100
+    ],
+    "hash": "#focus=users",
+    "usersSelectionAndPressedPreserved": true,
+    "allSVGAttributesUnchangedWithinThisSequence": true,
+    "passportTextUnchanged": true,
+    "scrollUnchanged": true,
+    "lbOpacityBefore": "0.13",
+    "lbOpacityAfter": "1",
+    "lbFocusVisibleAfter": true
+  },
+  "routeCapture": {
+    "rawObservation": "route-capture-observations.json",
+    "setup": "Actual Route button click; explicit page.focus(node-users) sets node for actual key; not Tab reachability",
+    "beforeAfterUnchanged": true,
+    "events": [
+      {
+        "key": "ArrowRight",
+        "isTrusted": true,
+        "defaultPrevented": false,
+        "target": "node-users",
+        "active": "node-users"
+      }
+    ],
+    "limits": "Explicit node focus; not Tab reachability, OS clipboard, or successful endpoint selection."
+  },
+  "autoZoomExclusion": {
+    "rawObservation": "architecture-auto-settled-observations.json",
+    "scope": "Same invocation, stable existing 190% camera after activation; no screenshot attached for this probe.",
+    "focusSequence": [
+      "node-users",
+      "node-cdn",
+      "node-cdn"
+    ],
+    "cameraStyle": "--flow-cycle: 4.800s; transform: translate(0px, -427.097px) scale(1.9); clip-path: inset(224.788px 637.579px 122.423px 0px);",
+    "cameraUnchanged": true,
+    "bounds": {
+      "x": 33,
+      "y": 93,
+      "right": 1407,
+      "bottom": 908
+    },
+    "lbRectangle": {
+      "id": "node-lb",
+      "left": 1136.263427734375,
+      "right": 1444.0977783203125,
+      "top": 390.29034423828125,
+      "bottom": 532.3677368164062
+    },
+    "lbRightExceedsClientRight": true
+  },
+  "limits": [
+    "Root agent reported viewing the six PNGs; this file does not claim human or AT acceptance.",
+    "Geometry eligibility is not complete overlay occlusion testing.",
+    "Only recorded paths were tested; no cross-browser or full keyboard acceptance claim."
+  ]
+}

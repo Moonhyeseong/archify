@@ -4404,6 +4404,12 @@ svg[data-focus-active] [data-focus-selected] {
   filter: drop-shadow(0 0 10px var(--frontend-stroke));
 }
 
+/* A keyboard reading focus stays legible without clearing a pinned selection.
+   This transient pseudo-class is not an authored or exported graph state. */
+.diagram-container > svg:not([data-tree-ui]) [data-node-id]:focus-visible {
+  opacity: 1;
+}
+
 /* Authored Reachability is a bounded graph query over the relationships
    already present in the artifact. Upstream walks incoming edges;
    downstream walks outgoing edges. It never claims runtime causality and

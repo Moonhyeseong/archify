@@ -1,0 +1,149 @@
+{
+  "kind": "derived capture and raw-observation binding, not original browser output",
+  "operator": "root Codex agent using actual browser; six images individually viewed as reported by root",
+  "artifacts": {
+    "architecture-candidate.html": {
+      "bytes": 879363,
+      "sha256": "29b22160ce2abefafe45cb029f935422daee83a4e6fff43a62851dd24f4f3209"
+    },
+    "workflow-candidate.html": {
+      "bytes": 884446,
+      "sha256": "74053798ca7b1b61065dd56de9939a18d7ba1c8ba22a7f03906827ce83aa787a"
+    },
+    "architecture-base.html": {
+      "bytes": 875557,
+      "sha256": "a9656b8206d235596862ef9568908bde59c78d4e7684b11912d9897621225b41"
+    },
+    "workflow-base.html": {
+      "bytes": 880640,
+      "sha256": "f636297df11e4788532a5d6d59bea7040336fb2be571986ba4c9ea78681c57ba"
+    }
+  },
+  "inputs": {
+    "archify/examples/web-app.architecture.json": {
+      "bytes": 3197,
+      "sha256": "95e051b27a9e4a3307e194c0f666fca4af51470be7e2228d400ff48aea5b353b"
+    },
+    "archify/examples/agent-tool-call.workflow.json": {
+      "bytes": 4939,
+      "sha256": "d67965d50872c97e4ff3476271e645bf19fab6b3ab44e111bdb44b063e3aa36f"
+    }
+  },
+  "images": [
+    {
+      "path": "architecture-base-settled-right-light.png",
+      "bytes": 132190,
+      "sha256": "1d9164ecf1887b46d397f2a2005d5558eb77f218c7f696439f5f27a497f6155c",
+      "pngDimensions": [
+        1440,
+        1100
+      ],
+      "artifact": "architecture-base.html",
+      "artifactSHA256": "a9656b8206d235596862ef9568908bde59c78d4e7684b11912d9897621225b41",
+      "rootAgentReportedViewed": true
+    },
+    {
+      "path": "architecture-candidate-settled-right-light.png",
+      "bytes": 137940,
+      "sha256": "386cc77e110410fb08b19042cbf1514ba13c7742db7f55780bb4f30b6f0b054f",
+      "pngDimensions": [
+        1440,
+        1100
+      ],
+      "artifact": "architecture-candidate.html",
+      "artifactSHA256": "29b22160ce2abefafe45cb029f935422daee83a4e6fff43a62851dd24f4f3209",
+      "rootAgentReportedViewed": true
+    },
+    {
+      "path": "workflow-base-settled-right-light.png",
+      "bytes": 295008,
+      "sha256": "12526fc5231de849c4b4c98d51103d75585a6560cd9db1012455d47c80a253d5",
+      "pngDimensions": [
+        1440,
+        1100
+      ],
+      "artifact": "workflow-base.html",
+      "artifactSHA256": "f636297df11e4788532a5d6d59bea7040336fb2be571986ba4c9ea78681c57ba",
+      "rootAgentReportedViewed": true
+    },
+    {
+      "path": "workflow-candidate-settled-right-light.png",
+      "bytes": 299720,
+      "sha256": "7822559d84da9be8dbc7e890c3e74d21c605fd2cbf098947a8c920a2a845d142",
+      "pngDimensions": [
+        1440,
+        1100
+      ],
+      "artifact": "workflow-candidate.html",
+      "artifactSHA256": "74053798ca7b1b61065dd56de9939a18d7ba1c8ba22a7f03906827ce83aa787a",
+      "rootAgentReportedViewed": true
+    },
+    {
+      "path": "architecture-selected-lb-dark.png",
+      "bytes": 161194,
+      "sha256": "02ce3d0695dc24db807d427f261e6a2edd209cb9913da72eca148a4b79419e7a",
+      "pngDimensions": [
+        1440,
+        1100
+      ],
+      "artifact": "architecture-candidate.html",
+      "artifactSHA256": "29b22160ce2abefafe45cb029f935422daee83a4e6fff43a62851dd24f4f3209",
+      "rootAgentReportedViewed": true
+    },
+    {
+      "path": "route-capture-dark.png",
+      "bytes": 178328,
+      "sha256": "53a655674f91a862034faa22782822a7dcd468657fab8fa408171cc33d5c228b",
+      "pngDimensions": [
+        1440,
+        1100
+      ],
+      "artifact": "architecture-candidate.html",
+      "artifactSHA256": "29b22160ce2abefafe45cb029f935422daee83a4e6fff43a62851dd24f4f3209",
+      "rootAgentReportedViewed": true
+    }
+  ],
+  "originalObservationBindings": [
+    {
+      "name": "architecture-base-settled-observations.json",
+      "bytes": 30774,
+      "sha256": "2131dfae4fa2c33cc25643f843f661397279ecde35de53119b2a25da29d5eefb"
+    },
+    {
+      "name": "architecture-candidate-settled-observations.json",
+      "bytes": 30928,
+      "sha256": "1aa1d00880e56e8ebf0f5a0d4722193f6f2a0d3a2ca30c097ffc5d01b418f993"
+    },
+    {
+      "name": "workflow-base-settled-observations.json",
+      "bytes": 36355,
+      "sha256": "f9ac40ed6447b40066c253bfe2a62a9325f69664fd30bccdb14ac196a59cac95"
+    },
+    {
+      "name": "workflow-candidate-settled-observations.json",
+      "bytes": 36434,
+      "sha256": "3df5da583187df4128f2b2b5c8e10d01fc72751e47e6efa9cbf4bd9c1bf887ed"
+    },
+    {
+      "name": "architecture-selected-fit-observations.json",
+      "bytes": 14022,
+      "sha256": "87216e50297cb2ac2dba71d9251d887bc1605e5f7311c6adc9ff5d6d8488d8b1"
+    },
+    {
+      "name": "route-capture-observations.json",
+      "bytes": 1247,
+      "sha256": "6161f486362b32b7a8bcee7bde1237baf841155c98bd335c41dedd37b84c666d"
+    },
+    {
+      "name": "architecture-auto-settled-observations.json",
+      "bytes": 7185,
+      "sha256": "84aa0ad0fa6fae68ea5c60af712dd934a60fb5ea4d560e1ddfd3dddd40e826eb"
+    }
+  ],
+  "derivedObservationSummary": {
+    "path": "observations-summary.json",
+    "bytes": 7678,
+    "sha256": "2f82c7570453f00d2340876687f626cae6cdbd50c45e44e79db9fa4d4ec6ca85"
+  },
+  "excludedEvidence": "Earlier un-settled captures, initial/Route-guard candidates, selected-auto/light scratch remain outside checkout and are not successful final captures. Base was recaptured after fonts and double RAF to remove observed 54px nav-reserve mismatch; cause not established. Earlier 190% measurements across viewport/layout changes do not establish fully contained targets."
+}

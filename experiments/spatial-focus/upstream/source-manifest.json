@@ -1,0 +1,39 @@
+{
+  "repository": "https://github.com/Foblex/f-flow",
+  "revision": "8ccfe9e32f0f990c955524eb8ab48abab0cf8735",
+  "license": "MIT; complete LICENSE retained",
+  "scope": "interaction inspiration and committed test/example source, not execution or framework reuse",
+  "implementation": "Original native DOM-focus-only rule; no upstream selection/topology/return memory code imported",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1063,
+      "sha256": "38131d068096ef2dc12dc701d5d221685fae66e0c3482a43e5a454f44809be3e"
+    },
+    {
+      "path": "libs/f-flow/src/plugins/a11y/f-a11y-navigation.ts",
+      "bytes": 3884,
+      "sha256": "2ef7264c609df43c5db3c9c343b75bb67d03be5a7f454e22a29c5b78939d9f54"
+    },
+    {
+      "path": "libs/f-flow/src/plugins/a11y/f-a11y-controller.ts",
+      "bytes": 39994,
+      "sha256": "edb805e5415d8b22ca89efabced2bbf2540c308c9ec9a5d3660c01a21e21e676"
+    },
+    {
+      "path": "libs/f-flow/src/plugins/a11y/f-a11y-navigation.spec.ts",
+      "bytes": 3031,
+      "sha256": "588f21a10613c65658472dbe1bc96a21d5e871e2abadef9af1bd2a1e97487d04"
+    },
+    {
+      "path": "libs/f-examples/extensions/accessibility/example.ts",
+      "bytes": 2521,
+      "sha256": "3a741b4cd888bd97053214e20ec0ca853524e8e4dd8bf33c031ee886a2bf760b"
+    },
+    {
+      "path": "libs/f-examples/extensions/accessibility/example.html",
+      "bytes": 1525,
+      "sha256": "4259e4424faddabdbba4a939ebf10a0f23f22544ed42efffbe9550ced5f2185e"
+    }
+  ]
+}

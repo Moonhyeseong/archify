@@ -14,6 +14,33 @@ Read this only when the user asks for a reader-facing capability. Ordinary gener
 - Direct Relationship Pin makes a unique compiled relationship operable while preserving the authored line and stable relationship identity. It must fail closed on conflicting source/target/label/ID metadata.
 - Route Probe resolves exactly two endpoints over authored directed relationships. It never infers a route from geometry.
 
+### Spatial keyboard focus
+
+After Tab reaches a native SVG node, unmodified arrow keys move DOM focus to a
+nearby node in that screen direction. Enter/Space retain their existing activation
+behavior. This is spatial reading, not traversal of authored relationships.
+
+Only focusable, computed-visible node rectangles fully inside the current Viewer
+client area and browser viewport participate. Geometry does not establish that
+another overlay covers no pixels. Hidden, zero-area, partly clipped or offscreen
+nodes are excluded; no candidate means focus stays put, without wrapping or page
+scroll. There is no automatic reveal, pan or zoom. Existing selection, pinned
+relationship, Passport and URL stay unchanged until a separate activation.
+The new DOM focus can still trigger existing Intent Trace previews and their
+temporary highlight attributes; it does not freeze all visual emphasis.
+
+Candidates are qualified by center direction, ranked by squared distance between
+rectangle edges, then center distance, with artifact DOM order breaking exact
+ties. No navigation history or stable cross-artifact order is created. Keyboard
+focus remains legible even when the previous selection dims unrelated nodes.
+
+The whole Tree diagram keeps its existing branch keys. Modified/IME keys, native
+links, inputs, interactive descendants, relationship targets, Route and Passport
+controls keep their own handlers; this is not a global arrow-key mode or a
+replacement for Tab. These controls do not establish screen-reader acceptance.
+While Route Probe is choosing either endpoint, canvas node arrows also stay with
+that existing capture scope and do not invoke spatial focus.
+
 ## Embedded reading addresses
 
 A host displaying the native reader in an opaque `srcdoc` frame may set

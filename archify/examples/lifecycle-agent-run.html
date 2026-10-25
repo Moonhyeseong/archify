@@ -4573,6 +4573,12 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
       filter: drop-shadow(0 0 10px var(--frontend-stroke));
     }
 
+    /* A keyboard reading focus stays legible without clearing a pinned selection.
+       This transient pseudo-class is not an authored or exported graph state. */
+    .diagram-container > svg:not([data-tree-ui]) [data-node-id]:focus-visible {
+      opacity: 1;
+    }
+
     /* Authored Reachability is a bounded graph query over the relationships
        already present in the artifact. Upstream walks incoming edges;
        downstream walks outgoing edges. It never claims runtime causality and
@@ -10437,6 +10443,63 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         if (!node) return;
         if (openPrimaryDrilldown(node)) {
           event.preventDefault();
+        }
+      });
+
+      // Spatial reading moves DOM focus only. It does not query relationships,
+      // activate a Passport, reveal offscreen items, or change the camera.
+      function spatialNodeRect(node, bounds) {
+        if (node.ownerSVGElement !== svg || node.tabIndex < 0 ||
+            node.closest('a, button, input, select, textarea, [contenteditable]:not([contenteditable="false"])')) return null;
+        var rect = node.getBoundingClientRect();
+        if (rect.width <= 0 || rect.height <= 0 || rect.left < bounds.left || rect.right > bounds.right ||
+            rect.top < bounds.top || rect.bottom > bounds.bottom) return null;
+        for (var element = node; element; element = element.parentElement) {
+          var style = window.getComputedStyle(element);
+          if (element.hidden || element.hasAttribute('inert') || element.getAttribute('aria-hidden') === 'true' ||
+              style.display === 'none' || style.visibility !== 'visible' || Number(style.opacity) === 0) return null;
+        }
+        return rect;
+      }
+      svg.addEventListener('keydown', function (event) {
+        if (event.defaultPrevented || event.isComposing || event.keyCode === 229 ||
+            event.altKey || event.ctrlKey || event.metaKey || event.shiftKey || svg.hasAttribute('data-tree-ui')) return;
+        var horizontal = event.key === 'ArrowLeft' || event.key === 'ArrowRight';
+        if (!horizontal && event.key !== 'ArrowUp' && event.key !== 'ArrowDown') return;
+        // Endpoint capture owns the canvas while Route is choosing its nodes.
+        if (Archify.routeProbe && Archify.routeProbe.active()) return;
+        var origin = event.target;
+        if (origin !== document.activeElement || !origin.matches || !origin.matches('[data-node-id]')) return;
+        var viewport = container.getBoundingClientRect();
+        var left = viewport.left + container.clientLeft, top = viewport.top + container.clientTop;
+        var bounds = { left: Math.max(0, left), top: Math.max(0, top),
+          right: Math.min(document.documentElement.clientWidth, left + container.clientWidth),
+          bottom: Math.min(window.innerHeight, top + container.clientHeight) };
+        var originRect = spatialNodeRect(origin, bounds);
+        if (!originRect) return;
+        event.preventDefault();
+        var originX = (originRect.left + originRect.right) / 2;
+        var originY = (originRect.top + originRect.bottom) / 2;
+        var sign = event.key === 'ArrowRight' || event.key === 'ArrowDown' ? 1 : -1;
+        var next = null, bestGap = 0, bestCenter = 0;
+        nodes().forEach(function (candidate) {
+          if (candidate === origin) return;
+          var rect = spatialNodeRect(candidate, bounds);
+          if (!rect) return;
+          var dx = (rect.left + rect.right) / 2 - originX;
+          var dy = (rect.top + rect.bottom) / 2 - originY;
+          if ((horizontal ? dx : dy) * sign <= 0) return;
+          var gapX = Math.max(0, rect.left - originRect.right, originRect.left - rect.right);
+          var gapY = Math.max(0, rect.top - originRect.bottom, originRect.top - rect.bottom);
+          var gap = gapX * gapX + gapY * gapY;
+          var center = dx * dx + dy * dy;
+          // Equal geometry keeps artifact DOM order; no persistent navigation state.
+          if (!next || gap < bestGap || (gap === bestGap && center < bestCenter)) {
+            next = candidate; bestGap = gap; bestCenter = center;
+          }
+        });
+        if (next) {
+          next.focus({ preventScroll: true });
         }
       });
 

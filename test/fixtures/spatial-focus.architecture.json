@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Synthetic spatial reading fixture",
+    "quality_profile": "standard",
+    "output": "spatial-focus.html"
+  },
+  "components": [
+    {
+      "id": "a",
+      "type": "external",
+      "label": "Origin",
+      "pos": [
+        40,
+        120
+      ],
+      "size": [
+        100,
+        60
+      ]
+    },
+    {
+      "id": "c",
+      "type": "backend",
+      "label": "Same label",
+      "pos": [
+        520,
+        120
+      ],
+      "size": [
+        100,
+        60
+      ]
+    },
+    {
+      "id": "b",
+      "type": "backend",
+      "label": "Same label",
+      "pos": [
+        260,
+        120
+      ],
+      "size": [
+        100,
+        60
+      ]
+    },
+    {
+      "id": "d",
+      "type": "database",
+      "label": "Lower",
+      "pos": [
+        260,
+        280
+      ],
+      "size": [
+        100,
+        60
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "a-to-b",
+      "from": "a",
+      "to": "b",
+      "label": "request"
+    },
+    {
+      "id": "b-to-c",
+      "from": "b",
+      "to": "c",
+      "label": "forward"
+    },
+    {
+      "id": "b-to-d",
+      "from": "b",
+      "to": "d",
+      "label": "store",
+      "labelAt": [
+        310,
+        230
+      ]
+    }
+  ]
+}

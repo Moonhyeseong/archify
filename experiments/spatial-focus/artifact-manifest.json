@@ -1,0 +1,106 @@
+{
+  "kind": "derived fixed-input binding; original receipts retained outside checkout",
+  "base": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "artifacts": {
+    "architecture-base.html": {
+      "bytes": 875557,
+      "sha256": "a9656b8206d235596862ef9568908bde59c78d4e7684b11912d9897621225b41",
+      "input": "archify/examples/web-app.architecture.json",
+      "inputSHA256": "95e051b27a9e4a3307e194c0f666fca4af51470be7e2228d400ff48aea5b353b",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "originalStdout": {
+        "name": "architecture-base.stdout.json",
+        "bytes": 2277,
+        "sha256": "cdac407d720ca1ee354a91bde073791edfb4e039865853771673e5874d46a37f"
+      },
+      "originalFinalizeReceipt": {
+        "name": "architecture-base.finalize.json",
+        "bytes": 35779,
+        "sha256": "992ac98fedda9a6334e010baf419319aff492e4e2f25292f57c8dcaedd48e85c"
+      }
+    },
+    "architecture-candidate.html": {
+      "bytes": 879363,
+      "sha256": "29b22160ce2abefafe45cb029f935422daee83a4e6fff43a62851dd24f4f3209",
+      "input": "archify/examples/web-app.architecture.json",
+      "inputSHA256": "95e051b27a9e4a3307e194c0f666fca4af51470be7e2228d400ff48aea5b353b",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "originalStdout": {
+        "name": "architecture-candidate-finite.stdout.json",
+        "bytes": 2333,
+        "sha256": "ee62b64cc31adca067a57cb9df877063deabb5a07a46cfc40833d33f6a9a83d6"
+      },
+      "originalFinalizeReceipt": {
+        "name": "architecture-candidate-finite.finalize.json",
+        "bytes": 35963,
+        "sha256": "d503bff58a9c3c81eb279bf929094855bc8c5ef09a0898277f660e272b0ff80d"
+      }
+    },
+    "workflow-base.html": {
+      "bytes": 880640,
+      "sha256": "f636297df11e4788532a5d6d59bea7040336fb2be571986ba4c9ea78681c57ba",
+      "input": "archify/examples/agent-tool-call.workflow.json",
+      "inputSHA256": "d67965d50872c97e4ff3476271e645bf19fab6b3ab44e111bdb44b063e3aa36f",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "originalStdout": {
+        "name": "workflow-base.stdout.json",
+        "bytes": 1301,
+        "sha256": "38904de6fe9e6393029166b253a857c66125475829a34963b3cabca14ad9606d"
+      },
+      "originalFinalizeReceipt": {
+        "name": "workflow-base.finalize.json",
+        "bytes": 54142,
+        "sha256": "1d67433d21530342f6e54cfcdc4da2b2b75d7cf9949f6ccccb95de53f974bd75"
+      }
+    },
+    "workflow-candidate.html": {
+      "bytes": 884446,
+      "sha256": "74053798ca7b1b61065dd56de9939a18d7ba1c8ba22a7f03906827ce83aa787a",
+      "input": "archify/examples/agent-tool-call.workflow.json",
+      "inputSHA256": "d67965d50872c97e4ff3476271e645bf19fab6b3ab44e111bdb44b063e3aa36f",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "originalStdout": {
+        "name": "workflow-candidate-finite.stdout.json",
+        "bytes": 1355,
+        "sha256": "eaef466f00a52b49ab86c9fa3dabbf4ae4d1848fac5b3ab251381dceca7c5cd5"
+      },
+      "originalFinalizeReceipt": {
+        "name": "workflow-candidate-finite.finalize.json",
+        "bytes": 54319,
+        "sha256": "7b2ae8c49a62a1841822e73d82b2ae201b6a6e3b88541f68d8e83f8cc130e7c9"
+      }
+    }
+  },
+  "comparisons": {
+    "architecture": {
+      "completeStaticSVGByteIdentical": true,
+      "sha256": "f6fc8652d1e6d477e35f3fc63f2d5587f37a684f3c93f0091e23db277357ccb9",
+      "scope": "static authored SVG; runtime focus/Intent Trace attributes can change"
+    },
+    "workflow": {
+      "completeStaticSVGByteIdentical": true,
+      "sha256": "af39bd576d53064bb43c99fae3c5d17b5f0af4a009a00f0edd1ceaa92f2d5a79",
+      "scope": "static authored SVG; runtime focus/Intent Trace attributes can change"
+    }
+  }
+}
