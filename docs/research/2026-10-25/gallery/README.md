@@ -27,7 +27,40 @@ python3 docs/research/2026-10-25/gallery/verify.py --node '<node-executable>'
 
 各实验自己的失败与未运行阶段保留在卡片及固定来源中。例如 Task review map 的 ZIP unresolved 和键盘遍历失败，不会因为有截图而变为通过。
 
-## 当前46版静态绑定与浏览器观察
+## 当前49版静态绑定与实际浏览器观察
+
+本批最后增量固定hub [`735250ac02664b1d6cd4c5f6f63d63d1b38bf96e`](https://github.com/tt-a1i/archify/blob/735250ac02664b1d6cd4c5f6f63d63d1b38bf96e/docs/research/2026-10-25/README.md)，49项 / 49张原PNG，分组 **13产品交互 / 15离线适配 / 21内容示例**。固定来源README为61,564 bytes，SHA-256 `6835df53f0661492464e149233eeffc03d9c257fad0ec6d0f9ba6bc0e65d8b13`。这是Git快照，后续研究中心文字变化不自动改变本页身份。
+
+新增三项均为内容示例：Witness groups保留组内共同/组间替代的见证组合；Patch outcome区分应用成功flags与最终文本身份；Segment origins区分GLB/LUB查询策略与原点。均未执行上游、引入parser或新增共享产品能力。三者正常CLI前三阶段通过，但整体browser阶段未请求；Patch仍有1条writing建议。Segment来源卡是URL元数据，不是verified snippet，手机首表仍需横滚；Witness和Patch也各保留窄屏代码可见范围限制，不能把完整PNG浏览当作这些实验重新通过验收。
+
+原46项selection完整记录与manifest项目记录均逐项不变，原PNG与README Git对象保持原bytes；只加入三项、更新hub来源与49项派生计数。模板、builder、verify不变，模板SHA-256仍为 `bc7d0445a2c11578de09b89afb0a3f57e468d8923dbfcc1d98978b203b7f5ce9`。完整46版browser JSON按发布提交 [`89ecc847`](https://github.com/tt-a1i/archify/tree/89ecc847caa0dac61553e772081e0459cf16c2b6/docs/research/2026-10-25/gallery) 原字节另存[browser-evidence46.json](browser-evidence46.json)，screenshots46及更早历史原件保留，均不改称49版观察。
+
+正常原builder与固定Node22.23.2静态verify通过：49个HEAD/origin、README/PNG当前bytes与固定对象一致；49张嵌图SHA、分组与筛选计数、固定链接、JS语法核验通过，外部资源引用0。原PNG共12,206,403 bytes。
+
+- `index.html`：16,402,027 bytes；SHA-256 `5d20fafcb518d59472a3466333bcbd9fb9940ac4229c364417301b9e4086c319`
+- `manifest.json`：SHA-256 `d34a1861bd6186a467349c44c2cc7243f2db23a28f55322a9dec238d341755d9`
+
+## 当前49版实际浏览器观察
+
+Root在Ego/Chromium实际操作当前冻结HTML `5d20fafc…c319`，并逐张查看下列六张终版原PNG。[browser-evidence.json](browser-evidence.json)绑定当前静态产物与图片；[screenshots49/observations-summary.json](screenshots49/observations-summary.json)是公开派生摘要，列两份原始JSON的bytes/SHA并保留选定观察。原件在checkout外，没有把派生摘要称作原始receipt。
+
+桌面1440×1100浅色实查四筛选49/13/15/21；Witness、Patch、Segment三个新卡片分别搜索、打开dialog，直接解码嵌入data URI核SHA、固定来源与天然尺寸，切原始尺寸后显示尺寸等于天然尺寸，再Escape关闭回原卡片。未用旧46版互动冒充这些新49版检查。
+
+**关闭后清空状态按实际时点分别记录。** Witness与Patch的desktop close为cleared=true；Segment桌面即时close记录open=false、focus=segment-origins、cleared=false，未改写为true，也不称三次全部清空。移动端另在等待close、clear及focus条件后记录Segment cleared=true；这不是同一个即时采样，也不是产品修复。
+
+390×844实际检查Segment浅色卡片、深色dialog、空结果与reset；pageWidth390。dialog原PNG为1440×1903，解码SHA与manifest相同，Escape后回Segment opener；空结果0/49，reset回49且query聚焦。截图实际IHDR：桌面三图1440×1100，移动卡片390×1682、深色dialog390×844、移动空结果390×1185；整页截图高度不等同CSS viewport844。
+
+第一次移动测量在fetch(data URL)处失败，只留下首张卡片图与失败说明，没有该次最终mobile JSON或dialog/empty图。第二次直接atob解码已嵌入PNG并核SHA成功，未改产品或HTML。首次材料只保留外置指纹，不作为成功截图；其首图虽然与后来终版卡片bytes相同，观察尝试身份仍分开。
+
+![49项桌面浅色](screenshots49/desktop-overview-light.png)
+
+[Witness完整图dialog](screenshots49/desktop-witness-dialog.png) · [Patch完整图dialog](screenshots49/desktop-patch-dialog.png) · [390px Segment卡片](screenshots49/mobile-segment-card-light.png) · [390px深色Segment dialog](screenshots49/mobile-segment-dialog-dark.png) · [390px深色空结果](screenshots49/mobile-empty-dark.png)。
+
+Root另于2026-10-25 14:24:55 UTC（台北22:24:55）一次只读 `git ls-remote` 核49个实验分支，全部远端actual与manifest固定commit一致；原JSON指纹列于browser evidence。这是远端head快照，不是CI或49项完整行为回归。
+
+本次没有外链导航、AT、实体触屏、完整Tab遍历、上游运行、OS剪贴板或全部49项重新操作。gallery只展示原图，不抵消各实验原失败或未运行阶段，不等于真人接受。本批收尾后暂停，不启动新的研究或实现。46版及更早历史证据继续按下节固定身份保存。
+
+## 历史46版静态绑定与浏览器观察
 
 本版仅收录固定 hub [`60b748c83470be4c30d8869991e7f2ac82905462`](https://github.com/tt-a1i/archify/blob/60b748c83470be4c30d8869991e7f2ac82905462/docs/research/2026-10-25/README.md) 的46项已发布实验：**13产品交互 / 15离线适配 / 18内容示例**。来源README为57,339 bytes，SHA-256 `1674aabe85f7834466e7e7b0e2d373549448d8d603a2936458077d6a462b38c4`；这是固定Git对象，不跟随研究中心工作树后续文字变化。
 
@@ -43,9 +76,9 @@ Finder canvas、Relation reference、Diagnostic locations、Delta values换用�
 - `manifest.json`：SHA-256 `e624ffe58aeaf9c820a51f5488e99c35fa9419fa8755a1678defa1510be08c0f`
 - 模板、builder、verify均未改；模板SHA-256仍为 `bc7d0445a2c11578de09b89afb0a3f57e468d8923dbfcc1d98978b203b7f5ce9`。
 
-## 当前46版实际浏览器观察与明确复用
+## 历史46版实际浏览器观察与明确复用
 
-协调Agent在Ego/Chromium实际检查当前 `85e9877b…982dd` HTML，并逐张查看[screenshots46](screenshots46/)中的六张终版原PNG。[browser-evidence.json](browser-evidence.json)绑定当前静态产物、固定hub README与六图；[observations-summary.json](screenshots46/observations-summary.json)是选字段的公开派生摘要，原始JSON继续留在checkout外，摘要列原文件名/bytes/SHA，不冒充原始收据。
+协调Agent在Ego/Chromium实际检查当前 `85e9877b…982dd` HTML，并逐张查看[screenshots46](screenshots46/)中的六张终版原PNG。[browser-evidence46.json](browser-evidence46.json)绑定当前静态产物、固定hub README与六图；[observations-summary.json](screenshots46/observations-summary.json)是选字段的公开派生摘要，原始JSON继续留在checkout外，摘要列原文件名/bytes/SHA，不冒充原始收据。
 
 当前新HTML实际重新检查四筛选46/13/15/18、七个新增value无裸URL或Markdown且卡片固定说明链接仍指向对应提交目录、固定hub60b748、1440×1100浅/深色，以及390×844页面宽390。Maybe深色dialog显示原图SHA与天然1440×2829，Escape关闭并回到Maybe opener；空结果0/46，reset回46且query获得焦点。桌面Maybe卡片等待lazy图片complete及natural尺寸确认后重拍；早期未解码空白图仅私有保留，不列为成功截图。移动Maybe卡片PNG按IHDR记录实际尺寸，不由CSS viewport推断整图尺寸。
 

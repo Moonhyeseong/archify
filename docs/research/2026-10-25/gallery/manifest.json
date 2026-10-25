@@ -5,12 +5,12 @@
   "repository": "https://github.com/tt-a1i/archify",
   "hub": {
     "path": "docs/research/2026-10-25/README.md",
-    "commit": "60b748c83470be4c30d8869991e7f2ac82905462",
-    "sha256": "1674aabe85f7834466e7e7b0e2d373549448d8d603a2936458077d6a462b38c4",
-    "bytes": 57339,
-    "gitBlob": "e756c001062c4827b25cdfa47e6114e9177d79d0"
+    "commit": "735250ac02664b1d6cd4c5f6f63d63d1b38bf96e",
+    "sha256": "6835df53f0661492464e149233eeffc03d9c257fad0ec6d0f9ba6bc0e65d8b13",
+    "bytes": 61564,
+    "gitBlob": "20e5052817babd588fd6059fb842bed49c506a8f"
   },
-  "policy": "46 published experiments from the fixed hub. Original PNG bytes only; card previews are CSS crops. No network request, analytics, dependency or experiment execution. Branch publication is not merge, release, CI success or human acceptance.",
+  "policy": "49 published experiments from the fixed hub. Original PNG bytes only; card previews are CSS crops. No network request, analytics, dependency or experiment execution. Branch publication is not merge, release, CI success or human acceptance.",
   "groups": {
     "product": {
       "label": "产品交互",
@@ -28,21 +28,21 @@
   "visualSources": [
     {
       "path": "website/src/styles/site.css",
-      "commit": "60b748c83470be4c30d8869991e7f2ac82905462",
+      "commit": "735250ac02664b1d6cd4c5f6f63d63d1b38bf96e",
       "sha256": "4a79d3c00465cc93d2fdfe602c5d870523ae6ee033e3f75e61481585f86f89e4",
       "bytes": 15945,
       "gitBlob": "49c84bb5900a5eb98b057e9af76bbc1066c8d0b5"
     },
     {
       "path": "website/src/styles/index.css",
-      "commit": "60b748c83470be4c30d8869991e7f2ac82905462",
+      "commit": "735250ac02664b1d6cd4c5f6f63d63d1b38bf96e",
       "sha256": "f3aaf38823b91e63d08cf1e521ea606331be580a86e20cc9e2cadab38c1bd0fe",
       "bytes": 59111,
       "gitBlob": "e076e38179140bac537a75efaca75c356350a8a2"
     },
     {
       "path": "website/src/styles/gallery.css",
-      "commit": "60b748c83470be4c30d8869991e7f2ac82905462",
+      "commit": "735250ac02664b1d6cd4c5f6f63d63d1b38bf96e",
       "sha256": "a1c896cab6ca6f99baedb6d8d6a608e97e719b02bb763494bd58e3461f8c9eb1",
       "bytes": 23691,
       "gitBlob": "36adfa4eda35c948b0f07bd9fe144beb8ac66656"
@@ -1658,6 +1658,111 @@
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/d2ff5f8c2cce954d5e20b6dd8970f027f52d46c0/experiments/load-filter",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-load-filter/experiments/load-filter",
       "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/d2ff5f8c2cce954d5e20b6dd8970f027f52d46c0/experiments/load-filter/screenshots/desktop-light.png"
+    },
+    {
+      "id": "witness-groups",
+      "commit": "861ec02283bcd32c8315aa7b5f8b5ef9678dda27",
+      "branch": "codex/lab-witness-groups",
+      "directory": "experiments/witness-groups",
+      "group": "content",
+      "inputKind": "固定 ProvSQL expected / 分组见证",
+      "imagePath": "experiments/witness-groups/screenshots/desktop-light.png",
+      "imageCaption": "Paris的三组替代见证与平面which名单分开；组内共同、组间替代，未运行数据库或推断现实因果。",
+      "title": "Witness groups",
+      "value": "同一输出的平面来源清单与共同/替代见证组合并排，组数不是执行数",
+      "limits": "基线10b4；32文件/31public/28raw，16MIT完整原件与9verified来源；normal三阶段0诊断/browser未请求，6事实/root4图；无DB/SQL/上游执行，非概率或现实因果",
+      "readme": {
+        "path": "experiments/witness-groups/README.md",
+        "commit": "861ec02283bcd32c8315aa7b5f8b5ef9678dda27",
+        "sha256": "86ceb14f9e466574e66bbb1a049c3f4feb57a530b918dbf826941e923664a7c4",
+        "bytes": 6700,
+        "gitBlob": "e9b0ad6a093b12ec5eba21cd816416729181a3fb"
+      },
+      "image": {
+        "path": "experiments/witness-groups/screenshots/desktop-light.png",
+        "commit": "861ec02283bcd32c8315aa7b5f8b5ef9678dda27",
+        "sha256": "251c04db9be3e44b027149cc3ff0ac96f927d552e12db99c06e5e65a02e44f7f",
+        "bytes": 322794,
+        "gitBlob": "fd3e12aa309eaab74d7a6260701e38b9cc692470",
+        "width": 1440,
+        "height": 1855,
+        "mime": "image/png",
+        "caption": "Paris的三组替代见证与平面which名单分开；组内共同、组间替代，未运行数据库或推断现实因果。",
+        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+      },
+      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/861ec02283bcd32c8315aa7b5f8b5ef9678dda27/experiments/witness-groups",
+      "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-witness-groups/experiments/witness-groups",
+      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/861ec02283bcd32c8315aa7b5f8b5ef9678dda27/experiments/witness-groups/screenshots/desktop-light.png"
+    },
+    {
+      "id": "patch-outcome",
+      "commit": "b5f7d7b11482fb272fb88fbfdcb9e864407eabdf",
+      "branch": "codex/lab-patch-outcome",
+      "directory": "experiments/patch-outcome",
+      "group": "content",
+      "inputKind": "固定 diff-match-patch 测试 expected",
+      "imagePath": "experiments/patch-outcome/screenshots/desktop-light.png",
+      "imageCaption": "两个true表示补丁片段应用成功，不保证最终文本等于B；上游构造测试，未执行patch应用。",
+      "title": "Patch outcome",
+      "value": "官方两个true不证明结果等于最初目标B，A/B/I/E完整literal分列",
+      "limits": "基线10b4；19文件/18binding，完整Apache-2.0来源与固定literal位置；normal三阶段+1writing warning/browser未请求，10事实/root4图；无上游patch运行，不是任意补丁parser或等价证明",
+      "readme": {
+        "path": "experiments/patch-outcome/README.md",
+        "commit": "b5f7d7b11482fb272fb88fbfdcb9e864407eabdf",
+        "sha256": "ce100f6e4ec95db51cd7c03050b4d629bddf9ef85d20181dfb131aa065d57a7e",
+        "bytes": 7246,
+        "gitBlob": "972a3e8e8e18a54c62691c69e409081049ffdb19"
+      },
+      "image": {
+        "path": "experiments/patch-outcome/screenshots/desktop-light.png",
+        "commit": "b5f7d7b11482fb272fb88fbfdcb9e864407eabdf",
+        "sha256": "9988924a2a11e79720a1a88251cda85aa1e4e054fb3467557ac06ca7d8aa713f",
+        "bytes": 288327,
+        "gitBlob": "11a4de103027681b35f8688ac3929adba7c26109",
+        "width": 1440,
+        "height": 1800,
+        "mime": "image/png",
+        "caption": "两个true表示补丁片段应用成功，不保证最终文本等于B；上游构造测试，未执行patch应用。",
+        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+      },
+      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/b5f7d7b11482fb272fb88fbfdcb9e864407eabdf/experiments/patch-outcome",
+      "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-patch-outcome/experiments/patch-outcome",
+      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/b5f7d7b11482fb272fb88fbfdcb9e864407eabdf/experiments/patch-outcome/screenshots/desktop-light.png"
+    },
+    {
+      "id": "segment-origins",
+      "commit": "6d2b0312ebf011e3aa51835f52f9427125f0f2a3",
+      "branch": "codex/lab-segment-origins",
+      "directory": "experiments/segment-origins",
+      "group": "content",
+      "inputKind": "固定 sourcemap 测试 / 作者投影",
+      "imagePath": "experiments/segment-origins/screenshots/desktop-light.png",
+      "imageCaption": "同一2:13在GLB/LUB下指向不同原点；选段为静态源码解释，URL元数据不是verified excerpt，未运行mapper。",
+      "title": "Segment origins",
+      "value": "同一source-map查询因GLB/LUB选择不同段原点，不补逐字符偏移",
+      "limits": "基线10b4；19文件/18ledger、独立READY；normal三阶段0诊断/browser未请求、7事实/root4图；仅来源元数据，未mapper运行；手机首表432/332横滚0→100后右name可读左query裁掉，完整source JSON未横滚",
+      "readme": {
+        "path": "experiments/segment-origins/README.md",
+        "commit": "6d2b0312ebf011e3aa51835f52f9427125f0f2a3",
+        "sha256": "4a0554cc0f183785adeda2d47c25fd1675513dc5f942d91f584e4617ecbd4ce3",
+        "bytes": 7818,
+        "gitBlob": "c7490ec2db24962d6bbf1209bd9af48184a14e70"
+      },
+      "image": {
+        "path": "experiments/segment-origins/screenshots/desktop-light.png",
+        "commit": "6d2b0312ebf011e3aa51835f52f9427125f0f2a3",
+        "sha256": "f3b791ea1a5b92dc44e9c8d37cec3c6e0caaefc265da117e073c60ef14107b0b",
+        "bytes": 360130,
+        "gitBlob": "7525d1b20bc6be025da1f34337dfda7dc07947b1",
+        "width": 1440,
+        "height": 1903,
+        "mime": "image/png",
+        "caption": "同一2:13在GLB/LUB下指向不同原点；选段为静态源码解释，URL元数据不是verified excerpt，未运行mapper。",
+        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+      },
+      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/6d2b0312ebf011e3aa51835f52f9427125f0f2a3/experiments/segment-origins",
+      "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-segment-origins/experiments/segment-origins",
+      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/6d2b0312ebf011e3aa51835f52f9427125f0f2a3/experiments/segment-origins/screenshots/desktop-light.png"
     }
   ],
   "deferred": {
@@ -1668,13 +1773,13 @@
     "reason": "既有 Incoming 行已能一步回到来源；兼容测试通过没有证明额外 Back 按钮更好用。暂不引入额外状态，不计入已发布数量。"
   },
   "summary": {
-    "experiments": 46,
-    "images": 46,
-    "pngBytes": 11235152,
+    "experiments": 49,
+    "images": 49,
+    "pngBytes": 12206403,
     "groupCounts": {
       "product": 13,
       "offline": 15,
-      "content": 18
+      "content": 21
     },
     "deferredCountedAsPublished": false
   }

@@ -16,7 +16,7 @@
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
-[离线图片浏览页](gallery/README.md)：当前49个独立远程实验分支，图片页为46项固定快照（13产品交互/15离线适配/18内容）。gallery已发布于hub `89ecc847caa0dac61553e772081e0459cf16c2b6`，source hub固定 `60b748c83470be4c30d8869991e7f2ac82905462`，HTML SHA-256 `85e9877b6386b6dbe884baf549fb28bdad183ef0f3925dd443b8981ba40982dd`。本版6张新截图与当前筛选/主题/窄屏观察另记；十一项完整图、原始尺寸及Escape操作限定复用旧HTML `35096438…ecd1`，不称在新页重跑十一遍，适用性及独立READY见gallery说明。39项历史证据保留；新增Witness groups/Patch outcome/Segment origins三项尚未纳入图片页，待本批补至49，不称当前已是49项gallery。
+[离线图片浏览页](gallery/README.md)：收录49个已推远程实验的49张原始PNG，固定来源hub为 `735250ac02664b1d6cd4c5f6f63d63d1b38bf96e`，当前生成HTML SHA-256为 `5d20fafcb518d59472a3466333bcbd9fb9940ac4229c364417301b9e4086c319`。本次从46版补入Witness groups、Patch outcome和Segment origins三项；模板不为本轮内容改变。原图、来源许可、失败及未运行阶段继续各自记账，图片索引不把实验的keyboard失败改成通过。root已实际操作当前49版并查看六张最终截图；四筛选、三个新增项完整图和390px搜索/dialog/空结果/reset观察已绑定，完整范围与首次测量失败见gallery说明，不称全部49项重新验收。此前46/39及更早快照的实际观察和限定复用见gallery固定历史说明，不挪为49版新测。
 
 | 实验与远程分支 | 具体价值 | 发布 revision | 实际图片 | 验证与限制 |
 | --- | --- | --- | --- | --- |
@@ -152,13 +152,13 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 2026-10-25 Witness groups `861ec02283bcd32c8315aa7b5f8b5ef9678dda27`、Patch outcome `b5f7d7b11482fb272fb88fbfdcb9e864407eabdf` 已推、远端exact且clean，独立READY；UTC14:05:19精确head均Actions runs=0、check-runs=0，不称CI通过。main51a29177/dev10b4未变。当前48项，gallery仍是46项固定快照。
 
-2026-10-25 Segment origins固定head `6d2b0312ebf011e3aa51835f52f9427125f0f2a3` 已推、远端精确一致且clean，独立终审READY；当前49个已实现并已推实验。协调者于UTC14:14:08核精确head的Actions runs=0、check-runs=0，不称CI通过。图片总览当前仍46项，本批只补三新项至49，完成后暂停。
+2026-10-25 Segment origins固定head `6d2b0312ebf011e3aa51835f52f9427125f0f2a3` 已推、远端精确一致且clean，独立终审READY；当前49个已实现并已推实验。协调者于UTC14:14:08核精确head的Actions runs=0、check-runs=0，不称CI通过。图片总览已补齐至49项并完成本批范围的截图核验；收尾后暂停。
 
-## 本批收尾后暂停
+## 本批收尾与暂停状态
 
-用户已要求当前批完成后暂停；范围冻结为49个已实现实验及已启动报告、GitHub快照和图片总览收尾。**无新研究启动、无新实施**；不设置下一轮。
+按用户要求，本批已收尾并暂停。49个实验分支、49项图片总览、已启动的Round27报告及22:07 GitHub快照均已收齐；22:24:55一次只读远端核对确认49个分支与总览固定提交一致。**停止新研究与新实施**；Round26/27保留的内容方向均为研究待定、不启动，等待用户明确继续。
 
-## 正在推进
+## 本批交付与保留事项
 
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
@@ -177,13 +177,13 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 已发布内容 | load-filter | 已推d2ff5f8c计入第46项，独立最终READY；最终HTML3334dc29…94d2、4root图、2表局部横溢及源码长行边界保留，normal三阶段并非完整browser gate |
 | 已发布内容 | Witness groups / Patch outcome | 已推861ec022/b5f7d7b1，计入第47/48项；独立READY，正常三阶段与未请求browser范围/原件/实图分别记账 |
 | 已发布内容 | Segment origins | 已推6d2b0312计入第49项，独立终审READY；仅固定fixture原点策略内容，无mapper执行，手机局部横滚/来源元数据边界见表 |
-| 研究收尾 | Round24 / Round25 / Round26 / Round27 | Round24/25已READY；Round26完成，仅保留原创URL-only候选未实施，GPL原件私有；Round27仍在收尾，不提前称完成。无新实施 |
+| 研究收尾 | Round24 / Round25 / Round26 / Round27 | Round24/25已READY；Round26完成，仅保留原创URL-only候选未实施，GPL原件私有；Round27报告已冻结，保留方向仅研究待定、不启动。无新实施 |
 | 适配器影响盘点 | 15个离线方向对dev10b4 | 静态未见确定格式破坏；五个build helper在更换基线后须更新运行身份记录，旧输入与转换证据继续绑定原版本，不批量刷新 |
 | 已有候选刷新 | Keyboard traversal / Clipboard outcome | 已推c96e8aa7/0e4a2c71；同一task页candidate实际41/41可达，原dev37/41；Clipboard受控API前后及全文恢复已核，CI与真实OS剪贴板另列 |
 | 已有候选刷新 | Relation reference / Finder canvas matches / Diagnostic locations | 已推d5691a02/ed04916f/b6679399；固定dev10b4新Passport、IME/drilldown及来源规则保留，独立复核/实图完成；各自旧证据原字节不变；Delta也已推a0a9ba77，compare/check与非finalize边界另列 |
 | 既有实验真实输出 | Recipe stages / State contract | State官方fixture实导出已推f7269e09；Recipe官方test有效输入dump已推062dee5d，自然完整示例拒绝并保留；历史synthetic不改称实跑 |
 | 新发现修复 | Explainer复制结果与手工恢复 | Clipboard outcome已推送68866954，来源、基线/候选和实际截图见第33项 |
-| 浏览页更新 | 39项固定实验图片 | 39原图/12-15-12已静态核验；当前20实际观测/7图覆盖桌面浅深与390px卡片/dialog，旧35版c23d585c及更早历史按固定链接保留；本目录保留本轮冻结证据 |
+| 图片总览 | 49项固定实验图片 | source hub735250ac、HTML5d20fafc；三新增项、四筛选及390px范围由root实际核验，六图已查看并绑定；未完整重测49项，46/39及更早证据保留原身份 |
 | 既有实验补证据 | DBML与Plan actions | DBML已补上primary key同义写法接受；原拒绝记录保留；完整plan fixture转换证据不变 |
 | 已排除的重复实现 | Mutation报告reader | 原viewer已有文件搜索、状态筛选、diff、测试关联和单HTML打包；只保留研究，不另建reader |
 | 新dev影响核对 | 许可声明与finalize源范围修复 | [15:41迁移](base-refresh-1541.md) / [16:18交付逻辑](base-refresh-1618.md)：分别核对实际diff；旧证据保留原身份，新整合按影响验证 |
@@ -271,6 +271,7 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 补丁应用状态与目标文本身份 | [Round 24 change reading](scouts/round24-change-reading.md) |
 | 查询映射原点与字符来源边界 | [Round 25 origin mapping reading](scouts/round25-origin-mapping-reading.md) |
 | 覆盖数字背后的计量对象 | [Round 26 coverage reading](scouts/round26-coverage-reading.md)（研究完成，仅原创URL-only候选未实施，GPL原件私有） |
+| 异常分组、cause与重复呈现 | [Round 27 error reading](scouts/round27-error-reading.md)（报告冻结，内容方向待定、不启动） |
 | 15个适配器对新dev的实际影响 | [Round 17 adapter dev impact](scouts/round17-adapter-dev-impact.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 

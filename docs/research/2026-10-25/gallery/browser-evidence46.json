@@ -1,0 +1,160 @@
+{
+  "kind": "derived browser evidence for fixed 46-item gallery; not raw observations or delivery receipt",
+  "status": "root-browser-observed-with-explicit-prior-version-reuse",
+  "hubSourceCommit": "60b748c83470be4c30d8869991e7f2ac82905462",
+  "hubReadme": {
+    "path": "docs/research/2026-10-25/README.md",
+    "commit": "60b748c83470be4c30d8869991e7f2ac82905462",
+    "sha256": "1674aabe85f7834466e7e7b0e2d373549448d8d603a2936458077d6a462b38c4",
+    "bytes": 57339,
+    "gitBlob": "e756c001062c4827b25cdfa47e6114e9177d79d0"
+  },
+  "artifacts": {
+    "index.html": {
+      "path": "index.html",
+      "sha256": "85e9877b6386b6dbe884baf549fb28bdad183ef0f3925dd443b8981ba40982dd",
+      "bytes": 15099916
+    },
+    "manifest.json": {
+      "path": "manifest.json",
+      "sha256": "e624ffe58aeaf9c820a51f5488e99c35fa9419fa8755a1678defa1510be08c0f",
+      "bytes": 102911
+    },
+    "verification.json": {
+      "path": "verification.json",
+      "sha256": "b728c18a81602359895dcb72cebde63096e6f2942b85e077676dfb6ed95a4364",
+      "bytes": 800
+    },
+    "selection.json": {
+      "path": "selection.json",
+      "sha256": "0ba94404bc1d63db79c0e8923bb0ae9e9e56939665f91a4981b21156578a7ea6",
+      "bytes": 23314
+    },
+    "README.md": {
+      "path": "README.md",
+      "sha256": "1f91b3a217900f755019020e546e1d33a9f916053468c6c0827381bd623c74ab",
+      "bytes": 21567
+    },
+    "template.html": {
+      "path": "template.html",
+      "sha256": "bc7d0445a2c11578de09b89afb0a3f57e468d8923dbfcc1d98978b203b7f5ce9",
+      "bytes": 16951
+    },
+    "screenshots46/observations-summary.json": {
+      "path": "screenshots46/observations-summary.json",
+      "sha256": "e349ae2d581d31204448a1eba9c30e349f894baab0171e0cc0522389fbd37fb6",
+      "bytes": 27610
+    }
+  },
+  "summary": {
+    "experiments": 46,
+    "images": 46,
+    "pngBytes": 11235152,
+    "groupCounts": {
+      "product": 13,
+      "offline": 15,
+      "content": 18
+    },
+    "deferredCountedAsPublished": false
+  },
+  "currentHtmlRawSources": [
+    {
+      "path": "final-observations.json",
+      "sha256": "2656482e9846ed3608e197c411b7c6ede10a7e9a118a345bc5928531f31cc23d",
+      "bytes": 12819
+    },
+    {
+      "path": "desktop-maybe-settled-observation.json",
+      "sha256": "b9a96df023ca4e1d6940be9833506dd0b1ae137617760807a734b7f4217f3ddc",
+      "bytes": 587
+    }
+  ],
+  "priorHtmlRawSources": [
+    {
+      "path": "changed-items-observation.json",
+      "sha256": "6494866b0641002035e2afbbfb09ab4236b3538292e56652db7ef2936b363955",
+      "bytes": 13248
+    },
+    {
+      "path": "mobile-observation.json",
+      "sha256": "823348c73d097894f05a4354e3657eb772cd5f4b0c2a1816df1e3290869fab08",
+      "bytes": 2808
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "screenshots46/desktop-maybe-card-light.png",
+      "sha256": "fbffcf5d0b006d4e7045732fdc993b6b74a06bfcbea583dbc70c74f600c29197",
+      "bytes": 156800,
+      "width": 1440,
+      "height": 1100,
+      "boundHtmlSha256": "85e9877b6386b6dbe884baf549fb28bdad183ef0f3925dd443b8981ba40982dd",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged from root final capture."
+    },
+    {
+      "path": "screenshots46/desktop-overview-dark.png",
+      "sha256": "ca7bc7dff06ab5cf12e96f7d8df4cc87808266bc4451be82a6e9baf4bcedc870",
+      "bytes": 299376,
+      "width": 1440,
+      "height": 1100,
+      "boundHtmlSha256": "85e9877b6386b6dbe884baf549fb28bdad183ef0f3925dd443b8981ba40982dd",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged from root final capture."
+    },
+    {
+      "path": "screenshots46/desktop-overview-light.png",
+      "sha256": "f16727fafcbdb36139ac63c4304386114ddb22ec3fff2fd85d61b517a0aacd50",
+      "bytes": 295367,
+      "width": 1440,
+      "height": 1100,
+      "boundHtmlSha256": "85e9877b6386b6dbe884baf549fb28bdad183ef0f3925dd443b8981ba40982dd",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged from root final capture."
+    },
+    {
+      "path": "screenshots46/mobile-empty-dark.png",
+      "sha256": "3641254e3506e198896888c27093b3dbc1dad61eb80915878998904a21f68707",
+      "bytes": 75920,
+      "width": 390,
+      "height": 844,
+      "boundHtmlSha256": "85e9877b6386b6dbe884baf549fb28bdad183ef0f3925dd443b8981ba40982dd",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged from root final capture."
+    },
+    {
+      "path": "screenshots46/mobile-maybe-card-light.png",
+      "sha256": "ddaef4c650a2cce5fd9ba68831751c9f7495383f666636522b2c7260537c3dd8",
+      "bytes": 176840,
+      "width": 390,
+      "height": 1682,
+      "boundHtmlSha256": "85e9877b6386b6dbe884baf549fb28bdad183ef0f3925dd443b8981ba40982dd",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged from root final capture."
+    },
+    {
+      "path": "screenshots46/mobile-maybe-dialog-dark.png",
+      "sha256": "e9477f2f2250237bf0225ba45af1c6c05ca405364311dc0108f9d85be690f8d9",
+      "bytes": 81078,
+      "width": 390,
+      "height": 844,
+      "boundHtmlSha256": "85e9877b6386b6dbe884baf549fb28bdad183ef0f3925dd443b8981ba40982dd",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged from root final capture."
+    }
+  ],
+  "observationSummary": "screenshots46/observations-summary.json",
+  "historical39": {
+    "path": "browser-evidence39.json",
+    "sha256": "8f118ec362d82f2d88f4913b06b422604c816ba3a527f4b7fd4ce522a5c92c22",
+    "bytes": 28578,
+    "sourceCommit": "e2280cda63066c93433375205984b3aa2d85e6a0",
+    "semantics": "Exact 39-version follow-up binding JSON; not the initial f2ac publication JSON and not current acceptance."
+  },
+  "limits": [
+    "Root captured and viewed six final PNGs; author copied bytes and checked bindings without Ego.",
+    "Early undecoded-lazy desktop image remains private and is not a successful final capture.",
+    "Prior eleven dialog/original-size/Escape operations and wheel belong to prior HTML; prior eight images are not current screenshots.",
+    "No experiment HTML execution, external-link navigation, OS clipboard, AT, physical touch, cross-browser, full keyboard focus-trap or human acceptance claim."
+  ]
+}

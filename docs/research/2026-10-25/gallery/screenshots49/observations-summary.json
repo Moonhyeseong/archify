@@ -1,0 +1,545 @@
+{
+  "kind": "derived browser observations summary; not original raw JSON or delivery receipt",
+  "html": {
+    "path": "index.html",
+    "sha256": "5d20fafcb518d59472a3466333bcbd9fb9940ac4229c364417301b9e4086c319",
+    "bytes": 16402027
+  },
+  "rawSources": [
+    {
+      "path": "desktop-observations.json",
+      "sha256": "a9592fe4cad591cf0b54b7a0e3dff7f96451c3e717cc76cae006d89b76df16c4",
+      "bytes": 10686
+    },
+    {
+      "path": "mobile-observations.json",
+      "sha256": "7351676c0384b030627823d1c9d07d94e52986b0b38731039bc3770217cbd0f7",
+      "bytes": 1250
+    }
+  ],
+  "desktop": {
+    "htmlSHA": "5d20fafcb518d59472a3466333bcbd9fb9940ac4229c364417301b9e4086c319",
+    "htmlBytes": 16402027,
+    "initial": {
+      "theme": "light",
+      "viewport": [
+        1440,
+        1100
+      ],
+      "pageWidth": 1440,
+      "result": "显示 49 / 49 项",
+      "query": "",
+      "visible": [
+        "finder-highlights",
+        "relation-reference",
+        "delta-values",
+        "diagnostic-locations",
+        "finder-context",
+        "waterfall-status",
+        "workflow-self-loop",
+        "diff-line-numbers",
+        "keyboard-traversal",
+        "preview-dashed-ink",
+        "clipboard-outcome",
+        "source-keyboard",
+        "spatial-focus",
+        "task-review-map",
+        "dependency-map",
+        "trace-waterfall",
+        "markdown-outline",
+        "dbml-erd",
+        "change-coupling",
+        "payload-delta",
+        "decision-thread",
+        "migration-plan",
+        "state-contract",
+        "ci-conditions",
+        "plan-actions",
+        "recipe-stages",
+        "test-context-map",
+        "test-failure-map",
+        "source-question-tour",
+        "delivery-witness",
+        "retained-size",
+        "lasso-witness",
+        "plan-row-counts",
+        "copy-identity",
+        "cli-reading-tour",
+        "byte-views",
+        "notebook-occurrences",
+        "config-origins",
+        "benchmark-reading",
+        "task-occurrences",
+        "edge-extras",
+        "line-notes",
+        "static-uses",
+        "hintful-stages",
+        "maybe-initialized",
+        "load-filter",
+        "witness-groups",
+        "patch-outcome",
+        "segment-origins"
+      ],
+      "hub": "https://github.com/tt-a1i/archify/blob/735250ac02664b1d6cd4c5f6f63d63d1b38bf96e/docs/research/2026-10-25/README.md"
+    },
+    "filters": [
+      {
+        "filter": "all",
+        "theme": "light",
+        "viewport": [
+          1440,
+          1100
+        ],
+        "pageWidth": 1440,
+        "result": "显示 49 / 49 项",
+        "query": "",
+        "visible": [
+          "finder-highlights",
+          "relation-reference",
+          "delta-values",
+          "diagnostic-locations",
+          "finder-context",
+          "waterfall-status",
+          "workflow-self-loop",
+          "diff-line-numbers",
+          "keyboard-traversal",
+          "preview-dashed-ink",
+          "clipboard-outcome",
+          "source-keyboard",
+          "spatial-focus",
+          "task-review-map",
+          "dependency-map",
+          "trace-waterfall",
+          "markdown-outline",
+          "dbml-erd",
+          "change-coupling",
+          "payload-delta",
+          "decision-thread",
+          "migration-plan",
+          "state-contract",
+          "ci-conditions",
+          "plan-actions",
+          "recipe-stages",
+          "test-context-map",
+          "test-failure-map",
+          "source-question-tour",
+          "delivery-witness",
+          "retained-size",
+          "lasso-witness",
+          "plan-row-counts",
+          "copy-identity",
+          "cli-reading-tour",
+          "byte-views",
+          "notebook-occurrences",
+          "config-origins",
+          "benchmark-reading",
+          "task-occurrences",
+          "edge-extras",
+          "line-notes",
+          "static-uses",
+          "hintful-stages",
+          "maybe-initialized",
+          "load-filter",
+          "witness-groups",
+          "patch-outcome",
+          "segment-origins"
+        ],
+        "hub": "https://github.com/tt-a1i/archify/blob/735250ac02664b1d6cd4c5f6f63d63d1b38bf96e/docs/research/2026-10-25/README.md"
+      },
+      {
+        "filter": "product",
+        "theme": "light",
+        "viewport": [
+          1440,
+          1100
+        ],
+        "pageWidth": 1440,
+        "result": "显示 13 / 49 项",
+        "query": "",
+        "visible": [
+          "finder-highlights",
+          "relation-reference",
+          "delta-values",
+          "diagnostic-locations",
+          "finder-context",
+          "waterfall-status",
+          "workflow-self-loop",
+          "diff-line-numbers",
+          "keyboard-traversal",
+          "preview-dashed-ink",
+          "clipboard-outcome",
+          "source-keyboard",
+          "spatial-focus"
+        ],
+        "hub": "https://github.com/tt-a1i/archify/blob/735250ac02664b1d6cd4c5f6f63d63d1b38bf96e/docs/research/2026-10-25/README.md"
+      },
+      {
+        "filter": "offline",
+        "theme": "light",
+        "viewport": [
+          1440,
+          1100
+        ],
+        "pageWidth": 1440,
+        "result": "显示 15 / 49 项",
+        "query": "",
+        "visible": [
+          "task-review-map",
+          "dependency-map",
+          "trace-waterfall",
+          "markdown-outline",
+          "dbml-erd",
+          "change-coupling",
+          "payload-delta",
+          "decision-thread",
+          "migration-plan",
+          "state-contract",
+          "ci-conditions",
+          "plan-actions",
+          "recipe-stages",
+          "test-context-map",
+          "test-failure-map"
+        ],
+        "hub": "https://github.com/tt-a1i/archify/blob/735250ac02664b1d6cd4c5f6f63d63d1b38bf96e/docs/research/2026-10-25/README.md"
+      },
+      {
+        "filter": "content",
+        "theme": "light",
+        "viewport": [
+          1440,
+          1100
+        ],
+        "pageWidth": 1440,
+        "result": "显示 21 / 49 项",
+        "query": "",
+        "visible": [
+          "source-question-tour",
+          "delivery-witness",
+          "retained-size",
+          "lasso-witness",
+          "plan-row-counts",
+          "copy-identity",
+          "cli-reading-tour",
+          "byte-views",
+          "notebook-occurrences",
+          "config-origins",
+          "benchmark-reading",
+          "task-occurrences",
+          "edge-extras",
+          "line-notes",
+          "static-uses",
+          "hintful-stages",
+          "maybe-initialized",
+          "load-filter",
+          "witness-groups",
+          "patch-outcome",
+          "segment-origins"
+        ],
+        "hub": "https://github.com/tt-a1i/archify/blob/735250ac02664b1d6cd4c5f6f63d63d1b38bf96e/docs/research/2026-10-25/README.md"
+      }
+    ],
+    "cards": [
+      {
+        "id": "witness-groups",
+        "title": "Witness groups",
+        "value": "同一输出的平面来源清单与共同/替代见证组合并排，组数不是执行数",
+        "limits": "验证边界基线10b4；32文件/31public/28raw，16MIT完整原件与9verified来源；normal三阶段0诊断/browser未请求，6事实/root4图；无DB/SQL/上游执行，非概率或现实因果",
+        "imageSHA": "251c04db9be3e44b027149cc3ff0ac96f927d552e12db99c06e5e65a02e44f7f",
+        "links": [
+          {
+            "text": "固定提交说明 ↗",
+            "url": "https://github.com/tt-a1i/archify/tree/861ec02283bcd32c8315aa7b5f8b5ef9678dda27/experiments/witness-groups"
+          },
+          {
+            "text": "分支 ↗",
+            "url": "https://github.com/tt-a1i/archify/tree/codex/lab-witness-groups/experiments/witness-groups"
+          }
+        ]
+      },
+      {
+        "id": "patch-outcome",
+        "title": "Patch outcome",
+        "value": "官方两个true不证明结果等于最初目标B，A/B/I/E完整literal分列",
+        "limits": "验证边界基线10b4；19文件/18binding，完整Apache-2.0来源与固定literal位置；normal三阶段+1writing warning/browser未请求，10事实/root4图；无上游patch运行，不是任意补丁parser或等价证明",
+        "imageSHA": "9988924a2a11e79720a1a88251cda85aa1e4e054fb3467557ac06ca7d8aa713f",
+        "links": [
+          {
+            "text": "固定提交说明 ↗",
+            "url": "https://github.com/tt-a1i/archify/tree/b5f7d7b11482fb272fb88fbfdcb9e864407eabdf/experiments/patch-outcome"
+          },
+          {
+            "text": "分支 ↗",
+            "url": "https://github.com/tt-a1i/archify/tree/codex/lab-patch-outcome/experiments/patch-outcome"
+          }
+        ]
+      },
+      {
+        "id": "segment-origins",
+        "title": "Segment origins",
+        "value": "同一source-map查询因GLB/LUB选择不同段原点，不补逐字符偏移",
+        "limits": "验证边界基线10b4；19文件/18ledger、独立READY；normal三阶段0诊断/browser未请求、7事实/root4图；仅来源元数据，未mapper运行；手机首表432/332横滚0→100后右name可读左query裁掉，完整source JSON未横滚",
+        "imageSHA": "f3b791ea1a5b92dc44e9c8d37cec3c6e0caaefc265da117e073c60ef14107b0b",
+        "links": [
+          {
+            "text": "固定提交说明 ↗",
+            "url": "https://github.com/tt-a1i/archify/tree/6d2b0312ebf011e3aa51835f52f9427125f0f2a3/experiments/segment-origins"
+          },
+          {
+            "text": "分支 ↗",
+            "url": "https://github.com/tt-a1i/archify/tree/codex/lab-segment-origins/experiments/segment-origins"
+          }
+        ]
+      }
+    ],
+    "dialogs": [
+      {
+        "id": "witness-groups",
+        "fit": {
+          "title": "Witness groups",
+          "sha": "251c04db9be3e44b027149cc3ff0ac96f927d552e12db99c06e5e65a02e44f7f",
+          "natural": [
+            1440,
+            1855
+          ],
+          "shown": [
+            1357.9921875,
+            1749.3671875
+          ],
+          "source": "https://github.com/tt-a1i/archify/blob/861ec02283bcd32c8315aa7b5f8b5ef9678dda27/experiments/witness-groups/screenshots/desktop-light.png",
+          "viewport": [
+            1440,
+            1100
+          ]
+        },
+        "original": {
+          "mode": "true",
+          "shown": [
+            1440,
+            1855
+          ]
+        },
+        "close": {
+          "open": false,
+          "focus": "witness-groups",
+          "cleared": true
+        }
+      },
+      {
+        "id": "patch-outcome",
+        "fit": {
+          "title": "Patch outcome",
+          "sha": "9988924a2a11e79720a1a88251cda85aa1e4e054fb3467557ac06ca7d8aa713f",
+          "natural": [
+            1440,
+            1800
+          ],
+          "shown": [
+            1358,
+            1697.5
+          ],
+          "source": "https://github.com/tt-a1i/archify/blob/b5f7d7b11482fb272fb88fbfdcb9e864407eabdf/experiments/patch-outcome/screenshots/desktop-light.png",
+          "viewport": [
+            1440,
+            1100
+          ]
+        },
+        "original": {
+          "mode": "true",
+          "shown": [
+            1440,
+            1800
+          ]
+        },
+        "close": {
+          "open": false,
+          "focus": "patch-outcome",
+          "cleared": true
+        }
+      },
+      {
+        "id": "segment-origins",
+        "fit": {
+          "title": "Segment origins",
+          "sha": "f3b791ea1a5b92dc44e9c8d37cec3c6e0caaefc265da117e073c60ef14107b0b",
+          "natural": [
+            1440,
+            1903
+          ],
+          "shown": [
+            1357.9921875,
+            1794.6328125
+          ],
+          "source": "https://github.com/tt-a1i/archify/blob/6d2b0312ebf011e3aa51835f52f9427125f0f2a3/experiments/segment-origins/screenshots/desktop-light.png",
+          "viewport": [
+            1440,
+            1100
+          ]
+        },
+        "original": {
+          "mode": "true",
+          "shown": [
+            1440,
+            1903
+          ]
+        },
+        "close": {
+          "open": false,
+          "focus": "segment-origins",
+          "cleared": false
+        }
+      }
+    ]
+  },
+  "mobile": {
+    "htmlSHA": "5d20fafcb518d59472a3466333bcbd9fb9940ac4229c364417301b9e4086c319",
+    "htmlBytes": 16402027,
+    "card": {
+      "theme": "light",
+      "viewport": [
+        390,
+        844
+      ],
+      "pageWidth": 390,
+      "result": "显示 1 / 49 项",
+      "visible": [
+        "segment-origins"
+      ],
+      "imageLoaded": 1440
+    },
+    "dialog": {
+      "theme": "dark",
+      "viewport": [
+        390,
+        844
+      ],
+      "pageWidth": 390,
+      "open": true,
+      "natural": [
+        1440,
+        1903
+      ],
+      "shown": [
+        351.9921875,
+        465.171875
+      ],
+      "source": "https://github.com/tt-a1i/archify/blob/6d2b0312ebf011e3aa51835f52f9427125f0f2a3/experiments/segment-origins/screenshots/desktop-light.png",
+      "label": "SHA-256 f3b791ea1a5b92dc44e9c8d37cec3c6e0caaefc265da117e073c60ef14107b0b",
+      "sha": "f3b791ea1a5b92dc44e9c8d37cec3c6e0caaefc265da117e073c60ef14107b0b"
+    },
+    "close": {
+      "open": false,
+      "focus": "segment-origins",
+      "cleared": true
+    },
+    "empty": {
+      "theme": "dark",
+      "viewport": [
+        390,
+        844
+      ],
+      "pageWidth": 390,
+      "result": "显示 0 / 49 项",
+      "emptyVisible": true
+    },
+    "reset": {
+      "result": "显示 49 / 49 项",
+      "query": "",
+      "focus": "query",
+      "emptyVisible": false
+    }
+  },
+  "closeTiming": {
+    "desktopSegmentImmediate": {
+      "open": false,
+      "focus": "segment-origins",
+      "cleared": false
+    },
+    "mobileSegmentAfterWaitingForCloseClearAndFocus": {
+      "open": false,
+      "focus": "segment-origins",
+      "cleared": true
+    },
+    "semantics": "Different observation timing; immediate desktop cleared=false is retained. Do not claim all three desktop closes cleared the image source."
+  },
+  "measurementFailure": {
+    "record": {
+      "path": "first-mobile-attempt-failure.txt",
+      "sha256": "e5ba90b343533abc2b530bb500bc587c2bc385662307bfbe2f02153069640984",
+      "bytes": 418
+    },
+    "firstAttemptImage": {
+      "path": "first-attempt-mobile-segment-card-light.png",
+      "sha256": "363260826a3d4d8244f1739f90a8534840ac2171acd069049a9562e0e111de07",
+      "bytes": 180766
+    },
+    "semantics": "First mobile measurement failed at fetch(data URL). No final observation or dialog/empty capture was saved by that attempt. Second attempt directly decoded existing embedded data with atob and checked SHA. Product and frozen HTML unchanged. First-attempt image is not selected as final evidence, even though its bytes equal the later final card PNG."
+  },
+  "images": [
+    {
+      "path": "screenshots49/desktop-overview-light.png",
+      "sha256": "172c3ccf1b480300dc74327a4bc57e2d4a514e01ff69af4ab5705b4611c6bdb4",
+      "bytes": 295303,
+      "width": 1440,
+      "height": 1100,
+      "boundHtmlSha256": "5d20fafcb518d59472a3466333bcbd9fb9940ac4229c364417301b9e4086c319",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged; dimensions read from IHDR, not inferred from viewport."
+    },
+    {
+      "path": "screenshots49/desktop-witness-dialog.png",
+      "sha256": "82c432a1eb0b21df33829c02ffc0cd87c06a7a79cbc169c23316cb578598a964",
+      "bytes": 196131,
+      "width": 1440,
+      "height": 1100,
+      "boundHtmlSha256": "5d20fafcb518d59472a3466333bcbd9fb9940ac4229c364417301b9e4086c319",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged; dimensions read from IHDR, not inferred from viewport."
+    },
+    {
+      "path": "screenshots49/desktop-patch-dialog.png",
+      "sha256": "d980de888ab5f6b1154bd493668fa8570798fc63a9aeb90d66d0ec4ef7842236",
+      "bytes": 188347,
+      "width": 1440,
+      "height": 1100,
+      "boundHtmlSha256": "5d20fafcb518d59472a3466333bcbd9fb9940ac4229c364417301b9e4086c319",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged; dimensions read from IHDR, not inferred from viewport."
+    },
+    {
+      "path": "screenshots49/mobile-segment-card-light.png",
+      "sha256": "363260826a3d4d8244f1739f90a8534840ac2171acd069049a9562e0e111de07",
+      "bytes": 180766,
+      "width": 390,
+      "height": 1682,
+      "boundHtmlSha256": "5d20fafcb518d59472a3466333bcbd9fb9940ac4229c364417301b9e4086c319",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged; dimensions read from IHDR, not inferred from viewport."
+    },
+    {
+      "path": "screenshots49/mobile-segment-dialog-dark.png",
+      "sha256": "ad1e00bd9ddbe5a43e9e2d747c12694d169dbbd2a0a3dd7dbc77d420b5fff4ae",
+      "bytes": 88083,
+      "width": 390,
+      "height": 844,
+      "boundHtmlSha256": "5d20fafcb518d59472a3466333bcbd9fb9940ac4229c364417301b9e4086c319",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged; dimensions read from IHDR, not inferred from viewport."
+    },
+    {
+      "path": "screenshots49/mobile-empty-dark.png",
+      "sha256": "40334c5892122a568202b79ae7d275df04d1ecc66cb75acca3ecf27c18865dd7",
+      "bytes": 118981,
+      "width": 390,
+      "height": 1185,
+      "boundHtmlSha256": "5d20fafcb518d59472a3466333bcbd9fb9940ac4229c364417301b9e4086c319",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged; dimensions read from IHDR, not inferred from viewport."
+    }
+  ],
+  "limits": [
+    "Root captured and viewed six final PNGs; author only copied original bytes and checked static bindings.",
+    "Current 49-version evidence covers four filters and three new cards; it does not relabel old 46 interactions as new checks.",
+    "Full-page PNG height differs from viewport: mobile card390x1682 and mobile empty390x1185, while CSS viewport390x844.",
+    "No external-link navigation, AT, physical touch, full Tab traversal, upstream execution, OS clipboard or all49-item retest claim."
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "https://github.com/tt-a1i/archify",
-  "hubCommit": "60b748c83470be4c30d8869991e7f2ac82905462",
+  "hubCommit": "735250ac02664b1d6cd4c5f6f63d63d1b38bf96e",
   "hubPath": "docs/research/2026-10-25/README.md",
   "visualSourcePaths": [
     "website/src/styles/site.css",
@@ -482,6 +482,36 @@
       "inputKind": "固定 Stevedore source / expected",
       "imagePath": "experiments/load-filter/screenshots/desktop-light.png",
       "imageCaption": "enabled 名单只见 t2 不证明 t1 从未 load；来源为 URL metadata，未执行上游插件或发现安装环境。"
+    },
+    {
+      "id": "witness-groups",
+      "commit": "861ec02283bcd32c8315aa7b5f8b5ef9678dda27",
+      "branch": "codex/lab-witness-groups",
+      "directory": "experiments/witness-groups",
+      "group": "content",
+      "inputKind": "固定 ProvSQL expected / 分组见证",
+      "imagePath": "experiments/witness-groups/screenshots/desktop-light.png",
+      "imageCaption": "Paris的三组替代见证与平面which名单分开；组内共同、组间替代，未运行数据库或推断现实因果。"
+    },
+    {
+      "id": "patch-outcome",
+      "commit": "b5f7d7b11482fb272fb88fbfdcb9e864407eabdf",
+      "branch": "codex/lab-patch-outcome",
+      "directory": "experiments/patch-outcome",
+      "group": "content",
+      "inputKind": "固定 diff-match-patch 测试 expected",
+      "imagePath": "experiments/patch-outcome/screenshots/desktop-light.png",
+      "imageCaption": "两个true表示补丁片段应用成功，不保证最终文本等于B；上游构造测试，未执行patch应用。"
+    },
+    {
+      "id": "segment-origins",
+      "commit": "6d2b0312ebf011e3aa51835f52f9427125f0f2a3",
+      "branch": "codex/lab-segment-origins",
+      "directory": "experiments/segment-origins",
+      "group": "content",
+      "inputKind": "固定 sourcemap 测试 / 作者投影",
+      "imagePath": "experiments/segment-origins/screenshots/desktop-light.png",
+      "imageCaption": "同一2:13在GLB/LUB下指向不同原点；选段为静态源码解释，URL元数据不是verified excerpt，未运行mapper。"
     }
   ],
   "deferred": {
