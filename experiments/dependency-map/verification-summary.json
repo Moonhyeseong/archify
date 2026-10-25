@@ -1,0 +1,144 @@
+{
+  "kind": "portable-excerpt-not-original-receipt",
+  "baseCommit": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "date": "2026-10-25",
+  "runtime": {
+    "node": "22.23.3",
+    "platform": "macOS"
+  },
+  "tests": {
+    "command": "node --test experiments/dependency-map/convert.test.mjs",
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0
+  },
+  "sourceSha256": {
+    "convert.mjs": "5dabe40017355da01dc119b9863aab3eebc9d36c67d0daaa8e05704fd9589f87",
+    "convert.test.mjs": "6cb034fa4c27e32d1ad34f9da960ea2b215690e0331fd15afc20e0a71b5deccf"
+  },
+  "artifacts": [
+    {
+      "name": "official",
+      "specification": {
+        "path": "artifacts/official/map.architecture.json",
+        "sha256": "8b2f1b5cded6306eacf9c46905f823445a84d6f4cdb9f6c8c15c6df5a98f7ddb"
+      },
+      "html": {
+        "path": "artifacts/official/map.html",
+        "sha256": "f843685548e9c6109bc3bd533e082f1d5ba789af2b297867087fb048a3e93499"
+      },
+      "inputSha256": "39d507f8ede8dfd12a6b0e0bdea85a61ec5708dde56c892977fb569e0dc490b0",
+      "receiptSha256": "2ec6c9f2bb71c6be5d224019a6c55c6036d77c68a0f61a882e27ccb834f81f92",
+      "command": "node archify/bin/archify.mjs finalize architecture experiments/dependency-map/artifacts/official/map.architecture.json experiments/dependency-map/artifacts/official/map.html --quality showcase --json --out-dir <outside-checkout-evidence>",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "diagnostics": [],
+      "visualReview": "not-requested",
+      "visualReviewRecommendation": null
+    },
+    {
+      "name": "synthetic",
+      "specification": {
+        "path": "artifacts/synthetic/map.architecture.json",
+        "sha256": "827442638df7cfb0ee547e8673fba0e31ef6052e67beb76b4fad37bc7047c32b"
+      },
+      "html": {
+        "path": "artifacts/synthetic/map.html",
+        "sha256": "bd7c226a1279c489247b2ab87b82e61fb225674bd25a4ccb2c4ca1cc63517900"
+      },
+      "inputSha256": "87306b01f13ef04e5c27fce22959a1ba420a6d7846fb60fbc8706c2ef27ac125",
+      "receiptSha256": "47db73ae17ee71968462865dcb487125a0f2bb67192535af49458b0ce106e1d0",
+      "command": "node archify/bin/archify.mjs finalize architecture experiments/dependency-map/artifacts/synthetic/map.architecture.json experiments/dependency-map/artifacts/synthetic/map.html --quality showcase --json --out-dir <outside-checkout-evidence>",
+      "gates": {
+        "validate": "pass",
+        "deliver": "pass",
+        "check": "pass",
+        "browser-check": "pass"
+      },
+      "diagnostics": [],
+      "visualReview": "not-requested",
+      "visualReviewRecommendation": {
+        "action": "inspect-route-readability",
+        "signals": {
+          "routesOverSuggestedBends": 3
+        },
+        "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+        "affectedRoutes": {
+          "crossings": [],
+          "detours": [
+            {
+              "relationship": {
+                "id": "e-0",
+                "from": "m-8f38df866477412506f7",
+                "to": "m-a32314176bdaea771f67",
+                "label": "imports \u00b7 cycle",
+                "collectionIndex": 0,
+                "artifactIndex": 1
+              },
+              "bends": 4,
+              "stretch": 1
+            },
+            {
+              "relationship": {
+                "id": "e-2",
+                "from": "m-8f38df866477412506f7",
+                "to": "m-8a6817f228fa1a8f86e6",
+                "label": "imports \u00b7 unresolved",
+                "collectionIndex": 1,
+                "artifactIndex": 2
+              },
+              "bends": 4,
+              "stretch": 1.125,
+              "directCorridorBlockers": [
+                {
+                  "id": "m-df6b52afbb9fbdc6597e",
+                  "label": "node:fs",
+                  "box": [
+                    390,
+                    80,
+                    240,
+                    96
+                  ]
+                }
+              ]
+            },
+            {
+              "relationship": {
+                "id": "e-4",
+                "from": "m-a32314176bdaea771f67",
+                "to": "m-8f38df866477412506f7",
+                "label": "imports \u00b7 cycle",
+                "collectionIndex": 3,
+                "artifactIndex": 4
+              },
+              "bends": 3,
+              "stretch": 1.06
+            }
+          ],
+          "truncated": false
+        },
+        "hints": [
+          "m-8f38df866477412506f7 \u2192 m-a32314176bdaea771f67 needs 4 bends: move node m-8f38df866477412506f7 or m-a32314176bdaea771f67 so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+          "m-a32314176bdaea771f67 \u2192 m-8f38df866477412506f7 needs 3 bends: move node m-a32314176bdaea771f67 or m-8f38df866477412506f7 so they share a row or column with matching centers, or sit diagonally with a clear corner."
+        ],
+        "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+      }
+    }
+  ],
+  "rawEvidencePolicy": "Original local finalize, browser-check and delivery receipts are retained outside the checkout; this file only extracts portable identity and outcome fields.",
+  "visualReview": "not-requested; coordinator will capture and inspect",
+  "publicRender": {
+    "command": "node archify/bin/archify.mjs render architecture experiments/dependency-map/artifacts/official/map.architecture.json <temporary-html> --quality showcase",
+    "exitCode": 0
+  },
+  "untested": [
+    "Windows",
+    "production repository scan",
+    "latest dependency-cruiser execution",
+    "independent user benefit"
+  ]
+}

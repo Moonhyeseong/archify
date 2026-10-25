@@ -1,0 +1,278 @@
+{
+  "format": "archify-experiment/dependency-map@1",
+  "semantics": "Reported static imports only; absence is not proof of no dependency.",
+  "inputCoverage": "Only the supplied report is known. Scan completeness and producer version are not inferred.",
+  "selection": {
+    "entry": "src/a.js",
+    "depth": 2,
+    "maxNodes": 7,
+    "traversal": "outgoing reported dependencies, then depth/lexical order"
+  },
+  "counts": {
+    "moduleRecords": 3,
+    "allTargetsAndModules": 5,
+    "shownNodes": 5,
+    "omittedNodes": 0,
+    "dependencyRecords": 6,
+    "drawnConnections": 5,
+    "unresolvedRecords": 1,
+    "externalRecords": 1,
+    "notFollowedRecords": 2,
+    "selfDependencyRecords": 1,
+    "reportedCircularRecords": 3,
+    "omittedRecords": 0,
+    "parallelRecords": 0
+  },
+  "nodes": [
+    {
+      "source": "missing-adapter",
+      "id": "m-8a6817f228fa1a8f86e6",
+      "category": "unresolved",
+      "selected": true,
+      "disposition": "shown",
+      "moduleRecordPresent": false
+    },
+    {
+      "source": "node:fs",
+      "id": "m-df6b52afbb9fbdc6597e",
+      "category": "external",
+      "selected": true,
+      "disposition": "shown",
+      "moduleRecordPresent": false
+    },
+    {
+      "source": "src/a.js",
+      "id": "m-8f38df866477412506f7",
+      "category": "internal",
+      "selected": true,
+      "disposition": "shown",
+      "moduleRecordPresent": true
+    },
+    {
+      "source": "src/b.js",
+      "id": "m-a32314176bdaea771f67",
+      "category": "internal",
+      "selected": true,
+      "disposition": "shown",
+      "moduleRecordPresent": true
+    },
+    {
+      "source": "src/types.ts",
+      "id": "m-c54113cf61ec99691748",
+      "category": "internal",
+      "selected": true,
+      "disposition": "shown",
+      "moduleRecordPresent": true
+    }
+  ],
+  "edges": [
+    {
+      "index": 0,
+      "from": "src/a.js",
+      "to": "src/b.js",
+      "category": "internal",
+      "raw": {
+        "module": "src/b.js",
+        "resolved": "src/b.js",
+        "dependencyTypes": [
+          "local"
+        ],
+        "coreModule": false,
+        "followable": true,
+        "couldNotResolve": false,
+        "circular": true
+      },
+      "id": "e-0",
+      "disposition": "drawn",
+      "connectionId": "e-0"
+    },
+    {
+      "index": 1,
+      "from": "src/a.js",
+      "to": "src/a.js",
+      "category": "internal",
+      "raw": {
+        "module": "src/a.js",
+        "resolved": "src/a.js",
+        "dependencyTypes": [
+          "local"
+        ],
+        "coreModule": false,
+        "followable": true,
+        "couldNotResolve": false,
+        "circular": true
+      },
+      "id": "e-1",
+      "disposition": "self-dependency-listed"
+    },
+    {
+      "index": 2,
+      "from": "src/a.js",
+      "to": "missing-adapter",
+      "category": "unresolved",
+      "raw": {
+        "module": "missing-adapter",
+        "resolved": "missing-adapter",
+        "dependencyTypes": [
+          "local"
+        ],
+        "coreModule": false,
+        "followable": false,
+        "couldNotResolve": true
+      },
+      "id": "e-2",
+      "disposition": "drawn",
+      "connectionId": "e-2"
+    },
+    {
+      "index": 3,
+      "from": "src/a.js",
+      "to": "node:fs",
+      "category": "external",
+      "raw": {
+        "module": "node:fs",
+        "resolved": "node:fs",
+        "dependencyTypes": [
+          "core"
+        ],
+        "coreModule": true,
+        "followable": false,
+        "couldNotResolve": false
+      },
+      "id": "e-3",
+      "disposition": "drawn",
+      "connectionId": "e-3"
+    },
+    {
+      "index": 4,
+      "from": "src/b.js",
+      "to": "src/a.js",
+      "category": "internal",
+      "raw": {
+        "module": "src/a.js",
+        "resolved": "src/a.js",
+        "dependencyTypes": [
+          "local"
+        ],
+        "coreModule": false,
+        "followable": true,
+        "couldNotResolve": false,
+        "circular": true
+      },
+      "id": "e-4",
+      "disposition": "drawn",
+      "connectionId": "e-4"
+    },
+    {
+      "index": 5,
+      "from": "src/b.js",
+      "to": "src/types.ts",
+      "category": "internal",
+      "raw": {
+        "module": "src/types.ts",
+        "resolved": "src/types.ts",
+        "dependencyTypes": [
+          "local"
+        ],
+        "coreModule": false,
+        "followable": true,
+        "couldNotResolve": false,
+        "typeOnly": true
+      },
+      "id": "e-5",
+      "disposition": "drawn",
+      "connectionId": "e-5"
+    }
+  ],
+  "originalReport": {
+    "modules": [
+      {
+        "source": "src/a.js",
+        "dependencies": [
+          {
+            "module": "src/b.js",
+            "resolved": "src/b.js",
+            "dependencyTypes": [
+              "local"
+            ],
+            "coreModule": false,
+            "followable": true,
+            "couldNotResolve": false,
+            "circular": true
+          },
+          {
+            "module": "src/a.js",
+            "resolved": "src/a.js",
+            "dependencyTypes": [
+              "local"
+            ],
+            "coreModule": false,
+            "followable": true,
+            "couldNotResolve": false,
+            "circular": true
+          },
+          {
+            "module": "missing-adapter",
+            "resolved": "missing-adapter",
+            "dependencyTypes": [
+              "local"
+            ],
+            "coreModule": false,
+            "followable": false,
+            "couldNotResolve": true
+          },
+          {
+            "module": "node:fs",
+            "resolved": "node:fs",
+            "dependencyTypes": [
+              "core"
+            ],
+            "coreModule": true,
+            "followable": false,
+            "couldNotResolve": false
+          }
+        ],
+        "valid": true
+      },
+      {
+        "source": "src/b.js",
+        "dependencies": [
+          {
+            "module": "src/a.js",
+            "resolved": "src/a.js",
+            "dependencyTypes": [
+              "local"
+            ],
+            "coreModule": false,
+            "followable": true,
+            "couldNotResolve": false,
+            "circular": true
+          },
+          {
+            "module": "src/types.ts",
+            "resolved": "src/types.ts",
+            "dependencyTypes": [
+              "local"
+            ],
+            "coreModule": false,
+            "followable": true,
+            "couldNotResolve": false,
+            "typeOnly": true
+          }
+        ],
+        "valid": true
+      },
+      {
+        "source": "src/types.ts",
+        "dependencies": [],
+        "valid": true
+      }
+    ],
+    "summary": {
+      "totalCruised": 3,
+      "note": "Original synthetic fixture authored for this experiment; not a scan result."
+    }
+  },
+  "inputSha256": "87306b01f13ef04e5c27fce22959a1ba420a6d7846fb60fbc8706c2ef27ac125",
+  "producerIdentity": "not supplied; no tool version or analyzed commit inferred"
+}

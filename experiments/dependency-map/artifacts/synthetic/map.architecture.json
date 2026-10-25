@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Synthetic imports: cycles and unknowns",
+    "subtitle": "a.js · 5/5 nodes · 0 edge records outside view",
+    "output": "map.html",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "layout": {
+    "mode": "grid",
+    "cols": 3,
+    "cellW": 240,
+    "cellH": 96,
+    "gapX": 110,
+    "gapY": 100
+  },
+  "components": [
+    {
+      "id": "m-8a6817f228fa1a8f86e6",
+      "type": "external",
+      "icon": "none",
+      "label": "missing-adapter",
+      "sublabel": "unresolved",
+      "tag": "node 1",
+      "size": [
+        240,
+        96
+      ],
+      "row": 0,
+      "col": 0
+    },
+    {
+      "id": "m-df6b52afbb9fbdc6597e",
+      "type": "external",
+      "icon": "none",
+      "label": "node:fs",
+      "sublabel": "external",
+      "tag": "node 2",
+      "size": [
+        240,
+        96
+      ],
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": "m-8f38df866477412506f7",
+      "type": "backend",
+      "icon": "none",
+      "label": "a.js",
+      "sublabel": "internal",
+      "tag": "node 3",
+      "size": [
+        240,
+        96
+      ],
+      "row": 0,
+      "col": 2
+    },
+    {
+      "id": "m-a32314176bdaea771f67",
+      "type": "backend",
+      "icon": "none",
+      "label": "b.js",
+      "sublabel": "internal",
+      "tag": "node 4",
+      "size": [
+        240,
+        96
+      ],
+      "row": 1,
+      "col": 0
+    },
+    {
+      "id": "m-c54113cf61ec99691748",
+      "type": "backend",
+      "icon": "none",
+      "label": "types.ts",
+      "sublabel": "internal",
+      "tag": "node 5",
+      "size": [
+        240,
+        96
+      ],
+      "row": 1,
+      "col": 1
+    }
+  ],
+  "connections": [
+    {
+      "id": "e-0",
+      "from": "m-8f38df866477412506f7",
+      "to": "m-a32314176bdaea771f67",
+      "label": "imports · cycle",
+      "variant": "default"
+    },
+    {
+      "id": "e-2",
+      "from": "m-8f38df866477412506f7",
+      "to": "m-8a6817f228fa1a8f86e6",
+      "label": "imports · unresolved",
+      "variant": "dashed"
+    },
+    {
+      "id": "e-3",
+      "from": "m-8f38df866477412506f7",
+      "to": "m-df6b52afbb9fbdc6597e",
+      "label": "imports",
+      "variant": "default"
+    },
+    {
+      "id": "e-4",
+      "from": "m-a32314176bdaea771f67",
+      "to": "m-8f38df866477412506f7",
+      "label": "imports · cycle",
+      "variant": "default"
+    },
+    {
+      "id": "e-5",
+      "from": "m-a32314176bdaea771f67",
+      "to": "m-c54113cf61ec99691748",
+      "label": "imports · type only",
+      "variant": "dashed"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Read the arrows",
+      "items": [
+        "Importer → imported module; static report, not runtime calls or business architecture.",
+        "Type-only and unresolved edges stay labelled. Full paths and all flags: mapping.receipt.json."
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Coverage stays visible",
+      "items": [
+        "0 nodes / 0 edge records outside this selected view.",
+        "1 unresolved; 1 external; 2 not followed (whole input).",
+        "Selection: entry a.js, depth 2; max 7 nodes. Coverage of the original scan is unknown."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Listed instead of duplicate/self arrows",
+      "items": [
+        "e-1: a.js → a.js (self-dependency-listed); full record in receipt."
+      ]
+    }
+  ]
+}

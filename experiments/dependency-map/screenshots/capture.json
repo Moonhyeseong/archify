@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "captureDate": "2026-10-25",
+  "browser": "Ego Lite Chromium",
+  "viewport": {
+    "width": 1440,
+    "height": 1000,
+    "deviceScaleFactor": 1
+  },
+  "appearance": "light / Classic / Still for native Viewer; System light / Clean for Explainer",
+  "captures": [
+    {
+      "artifact": {
+        "path": "../artifacts/official/map.html",
+        "sha256": "f843685548e9c6109bc3bd533e082f1d5ba789af2b297867087fb048a3e93499"
+      },
+      "image": {
+        "path": "official.png",
+        "sha256": "a921abe2bd73b6d51976ff741bb4679861caed71a1bc10d02ac318e564514b42",
+        "width": 1440,
+        "height": 1000
+      },
+      "method": "page screenshot"
+    },
+    {
+      "artifact": {
+        "path": "../artifacts/synthetic/map.html",
+        "sha256": "bd7c226a1279c489247b2ab87b82e61fb225674bd25a4ccb2c4ca1cc63517900"
+      },
+      "image": {
+        "path": "synthetic.png",
+        "sha256": "3735c818f0b506423bb962bc2b75622155bf10f24ce0126e29b1ee883d02f74e",
+        "width": 1440,
+        "height": 1000
+      },
+      "method": "page screenshot"
+    }
+  ],
+  "review": {
+    "by": "Codex coordinating agent",
+    "observations": [
+      "Official sample: seven nodes and six outgoing imports are legible; excluded-record counts remain visible.",
+      "Synthetic: both cycle directions and unresolved/type-only labels remain distinguishable.",
+      "Three detour suggestions remain for the synthetic graph; this is bounded-example inspection, not layout generalization."
+    ],
+    "humanAcceptance": "pending"
+  }
+}

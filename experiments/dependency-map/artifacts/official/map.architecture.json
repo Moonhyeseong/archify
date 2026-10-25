@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "One importer, six reported dependencies",
+    "subtitle": "root_one.js · 7/15 nodes · 13 edge records outside view",
+    "output": "map.html",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "layout": {
+    "mode": "grid",
+    "cols": 3,
+    "cellW": 240,
+    "cellH": 96,
+    "gapX": 110,
+    "gapY": 100
+  },
+  "components": [
+    {
+      "id": "m-dce7cce055566bed799f",
+      "type": "external",
+      "icon": "none",
+      "label": "fs",
+      "sublabel": "external",
+      "tag": "node 1",
+      "size": [
+        240,
+        96
+      ],
+      "row": 0,
+      "col": 0
+    },
+    {
+      "id": "m-e5df10940c9f72af3016",
+      "type": "external",
+      "icon": "none",
+      "label": "somemodule.js",
+      "sublabel": "external",
+      "tag": "node 6",
+      "size": [
+        240,
+        96
+      ],
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": "m-85e245d07f4ba009bdcb",
+      "type": "backend",
+      "icon": "none",
+      "label": "one_only_one.js",
+      "sublabel": "internal",
+      "tag": "node 7",
+      "size": [
+        240,
+        96
+      ],
+      "row": 0,
+      "col": 2
+    },
+    {
+      "id": "m-5730b87b740f6a415399",
+      "type": "backend",
+      "icon": "none",
+      "label": "one_only_two.js",
+      "sublabel": "internal",
+      "tag": "node 8",
+      "size": [
+        240,
+        96
+      ],
+      "row": 1,
+      "col": 0
+    },
+    {
+      "id": "m-c5ad763b302e93ebc01c",
+      "type": "backend",
+      "icon": "none",
+      "label": "root_one.js",
+      "sublabel": "internal",
+      "tag": "node 9",
+      "size": [
+        240,
+        96
+      ],
+      "row": 1,
+      "col": 1
+    },
+    {
+      "id": "m-9c07d88099c06a328ab4",
+      "type": "backend",
+      "icon": "none",
+      "label": "shared.js",
+      "sublabel": "internal",
+      "tag": "node 11",
+      "size": [
+        240,
+        96
+      ],
+      "row": 1,
+      "col": 2
+    },
+    {
+      "id": "m-8b56d5309a2944f64646",
+      "type": "backend",
+      "icon": "none",
+      "label": "dir.js",
+      "sublabel": "internal",
+      "tag": "node 14",
+      "size": [
+        240,
+        96
+      ],
+      "row": 2,
+      "col": 0
+    }
+  ],
+  "connections": [
+    {
+      "id": "e-4",
+      "from": "m-c5ad763b302e93ebc01c",
+      "to": "m-85e245d07f4ba009bdcb",
+      "label": "imports",
+      "variant": "default"
+    },
+    {
+      "id": "e-5",
+      "from": "m-c5ad763b302e93ebc01c",
+      "to": "m-5730b87b740f6a415399",
+      "label": "imports",
+      "variant": "default"
+    },
+    {
+      "id": "e-6",
+      "from": "m-c5ad763b302e93ebc01c",
+      "to": "m-9c07d88099c06a328ab4",
+      "label": "imports",
+      "variant": "default"
+    },
+    {
+      "id": "e-7",
+      "from": "m-c5ad763b302e93ebc01c",
+      "to": "m-8b56d5309a2944f64646",
+      "label": "imports",
+      "variant": "default"
+    },
+    {
+      "id": "e-8",
+      "from": "m-c5ad763b302e93ebc01c",
+      "to": "m-dce7cce055566bed799f",
+      "label": "imports",
+      "variant": "default"
+    },
+    {
+      "id": "e-9",
+      "from": "m-c5ad763b302e93ebc01c",
+      "to": "m-e5df10940c9f72af3016",
+      "label": "imports",
+      "variant": "default"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Read the arrows",
+      "items": [
+        "Importer → imported module; static report, not runtime calls or business architecture.",
+        "Type-only and unresolved edges stay labelled. Full paths and all flags: mapping.receipt.json."
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Coverage stays visible",
+      "items": [
+        "8 nodes / 13 edge records outside this selected view.",
+        "0 unresolved; 9 external; 8 not followed (whole input).",
+        "Selection: entry root_one.js, depth 1; max 7 nodes. Coverage of the original scan is unknown."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "modules": [
+    {
+      "source": "src/a.js",
+      "dependencies": [
+        {
+          "module": "src/b.js",
+          "resolved": "src/b.js",
+          "dependencyTypes": [
+            "local"
+          ],
+          "coreModule": false,
+          "followable": true,
+          "couldNotResolve": false,
+          "circular": true
+        },
+        {
+          "module": "src/a.js",
+          "resolved": "src/a.js",
+          "dependencyTypes": [
+            "local"
+          ],
+          "coreModule": false,
+          "followable": true,
+          "couldNotResolve": false,
+          "circular": true
+        },
+        {
+          "module": "missing-adapter",
+          "resolved": "missing-adapter",
+          "dependencyTypes": [
+            "local"
+          ],
+          "coreModule": false,
+          "followable": false,
+          "couldNotResolve": true
+        },
+        {
+          "module": "node:fs",
+          "resolved": "node:fs",
+          "dependencyTypes": [
+            "core"
+          ],
+          "coreModule": true,
+          "followable": false,
+          "couldNotResolve": false
+        }
+      ],
+      "valid": true
+    },
+    {
+      "source": "src/b.js",
+      "dependencies": [
+        {
+          "module": "src/a.js",
+          "resolved": "src/a.js",
+          "dependencyTypes": [
+            "local"
+          ],
+          "coreModule": false,
+          "followable": true,
+          "couldNotResolve": false,
+          "circular": true
+        },
+        {
+          "module": "src/types.ts",
+          "resolved": "src/types.ts",
+          "dependencyTypes": [
+            "local"
+          ],
+          "coreModule": false,
+          "followable": true,
+          "couldNotResolve": false,
+          "typeOnly": true
+        }
+      ],
+      "valid": true
+    },
+    {
+      "source": "src/types.ts",
+      "dependencies": [],
+      "valid": true
+    }
+  ],
+  "summary": {
+    "totalCruised": 3,
+    "note": "Original synthetic fixture authored for this experiment; not a scan result."
+  }
+}
