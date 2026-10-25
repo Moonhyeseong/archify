@@ -27,23 +27,29 @@ python3 docs/research/2026-10-25/gallery/verify.py --node '<node-executable>'
 
 各实验自己的失败与未运行阶段保留在卡片及固定来源中。例如 Task review map 的 ZIP unresolved 和键盘遍历失败，不会因为有截图而变为通过。
 
-## 当前 34 版的静态绑定
+## 当前 35 版的静态绑定
 
-本次固定 hub 为 `f3e91a0f3d0461a06e09841fc581b6aeaaa08453`：34 项 / 34 张原始 PNG，实际分组为 11 / 15 / 8。新增 Byte views，使用完整 97B 官方生成 fixture 与固定字节观察解释 IHDR 的 25B 物理字段及 type 内重叠 bit 解释；没有运行 fq、CRC 重算或解压，也不是实际用户工作负载。
+本次固定 hub 为 `8353da8e412c3a87956a37eb675cf3e34eb29888`：35 项 / 35 张原始 PNG，实际分组为 12 / 15 / 8。新增 Source keyboard activation：同一真实 CLI tour 节点的 Enter/Space 执行已有鼠标开原图动作，AX 提供 button 语义；Tab 可达和焦点样式原本已存在，不将其称为本次新增收益。该实验的配对页没有宣称经过本轮 finalize 或完整 browser gate。
 
-State 主图更新为官方机器 fixture 的实际 getDAG 导出：构造机器但没有执行事件或回调，矩阵只覆盖观察到的 toggle 声明。Recipe 主图更新为官方 test 有效输入的真实 Just dump：a 在空主体 b 前、c 在后；未执行 recipe，自然完整示例仍因 assignments 拒绝。其公开 dump 是仅移除来源位置的派生副本，不冒充原始 export。两项历史 synthetic 证据仍由各分支保留；其余 31 张既有主图的 PNG bytes 与上一版逐 SHA/Git blob 相同。
+Diff line numbers 与 Preview dashed ink 主图更新为固定 dev10b4 上同输入对照，仍分别只改变行号 nowrap 与三项颜色映射。Diff 的完整 browser gate 未跑；Preview 的候选及精确解包四阶段通过。两分支四份旧 docs 的保留范围各见固定 README，不把历史页写成当前刷新结果。其余 32 张既有主图的 PNG bytes/Git blob 与 34 版相同；此前各输入来源与未运行阶段边界保持。
 
-当前 `index.html` SHA-256：`71465bb0454f266a0368c3cebd442995930fdb2c909ecb78c2af9902666176f1`；manifest SHA-256：`ffb82caaff39d688cf7150699c5c3701833fd33061a58f9a17b80a5a40848dde`。34 项固定 HEAD、origin 跟踪、README 与 PNG Git blob/原字节全部核对；卡片、过滤按钮和分组数量一致，嵌图解码 SHA、固定链接与 JS 语法核验通过。HTML 为 10,354,355 bytes，34 张原 PNG 共 7,699,466 bytes，没有远程资源引用。
+当前 `index.html` SHA-256：`888daa609c7f877751a5cbe08970308a213e2910157a1dc9d5a6693b594fab88`；manifest SHA-256：`d9acc39e1b4f36c8c5ca1e71dbd733a2548a19a9766bb2e24edca322cb13c91d`。35 项固定 HEAD、origin 跟踪、README 与 PNG Git blob/原字节全部核对；卡片、过滤按钮和分组数量一致，嵌图解码 SHA、固定链接与 JS 语法核验通过。HTML 为 10,598,360 bytes，35 张原 PNG 共 7,880,446 bytes，没有远程资源引用。
 
-协调 Agent 已在当前 HTML/manifest hash 实际检查 1440×1100 与 390×844 浅/深色、34/11/15/8 筛选、State/Recipe/Byte 各一个关键词结果、三项完整图片的原始尺寸元数据与固定来源、三次 Esc 返回 opener、空结果与清空后查询框焦点。四个视口/主题状态的页面内容宽均等于视口宽，没有页面横向溢出。七张新截图均由协调 Agent 实际查看；[browser-evidence.json](browser-evidence.json) 记录 19 项观测与原始记录摘要、当前 HTML/manifest 和七张 PNG 的 SHA/bytes/尺寸绑定。独立 Agent 隔离重建三份静态派生产物逐字一致。
+协调 Agent 已对当前 35 版在 **1440×1100 浅色**实际检查 35/12/15/8 筛选、Source keyboard / Diff / Preview 三项关键词各一个结果、完整原图的尺寸/固定提交/SHA、三次 Esc 返回 opener，以及清空后 35 项和页面宽度 1440（无横向溢出）。四张新 PNG 均已实际查看；[browser-evidence.json](browser-evidence.json) 绑定当前 HTML/manifest、11 项原始观测、模板与四图 SHA/bytes/尺寸。独立 Agent 隔离重建三份静态派生产物逐字一致。
 
-本轮没有重测原始尺寸 End 滚动与精细 modal Tab 遍历；历史观测仍只属于各自固定版本。这里只检查图片浏览页，没有执行各实验 HTML；外链只核对未打开。这些是 Chromium 鼠标/键盘与 CSS 视口模拟证据，不代表实体触屏、读屏器或人类验收。实验各自的未运行阶段与拒绝边界不因浏览页检查而改变。
+模板与固定 34 版逐字相同，SHA-256 `bc7d0445a2c11578de09b89afb0a3f57e468d8923dbfcc1d98978b203b7f5ce9`。本轮没有重测 390px、深色、原始尺寸 End 滚动、精细 modal Tab 遍历或空结果；390px/深色 UI 观测明确复用下列历史 34 版，不称为当前 35 版实测。外链只核对未打开，未执行各实验 HTML；鼠标/键盘与 CSS 视口模拟不代表实体触屏、读屏器或人类验收。实验自己的失败、未运行阶段与拒绝边界仍保持。
 
-![34项桌面浏览页](screenshots/desktop-light.png)
+![35项桌面浅色浏览页](screenshots/desktop-light.png)
 
-![Byte views完整原图弹窗](screenshots/byte-views-dialog.png)
+![Source keyboard实验完整原图](screenshots/source-keyboard-dialog.png)
 
-![390px浏览页](screenshots/mobile-dark.png)
+[Diff 完整图](screenshots/diff-line-numbers-dialog.png) · [Preview 完整图](screenshots/preview-dashed-ink-dialog.png)
+
+## 历史 34 版浏览器检查
+
+固定 [34 版提交 `80059967`](https://github.com/tt-a1i/archify/tree/800599678493c33e69179adc7f66d5b17ab3aa63/docs/research/2026-10-25/gallery) 的 HTML SHA-256 为 `71465bb0454f266a0368c3cebd442995930fdb2c909ecb78c2af9902666176f1`，manifest 为 `ffb82caaff39d688cf7150699c5c3701833fd33061a58f9a17b80a5a40848dde`。当时协调 Agent 实际检查 1440×1100 与 390×844 浅/深色、34/11/15/8 筛选、State/Recipe/Byte 各一个关键词结果、三项完整图片的原始尺寸元数据与固定来源、三次 Esc 返回 opener、空结果与清空后查询框焦点。四个视口/主题状态无页面横向溢出；七张图实际查看，19 项观测及图片/原始记录绑定已独立核对。独立 Agent 隔离重建三份静态派生产物逐字一致。
+
+[该版浏览器摘要](https://github.com/tt-a1i/archify/blob/800599678493c33e69179adc7f66d5b17ab3aa63/docs/research/2026-10-25/gallery/browser-evidence.json) · [桌面图片](https://github.com/tt-a1i/archify/blob/800599678493c33e69179adc7f66d5b17ab3aa63/docs/research/2026-10-25/gallery/screenshots/desktop-light.png) · [Byte 完整图](https://github.com/tt-a1i/archify/blob/800599678493c33e69179adc7f66d5b17ab3aa63/docs/research/2026-10-25/gallery/screenshots/byte-views-dialog.png) · [390px 图片](https://github.com/tt-a1i/archify/blob/800599678493c33e69179adc7f66d5b17ab3aa63/docs/research/2026-10-25/gallery/screenshots/mobile-dark.png)。该轮未重测原始尺寸 End 滚动和精细 modal Tab 遍历，未验证实体触屏、读屏器或人类验收；外链未打开，各实验 HTML 未执行。
 
 ## 历史 33 版浏览器检查
 

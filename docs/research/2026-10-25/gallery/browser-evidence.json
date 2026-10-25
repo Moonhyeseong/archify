@@ -1,223 +1,108 @@
 {
-  "kind": "derived browser evidence for current 34-item gallery; raw observations outside checkout",
+  "kind": "derived browser evidence for current 35-item gallery; raw observations outside checkout",
   "html": {
     "path": "index.html",
-    "sha256": "71465bb0454f266a0368c3cebd442995930fdb2c909ecb78c2af9902666176f1",
-    "bytes": 10354355
+    "sha256": "888daa609c7f877751a5cbe08970308a213e2910157a1dc9d5a6693b594fab88",
+    "bytes": 10598360
   },
-  "manifestSha256": "ffb82caaff39d688cf7150699c5c3701833fd33061a58f9a17b80a5a40848dde",
+  "manifestSha256": "d9acc39e1b4f36c8c5ca1e71dbd733a2548a19a9766bb2e24edca322cb13c91d",
+  "template": {
+    "path": "template.html",
+    "sha256": "bc7d0445a2c11578de09b89afb0a3f57e468d8923dbfcc1d98978b203b7f5ce9",
+    "byteIdenticalToHistorical34": true,
+    "historicalCommit": "800599678493c33e69179adc7f66d5b17ab3aa63"
+  },
   "environment": "Ego Lite Chromium; mouse/keyboard with CSS viewport emulation; not physical touch, assistive technology or human acceptance",
-  "checks": [
-    {
-      "case": "all",
-      "count": "显示 34 / 34 项",
-      "visible": 34,
-      "titles": [
-        "Finder canvas matches",
-        "Relation reference",
-        "Delta values",
-        "Diagnostic locations",
-        "Finder result descriptions",
-        "Waterfall status text",
-        "Workflow self-loop",
-        "Diff line numbers",
-        "Keyboard traversal",
-        "Preview dashed ink",
-        "Clipboard outcome",
-        "Task review map",
-        "Dependency map",
-        "Trace waterfall",
-        "Markdown outline",
-        "DBML ERD",
-        "Change coupling",
-        "Payload delta",
-        "Decision thread",
-        "Migration plan",
-        "State contract",
-        "CI conditions",
-        "Plan actions",
-        "Recipe stages",
-        "Test context map",
-        "Test failure map",
-        "Source question tour",
-        "Delivery witness",
-        "Retained size",
-        "Lasso witness",
-        "Plan row counts",
-        "Copy identity",
-        "CLI reading tour",
-        "Byte views"
-      ]
-    },
-    {
-      "case": "product",
-      "count": "显示 11 / 34 项",
-      "visible": 11,
-      "titles": [
-        "Finder canvas matches",
-        "Relation reference",
-        "Delta values",
-        "Diagnostic locations",
-        "Finder result descriptions",
-        "Waterfall status text",
-        "Workflow self-loop",
-        "Diff line numbers",
-        "Keyboard traversal",
-        "Preview dashed ink",
-        "Clipboard outcome"
-      ]
-    },
-    {
-      "case": "offline",
-      "count": "显示 15 / 34 项",
-      "visible": 15,
-      "titles": [
-        "Task review map",
-        "Dependency map",
-        "Trace waterfall",
-        "Markdown outline",
-        "DBML ERD",
-        "Change coupling",
-        "Payload delta",
-        "Decision thread",
-        "Migration plan",
-        "State contract",
-        "CI conditions",
-        "Plan actions",
-        "Recipe stages",
-        "Test context map",
-        "Test failure map"
-      ]
-    },
-    {
-      "case": "content",
-      "count": "显示 8 / 34 项",
-      "visible": 8,
-      "titles": [
-        "Source question tour",
-        "Delivery witness",
-        "Retained size",
-        "Lasso witness",
-        "Plan row counts",
-        "Copy identity",
-        "CLI reading tour",
-        "Byte views"
-      ]
-    },
-    {
-      "case": "State contract",
-      "count": "显示 1 / 34 项",
-      "visible": 1,
-      "titles": [
-        "State contract"
-      ]
-    },
-    {
-      "case": "Recipe stages",
-      "count": "显示 1 / 34 项",
-      "visible": 1,
-      "titles": [
-        "Recipe stages"
-      ]
-    },
-    {
-      "case": "Byte views",
-      "count": "显示 1 / 34 项",
-      "visible": 1,
-      "titles": [
-        "Byte views"
-      ]
-    },
-    {
-      "case": "byte-views-image",
-      "title": "Byte views",
-      "description": "IHDR 的 25B 物理字段与 type 内四个 bit 解释；未运行 fq、CRC 或解压。 · 1440 × 1100 px · 原 PNG 未编辑",
+  "observations": {
+    "capturedAt": "2026-10-25T10:22:47.719Z",
+    "viewport": {
       "width": 1440,
-      "height": 1100,
-      "source": "https://github.com/tt-a1i/archify/blob/b844ecb2861c122d956dab971b376e2fcd2dc283/experiments/byte-views/screenshots/explainer-overview.png",
-      "sha": "SHA-256 a87a179d4327192c753ef697ae5d4aff83a33dc20e354436abbea260af65b42f"
+      "height": 1100
     },
-    {
-      "case": "byte-views-escape",
-      "open": false,
-      "focus": "查看 Byte views 完整原图"
-    },
-    {
-      "case": "state-contract-image",
-      "title": "State contract",
-      "description": "构造官方机器后 getDAG 实导出；两个 toggle 声明，未执行事件或回调。 · 1440 × 1100 px · 原 PNG 未编辑",
-      "width": 1440,
-      "height": 1100,
-      "source": "https://github.com/tt-a1i/archify/blob/f7269e096ac1891b434842cf7e16b9ffdd54cdf6/experiments/state-contract/measured/screenshots/explainer-overview.png",
-      "sha": "SHA-256 d0e4dd8ec07719979753ff856fa57ab727cdd107e0da4be251bdf5bd5fe1e8db"
-    },
-    {
-      "case": "state-contract-escape",
-      "open": false,
-      "focus": "查看 State contract 完整原图"
-    },
-    {
-      "case": "recipe-stages-image",
-      "title": "Recipe stages",
-      "description": "实际 Just dump：a 在空主体 b 前、c 在后；没有执行 recipe，自然完整示例仍拒绝。 · 1440 × 1100 px · 原 PNG 未编辑",
-      "width": 1440,
-      "height": 1100,
-      "source": "https://github.com/tt-a1i/archify/blob/062dee5db6e10c1877427effff0d02b34699fbe1/experiments/recipe-stages/measured/screenshots/explainer-overview.png",
-      "sha": "SHA-256 16b0197eedabc78f6fe65d0b1433b80cb462a32f81bfd8618553394699b0fa37"
-    },
-    {
-      "case": "recipe-stages-escape",
-      "open": false,
-      "focus": "查看 Recipe stages 完整原图"
-    },
-    {
-      "case": "empty",
-      "count": "显示 0 / 34 项",
-      "emptyVisible": true
-    },
-    {
-      "case": "reset",
-      "count": "显示 34 / 34 项",
-      "focus": "query"
-    },
-    {
-      "case": "desktop-dark",
-      "width": 1440,
-      "height": 1100,
-      "scrollWidth": 1440,
-      "theme": "dark",
-      "count": "显示 34 / 34 项"
-    },
-    {
-      "case": "mobile-dark",
-      "width": 390,
-      "height": 844,
-      "scrollWidth": 390,
-      "theme": "dark",
-      "count": "显示 34 / 34 项"
-    },
-    {
-      "case": "mobile-light",
-      "width": 390,
-      "height": 844,
-      "scrollWidth": 390,
-      "theme": "light",
-      "count": "显示 34 / 34 项"
-    },
-    {
-      "case": "desktop-light",
-      "width": 1440,
-      "height": 1100,
-      "scrollWidth": 1440,
-      "theme": "light",
-      "count": "显示 34 / 34 项"
-    }
-  ],
+    "records": [
+      {
+        "kind": "filter",
+        "filter": "all",
+        "count": 35,
+        "status": "显示 35 / 35 项"
+      },
+      {
+        "kind": "filter",
+        "filter": "product",
+        "count": 12,
+        "status": "显示 12 / 35 项"
+      },
+      {
+        "kind": "filter",
+        "filter": "offline",
+        "count": 15,
+        "status": "显示 15 / 35 项"
+      },
+      {
+        "kind": "filter",
+        "filter": "content",
+        "count": 8,
+        "status": "显示 8 / 35 项"
+      },
+      {
+        "kind": "dialog",
+        "title": "Source keyboard activation",
+        "description": "同一 CLI tour 节点用 Enter 打开已有原生图并聚焦 response；Tab 可达和焦点样式原本已存在。 · 1440 × 1100 px · 原 PNG 未编辑",
+        "source": "https://github.com/tt-a1i/archify/blob/d81830d34fdd698992b39913eb3fa3cd55d66a32/experiments/source-keyboard/screenshots/candidate-enter-viewer.png",
+        "hash": "SHA-256 7eefcfb975016eaf11c4d17581715a70c50c1846421cd2a2e20ac9c86fc99dcd",
+        "naturalWidth": 1440,
+        "naturalHeight": 1100,
+        "visibleCards": 1
+      },
+      {
+        "kind": "dialog-close",
+        "open": false,
+        "focusLabel": "查看 Source keyboard activation 完整原图"
+      },
+      {
+        "kind": "dialog",
+        "title": "Diff line numbers",
+        "description": "新 dev 同一真实 PR：三位行号保持单行，长代码仍可横滚；完整 browser gate 未跑。 · 1280 × 1000 px · 原 PNG 未编辑",
+        "source": "https://github.com/tt-a1i/archify/blob/28f9f95dc207a90e2b7198e793315643e67c22aa/experiments/diff-line-numbers/dev10b4/screenshots/candidate-1280-light.png",
+        "hash": "SHA-256 0debc5e3a5364c9e83850c098581b7dd18cacea7503166050a291f8f6ff56cec",
+        "naturalWidth": 1280,
+        "naturalHeight": 1000,
+        "visibleCards": 1
+      },
+      {
+        "kind": "dialog-close",
+        "open": false,
+        "focusLabel": "查看 Diff line numbers 完整原图"
+      },
+      {
+        "kind": "dialog",
+        "title": "Preview dashed ink",
+        "description": "新 dev 同一官方 plan：虚线文字、线与箭头同步使用阅读颜色；几何未改，旧 docs 仍属历史。 · 1440 × 1000 px · 原 PNG 未编辑",
+        "source": "https://github.com/tt-a1i/archify/blob/ca4baa1d739b1a2e2c8b863a517383147952620d/experiments/preview-dashed-ink/refresh-dev-10b4/screenshots/candidate-light.png",
+        "hash": "SHA-256 1b5210a712c6d1fdf36bdb30f8612d905930b857602799995b6867afc63f4daa",
+        "naturalWidth": 1440,
+        "naturalHeight": 1000,
+        "visibleCards": 1
+      },
+      {
+        "kind": "dialog-close",
+        "open": false,
+        "focusLabel": "查看 Preview dashed ink 完整原图"
+      },
+      {
+        "kind": "reset",
+        "count": 35,
+        "theme": "light",
+        "innerWidth": 1440,
+        "scrollWidth": 1440
+      }
+    ]
+  },
   "screenshots": [
     {
       "path": "screenshots/desktop-light.png",
-      "sha256": "57d55ab00f23dae57c36d35fa8c14562834873c70d4f2ba42cf1c864405e9740",
-      "bytes": 274930,
+      "sha256": "ece5704a3963eeec8ffb9bac56e547e503bdd6f09d87af4d0ec5c67d25beb27b",
+      "bytes": 275237,
       "pngDimensions": [
         1440,
         1100
@@ -226,17 +111,14 @@
         1440,
         1100
       ],
-      "deviceScaleFactor": 1,
-      "mobileEmulation": false,
       "theme": "light",
-      "state": "desktop-light",
-      "writtenAtFromFileMtime": "2026-10-25T09:36:06.926368+00:00",
-      "rootViewed": true
+      "rootViewed": true,
+      "originalBytesUnchanged": true
     },
     {
-      "path": "screenshots/desktop-dark.png",
-      "sha256": "2ae1d12e5db28660e2d0b09453d919b333ca880b7e34942b548f92aa637d1fd5",
-      "bytes": 277317,
+      "path": "screenshots/source-keyboard-dialog.png",
+      "sha256": "4fd117f305213b83e22cccccbaab63ac2bf59e7074e7040a89cc2051df5eb68c",
+      "bytes": 221846,
       "pngDimensions": [
         1440,
         1100
@@ -245,55 +127,14 @@
         1440,
         1100
       ],
-      "deviceScaleFactor": 1,
-      "mobileEmulation": false,
-      "theme": "dark",
-      "state": "desktop-dark",
-      "writtenAtFromFileMtime": "2026-10-25T09:36:53.761165+00:00",
-      "rootViewed": true
-    },
-    {
-      "path": "screenshots/mobile-light.png",
-      "sha256": "99dd0e34464ef443d87e9529bbac50e31e80ee088fdfb95edd1abcd110d93611",
-      "bytes": 85046,
-      "pngDimensions": [
-        390,
-        844
-      ],
-      "viewportCssPixels": [
-        390,
-        844
-      ],
-      "deviceScaleFactor": 1,
-      "mobileEmulation": false,
       "theme": "light",
-      "state": "mobile-light",
-      "writtenAtFromFileMtime": "2026-10-25T09:37:05.072126+00:00",
-      "rootViewed": true
+      "rootViewed": true,
+      "originalBytesUnchanged": true
     },
     {
-      "path": "screenshots/mobile-dark.png",
-      "sha256": "3cc83f062e14549d70af59fec7351d95d818033673fc58600db573c5ab613bcf",
-      "bytes": 84985,
-      "pngDimensions": [
-        390,
-        844
-      ],
-      "viewportCssPixels": [
-        390,
-        844
-      ],
-      "deviceScaleFactor": 1,
-      "mobileEmulation": false,
-      "theme": "dark",
-      "state": "mobile-dark",
-      "writtenAtFromFileMtime": "2026-10-25T09:37:04.938320+00:00",
-      "rootViewed": true
-    },
-    {
-      "path": "screenshots/byte-views-dialog.png",
-      "sha256": "e2d6674d8b47c5d61eab1c11e7f2875d98edf5657a0ee90122d2e03a64499b44",
-      "bytes": 169313,
+      "path": "screenshots/diff-line-numbers-dialog.png",
+      "sha256": "cdf5f400b728af0cf2d0146236d5c758c13766295324eb07150268482b3e143a",
+      "bytes": 236237,
       "pngDimensions": [
         1440,
         1100
@@ -302,17 +143,14 @@
         1440,
         1100
       ],
-      "deviceScaleFactor": 1,
-      "mobileEmulation": false,
       "theme": "light",
-      "state": "byte-views-dialog",
-      "writtenAtFromFileMtime": "2026-10-25T09:36:44.032508+00:00",
-      "rootViewed": true
+      "rootViewed": true,
+      "originalBytesUnchanged": true
     },
     {
-      "path": "screenshots/state-contract-dialog.png",
-      "sha256": "b416366a5a1c9e88e023bac4047e9b9ccee613b2dd122b7fe323b434dbc989fe",
-      "bytes": 187763,
+      "path": "screenshots/preview-dashed-ink-dialog.png",
+      "sha256": "90eb51ceacc26bab8b8aad837def058757bb3c30d73a376b3a7917d44e762178",
+      "bytes": 234958,
       "pngDimensions": [
         1440,
         1100
@@ -321,57 +159,26 @@
         1440,
         1100
       ],
-      "deviceScaleFactor": 1,
-      "mobileEmulation": false,
       "theme": "light",
-      "state": "state-contract-dialog",
-      "writtenAtFromFileMtime": "2026-10-25T09:36:47.190454+00:00",
-      "rootViewed": true
-    },
-    {
-      "path": "screenshots/recipe-stages-dialog.png",
-      "sha256": "998917e825e171ea3b756326b7d5e7a8f77365e27131f7176b7853f743744576",
-      "bytes": 188366,
-      "pngDimensions": [
-        1440,
-        1100
-      ],
-      "viewportCssPixels": [
-        1440,
-        1100
-      ],
-      "deviceScaleFactor": 1,
-      "mobileEmulation": false,
-      "theme": "light",
-      "state": "recipe-stages-dialog",
-      "writtenAtFromFileMtime": "2026-10-25T09:36:50.390122+00:00",
-      "rootViewed": true
+      "rootViewed": true,
+      "originalBytesUnchanged": true
     }
   ],
-  "rawObservations": [
-    {
-      "basename": "filter-checks.json",
-      "sha256": "9e4774df8fadfc50aa500249f09468510cde9e75d96d1ebc76c0dcf157565287",
-      "bytes": 2867,
-      "observedAt": "2026-10-25T09:36:10.569Z"
-    },
-    {
-      "basename": "dialog-checks.json",
-      "sha256": "6702988af8686acf7f50362595beb7af75a95c811d818d0957fd740664827eb8",
-      "bytes": 2407,
-      "observedAt": "2026-10-25T09:36:53.763Z"
-    },
-    {
-      "basename": "viewport-checks.json",
-      "sha256": "19ded3dbe9c29950e9249e8583bf85dd96679e018dfe04d500460c276a53a8fe",
-      "bytes": 577,
-      "observedAt": "2026-10-25T09:37:05.099Z"
-    }
-  ],
+  "rawObservations": {
+    "basename": "checks.json",
+    "sha256": "7409776d342652238102e7aadbdfb3fca7edda68b00c1dc7ba5a422d05c8b959",
+    "bytes": 2912
+  },
+  "reusedHistoricalEvidence": {
+    "commit": "800599678493c33e69179adc7f66d5b17ab3aa63",
+    "url": "https://github.com/tt-a1i/archify/blob/800599678493c33e69179adc7f66d5b17ab3aa63/docs/research/2026-10-25/gallery/browser-evidence.json",
+    "scope": "390px and dark-theme UI observations reused because template is byte-identical; not rerun on current 35-item HTML"
+  },
   "limits": [
-    "Only current counts, three changed records, full-image dialogs, Escape opener focus, empty/reset and light/dark viewports were exercised",
-    "Original-size scrolling and detailed modal Tab traversal were not repeated; prior observations remain attached to historical versions",
-    "External links were inspected, not opened; experiment HTML was not executed inside this gallery",
-    "Images are actual browser screenshots, viewed by the coordinating agent; this is not human acceptance"
+    "Current checks cover only 1440×1100 light: counts, three changed records, complete-image metadata/fixed source/hash, Escape opener focus and reset/page width.",
+    "390px and dark theme were not rerun; prior observations retain historical 34-item identity.",
+    "Original-size End scrolling, detailed modal Tab traversal and empty-result behavior were not repeated.",
+    "External source URLs inspected, not opened; experiment HTML not executed within gallery.",
+    "Four actual screenshots viewed by coordinating agent; no human or assistive-technology acceptance."
   ]
 }
