@@ -1,0 +1,51 @@
+{
+  "kind": "actual-Chromium-inspection-of-constructed-input",
+  "sourceSha256": "045a99d1e92eb6fa9bd6c0ffbea1ead07b3eb94499f134389db3c1f3524493da",
+  "inputSha256": "891141aa7a0d304d0ebd64f396e7c0444cd82f0a9054351103026ea2af3e047b",
+  "nodes": [
+    {
+      "role": "button",
+      "name": "Focus Operation A, 0–100 ms · 100 ms · 100% of 100 ms wall-clock, worker",
+      "description": "Operation A · 0–100 ms · 100 ms · 100% of 100 ms wall-clock · worker",
+      "ignored": false
+    },
+    {
+      "role": "button",
+      "name": "Focus Operation B, 0–100 ms · 100 ms · Error · 100% of 100 ms wall-clock, worker",
+      "description": "Operation B · 0–100 ms · 100 ms · Error · 100% of 100 ms wall-clock · worker",
+      "ignored": false
+    },
+    {
+      "role": "button",
+      "name": "Focus Operation C, 0–100 ms · 100 ms · Cancelled · 100% of 100 ms wall-clock, worker",
+      "description": "Operation C · 0–100 ms · 100 ms · Cancelled · 100% of 100 ms wall-clock · worker",
+      "ignored": false
+    }
+  ],
+  "passports": [
+    {
+      "id": "op_b",
+      "visibleText": "SEMANTIC PASSPORT\nOperation B\n0–100 ms · 100 ms · Error · 100% of 100 ms wall-clock\nSECURITY\nworker\nop_b\n0 outgoing · 0 incoming\nAUTHORED REACH\nUpstream\n0\nDownstream\n0\n×\nCopy link\n\nNo connected relationships"
+    },
+    {
+      "id": "op_c",
+      "visibleText": "SEMANTIC PASSPORT\nOperation C\n0–100 ms · 100 ms · Cancelled · 100% of 100 ms wall-clock\nEXTERNAL\nworker\nop_c\n0 outgoing · 0 incoming\nAUTHORED REACH\nUpstream\n0\nDownstream\n0\n×\nCopy link\n\nNo connected relationships"
+    }
+  ],
+  "capturedAt": "2026-10-25T06:04:12.124Z",
+  "viewport": {
+    "width": 1440,
+    "height": 1000,
+    "deviceScaleFactor": 1
+  },
+  "limitations": "Original constructed legal input; no natural user incident, real workload, VoiceOver/NVDA or human acceptance. Initial screenshot command used incompatible require+top-level await and failed before browser dispatch; rerun used ESM import.",
+  "darkOverview": {
+    "action": "Clicked existing Toggle color theme button from captured light candidate",
+    "state": {
+      "theme": "dark",
+      "bodyClass": ""
+    },
+    "capturedAt": "2026-10-25T06:04:33.004Z",
+    "sha256": "314e2345d3cbaa3c823c5514dc10363d085983e3114f639376871ceb3d30a575"
+  }
+}

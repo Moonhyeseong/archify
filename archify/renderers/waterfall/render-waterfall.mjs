@@ -210,7 +210,9 @@ const placed = rows.map((row, index) => {
   const x0 = xOf(row.start);
   const x1 = xOf(row.end);
   const width = Math.max(2, x1 - x0);
-  const label = row.open ? i18nText(locale, 'waterfall.incomplete', { duration: formatDuration(row.duration) }) : formatDuration(row.duration);
+  const durationLabel = row.open ? i18nText(locale, 'waterfall.incomplete', { duration: formatDuration(row.duration) }) : formatDuration(row.duration);
+  const statusLabel = row.status === 'error' || row.status === 'cancelled' ? i18nText(locale, `legend.waterfall.${row.status}`) : '';
+  const label = statusLabel ? `${durationLabel} · ${statusLabel}` : durationLabel;
   const labelWidth = textUnits(label) * layout.durationFont * ADVANCE + 4;
   // Every duration reads at the same place, just after its bar; the canvas
   // reserves room past the axis for the widest one, so a short operation and

@@ -1,0 +1,28 @@
+{
+  "ok": true,
+  "status": "pass",
+  "quality": "showcase",
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReview": "not-requested",
+  "kind": "portable-summary-not-original-receipt",
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "command": "node archify/bin/archify.mjs finalize waterfall experiments/waterfall-status/fixtures/localized.waterfall.json experiments/waterfall-status/localized.html --json",
+  "note": "Transcribed actual public finalize stdout with local filesystem paths omitted; original receipts remain outside checkout.",
+  "specification": {
+    "sha256": "25ca7a8bfc4d4056acaf3896e2684f89f18160299e2a29b550dc77deb6d10197",
+    "bytes": 815
+  },
+  "artifact": {
+    "sha256": "267495051f959f185259fbb3e4cf4986dce3ec6cc847f8215113d27cfa2b1116",
+    "bytes": 810649
+  }
+}

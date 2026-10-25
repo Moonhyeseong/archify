@@ -1,0 +1,42 @@
+{
+  "kind": "actual-Chromium-inspection-of-constructed-input",
+  "sourceSha256": "608f95e84821e36e24016edccf1c447c0bdd3c7251dbd39578b0174c93a28cf2",
+  "nodes": [
+    {
+      "role": "button",
+      "name": "Focus Operation A, 0–100 ms · 100 ms · 100% of 100 ms wall-clock, worker",
+      "description": "Operation A · 0–100 ms · 100 ms · 100% of 100 ms wall-clock · worker",
+      "ignored": false
+    },
+    {
+      "role": "button",
+      "name": "Focus Operation B, 0–100 ms · 100 ms · 100% of 100 ms wall-clock, worker",
+      "description": "Operation B · 0–100 ms · 100 ms · 100% of 100 ms wall-clock · worker",
+      "ignored": false
+    },
+    {
+      "role": "button",
+      "name": "Focus Operation C, 0–100 ms · 100 ms · 100% of 100 ms wall-clock, worker",
+      "description": "Operation C · 0–100 ms · 100 ms · 100% of 100 ms wall-clock · worker",
+      "ignored": false
+    }
+  ],
+  "passports": [
+    {
+      "id": "op_b",
+      "visibleText": "SEMANTIC PASSPORT Operation B 0–100 ms · 100 ms · 100% of 100 ms wall-clock SECURITY worker op_b 0 outgoing · 0 incoming AUTHORED REACH Upstream 0 Downstream 0 × Copy link No connected relationships",
+      "detail": "0–100 ms · 100 ms · 100% of 100 ms wall-clock",
+      "kind": "Security",
+      "context": "worker"
+    },
+    {
+      "id": "op_c",
+      "visibleText": "SEMANTIC PASSPORT Operation C 0–100 ms · 100 ms · 100% of 100 ms wall-clock EXTERNAL worker op_c 0 outgoing · 0 incoming AUTHORED REACH Upstream 0 Downstream 0 × Copy link No connected relationships",
+      "detail": "0–100 ms · 100 ms · 100% of 100 ms wall-clock",
+      "kind": "External",
+      "context": "worker"
+    }
+  ],
+  "capturedAt": "2026-10-25T05:58:52.445Z",
+  "limitations": "Original constructed legal input; no natural user incident, real workload, VoiceOver/NVDA or human acceptance."
+}

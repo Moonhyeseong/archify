@@ -196,3 +196,36 @@ test('waterfall: services past the five colours share a legend entry instead of 
   assert.ok(labels.includes('auth · postgres'), labels.join(' | '));
   assert.ok(labels.includes('cart'), labels.join(' | '));
 });
+
+test('waterfall: explicit error and cancelled are readable beside the bar and in semantic sublabels',()=>{
+  const diagram=clone(small);
+  diagram.spans=[{id:'normal',name:'Operation A',start:0,duration:100,status:'ok'},{id:'failed',name:'Operation B',start:0,duration:100,status:'error'},{id:'cancelled',name:'Operation C',start:0,duration:100,status:'cancelled'},{id:'implicit',name:'Operation D',start:0,duration:100}];
+  const report=layoutOf(diagram);
+  assert.deepEqual(report.rows.map(row=>row.label),['100 ms','100 ms · Error','100 ms · Cancelled','100 ms']);
+  for(const row of report.rows){assert.equal(row.end-row.start,100);assert.equal(row.start,0);assert.equal(row.end,100);}
+  const result=run(diagram);assert.equal(result.status,0,result.stderr);const html=fs.readFileSync(result.output,'utf8');
+  for(const[id,status]of[['failed','Error'],['cancelled','Cancelled']]){
+    const group=html.match(new RegExp(`<g ([^>]*data-node-id="${id}"[^>]*)>([\\s\\S]*?)<\\/g>`));assert.ok(group);
+    assert.match(group[1],new RegExp(`data-node-sublabel="[^"]*100 ms · ${status} · 100%`));
+    assert.match(group[1],new RegExp(`aria-label="[^"]*100 ms · ${status}`));
+    assert.match(group[2],new RegExp(`class="[^"]*wf-num"[^>]*>100 ms · ${status}<\\/text>`));
+  }
+});
+
+test('waterfall: status uses existing locale words and long non-ASCII names remain literal and checked',()=>{
+  for(const[locale,error,cancelled]of[['en','Error','Cancelled'],['zh-CN','出错','已取消']]){
+    const diagram=clone(small);diagram.meta.locale=locale;
+    diagram.spans=[{id:'first',name:'調整済みの長い操作名称 <not-an-element> & 元のラベル',start:0,duration:100,status:'error'},{id:'second',name:'另一个操作',start:0,duration:100,status:'cancelled'}];
+    const report=layoutOf(diagram);assert.deepEqual(report.rows.map(row=>row.label),[`100 ms · ${error}`,`100 ms · ${cancelled}`]);
+    const result=run(diagram);assert.equal(result.status,0,result.stderr);const html=fs.readFileSync(result.output,'utf8');
+    assert.equal(html.includes('<not-an-element>'),false);assert.ok(html.includes('&lt;not-an-element&gt;'));assert.ok(html.includes('元のラベル'));
+    const checked=spawnSync(process.execPath,[checker,result.output],{encoding:'utf8'});assert.equal(checked.status,0,checked.stderr);const receipt=JSON.parse(checked.stdout);assert.equal(receipt.ok,true,JSON.stringify(receipt.checks.filter(c=>!c.ok)));
+  }
+});
+
+test('waterfall: incomplete open and recorded-end semantics do not borrow error status labels',()=>{
+  const diagram=clone(small);diagram.spans=[{id:'boundary',name:'Recorded bound',start:0,duration:200},{id:'open',name:'No end supplied',start:100,status:'incomplete'},{id:'ended',name:'End supplied',start:100,end:150,status:'incomplete'}];
+  const report=layoutOf(diagram),open=report.rows.find(r=>r.id==='open'),ended=report.rows.find(r=>r.id==='ended');
+  assert.equal(open.open,true);assert.equal(open.label,'incomplete, ≥ 100 ms');assert.equal(ended.open,false);assert.equal(ended.label,'50 ms');
+  assert.equal(open.end-open.start,100);assert.equal(ended.end-ended.start,50);
+});

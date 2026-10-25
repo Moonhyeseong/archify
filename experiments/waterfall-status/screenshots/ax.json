@@ -1,0 +1,20 @@
+[
+  {
+    "role": "button",
+    "name": "Focus Operation A, 0–100 ms · 100 ms · 100% of 100 ms wall-clock, worker",
+    "description": "Operation A · 0–100 ms · 100 ms · 100% of 100 ms wall-clock · worker",
+    "ignored": false
+  },
+  {
+    "role": "button",
+    "name": "Focus Operation B, 0–100 ms · 100 ms · Error · 100% of 100 ms wall-clock, worker",
+    "description": "Operation B · 0–100 ms · 100 ms · Error · 100% of 100 ms wall-clock · worker",
+    "ignored": false
+  },
+  {
+    "role": "button",
+    "name": "Focus Operation C, 0–100 ms · 100 ms · Cancelled · 100% of 100 ms wall-clock, worker",
+    "description": "Operation C · 0–100 ms · 100 ms · Cancelled · 100% of 100 ms wall-clock · worker",
+    "ignored": false
+  }
+]

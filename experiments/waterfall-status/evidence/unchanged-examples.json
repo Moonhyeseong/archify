@@ -1,0 +1,23 @@
+{
+  "kind": "actual-baseline-byte-comparison",
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "note": "Fresh current renderer output matched base tracked HTML and current development goldens. These two fixtures have no error/cancelled status.",
+  "records": [
+    {
+      "input": "archify/examples/checkout-request.waterfall.json",
+      "output": "archify/examples/waterfall-checkout-request-rendered.html",
+      "byteIdenticalToBase": true,
+      "byteIdenticalToDevelopmentGolden": true,
+      "sha256": "1e83c9acdaf3ca9849fde8361225674769787dd4bcb2af3c8d2fddd3fe817a34",
+      "bytes": 817141
+    },
+    {
+      "input": "archify/examples/example-rebuild.waterfall.json",
+      "output": "archify/examples/waterfall-example-rebuild-rendered.html",
+      "byteIdenticalToBase": true,
+      "byteIdenticalToDevelopmentGolden": true,
+      "sha256": "4dc89cfefc54305319f42db08c7f89a40db7f844e311510bb711ab6e3f5eb149",
+      "bytes": 846959
+    }
+  ]
+}

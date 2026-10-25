@@ -1,0 +1,27 @@
+{
+  "kind": "actual-renderer-local-validation-summary",
+  "runtimeNode": "22.23.3",
+  "focusedAndCore": {
+    "command": "node scripts/run-tests.mjs --require-files test/waterfall-rendering.test.mjs test/core-smoke.test.mjs",
+    "pass": 34,
+    "fail": 0,
+    "skip": 0,
+    "scope": "15 Waterfall renderer checks plus 19 core smoke checks"
+  },
+  "publicFinalizations": {
+    "candidate": "all four gates pass",
+    "localized": "all four gates pass"
+  },
+  "unchangedPublicExamples": "Two fresh no-status Waterfall renders byte-identical to base tracked HTML and development goldens; see unchanged-examples.json.",
+  "finalSourceReemit": "Final renderer with matching showcase quality re-emits byte-identical candidate HTML.",
+  "exactArchivePackageSmoke": {
+    "command": "node scripts/package-smoke.mjs <extracted exact canonical archive>",
+    "exitCode": 0,
+    "platform": "darwin"
+  },
+  "generatedScope": "Only canonical archify.zip changed: Viewer/template/schema/locale sources unchanged; two affected checked-in HTML examples remain byte-identical. No unrelated gallery/site regeneration.",
+  "benchmarkScope": "Maintainer-authorized justified exemption from real repository generation comparison: renderer-local explicit-status readability, no generator/Skill rule change; constructed status probe proves provided status text is exposed, not real-Agent authoring benefit.",
+  "limits": "No complete repository, Windows, VoiceOver/NVDA, cross-AT, human or real-workload acceptance. No incomplete legend change; #1030 not covered.",
+  "sourceSha256": "5dce3f2e2ffe1ade2d4ddd81aadcb95aadafc24514f9ce310f5315f4f626998e",
+  "testSha256": "deee4ad773f48a10879252ad31d6cb44b56331938fafe384f58e240340ffc34e"
+}

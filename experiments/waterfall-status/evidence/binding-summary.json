@@ -1,0 +1,34 @@
+{
+  "kind": "actual-constructed-input-binding",
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "inputSha256": "891141aa7a0d304d0ebd64f396e7c0444cd82f0a9054351103026ea2af3e047b",
+  "baseHtmlSha256": "608f95e84821e36e24016edccf1c447c0bdd3c7251dbd39578b0174c93a28cf2",
+  "candidateHtmlSha256": "045a99d1e92eb6fa9bd6c0ffbea1ead07b3eb94499f134389db3c1f3524493da",
+  "sourceSha256": "5dce3f2e2ffe1ade2d4ddd81aadcb95aadafc24514f9ce310f5315f4f626998e",
+  "timingAndStatusAttributesUnchanged": true,
+  "rows": {
+    "op_a": {
+      "data-waterfall-start": "0",
+      "data-waterfall-end": "100",
+      "data-waterfall-duration": "100",
+      "data-waterfall-status": "ok"
+    },
+    "op_b": {
+      "data-waterfall-start": "0",
+      "data-waterfall-end": "100",
+      "data-waterfall-duration": "100",
+      "data-waterfall-status": "error"
+    },
+    "op_c": {
+      "data-waterfall-start": "0",
+      "data-waterfall-end": "100",
+      "data-waterfall-duration": "100",
+      "data-waterfall-status": "cancelled"
+    }
+  },
+  "baseViewBox": "0 0 1035 233",
+  "candidateViewBox": "0 0 1114 233",
+  "sameProfileCurrentStandardViewBox": "0 0 1114 233",
+  "qualityProfileNote": "Root frozen base used standard; finalized candidate uses showcase. A direct current standard renderer re-render also produces the candidate width and identical timing/status attributes. No claim of pixel identity for status-bearing input.",
+  "origin": "Original illustrative constructed fixture, not a natural user failure or measured workload."
+}

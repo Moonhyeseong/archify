@@ -1,0 +1,77 @@
+{
+  "kind": "actual-root-capture-file-bindings",
+  "inputSha256": "891141aa7a0d304d0ebd64f396e7c0444cd82f0a9054351103026ea2af3e047b",
+  "baseHtmlSha256": "608f95e84821e36e24016edccf1c447c0bdd3c7251dbd39578b0174c93a28cf2",
+  "candidateHtmlSha256": "045a99d1e92eb6fa9bd6c0ffbea1ead07b3eb94499f134389db3c1f3524493da",
+  "files": [
+    {
+      "file": "screenshots-base/observation.json",
+      "sha256": "88110710908397819f8b9a27611b2208f391288c066dc2a448951088195e3a03",
+      "bytes": 1888
+    },
+    {
+      "file": "screenshots-base/op_b.png",
+      "sha256": "12319fc4a18b13cf0c1a877ed1851dc413b0ae68caceab0f73d76632cd6d039f",
+      "bytes": 119719,
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "file": "screenshots-base/op_c.png",
+      "sha256": "e90e3c487d1112ed64c72db0aa8b2b624de58aab3cf81f8d53c36db8b1201515",
+      "bytes": 118783,
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "file": "screenshots-base/overview.png",
+      "sha256": "98c887ebb21680050000fa7e1802efd65bc8310ca944b724635ea2f61540dc68",
+      "bytes": 77959,
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "file": "screenshots/ax.json",
+      "sha256": "2fcba48d2eef23bb9dd7dcdf7aabac4b2391b00f3ea3d480aa372517802be776",
+      "bytes": 770
+    },
+    {
+      "file": "screenshots/observation.json",
+      "sha256": "3f62fde53011a539b910c7e2c83abd5c232fa2e89f73bf7defdaaa850fd06f7f",
+      "bytes": 2351
+    },
+    {
+      "file": "screenshots/op_b.png",
+      "sha256": "67f49acdae66634e046928060a6e982c80aaf9c34bc60480b4a5f21094e0d735",
+      "bytes": 120159,
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "file": "screenshots/op_c.png",
+      "sha256": "3f1119305fcc536ed77edac99c5eb3cb380fe47bb87834c8f21586cf85b4b7ad",
+      "bytes": 116599,
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "file": "screenshots/overview-dark.png",
+      "sha256": "314e2345d3cbaa3c823c5514dc10363d085983e3114f639376871ceb3d30a575",
+      "bytes": 73735,
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "file": "screenshots/overview.png",
+      "sha256": "15cec88ac2f9268eea9e9aacddd1e88cefc91a57336038cb2acb57537dfad5a3",
+      "bytes": 79605,
+      "width": 1440,
+      "height": 1000
+    }
+  ],
+  "observedScope": "Root reported viewing light/dark overview and per-status Passports; AX JSON separately records accessible node strings. Chromium-only; no speech/cross-AT/human acceptance.",
+  "darkState": {
+    "theme": "dark",
+    "bodyClass": ""
+  }
+}

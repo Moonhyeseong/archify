@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "diagram_type": "waterfall",
+  "meta": {
+    "title": "构造的中文状态阅读示例",
+    "subtitle": "原创说明性输入；没有执行操作或测量运行。",
+    "output": "localized.html",
+    "evidence": "illustrative",
+    "unit": "ms",
+    "locale": "zh-CN"
+  },
+  "spans": [
+    {
+      "id": "op_a",
+      "name": "普通操作甲",
+      "service": "worker",
+      "start": 0,
+      "duration": 100,
+      "status": "ok"
+    },
+    {
+      "id": "op_b",
+      "name": "含有较长名称的操作乙",
+      "service": "worker",
+      "start": 0,
+      "duration": 100,
+      "status": "error"
+    },
+    {
+      "id": "op_c",
+      "name": "取消操作丙",
+      "service": "worker",
+      "start": 0,
+      "duration": 100,
+      "status": "cancelled"
+    }
+  ]
+}
