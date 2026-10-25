@@ -1,0 +1,59 @@
+{
+  "kind": "portable narrow source-level render comparison; raw HTML kept outside checkout",
+  "baseRevision": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "method": "Same freshly prepared document/source/native children rendered by base renderer source and candidate renderer source. Only reader.css differs between those source trees.",
+  "rows": [
+    {
+      "input": "docs/cases/explainer/finalize-delivery.archify.md",
+      "inputSHA256": "1a270fb0d470196be672152c4314972fd576427890d5f78204338e31a93d5a4e",
+      "baseFreshSHA256": "60488dedfad5c41108d81a62eeefd5bd197f7d781bed4e74e9e45ba692110f63",
+      "candidateFreshSHA256": "eebdd6da27bfe3e795267b887fe23ce288d99003cf78f660e1f4e486eaff1378",
+      "equalAfterRemovingOnlyFiveInsertedCssLines": true,
+      "preparedChildren": {
+        "finalize-gates": {
+          "sha256": "da5f18ab6c10615a3e8554ad19ff5b8b53b15f63d8e645e8c371e4e5aea99ac3",
+          "bytes": 816583
+        }
+      }
+    },
+    {
+      "input": "docs/cases/explainer/first-rental.archify.md",
+      "inputSHA256": "03e17a98579e4ec9fa5e672ac8dfe02826c694918309dd9bd0433631dd301bc6",
+      "baseFreshSHA256": "167ad3b2941692c8b260b45c06f69b5c4cd79c86e4f17cf6bc1c640e69e3403f",
+      "candidateFreshSHA256": "9090ca352ceb377b8b62d9942169171047869c12acbd3956dfa43e99e62dfa7a",
+      "equalAfterRemovingOnlyFiveInsertedCssLines": true,
+      "preparedChildren": {
+        "rent-flow": {
+          "sha256": "01c36b58ed27c93629c006334f81c4b93b978cfb863fdd0ae3b416bf05794229",
+          "bytes": 815863
+        }
+      }
+    },
+    {
+      "input": "docs/cases/explainer/p99-tail-latency.archify.md",
+      "inputSHA256": "7affedfc8bfe321b409189f4f44bf281899ae5d77cfabb37a860e31ac3f174f6",
+      "baseFreshSHA256": "9017e0d7ea58216edc7442877101c47a415cf12a276addf14ab1c7b70a0f5c71",
+      "candidateFreshSHA256": "d20934685f290df7b48275d3224e5bd595a0e89b0af901d59d48d893210fae28",
+      "equalAfterRemovingOnlyFiveInsertedCssLines": true,
+      "preparedChildren": {
+        "p99-triage": {
+          "sha256": "88ef09a10ae22857b60ce18a6d6df0c91d99976d506dffaecebf002c2b705d09",
+          "bytes": 815832
+        }
+      }
+    },
+    {
+      "input": "docs/cases/explainer/tls-first-visit.archify.md",
+      "inputSHA256": "e53a3527dda010945f609c6d4b2c9905477b25c40a1fe0a44c8b5550ff5529d0",
+      "baseFreshSHA256": "a4081b571bf5a98a5e520b7cef7e809e44fa97a396a4f4c54a640f24536964bf",
+      "candidateFreshSHA256": "1be010269b919eef98a39319b1ea3323b4d2e12c3b68ae3a9bf3f38772c48f68",
+      "equalAfterRemovingOnlyFiveInsertedCssLines": true,
+      "preparedChildren": {
+        "tls-visit": {
+          "sha256": "b2980beceb9558354d57b6d26bdf87f92e6cfc2617371289bfc122993e41db69",
+          "bytes": 815734
+        }
+      }
+    }
+  ]
+}

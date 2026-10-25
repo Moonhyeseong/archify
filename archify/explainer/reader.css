@@ -210,6 +210,11 @@ meter{width:100%;height:8px;accent-color:var(--accent)}
 .board .diagram-preview.diagram-preview[class]{--bg:transparent;--lane-fill:color-mix(in srgb,var(--sunk) 55%,transparent);--lane-stroke:var(--control-border,var(--rule-strong));--grid:transparent;--canvas-dot:transparent;--mask:var(--surface);--panel:var(--surface);--text:var(--ink);--text-muted:var(--muted);--text-dim:var(--muted);--text-faint:var(--faint);--arrow:var(--faint);--arrow-emphasis:var(--accent);--frontend-fill:var(--surface);--frontend-stroke:var(--rule-strong);--backend-fill:var(--accent-soft);--backend-stroke:color-mix(in srgb,var(--accent) 50%,var(--rule));--database-fill:var(--sunk);--database-stroke:var(--rule-strong);--cloud-fill:var(--surface);--cloud-stroke:var(--rule-strong);--external-fill:var(--surface);--external-stroke:var(--rule-strong);--messagebus-fill:var(--surface);--messagebus-stroke:var(--rule-strong);--security-fill:var(--surface);--security-stroke:var(--rule-strong)}
 .diagram-preview .semantic-sigil{color:var(--muted);stroke:var(--muted)}
 .diagram-preview text.t-edge-default{fill:var(--accent-ink)}
+/* Dashed relationships need reading ink, not the node-border palette. Keep the
+   label, connector and arrowhead together without recoloring database nodes. */
+.diagram-preview text.t-edge-dashed{fill:var(--muted)}
+.diagram-preview path.a-dashed{stroke:var(--muted)}
+.diagram-preview polygon.m-dashed{fill:var(--muted)}
 .diagram-preview [data-node-id],.diagram-preview [data-edge-id]{transition:opacity .18s}
 .diagram-preview.focusing [data-node-id]:not(.reader-highlight),.diagram-preview.focusing [data-edge-id]:not(.reader-highlight){opacity:.22}
 .diagram-preview [data-node-id].reader-highlight rect:not(.c-mask){stroke:var(--accent);stroke-width:2}

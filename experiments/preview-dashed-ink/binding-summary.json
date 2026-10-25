@@ -1,0 +1,95 @@
+{
+  "kind": "portable SHA-256 artifact/source binding",
+  "sourceBindings": {
+    "archify/explainer/reader.css": {
+      "sha256": "e7ea84df01471009dc136cef7edd21402f46dd31acc38cc045d88a39820f9931",
+      "bytes": 47570
+    },
+    "test/explainer-browser.test.mjs": {
+      "sha256": "196d8712fffd8c09d72d3911a9bd4a07bab13336f8c10e9becb7eabed25e4307",
+      "bytes": 41197
+    },
+    "archify.zip": {
+      "sha256": "7c1886db2e581c5dea9d2535ec50843864ff8e42f770fd6b9f8dbf0683dc8c0f",
+      "bytes": 5425159
+    }
+  },
+  "files": {
+    "README.md": {
+      "sha256": "bff56d5cb0d9613e387748019de679daaecc7459b6010b77da04dfb3af4755c1",
+      "bytes": 8238
+    },
+    "archive-finalize-summary.json": {
+      "sha256": "5adfaa21e4f8ded7650cecdc22136ff874f5b1fdc53204d5ea16f896f0c937a6",
+      "bytes": 1041
+    },
+    "base.html": {
+      "sha256": "b6dbbfa395f90c109c9a1894d4e91683050b07e62dae470ff0eef1fcf862e639",
+      "bytes": 499715
+    },
+    "candidate-finalize-summary.json": {
+      "sha256": "d12c497cae8f0d87b15ed4d3cab72cd2f4164de3b5c2d56177871fb7654fe814",
+      "bytes": 1019
+    },
+    "candidate.html": {
+      "sha256": "8d1803900cc402d10d50170861cc27c441009a632b6491d80d4d29cdac2e3feb",
+      "bytes": 500034
+    },
+    "checks-summary.json": {
+      "sha256": "6b4ac6a71d52a4c5635a5f7950216f35be31f0267f41e15a4fedf37cd2748535",
+      "bytes": 3820
+    },
+    "fresh-source-summary.json": {
+      "sha256": "7159592d43b05042d67c8e02c92c80a380efbb836a4012078c699c377eb787a6",
+      "bytes": 2764
+    },
+    "generated-summary.json": {
+      "sha256": "790b81be9d469f249ccc6b5f5fd8ed23743af025faa0c24e84e14ba0520f1b07",
+      "bytes": 2255
+    },
+    "input.explainer.json": {
+      "sha256": "817929530bbb0a40560c47c20c501a83006d0a63329c3a4b1df8147efbfc65d2",
+      "bytes": 8081
+    },
+    "input.workflow.json": {
+      "sha256": "ac8db8467d0c40e06b0a83a88a333354a144f4a3536244bd6e90f8dfbf5c9327",
+      "bytes": 1424
+    },
+    "screenshots/base-dark.png": {
+      "sha256": "0a02915413f5a53e16962e18c62c69fd64079df65ab7d469123a1fd6614bf8df",
+      "bytes": 164585
+    },
+    "screenshots/base-light.png": {
+      "sha256": "9d501774f7e74216bdde0cf95442c4c071c0f1fef177539ce7da21d912ab2100",
+      "bytes": 165925
+    },
+    "screenshots/candidate-dark.png": {
+      "sha256": "cd06a8fb0319113cdcbc98f443784a1a6058f6cd196f2fb01a875bcd1517c05d",
+      "bytes": 164965
+    },
+    "screenshots/candidate-light.png": {
+      "sha256": "eec4001ffa60ab4ce271857809e857d778093da00c083f3623d0d55288e37263",
+      "bytes": 166286
+    },
+    "screenshots/capture.json": {
+      "sha256": "88e3a32213f8168e5e1410312230ce37c7cb0429255d8a0a84a80be0bbc876f6",
+      "bytes": 3309
+    },
+    "source/LICENSE": {
+      "sha256": "3128413743d8bf1356ca3e1980433619248f260a7928f3563569aac6d6df4b7b",
+      "bytes": 16757
+    },
+    "source/manifest.json": {
+      "sha256": "12e4d590eb1727be58e4047b2a0b0faa2cbf07d7ecb8c09de44d651684243c2b",
+      "bytes": 2347
+    },
+    "source/plan.json": {
+      "sha256": "582180f5f2a423d2e0f1f77348b0bc57af4e6b7d3a3580ec4c9c8bada2735bb5",
+      "bytes": 1630
+    },
+    "zip-summary.json": {
+      "sha256": "88e01b5f6ad8d033880136f82e453a9c826fe97a00fd775bab01a287c3ba1728",
+      "bytes": 450
+    }
+  }
+}

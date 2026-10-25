@@ -1,0 +1,97 @@
+{
+  "kind": "actual Ego Chromium screenshot and computed-color observations",
+  "records": [
+    {
+      "html": "base.html",
+      "htmlSha256": "b6dbbfa395f90c109c9a1894d4e91683050b07e62dae470ff0eef1fcf862e639",
+      "image": "screenshots/base-light.png",
+      "imageSha256": "9d501774f7e74216bdde0cf95442c4c071c0f1fef177539ce7da21d912ab2100",
+      "capturedAt": "2026-10-25T07:30:12.868Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "theme": "light",
+      "state": "top of same complete official-plan Explainer input; static preview",
+      "observed": {
+        "theme": "light",
+        "labelFill": "rgb(211, 215, 221)",
+        "pathStroke": "rgb(211, 215, 221)",
+        "markerFill": "rgb(211, 215, 221)",
+        "maskFill": "rgb(255, 255, 255)"
+      },
+      "rootViewed": true
+    },
+    {
+      "html": "candidate.html",
+      "htmlSha256": "8d1803900cc402d10d50170861cc27c441009a632b6491d80d4d29cdac2e3feb",
+      "image": "screenshots/candidate-light.png",
+      "imageSha256": "eec4001ffa60ab4ce271857809e857d778093da00c083f3623d0d55288e37263",
+      "capturedAt": "2026-10-25T07:30:13.192Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "theme": "light",
+      "state": "top of same complete official-plan Explainer input; static preview",
+      "observed": {
+        "theme": "light",
+        "labelFill": "rgb(106, 112, 124)",
+        "pathStroke": "rgb(106, 112, 124)",
+        "markerFill": "rgb(106, 112, 124)",
+        "maskFill": "rgb(255, 255, 255)"
+      },
+      "rootViewed": true
+    },
+    {
+      "html": "base.html",
+      "htmlSha256": "b6dbbfa395f90c109c9a1894d4e91683050b07e62dae470ff0eef1fcf862e639",
+      "image": "screenshots/base-dark.png",
+      "imageSha256": "0a02915413f5a53e16962e18c62c69fd64079df65ab7d469123a1fd6614bf8df",
+      "capturedAt": "2026-10-25T07:30:13.708Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "theme": "dark",
+      "state": "top of same complete official-plan Explainer input; static preview",
+      "observed": {
+        "theme": "dark",
+        "labelFill": "rgb(52, 57, 67)",
+        "pathStroke": "rgb(52, 57, 67)",
+        "markerFill": "rgb(52, 57, 67)",
+        "maskFill": "rgb(21, 23, 28)"
+      },
+      "rootViewed": true
+    },
+    {
+      "html": "candidate.html",
+      "htmlSha256": "8d1803900cc402d10d50170861cc27c441009a632b6491d80d4d29cdac2e3feb",
+      "image": "screenshots/candidate-dark.png",
+      "imageSha256": "cd06a8fb0319113cdcbc98f443784a1a6058f6cd196f2fb01a875bcd1517c05d",
+      "capturedAt": "2026-10-25T07:30:15.083Z",
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "theme": "dark",
+      "state": "top of same complete official-plan Explainer input; static preview",
+      "observed": {
+        "theme": "dark",
+        "labelFill": "rgb(141, 148, 161)",
+        "pathStroke": "rgb(141, 148, 161)",
+        "markerFill": "rgb(141, 148, 161)",
+        "maskFill": "rgb(21, 23, 28)"
+      },
+      "rootViewed": true
+    }
+  ]
+}

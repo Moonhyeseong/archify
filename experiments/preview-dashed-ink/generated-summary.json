@@ -1,0 +1,50 @@
+{
+  "kind": "portable generated artifact comparison",
+  "docs": [
+    {
+      "file": "docs/cases/explainer/finalize-delivery.html",
+      "sourceSHAUnchanged": true,
+      "documentSHAUnchanged": true,
+      "staticSvgBytesEqual": true,
+      "baseSHA256": "f5e8b38535039ffced65502d87534019909c31c43fac86425351804f10aeced6",
+      "candidateSHA256": "8566cd612aa531d83ea7103ea4ac1c064fcb27ea96eb24203c1cc22525d5c22c",
+      "nativeChildSHAsUnchanged": false
+    },
+    {
+      "file": "docs/cases/explainer/first-rental.html",
+      "sourceSHAUnchanged": true,
+      "documentSHAUnchanged": true,
+      "staticSvgBytesEqual": true,
+      "baseSHA256": "62e6aecbcb5f5ec62f65c375e6e47c8e71355558eedeefbb825aecd9bdaa5206",
+      "candidateSHA256": "9090ca352ceb377b8b62d9942169171047869c12acbd3956dfa43e99e62dfa7a",
+      "nativeChildSHAsUnchanged": false
+    },
+    {
+      "file": "docs/cases/explainer/p99-tail-latency.html",
+      "sourceSHAUnchanged": true,
+      "documentSHAUnchanged": true,
+      "staticSvgBytesEqual": true,
+      "baseSHA256": "f2657385d7c4971975726ce56e14cb62ac0f97e5ebed72dc05b0a15dc07ee0cb",
+      "candidateSHA256": "d20934685f290df7b48275d3224e5bd595a0e89b0af901d59d48d893210fae28",
+      "nativeChildSHAsUnchanged": false
+    },
+    {
+      "file": "docs/cases/explainer/tls-first-visit.html",
+      "sourceSHAUnchanged": true,
+      "documentSHAUnchanged": true,
+      "staticSvgBytesEqual": true,
+      "baseSHA256": "dbd57bee0bb12ed83df184fb11c425155d968c711e9f0a07ddd47c7dd254eff1",
+      "candidateSHA256": "1be010269b919eef98a39319b1ea3323b4d2e12c3b68ae3a9bf3f38772c48f68",
+      "nativeChildSHAsUnchanged": false
+    }
+  ],
+  "primaryFixture": {
+    "sameNaturalInput": true,
+    "sourceSha256": "817929530bbb0a40560c47c20c501a83006d0a63329c3a4b1df8147efbfc65d2",
+    "nativeChildrenEqual": true,
+    "staticSvgBytesEqual": true,
+    "baseSHA256": "b6dbbfa395f90c109c9a1894d4e91683050b07e62dae470ff0eef1fcf862e639",
+    "candidateSHA256": "8d1803900cc402d10d50170861cc27c441009a632b6491d80d4d29cdac2e3feb"
+  },
+  "baselineStaleness": "The four tracked docs predate some current base Reader/native CSS. Regeneration also propagates those already-existing source changes; this is not solely a three-rule color diff."
+}

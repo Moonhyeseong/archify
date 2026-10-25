@@ -1,0 +1,58 @@
+{
+  "classification": "upstream-committed-test-fixture",
+  "repository": "hashicorp/terraform-json",
+  "commit": "8f4894d138d0fe71436cba6dbc8f16577e9a9e7d",
+  "license": "MPL-2.0",
+  "input": {
+    "path": "testdata/action_reason/plan.json",
+    "local": "source/plan.json",
+    "url": "https://github.com/hashicorp/terraform-json/blob/8f4894d138d0fe71436cba6dbc8f16577e9a9e7d/testdata/action_reason/plan.json",
+    "sha256": "582180f5f2a423d2e0f1f77348b0bc57af4e6b7d3a3580ec4c9c8bada2735bb5",
+    "bytes": 1630,
+    "transformations": "none; complete original bytes"
+  },
+  "licenseFile": {
+    "path": "LICENSE",
+    "local": "source/LICENSE",
+    "url": "https://github.com/hashicorp/terraform-json/blob/8f4894d138d0fe71436cba6dbc8f16577e9a9e7d/LICENSE",
+    "sha256": "3128413743d8bf1356ca3e1980433619248f260a7928f3563569aac6d6df4b7b",
+    "bytes": 16757
+  },
+  "fixtureTestReference": {
+    "url": "https://github.com/hashicorp/terraform-json/blob/8f4894d138d0fe71436cba6dbc8f16577e9a9e7d/plan_test.go#L140-L159",
+    "fileSha256": "7a0072c119141e565be37adad031185395d5fc626dbf2f905cb8d9eaaef20b29",
+    "note": "Owning repository test reads this fixture and asserts the action reason. This does not establish how the fixture was generated."
+  },
+  "suppliedTerraformVersion": "1.15.0",
+  "sourceGeneration": "unknown; not verified by this experiment",
+  "upstreamExecutedThisSession": false,
+  "adapterReuse": {
+    "head": "640fa6fff3285d35da814cedff6f0b75ae3d39ba",
+    "sourceSha256": "d61a077787f39699e6a8ca3b92a692fd5e2e76b4bf813ce9e20eb907bfefff5f",
+    "initialAcceptanceExitCode": 0,
+    "outputPolicy": "copy the three prior /tmp acceptance JSON files byte-for-byte, no trimming or postprocessing"
+  },
+  "scope": {
+    "ordinaryResources": 1,
+    "actions": [
+      "delete",
+      "create"
+    ],
+    "unknownAfterPaths": [
+      [
+        "id"
+      ]
+    ],
+    "complete": "supplied true, not independently validated",
+    "deferredCollection": "not-provided, not an observed empty run",
+    "replacePaths": "not-provided",
+    "actionReason": "resource_changes[0].action_reason is unprojected and included among 4 unprojected resource fields",
+    "notCovered": [
+      "create-delete replacement",
+      "true sensitive mask",
+      "deferred record",
+      "production execution",
+      "provider compatibility"
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "kind": "portable derived verification record; not raw logs",
+  "baseRevision": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "sourceBindings": {
+    "archify/explainer/reader.css": {
+      "sha256": "e7ea84df01471009dc136cef7edd21402f46dd31acc38cc045d88a39820f9931",
+      "bytes": 47570
+    },
+    "test/explainer-browser.test.mjs": {
+      "sha256": "196d8712fffd8c09d72d3911a9bd4a07bab13336f8c10e9becb7eabed25e4307",
+      "bytes": 41197
+    },
+    "archify.zip": {
+      "sha256": "7c1886db2e581c5dea9d2535ec50843864ff8e42f770fd6b9f8dbf0683dc8c0f",
+      "bytes": 5425159
+    }
+  },
+  "runtime": {
+    "node": "22.23.3",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "browserRegression": {
+    "command": "ARCHIFY_EXPLAINER_BROWSER_TESTS=1 node scripts/run-tests.mjs --require-files '--test-name-pattern=dashed preview relationships|formal renderer retains keyboard' test/explainer-browser.test.mjs",
+    "passed": 2,
+    "failed": 0,
+    "skipped": 0,
+    "log": {
+      "name": "behavior-browser.log",
+      "sha256": "a6ca6fe4f7db6f26c73f0e10d7eef5751fd7ce720001b2d9c9d018abad8d84e1",
+      "bytes": 653
+    },
+    "behavior": "Actual label/mask contrast >=4.5 and consistent label/path/marker ink; other variants/database palette/inline precedence/native child retained. No exact muted-token requirement."
+  },
+  "baseDiscrimination": {
+    "passed": 0,
+    "failed": 1,
+    "skipped": 0,
+    "interpretation": "Expected regression failure on base source with the same final test; washed-out dashed label.",
+    "log": {
+      "name": "final-base-behavior.log",
+      "sha256": "5b05807ec3e65bc7d34745731e47eb18539e14668fd6a1deaeb8b3bd7593ecc6",
+      "bytes": 1473
+    }
+  },
+  "focused": {
+    "command": "node scripts/run-tests.mjs --require-files test/explainer-diagrams.test.mjs test/explainer-renderer.test.mjs test/core-smoke.test.mjs test/generated-artifact-xml.test.mjs",
+    "passed": 56,
+    "failed": 0,
+    "skipped": 0,
+    "log": {
+      "name": "core-focused.log",
+      "sha256": "ff1844d2d1d1da7e33c182050773e2982a7cca67821f35c24be9d94bb02601d0",
+      "bytes": 13572
+    }
+  },
+  "priorAttempts": {
+    "firstFinalize": {
+      "ok": true,
+      "browserCheck": {
+        "requested": false,
+        "ran": false
+      },
+      "rawReceipt": {
+        "sha256": "de5010243a25c2c26d0b8b90422ddeb6b59c6fbf7d0947cc6d7c76388d1d7ff2",
+        "bytes": 11362
+      },
+      "note": "First finalize did not request the browser gate; the final explicit --browser-check execution is separately recorded and passed all four stages."
+    },
+    "initialTestControlFailure": {
+      "log": {
+        "name": "candidate-focused.log",
+        "sha256": "27331d45f6a3338db1b49a8bf0124af3e990afc5100d45e4ca2b1ab214313edc",
+        "bytes": 1273
+      },
+      "note": "Initial test incorrectly equated dark database node stroke with the raw border token despite existing node-card color-mix. The control was corrected; production CSS did not change in response."
+    }
+  },
+  "finalizeGate": "See candidate-finalize-summary.json and archive-finalize-summary.json for real explicit-browser four-stage results; these are separate from the two browser regression cases.",
+  "freshSourceComparison": {
+    "log": {
+      "name": "fresh-source.log",
+      "sha256": "7159592d43b05042d67c8e02c92c80a380efbb836a4012078c699c377eb787a6",
+      "bytes": 2764
+    },
+    "summary": "fresh-source-summary.json"
+  },
+  "visual": {
+    "performedBy": "root agent",
+    "actualChromium": true,
+    "humanAcceptance": false,
+    "assistiveTechnologyAcceptance": false,
+    "ledger": "screenshots/capture.json",
+    "sha256": "88e3a32213f8168e5e1410312230ce37c7cb0429255d8a0a84a80be0bbc876f6",
+    "bytes": 3309
+  },
+  "scope": "No full-repository suite, new global contrast gate, live installation or release."
+}

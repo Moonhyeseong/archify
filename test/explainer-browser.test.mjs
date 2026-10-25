@@ -215,3 +215,45 @@ test('text names light their diagram nodes and walk-throughs step through steps 
   assert.equal(image.type,'image/png');assert.ok(image.size>20000,'the long image carries the rendered page');
  }finally{await browser.close();}
 });
+
+test('dashed preview relationships use readable neutral ink without recoloring nodes or other variants',{skip:!chrome},async()=>{
+ const {renderExplainer}=await import('../archify/explainer/render.mjs');
+ const {prepareExplainerDiagrams}=await import('../archify/explainer/diagrams.mjs');
+ const spec=JSON.parse(fs.readFileSync(new URL('../archify/examples/web-app.architecture.json',import.meta.url),'utf8'));
+ const doc=formalDocument();doc.meta.id='dashed-preview-ink';
+ doc.panels.push({id:'mechanism',title:'Existing web application relationships',blocks:[{id:'web-app',type:'diagram',diagramType:'architecture',spec}]});
+ const preparedDiagrams=await prepareExplainerDiagrams(doc,{baseDir:dir,sourcePath:path.join(dir,'dashed-preview.json'),quality:'standard'});
+ const originalChild=preparedDiagrams.diagrams['web-app'].html;
+ const file=artifact('dashed-preview-ink',renderExplainer(doc,{sourceText:JSON.stringify(doc),preparedDiagrams,preparedSources:{sources:{example:{title:'Example'}}}}));
+ const browser=new ChromeVisualBrowser(chrome);
+ try {
+  for(const theme of ['light','dark']){
+   await browser.resetPage();await inspectPublicHtml(browser,{artifactPath:file,width:1440,theme,keyboard:false});
+   const colors=await pageValue(browser,`(()=>{
+    const p=document.querySelector('.preview-web-app');
+    const token=name=>{const e=document.createElement('span');e.style.color='var('+name+')';p.append(e);const color=getComputedStyle(e).color;e.remove();return color;};
+    const fill=selector=>getComputedStyle(p.querySelector(selector)).fill;
+    const stroke=selector=>getComputedStyle(p.querySelector(selector)).stroke;
+    const label=p.querySelector('text.t-edge-dashed'),mask=label.parentElement.querySelector('rect.c-mask');
+    const rgb=color=>{const canvas=document.createElement('canvas');canvas.width=canvas.height=1;const ctx=canvas.getContext('2d');ctx.fillStyle=color;ctx.fillRect(0,0,1,1);return Array.from(ctx.getImageData(0,0,1,1).data).slice(0,3);};
+    const luminance=color=>rgb(color).map(c=>{c/=255;return c<=0.04045?c/12.92:((c+0.055)/1.055)**2.4;}).reduce((sum,c,i)=>sum+c*[0.2126,0.7152,0.0722][i],0);
+    const a=luminance(getComputedStyle(label).fill),b=luminance(getComputedStyle(mask).fill);
+    return {labelContrast:(Math.max(a,b)+0.05)/(Math.min(a,b)+0.05),border:token('--rule-strong'),databaseToken:token('--database-stroke'),accent:token('--accent'),accentInk:token('--accent-ink'),
+     dashedLabel:fill('text.t-edge-dashed'),dashedPath:stroke('path.a-dashed'),dashedMarker:fill('polygon.m-dashed'),
+     databaseNode:stroke('[data-node-kind="database"] .c-database'),
+     defaultLabel:fill('text.t-edge-default'),emphasisLabel:fill('text.t-edge-emphasis'),securityLabel:fill('text.t-edge-security')};
+   })()`);
+   assert.ok(colors.labelContrast>=4.5,JSON.stringify({theme,colors}));
+   assert.equal(colors.dashedPath,colors.dashedLabel,'connector uses the readable relationship ink');
+   assert.equal(colors.dashedMarker,colors.dashedLabel,'arrowhead uses the readable relationship ink');
+   assert.equal(colors.databaseToken,colors.border,'database node token keeps the page border palette');
+   assert.notEqual(colors.databaseNode,colors.dashedPath,'database node stroke is not recolored to relationship ink');
+   assert.equal(colors.defaultLabel,colors.accentInk);
+   assert.equal(colors.emphasisLabel,colors.accent);
+   assert.equal(colors.securityLabel,colors.border,'other variants retain their existing palette');
+   const explicit=await pageValue(browser,`(()=>{const p=document.querySelector('.preview-web-app');const values=[];for(const [selector,property] of [['text.t-edge-dashed','fill'],['path.a-dashed','stroke'],['polygon.m-dashed','fill']]){const e=p.querySelector(selector);e.style[property]='rgb(9, 80, 145)';values.push(getComputedStyle(e)[property]);}return values;})()`);
+   assert.deepEqual(explicit,Array(3).fill('rgb(9, 80, 145)'),'explicit inline colors still outrank the preview rule');
+  }
+  assert.equal(preparedDiagrams.diagrams['web-app'].html,originalChild,'static preview styling must not mutate the native child');
+ }finally{await browser.close();}
+});
