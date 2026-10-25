@@ -6,7 +6,7 @@
 
 共同实验基线：[dev `82c7e0f0`](https://github.com/tt-a1i/archify/commit/82c7e0f089a02a4d514714adf37dc2061682da5f)，2026-10-25 已重新核对远端仍为该 revision。下面的“已推送”只表示远程实验分支可审查，不能等同于合入、发布或人类验收。
 
-## 已可审阅的第一批
+## 已推送的 11 个实验
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
@@ -18,19 +18,22 @@
 | [Markdown outline](https://github.com/tt-a1i/archify/tree/codex/lab-markdown-outline/experiments/markdown-outline) | 标题与源行号直接转原生 Tree，保留文档层级 | `3f156e97` | [原生 PNG 导出](https://github.com/tt-a1i/archify/blob/codex/lab-markdown-outline/experiments/markdown-outline/screenshots/contributing-export.png) | 8 tests；三样例四阶段通过；公开 CONTRIBUTING.md 17 节点，受限 Markdown 子集 |
 | [DBML ERD](https://github.com/tt-a1i/archify/tree/codex/lab-dbml-erd/experiments/dbml-erd) | 从严格 DBML 子集保留键、关系方向和可空性 | `feab6ae6` | [4 表示例](https://github.com/tt-a1i/archify/blob/codex/lab-dbml-erd/experiments/dbml-erd/screenshots/order-payments.png) | 39 tests；四阶段通过；原创 synthetic，未验证完整 DBML 或真实数据库 |
 | [Change coupling](https://github.com/tt-a1i/archify/tree/codex/lab-change-coupling/experiments/change-coupling) | 解释 Code Maat CSV 的对称共变分数及原始计数 | `44dc5cbc` | [原生证据图](https://github.com/tt-a1i/archify/blob/codex/lab-change-coupling/experiments/change-coupling/screenshots/coupling.png) | 13 tests；render/finalize 通过，自动 browser 未请求；synthetic，非调用或因果网络 |
+| [Payload delta](https://github.com/tt-a1i/archify/tree/codex/lab-payload-delta/experiments/payload-delta) | 借鉴 PR Lens；把明确提供的 JSON 样本差异放在调用旁，区分 null、missing、类型和数组身份 | `823e8705` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-payload-delta/experiments/payload-delta/screenshots/review.png) | 10 tests；render/finalize 通过，单独 Explainer browser 通过；保留一条段落长度建议，不推断 schema 兼容性 |
+| [Decision thread](https://github.com/tt-a1i/archify/tree/codex/lab-decision-thread/experiments/decision-thread) | 保留异议、撤回与单方决定；决定不会抹掉尚未解决的异议 | `bdbdf9a9` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-decision-thread/experiments/decision-thread/screenshots/sequence.png) | 8 tests；两种产物四阶段通过；原创虚构对话，颜色图例已修正，不推断群体共识 |
+| [Migration plan](https://github.com/tt-a1i/archify/tree/codex/lab-migration-plan/experiments/migration-plan) | 阅读 pg-schema-diff 已有计划中的顺序、timeout 配置与原始 hazard | `8a4a1cd4` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-migration-plan/experiments/migration-plan/screenshots/migration-plan.png) | 14 tests；render/finalize 通过，自动 browser 未请求；无 SQL/数据库执行，synthetic |
+| [State contract](https://github.com/tt-a1i/archify/tree/codex/lab-state-contract/experiments/state-contract) | 把 robot3-viz flat 数据和显式 sidecar 转为 Lifecycle 与状态×事件声明矩阵 | `cc8c75bc` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-state-contract/experiments/state-contract/screenshots/state-contract.png) | 40 tests；两种产物四阶段通过；rich 语义拒绝，无机器执行，synthetic |
+| [Finder canvas matches](https://github.com/tt-a1i/archify/tree/codex/lab-finder-highlights/experiments/finder-highlights) | 输入查询后，列表与画布同步显示匹配节点，保留既有选择与视图 | `94c165ee` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-finder-highlights/experiments/finder-highlights/screenshots/candidate-api-light.png) | 共享 Viewer；作者最终 browser 60/60、core 19/19、generated/ZIP 一致；独立 browser 17/17；有固定输入浅/深色前后图，无效率计时 |
 
-这六项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML 保留原渲染器字节；源码 whitespace 检查与生成 HTML 的既有空白分开记录。
+这十一项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
 
 ## 正在推进
 
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
-| Payload delta | PR Lens + JSON Semantic Diff；样本字段变化与明确数组匹配规则 | 实现和独立复核完成，正在补截图/发布；已修正字面 JSON 被 Markdown 解释的问题 |
-| Decision thread | agent-chatter；保留异议、撤回、单方决定与原始消息 ID | 图例语义修正与截图复核中 |
-| Migration plan | pg-schema-diff 已有 JSON；按原顺序阅读 DDL、超时配置与原始 hazard | 实现中；不连接数据库或执行 SQL |
-| State contract | robot3-viz 静态数据；Lifecycle 与状态×事件声明矩阵 | 实现中；不执行机器源码或推断 guard 结果 |
-| Finder highlights | Sigma 等的查询匹配反馈；Finder 结果同步到画布 | 共享 Viewer 实验，实现与固定输入前后验证中 |
-| 后续发现 | CI/build/IaC 小工具、状态机与协议结构工具 | 持续调研，未通过筛选的不启动实现 |
+| CI conditions | gha-graph 等；needs、原始 if、隐式 status 门槛与未知矩阵 | 实现和独立复核中；不运行 CI 或求值任意表达式 |
+| Plan actions | terraform-json 等；replacement 顺序及 unknown/sensitive/deferred/complete | 实现和独立复核中；不运行 Terraform 或访问云 |
+| Recipe stages | Just dump；区分前依赖、body、后依赖 | 实现和独立复核中；不执行 recipe 或展开动态表达式 |
+| 后续发现 | 图形导航、跨引用、分享和导出阅读体验 | 第五批持续调研；排除已存在的 Relation/Route/Focus/深链接能力 |
 
 ## 一手调研报告
 
@@ -44,6 +47,7 @@
 | Git 历史及架构证据 | [Git and architecture](scouts/git-architecture.md) |
 | PRLens 与小型专用工具 | [PRLens and small tools](scouts/prlens-smalltools.md) |
 | 协议、状态机与 schema 演化 | [Protocol/schema small tools](scouts/protocol-schema-smalltools.md) |
+| CI、构建与基础设施小工具 | [Build/infra small tools](scouts/build-infra-smalltools.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
 报告中的上游声明、局部源码核实、计划中的实验和已经执行的结果分别标注。未推荐方向也保留原因，避免反复研究；没有把上游宣传、星数或作者截图当作 Archify 的效果证明。
