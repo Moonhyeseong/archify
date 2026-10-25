@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "status": "pass",
+  "quality": "showcase",
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReview": "not-requested",
+  "kind": "portable-summary-not-original-receipt",
+  "base": "82c7e0f089a02a4d514714adf37dc2061682da5f",
+  "node": "22.23.3",
+  "command": "node archify/bin/archify.mjs finalize explainer experiments/decision-thread/evidence/thread.archify.md experiments/decision-thread/evidence/thread.html --browser-check --json",
+  "recordedAt": "2026-10-25",
+  "specification": {
+    "sha256": "87a9f6cffbcba58655f361998c78c2c1441c71b1d63b9ad02f9be3ed2076de39",
+    "bytes": 2841
+  },
+  "artifact": {
+    "sha256": "f49a3953e01eeca561e7b5151ef90a4980591bd1de351dda56d664a50e69faf3",
+    "bytes": 498512
+  },
+  "note": "Transcribed actual public finalize stdout; personal paths omitted. Raw receipts kept outside checkout.",
+  "revisionNote": "Accurate event-kind legend overrides; regenerated final artifacts."
+}

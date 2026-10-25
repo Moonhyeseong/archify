@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "experiment": "decision-thread",
+  "declaration": "fictional",
+  "sourceSha256": "831d452f77167ce81519f01604a5d9620bbd73ffc38996201284a6bf2ad86012",
+  "orderMode": "explicit-order",
+  "timingMeaning": "ordinal only; spacing has no duration meaning",
+  "events": [
+    {
+      "id": "m1",
+      "from": "atlas",
+      "to": "birch",
+      "originalIndex": 0,
+      "references": [],
+      "sourcePointer": "/events/0",
+      "evidencePanel": "event-m1"
+    },
+    {
+      "id": "m2",
+      "from": "birch",
+      "to": "atlas",
+      "originalIndex": 1,
+      "references": [
+        "m1"
+      ],
+      "sourcePointer": "/events/1",
+      "evidencePanel": "event-m2"
+    },
+    {
+      "id": "m3",
+      "from": "atlas",
+      "to": "cedar",
+      "originalIndex": 2,
+      "references": [
+        "m1",
+        "m2"
+      ],
+      "sourcePointer": "/events/2",
+      "evidencePanel": "event-m3"
+    },
+    {
+      "id": "m4",
+      "from": "cedar",
+      "to": "atlas",
+      "originalIndex": 3,
+      "references": [
+        "m3"
+      ],
+      "sourcePointer": "/events/3",
+      "evidencePanel": "event-m4"
+    },
+    {
+      "id": "m5",
+      "from": "birch",
+      "to": "atlas",
+      "originalIndex": 4,
+      "references": [
+        "m2",
+        "m3"
+      ],
+      "sourcePointer": "/events/4",
+      "evidencePanel": "event-m5"
+    },
+    {
+      "id": "m6",
+      "from": "atlas",
+      "to": "cedar",
+      "originalIndex": 5,
+      "references": [
+        "m3",
+        "m4",
+        "m5"
+      ],
+      "sourcePointer": "/events/5",
+      "evidencePanel": "event-m6"
+    },
+    {
+      "id": "m7",
+      "from": "cedar",
+      "to": "birch",
+      "originalIndex": 6,
+      "references": [
+        "m4",
+        "m6"
+      ],
+      "sourcePointer": "/events/6",
+      "evidencePanel": "event-m7"
+    }
+  ],
+  "unresolvedObjections": [
+    "m4"
+  ],
+  "recordedDecisionEvents": [
+    "m6"
+  ],
+  "agreement": "not inferred"
+}

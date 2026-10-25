@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "declaration": "fictional",
+  "title": "Queue rollout decision thread",
+  "participants": [
+    {
+      "id": "atlas",
+      "label": "Atlas design"
+    },
+    {
+      "id": "birch",
+      "label": "Birch review"
+    },
+    {
+      "id": "cedar",
+      "label": "Cedar delivery"
+    }
+  ],
+  "events": [
+    {
+      "id": "m1",
+      "from": "atlas",
+      "to": "birch",
+      "order": 1,
+      "kind": "proposal",
+      "text": "Proposal: enable the queue for every tenant tomorrow.",
+      "references": []
+    },
+    {
+      "id": "m2",
+      "from": "birch",
+      "to": "atlas",
+      "order": 2,
+      "kind": "objection",
+      "text": "I object: rollback ownership is missing. Do not treat this as approval.",
+      "references": [
+        "m1"
+      ],
+      "objectionStatus": "withdrawn"
+    },
+    {
+      "id": "m3",
+      "from": "atlas",
+      "to": "cedar",
+      "order": 3,
+      "kind": "revision",
+      "text": "Revision: try one fictional tenant only. Cedar owns rollback. This revises m1; it does not erase m2.",
+      "references": [
+        "m1",
+        "m2"
+      ]
+    },
+    {
+      "id": "m4",
+      "from": "cedar",
+      "to": "atlas",
+      "order": 4,
+      "kind": "objection",
+      "text": "I still object: the queue-age alert has no tested threshold. This objection remains unresolved even if a trial is chosen.",
+      "references": [
+        "m3"
+      ],
+      "objectionStatus": "unresolved"
+    },
+    {
+      "id": "m5",
+      "from": "birch",
+      "to": "atlas",
+      "order": 5,
+      "kind": "withdrawal",
+      "text": "I withdraw only my rollback-ownership objection m2 because the revised proposal names an owner. I am not speaking for Cedar.",
+      "references": [
+        "m2",
+        "m3"
+      ]
+    },
+    {
+      "id": "m6",
+      "from": "atlas",
+      "to": "cedar",
+      "order": 6,
+      "kind": "decision",
+      "text": "My recorded decision: prepare the isolated trial, but do not deploy until the alert threshold is checked. This is my statement, not unanimous agreement.",
+      "references": [
+        "m3",
+        "m4",
+        "m5"
+      ]
+    },
+    {
+      "id": "m7",
+      "from": "cedar",
+      "to": "birch",
+      "order": 7,
+      "kind": "message",
+      "text": "I acknowledge receipt of m6. My objection m4 stays unresolved. No production rollout has happened in this fictional example.",
+      "references": [
+        "m4",
+        "m6"
+      ]
+    }
+  ]
+}

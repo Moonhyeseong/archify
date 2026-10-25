@@ -1,0 +1,46 @@
+{
+  "kind": "agent-browser-screenshot-summary",
+  "capturedAt": "2026-10-25T04:57:24.014577+00:00",
+  "method": "Actual Ego Lite browser screenshots; no compositing or image generation",
+  "images": [
+    {
+      "source": "../evidence/thread.html",
+      "sourceSha256": "f49a3953e01eeca561e7b5151ef90a4980591bd1de351dda56d664a50e69faf3",
+      "image": "thread.png",
+      "imageSha256": "68bcea681a936b80ff8ad02cf919958218470a8143bbbb655865fccc96c009b7",
+      "imagePixels": {
+        "width": 1440,
+        "height": 4271
+      },
+      "viewportCssPixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "deviceScaleFactor": 1,
+      "theme": "light",
+      "preset": "Clean",
+      "fullPage": true
+    },
+    {
+      "source": "../evidence/thread.sequence.html",
+      "sourceSha256": "399e8e988cf00755e9b46771b0faf6e1a6bcaea383a79d25d87dfa332b22b30a",
+      "image": "sequence.png",
+      "imageSha256": "4c465fb32f2828b961596b63e8f78755e180f8d5bae26006834a0b08e8660bc2",
+      "imagePixels": {
+        "width": 1440,
+        "height": 1288
+      },
+      "viewportCssPixels": {
+        "width": 1440,
+        "height": 1000
+      },
+      "deviceScaleFactor": 1,
+      "theme": "light",
+      "preset": "Classic",
+      "fullPage": true
+    }
+  ],
+  "agentVisualReview": "The native sequence visibly labels Message, Objection, Decision and Withdrawal. The Explainer preserves all seven event cards and identifies m4 as unresolved despite m6. The inline preview uses existing muted secondary arrows; the native view provides clearer event styling. Equal spacing is not elapsed time.",
+  "humanAcceptance": "pending",
+  "limits": "Screenshots establish the shown artifact only; they do not establish upstream execution, production validity or measured user benefit."
+}

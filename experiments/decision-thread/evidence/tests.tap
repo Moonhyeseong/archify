@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: exact events, references and immutable history survive in ordinal sequence and evidence
+ok 1 - exact events, references and immutable history survive in ordinal sequence and evidence
+  ---
+  duration_ms: 2.921167
+  type: 'test'
+  ...
+# Subtest: timestamp-only input sorts deterministically but never claims duration
+ok 2 - timestamp-only input sorts deterministically but never claims duration
+  ---
+  duration_ms: 2.5245
+  type: 'test'
+  ...
+# Subtest: missing context, duplicate identity and invalid participants cannot become invented agreement
+ok 3 - missing context, duplicate identity and invalid participants cannot become invented agreement
+  ---
+  duration_ms: 0.919209
+  type: 'test'
+  ...
+# Subtest: order, timestamp conflicts and malformed dates fail explicitly
+ok 4 - order, timestamp conflicts and malformed dates fail explicitly
+  ---
+  duration_ms: 0.497333
+  type: 'test'
+  ...
+# Subtest: privacy declaration and unknown hidden-content fields are rejected; snippets remain literal
+ok 5 - privacy declaration and unknown hidden-content fields are rejected; snippets remain literal
+  ---
+  duration_ms: 0.25425
+  type: 'test'
+  ...
+# Subtest: CLI and writer protect real victims, existing directories, symlinks and input aliases
+ok 6 - CLI and writer protect real victims, existing directories, symlinks and input aliases
+  ---
+  duration_ms: 65.915583
+  type: 'test'
+  ...
+# Subtest: a later output collision only cleans files created by this invocation
+ok 7 - a later output collision only cleans files created by this invocation
+  ---
+  duration_ms: 5.862583
+  type: 'test'
+  ...
+# Subtest: visual keys have explicit event-kind legends rather than protocol-domain claims
+ok 8 - visual keys have explicit event-kind legends rather than protocol-domain claims
+  ---
+  duration_ms: 0.412
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 148.672167

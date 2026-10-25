@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "Queue rollout decision thread",
+    "subtitle": "fictional input · message order only · equal spacing is not elapsed time · no agreement inferred",
+    "output": "thread.sequence.html",
+    "legend": {
+      "entries": {
+        "default": {
+          "label": "Message"
+        },
+        "security": {
+          "label": "Objection"
+        },
+        "emphasis": {
+          "label": "Decision"
+        },
+        "return": {
+          "label": "Withdrawal"
+        }
+      }
+    }
+  },
+  "participants": [
+    {
+      "id": "atlas",
+      "label": "Atlas design",
+      "type": "backend"
+    },
+    {
+      "id": "birch",
+      "label": "Birch review",
+      "type": "backend"
+    },
+    {
+      "id": "cedar",
+      "label": "Cedar delivery",
+      "type": "backend"
+    }
+  ],
+  "messages": [
+    {
+      "id": "m1",
+      "from": "atlas",
+      "to": "birch",
+      "y": 170,
+      "label": "m1: proposal",
+      "variant": "default"
+    },
+    {
+      "id": "m2",
+      "from": "birch",
+      "to": "atlas",
+      "y": 225,
+      "label": "m2: objection",
+      "variant": "security"
+    },
+    {
+      "id": "m3",
+      "from": "atlas",
+      "to": "cedar",
+      "y": 280,
+      "label": "m3: revision",
+      "variant": "default"
+    },
+    {
+      "id": "m4",
+      "from": "cedar",
+      "to": "atlas",
+      "y": 335,
+      "label": "m4: objection",
+      "variant": "security"
+    },
+    {
+      "id": "m5",
+      "from": "birch",
+      "to": "atlas",
+      "y": 390,
+      "label": "m5: withdrawal",
+      "variant": "return"
+    },
+    {
+      "id": "m6",
+      "from": "atlas",
+      "to": "cedar",
+      "y": 445,
+      "label": "m6: decision",
+      "variant": "emphasis"
+    },
+    {
+      "id": "m7",
+      "from": "cedar",
+      "to": "birch",
+      "y": 500,
+      "label": "m7: message",
+      "variant": "default"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "slate",
+      "title": "Evidence boundary",
+      "items": [
+        "fictional input · message order only · equal spacing is not elapsed time · no agreement inferred",
+        "Line colors denote event kinds only, without security/request/return protocol meaning.",
+        "Recorded decision events: m6. This records a sender statement, not group approval.",
+        "Explicitly unresolved objections: m4. Later decisions do not erase earlier messages.",
+        "Every arrow ID matches an unchanged original event in the companion evidence page."
+      ]
+    }
+  ]
+}

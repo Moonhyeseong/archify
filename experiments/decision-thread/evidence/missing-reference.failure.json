@@ -1,0 +1,11 @@
+{
+  "kind": "actual-cli-failure-evidence",
+  "command": "node experiments/decision-thread/thread-to-archify.mjs experiments/decision-thread/fixtures/missing-reference.json experiments/decision-thread/evidence/must-not-be-created",
+  "exitCode": 1,
+  "diagnostic": {
+    "ok": false,
+    "code": "thread/missing-reference",
+    "message": "m3 references missing event missing-message; context unknown, import refused."
+  },
+  "outputDirectoryCreated": false
+}
