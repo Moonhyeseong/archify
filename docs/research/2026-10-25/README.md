@@ -4,7 +4,9 @@
 
 **星数不作为门槛或排序依据。** 每个方向都看实际问题、现有能力、维护成本和来源证据；小项目、早期项目同样纳入。与已有 issue/PR 重复的方向先排除或明确剩余差异。
 
-前 30 项的共同实验基线：[dev `82c7e0f0`](https://github.com/tt-a1i/archify/commit/82c7e0f089a02a4d514714adf37dc2061682da5f)。2026-10-25 15:41（台北）重新核对 GitHub，dev 已推进到 [`3f95f034`](https://github.com/tt-a1i/archify/commit/3f95f0349c8276db71509ca239461b6fe9d00f9f)，main 为 [`51a29177`](https://github.com/tt-a1i/archify/commit/51a291770851ad27a400cca73c753c166b5e0c65)，分别合入 #1098 / #1099 的 Apache-2.0 与软件声明更新。已有产物及测试继续绑定原基线，不能据此宣称已验证新 dev；后续新实验从更新后的 dev 开始。下面的“已推送”只表示远程实验分支可审查，不能等同于合入、发布或人类验收。
+前 30 项首次产出的共同实验基线：[dev `82c7e0f0`](https://github.com/tt-a1i/archify/commit/82c7e0f089a02a4d514714adf37dc2061682da5f)。2026-10-25 15:41（台北）重新核对 GitHub，dev 已推进到 [`3f95f034`](https://github.com/tt-a1i/archify/commit/3f95f0349c8276db71509ca239461b6fe9d00f9f)，main 为 [`51a29177`](https://github.com/tt-a1i/archify/commit/51a291770851ad27a400cca73c753c166b5e0c65)，分别合入 #1098 / #1099 的 Apache-2.0 与软件声明更新。已有产物及测试继续绑定原基线，不能据此宣称已验证新 dev；后续新实验从更新后的 dev 开始；DBML后续更新已纳入新dev，版本与证据另列。下面的“已推送”只表示远程实验分支可审查，不能等同于合入、发布或人类验收。
+
+同次 GitHub 核对中，#1098 / #1099 分别于 15:36:06 / 15:36:19（台北）合入；最新正式 Release 仍为 [v3.2.0](https://github.com/tt-a1i/archify/releases/tag/v3.2.0)（2026-10-19 发布）。分支更新不等于新版本发布。
 
 ## 已推送的 30 个实验
 
@@ -18,7 +20,7 @@
 | [Dependency map](https://github.com/tt-a1i/archify/tree/codex/lab-dependency-map/experiments/dependency-map) | 把 dependency-cruiser 已有报告变成局部原生图，保留未解析与视图外账目 | `2be2ab55` | [官方样例](https://github.com/tt-a1i/archify/blob/codex/lab-dependency-map/experiments/dependency-map/screenshots/official.png) | 6 tests；两图 finalize 四阶段通过；synthetic 的三条绕行建议仍保留 |
 | [Trace waterfall](https://github.com/tt-a1i/archify/tree/codex/lab-trace-waterfall/experiments/trace-waterfall) | 把真实采集的 Chrome X 格式操作区间变成可分享瀑布图 | `8e65f150` | [真实采集](https://github.com/tt-a1i/archify/blob/codex/lab-trace-waterfall/experiments/trace-waterfall/screenshots/workload.png) | 9 tests；四阶段通过；仅 X 子集，不推断调用树或关键路径 |
 | [Markdown outline](https://github.com/tt-a1i/archify/tree/codex/lab-markdown-outline/experiments/markdown-outline) | 标题与源行号直接转原生 Tree，保留文档层级 | `3f156e97` | [原生 PNG 导出](https://github.com/tt-a1i/archify/blob/codex/lab-markdown-outline/experiments/markdown-outline/screenshots/contributing-export.png) | 8 tests；三样例四阶段通过；公开 CONTRIBUTING.md 17 节点，受限 Markdown 子集 |
-| [DBML ERD](https://github.com/tt-a1i/archify/tree/codex/lab-dbml-erd/experiments/dbml-erd) | 从严格 DBML 子集保留键、关系方向和可空性 | `d0472cc3` | [4 表示例](https://github.com/tt-a1i/archify/blob/codex/lab-dbml-erd/experiments/dbml-erd/screenshots/order-payments.png) | 原39 tests/四阶段证据复用；原创synthetic；新增两完整官方fixture均明确拒绝且无输出，保留约束缺口，未扩parser/执行数据库 |
+| [DBML ERD](https://github.com/tt-a1i/archify/tree/codex/lab-dbml-erd/experiments/dbml-erd) | 保留键、关系方向和可空性；接受官方primary key同义写法 | `358c77e0` | [官方主键示例](https://github.com/tt-a1i/archify/blob/codex/lab-dbml-erd/experiments/dbml-erd/primary-key-acceptance/screenshots/primary-key.png) | 已纳新dev；49focused、旧parser两新例失败/新版本通过；完整36B官方输入接受与四阶段通过，127B simple-table仍拒绝；旧拒绝与4表证据不变；未执行数据库 |
 | [Change coupling](https://github.com/tt-a1i/archify/tree/codex/lab-change-coupling/experiments/change-coupling) | 解释 Code Maat CSV 的对称共变分数及原始计数 | `44dc5cbc` | [原生证据图](https://github.com/tt-a1i/archify/blob/codex/lab-change-coupling/experiments/change-coupling/screenshots/coupling.png) | 13 tests；render/finalize 通过，自动 browser 未请求；synthetic，非调用或因果网络 |
 | [Payload delta](https://github.com/tt-a1i/archify/tree/codex/lab-payload-delta/experiments/payload-delta) | 借鉴 PR Lens；把明确提供的 JSON 样本差异放在调用旁，区分 null、missing、类型和数组身份 | `823e8705` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-payload-delta/experiments/payload-delta/screenshots/review.png) | 10 tests；render/finalize 通过，单独 Explainer browser 通过；保留一条段落长度建议，不推断 schema 兼容性 |
 | [Decision thread](https://github.com/tt-a1i/archify/tree/codex/lab-decision-thread/experiments/decision-thread) | 保留异议、撤回与单方决定；决定不会抹掉尚未解决的异议 | `bdbdf9a9` | [实际图片](https://github.com/tt-a1i/archify/blob/codex/lab-decision-thread/experiments/decision-thread/screenshots/sequence.png) | 8 tests；两种产物四阶段通过；原创虚构对话，颜色图例已修正，不推断群体共识 |
@@ -91,7 +93,7 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | --- | --- | --- |
 | 新发现修复 | Explainer静态预览的dashed关系可读性 | 已推送第30个独立分支；实际前后图片、独立复核与局部验证完成，见上表 |
 | 浏览页更新 | 新增两产品修复及两既有分支证据 | 29项新固定快照已完成真实浏览器检查；历史27版证据保留固定提交链接 |
-| 既有实验补证据 | DBML与Plan actions | 两项补证据均已推送：官方DBML明确拒绝；完整plan fixture转换通过；各自边界见README |
+| 既有实验补证据 | DBML与Plan actions | DBML继续补上primary key同义写法接受；原拒绝记录保留；完整plan fixture转换证据不变 |
 | 已排除的重复实现 | Mutation报告reader | 原viewer已有文件搜索、状态筛选、diff、测试关联和单HTML打包；只保留研究，不另建reader |
 | 新dev影响核对 | Apache-2.0与软件声明迁移 | [只读影响记录](base-refresh-1541.md)：导出/生成/打包有变化；旧实验固定版本保留，新整合按需重生与验证 |
 | 保留候选 | Notebook别名与派生值的不同stale预期 | 6项目只读报告完成；目前无实际notebook交接任务，暂不扩成converter |
@@ -136,6 +138,9 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 编译器优化备注、位置与采样来源 | [Compiler remarks small tools](scouts/compiler-remarks-smalltools.md) |
 | 字段offset、padding与对象布局 | [Data layout small tools](scouts/data-layout-smalltools.md) |
 | 相邻项目的审阅小动作 | [Adjacent discovery round 2](scouts/adjacent-discovery-round2.md) |
+| 真实入口流程与仓库导读 | [Repository orientation small tools](scouts/repository-orientation-smalltools.md) |
+| 值、对象身份与局部计算解释 | [Visual explanation small tools](scouts/visual-explanation-smalltools.md) |
+| 渐进解释、分叉判断与表达式上下文 | [Adjacent discovery round 3](scouts/adjacent-discovery-round3.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
 报告中的上游声明、局部源码核实、计划中的实验和已经执行的结果分别标注。未推荐方向也保留原因，避免反复研究；没有把上游宣传、星数或作者截图当作 Archify 的效果证明。
