@@ -1,0 +1,3 @@
+# Preserve exact fixed upstream source, locks and license bytes, including CRLF.
+upstream/** -text
+licenses/** -text

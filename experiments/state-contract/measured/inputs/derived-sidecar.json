@@ -1,0 +1,6 @@
+{
+  "initialState": 1,
+  "expectedEvents": [
+    "toggle"
+  ]
+}

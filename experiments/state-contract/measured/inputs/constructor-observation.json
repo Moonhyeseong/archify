@@ -1,0 +1,9 @@
+{
+  "machineCurrent": "inactive",
+  "stateNames": [
+    "inactive",
+    "active"
+  ],
+  "sidecarPolicy": "initialState maps the constructor current label to one unique actual DAG node ID; expectedEvents enumerates only actual exported edge labels, not independent business requirements or complete external event universe.",
+  "execution": "getDAG(transitions) once; no interpret/send/guard/reducer/invoke/action callback."
+}

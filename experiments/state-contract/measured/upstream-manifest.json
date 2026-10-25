@@ -1,0 +1,70 @@
+{
+  "revision": "5e931694734445b3cd91d20dfc916901035f31c8",
+  "license": "BSD-2-Clause",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1326,
+      "sha256": "610433d7318df7290b0934bbec097e669b5c9d4071129b0343b1694e6d9049c2"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5528,
+      "sha256": "1a15b922e3abb51a8a12b68ec61ee3cf2976e43e10a6293fb6ac5b582d1d8003"
+    },
+    {
+      "path": "package.json",
+      "bytes": 980,
+      "sha256": "6934c24c1d6aaea0b31dfd89d76967e119a812f15bdea2a9ccd94f9a5283210d"
+    },
+    {
+      "path": "yarn.lock",
+      "bytes": 304489,
+      "sha256": "99cec18cdfbd51ddb6376cce81b4cfdc5074c2e507b7e29070cda43513c6a220"
+    },
+    {
+      "path": "test/machines/features.ts",
+      "bytes": 4366,
+      "sha256": "fb43d2906bf9afd85e7c4d17940b2ceb6f1f9e3aa1b5aa125ab89a9e2d14293e"
+    },
+    {
+      "path": "src/lib/dag.ts",
+      "bytes": 5114,
+      "sha256": "6f2fa6778009302cdcf45240146cb5a7aee87777cce7846014c0d2ac5e5ed697"
+    },
+    {
+      "path": "src/lib/nodes.ts",
+      "bytes": 509,
+      "sha256": "fd12f80b7e7bd3f65b6f0a648c2a019155dfe109244579033447b443d7b33a08"
+    },
+    {
+      "path": "src/util.ts",
+      "bytes": 325,
+      "sha256": "f9cb8c672cc8752b671ee752c7f953e5efab5adc96d2ef8b13b55f1fd5516dee"
+    },
+    {
+      "path": "src/types/dag.ts",
+      "bytes": 873,
+      "sha256": "48ec8c61cc03cb2511e6fa15c141f1224d73bb8c6d5032bf5520ad64e4b972cc"
+    },
+    {
+      "path": "src/types/robot3.ts",
+      "bytes": 861,
+      "sha256": "2c5912e33aa130dd4d1292b17bd9775a1f448d37a442ab7887c7cbf4c7757abf"
+    }
+  ],
+  "dependencies": {
+    "robot3": {
+      "version": "0.2.21",
+      "integrity": "sha512-nfUKTrBunRORgP42ovwwJ0MFkkN4V4Cw53zGJvihhWRCm9c5HzgBNh3qZz0UDVBd9WrOj4mEbovkqMkoOwtv1Q==",
+      "tarballUrl": "https://registry.yarnpkg.com/robot3/-/robot3-0.2.21.tgz",
+      "tarballSha256": "8bbc7a54e37e6da7722973e496a32421d8730ff89490c29f4e32fee26457be87"
+    },
+    "typescript": {
+      "version": "4.5.4",
+      "integrity": "sha512-VgYs2A2QIRuGphtzFV7aQJduJ2gyfTljngLzjpfW9FoYZF6xuw1W0vW9ghCKLfcWrCFxK81CSGRAvS1pn4fIUg==",
+      "tarballUrl": "https://registry.yarnpkg.com/typescript/-/typescript-4.5.4.tgz",
+      "tarballSha256": "5b2b014c4d6f9ad4615d7ced8cc32f882a4a96df8213722577b42277afb03cba"
+    }
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "kind": "coordinator browser observations and unedited screenshot bindings; derived summary",
+  "html": [
+    {
+      "path": "output/state-contract.html",
+      "sha256": "30c3f2ac32ea44a13020aac366e5a495f636bbbdd188a1f4c59c9a9237f5b293"
+    },
+    {
+      "path": "output/state-contract.lifecycle.html",
+      "sha256": "044e5d21411e6d052b77371601fb065a6a73e3abc33158a252456bf727d0ef52"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "screenshots/explainer-overview.png",
+      "sha256": "d0e4dd8ec07719979753ff856fa57ab727cdd107e0da4be251bdf5bd5fe1e8db",
+      "bytes": 152346,
+      "imagePixels": [
+        1440,
+        1100
+      ],
+      "viewportCssPixelsBeforeCapture": [
+        1440,
+        1100
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "theme": "light",
+      "style": "Clean",
+      "writtenAtFromFileMtime": "2026-10-25T08:57:22.167851+00:00",
+      "rootViewed": true
+    },
+    {
+      "path": "screenshots/explainer-full.png",
+      "sha256": "a1af4886afa5f9063f1ead012a6b291512cfb9592fb061b443d7923c69d528e4",
+      "bytes": 212220,
+      "imagePixels": [
+        1440,
+        1553
+      ],
+      "viewportCssPixelsBeforeCapture": [
+        1440,
+        1100
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "theme": "light",
+      "style": "Clean",
+      "writtenAtFromFileMtime": "2026-10-25T08:57:22.258422+00:00",
+      "rootViewed": true
+    },
+    {
+      "path": "screenshots/lifecycle.png",
+      "sha256": "c6720a0af76f4c86edc1a61e5fe418a6a9aeb79e47eefd74215fb1bbf895c444",
+      "bytes": 88219,
+      "imagePixels": [
+        1440,
+        1337
+      ],
+      "viewportCssPixelsBeforeCapture": [
+        1440,
+        1100
+      ],
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "theme": "light",
+      "style": "Blueprint",
+      "writtenAtFromFileMtime": "2026-10-25T08:57:44.392121+00:00",
+      "rootViewed": true
+    }
+  ],
+  "observedAt": [
+    "2026-10-25T08:57:22.258Z",
+    "2026-10-25T08:57:44.392Z"
+  ],
+  "observations": {
+    "explainer": {
+      "observedAt": "2026-10-25T08:57:22.258Z",
+      "title": "Which state-event pairs are declared? · Archify",
+      "width": 1440,
+      "height": 1100,
+      "documentHeight": 1461,
+      "scope": true,
+      "tableRows": [
+        [
+          [
+            "State ID and label",
+            "\"toggle\""
+          ],
+          [
+            "1 \"inactive\"",
+            "declared"
+          ],
+          [
+            "2 \"active\"",
+            "declared"
+          ]
+        ],
+        [
+          [
+            "Edge index",
+            "From ID",
+            "Event",
+            "To ID"
+          ],
+          [
+            "0",
+            "1",
+            "\"toggle\"",
+            "2"
+          ],
+          [
+            "1",
+            "2",
+            "\"toggle\"",
+            "1"
+          ]
+        ]
+      ],
+      "headings": [
+        "Answer",
+        "What does the export declare?",
+        "Which observed pairs are declared?",
+        "Where do declared events point?",
+        "What produced this export?",
+        "What remains unknown?",
+        "Sources",
+        "",
+        "Ask"
+      ],
+      "sourceLinks": [
+        "https://github.com/jbreckmckye/robot3-viz/blob/5e931694734445b3cd91d20dfc916901035f31c8/test/machines/features.ts",
+        "https://github.com/tt-a1i/archify"
+      ]
+    },
+    "native": {
+      "observedAt": "2026-10-25T08:57:44.392Z",
+      "title": "Declared state transitions Diagram",
+      "width": 1440,
+      "height": 1100,
+      "documentHeight": 1337,
+      "theme": "light",
+      "bodyBackground": "rgb(237, 247, 250)",
+      "svgTitles": [
+        null
+      ],
+      "texts": [
+        "inactive",
+        "active",
+        "toggle",
+        "toggle",
+        "Legend",
+        "initial state",
+        "1",
+        "neutral",
+        "1"
+      ],
+      "controls": [
+        "Visual style: Blueprint. Choose visual style",
+        "Visual style",
+        "Resume motion",
+        "Vector and motion",
+        "100% · Zoom in again to reveal tags and annotations. Reset diagram view"
+      ]
+    }
+  },
+  "rawBindings": [
+    {
+      "name": "explainer-checks.json",
+      "sha256": "92305160375d16a9ce9f363bba113f39b9e2861f9b3446df23d4094019ec1e8b"
+    },
+    {
+      "name": "native-checks.json",
+      "sha256": "d1e3778fe2478135896ce5c25e25ca0c58c2f019bba7a0b714f5b032b52b0f8e"
+    }
+  ],
+  "limits": [
+    "Actual Chromium mouse and viewport capture, separate from automatic finalize browser gates.",
+    "No machine events, upstream interaction, external link opening, assistive technology or human acceptance performed in this browser pass.",
+    "Full-page capture image dimensions are stored separately from the viewport set before capture."
+  ],
+  "pathBase": "experiments/state-contract/measured"
+}

@@ -2,7 +2,7 @@
 
 消费已经冻结的 flat state/event JSON 和独立 sidecar，生成原生 Lifecycle 与带事件矩阵的 Explainer。目标是让读者核对事件声明遗漏，不是运行状态机、验证 guards 或判定业务成功。
 
-本实验只新增此目录，不改主 CLI、schema、renderer、Viewer、CI、ZIP 或 live Skill。Archify 基线 `82c7e0f089a02a4d514714adf37dc2061682da5f`；分支 `codex/lab-state-contract`。代码独立实现，无新增 runtime 依赖。
+本实验只新增此目录，不改主 CLI、schema、renderer、Viewer、CI、ZIP 或 live Skill。首次 synthetic 基线 `82c7e0f089a02a4d514714adf37dc2061682da5f`；分支 `codex/lab-state-contract`。新增实导出证据使用合入固定 dev `67f12389212c54b3122da60e2813c7f8dab7ab2f` 后的 merge HEAD `4d240bb034f55594e2d036fd1de749ecfef0f9e9`，旧输入、产物与证据字节不变。代码独立实现，无新增 runtime 依赖。
 
 ## 输入来自什么合同
 
@@ -12,7 +12,7 @@
 - [`src/lib/dag.ts`](https://github.com/jbreckmckye/robot3-viz/blob/5e931694734445b3cd91d20dfc916901035f31c8/src/lib/dag.ts)：`getDAG` 将 guard/reducer 节点及 immediate 边纳入输出；这些节点标签不足以恢复函数逻辑。导出根没有初始状态字段。
 - [`src/lib/nodes.ts`](https://github.com/jbreckmckye/robot3-viz/blob/5e931694734445b3cd91d20dfc916901035f31c8/src/lib/nodes.ts)：state label 来自机器状态名，ID 是数值身份，不能依靠节点排序猜初态。
 
-没有 import/require 上游机器或运行其 JS。上游测试用 TS 调用机器后检验 partial objects，未发现可安全直接复制为完整冻结导出的纯 JSON fixture，因此没有假称已获取真实上游运行导出。本目录的 [toggle.export.json](fixtures/toggle.export.json) 是**原创 synthetic** 数据，只采用上游 flat R3Dag 形状；[toggle.sidecar.json](fixtures/toggle.sidecar.json) 是本实验新增的显式输入合同，不属于上游格式。没有复制上游 parser、源码或示例资产；BSD 许可链接用于准确说明来源。
+首次 synthetic 阶段没有 import/require 上游机器或运行其 JS。上游测试用 TS 调用机器后检验 partial objects，未发现可安全直接复制为完整冻结导出的纯 JSON fixture，因此没有假称已获取真实上游运行导出。本目录的 [toggle.export.json](fixtures/toggle.export.json) 是**原创 synthetic** 数据，只采用上游 flat R3Dag 形状；[toggle.sidecar.json](fixtures/toggle.sidecar.json) 是本实验新增的显式输入合同，不属于上游格式。没有复制上游 parser、源码或示例资产；BSD 许可链接用于准确说明来源。
 
 ```json
 {
@@ -23,7 +23,7 @@
 
 sidecar 的 `initialState` 必填，直接使用数字 node ID；`expectedEvents` 必填，事件名按原字节精确比较。可选 `readingPath` 是数字 ID 数组，必须从指定初态开始且每步有真实声明边。不提供时沿输入边顺序选择未访问的出边，得到一个用于排版的简单阅读路径。两种方式都不会创建缺失边。
 
-## 当前真实产物
+## 首次 synthetic 的实际产物
 
 - [native Lifecycle JSON](output/state-contract.lifecycle.json)：2 states，2 条相反方向的 toggle 边，循环没有被拓扑排序删掉。
 - [native Lifecycle HTML](output/state-contract.lifecycle.html)：原生 Viewer，可聚焦核对两条真实边。
@@ -88,7 +88,7 @@ CLI 只接受已冻结的两个 JSON 文件，不 import 模块。输出目录�
 
 首次 Explainer draft 因结论被拆成两段而被公开 parser 拒绝，改为一段后重跑；没有绕过原生解析器。原生 Lifecycle 已实际 finalize 并运行浏览器检查。Explainer 普通 finalize 的浏览器门禁默认不运行，额外显式请求的结果单独记录，不能把默认未运行写成通过。
 
-本轮没有真实上游机器导出验收、真实业务事件全集或运行 trace；仅能证明对冻结 flat 输入的确定性投影。未知 guards 也不提供“unknown”假格：含 guard 的整个输入直接拒绝。若需要 rich 机器，先另定可表达合同，不把它们擦掉继续画图。没有改动共享产品代码，因此没有运行全仓库测试或宣称支持所有机器。
+首次 synthetic 阶段没有真实上游机器导出；新增 [measured 证据](measured/README.md) 从完整官方机器 fixture 实际运行 getDAG 后，被同一适配器接受。它不包含真实业务事件全集、事件执行或运行 trace；只证明对该次实际 flat 导出的确定性投影。未知 guards 也不提供“unknown”假格：含 guard 的整个输入直接拒绝。若需要 rich 机器，先另定可表达合同，不把它们擦掉继续画图。没有改动共享产品代码，因此没有运行全仓库测试或宣称支持所有机器。
 
 ## Actual browser images
 
@@ -101,3 +101,17 @@ Both toggle directions are visible, and the matrix retains two reset cells as un
 Capture settings and current HTML/image hashes are in [capture.json](screenshots/capture.json). These are agent-captured and agent-inspected images; human acceptance is pending. Original finalize visualReview fields remain unchanged.
 
 AI assistance: Codex and GPT-6.1 Sol subagents performed investigation, implementation, focused validation, review and documentation. The repository owner has not yet accepted this experimental branch.
+
+
+## 新增：固定官方 toggle fixture 的受控实导出
+
+[measured/README.md](measured/README.md) 保留完整实际 stdout、独立 derived sidecar、必要完整上游源码/许可/锁、局部复现脚本与同源生成 HTML。原上游没有提交 flat JSON；这份 JSON 是本轮实际 getDAG 输出，不是上游原有 fixture，也不是手工重建 ID。
+
+完整 features 模块构造了全部导出及嵌套机器，只将 transitions 传入 getDAG；没有 interpret/send、状态 entry 或 guard/reducer/action/invoke callback。sidecar 的事件观察集只有 toggle，因此新矩阵为 2 declared / 0 undeclared；它不回答 reset 或完整业务事件合同。首次 synthetic 的两个 reset undeclared 格继续保留其原始身份。
+
+
+新增 measured 的实际图（旧 synthetic 图不替代本次证据）：[全文](measured/screenshots/explainer-full.png) / [capture 绑定](measured/screenshots/capture.json)。Root 已在 1440×1100 浅色实际查看；全文图片像素高另行记录，没有运行机器事件。
+
+![官方 fixture 实导出 Explainer](measured/screenshots/explainer-overview.png)
+
+![官方 fixture 实导出 Lifecycle](measured/screenshots/lifecycle.png)
