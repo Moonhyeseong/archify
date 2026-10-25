@@ -1,0 +1,21 @@
+{
+  "kind": "fixed source and rendered-content audit; not a SQL parser, evaluator or test run",
+  "status": "pass",
+  "upstreamExecuted": false,
+  "checks": [
+    "sixteen complete original Git blobs and MIT license",
+    "both first official result sections and three grouped witnesses exact",
+    "complete seven-row seed and shared first-query clauses; no SQL evaluated",
+    "complete input, all nine declared sources, in-bounds excerpts and no diagram",
+    "actual rendered three code blocks and three non-flattened table groups",
+    "public artifact has no private paths and execution boundary is explicit"
+  ],
+  "input": {
+    "bytes": 6958,
+    "sha256": "d25e3b0970f83639e5dafe9251bfdb807c1186808f338244a72892168473a515"
+  },
+  "html": {
+    "bytes": 354098,
+    "sha256": "2ab6b8e5079800ebdc69d16fa4ad206312c3a12c1bf1b3fdbbed1de9ac5a2fab"
+  }
+}

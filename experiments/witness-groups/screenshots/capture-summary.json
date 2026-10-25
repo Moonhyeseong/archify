@@ -1,0 +1,177 @@
+{
+  "kind": "derived selected root browser observations; not raw receipts or database output",
+  "artifact": {
+    "path": "explainer.html",
+    "bytes": 354098,
+    "sha256": "2ab6b8e5079800ebdc69d16fa4ad206312c3a12c1bf1b3fdbbed1de9ac5a2fab"
+  },
+  "rootViewedAllSelectedPngs": true,
+  "pictures": [
+    {
+      "path": "screenshots/desktop-light.png",
+      "bytes": 322794,
+      "sha256": "251c04db9be3e44b027149cc3ff0ac96f927d552e12db99c06e5e65a02e44f7f",
+      "pngDimensions": [
+        1440,
+        1855
+      ],
+      "viewportCssPixels": [
+        1440,
+        1100
+      ],
+      "theme": "light",
+      "rootViewed": true,
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "screenshots/why-source-dark.png",
+      "bytes": 210262,
+      "sha256": "5ddd57384cd793c547e8ae8cc35981b833d5b20c4633f5e6c1c64bfe5f882ff9",
+      "pngDimensions": [
+        1440,
+        1100
+      ],
+      "viewportCssPixels": [
+        1440,
+        1100
+      ],
+      "theme": "dark",
+      "rootViewed": true,
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "screenshots/mobile-light.png",
+      "bytes": 323771,
+      "sha256": "e9780e2ffff2b96093eb820ed1e4f2e83b57fe70359a45b603a0bffa26fe2ba0",
+      "pngDimensions": [
+        390,
+        3073
+      ],
+      "viewportCssPixels": [
+        390,
+        844
+      ],
+      "theme": "light",
+      "rootViewed": true,
+      "originalBytesUnchanged": true
+    },
+    {
+      "path": "screenshots/mobile-why-right.png",
+      "bytes": 85381,
+      "sha256": "50185b123d910d243013ecb00dcd47567bd4d510ba7252802235e6e44217dff7",
+      "pngDimensions": [
+        390,
+        844
+      ],
+      "viewportCssPixels": [
+        390,
+        844
+      ],
+      "theme": "light",
+      "rootViewed": true,
+      "originalBytesUnchanged": true
+    }
+  ],
+  "rawObservationHashes": [
+    {
+      "basename": "desktop-observation.json",
+      "bytes": 1174,
+      "sha256": "496a768a3d55b91771288d2a76d6aa1d7653662e07b3a5fab933824b201c7346",
+      "rawNotRepublished": true
+    },
+    {
+      "basename": "why-source-observation.json",
+      "bytes": 1044,
+      "sha256": "1d1edd30a6892a8a81a58537d6e6abb00d10ce0d34e673b0edde5acd5b3df011",
+      "rawNotRepublished": true
+    },
+    {
+      "basename": "mobile-observation.json",
+      "bytes": 1518,
+      "sha256": "3d131d408f7dc13c9fd3da1295c4097ebcb08b720e9ffb2cba97227f9248bf88",
+      "rawNotRepublished": true
+    },
+    {
+      "basename": "mobile-why-scroll-observation.json",
+      "bytes": 3374,
+      "sha256": "7c5839dee936e7877cd7319de994ce69e4d92d79efd4a3239785c94d4b6561b1",
+      "rawNotRepublished": true
+    }
+  ],
+  "desktop": {
+    "viewport": [
+      1440,
+      1100
+    ],
+    "theme": "light",
+    "pageWidth": 1440,
+    "tableClientScroll": [
+      1238,
+      1238
+    ],
+    "codeTextsExactlyMatchDeclaredPreparedExcerpts": true
+  },
+  "whySource": {
+    "actionReportedByRoot": "Clicked dark theme and #groups anchor, then pointer-hovered #pair-1 a[href=\"#source-why\"]. No external URL activation.",
+    "theme": "dark",
+    "viewport": [
+      1440,
+      1100
+    ],
+    "hash": "#groups",
+    "preparedSourceIdentity": {
+      "path": "test/expected/sr_why.out",
+      "lines": [
+        5,
+        9
+      ],
+      "revision": "96227fbfc6dd6084d6041f4a11c59093e8155520"
+    },
+    "completeNumberedSourceCardTextMatched": true,
+    "observedCardText": "5city|why\n6Berlin|{{Ellen,Susan}}\n7New York|{{John,Paul}}\n8Paris|{{Dave,Magdalen},{Dave,Nancy},{Magdalen,Nancy}}\n9(3 rows)"
+  },
+  "mobile": {
+    "viewport": [
+      390,
+      844
+    ],
+    "theme": "light",
+    "pageWidth": 390,
+    "tableClientScroll": [
+      332,
+      332
+    ],
+    "preClientScroll": [
+      [
+        330,
+        330
+      ],
+      [
+        330,
+        411
+      ],
+      [
+        330,
+        368
+      ]
+    ],
+    "codeTextsExactlyMatchDeclaredPreparedExcerpts": true,
+    "whyWheel": {
+      "actionReportedByRoot": "actual wheel160 then positive scrollLeft wait in same call",
+      "scrollLeftBefore": 0,
+      "scrollLeftAfter": 81,
+      "clientWidth": 330,
+      "scrollWidth": 411,
+      "pageWidthAfter": 390,
+      "visualObservationReportedByRoot": "Right end visible; left city/label portion clipped by code viewport. Not a touch gesture."
+    }
+  },
+  "limits": [
+    "Selected root pointer/theme/anchor/hover/mouse-wheel observations, not complete browser gate.",
+    "No keyboard, touch, assistive technology, OS clipboard, external source link, database, upstream query or export execution.",
+    "Whole page and witness table fit 390px; why and query pre blocks still require local horizontal scroll.",
+    "Four raw observation JSON files remain outside checkout; public record is selected fields plus original hashes.",
+    "Early desktop-first/mobile-first private observations and images are not selected for publication.",
+    "No user-learning, performance or real-world-cause acceptance."
+  ]
+}

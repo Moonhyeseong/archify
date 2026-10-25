@@ -1,0 +1,137 @@
+{
+  "kind": "complete original Git objects; source material, never executed",
+  "repository": "https://github.com/PierreSenellart/provsql",
+  "revision": "96227fbfc6dd6084d6041f4a11c59093e8155520",
+  "license": "MIT; complete LICENSE retained",
+  "execution": "No SQL, database, upstream tests, Python, extension or compiled evaluator run. Git objects fetched without checkout.",
+  "files": [
+    {
+      "path": "upstream/LICENSE",
+      "upstreamPath": "LICENSE",
+      "bytes": 1083,
+      "sha256": "a7256d215dc8c236c0baa6c8095d6b31697593e979fadf656fb8536ef7332cb0",
+      "gitBlob": "c12f4e81a4c4309b63d10d40bdb353b6bfdb7de7",
+      "sourceUrl": "https://github.com/PierreSenellart/provsql/blob/96227fbfc6dd6084d6041f4a11c59093e8155520/LICENSE"
+    },
+    {
+      "path": "upstream/test/sql/setup.sql",
+      "upstreamPath": "test/sql/setup.sql",
+      "bytes": 777,
+      "sha256": "40b9aeb12870ada67bb6e376c42877e91e6e1b5a860c43bd6487c928a48bdc1f",
+      "gitBlob": "fe08f09d8cbde5a0a754a4671339fb1376f392b0",
+      "sourceUrl": "https://github.com/PierreSenellart/provsql/blob/96227fbfc6dd6084d6041f4a11c59093e8155520/test/sql/setup.sql"
+    },
+    {
+      "path": "upstream/test/sql/add_provenance.sql",
+      "upstreamPath": "test/sql/add_provenance.sql",
+      "bytes": 3019,
+      "sha256": "562c0b2f692240ff7ad217fad27da2f9bd6e92a15f408b35ee3756ec54768c93",
+      "gitBlob": "20816f3e9c72ac4c85eb25bf257214f7839a912e",
+      "sourceUrl": "https://github.com/PierreSenellart/provsql/blob/96227fbfc6dd6084d6041f4a11c59093e8155520/test/sql/add_provenance.sql"
+    },
+    {
+      "path": "upstream/test/sql/remove_add_provenance.sql",
+      "upstreamPath": "test/sql/remove_add_provenance.sql",
+      "bytes": 215,
+      "sha256": "66171af318ece005fda74755a2111bd5a941e9babb2350f8b3c12b8dfb786789",
+      "gitBlob": "4aaf6c3dfd07153255943c2e937b916df140e4d6",
+      "sourceUrl": "https://github.com/PierreSenellart/provsql/blob/96227fbfc6dd6084d6041f4a11c59093e8155520/test/sql/remove_add_provenance.sql"
+    },
+    {
+      "path": "upstream/test/sql/create_provenance_mapping.sql",
+      "upstreamPath": "test/sql/create_provenance_mapping.sql",
+      "bytes": 2118,
+      "sha256": "30d0b5044aa62bdca58b5885a617a4fec371778ac81ae3faf8708c2ef9082152",
+      "gitBlob": "dbcebb176463385dbd3be6b37df7d3b369456df3",
+      "sourceUrl": "https://github.com/PierreSenellart/provsql/blob/96227fbfc6dd6084d6041f4a11c59093e8155520/test/sql/create_provenance_mapping.sql"
+    },
+    {
+      "path": "upstream/test/sql/sr_which.sql",
+      "upstreamPath": "test/sql/sr_which.sql",
+      "bytes": 1550,
+      "sha256": "b2fb705be163bd51bac91bdd8664f9472d4258e95d62fa66bfb6934f5701bb7d",
+      "gitBlob": "43c06863925d5411c76629af323627822e3213e5",
+      "sourceUrl": "https://github.com/PierreSenellart/provsql/blob/96227fbfc6dd6084d6041f4a11c59093e8155520/test/sql/sr_which.sql"
+    },
+    {
+      "path": "upstream/test/expected/sr_which.out",
+      "upstreamPath": "test/expected/sr_which.out",
+      "bytes": 498,
+      "sha256": "c715e9770538471fd6afcf8b5ea42ef3641f541bd763e142c2105c9b23956273",
+      "gitBlob": "5c267999ab5b58a4a9a59963d93ab9f2a54def87",
+      "sourceUrl": "https://github.com/PierreSenellart/provsql/blob/96227fbfc6dd6084d6041f4a11c59093e8155520/test/expected/sr_which.out"
+    },
+    {
+      "path": "upstream/test/sql/sr_why.sql",
+      "upstreamPath": "test/sql/sr_why.sql",
+      "bytes": 1041,
+      "sha256": "31279c2a70307e5a8ec66212cd7c430e22267f1062003766929bf1749d2503b1",
+      "gitBlob": "6fc3576d3ebadac6bae96dec3047d1aa09341323",
+      "sourceUrl": "https://github.com/PierreSenellart/provsql/blob/96227fbfc6dd6084d6041f4a11c59093e8155520/test/sql/sr_why.sql"
+    },
+    {
+      "path": "upstream/test/expected/sr_why.out",
+      "upstreamPath": "test/expected/sr_why.out",
+      "bytes": 636,
+      "sha256": "0ee4c42a538fd1ddf0a25347e39cad2c0e82f17a8e08955f765f73d5e514f372",
+      "gitBlob": "56e6d625354a87137e59fc385903c29fcbe4fc55",
+      "sourceUrl": "https://github.com/PierreSenellart/provsql/blob/96227fbfc6dd6084d6041f4a11c59093e8155520/test/expected/sr_why.out"
+    },
+    {
+      "path": "upstream/test/schedule.common",
+      "upstreamPath": "test/schedule.common",
+      "bytes": 8241,
+      "sha256": "8681ade2054f156f4e2e898e8188ebdb72ae79402921c9e761445ff1c1e1b5af",
+      "gitBlob": "4c56af618e83f4129e3cf4fa0c16864a19124128",
+      "sourceUrl": "https://github.com/PierreSenellart/provsql/blob/96227fbfc6dd6084d6041f4a11c59093e8155520/test/schedule.common"
+    },
+    {
+      "path": "upstream/Makefile.internal",
+      "upstreamPath": "Makefile.internal",
+      "bytes": 12071,
+      "sha256": "fb551c89b3375ae5daa3012634bf6283f9c04f3aa56c2fc2c805fa5ec371a007",
+      "gitBlob": "960eb8a63e228f5d4f3777d3f11c5f0b0f3e0976",
+      "sourceUrl": "https://github.com/PierreSenellart/provsql/blob/96227fbfc6dd6084d6041f4a11c59093e8155520/Makefile.internal"
+    },
+    {
+      "path": "upstream/sql/provsql.common.sql",
+      "upstreamPath": "sql/provsql.common.sql",
+      "bytes": 532519,
+      "sha256": "807a543bc5daf9a5a3ef695a72ed14c1c952bb30f0183f963c239a5818bbb730",
+      "gitBlob": "ad67bf0beb601169bf331b4ba2ab393ef342def1",
+      "sourceUrl": "https://github.com/PierreSenellart/provsql/blob/96227fbfc6dd6084d6041f4a11c59093e8155520/sql/provsql.common.sql"
+    },
+    {
+      "path": "upstream/src/provenance_evaluate_compiled.cpp",
+      "upstreamPath": "src/provenance_evaluate_compiled.cpp",
+      "bytes": 57305,
+      "sha256": "452d7ce677684beafe1a72daf412827c0bb8c7f11490c83b6f93a020d0e2dde6",
+      "gitBlob": "b6158010efe031a8b001c0caa06a4d02cb97e0e3",
+      "sourceUrl": "https://github.com/PierreSenellart/provsql/blob/96227fbfc6dd6084d6041f4a11c59093e8155520/src/provenance_evaluate_compiled.cpp"
+    },
+    {
+      "path": "upstream/src/semiring/Why.h",
+      "upstreamPath": "src/semiring/Why.h",
+      "bytes": 6214,
+      "sha256": "83340a655b3ae261eab384a25bd40deb8b60357e23ff3bd0529d1c8f14a82212",
+      "gitBlob": "99e82489451fa6bffcd1a2ee23ecf1e81124ab43",
+      "sourceUrl": "https://github.com/PierreSenellart/provsql/blob/96227fbfc6dd6084d6041f4a11c59093e8155520/src/semiring/Why.h"
+    },
+    {
+      "path": "upstream/src/semiring/Which.h",
+      "upstreamPath": "src/semiring/Which.h",
+      "bytes": 6425,
+      "sha256": "37d71f7c086ac51b6c9c42ecfdeca7965a4988b015d196f2bf0c04d904ee26b8",
+      "gitBlob": "138ca94d5795424bd9e3cdc785d17e2143784379",
+      "sourceUrl": "https://github.com/PierreSenellart/provsql/blob/96227fbfc6dd6084d6041f4a11c59093e8155520/src/semiring/Which.h"
+    },
+    {
+      "path": "upstream/doc/source/user/semirings.rst",
+      "upstreamPath": "doc/source/user/semirings.rst",
+      "bytes": 28785,
+      "sha256": "12efc45c36f137d6a07a558c81a2483280037c0ee57d2eee8c62e6c17dae2adc",
+      "gitBlob": "d3494eeca3d0f960a3c67a4ee3b9d0eda927e61e",
+      "sourceUrl": "https://github.com/PierreSenellart/provsql/blob/96227fbfc6dd6084d6041f4a11c59093e8155520/doc/source/user/semirings.rst"
+    }
+  ]
+}

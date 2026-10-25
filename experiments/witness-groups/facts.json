@@ -1,0 +1,43 @@
+{
+  "kind": "authored fixed official expected reading; not execution or SQL evaluation",
+  "upstreamRevision": "96227fbfc6dd6084d6041f4a11c59093e8155520",
+  "city": "Paris",
+  "whichLabels": [
+    "Dave",
+    "Magdalen",
+    "Nancy"
+  ],
+  "whyGroups": [
+    [
+      "Dave",
+      "Magdalen"
+    ],
+    [
+      "Dave",
+      "Nancy"
+    ],
+    [
+      "Magdalen",
+      "Nancy"
+    ]
+  ],
+  "parisSeedLines": {
+    "Dave": 17,
+    "Magdalen": 19,
+    "Nancy": 20
+  },
+  "whichExpectedRange": [
+    5,
+    9
+  ],
+  "whyExpectedRange": [
+    5,
+    9
+  ],
+  "limits": [
+    "Names are unique labels in this fixture, not general tuple identities.",
+    "Three witness groups are not three result rows, executions, durations or probabilities.",
+    "No minimal-cause or real-world causal claim; no upstream SQL, database or evaluator run.",
+    "Shared regression prerequisites are retained, not a standalone database environment."
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "diagram_type": "explainer",
+  "meta": {
+    "id": "witness-groups",
+    "title": "三个人，还是三组？",
+    "locale": "zh-CN",
+    "style": "clean",
+    "quality_profile": "standard",
+    "repository": {
+      "url": "https://github.com/PierreSenellart/provsql",
+      "revision": "96227fbfc6dd6084d6041f4a11c59093e8155520"
+    }
+  },
+  "answer": {
+    "summary": "Paris 的 why 保留三组两人见证；which 只列出三个来源标签。",
+    "reasons": [
+      "组内标签共同见证一项推导；组间是替代组合。",
+      "同一查询按 city 分组，Paris 仍是一个结果。",
+      "这是官方测试 expected，不是本轮数据库运行。"
+    ],
+    "scope": "固定 ProvSQL 测试 · 共享输入 · 未运行 SQL / 数据库"
+  },
+  "panels": [
+    {
+      "id": "groups",
+      "title": "三组分别是谁？",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "witness-table",
+          "type": "comparison",
+          "labelColumn": "见证组",
+          "columns": [
+            "共同输入标签",
+            "原文核对"
+          ],
+          "rows": [
+            {
+              "id": "pair-1",
+              "label": "组合 1",
+              "cells": [
+                {
+                  "text": "Dave + Magdalen"
+                },
+                {
+                  "text": "[why 的 Paris 行](source:why) · [输入记录](source:seed)"
+                }
+              ]
+            },
+            {
+              "id": "pair-2",
+              "label": "组合 2",
+              "cells": [
+                {
+                  "text": "Dave + Nancy"
+                },
+                {
+                  "text": "[why 的 Paris 行](source:why) · [输入记录](source:seed)"
+                }
+              ]
+            },
+            {
+              "id": "pair-3",
+              "label": "组合 3",
+              "cells": [
+                {
+                  "text": "Magdalen + Nancy"
+                },
+                {
+                  "text": "[why 的 Paris 行](source:why) · [输入记录](source:seed)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "group-scope",
+          "type": "prose",
+          "text": "三组是替代见证，不是三个输出行或三次执行。平面清单丢掉了分组；它不表示三人必须一起构成唯一组合。"
+        },
+        {
+          "id": "label-scope",
+          "type": "prose",
+          "text": "这些名字在此受控 fixture 中唯一，只作输入标签，不是一般数据的稳定身份。没有最小原因、概率或现实因果结论。"
+        }
+      ]
+    },
+    {
+      "id": "which-output",
+      "title": "which：来源清单",
+      "span": 6,
+      "blocks": [
+        {
+          "id": "which-code",
+          "type": "code",
+          "source": "which",
+          "language": "text"
+        },
+        {
+          "id": "which-meaning",
+          "type": "prose",
+          "text": "原 expected 的首个结果只给一组贡献标签。它没有保留组内与组间的区别。[投影含义](source:which-rule)"
+        }
+      ]
+    },
+    {
+      "id": "why-output",
+      "title": "why：保留分组",
+      "span": 6,
+      "blocks": [
+        {
+          "id": "why-code",
+          "type": "code",
+          "source": "why",
+          "language": "text"
+        },
+        {
+          "id": "why-meaning",
+          "type": "prose",
+          "text": "花括号内是一组共同见证；外层保留三种组合。两段原文的“3 rows”均指 Berlin、New York、Paris 三个城市结果。[投影含义](source:why-rule)"
+        }
+      ]
+    },
+    {
+      "id": "query",
+      "title": "查询与证据边界",
+      "span": 12,
+      "blocks": [
+        {
+          "id": "query-code",
+          "type": "code",
+          "source": "query",
+          "language": "sql"
+        },
+        {
+          "id": "query-meaning",
+          "type": "prose",
+          "text": "两份查询的 FROM、WHERE、GROUP BY 相同，投影函数分别为 sr_which / sr_why。这里展示 why 的首个 SELECT。[which 查询](source:which-query)"
+        },
+        {
+          "id": "shared-state",
+          "type": "prose",
+          "text": "personnel 的七条输入及名称映射由前置脚本建立；regression 依调度共享状态。完整脚本、expected 与许可在实验目录保留，不冒充独立可运行环境。[输入](source:seed) [调度](source:schedule)"
+        },
+        {
+          "id": "producer",
+          "type": "prose",
+          "text": "producer 对 why 保留见证集合，对 which 合并标签；本页只解释该固定 expected，没有调用数据库、上游测试或求值器。[实现分派](source:consumer)"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "which",
+      "title": "完整首结果 · which",
+      "path": "test/expected/sr_which.out",
+      "lines": [
+        5,
+        9
+      ],
+      "revision": "96227fbfc6dd6084d6041f4a11c59093e8155520"
+    },
+    {
+      "id": "why",
+      "title": "完整首结果 · why",
+      "path": "test/expected/sr_why.out",
+      "lines": [
+        5,
+        9
+      ],
+      "revision": "96227fbfc6dd6084d6041f4a11c59093e8155520"
+    },
+    {
+      "id": "query",
+      "title": "why 首个 SELECT",
+      "path": "test/sql/sr_why.sql",
+      "lines": [
+        4,
+        10
+      ],
+      "revision": "96227fbfc6dd6084d6041f4a11c59093e8155520"
+    },
+    {
+      "id": "which-query",
+      "title": "which 首个 SELECT",
+      "path": "test/sql/sr_which.sql",
+      "lines": [
+        4,
+        10
+      ],
+      "revision": "96227fbfc6dd6084d6041f4a11c59093e8155520"
+    },
+    {
+      "id": "seed",
+      "title": "七条官方输入记录",
+      "path": "test/sql/add_provenance.sql",
+      "lines": [
+        14,
+        21
+      ],
+      "revision": "96227fbfc6dd6084d6041f4a11c59093e8155520"
+    },
+    {
+      "id": "schedule",
+      "title": "共享前置与投影测试调度",
+      "path": "test/schedule.common",
+      "lines": [
+        23,
+        46
+      ],
+      "revision": "96227fbfc6dd6084d6041f4a11c59093e8155520"
+    },
+    {
+      "id": "why-rule",
+      "title": "why 保留见证组",
+      "path": "doc/source/user/semirings.rst",
+      "lines": [
+        164,
+        179
+      ],
+      "revision": "96227fbfc6dd6084d6041f4a11c59093e8155520"
+    },
+    {
+      "id": "which-rule",
+      "title": "which 合并来源标签",
+      "path": "doc/source/user/semirings.rst",
+      "lines": [
+        217,
+        230
+      ],
+      "revision": "96227fbfc6dd6084d6041f4a11c59093e8155520"
+    },
+    {
+      "id": "consumer",
+      "title": "why / which 实现分派",
+      "path": "src/provenance_evaluate_compiled.cpp",
+      "lines": [
+        506,
+        508
+      ],
+      "revision": "96227fbfc6dd6084d6041f4a11c59093e8155520"
+    }
+  ]
+}
