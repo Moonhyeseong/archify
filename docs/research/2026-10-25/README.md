@@ -65,6 +65,8 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
+| Finder result descriptions | 现有可见meta关联到按钮description | 原有measured Waterfall八个同名结果真实AX复现；候选8条描述与键盘选中已实测，生成/包与独立review收尾中 |
+| Delivery witness | Moirae官方模拟fixture中同消息同t的两次deliver | 用现有Sequence/Explainer保留seq、dup与原patch，零共享代码；来源和表达独立审查中 |
 | 后续发现 | 源码证据、键盘阅读与执行步骤可视化 | 局部上下文与profile阅读调研已发布，未发现立即实施的缺口；新一轮继续寻找具体机制 |
 
 ## 一手调研报告
@@ -89,6 +91,9 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 架构约束、违规见证与检查范围 | [Architecture constraints small tools](scouts/architecture-constraints-smalltools.md) |
 | 局部上下文、路径与折叠的负面筛选 | [Local context small tools](scouts/local-context-smalltools.md) |
 | 性能图计量、比较与异步归因 | [Profile reading small tools](scouts/profile-reading-smalltools.md) |
+| 符号、调用点与来源证据 | [Symbol evidence small tools](scouts/symbol-evidence-smalltools.md) |
+| 图的可访问性、身份与键盘阅读 | [Accessible graph small tools](scouts/accessible-graph-smalltools.md) |
+| 执行步骤、消息投递与逻辑顺序 | [Execution reading small tools](scouts/execution-reading-smalltools.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
 报告中的上游声明、局部源码核实、计划中的实验和已经执行的结果分别标注。未推荐方向也保留原因，避免反复研究；没有把上游宣传、星数或作者截图当作 Archify 的效果证明。
