@@ -5,12 +5,12 @@
   "repository": "https://github.com/tt-a1i/archify",
   "hub": {
     "path": "docs/research/2026-10-25/README.md",
-    "commit": "5c036016395a51e7737f60a4b4e674bf2054931f",
-    "sha256": "cf65626e5c905f9f03b9cde20a2b6fea62279251e7afa16a2b8398fc1c845ac3",
-    "bytes": 32259,
-    "gitBlob": "c9ff6298179e5b31c9cd901f7944e6cb8cf59030"
+    "commit": "f3e91a0f3d0461a06e09841fc581b6aeaaa08453",
+    "sha256": "997205a880c32cbeefd4f894fefd2b64f13e08f9cbe02e2709d90ad44f434d4d",
+    "bytes": 35748,
+    "gitBlob": "98984013cee0d4c51ace3e7e6cf4e461cf739888"
   },
-  "policy": "33 published experiments from the fixed hub. Original PNG bytes only; card previews are CSS crops. No network request, analytics, dependency or experiment execution. Branch publication is not merge, release, CI success or human acceptance.",
+  "policy": "34 published experiments from the fixed hub. Original PNG bytes only; card previews are CSS crops. No network request, analytics, dependency or experiment execution. Branch publication is not merge, release, CI success or human acceptance.",
   "groups": {
     "product": {
       "label": "产品交互",
@@ -28,21 +28,21 @@
   "visualSources": [
     {
       "path": "website/src/styles/site.css",
-      "commit": "5c036016395a51e7737f60a4b4e674bf2054931f",
+      "commit": "f3e91a0f3d0461a06e09841fc581b6aeaaa08453",
       "sha256": "4a79d3c00465cc93d2fdfe602c5d870523ae6ee033e3f75e61481585f86f89e4",
       "bytes": 15945,
       "gitBlob": "49c84bb5900a5eb98b057e9af76bbc1066c8d0b5"
     },
     {
       "path": "website/src/styles/index.css",
-      "commit": "5c036016395a51e7737f60a4b4e674bf2054931f",
+      "commit": "f3e91a0f3d0461a06e09841fc581b6aeaaa08453",
       "sha256": "f3aaf38823b91e63d08cf1e521ea606331be580a86e20cc9e2cadab38c1bd0fe",
       "bytes": 59111,
       "gitBlob": "e076e38179140bac537a75efaca75c356350a8a2"
     },
     {
       "path": "website/src/styles/gallery.css",
-      "commit": "5c036016395a51e7737f60a4b4e674bf2054931f",
+      "commit": "f3e91a0f3d0461a06e09841fc581b6aeaaa08453",
       "sha256": "a1c896cab6ca6f99baedb6d8d6a608e97e719b02bb763494bd58e3461f8c9eb1",
       "bytes": 23691,
       "gitBlob": "36adfa4eda35c948b0f07bd9fe144beb8ac66656"
@@ -366,38 +366,38 @@
     },
     {
       "id": "state-contract",
-      "commit": "cc8c75bc15484098bf64aead799a34870981ccac",
+      "commit": "f7269e096ac1891b434842cf7e16b9ffdd54cdf6",
       "branch": "codex/lab-state-contract",
       "directory": "experiments/state-contract",
       "group": "offline",
-      "inputKind": "原创 synthetic",
-      "imagePath": "experiments/state-contract/screenshots/state-contract.png",
-      "imageCaption": "静态状态 / 事件声明矩阵，没有运行机器。",
+      "inputKind": "官方机器 fixture / getDAG 实导出",
+      "imagePath": "experiments/state-contract/measured/screenshots/explainer-overview.png",
+      "imageCaption": "构造官方机器后 getDAG 实导出；两个 toggle 声明，未执行事件或回调。",
       "title": "State contract",
-      "value": "把 robot3-viz flat 数据和显式 sidecar 转为 Lifecycle 与状态×事件声明矩阵",
-      "limits": "40 tests；两种产物四阶段通过；rich 语义拒绝，无机器执行，synthetic",
+      "value": "固定官方机器定义实导出，再核两个观察到的toggle声明",
+      "limits": "补证基线67f；40focused、原版getDAG实导出2状态2边、两页四阶段通过；2declared/0undeclared仅观察事件集；没有运行事件/回调；旧synthetic/rich拒绝记录保留",
       "readme": {
         "path": "experiments/state-contract/README.md",
-        "commit": "cc8c75bc15484098bf64aead799a34870981ccac",
-        "sha256": "1d862648e8aecdb5c05c7d8c4aa2e1176e1025258cb3f4fb225ec908997a1069",
-        "bytes": 11056,
-        "gitBlob": "d97ed7711c47291551436ec8d33e04f8a27c2617"
+        "commit": "f7269e096ac1891b434842cf7e16b9ffdd54cdf6",
+        "sha256": "a141e586e3607c7372be7c1c75d341a8e0029aec65a404244ec779119547decf",
+        "bytes": 12676,
+        "gitBlob": "706ab8a402a9d965883f29291be3b54a32f22650"
       },
       "image": {
-        "path": "experiments/state-contract/screenshots/state-contract.png",
-        "commit": "cc8c75bc15484098bf64aead799a34870981ccac",
-        "sha256": "4eabc581daf5382b2323660e71b93c63bbcc85976b47d8d43c6a9a08fa14b5c6",
-        "bytes": 143444,
-        "gitBlob": "d8c8c0b92f200d9ac033b702dbe0b23197312279",
+        "path": "experiments/state-contract/measured/screenshots/explainer-overview.png",
+        "commit": "f7269e096ac1891b434842cf7e16b9ffdd54cdf6",
+        "sha256": "d0e4dd8ec07719979753ff856fa57ab727cdd107e0da4be251bdf5bd5fe1e8db",
+        "bytes": 152346,
+        "gitBlob": "deadb15b82dbe14de94fe642842b519056d7ff82",
         "width": 1440,
-        "height": 1193,
+        "height": 1100,
         "mime": "image/png",
-        "caption": "静态状态 / 事件声明矩阵，没有运行机器。",
+        "caption": "构造官方机器后 getDAG 实导出；两个 toggle 声明，未执行事件或回调。",
         "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
       },
-      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/cc8c75bc15484098bf64aead799a34870981ccac/experiments/state-contract",
+      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/f7269e096ac1891b434842cf7e16b9ffdd54cdf6/experiments/state-contract",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-state-contract/experiments/state-contract",
-      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/cc8c75bc15484098bf64aead799a34870981ccac/experiments/state-contract/screenshots/state-contract.png"
+      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/f7269e096ac1891b434842cf7e16b9ffdd54cdf6/experiments/state-contract/measured/screenshots/explainer-overview.png"
     },
     {
       "id": "finder-highlights",
@@ -506,38 +506,38 @@
     },
     {
       "id": "recipe-stages",
-      "commit": "101648642a6ccae67b82a9a48bc4507c3b8a627a",
+      "commit": "062dee5db6e10c1877427effff0d02b34699fbe1",
       "branch": "codex/lab-recipe-stages",
       "directory": "experiments/recipe-stages",
       "group": "offline",
-      "inputKind": "原创 synthetic",
-      "imagePath": "experiments/recipe-stages/screenshots/priors-2.png",
-      "imageCaption": "priors=2 的 before / body / after 解释页。",
+      "inputKind": "官方 test 有效输入 / Just 实 dump",
+      "imagePath": "experiments/recipe-stages/measured/screenshots/explainer-overview.png",
+      "imageCaption": "实际 Just dump：a 在空主体 b 前、c 在后；没有执行 recipe，自然完整示例仍拒绝。",
       "title": "Recipe stages",
-      "value": "Just dump 的 priors 只改一值，直观看出同一依赖由 before 移到 after",
-      "limits": "10 tests；四份产物四阶段通过；固定上游形状的原创 synthetic，没有执行 Just",
+      "value": "官方Just dump保留priors边界：a在空主体b前，c在后",
+      "limits": "补证基线67f；官方test有效输入实dump、10tests、两页四阶段通过；自然完整示例因assignments拒绝；公开副本只改/source并保留真实输入sha区别；无recipe执行，旧synthetic不变",
       "readme": {
         "path": "experiments/recipe-stages/README.md",
-        "commit": "101648642a6ccae67b82a9a48bc4507c3b8a627a",
-        "sha256": "895d015115391de63e890c95b386f86742f93985f6391999da48347e01a9d390",
-        "bytes": 11226,
-        "gitBlob": "d7a407add76b7af9f199764d9fb5d8ff7cda09ec"
+        "commit": "062dee5db6e10c1877427effff0d02b34699fbe1",
+        "sha256": "542dc6309fd845c6a45bd793d2677966693d566d20b820981b11fa7bb4cc415e",
+        "bytes": 13320,
+        "gitBlob": "095eaf38de1991ace384b509e5297f50ffea1978"
       },
       "image": {
-        "path": "experiments/recipe-stages/screenshots/priors-2.png",
-        "commit": "101648642a6ccae67b82a9a48bc4507c3b8a627a",
-        "sha256": "aa665825865c3cffd4c16dc418b3aba4bf36a8e493f649acbdd514ecef582fa7",
-        "bytes": 277117,
-        "gitBlob": "8db01d336f86f8057ca0c0939cb2b25136b6f539",
+        "path": "experiments/recipe-stages/measured/screenshots/explainer-overview.png",
+        "commit": "062dee5db6e10c1877427effff0d02b34699fbe1",
+        "sha256": "16b0197eedabc78f6fe65d0b1433b80cb462a32f81bfd8618553394699b0fa37",
+        "bytes": 154768,
+        "gitBlob": "55421f64a60a16b5e0613ae8783e87aaeb4591b7",
         "width": 1440,
-        "height": 2085,
+        "height": 1100,
         "mime": "image/png",
-        "caption": "priors=2 的 before / body / after 解释页。",
+        "caption": "实际 Just dump：a 在空主体 b 前、c 在后；没有执行 recipe，自然完整示例仍拒绝。",
         "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
       },
-      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/101648642a6ccae67b82a9a48bc4507c3b8a627a/experiments/recipe-stages",
+      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/062dee5db6e10c1877427effff0d02b34699fbe1/experiments/recipe-stages",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-recipe-stages/experiments/recipe-stages",
-      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/101648642a6ccae67b82a9a48bc4507c3b8a627a/experiments/recipe-stages/screenshots/priors-2.png"
+      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/062dee5db6e10c1877427effff0d02b34699fbe1/experiments/recipe-stages/measured/screenshots/explainer-overview.png"
     },
     {
       "id": "relation-reference",
@@ -1203,6 +1203,41 @@
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/68866954a19cfe3b6599f3c27ff3cb10427f7d44/experiments/clipboard-outcome",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-clipboard-outcome/experiments/clipboard-outcome",
       "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/68866954a19cfe3b6599f3c27ff3cb10427f7d44/experiments/clipboard-outcome/screenshots/missing-ask-candidate.png"
+    },
+    {
+      "id": "byte-views",
+      "commit": "b844ecb2861c122d956dab971b376e2fcd2dc283",
+      "branch": "codex/lab-byte-views",
+      "directory": "experiments/byte-views",
+      "group": "content",
+      "inputKind": "完整官方 97B fixture / 固定字节观察",
+      "imagePath": "experiments/byte-views/screenshots/explainer-overview.png",
+      "imageCaption": "IHDR 的 25B 物理字段与 type 内四个 bit 解释；未运行 fq、CRC 或解压。",
+      "title": "Byte views",
+      "value": "分清IHDR的25B物理字段与已有type内的4个bit解释，避免重复求和",
+      "limits": "固定67f；完整97B官方fixture/golden、独立字节观察8事实检查；Tree四阶段/Explainer三静态阶段通过，root四图及citation hover/Escape；未运行fq/CRC/解压",
+      "readme": {
+        "path": "experiments/byte-views/README.md",
+        "commit": "b844ecb2861c122d956dab971b376e2fcd2dc283",
+        "sha256": "1f77200cfe73f4cf216501bd0fa48cc7f387adbd108ea9ebc9fb7682591129b2",
+        "bytes": 6588,
+        "gitBlob": "7d155bf516fa2f733e1c8eb4c35f6ff0d6421f6e"
+      },
+      "image": {
+        "path": "experiments/byte-views/screenshots/explainer-overview.png",
+        "commit": "b844ecb2861c122d956dab971b376e2fcd2dc283",
+        "sha256": "a87a179d4327192c753ef697ae5d4aff83a33dc20e354436abbea260af65b42f",
+        "bytes": 126665,
+        "gitBlob": "332f73db5099484d28c3d3de1322f06ba0d2fc71",
+        "width": 1440,
+        "height": 1100,
+        "mime": "image/png",
+        "caption": "IHDR 的 25B 物理字段与 type 内四个 bit 解释；未运行 fq、CRC 或解压。",
+        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+      },
+      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/b844ecb2861c122d956dab971b376e2fcd2dc283/experiments/byte-views",
+      "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-byte-views/experiments/byte-views",
+      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/b844ecb2861c122d956dab971b376e2fcd2dc283/experiments/byte-views/screenshots/explainer-overview.png"
     }
   ],
   "deferred": {
@@ -1210,16 +1245,16 @@
     "branch": "codex/lab-relation-return",
     "commit": "e323d30f1ebf159d992d8f0426296de872ed61b7",
     "directory": "experiments/relation-return",
-    "reason": "既有 Incoming 行已能一步回到来源；兼容测试通过没有证明额外 Back 按钮更好用。暂不引入额外状态，不计入 27 项。"
+    "reason": "既有 Incoming 行已能一步回到来源；兼容测试通过没有证明额外 Back 按钮更好用。暂不引入额外状态，不计入已发布数量。"
   },
   "summary": {
-    "experiments": 33,
-    "images": 33,
-    "pngBytes": 7686248,
+    "experiments": 34,
+    "images": 34,
+    "pngBytes": 7699466,
     "groupCounts": {
       "product": 11,
       "offline": 15,
-      "content": 7
+      "content": 8
     },
     "deferredCountedAsPublished": false
   }

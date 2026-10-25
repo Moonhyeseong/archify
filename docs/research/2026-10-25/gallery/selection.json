@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "https://github.com/tt-a1i/archify",
-  "hubCommit": "5c036016395a51e7737f60a4b4e674bf2054931f",
+  "hubCommit": "f3e91a0f3d0461a06e09841fc581b6aeaaa08453",
   "hubPath": "docs/research/2026-10-25/README.md",
   "visualSourcePaths": [
     "website/src/styles/site.css",
@@ -115,13 +115,13 @@
     },
     {
       "id": "state-contract",
-      "commit": "cc8c75bc15484098bf64aead799a34870981ccac",
+      "commit": "f7269e096ac1891b434842cf7e16b9ffdd54cdf6",
       "branch": "codex/lab-state-contract",
       "directory": "experiments/state-contract",
       "group": "offline",
-      "inputKind": "原创 synthetic",
-      "imagePath": "experiments/state-contract/screenshots/state-contract.png",
-      "imageCaption": "静态状态 / 事件声明矩阵，没有运行机器。"
+      "inputKind": "官方机器 fixture / getDAG 实导出",
+      "imagePath": "experiments/state-contract/measured/screenshots/explainer-overview.png",
+      "imageCaption": "构造官方机器后 getDAG 实导出；两个 toggle 声明，未执行事件或回调。"
     },
     {
       "id": "finder-highlights",
@@ -155,13 +155,13 @@
     },
     {
       "id": "recipe-stages",
-      "commit": "101648642a6ccae67b82a9a48bc4507c3b8a627a",
+      "commit": "062dee5db6e10c1877427effff0d02b34699fbe1",
       "branch": "codex/lab-recipe-stages",
       "directory": "experiments/recipe-stages",
       "group": "offline",
-      "inputKind": "原创 synthetic",
-      "imagePath": "experiments/recipe-stages/screenshots/priors-2.png",
-      "imageCaption": "priors=2 的 before / body / after 解释页。"
+      "inputKind": "官方 test 有效输入 / Just 实 dump",
+      "imagePath": "experiments/recipe-stages/measured/screenshots/explainer-overview.png",
+      "imageCaption": "实际 Just dump：a 在空主体 b 前、c 在后；没有执行 recipe，自然完整示例仍拒绝。"
     },
     {
       "id": "relation-reference",
@@ -352,6 +352,16 @@
       "inputKind": "受控 API 注入 / 既有 PR 输入",
       "imagePath": "experiments/clipboard-outcome/screenshots/missing-ask-candidate.png",
       "imageCaption": "API 缺失时保留完整消息供手工恢复；未写 OS 剪贴板。"
+    },
+    {
+      "id": "byte-views",
+      "commit": "b844ecb2861c122d956dab971b376e2fcd2dc283",
+      "branch": "codex/lab-byte-views",
+      "directory": "experiments/byte-views",
+      "group": "content",
+      "inputKind": "完整官方 97B fixture / 固定字节观察",
+      "imagePath": "experiments/byte-views/screenshots/explainer-overview.png",
+      "imageCaption": "IHDR 的 25B 物理字段与 type 内四个 bit 解释；未运行 fq、CRC 或解压。"
     }
   ],
   "deferred": {
@@ -359,6 +369,6 @@
     "branch": "codex/lab-relation-return",
     "commit": "e323d30f1ebf159d992d8f0426296de872ed61b7",
     "directory": "experiments/relation-return",
-    "reason": "既有 Incoming 行已能一步回到来源；兼容测试通过没有证明额外 Back 按钮更好用。暂不引入额外状态，不计入 27 项。"
+    "reason": "既有 Incoming 行已能一步回到来源；兼容测试通过没有证明额外 Back 按钮更好用。暂不引入额外状态，不计入已发布数量。"
   }
 }

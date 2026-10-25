@@ -14,7 +14,7 @@
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
-[离线图片浏览页](gallery/README.md)：当前固定快照含 33 项的 33 张原始 PNG，可按分组和关键词筛选、展开完整图；下载 `gallery/index.html` 后可独立打开。固定提交/图片摘要保留在 manifest，桌面与 390px 实际检查见浏览页说明。四个新增项及 DBML/Migration 更新已纳入，历史快照按固定提交保留。该固定快照的State/Recipe仍是旧synthetic图；最新官方fixture实导出与Just dump图片见下表独立分支。
+[离线图片浏览页](gallery/README.md)：当前固定快照含34项的34张原始PNG，可按分组和关键词筛选、展开完整图；下载`gallery/index.html`后可独立打开。已加入Byte views，并将State/Recipe主图换为官方fixture实导出/实际Just dump。固定提交和图片摘要见manifest；本版桌面与390px浅深色、三项完整图和筛选均经过实际检查，七张截图已查看。历史33/29/27快照及各自证据继续按固定提交保留。
 
 | 实验与远程分支 | 具体价值 | 发布 revision | 实际图片 | 验证与限制 |
 | --- | --- | --- | --- | --- |
@@ -112,10 +112,10 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 方向 | 来源与目标 | 状态 |
 | --- | --- | --- |
 | 新内容实验 | fq字节区间与位解释视图 | byte-views已推b844ecb2，计入第34项；完整97B官方fixture/golden与四张真实截图，冻结67f基线 |
-| 新一轮发现 | 调试回放与图内标注阅读 | 第7轮继续寻找小型项目；按新dev已合入#1102和未合入#1103排重，没有独立收益证据的机制保留研究 |
+| 新一轮发现 | 调试回放与图内标注阅读 | 第7轮14个新来源，4个深入源码；本轮0直接实施建议，保留具体再评估条件；图节点到来源的键盘交接正在核查 |
 | 既有实验真实输出 | Recipe stages / State contract | State官方fixture实导出已推f7269e09；Recipe官方test有效输入dump已推062dee5d，自然完整示例拒绝并保留；历史synthetic不改称实跑 |
 | 新发现修复 | Explainer复制结果与手工恢复 | Clipboard outcome已推送68866954，来源、基线/候选和实际截图见第33项 |
-| 浏览页更新 | 第34项及State/Recipe真实导出图片 | 当前可审查快照仍为33项；下一版将加入Byte views并替换State/Recipe主图，旧版证据继续绑定原提交 |
+| 浏览页更新 | 第34项及State/Recipe真实导出图片 | 34项已完成静态独立重建与实际浏览器检查；当前图片和19项观察绑定本版，旧版证据按固定提交保留 |
 | 既有实验补证据 | DBML与Plan actions | DBML已补上primary key同义写法接受；原拒绝记录保留；完整plan fixture转换证据不变 |
 | 已排除的重复实现 | Mutation报告reader | 原viewer已有文件搜索、状态筛选、diff、测试关联和单HTML打包；只保留研究，不另建reader |
 | 新dev影响核对 | 许可声明与finalize源范围修复 | [15:41迁移](base-refresh-1541.md) / [16:18交付逻辑](base-refresh-1618.md)：分别核对实际diff；旧证据保留原身份，新整合按影响验证 |
@@ -171,6 +171,9 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 | 既有来源、diff、code块静态窄核 | [Source block reading audit](scouts/source-block-reading-audit.md) |
 | 字节范围、位字段与重叠解释 | [Binary reading round 6](scouts/binary-reading-round6.md) |
 | Git父关系与图中路由点 | [Git graph reading round 6](scouts/git-graph-reading-round6.md) |
+| 调试缓冲、栈补齐与重新执行 | [Debugging reading round 7](scouts/debugging-reading-round7.md) |
+| 标注、完整文字与局部导出 | [Annotation reading round 7](scouts/annotation-reading-round7.md) |
+| 新dev与11项产品候选的行为交集 | [Product overlap at dev10b4](scouts/product-overlap-dev-1731.md) |
 | 当前 Archify 集成切口 | [Integration map](integration-map.md) |
 
 报告中的上游声明、局部源码核实、计划中的实验和已经执行的结果分别标注。未推荐方向也保留原因，避免反复研究；没有把上游宣传、星数或作者截图当作 Archify 的效果证明。

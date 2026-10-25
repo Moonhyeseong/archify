@@ -1,148 +1,227 @@
 {
-  "kind": "derived browser evidence for current 33-item gallery; raw observations outside checkout",
+  "kind": "derived browser evidence for current 34-item gallery; raw observations outside checkout",
   "html": {
     "path": "index.html",
-    "sha256": "d37bd42fa244011d841877c2bfcf70ff82f7688ac0f758b634e7ecbc5a6f1569"
+    "sha256": "71465bb0454f266a0368c3cebd442995930fdb2c909ecb78c2af9902666176f1",
+    "bytes": 10354355
   },
-  "manifestSha256": "55892d8c3b2296d93663f85d6acde33d1a354dabafd7514c7dbb513e6c7eb55e",
-  "observedAt": [
-    "2026-10-25T08:36:59.888Z",
-    "2026-10-25T08:37:21.824Z"
-  ],
+  "manifestSha256": "ffb82caaff39d688cf7150699c5c3701833fd33061a58f9a17b80a5a40848dde",
   "environment": "Ego Lite Chromium; mouse/keyboard with CSS viewport emulation; not physical touch, assistive technology or human acceptance",
   "checks": [
     {
       "case": "all",
-      "count": "显示 33 / 33 项",
-      "visible": 33
+      "count": "显示 34 / 34 项",
+      "visible": 34,
+      "titles": [
+        "Finder canvas matches",
+        "Relation reference",
+        "Delta values",
+        "Diagnostic locations",
+        "Finder result descriptions",
+        "Waterfall status text",
+        "Workflow self-loop",
+        "Diff line numbers",
+        "Keyboard traversal",
+        "Preview dashed ink",
+        "Clipboard outcome",
+        "Task review map",
+        "Dependency map",
+        "Trace waterfall",
+        "Markdown outline",
+        "DBML ERD",
+        "Change coupling",
+        "Payload delta",
+        "Decision thread",
+        "Migration plan",
+        "State contract",
+        "CI conditions",
+        "Plan actions",
+        "Recipe stages",
+        "Test context map",
+        "Test failure map",
+        "Source question tour",
+        "Delivery witness",
+        "Retained size",
+        "Lasso witness",
+        "Plan row counts",
+        "Copy identity",
+        "CLI reading tour",
+        "Byte views"
+      ]
     },
     {
       "case": "product",
-      "count": "显示 11 / 33 项",
-      "visible": 11
-    },
-    {
-      "case": "offline",
-      "count": "显示 15 / 33 项",
-      "visible": 15
-    },
-    {
-      "case": "content",
-      "count": "显示 7 / 33 项",
-      "visible": 7
-    },
-    {
-      "case": "Preview dashed ink",
-      "count": "显示 1 / 33 项",
-      "visible": 1,
+      "count": "显示 11 / 34 项",
+      "visible": 11,
       "titles": [
-        "Preview dashed ink"
-      ]
-    },
-    {
-      "case": "Copy identity",
-      "count": "显示 1 / 33 项",
-      "visible": 1,
-      "titles": [
-        "Copy identity"
-      ]
-    },
-    {
-      "case": "CLI reading tour",
-      "count": "显示 1 / 33 项",
-      "visible": 1,
-      "titles": [
-        "CLI reading tour"
-      ]
-    },
-    {
-      "case": "Clipboard outcome",
-      "count": "显示 1 / 33 项",
-      "visible": 1,
-      "titles": [
+        "Finder canvas matches",
+        "Relation reference",
+        "Delta values",
+        "Diagnostic locations",
+        "Finder result descriptions",
+        "Waterfall status text",
+        "Workflow self-loop",
+        "Diff line numbers",
+        "Keyboard traversal",
+        "Preview dashed ink",
         "Clipboard outcome"
       ]
     },
     {
-      "case": "DBML ERD",
-      "count": "显示 1 / 33 项",
-      "visible": 1,
+      "case": "offline",
+      "count": "显示 15 / 34 项",
+      "visible": 15,
       "titles": [
-        "DBML ERD"
+        "Task review map",
+        "Dependency map",
+        "Trace waterfall",
+        "Markdown outline",
+        "DBML ERD",
+        "Change coupling",
+        "Payload delta",
+        "Decision thread",
+        "Migration plan",
+        "State contract",
+        "CI conditions",
+        "Plan actions",
+        "Recipe stages",
+        "Test context map",
+        "Test failure map"
       ]
     },
     {
-      "case": "dbml-image",
-      "title": "DBML ERD",
-      "description": "官方 36B 单表 A：一个 int 主键、零关系；不代表完整 DBML 兼容。 · 1280 × 900 px · 原 PNG 未编辑",
-      "width": 1280,
-      "source": "https://github.com/tt-a1i/archify/blob/358c77e05eb54a3f10ad3bcbb8f196eb8f277ccd/experiments/dbml-erd/primary-key-acceptance/screenshots/primary-key.png"
+      "case": "content",
+      "count": "显示 8 / 34 项",
+      "visible": 8,
+      "titles": [
+        "Source question tour",
+        "Delivery witness",
+        "Retained size",
+        "Lasso witness",
+        "Plan row counts",
+        "Copy identity",
+        "CLI reading tour",
+        "Byte views"
+      ]
     },
     {
-      "case": "escape-focus",
+      "case": "State contract",
+      "count": "显示 1 / 34 项",
+      "visible": 1,
+      "titles": [
+        "State contract"
+      ]
+    },
+    {
+      "case": "Recipe stages",
+      "count": "显示 1 / 34 项",
+      "visible": 1,
+      "titles": [
+        "Recipe stages"
+      ]
+    },
+    {
+      "case": "Byte views",
+      "count": "显示 1 / 34 项",
+      "visible": 1,
+      "titles": [
+        "Byte views"
+      ]
+    },
+    {
+      "case": "byte-views-image",
+      "title": "Byte views",
+      "description": "IHDR 的 25B 物理字段与 type 内四个 bit 解释；未运行 fq、CRC 或解压。 · 1440 × 1100 px · 原 PNG 未编辑",
+      "width": 1440,
+      "height": 1100,
+      "source": "https://github.com/tt-a1i/archify/blob/b844ecb2861c122d956dab971b376e2fcd2dc283/experiments/byte-views/screenshots/explainer-overview.png",
+      "sha": "SHA-256 a87a179d4327192c753ef697ae5d4aff83a33dc20e354436abbea260af65b42f"
+    },
+    {
+      "case": "byte-views-escape",
       "open": false,
-      "focus": "查看 DBML ERD 完整原图"
+      "focus": "查看 Byte views 完整原图"
     },
     {
-      "case": "clipboard-image",
-      "title": "Clipboard outcome",
-      "width": 1280,
-      "source": "https://github.com/tt-a1i/archify/blob/68866954a19cfe3b6599f3c27ff3cb10427f7d44/experiments/clipboard-outcome/screenshots/missing-ask-candidate.png"
+      "case": "state-contract-image",
+      "title": "State contract",
+      "description": "构造官方机器后 getDAG 实导出；两个 toggle 声明，未执行事件或回调。 · 1440 × 1100 px · 原 PNG 未编辑",
+      "width": 1440,
+      "height": 1100,
+      "source": "https://github.com/tt-a1i/archify/blob/f7269e096ac1891b434842cf7e16b9ffdd54cdf6/experiments/state-contract/measured/screenshots/explainer-overview.png",
+      "sha": "SHA-256 d0e4dd8ec07719979753ff856fa57ab727cdd107e0da4be251bdf5bd5fe1e8db"
+    },
+    {
+      "case": "state-contract-escape",
+      "open": false,
+      "focus": "查看 State contract 完整原图"
+    },
+    {
+      "case": "recipe-stages-image",
+      "title": "Recipe stages",
+      "description": "实际 Just dump：a 在空主体 b 前、c 在后；没有执行 recipe，自然完整示例仍拒绝。 · 1440 × 1100 px · 原 PNG 未编辑",
+      "width": 1440,
+      "height": 1100,
+      "source": "https://github.com/tt-a1i/archify/blob/062dee5db6e10c1877427effff0d02b34699fbe1/experiments/recipe-stages/measured/screenshots/explainer-overview.png",
+      "sha": "SHA-256 16b0197eedabc78f6fe65d0b1433b80cb462a32f81bfd8618553394699b0fa37"
+    },
+    {
+      "case": "recipe-stages-escape",
+      "open": false,
+      "focus": "查看 Recipe stages 完整原图"
     },
     {
       "case": "empty",
-      "count": "显示 0 / 33 项",
-      "visible": 0,
-      "titles": []
+      "count": "显示 0 / 34 项",
+      "emptyVisible": true
     },
     {
       "case": "reset",
-      "count": "显示 33 / 33 项",
-      "visible": 33
-    },
-    {
-      "case": "reset-focus",
+      "count": "显示 34 / 34 项",
       "focus": "query"
     },
     {
-      "state": "desktop-light",
-      "width": 1440,
-      "height": 1100,
-      "scrollWidth": 1440,
-      "theme": "light",
-      "count": "显示 33 / 33 项"
-    },
-    {
-      "state": "desktop-dark",
+      "case": "desktop-dark",
       "width": 1440,
       "height": 1100,
       "scrollWidth": 1440,
       "theme": "dark",
-      "count": "显示 33 / 33 项"
+      "count": "显示 34 / 34 项"
     },
     {
-      "state": "mobile-dark",
+      "case": "mobile-dark",
       "width": 390,
       "height": 844,
       "scrollWidth": 390,
       "theme": "dark",
-      "count": "显示 33 / 33 项"
+      "count": "显示 34 / 34 项"
     },
     {
-      "state": "mobile-light",
+      "case": "mobile-light",
       "width": 390,
       "height": 844,
       "scrollWidth": 390,
       "theme": "light",
-      "count": "显示 33 / 33 项"
+      "count": "显示 34 / 34 项"
+    },
+    {
+      "case": "desktop-light",
+      "width": 1440,
+      "height": 1100,
+      "scrollWidth": 1440,
+      "theme": "light",
+      "count": "显示 34 / 34 项"
     }
   ],
   "screenshots": [
     {
       "path": "screenshots/desktop-light.png",
-      "sha256": "4b80dd1be6b2d3f14f8df52910994bae516f41d83e266cdc309d3325445a3e15",
-      "bytes": 275962,
-      "writtenAtFromFileMtime": "2026-10-25T08:37:19.375170+00:00",
+      "sha256": "57d55ab00f23dae57c36d35fa8c14562834873c70d4f2ba42cf1c864405e9740",
+      "bytes": 274930,
+      "pngDimensions": [
+        1440,
+        1100
+      ],
       "viewportCssPixels": [
         1440,
         1100
@@ -151,13 +230,17 @@
       "mobileEmulation": false,
       "theme": "light",
       "state": "desktop-light",
+      "writtenAtFromFileMtime": "2026-10-25T09:36:06.926368+00:00",
       "rootViewed": true
     },
     {
       "path": "screenshots/desktop-dark.png",
-      "sha256": "f1ad36e28ca2b43fb7470744383e99ce8ad53e61ea08faacc88d138834058316",
-      "bytes": 277061,
-      "writtenAtFromFileMtime": "2026-10-25T08:37:21.562548+00:00",
+      "sha256": "2ae1d12e5db28660e2d0b09453d919b333ca880b7e34942b548f92aa637d1fd5",
+      "bytes": 277317,
+      "pngDimensions": [
+        1440,
+        1100
+      ],
       "viewportCssPixels": [
         1440,
         1100
@@ -166,13 +249,17 @@
       "mobileEmulation": false,
       "theme": "dark",
       "state": "desktop-dark",
+      "writtenAtFromFileMtime": "2026-10-25T09:36:53.761165+00:00",
       "rootViewed": true
     },
     {
       "path": "screenshots/mobile-light.png",
-      "sha256": "b76677fec01fae22cddbe8bd56c60f5aa7ba297dba4aa68c477476a40ff97580",
-      "bytes": 84976,
-      "writtenAtFromFileMtime": "2026-10-25T08:37:21.824431+00:00",
+      "sha256": "99dd0e34464ef443d87e9529bbac50e31e80ee088fdfb95edd1abcd110d93611",
+      "bytes": 85046,
+      "pngDimensions": [
+        390,
+        844
+      ],
       "viewportCssPixels": [
         390,
         844
@@ -181,13 +268,17 @@
       "mobileEmulation": false,
       "theme": "light",
       "state": "mobile-light",
+      "writtenAtFromFileMtime": "2026-10-25T09:37:05.072126+00:00",
       "rootViewed": true
     },
     {
       "path": "screenshots/mobile-dark.png",
-      "sha256": "2dc83c5aed816d949cd76b86318c87d78c806595714ea244377a842fe57a08ec",
-      "bytes": 84776,
-      "writtenAtFromFileMtime": "2026-10-25T08:37:21.655522+00:00",
+      "sha256": "3cc83f062e14549d70af59fec7351d95d818033673fc58600db573c5ab613bcf",
+      "bytes": 84985,
+      "pngDimensions": [
+        390,
+        844
+      ],
       "viewportCssPixels": [
         390,
         844
@@ -196,13 +287,17 @@
       "mobileEmulation": false,
       "theme": "dark",
       "state": "mobile-dark",
+      "writtenAtFromFileMtime": "2026-10-25T09:37:04.938320+00:00",
       "rootViewed": true
     },
     {
-      "path": "screenshots/dbml-dialog.png",
-      "sha256": "97e45fe92affaf01f4efda85f78ec589c3a3e79342df61636605dd7c7feab335",
-      "bytes": 85866,
-      "writtenAtFromFileMtime": "2026-10-25T08:36:57.132762+00:00",
+      "path": "screenshots/byte-views-dialog.png",
+      "sha256": "e2d6674d8b47c5d61eab1c11e7f2875d98edf5657a0ee90122d2e03a64499b44",
+      "bytes": 169313,
+      "pngDimensions": [
+        1440,
+        1100
+      ],
       "viewportCssPixels": [
         1440,
         1100
@@ -210,14 +305,18 @@
       "deviceScaleFactor": 1,
       "mobileEmulation": false,
       "theme": "light",
-      "state": "dbml-dialog",
+      "state": "byte-views-dialog",
+      "writtenAtFromFileMtime": "2026-10-25T09:36:44.032508+00:00",
       "rootViewed": true
     },
     {
-      "path": "screenshots/clipboard-result.png",
-      "sha256": "1a4a470a4bc4d049c702522cc93355d0fe2a4ca424d2c91540fcec0ca4e095bb",
-      "bytes": 168464,
-      "writtenAtFromFileMtime": "2026-10-25T08:36:59.314058+00:00",
+      "path": "screenshots/state-contract-dialog.png",
+      "sha256": "b416366a5a1c9e88e023bac4047e9b9ccee613b2dd122b7fe323b434dbc989fe",
+      "bytes": 187763,
+      "pngDimensions": [
+        1440,
+        1100
+      ],
       "viewportCssPixels": [
         1440,
         1100
@@ -225,14 +324,18 @@
       "deviceScaleFactor": 1,
       "mobileEmulation": false,
       "theme": "light",
-      "state": "clipboard-result",
+      "state": "state-contract-dialog",
+      "writtenAtFromFileMtime": "2026-10-25T09:36:47.190454+00:00",
       "rootViewed": true
     },
     {
-      "path": "screenshots/clipboard-dialog.png",
-      "sha256": "f9d73ef7e89a52a7a16abb8733d692ac8f797a37025e57999bb5a71d55851d2f",
-      "bytes": 273838,
-      "writtenAtFromFileMtime": "2026-10-25T08:36:59.555391+00:00",
+      "path": "screenshots/recipe-stages-dialog.png",
+      "sha256": "998917e825e171ea3b756326b7d5e7a8f77365e27131f7176b7853f743744576",
+      "bytes": 188366,
+      "pngDimensions": [
+        1440,
+        1100
+      ],
       "viewportCssPixels": [
         1440,
         1100
@@ -240,37 +343,35 @@
       "deviceScaleFactor": 1,
       "mobileEmulation": false,
       "theme": "light",
-      "state": "clipboard-dialog",
+      "state": "recipe-stages-dialog",
+      "writtenAtFromFileMtime": "2026-10-25T09:36:50.390122+00:00",
       "rootViewed": true
     }
   ],
-  "rawObservationBindings": [
+  "rawObservations": [
     {
-      "name": "desktop-checks.json",
-      "sha256": "b4a255490eda2dce2f081583d86d8f58fc702710979131a272a1222afdf297a8"
+      "basename": "filter-checks.json",
+      "sha256": "9e4774df8fadfc50aa500249f09468510cde9e75d96d1ebc76c0dcf157565287",
+      "bytes": 2867,
+      "observedAt": "2026-10-25T09:36:10.569Z"
     },
     {
-      "name": "viewport-checks.json",
-      "sha256": "9cdf20d00c9f892fd950d9e3b74fe9fe58dbeedbb4515f9330bf7fc666d322ef"
-    }
-  ],
-  "historicalEvidence": [
-    {
-      "commit": "a94bd25bdcf33c386f0e920142c61309e1e8b499",
-      "scope": "29-item version only"
+      "basename": "dialog-checks.json",
+      "sha256": "6702988af8686acf7f50362595beb7af75a95c811d818d0957fd740664827eb8",
+      "bytes": 2407,
+      "observedAt": "2026-10-25T09:36:53.763Z"
     },
     {
-      "commit": "50cc320adffef212f046f065eb2e9e702610a27d",
-      "scope": "27-item version only; original-size End scrolling and detailed modal Tab observations not repeated"
+      "basename": "viewport-checks.json",
+      "sha256": "19ded3dbe9c29950e9249e8583bf85dd96679e018dfe04d500460c276a53a8fe",
+      "bytes": 577,
+      "observedAt": "2026-10-25T09:37:05.099Z"
     }
-  ],
-  "probeCorrections": [
-    "The initial wait for every document image timed out because offscreen thumbnails are lazy loaded; the bounded visible-image wait completed.",
-    "An initial action used a snapshot ref invalidated by CDP viewport override; it stopped before changing a filter. Current observations use stable DOM selectors."
   ],
   "limits": [
-    "Representative interaction and visual checks only; independent static review verifies all 33 embedded original PNG byte bindings.",
-    "No external links, upstream programs, individual experiment HTML, CI, deployment, physical touch, screen reader or human acceptance exercised.",
-    "Builder verification.json remains a static check; this summary records coordinator browser observations separately."
+    "Only current counts, three changed records, full-image dialogs, Escape opener focus, empty/reset and light/dark viewports were exercised",
+    "Original-size scrolling and detailed modal Tab traversal were not repeated; prior observations remain attached to historical versions",
+    "External links were inspected, not opened; experiment HTML was not executed inside this gallery",
+    "Images are actual browser screenshots, viewed by the coordinating agent; this is not human acceptance"
   ]
 }

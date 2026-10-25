@@ -27,21 +27,29 @@ python3 docs/research/2026-10-25/gallery/verify.py --node '<node-executable>'
 
 各实验自己的失败与未运行阶段保留在卡片及固定来源中。例如 Task review map 的 ZIP unresolved 和键盘遍历失败，不会因为有截图而变为通过。
 
-## 当前 33 版的静态绑定
+## 当前 34 版的静态绑定
 
-本次固定 hub 为 `5c036016395a51e7737f60a4b4e674bf2054931f`：33 项 / 33 张原始 PNG，实际分组为 11 / 15 / 7。新增 Preview dashed ink、Copy identity、CLI reading tour 与 Clipboard outcome。Clipboard 图片来自受控 API 注入，不表示写入 OS 剪贴板；CLI tour 是固定源码阅读，不是运行 trace；Copy identity 仅观察教学构造中的列表引用。
+本次固定 hub 为 `f3e91a0f3d0461a06e09841fc581b6aeaaa08453`：34 项 / 34 张原始 PNG，实际分组为 11 / 15 / 8。新增 Byte views，使用完整 97B 官方生成 fixture 与固定字节观察解释 IHDR 的 25B 物理字段及 type 内重叠 bit 解释；没有运行 fq、CRC 重算或解压，也不是实际用户工作负载。
 
-DBML 主图更新为完整官方 36B fixture 的单表 A、一个 int 主键、零关系，不再把该主图称为四表样例；127B simple-table 仍拒绝，完整 DBML 兼容性未宣称。Migration 只更新固定提交与正确的阶段说明，原图片字节不变。其他原有项保持固定来源与限制；Relation return 仍单列暂缓。
+State 主图更新为官方机器 fixture 的实际 getDAG 导出：构造机器但没有执行事件或回调，矩阵只覆盖观察到的 toggle 声明。Recipe 主图更新为官方 test 有效输入的真实 Just dump：a 在空主体 b 前、c 在后；未执行 recipe，自然完整示例仍因 assignments 拒绝。其公开 dump 是仅移除来源位置的派生副本，不冒充原始 export。两项历史 synthetic 证据仍由各分支保留；其余 31 张既有主图的 PNG bytes 与上一版逐 SHA/Git blob 相同。
 
-当前 `index.html` SHA-256：`d37bd42fa244011d841877c2bfcf70ff82f7688ac0f758b634e7ecbc5a6f1569`；manifest SHA-256：`55892d8c3b2296d93663f85d6acde33d1a354dabafd7514c7dbb513e6c7eb55e`。33 项固定 HEAD、origin 跟踪、README 与 PNG Git blob/原字节全部核对；卡片、过滤按钮和分组数量一致，嵌图解码 SHA、固定链接与 JS 语法核验通过。HTML 为 10,333,767 bytes，33 张原 PNG 共 7,686,248 bytes，没有远程资源引用。
+当前 `index.html` SHA-256：`71465bb0454f266a0368c3cebd442995930fdb2c909ecb78c2af9902666176f1`；manifest SHA-256：`ffb82caaff39d688cf7150699c5c3701833fd33061a58f9a17b80a5a40848dde`。34 项固定 HEAD、origin 跟踪、README 与 PNG Git blob/原字节全部核对；卡片、过滤按钮和分组数量一致，嵌图解码 SHA、固定链接与 JS 语法核验通过。HTML 为 10,354,355 bytes，34 张原 PNG 共 7,699,466 bytes，没有远程资源引用。
 
-协调 Agent 已在当前 hash 实际检查 1440×1100 与 390×844 浅/深色、33/11/15/7 筛选、四个新增项与 DBML 的关键词定位、DBML/Clipboard 完整原图及固定来源、Esc 返回 opener、空结果与清空。390px 页面内容宽为390，没有页面横向溢出。七张新截图已实际查看，绑定见 [browser-evidence.json](browser-evidence.json)；独立 Agent 隔离重建三份派生产物均逐字一致。历史 29 / 27 版继续按固定提交引用，不借给当前版本；本轮未重复原始尺寸 End 滚动和详细 modal Tab 检查，也不代表实体触屏、读屏器或人类验收。
+协调 Agent 已在当前 HTML/manifest hash 实际检查 1440×1100 与 390×844 浅/深色、34/11/15/8 筛选、State/Recipe/Byte 各一个关键词结果、三项完整图片的原始尺寸元数据与固定来源、三次 Esc 返回 opener、空结果与清空后查询框焦点。四个视口/主题状态的页面内容宽均等于视口宽，没有页面横向溢出。七张新截图均由协调 Agent 实际查看；[browser-evidence.json](browser-evidence.json) 记录 19 项观测与原始记录摘要、当前 HTML/manifest 和七张 PNG 的 SHA/bytes/尺寸绑定。独立 Agent 隔离重建三份静态派生产物逐字一致。
 
-![33项桌面浏览页](screenshots/desktop-light.png)
+本轮没有重测原始尺寸 End 滚动与精细 modal Tab 遍历；历史观测仍只属于各自固定版本。这里只检查图片浏览页，没有执行各实验 HTML；外链只核对未打开。这些是 Chromium 鼠标/键盘与 CSS 视口模拟证据，不代表实体触屏、读屏器或人类验收。实验各自的未运行阶段与拒绝边界不因浏览页检查而改变。
 
-![复制恢复实验的完整截图](screenshots/clipboard-dialog.png)
+![34项桌面浏览页](screenshots/desktop-light.png)
+
+![Byte views完整原图弹窗](screenshots/byte-views-dialog.png)
 
 ![390px浏览页](screenshots/mobile-dark.png)
+
+## 历史 33 版浏览器检查
+
+固定 [33 版提交 `16739d87`](https://github.com/tt-a1i/archify/tree/16739d87811896012fe1827331f322270d8bcfbd/docs/research/2026-10-25/gallery) 的 `index.html` SHA-256 为 `d37bd42fa244011d841877c2bfcf70ff82f7688ac0f758b634e7ecbc5a6f1569`，manifest 为 `55892d8c3b2296d93663f85d6acde33d1a354dabafd7514c7dbb513e6c7eb55e`。协调 Agent 当时实际检查 1440×1100 与 390×844 浅/深色、33/11/15/7 筛选、四个新增项与 DBML 的关键词定位、DBML/Clipboard 完整原图及固定来源、Esc 返回 opener、空结果与清空；390px 没有页面横向溢出。七张图实际查看，独立 Agent 核对摘要与原始观测、图片字节及绑定；隔离重建三份派生产物逐字一致。
+
+[该版浏览器摘要](https://github.com/tt-a1i/archify/blob/16739d87811896012fe1827331f322270d8bcfbd/docs/research/2026-10-25/gallery/browser-evidence.json) · [桌面图片](https://github.com/tt-a1i/archify/blob/16739d87811896012fe1827331f322270d8bcfbd/docs/research/2026-10-25/gallery/screenshots/desktop-light.png) · [复制恢复完整图](https://github.com/tt-a1i/archify/blob/16739d87811896012fe1827331f322270d8bcfbd/docs/research/2026-10-25/gallery/screenshots/clipboard-dialog.png) · [390px 图片](https://github.com/tt-a1i/archify/blob/16739d87811896012fe1827331f322270d8bcfbd/docs/research/2026-10-25/gallery/screenshots/mobile-dark.png)。这轮没有重复原始尺寸 End 滚动和详细 modal Tab 检查，也不代表实体触屏、读屏器或人类验收。
 
 ## 历史 29 版浏览器检查
 
