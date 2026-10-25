@@ -1,0 +1,84 @@
+{
+  "repository": "https://github.com/cordx56/rustowl",
+  "revision": "607183668459e69f41871827c4d34df38117c427",
+  "license": "MPL-2.0",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 16774,
+      "sha256": "53f84da786bc2a9d4ca80813015c2064bee21e7cd5653c3a431deaa6dfea92e5",
+      "url": "https://github.com/cordx56/rustowl/blob/607183668459e69f41871827c4d34df38117c427/LICENSE",
+      "license": "MPL-2.0"
+    },
+    {
+      "path": "crates/rustowl/algo-tests/src/must_live.rs",
+      "bytes": 3993,
+      "sha256": "a201dd3fedd9fa0e6198c306756d860871649b54a055e388f09c62ab9f845d17",
+      "url": "https://github.com/cordx56/rustowl/blob/607183668459e69f41871827c4d34df38117c427/crates/rustowl/algo-tests/src/must_live.rs",
+      "license": "MPL-2.0"
+    },
+    {
+      "path": "crates/rustowl/tests/algorithm.rs",
+      "bytes": 6106,
+      "sha256": "406d4bce23532271bc4865adeace466db5e5b23a0fbdda72437e583ba2db7472",
+      "url": "https://github.com/cordx56/rustowl/blob/607183668459e69f41871827c4d34df38117c427/crates/rustowl/tests/algorithm.rs",
+      "license": "MPL-2.0"
+    },
+    {
+      "path": "crates/rustowl/tests/snapshots/algorithm__must_live_cond_init_v.snap",
+      "bytes": 1168,
+      "sha256": "fee579a7512a29b1cc118ffe8bb371b5ed102adac0f75462ad2e2540d1c8e5e6",
+      "url": "https://github.com/cordx56/rustowl/blob/607183668459e69f41871827c4d34df38117c427/crates/rustowl/tests/snapshots/algorithm__must_live_cond_init_v.snap",
+      "license": "MPL-2.0"
+    },
+    {
+      "path": "crates/rustowl/src/bin/core/analyze/dataflow_analyzer.rs",
+      "bytes": 8783,
+      "sha256": "606c196cc641d289c6b9e8429148315e6ee789d97202c9db56871972507aca76",
+      "url": "https://github.com/cordx56/rustowl/blob/607183668459e69f41871827c4d34df38117c427/crates/rustowl/src/bin/core/analyze/dataflow_analyzer.rs",
+      "license": "MPL-2.0"
+    },
+    {
+      "path": "crates/rustowl/src/bin/core/analyze/dataflow_analyzer/state.rs",
+      "bytes": 2762,
+      "sha256": "f669e7716260e09cb338bf2965b08a58f15e1a48fbb5cc6cc9b905ee7de6936a",
+      "url": "https://github.com/cordx56/rustowl/blob/607183668459e69f41871827c4d34df38117c427/crates/rustowl/src/bin/core/analyze/dataflow_analyzer/state.rs",
+      "license": "MPL-2.0"
+    },
+    {
+      "path": "crates/rustowl/src/bin/core/analyze/dataflow_analyzer/places.rs",
+      "bytes": 3550,
+      "sha256": "0647970e9dd528ba0c15e77edf6b20884d8d268d092db7211b4b5505ad5ffa94",
+      "url": "https://github.com/cordx56/rustowl/blob/607183668459e69f41871827c4d34df38117c427/crates/rustowl/src/bin/core/analyze/dataflow_analyzer/places.rs",
+      "license": "MPL-2.0"
+    },
+    {
+      "path": "crates/rustowl/src/bin/core/analyze/dataflow_analyzer/effect.rs",
+      "bytes": 3516,
+      "sha256": "b21d4089b48f71b4c727dd619f9937dde171cd22a3d7aa34ebf9ce2b233b3bcd",
+      "url": "https://github.com/cordx56/rustowl/blob/607183668459e69f41871827c4d34df38117c427/crates/rustowl/src/bin/core/analyze/dataflow_analyzer/effect.rs",
+      "license": "MPL-2.0"
+    },
+    {
+      "path": "crates/rustowl/src/bin/core/analyze.rs",
+      "bytes": 11300,
+      "sha256": "a0baefdeb224a9b654e63aeb1525979588b557838eecf77114fc08f6136e7e7b",
+      "url": "https://github.com/cordx56/rustowl/blob/607183668459e69f41871827c4d34df38117c427/crates/rustowl/src/bin/core/analyze.rs",
+      "license": "MPL-2.0"
+    },
+    {
+      "path": "crates/rustowl/src/lsp/decoration.rs",
+      "bytes": 32012,
+      "sha256": "076f7380796f3b477afcb64b09fc02ebe99638fd905dcca5e62eb803d7430fdd",
+      "url": "https://github.com/cordx56/rustowl/blob/607183668459e69f41871827c4d34df38117c427/crates/rustowl/src/lsp/decoration.rs",
+      "license": "MPL-2.0"
+    },
+    {
+      "path": "crates/rustowl/src/visualize.rs",
+      "bytes": 20190,
+      "sha256": "4931ccaa731710b1e15ad0106a9d9ad927dbae0115f009158ea933ade90f0ac0",
+      "url": "https://github.com/cordx56/rustowl/blob/607183668459e69f41871827c4d34df38117c427/crates/rustowl/src/visualize.rs",
+      "license": "MPL-2.0"
+    }
+  ]
+}

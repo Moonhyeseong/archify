@@ -1,0 +1,280 @@
+{
+  "kind": "author-derived-safe-summary-of-root-browser-observations",
+  "date": "2026-10-25",
+  "browser": "Ego TaskSpace / Chromium, operated by root",
+  "artifact": {
+    "file": "output/explanation.html",
+    "bytes": 339972,
+    "sha256": "eab68129e141d0f1cc34e410605e8b10d4a83a5ec2a900816001a3ae9c74a24f"
+  },
+  "screenshots": [
+    {
+      "file": "desktop-light.png",
+      "bytes": 455848,
+      "sha256": "d511b0943b29f5bef28ea943da861105bf7da6f1b173d1353912d0d883960991",
+      "imageSize": [
+        1440,
+        2829
+      ]
+    },
+    {
+      "file": "snapshot-dark.png",
+      "bytes": 161470,
+      "sha256": "4d4679cf6e8c4e7a0c6c0b0c792f13d122bbe403147dbe836e22fc01d8327bd9",
+      "imageSize": [
+        1440,
+        1100
+      ]
+    },
+    {
+      "file": "mobile-light.png",
+      "bytes": 430539,
+      "sha256": "179d726bcb50fc7ecedb533c950e550e0cd83319bf01f7f1babf30aaf03fd19c",
+      "imageSize": [
+        390,
+        4115
+      ]
+    },
+    {
+      "file": "mobile-table-fit.png",
+      "bytes": 98834,
+      "sha256": "10ed1c6d24202ac2d9712eacfbecb526d3171448d364ad63b7310238c19ffee6",
+      "imageSize": [
+        390,
+        844
+      ]
+    }
+  ],
+  "rootReportsViewedAllSelectedPngs": true,
+  "authorOperatedBrowser": false,
+  "privateRawObservations": [
+    {
+      "file": "desktop-observation.json",
+      "bytes": 2253,
+      "sha256": "928d07f05a7de4ac097012b8ada28e998c1d17c964e303a1563a3b63473bf68f",
+      "viewport": [
+        1440,
+        1100
+      ],
+      "theme": "light",
+      "pageWidth": 1440,
+      "panelHash": "",
+      "scroll": [
+        0,
+        0
+      ],
+      "codeBounds": [
+        {
+          "clientWidth": 1236,
+          "scrollWidth": 1236,
+          "textSha256": "5cc36fb959a2c0736a9702576599feaf7105227d5fcfab3393fd1e983d131344"
+        },
+        {
+          "clientWidth": 1236,
+          "scrollWidth": 1236,
+          "textSha256": "09788a22a6c96c469471a945b9f93c3f753d2e46790a6d1766f866d4411c266e"
+        }
+      ],
+      "tableBounds": [
+        {
+          "width": 1238,
+          "parentWidth": 1238,
+          "parentScrollWidth": 1238,
+          "scrollLeft": 0
+        },
+        {
+          "width": 1238,
+          "parentWidth": 1238,
+          "parentScrollWidth": 1238,
+          "scrollLeft": 0
+        },
+        {
+          "width": 1238,
+          "parentWidth": 1238,
+          "parentScrollWidth": 1238,
+          "scrollLeft": 0
+        }
+      ],
+      "observedCodeTextsMatchCurrentPreparedFixtureAndDerivedSnapshot": true
+    },
+    {
+      "file": "snapshot-observation.json",
+      "bytes": 2271,
+      "sha256": "8ecec18534fe752fedea039f04ee47b7e60b4c2763dffe0a925cf9438c0d8f07",
+      "viewport": [
+        1440,
+        1100
+      ],
+      "theme": "dark",
+      "pageWidth": 1440,
+      "panelHash": "#snapshot-reading",
+      "scroll": [
+        0,
+        845
+      ],
+      "codeBounds": [
+        {
+          "clientWidth": 1236,
+          "scrollWidth": 1236,
+          "textSha256": "5cc36fb959a2c0736a9702576599feaf7105227d5fcfab3393fd1e983d131344"
+        },
+        {
+          "clientWidth": 1236,
+          "scrollWidth": 1236,
+          "textSha256": "09788a22a6c96c469471a945b9f93c3f753d2e46790a6d1766f866d4411c266e"
+        }
+      ],
+      "tableBounds": [
+        {
+          "width": 1238,
+          "parentWidth": 1238,
+          "parentScrollWidth": 1238,
+          "scrollLeft": 0
+        },
+        {
+          "width": 1238,
+          "parentWidth": 1238,
+          "parentScrollWidth": 1238,
+          "scrollLeft": 0
+        },
+        {
+          "width": 1238,
+          "parentWidth": 1238,
+          "parentScrollWidth": 1238,
+          "scrollLeft": 0
+        }
+      ],
+      "observedCodeTextsMatchCurrentPreparedFixtureAndDerivedSnapshot": true
+    },
+    {
+      "file": "mobile-observation.json",
+      "bytes": 2237,
+      "sha256": "35cb4a57ce687fff0b42fb38fd521606441d670dc7ac621682aea3503a64b999",
+      "viewport": [
+        390,
+        844
+      ],
+      "theme": "light",
+      "pageWidth": 390,
+      "panelHash": "",
+      "scroll": [
+        0,
+        0
+      ],
+      "codeBounds": [
+        {
+          "clientWidth": 330,
+          "scrollWidth": 498,
+          "textSha256": "5cc36fb959a2c0736a9702576599feaf7105227d5fcfab3393fd1e983d131344"
+        },
+        {
+          "clientWidth": 330,
+          "scrollWidth": 487,
+          "textSha256": "09788a22a6c96c469471a945b9f93c3f753d2e46790a6d1766f866d4411c266e"
+        }
+      ],
+      "tableBounds": [
+        {
+          "width": 332,
+          "parentWidth": 332,
+          "parentScrollWidth": 332,
+          "scrollLeft": 0
+        },
+        {
+          "width": 332,
+          "parentWidth": 332,
+          "parentScrollWidth": 332,
+          "scrollLeft": 0
+        },
+        {
+          "width": 332,
+          "parentWidth": 332,
+          "parentScrollWidth": 332,
+          "scrollLeft": 0
+        }
+      ],
+      "observedCodeTextsMatchCurrentPreparedFixtureAndDerivedSnapshot": true
+    },
+    {
+      "file": "mobile-table-observation.json",
+      "bytes": 2251,
+      "sha256": "b051c80ea5bbf759b499a231f292b970fcd8bfe374f0d28d1f84f0a2d15e1670",
+      "viewport": [
+        390,
+        844
+      ],
+      "theme": "light",
+      "pageWidth": 390,
+      "panelHash": "#state-sets",
+      "scroll": [
+        0,
+        2113
+      ],
+      "codeBounds": [
+        {
+          "clientWidth": 330,
+          "scrollWidth": 498,
+          "textSha256": "5cc36fb959a2c0736a9702576599feaf7105227d5fcfab3393fd1e983d131344"
+        },
+        {
+          "clientWidth": 330,
+          "scrollWidth": 487,
+          "textSha256": "09788a22a6c96c469471a945b9f93c3f753d2e46790a6d1766f866d4411c266e"
+        }
+      ],
+      "tableBounds": [
+        {
+          "width": 332,
+          "parentWidth": 332,
+          "parentScrollWidth": 332,
+          "scrollLeft": 0
+        },
+        {
+          "width": 332,
+          "parentWidth": 332,
+          "parentScrollWidth": 332,
+          "scrollLeft": 0
+        },
+        {
+          "width": 332,
+          "parentWidth": 332,
+          "parentScrollWidth": 332,
+          "scrollLeft": 0
+        }
+      ],
+      "observedCodeTextsMatchCurrentPreparedFixtureAndDerivedSnapshot": true
+    }
+  ],
+  "interactionScope": {
+    "desktopAndMobileSource": "root actual pointer/visual checks; metadata summarized here by author",
+    "mobileTable": "actual panel anchor click to #state-sets, no horizontal scroll required; three columns simultaneously visible",
+    "darkSnapshot": "actual panel anchor click to #snapshot-reading",
+    "preHorizontalScrolling": "not performed by root; long comment/snapshot header ends initially clipped on mobile",
+    "notExercised": [
+      "Copy button",
+      "OS clipboard",
+      "SourceCard hover",
+      "external links",
+      "full keyboard traversal",
+      "assistive technology",
+      "upstream Rust/compiler execution"
+    ]
+  },
+  "historicalVersion": {
+    "artifactSha256": "3e7a40b6633203fe9f673d2b6c87d4d6568e75ba4bdb93a5d7b8339545013a3f",
+    "images": "four old root PNGs kept privately, not final selected screenshots",
+    "mobileTable": {
+      "containerWidth": 332,
+      "contentWidth": 400,
+      "observedHorizontalScroll": 68
+    },
+    "browserKeyboardDiagnostics": 48
+  },
+  "limitations": [
+    "Final eab artifact still fails automated browser gate with48 keyboard diagnostics; pointer/visual observations do not override it",
+    "Mobile pre boxes have330px client width but498/487px content; complete code is not simultaneously visible and was not horizontally inspected",
+    "No compiler, runtime, full keyboard, AT, cross-browser or learning-benefit acceptance",
+    "Official snapshot is upstream expected, not a RustOwl run in this experiment"
+  ],
+  "licensing": "Screenshots show MPL-2.0 RustOwl excerpts/derived snapshot; NOTICE.md and complete upstream source/license retain that material boundary."
+}

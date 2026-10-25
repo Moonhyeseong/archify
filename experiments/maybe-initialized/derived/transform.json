@@ -1,0 +1,27 @@
+{
+  "kind": "fixed-snapshot-display-derivation",
+  "upstreamRevision": "607183668459e69f41871827c4d34df38117c427",
+  "upstreamExecuted": false,
+  "original": {
+    "path": "crates/rustowl/tests/snapshots/algorithm__must_live_cond_init_v.snap",
+    "bytes": 1168,
+    "sha256": "fee579a7512a29b1cc118ffe8bb371b5ed102adac0f75462ad2e2540d1c8e5e6"
+  },
+  "transforms": [
+    {
+      "operation": "remove only SGR sequences matching ESC[digits/semicolons m",
+      "matches": 116,
+      "output": "snapshot-without-sgr.txt",
+      "bytes": 672,
+      "sha256": "35f02f3fffe5f9ded3aeff279f15aa89a8deb120fef22da4699d137fc2e08126"
+    },
+    {
+      "operation": "select original variable header and source rows155-163 with their following underline rows; omit frontmatter, source context164-165 and full legend",
+      "output": "selected-snapshot.txt",
+      "bytes": 365,
+      "sha256": "9283bf61a9b55db1de5ada4b1f8cb6e2f8296556d1f87965a25f2a3b6d23c610"
+    }
+  ],
+  "colorHandling": "Display is plain text, not ANSI-colored; the authored page explicitly identifies green solid/wavy and cyan borrow from the original SGR and owning renderer. Syntax highlighting of Rust code is separate.",
+  "sourceRangeMeaning": "Original snapshot covers source rows155-165; row165 is the next function comment and is excluded from selected display only."
+}

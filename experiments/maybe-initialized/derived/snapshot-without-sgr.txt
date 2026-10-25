@@ -1,0 +1,31 @@
+---
+source: crates/rustowl/tests/algorithm.rs
+expression: output
+---
+
+=== Variable 'v' (1/1) in function 'must_live::cond_init' ===
+
+ 155 |     let r;
+ 156 |     if c {
+ 157 |         v = String::from("v");
+     |         -                   -
+ 158 |         r = &v;
+     |         --- --
+ 159 |     } else {
+ 160 |         r = &other;
+ 161 |     }
+     |     ~
+ 162 |     println!("{r}");
+     |     ~~~~~~~~~~~~~~~
+ 163 | }
+     | ~
+ 164 | 
+ 165 | // `a` is moved on only one branch while borrowed (does not compile).
+
+Legend:
+  --- definitely live (lifetime)
+  ~~~ maybe live
+  --- immutable borrow
+  --- mutable borrow
+  --- move / call
+  ~~~ outlive / shared mutable

@@ -1,0 +1,672 @@
+{
+  "kind": "authored-portable-summary-derived-from-private-machine-receipts",
+  "softwareBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "upstreamRevision": "607183668459e69f41871827c4d34df38117c427",
+  "upstreamExecuted": false,
+  "rustCompiled": false,
+  "softwareModified": false,
+  "licenseBoundary": {
+    "upstream": "MPL-2.0 original sources/snapshot and their excerpt/derived/embedded representations, Source Form bundled and fixed source URLs provided",
+    "newOriginalIndependentWork": "repository Apache-2.0 only to extent it does not incorporate MPL materials",
+    "scopeNotice": "NOTICE.md; artifact scope panel also states boundary"
+  },
+  "currentFinalize": {
+    "gates": {
+      "validate": "pass",
+      "deliver": "pass",
+      "check": "pass",
+      "browser-check": "fail"
+    },
+    "browserCheck": {
+      "requested": true,
+      "ran": true
+    },
+    "finalizeDiagnosticSummary": {
+      "total": 48,
+      "shown": 8,
+      "truncated": true,
+      "omittedByCode": {
+        "explainer/browser-keyboard-traversal": 40
+      }
+    },
+    "finalizeShownDiagnosticCodes": {
+      "explainer/browser-keyboard-traversal": 8
+    },
+    "rawBrowserDiagnosticsByCode": {
+      "explainer/browser-keyboard-traversal": 48
+    },
+    "rawBrowserDiagnosticCount": 48,
+    "readability": "pass",
+    "containment": "pass",
+    "visualReview": "not-requested"
+  },
+  "retainedFirstVersion": {
+    "artifactSha256": "3e7a40b6633203fe9f673d2b6c87d4d6568e75ba4bdb93a5d7b8339545013a3f",
+    "gates": {
+      "validate": "pass",
+      "deliver": "pass",
+      "check": "pass",
+      "browser-check": "fail"
+    },
+    "diagnosticSummary": {
+      "total": 48,
+      "shown": 8,
+      "truncated": true,
+      "omittedByCode": {
+        "explainer/browser-keyboard-traversal": 40
+      }
+    },
+    "rootFirstLookImages": "four original PNGs kept privately, not current final screenshots"
+  },
+  "headerRepair": "derived/header-repair.json",
+  "toolchain": {
+    "node": "22.23.2",
+    "dependencies": "reused existing directories through temporary symlinks; no install"
+  },
+  "rootVisualReview": {
+    "status": "root-actual-pointer-and-visual-observations",
+    "capture": "screenshots/capture.json",
+    "kind": "author-derived safe summary, raw observations remain private",
+    "viewedAllSelectedPngsReportedByRoot": true,
+    "keyboardGateOverride": false
+  },
+  "screenshots": {
+    "kind": "author-derived-safe-summary-of-root-browser-observations",
+    "date": "2026-10-25",
+    "browser": "Ego TaskSpace / Chromium, operated by root",
+    "artifact": {
+      "file": "output/explanation.html",
+      "bytes": 339972,
+      "sha256": "eab68129e141d0f1cc34e410605e8b10d4a83a5ec2a900816001a3ae9c74a24f"
+    },
+    "screenshots": [
+      {
+        "file": "desktop-light.png",
+        "bytes": 455848,
+        "sha256": "d511b0943b29f5bef28ea943da861105bf7da6f1b173d1353912d0d883960991",
+        "imageSize": [
+          1440,
+          2829
+        ]
+      },
+      {
+        "file": "snapshot-dark.png",
+        "bytes": 161470,
+        "sha256": "4d4679cf6e8c4e7a0c6c0b0c792f13d122bbe403147dbe836e22fc01d8327bd9",
+        "imageSize": [
+          1440,
+          1100
+        ]
+      },
+      {
+        "file": "mobile-light.png",
+        "bytes": 430539,
+        "sha256": "179d726bcb50fc7ecedb533c950e550e0cd83319bf01f7f1babf30aaf03fd19c",
+        "imageSize": [
+          390,
+          4115
+        ]
+      },
+      {
+        "file": "mobile-table-fit.png",
+        "bytes": 98834,
+        "sha256": "10ed1c6d24202ac2d9712eacfbecb526d3171448d364ad63b7310238c19ffee6",
+        "imageSize": [
+          390,
+          844
+        ]
+      }
+    ],
+    "rootReportsViewedAllSelectedPngs": true,
+    "authorOperatedBrowser": false,
+    "privateRawObservations": [
+      {
+        "file": "desktop-observation.json",
+        "bytes": 2253,
+        "sha256": "928d07f05a7de4ac097012b8ada28e998c1d17c964e303a1563a3b63473bf68f",
+        "viewport": [
+          1440,
+          1100
+        ],
+        "theme": "light",
+        "pageWidth": 1440,
+        "panelHash": "",
+        "scroll": [
+          0,
+          0
+        ],
+        "codeBounds": [
+          {
+            "clientWidth": 1236,
+            "scrollWidth": 1236,
+            "textSha256": "5cc36fb959a2c0736a9702576599feaf7105227d5fcfab3393fd1e983d131344"
+          },
+          {
+            "clientWidth": 1236,
+            "scrollWidth": 1236,
+            "textSha256": "09788a22a6c96c469471a945b9f93c3f753d2e46790a6d1766f866d4411c266e"
+          }
+        ],
+        "tableBounds": [
+          {
+            "width": 1238,
+            "parentWidth": 1238,
+            "parentScrollWidth": 1238,
+            "scrollLeft": 0
+          },
+          {
+            "width": 1238,
+            "parentWidth": 1238,
+            "parentScrollWidth": 1238,
+            "scrollLeft": 0
+          },
+          {
+            "width": 1238,
+            "parentWidth": 1238,
+            "parentScrollWidth": 1238,
+            "scrollLeft": 0
+          }
+        ],
+        "observedCodeTextsMatchCurrentPreparedFixtureAndDerivedSnapshot": true
+      },
+      {
+        "file": "snapshot-observation.json",
+        "bytes": 2271,
+        "sha256": "8ecec18534fe752fedea039f04ee47b7e60b4c2763dffe0a925cf9438c0d8f07",
+        "viewport": [
+          1440,
+          1100
+        ],
+        "theme": "dark",
+        "pageWidth": 1440,
+        "panelHash": "#snapshot-reading",
+        "scroll": [
+          0,
+          845
+        ],
+        "codeBounds": [
+          {
+            "clientWidth": 1236,
+            "scrollWidth": 1236,
+            "textSha256": "5cc36fb959a2c0736a9702576599feaf7105227d5fcfab3393fd1e983d131344"
+          },
+          {
+            "clientWidth": 1236,
+            "scrollWidth": 1236,
+            "textSha256": "09788a22a6c96c469471a945b9f93c3f753d2e46790a6d1766f866d4411c266e"
+          }
+        ],
+        "tableBounds": [
+          {
+            "width": 1238,
+            "parentWidth": 1238,
+            "parentScrollWidth": 1238,
+            "scrollLeft": 0
+          },
+          {
+            "width": 1238,
+            "parentWidth": 1238,
+            "parentScrollWidth": 1238,
+            "scrollLeft": 0
+          },
+          {
+            "width": 1238,
+            "parentWidth": 1238,
+            "parentScrollWidth": 1238,
+            "scrollLeft": 0
+          }
+        ],
+        "observedCodeTextsMatchCurrentPreparedFixtureAndDerivedSnapshot": true
+      },
+      {
+        "file": "mobile-observation.json",
+        "bytes": 2237,
+        "sha256": "35cb4a57ce687fff0b42fb38fd521606441d670dc7ac621682aea3503a64b999",
+        "viewport": [
+          390,
+          844
+        ],
+        "theme": "light",
+        "pageWidth": 390,
+        "panelHash": "",
+        "scroll": [
+          0,
+          0
+        ],
+        "codeBounds": [
+          {
+            "clientWidth": 330,
+            "scrollWidth": 498,
+            "textSha256": "5cc36fb959a2c0736a9702576599feaf7105227d5fcfab3393fd1e983d131344"
+          },
+          {
+            "clientWidth": 330,
+            "scrollWidth": 487,
+            "textSha256": "09788a22a6c96c469471a945b9f93c3f753d2e46790a6d1766f866d4411c266e"
+          }
+        ],
+        "tableBounds": [
+          {
+            "width": 332,
+            "parentWidth": 332,
+            "parentScrollWidth": 332,
+            "scrollLeft": 0
+          },
+          {
+            "width": 332,
+            "parentWidth": 332,
+            "parentScrollWidth": 332,
+            "scrollLeft": 0
+          },
+          {
+            "width": 332,
+            "parentWidth": 332,
+            "parentScrollWidth": 332,
+            "scrollLeft": 0
+          }
+        ],
+        "observedCodeTextsMatchCurrentPreparedFixtureAndDerivedSnapshot": true
+      },
+      {
+        "file": "mobile-table-observation.json",
+        "bytes": 2251,
+        "sha256": "b051c80ea5bbf759b499a231f292b970fcd8bfe374f0d28d1f84f0a2d15e1670",
+        "viewport": [
+          390,
+          844
+        ],
+        "theme": "light",
+        "pageWidth": 390,
+        "panelHash": "#state-sets",
+        "scroll": [
+          0,
+          2113
+        ],
+        "codeBounds": [
+          {
+            "clientWidth": 330,
+            "scrollWidth": 498,
+            "textSha256": "5cc36fb959a2c0736a9702576599feaf7105227d5fcfab3393fd1e983d131344"
+          },
+          {
+            "clientWidth": 330,
+            "scrollWidth": 487,
+            "textSha256": "09788a22a6c96c469471a945b9f93c3f753d2e46790a6d1766f866d4411c266e"
+          }
+        ],
+        "tableBounds": [
+          {
+            "width": 332,
+            "parentWidth": 332,
+            "parentScrollWidth": 332,
+            "scrollLeft": 0
+          },
+          {
+            "width": 332,
+            "parentWidth": 332,
+            "parentScrollWidth": 332,
+            "scrollLeft": 0
+          },
+          {
+            "width": 332,
+            "parentWidth": 332,
+            "parentScrollWidth": 332,
+            "scrollLeft": 0
+          }
+        ],
+        "observedCodeTextsMatchCurrentPreparedFixtureAndDerivedSnapshot": true
+      }
+    ],
+    "interactionScope": {
+      "desktopAndMobileSource": "root actual pointer/visual checks; metadata summarized here by author",
+      "mobileTable": "actual panel anchor click to #state-sets, no horizontal scroll required; three columns simultaneously visible",
+      "darkSnapshot": "actual panel anchor click to #snapshot-reading",
+      "preHorizontalScrolling": "not performed by root; long comment/snapshot header ends initially clipped on mobile",
+      "notExercised": [
+        "Copy button",
+        "OS clipboard",
+        "SourceCard hover",
+        "external links",
+        "full keyboard traversal",
+        "assistive technology",
+        "upstream Rust/compiler execution"
+      ]
+    },
+    "historicalVersion": {
+      "artifactSha256": "3e7a40b6633203fe9f673d2b6c87d4d6568e75ba4bdb93a5d7b8339545013a3f",
+      "images": "four old root PNGs kept privately, not final selected screenshots",
+      "mobileTable": {
+        "containerWidth": 332,
+        "contentWidth": 400,
+        "observedHorizontalScroll": 68
+      },
+      "browserKeyboardDiagnostics": 48
+    },
+    "limitations": [
+      "Final eab artifact still fails automated browser gate with48 keyboard diagnostics; pointer/visual observations do not override it",
+      "Mobile pre boxes have330px client width but498/487px content; complete code is not simultaneously visible and was not horizontally inspected",
+      "No compiler, runtime, full keyboard, AT, cross-browser or learning-benefit acceptance",
+      "Official snapshot is upstream expected, not a RustOwl run in this experiment"
+    ],
+    "licensing": "Screenshots show MPL-2.0 RustOwl excerpts/derived snapshot; NOTICE.md and complete upstream source/license retain that material boundary."
+  },
+  "publicFiles": {
+    "NOTICE.md": {
+      "bytes": 2036,
+      "sha256": "b0ed326b8860756cf94050a5bc98a9eb2d86d116f4da1a0175d01e3d734158fa"
+    },
+    "README.md": {
+      "bytes": 8520,
+      "sha256": "c5f0a5d45b9109cd304ffad7801920158d4918a06e783dc22107bb4ffaa24117"
+    },
+    "audit-facts.py": {
+      "bytes": 8066,
+      "sha256": "2312b72f088854009eb7e10aebbec8cf9e51969fb54f9c862b66c78b7ef1d0b0"
+    },
+    "derived/header-repair.json": {
+      "bytes": 6435,
+      "sha256": "bf63594002d934fb70ab9805747569b7846264cfa97612a7813849fa528c58a4"
+    },
+    "derived/selected-snapshot.txt": {
+      "bytes": 365,
+      "sha256": "9283bf61a9b55db1de5ada4b1f8cb6e2f8296556d1f87965a25f2a3b6d23c610"
+    },
+    "derived/snapshot-without-sgr.txt": {
+      "bytes": 672,
+      "sha256": "35f02f3fffe5f9ded3aeff279f15aa89a8deb120fef22da4699d137fc2e08126"
+    },
+    "derived/transform.json": {
+      "bytes": 1339,
+      "sha256": "bfca2437fbbb4e73d83e388e2a12cc0396ac3af67c7fb744df0e9f6bf4c37337"
+    },
+    "fact-audit.json": {
+      "bytes": 3025,
+      "sha256": "561723c0926e087c2218a0cc8cb961cede30738e555d6f1395ca967c4b171f51"
+    },
+    "ledger.md": {
+      "bytes": 2672,
+      "sha256": "902e45541911a082209d9421125dfbd2292e07d293ed3af21f82a17c030431bc"
+    },
+    "output/explanation.html": {
+      "bytes": 339972,
+      "sha256": "eab68129e141d0f1cc34e410605e8b10d4a83a5ec2a900816001a3ae9c74a24f"
+    },
+    "question.archify.md": {
+      "bytes": 5089,
+      "sha256": "42d8a5d15e3c870a61790e041aa9aabad3631ce191bd3b1f462a91216c02f11b"
+    },
+    "screenshots/capture.json": {
+      "bytes": 7947,
+      "sha256": "8805911256dedf211be2840c80157501b686b0302175789bfb1de938e30325d3"
+    },
+    "screenshots/desktop-light.png": {
+      "bytes": 455848,
+      "sha256": "d511b0943b29f5bef28ea943da861105bf7da6f1b173d1353912d0d883960991"
+    },
+    "screenshots/mobile-light.png": {
+      "bytes": 430539,
+      "sha256": "179d726bcb50fc7ecedb533c950e550e0cd83319bf01f7f1babf30aaf03fd19c"
+    },
+    "screenshots/mobile-table-fit.png": {
+      "bytes": 98834,
+      "sha256": "10ed1c6d24202ac2d9712eacfbecb526d3171448d364ad63b7310238c19ffee6"
+    },
+    "screenshots/snapshot-dark.png": {
+      "bytes": 161470,
+      "sha256": "4d4679cf6e8c4e7a0c6c0b0c792f13d122bbe403147dbe836e22fc01d8327bd9"
+    },
+    "upstream/LICENSE": {
+      "bytes": 16774,
+      "sha256": "53f84da786bc2a9d4ca80813015c2064bee21e7cd5653c3a431deaa6dfea92e5"
+    },
+    "upstream/crates/rustowl/algo-tests/src/must_live.rs": {
+      "bytes": 3993,
+      "sha256": "a201dd3fedd9fa0e6198c306756d860871649b54a055e388f09c62ab9f845d17"
+    },
+    "upstream/crates/rustowl/src/bin/core/analyze/dataflow_analyzer/effect.rs": {
+      "bytes": 3516,
+      "sha256": "b21d4089b48f71b4c727dd619f9937dde171cd22a3d7aa34ebf9ce2b233b3bcd"
+    },
+    "upstream/crates/rustowl/src/bin/core/analyze/dataflow_analyzer/places.rs": {
+      "bytes": 3550,
+      "sha256": "0647970e9dd528ba0c15e77edf6b20884d8d268d092db7211b4b5505ad5ffa94"
+    },
+    "upstream/crates/rustowl/src/bin/core/analyze/dataflow_analyzer/state.rs": {
+      "bytes": 2762,
+      "sha256": "f669e7716260e09cb338bf2965b08a58f15e1a48fbb5cc6cc9b905ee7de6936a"
+    },
+    "upstream/crates/rustowl/src/bin/core/analyze/dataflow_analyzer.rs": {
+      "bytes": 8783,
+      "sha256": "606c196cc641d289c6b9e8429148315e6ee789d97202c9db56871972507aca76"
+    },
+    "upstream/crates/rustowl/src/bin/core/analyze.rs": {
+      "bytes": 11300,
+      "sha256": "a0baefdeb224a9b654e63aeb1525979588b557838eecf77114fc08f6136e7e7b"
+    },
+    "upstream/crates/rustowl/src/lsp/decoration.rs": {
+      "bytes": 32012,
+      "sha256": "076f7380796f3b477afcb64b09fc02ebe99638fd905dcca5e62eb803d7430fdd"
+    },
+    "upstream/crates/rustowl/src/visualize.rs": {
+      "bytes": 20190,
+      "sha256": "4931ccaa731710b1e15ad0106a9d9ad927dbae0115f009158ea933ade90f0ac0"
+    },
+    "upstream/crates/rustowl/tests/algorithm.rs": {
+      "bytes": 6106,
+      "sha256": "406d4bce23532271bc4865adeace466db5e5b23a0fbdda72437e583ba2db7472"
+    },
+    "upstream/crates/rustowl/tests/snapshots/algorithm__must_live_cond_init_v.snap": {
+      "bytes": 1168,
+      "sha256": "fee579a7512a29b1cc118ffe8bb371b5ed102adac0f75462ad2e2540d1c8e5e6"
+    },
+    "upstream/manifest.json": {
+      "bytes": 4029,
+      "sha256": "9af5236c5e27335cae0d2232266f1c917fb55e3f883c0f905b1260ebd1004e8b"
+    }
+  },
+  "privateRawReceiptHashes": {
+    "archify-maybe-initialized-before-short-header/fact-audit.json": {
+      "bytes": 3025,
+      "sha256": "7b2caa61d3fb5a1c0c2832e2295b13eec9a1ddd62a7084c97fae15e8815fe464"
+    },
+    "archify-maybe-initialized-before-short-header/root-first-look-ledger.json": {
+      "bytes": 1422,
+      "sha256": "a0df2ee4aa140251e00d21828185018682ebae04f9d1d8320e3ea24cf0541c0e"
+    },
+    "archify-maybe-initialized-before-short-header/question.archify.md": {
+      "bytes": 5107,
+      "sha256": "12a52044ff6cb93863d43db3100947e6dfd4410bf7a378976a8be7d6bd1f234c"
+    },
+    "archify-maybe-initialized-before-short-header/portable-summary.json": {
+      "bytes": 7291,
+      "sha256": "b599a72c3f3c8fd7486e811164e88f4f6f68975b63abd9aec795e4d7f2c681dc"
+    },
+    "archify-maybe-initialized-before-short-header/explanation.html": {
+      "bytes": 340026,
+      "sha256": "3e7a40b6633203fe9f673d2b6c87d4d6568e75ba4bdb93a5d7b8339545013a3f"
+    },
+    "archify-maybe-initialized-before-short-header/root-first-look/snapshot-dark.png": {
+      "bytes": 162927,
+      "sha256": "ccd9537871e09986e2355068c5e9d0ed7cbe5401699f478ec6321ce990f48d61"
+    },
+    "archify-maybe-initialized-before-short-header/root-first-look/mobile-table-observation.json": {
+      "bytes": 705,
+      "sha256": "79734ed5b34815c2164d242d7a3d8572decc20de5193b4360b3375b8db4585dc"
+    },
+    "archify-maybe-initialized-before-short-header/root-first-look/mobile-table-right.png": {
+      "bytes": 94660,
+      "sha256": "20303feb2c72a820a015f497a37b8948cfea4c36e1b4c0b88f853b5629014fb9"
+    },
+    "archify-maybe-initialized-before-short-header/root-first-look/mobile-observation.json": {
+      "bytes": 2140,
+      "sha256": "c7eaa1fe81c3b662e1f8a0859e6b08c5d0aed9b52e0fed620c7c7c3da84a458d"
+    },
+    "archify-maybe-initialized-before-short-header/root-first-look/snapshot-observation.json": {
+      "bytes": 1890,
+      "sha256": "26994ca92d71334aae071050ca247f4eb3c7587a3611c14b02f918ce0256f42f"
+    },
+    "archify-maybe-initialized-before-short-header/root-first-look/mobile-light.png": {
+      "bytes": 431140,
+      "sha256": "5c3c34e1af1897c982a74ffd4006ed41b41418a4a98e156e1a294c862b758860"
+    },
+    "archify-maybe-initialized-before-short-header/root-first-look/desktop-light.png": {
+      "bytes": 457431,
+      "sha256": "2c9bd15c8366abb972e00257139ee418ff4bf9b8bfc454cb1fa0555309931b56"
+    },
+    "archify-maybe-initialized-before-short-header/root-first-look/desktop-observation.json": {
+      "bytes": 2156,
+      "sha256": "a75a4ed1b6a3c0a062acfe42cfe7b3d0533b57c34069b421cd5b5863625e83cc"
+    },
+    "archify-maybe-initialized-current": {
+      "bytes": 39,
+      "sha256": "44ede99e4c1fd153b239ada2df660e5ac8042d8508be4816a88fd83a1a15b28d"
+    },
+    "archify-maybe-initialized-explanation.delivery.json": {
+      "bytes": 3267,
+      "sha256": "4b488ef335555af1592a8fce700d33d12fc5e5990df1ac4d60b6fa8e14d5b32b"
+    },
+    "archify-maybe-initialized-finalize-first/explanation.browser-check.json": {
+      "bytes": 821547,
+      "sha256": "cdc267fd07583bd01fa7c979fe2bb041b8806e4a19cc558646fff62187d96ccf"
+    },
+    "archify-maybe-initialized-finalize-first/explanation.finalize.json": {
+      "bytes": 944030,
+      "sha256": "f1f093bedf24d5703967d04661675c94d53daa0c276db7b7f41419ac80f32aeb"
+    },
+    "archify-maybe-initialized-finalize-first/explanation.finalize-summary.json": {
+      "bytes": 9547,
+      "sha256": "fa01de40d898bce9f0f9b934ee2f5a2eb43dd5b6ded4d54741136ca237e6c842"
+    },
+    "archify-maybe-initialized-finalize-short-header/explanation.browser-check.json": {
+      "bytes": 819181,
+      "sha256": "005804f0328696a193c7e81305030e6aa2d007fedef44ce559520e02a96d47d7"
+    },
+    "archify-maybe-initialized-finalize-short-header/explanation.finalize.json": {
+      "bytes": 941692,
+      "sha256": "a0f51d9c668f25a6ff3ba10e81a84b02483ee57d9c10ab674b9dcf5963aec0ba"
+    },
+    "archify-maybe-initialized-finalize-short-header/explanation.finalize-summary.json": {
+      "bytes": 9568,
+      "sha256": "4891716ad9a99181cf5a4060b91e5221777fad0591b24d91575a5af4e5aadfdc"
+    },
+    "archify-maybe-initialized-first.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "archify-maybe-initialized-first.stdout.json": {
+      "bytes": 7655,
+      "sha256": "2272d54db7c347384ace3105371c3a422e05380b01a00bda0d9b83f50224b7ed"
+    },
+    "archify-maybe-initialized-ghnia4iy/fetch.stderr": {
+      "bytes": 116,
+      "sha256": "6b5eeac062ed959bdb8be8bf177ec800b8b6f7362f4b7101e7f85e5bbab85a87"
+    },
+    "archify-maybe-initialized-ghnia4iy/fetch.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "archify-maybe-initialized-mobile-probe.json": {
+      "bytes": 4791,
+      "sha256": "9244833debe69d1a745db4eb15a788f4d036427d6637e35552c791a8c43309c9"
+    },
+    "archify-maybe-initialized-mobile-probe.mjs": {
+      "bytes": 2876,
+      "sha256": "180307115aa36b9794218fae804981e1017894df76838754aae825c56deba79b"
+    },
+    "archify-maybe-initialized-mobile-probe.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "archify-maybe-initialized-mobile-probe.stdout.txt": {
+      "bytes": 503,
+      "sha256": "509e2bc2dfa3ec20d1ebb7fa346afb5bd8799c7afddd41d6703e872f09d55659"
+    },
+    "archify-maybe-initialized-root-20261025/snapshot-dark.png": {
+      "bytes": 162927,
+      "sha256": "ccd9537871e09986e2355068c5e9d0ed7cbe5401699f478ec6321ce990f48d61"
+    },
+    "archify-maybe-initialized-root-20261025/mobile-table-observation.json": {
+      "bytes": 705,
+      "sha256": "79734ed5b34815c2164d242d7a3d8572decc20de5193b4360b3375b8db4585dc"
+    },
+    "archify-maybe-initialized-root-20261025/mobile-table-right.png": {
+      "bytes": 94660,
+      "sha256": "20303feb2c72a820a015f497a37b8948cfea4c36e1b4c0b88f853b5629014fb9"
+    },
+    "archify-maybe-initialized-root-20261025/mobile-observation.json": {
+      "bytes": 2140,
+      "sha256": "c7eaa1fe81c3b662e1f8a0859e6b08c5d0aed9b52e0fed620c7c7c3da84a458d"
+    },
+    "archify-maybe-initialized-root-20261025/snapshot-observation.json": {
+      "bytes": 1890,
+      "sha256": "26994ca92d71334aae071050ca247f4eb3c7587a3611c14b02f918ce0256f42f"
+    },
+    "archify-maybe-initialized-root-20261025/mobile-light.png": {
+      "bytes": 431140,
+      "sha256": "5c3c34e1af1897c982a74ffd4006ed41b41418a4a98e156e1a294c862b758860"
+    },
+    "archify-maybe-initialized-root-20261025/desktop-light.png": {
+      "bytes": 457431,
+      "sha256": "2c9bd15c8366abb972e00257139ee418ff4bf9b8bfc454cb1fa0555309931b56"
+    },
+    "archify-maybe-initialized-root-20261025/desktop-observation.json": {
+      "bytes": 2156,
+      "sha256": "a75a4ed1b6a3c0a062acfe42cfe7b3d0533b57c34069b421cd5b5863625e83cc"
+    },
+    "archify-maybe-initialized-root-20261025/final/snapshot-dark.png": {
+      "bytes": 161470,
+      "sha256": "4d4679cf6e8c4e7a0c6c0b0c792f13d122bbe403147dbe836e22fc01d8327bd9"
+    },
+    "archify-maybe-initialized-root-20261025/final/mobile-table-observation.json": {
+      "bytes": 2251,
+      "sha256": "b051c80ea5bbf759b499a231f292b970fcd8bfe374f0d28d1f84f0a2d15e1670"
+    },
+    "archify-maybe-initialized-root-20261025/final/mobile-observation.json": {
+      "bytes": 2237,
+      "sha256": "35cb4a57ce687fff0b42fb38fd521606441d670dc7ac621682aea3503a64b999"
+    },
+    "archify-maybe-initialized-root-20261025/final/snapshot-observation.json": {
+      "bytes": 2271,
+      "sha256": "8ecec18534fe752fedea039f04ee47b7e60b4c2763dffe0a925cf9438c0d8f07"
+    },
+    "archify-maybe-initialized-root-20261025/final/mobile-light.png": {
+      "bytes": 430539,
+      "sha256": "179d726bcb50fc7ecedb533c950e550e0cd83319bf01f7f1babf30aaf03fd19c"
+    },
+    "archify-maybe-initialized-root-20261025/final/desktop-light.png": {
+      "bytes": 455848,
+      "sha256": "d511b0943b29f5bef28ea943da861105bf7da6f1b173d1353912d0d883960991"
+    },
+    "archify-maybe-initialized-root-20261025/final/desktop-observation.json": {
+      "bytes": 2253,
+      "sha256": "928d07f05a7de4ac097012b8ada28e998c1d17c964e303a1563a3b63473bf68f"
+    },
+    "archify-maybe-initialized-root-20261025/final/mobile-table-fit.png": {
+      "bytes": 98834,
+      "sha256": "10ed1c6d24202ac2d9712eacfbecb526d3171448d364ad63b7310238c19ffee6"
+    },
+    "archify-maybe-initialized-short-header.delivery.json": {
+      "bytes": 3267,
+      "sha256": "4162eeefff6b963783bdb15b1224580b981f0eed8c562c97d787fdb94c976ff0"
+    },
+    "archify-maybe-initialized-short-header.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "archify-maybe-initialized-short-header.stdout.json": {
+      "bytes": 7676,
+      "sha256": "a0831520f64ddb1b59683aedc327c537b0c81e004915a8808fe4e07e58705a16"
+    },
+    "archify-maybe-initialized-source-bytes.json": {
+      "bytes": 4059,
+      "sha256": "d015f8eb56b6619094bef1a00663369808d6c54555c0171d3d292f9702480ad5"
+    }
+  },
+  "limitations": [
+    "Official committed expected, not an executed trace in this experiment",
+    "I/U/I union U table is authored conceptual interpretation, not emitted states or exact MIR positions",
+    "Reference/fragment cases have separate analysis and over-approximation limits",
+    "Browser keyboard gate remains failed; no shared checker patched or necessary source removed",
+    "No learning-benefit, upstream execution, keyboard or cross-browser acceptance established"
+  ]
+}
