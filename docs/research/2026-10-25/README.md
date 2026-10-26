@@ -12,11 +12,17 @@
 
 最新状态另见[19:20–19:21晚间GitHub快照](github-status-latest-evening.md)：main/dev、部署等待、实验精确head和PR状态分别记账，不把Actions/check-runs为0当通过。 20:53:28（台北）最新只读快照确认dev/main仍为10b4/51a29177，CI状态与19:20相同（dev成功、main部署等待）；#1103/#1015/#998 heads不变，未发现晚间新增PR。原始API响应留checkout外，不补造部署完成或候选CI通过。 最新核对见[22:07–22:09 GitHub状态](github-status-2207.md)：main51a29177/dev10b4及重点PR身份不变，dev CI成功、main部署仍waiting；最新release仍v3.2.0。
 
-## 已推送的 49 个实验
+## 2026-10-26 曾恢复，按最新要求收尾本批后暂停
+
+今日曾按用户要求恢复持续探索；昨日暂停和今日恢复均保留为历史。**按最新要求收尾本批后暂停，当前只补第50项gallery，不启动新研究或实施；尚未完成收尾，不提前记作已暂停。**今日状态与三个有界只读报告见[2026-10-26 日报](../2026-10-26/README.md)，GitHub基线为dev `e837dc4cb83042d2b6c596e039692e25ec62c2da`。原研究没有直接推荐实施候选；协调者随后在既有图上实际对照，选定Relation search作为第50个独立实验，未将构造复现称为自然用户痛点。
+
+第50项已推送 `codex/lab-relation-search`，精确head `e87a858d220c25c97aee4b5920cf59ab77723b41`，远端一致且工作区clean，独立终审READY；协调者报告精确head Actions runs=0、check-runs=0，不能称远端CI通过。索引收尾时间点：`2026-10-26T05:48:55Z`。已推分支不等于合入、发布、部署或人类验收；当前仍在本批收尾阶段，补完第50项gallery后按最新要求暂停，不宣布目标完成。
+
+## 已推送的 50 个实验
 
 分支里的 README 含实际图片、原始/示例输入、生成 JSON/HTML、复现命令、来源许可与验证边界。
 
-[离线图片浏览页](gallery/README.md)：收录49个已推远程实验的49张原始PNG，固定来源hub为 `735250ac02664b1d6cd4c5f6f63d63d1b38bf96e`，当前生成HTML SHA-256为 `5d20fafcb518d59472a3466333bcbd9fb9940ac4229c364417301b9e4086c319`。本次从46版补入Witness groups、Patch outcome和Segment origins三项；模板不为本轮内容改变。原图、来源许可、失败及未运行阶段继续各自记账，图片索引不把实验的keyboard失败改成通过。root已实际操作当前49版并查看六张最终截图；四筛选、三个新增项完整图和390px搜索/dialog/空结果/reset观察已绑定，完整范围与首次测量失败见gallery说明，不称全部49项重新验收。此前46/39及更早快照的实际观察和限定复用见gallery固定历史说明，不挪为49版新测。
+[离线图片浏览页](gallery/README.md)：收录49个已推远程实验的49张原始PNG，固定来源hub为 `735250ac02664b1d6cd4c5f6f63d63d1b38bf96e`，当前生成HTML SHA-256为 `5d20fafcb518d59472a3466333bcbd9fb9940ac4229c364417301b9e4086c319`。本次从46版补入Witness groups、Patch outcome和Segment origins三项；模板不为本轮内容改变。原图、来源许可、失败及未运行阶段继续各自记账，图片索引不把实验的keyboard失败改成通过。root已实际操作当前49版并查看六张最终截图；四筛选、三个新增项完整图和390px搜索/dialog/空结果/reset观察已绑定，完整范围与首次测量失败见gallery说明，不称全部49项重新验收。此前46/39及更早快照的实际观察和限定复用见gallery固定历史说明，不挪为49版新测。 **第50项已入主索引，gallery正在补第50项、尚未完成；现有49项gallery继续保持上述source735250ac与HTML5d20fafc身份，不能称50项图片总览已验收。**
 
 | 实验与远程分支 | 具体价值 | 发布 revision | 实际图片 | 验证与限制 |
 | --- | --- | --- | --- | --- |
@@ -69,6 +75,7 @@
 | [Witness groups](https://github.com/tt-a1i/archify/tree/codex/lab-witness-groups/experiments/witness-groups) | 同一输出的平面来源清单与共同/替代见证组合并排，组数不是执行数 | `861ec022` | [固定README](https://github.com/tt-a1i/archify/blob/861ec02283bcd32c8315aa7b5f8b5ef9678dda27/experiments/witness-groups/README.md) / [中文页面](https://github.com/tt-a1i/archify/blob/861ec02283bcd32c8315aa7b5f8b5ef9678dda27/experiments/witness-groups/explainer.html) / [原PNG](https://github.com/tt-a1i/archify/blob/861ec02283bcd32c8315aa7b5f8b5ef9678dda27/experiments/witness-groups/screenshots/desktop-light.png) | 基线10b4；32文件/31public/28raw，16MIT完整原件与9verified来源；normal三阶段0诊断/browser未请求，6事实/root4图；无DB/SQL/上游执行，非概率或现实因果 |
 | [Patch outcome](https://github.com/tt-a1i/archify/tree/codex/lab-patch-outcome/experiments/patch-outcome) | 官方两个true不证明结果等于最初目标B，A/B/I/E完整literal分列 | `b5f7d7b1` | [固定README](https://github.com/tt-a1i/archify/blob/b5f7d7b11482fb272fb88fbfdcb9e864407eabdf/experiments/patch-outcome/README.md) / [中文页面](https://github.com/tt-a1i/archify/blob/b5f7d7b11482fb272fb88fbfdcb9e864407eabdf/experiments/patch-outcome/explainer.html) / [原PNG](https://github.com/tt-a1i/archify/blob/b5f7d7b11482fb272fb88fbfdcb9e864407eabdf/experiments/patch-outcome/screenshots/desktop-light.png) | 基线10b4；19文件/18binding，完整Apache-2.0来源与固定literal位置；normal三阶段+1writing warning/browser未请求，10事实/root4图；无上游patch运行，不是任意补丁parser或等价证明 |
 | [Segment origins](https://github.com/tt-a1i/archify/tree/codex/lab-segment-origins/experiments/segment-origins) | 同一source-map查询因GLB/LUB选择不同段原点，不补逐字符偏移 | `6d2b0312` | [固定README](https://github.com/tt-a1i/archify/blob/6d2b0312ebf011e3aa51835f52f9427125f0f2a3/experiments/segment-origins/README.md) / [中文页面](https://github.com/tt-a1i/archify/blob/6d2b0312ebf011e3aa51835f52f9427125f0f2a3/experiments/segment-origins/explainer.html) / [原PNG](https://github.com/tt-a1i/archify/blob/6d2b0312ebf011e3aa51835f52f9427125f0f2a3/experiments/segment-origins/screenshots/desktop-light.png) | 基线10b4；19文件/18ledger、独立READY；normal三阶段0诊断/browser未请求、7事实/root4图；仅来源元数据，未mapper运行；手机首表432/332横滚0→100后右name可读左query裁掉，完整source JSON未横滚 |
+| [Relation search](https://github.com/tt-a1i/archify/tree/codex/lab-relation-search/experiments/relation-search) | 按关系标签或ID查找，显示两端并精确pin已有关系 | `e87a858d` | [固定README](https://github.com/tt-a1i/archify/blob/e87a858d220c25c97aee4b5920cf59ab77723b41/experiments/relation-search/README.md) / [原PNG](https://github.com/tt-a1i/archify/blob/e87a858d220c25c97aee4b5920cf59ab77723b41/experiments/relation-search/screenshots/candidate-enqueue.png) | 基线e837；独立READY，root5图/8原观察；enqueue从0节点到1关系、RAG三词精确ID、Route仍node-only；Finder9/FocusRoute22/locale37/core19，Semantic5pass1skip、generated/ZIP macOS通过；无手机/AT/全平台/效率证明，head Actions/checks均0；RAG生成15空白warning保留 |
 
 上述前33项均经过另一位 Codex agent 的独立代码/证据复核，协调 agent 实际查看图片。测试数对应各实验自己的 focused tests，不是全仓测试；远端 CI、跨平台验证、实际用户效果与人类验收没有因此自动成立。生成 HTML/Markdown 保留原渲染器或适配器字节；源码 whitespace 检查与生成产物的既有空白分开记录。Payload test 和 State source 各清理了一处无语义影响空白，摘要同时保留实际测试 hash 与当前 hash。
 
@@ -154,7 +161,9 @@ GitHub CI 单独核实：截至 2026-10-25 13:01（台北），前 11 个精确�
 
 2026-10-25 Segment origins固定head `6d2b0312ebf011e3aa51835f52f9427125f0f2a3` 已推、远端精确一致且clean，独立终审READY；当前49个已实现并已推实验。协调者于UTC14:14:08核精确head的Actions runs=0、check-runs=0，不称CI通过。图片总览已补齐至49项并完成本批范围的截图核验；收尾后暂停。
 
-## 本批收尾与暂停状态
+## 2026-10-25 本批收尾与暂停（历史）
+
+以下保留2026-10-25收尾记录；2026-10-26曾恢复，最新要求为收尾本批后暂停，见上文。
 
 按用户要求，本批已收尾并暂停。49个实验分支、49项图片总览、已启动的Round27报告及22:07 GitHub快照均已收齐；22:24:55一次只读远端核对确认49个分支与总览固定提交一致。**停止新研究与新实施**；Round26/27保留的内容方向均为研究待定、不启动，等待用户明确继续。
 
