@@ -1,0 +1,15 @@
+{
+  "claim": "Authored main SVG comparison only; no runtime camera/layout equivalence claim",
+  "equalFreshBaseCandidate": true,
+  "equalTrackedBaseCandidate": true,
+  "sha256": {
+    "baseFresh": "902de0677920b4e320ea54061a998a7120286248c79999eeac2bd4eb49f4f8a8",
+    "baseTracked": "902de0677920b4e320ea54061a998a7120286248c79999eeac2bd4eb49f4f8a8",
+    "candidate": "902de0677920b4e320ea54061a998a7120286248c79999eeac2bd4eb49f4f8a8"
+  },
+  "bytes": {
+    "baseFresh": 29943,
+    "baseTracked": 29943,
+    "candidate": 29943
+  }
+}

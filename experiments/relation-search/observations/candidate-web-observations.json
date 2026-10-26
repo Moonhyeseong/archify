@@ -1,0 +1,46 @@
+{
+  "identity": {
+    "bytes": 878480,
+    "sha256": "bda91dc4084ede0bf9de87f5c1c706d82f144ef45af16736247bb15dc619bca1"
+  },
+  "search": {
+    "title": "Find in diagram",
+    "inputAria": "Search diagram nodes and relationships",
+    "query": "enqueue",
+    "status": "1 of 19 nodes and relationships",
+    "results": [
+      {
+        "text": "enqueueRelationshipAPI Server → SQS · enqueue-job",
+        "aria": "Inspect enqueue, API Server → SQS",
+        "attributes": [
+          [
+            "data-relationship-key",
+            "7"
+          ],
+          [
+            "data-relationship-id",
+            "enqueue-job"
+          ]
+        ]
+      }
+    ],
+    "viewport": [
+      1440,
+      1100
+    ]
+  },
+  "selected": {
+    "relationship": {
+      "id": "enqueue-job",
+      "key": "7",
+      "from": "api",
+      "to": "queue",
+      "label": "enqueue"
+    },
+    "active": "api",
+    "hash": "#relation=enqueue-job",
+    "finderOpen": false,
+    "focusRole": "button",
+    "focusAria": "Inspect relationship 8 of 9: API Server to SQS, enqueue. Press Enter for details."
+  }
+}

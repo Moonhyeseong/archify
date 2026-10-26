@@ -1,0 +1,20 @@
+[
+  {
+    "query": "ANN search",
+    "status": "0 of 12 nodes",
+    "results": [],
+    "hash": ""
+  },
+  {
+    "query": "grounded answer",
+    "status": "0 of 12 nodes",
+    "results": [],
+    "hash": ""
+  },
+  {
+    "query": "parsed text",
+    "status": "0 of 12 nodes",
+    "results": [],
+    "hash": ""
+  }
+]

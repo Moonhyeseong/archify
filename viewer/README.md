@@ -3,7 +3,7 @@
 Edit `reader-layout.js` for Adaptive Reader Layout, `viewer-chrome-layout.js`
 for navigation clearance, `viewer-camera.js` for camera interactions and
 transactions, `semantic-radar.js` for the overview map, `motion-governor.js` for
-motion mode and ownership, `node-finder.js` for node search and endpoint picking,
+motion mode and ownership, `node-finder.js` for node/relationship search and endpoint picking,
 `intent-trace.js` for hover/focus previews, `semantic-lens.js` for type selection
 and legend previews, `route-probe.js` for directed paths and Route Journey,
 `focus.js` for semantic selection, relationships, reachability and shared flow tokens,
@@ -523,6 +523,12 @@ position. Its interface is `open`, `close`, `toggle`, `select`, `isOpen`,
   metadata, brand and source-reference matching. Queries are trimmed and
   lowercased for substring matching. Connections are counted by distinct
   directed from/to pairs, not edge keys or distinct neighbors.
+- Non-empty default searches also include the existing Focus relationship hit
+  targets, matching authored IDs and labels. Those targets own eligibility;
+  Finder does not derive a second graph. Rows identify relationships and show
+  endpoints, then call exact-ID/key relationship inspection with `toggle:false`.
+  Empty queries keep node browsing; explicit restricted and Route contexts remain
+  node-only. The public `select(id)` and `count` retain their node contracts.
 - Context comes from explicit `options.context`, otherwise the current Route
   Probe picker, otherwise focus defaults. Requested fields shallowly override
   defaults. `allowedIds: null` leaves all items available; `[]` leaves none.

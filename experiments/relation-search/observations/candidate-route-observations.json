@@ -1,0 +1,25 @@
+{
+  "sourceExcluded": {
+    "context": "route-source",
+    "status": "0 of 6 route sources",
+    "relationRows": 0,
+    "rows": 0
+  },
+  "targetExcluded": {
+    "context": "route-target",
+    "status": "0 of 4 reachable destinations",
+    "relationRows": 0,
+    "rows": 0
+  },
+  "result": {
+    "source": "api",
+    "target": "queue",
+    "nodes": [
+      "api",
+      "queue"
+    ],
+    "hops": 1,
+    "journey": -1,
+    "playing": false
+  }
+}

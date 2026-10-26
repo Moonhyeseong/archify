@@ -1,0 +1,20 @@
+{
+  "action": "Actual pointer click on observed vertical edge stroke; semantic selector had zero-width bounding box",
+  "point": {
+    "x": 952.8170776367188,
+    "y": 575.3102416992188
+  },
+  "relationship": {
+    "id": "enqueue-job",
+    "key": "7",
+    "from": "api",
+    "to": "queue",
+    "label": "enqueue"
+  },
+  "active": "api",
+  "hash": "#relation=enqueue-job",
+  "viewport": [
+    1440,
+    1100
+  ]
+}

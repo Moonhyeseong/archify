@@ -1068,6 +1068,7 @@
           target.setAttribute('data-relationship-key', record.key);
           target.setAttribute('data-relationship-from', record.from);
           target.setAttribute('data-relationship-to', record.to);
+          target.setAttribute('data-relationship-label', record.labelValue);
           if (record.id) target.setAttribute('data-relationship-id', record.id);
           target.setAttribute('role', 'button');
           target.setAttribute('tabindex', index === 0 ? '0' : '-1');

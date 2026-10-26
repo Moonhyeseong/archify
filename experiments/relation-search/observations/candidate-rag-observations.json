@@ -1,0 +1,74 @@
+{
+  "identity": {
+    "bytes": 885020,
+    "sha256": "d7335b1961777c706d73a1082336bfb2f43219f0ef38d128a167534185ad7b2e"
+  },
+  "observations": [
+    {
+      "search": {
+        "query": "ANN search",
+        "rows": [
+          {
+            "text": "ANN searchRelationshipRetriever → Vector Store · retriever-to-vectordb",
+            "id": "retriever-to-vectordb"
+          }
+        ]
+      },
+      "selected": {
+        "relation": {
+          "id": "retriever-to-vectordb",
+          "key": "4",
+          "from": "retriever",
+          "to": "vectordb",
+          "label": "ANN search"
+        },
+        "hash": "#relation=retriever-to-vectordb",
+        "theme": "dark"
+      }
+    },
+    {
+      "search": {
+        "query": "grounded answer",
+        "rows": [
+          {
+            "text": "grounded answerRelationshipLLM → Orchestrator · llm-response",
+            "id": "llm-response"
+          }
+        ]
+      },
+      "selected": {
+        "relation": {
+          "id": "llm-response",
+          "key": "7",
+          "from": "llm",
+          "to": "orchestrator",
+          "label": "grounded answer"
+        },
+        "hash": "#relation=llm-response",
+        "theme": "dark"
+      }
+    },
+    {
+      "search": {
+        "query": "parsed text",
+        "rows": [
+          {
+            "text": "parsed textRelationshipLoader → Chunker · loader-to-chunker",
+            "id": "loader-to-chunker"
+          }
+        ]
+      },
+      "selected": {
+        "relation": {
+          "id": "loader-to-chunker",
+          "key": "10",
+          "from": "loader",
+          "to": "chunker",
+          "label": "parsed text"
+        },
+        "hash": "#relation=loader-to-chunker",
+        "theme": "dark"
+      }
+    }
+  ]
+}

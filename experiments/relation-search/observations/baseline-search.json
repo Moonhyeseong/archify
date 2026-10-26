@@ -1,0 +1,20 @@
+{
+  "query": "enqueue",
+  "status": "0 of 10 nodes",
+  "empty": "No matching nodes",
+  "results": [],
+  "edges": [
+    {
+      "tag": "path",
+      "label": "enqueue",
+      "from": "api",
+      "to": "queue"
+    },
+    {
+      "tag": "g",
+      "label": "enqueue",
+      "from": "api",
+      "to": "queue"
+    }
+  ]
+}

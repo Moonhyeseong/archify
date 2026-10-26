@@ -1,0 +1,13 @@
+{
+  "base": "e837dc4cb83042d2b6c596e039692e25ec62c2da",
+  "branch": "codex/lab-relation-search",
+  "state": "uncommitted candidate; source and artifact bytes frozen before root UI review",
+  "sha256": {
+    "viewer/node-finder.js": "cb6b200d18393fc50fab377f53346ec1434405e28c3ed59954356b8b944740a1",
+    "viewer/focus.js": "5fc4eb81dbae419f7d30d11a551a77245e50d41472868734ab838e91265d368c",
+    "archify/assets/template.html": "dbc8533f5a52f4d96343ba788aabbb9551036691a2589d1f87e59474f21f20be",
+    "archify/examples/web-app-rendered.html": "bda91dc4084ede0bf9de87f5c1c706d82f144ef45af16736247bb15dc619bca1",
+    "experiments/relation-search/candidate-rag.html": "d7335b1961777c706d73a1082336bfb2f43219f0ef38d128a167534185ad7b2e",
+    "archify.zip": "94c112f2d5a52a9f3319ec4a159315504f01ba46d1a2ac7752c3525c388c8cc7"
+  }
+}

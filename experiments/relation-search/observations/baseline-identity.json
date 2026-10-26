@@ -1,0 +1,7 @@
+{
+  "base": "e837dc4cb83042d2b6c596e039692e25ec62c2da",
+  "sourcePath": "archify/examples/web-app-rendered.html",
+  "bytes": 875557,
+  "sha256": "6634294ad509b10f72a7d341e8721fe1549ec65ef73c4a0c4c4752f0afa37f90",
+  "method": "Exact tracked example HTML from current dev, not a fresh render"
+}

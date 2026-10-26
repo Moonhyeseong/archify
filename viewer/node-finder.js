@@ -1,5 +1,5 @@
     /* ============================================================
-       Node Finder — stable-ID search over the existing semantic SVG.
+       Finder — stable-ID search over the existing semantic SVG.
        Search never changes the IR or SVG geometry: selecting a result resets
        the viewport and delegates to semantic focus.
        ============================================================ */
@@ -82,6 +82,37 @@
         };
       });
 
+      // Focus has already installed only inspectable, unambiguous relationships.
+      // Reuse those targets instead of creating another graph-eligibility rule.
+      var relationshipItems = Array.prototype.map.call(svg.querySelectorAll('[data-relationship-hit-key]'), function (target) {
+        var key = target.getAttribute('data-relationship-key');
+        var id = target.getAttribute('data-relationship-id') || '';
+        var from = target.getAttribute('data-relationship-from');
+        var to = target.getAttribute('data-relationship-to');
+        var label = target.getAttribute('data-relationship-label') || id || viewerText('viewer.finder.relationship');
+        function endpoint(id) {
+          var item = items.find(function (candidate) { return candidate.id === id; });
+          return item ? item.label : id;
+        }
+        var endpoints = endpoint(from) + ' → ' + endpoint(to);
+        return { key: key, id: id, label: label, endpoints: endpoints, node: target,
+          search: [id, label].join(' ').toLowerCase() };
+      });
+
+      function selectRelationship(item) {
+        var selected = item.id
+          ? Archify.focus.inspectRelationshipById(item.id, { toggle: false })
+          : Archify.focus.inspectRelationship(item.key, { toggle: false });
+        if (!selected) return false;
+        close({ restoreFocus: false });
+        try { item.node.focus({ preventScroll: true }); } catch (_) { try { item.node.focus(); } catch (_) {} }
+        return true;
+      }
+
+      function activate(item) {
+        return item.key !== undefined ? selectRelationship(item) : select(item.id);
+      }
+
       function resultButtons() {
         return Array.prototype.slice.call(results.querySelectorAll('.node-finder-result'));
       }
@@ -106,6 +137,7 @@
         panel.setAttribute('data-context', context.kind);
         heading.textContent = context.title;
         input.placeholder = context.placeholder;
+        input.setAttribute('aria-label', context.kind === 'focus' ? viewerText('viewer.finder.search') : context.title);
         empty.textContent = context.empty;
         results.setAttribute('aria-label', context.resultsLabel);
       }
@@ -136,19 +168,25 @@
       function render(query) {
         query = (query || '').trim().toLowerCase();
         var available = availableItems();
+        var searchRelationships = query && context.kind === 'focus' && !context.allowedIds;
+        if (searchRelationships) available = available.concat(relationshipItems);
         visibleItems = available.filter(function (item) { return !query || item.search.indexOf(query) !== -1; });
         results.textContent = '';
         visibleItems.forEach(function (item) {
           var button = document.createElement('button');
           button.type = 'button';
           button.className = 'node-finder-result';
-          button.setAttribute('data-node-id', item.id);
-          var badge = context.badges && context.badges[item.id]
+          var relationship = item.key !== undefined;
+          button.setAttribute(relationship ? 'data-relationship-key' : 'data-node-id', relationship ? item.key : item.id);
+          if (relationship && item.id) button.setAttribute('data-relationship-id', item.id);
+          var badge = relationship ? viewerText('viewer.finder.relationship') : context.badges && context.badges[item.id]
             ? context.badges[item.id]
             : context.kind === 'focus'
               ? viewerCount('viewer.finder.link', item.links)
               : String(item.links);
-          var action = context.kind === 'route-source'
+          var action = relationship
+            ? viewerText('viewer.finder.result.relationship', { label: item.label, endpoints: item.endpoints })
+            : context.kind === 'route-source'
             ? viewerText('viewer.finder.result.routeStart', { label: item.label })
             : context.kind === 'route-target'
               ? viewerText('viewer.finder.result.routeTarget', { label: item.label, links: badge })
@@ -160,14 +198,14 @@
           var links = document.createElement('em');
           links.textContent = badge;
           links.title = context.kind === 'focus' ? badge : action;
-          if (item.links === 0) links.setAttribute('data-zero', 'true');
+          if (!relationship && item.links === 0) links.setAttribute('data-zero', 'true');
           var meta = document.createElement('small');
-          meta.textContent = [viewerKindLabel(item.type), item.id, item.sublabel, item.tag].filter(Boolean).join(' \u00b7 ');
-          meta.title = [viewerKindLabel(item.type), item.id, item.context, item.sublabel, item.tag].filter(Boolean).join(' \u00b7 ');
+          meta.textContent = relationship ? [item.endpoints, item.id].filter(Boolean).join(' · ') : [viewerKindLabel(item.type), item.id, item.sublabel, item.tag].filter(Boolean).join(' \u00b7 ');
+          meta.title = relationship ? meta.textContent : [viewerKindLabel(item.type), item.id, item.context, item.sublabel, item.tag].filter(Boolean).join(' \u00b7 ');
           button.appendChild(name);
           button.appendChild(links);
           button.appendChild(meta);
-          button.addEventListener('click', function () { select(item.id); });
+          button.addEventListener('click', function () { activate(item); });
           results.appendChild(button);
         });
         empty.hidden = visibleItems.length !== 0;
@@ -175,7 +213,7 @@
           ? viewerText('viewer.finder.status.filtered', {
               visible: visibleItems.length,
               available: available.length,
-              noun: context.availableNoun
+              noun: searchRelationships ? viewerText('viewer.finder.noun.items') : context.availableNoun
             })
           : viewerText('viewer.finder.status.all', { available: available.length, noun: context.availableNoun });
       }
@@ -225,7 +263,7 @@
           buttons[0].focus();
         } else if (event.key === 'Enter' && visibleItems.length) {
           event.preventDefault();
-          select(visibleItems[0].id);
+          activate(visibleItems[0]);
         }
       });
       results.addEventListener('keydown', function (event) {

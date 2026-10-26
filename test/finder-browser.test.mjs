@@ -50,6 +50,16 @@ test('Finder preserves search, keyboard, contextual Route selection and cleanup'
       return id === 'api' ? [{path:'src/finder-proof.js',label:'Finder proof',line:12,endLine:18}] : finderOriginalSources(id);
     };
     Archify.finder = (function () {`));
+  // Same-label parallel edges must remain separately selectable. These DOM
+  // probes also reuse Focus's existing duplicate-ID and no-geometry exclusions.
+  files.relationships = path.join(scratch, 'relationships.html');
+  const extraEdges = `<path data-edge-key="parallel-a" data-edge-id="parallel-first" data-edge-from="api" data-edge-to="queue" data-edge-label="parallel enqueue" d="M735 360 L735 440"/>
+    <path data-edge-key="parallel-b" data-edge-id="parallel-second" data-edge-from="api" data-edge-to="queue" data-edge-label="parallel enqueue" d="M745 360 L745 440"/>
+    <path data-edge-key="ambiguous-a" data-edge-id="ambiguous" data-edge-from="api" data-edge-to="queue" data-edge-label="excluded token" d="M755 360 L755 440"/>
+    <path data-edge-key="ambiguous-b" data-edge-id="ambiguous" data-edge-from="api" data-edge-to="queue" data-edge-label="excluded token" d="M765 360 L765 440"/>
+    <g data-edge-key="shapeless" data-edge-id="shapeless" data-edge-from="api" data-edge-to="queue" data-edge-label="excluded token"></g>`;
+  fs.writeFileSync(files.relationships, metadataSource.replace('    var Archify = {};',
+    `document.querySelector('.diagram-container > svg').insertAdjacentHTML('beforeend', ${JSON.stringify(extraEdges)});\n    var Archify = {};`));
   const browser = new ChromeVisualBrowser(chrome);
   t.after(() => browser.close());
   const session = await browser.sessionPromise;
@@ -91,7 +101,7 @@ test('Finder preserves search, keyboard, contextual Route selection and cleanup'
     await run('Archify.viewerChromeLayout.whenStable()');
   }
   async function key(key, code, windowsVirtualKeyCode) {
-    await send('Input.dispatchKeyEvent', { type: 'keyDown', key, code, windowsVirtualKeyCode });
+    await send('Input.dispatchKeyEvent', { type: 'keyDown', key, code, windowsVirtualKeyCode, ...(key === 'Enter' ? {text:'\r'} : {}) });
     await send('Input.dispatchKeyEvent', { type: 'keyUp', key, code, windowsVirtualKeyCode });
   }
   async function opened() {
@@ -110,7 +120,7 @@ test('Finder preserves search, keyboard, contextual Route selection and cleanup'
         panelContext:panel.getAttribute('data-context'), title:document.getElementById('node-finder-title').textContent,
         query:input.value, placeholder:input.placeholder, empty:document.getElementById('node-finder-empty').hidden,
         status:document.getElementById('node-finder-status').textContent,
-        results:[...panel.querySelectorAll('.node-finder-result')].map(el=>({id:el.dataset.nodeId,badge:el.querySelector('em').textContent,aria:el.getAttribute('aria-label')})),
+        results:[...panel.querySelectorAll('.node-finder-result')].map(el=>({id:el.dataset.nodeId,badge:el.querySelector('em').textContent,aria:el.getAttribute('aria-label'),metaTitle:el.querySelector('small').title})),
         activeId:document.activeElement.id, activeNode:document.activeElement.getAttribute('data-node-id'),
         focus:Archify.focus.active(), route:Archify.routeProbe.active(),
         routeFinder:document.getElementById('route-probe').getAttribute('data-finder-open'),
@@ -146,6 +156,7 @@ test('Finder preserves search, keyboard, contextual Route selection and cleanup'
     for (const query of ['  API SERVER  ', 'finder-brand-token', 'src/finder-proof.js']) {
       await search(query); const state = await snapshot('query-' + query.trim());
       assert.deepEqual(ids(state), ['api']); assert.equal(state.empty, true);
+      assert.match(state.results[0].metaTitle, /api/); assert.match(state.results[0].metaTitle, /FastAPI :8000/);
       assert.match(state.status, /1/);
     }
     await search('no-matching-node');
@@ -165,6 +176,32 @@ test('Finder preserves search, keyboard, contextual Route selection and cleanup'
     assert.equal(await run('Archify.focus.active()'), 'api');
     await run('Archify.finder.open()'); await opened();
     const reset = await snapshot('default-restored'); assert.equal(reset.context, 'focus'); assert.equal(reset.results.length, reset.count);
+  });
+
+  await t.test('relationship label and ID search inspect the exact edge while Route remains node-only', async () => {
+    await load(); await click('#btn-node-finder'); await opened();
+    await search('  ENQUEUE  ');
+    assert.deepEqual(await run(`Array.from(document.querySelectorAll('#node-finder-results button'), b=>({id:b.dataset.relationshipId,badge:b.querySelector('em').textContent,meta:b.querySelector('small').textContent}))`),
+      [{id:'enqueue-job',badge:'Relationship',meta:'API Server → SQS · enqueue-job'}]);
+    assert.match((await snapshot('relationship-label')).status, /nodes and relationships/);
+    await key('Enter', 'Enter', 13);
+    assert.equal(await run('Archify.focus.relationship().id'), 'enqueue-job');
+    assert.equal(await run('Archify.finder.isOpen()'), false);
+    await run('Archify.finder.open()'); await opened(); await search('enqueue-job');
+    await key('ArrowDown', 'ArrowDown', 40); await key('Enter', 'Enter', 13);
+    assert.equal(await run('Archify.focus.relationship().id'), 'enqueue-job');
+
+    await load('relationships'); await click('#btn-node-finder'); await opened(); await search('parallel enqueue');
+    assert.deepEqual(await run(`Array.from(document.querySelectorAll('#node-finder-results button'),b=>b.dataset.relationshipId)`), ['parallel-first','parallel-second']);
+    await key('ArrowDown', 'ArrowDown', 40); await key('ArrowDown', 'ArrowDown', 40); await key('Enter', 'Enter', 13);
+    assert.equal(await run('Archify.focus.relationship().id'), 'parallel-second');
+    assert.equal(await run(`document.querySelector('[data-edge-key="parallel-a"]').hasAttribute('data-relationship-preview')`), false);
+    await run('Archify.finder.open()'); await opened(); await search('excluded token');
+    assert.equal((await snapshot('ineligible-relationships')).results.length, 0);
+    await run(`Archify.finder.close(); Archify.routeProbe.begin(); Archify.routeProbe.openFinder()`); await opened(); await search('enqueue');
+    assert.equal((await snapshot('relationship-route-exclusion')).results.length, 0);
+    await search('API Server'); await key('Enter', 'Enter', 13);
+    assert.equal(await run('Archify.routeProbe.active()'), 'target');
   });
 
   await t.test('composing global shortcuts preserve Viewer state and default input behavior', async () => {

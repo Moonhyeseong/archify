@@ -1,0 +1,98 @@
+{
+  "kind": "derived capture index, original PNG and observation JSON bytes retained",
+  "base": "e837dc4cb83042d2b6c596e039692e25ec62c2da",
+  "frozenCandidateArtifacts": {
+    "archify/examples/web-app-rendered.html": "bda91dc4084ede0bf9de87f5c1c706d82f144ef45af16736247bb15dc619bca1",
+    "experiments/relation-search/candidate-rag.html": "d7335b1961777c706d73a1082336bfb2f43219f0ef38d128a167534185ad7b2e"
+  },
+  "viewport": [
+    1440,
+    1100
+  ],
+  "screenshots": [
+    {
+      "path": "screenshots/baseline-enqueue.png",
+      "bytes": 140687,
+      "sha256": "7a8e20075c6738c266688a6722ec1e467bb669f7d180033594c0da82473019d8",
+      "width": 1440,
+      "height": 1100,
+      "rootViewed": true
+    },
+    {
+      "path": "screenshots/baseline-direct-pin.png",
+      "bytes": 217817,
+      "sha256": "869f8b10c577e01bdec42662c6e1cb377f7b94846b42e615de8a47d47b702c03",
+      "width": 1440,
+      "height": 1100,
+      "rootViewed": true
+    },
+    {
+      "path": "screenshots/candidate-enqueue.png",
+      "bytes": 141076,
+      "sha256": "2b7038d42dfb472b75fd4642dcbe554e1670a368b81e5ea0878ad6e7455b907e",
+      "width": 1440,
+      "height": 1100,
+      "rootViewed": true
+    },
+    {
+      "path": "screenshots/candidate-enqueue-pinned.png",
+      "bytes": 217537,
+      "sha256": "ec79f148a696e3f39c3a721f5ee975e37a996db8e3d6b00b55d3489c7dd22c77",
+      "width": 1440,
+      "height": 1100,
+      "rootViewed": true
+    },
+    {
+      "path": "screenshots/candidate-rag-grounded-answer-dark.png",
+      "bytes": 214164,
+      "sha256": "4a7fd7ed05268c04af7070605656629d7ffcb025a9347692bf6654c8f322653c",
+      "width": 1440,
+      "height": 1100,
+      "rootViewed": true
+    }
+  ],
+  "observations": [
+    {
+      "path": "observations/baseline-identity.json",
+      "bytes": 292,
+      "sha256": "2ec8e6c61cc433575dfb2ac61028777ee9ae772ccea9d1097bc3ceb131a29a7e"
+    },
+    {
+      "path": "observations/baseline-search.json",
+      "bytes": 318,
+      "sha256": "e78e97a9f00e945341d5c8b01d42dd842e1bfe779fa722a9b41563e201703ed7"
+    },
+    {
+      "path": "observations/baseline-direct-pin.json",
+      "bytes": 412,
+      "sha256": "6fc9a31c974d54e89fb51958140047d021836ce3fb9ddfeefa2fe74ba146ad8f"
+    },
+    {
+      "path": "observations/baseline-rag-identity.json",
+      "bytes": 266,
+      "sha256": "95cbfd83af215e186949c1941fdb38c0ab55f8c25df332433909317bf0f0fa39"
+    },
+    {
+      "path": "observations/baseline-rag-search.json",
+      "bytes": 311,
+      "sha256": "66a62958c7e2cef478f90b6893f1bc8d3ca8e5f444de60002d9526ab6dcdf19c"
+    },
+    {
+      "path": "observations/candidate-web-observations.json",
+      "bytes": 1093,
+      "sha256": "2373a6fd103d455467860f33565ec94b8992f9b4a28080d6b716009cccbd979f"
+    },
+    {
+      "path": "observations/candidate-route-observations.json",
+      "bytes": 444,
+      "sha256": "9e5b81d337694729baa8e5be757b46134935776ef9728763b1a105a000852fd5"
+    },
+    {
+      "path": "observations/candidate-rag-observations.json",
+      "bytes": 1752,
+      "sha256": "7883df5928304c538f594e2237c29fc11c2136a9c75ec703c9f59cb5cda0fa34"
+    }
+  ],
+  "scope": "Actual pointer/keyboard checks in Ego Chromium; illustrative existing Web App and RAG inputs. Does not prove natural user pain, faster reading, AT, mobile, all diagram modes or final remote CI.",
+  "measurementNote": "An initial pointer action targeting the zero-width vertical SVG group was rejected by the automation tool. A subsequent actual click on the observed edge stroke succeeded; no source change was made for that tool limitation. Runtime camera/container pixel equivalence is not claimed."
+}
