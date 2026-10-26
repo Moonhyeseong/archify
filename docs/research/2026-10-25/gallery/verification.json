@@ -1,12 +1,12 @@
 {
   "kind": "static-byte-and-syntax-verification",
-  "htmlSha256": "5d20fafcb518d59472a3466333bcbd9fb9940ac4229c364417301b9e4086c319",
-  "manifestSha256": "d34a1861bd6186a467349c44c2cc7243f2db23a28f55322a9dec238d341755d9",
-  "htmlBytes": 16402027,
-  "experiments": 49,
-  "originalPngs": 49,
+  "htmlSha256": "9056e0331cb90a21be6913f5fef8920a8fad9d095cda6c251b0d89d5d65b793b",
+  "manifestSha256": "2d94130013febd67de7d7b3e101ffbfd09cbbdd66824ebc90c33a453c382e9a0",
+  "htmlBytes": 16592477,
+  "experiments": 50,
+  "originalPngs": 50,
   "groupCounts": {
-    "product": 13,
+    "product": 14,
     "offline": 15,
     "content": 21
   },

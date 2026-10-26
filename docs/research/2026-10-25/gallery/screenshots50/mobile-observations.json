@@ -1,0 +1,30 @@
+{
+  "kind": "original browser observations",
+  "observedAt": "2026-10-26T05:55:47.427Z",
+  "boundHtmlSha256": "9056e0331cb90a21be6913f5fef8920a8fad9d095cda6c251b0d89d5d65b793b",
+  "card": {
+    "viewport": [
+      390,
+      844
+    ],
+    "pageWidth": 375,
+    "theme": "dark",
+    "query": "Relation search",
+    "result": "显示 1 / 50 项",
+    "visible": [
+      "relation-search"
+    ],
+    "cardWidth": 347
+  },
+  "empty": {
+    "result": "显示 0 / 50 项",
+    "resetVisible": true,
+    "pageWidth": 375
+  },
+  "reset": {
+    "result": "显示 50 / 50 项",
+    "query": "",
+    "focus": "query",
+    "pageWidth": 375
+  }
+}

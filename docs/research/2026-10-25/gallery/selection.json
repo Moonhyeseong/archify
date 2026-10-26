@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "https://github.com/tt-a1i/archify",
-  "hubCommit": "735250ac02664b1d6cd4c5f6f63d63d1b38bf96e",
+  "hubCommit": "f098176f8d642549acd9b699414df8adcf2c7b4d",
   "hubPath": "docs/research/2026-10-25/README.md",
   "visualSourcePaths": [
     "website/src/styles/site.css",
@@ -512,6 +512,16 @@
       "inputKind": "固定 sourcemap 测试 / 作者投影",
       "imagePath": "experiments/segment-origins/screenshots/desktop-light.png",
       "imageCaption": "同一2:13在GLB/LUB下指向不同原点；选段为静态源码解释，URL元数据不是verified excerpt，未运行mapper。"
+    },
+    {
+      "id": "relation-search",
+      "commit": "e87a858d220c25c97aee4b5920cf59ab77723b41",
+      "branch": "codex/lab-relation-search",
+      "directory": "experiments/relation-search",
+      "group": "product",
+      "inputKind": "现成示例 / 关系文字查询",
+      "imagePath": "experiments/relation-search/screenshots/candidate-enqueue.png",
+      "imageCaption": "直接查找关系标签或 ID，并进入既有精确关系检查。"
     }
   ],
   "deferred": {

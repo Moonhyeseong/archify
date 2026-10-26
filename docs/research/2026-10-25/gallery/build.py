@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Build an offline gallery from fixed, already published experiment objects.
 
-Run with --worktree-root pointing to the directory containing lab-*/archify.
-Only Git/object reads occur in those worktrees. No experiment code is executed.
+Use --worktree-root for live worktree byte checks, or --source-repo to read
+fixed Git objects from a shared repository. No experiment code is executed.
 """
 import argparse
 import base64
@@ -54,7 +54,9 @@ def link(repo, kind, revision, path=""):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--worktree-root", required=True, type=Path)
+    inputs = parser.add_mutually_exclusive_group(required=True)
+    inputs.add_argument("--worktree-root", type=Path)
+    inputs.add_argument("--source-repo", type=Path)
     args = parser.parse_args()
     seed = json.loads((HERE / "selection.json").read_text())
     hub_bytes, hub_source = source(HUB, seed["hubCommit"], seed["hubPath"])
@@ -83,16 +85,21 @@ def main():
     for item in seed["items"]:
         row = rows[item["branch"]]
         assert row["directory"] == item["directory"] and item["commit"].startswith(row["revision"])
-        repo = args.worktree_root / item["branch"].removeprefix("codex/") / "archify"
-        assert git(repo, "rev-parse", "HEAD").decode().strip() == item["commit"]
+        repo = args.source_repo or args.worktree_root / item["branch"].removeprefix("codex/") / "archify"
+        compare_worktree = args.source_repo is None
+        if compare_worktree:
+            assert git(repo, "rev-parse", "HEAD").decode().strip() == item["commit"]
         assert git(repo, "rev-parse", "refs/remotes/origin/" + item["branch"]).decode().strip() == item["commit"]
-        _, readme = source(repo, item["commit"], item["directory"] + "/README.md", True)
-        png, image = source(repo, item["commit"], item["imagePath"], True)
+        _, readme = source(repo, item["commit"], item["directory"] + "/README.md", compare_worktree)
+        png, image = source(repo, item["commit"], item["imagePath"], compare_worktree)
         assert png[:8] == b"\x89PNG\r\n\x1a\n" and png[12:16] == b"IHDR"
         image["width"], image["height"] = struct.unpack(">II", png[16:24])
         image["mime"] = "image/png"
         image["caption"] = item["imageCaption"]
-        image["byteIdentity"] = "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        image["byteIdentity"] = (
+            "Working file bytes equal fixed HEAD Git blob; embedded unchanged." if compare_worktree else
+            "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
+        )
         total_png_bytes += len(png)
         entry = {
             **item, "title": row["title"], "value": row["value"], "limits": row["limits"],

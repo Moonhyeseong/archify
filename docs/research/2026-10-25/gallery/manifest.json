@@ -5,12 +5,12 @@
   "repository": "https://github.com/tt-a1i/archify",
   "hub": {
     "path": "docs/research/2026-10-25/README.md",
-    "commit": "735250ac02664b1d6cd4c5f6f63d63d1b38bf96e",
-    "sha256": "6835df53f0661492464e149233eeffc03d9c257fad0ec6d0f9ba6bc0e65d8b13",
-    "bytes": 61564,
-    "gitBlob": "20e5052817babd588fd6059fb842bed49c506a8f"
+    "commit": "f098176f8d642549acd9b699414df8adcf2c7b4d",
+    "sha256": "c2c335e6b990d166474d3ec82fc88224218d94a4fe48f2af0028a07f661c54df",
+    "bytes": 64201,
+    "gitBlob": "95447e2979423dbbfbdef59a8249f46d38738cbd"
   },
-  "policy": "49 published experiments from the fixed hub. Original PNG bytes only; card previews are CSS crops. No network request, analytics, dependency or experiment execution. Branch publication is not merge, release, CI success or human acceptance.",
+  "policy": "50 published experiments from the fixed hub. Original PNG bytes only; card previews are CSS crops. No network request, analytics, dependency or experiment execution. Branch publication is not merge, release, CI success or human acceptance.",
   "groups": {
     "product": {
       "label": "产品交互",
@@ -28,21 +28,21 @@
   "visualSources": [
     {
       "path": "website/src/styles/site.css",
-      "commit": "735250ac02664b1d6cd4c5f6f63d63d1b38bf96e",
+      "commit": "f098176f8d642549acd9b699414df8adcf2c7b4d",
       "sha256": "4a79d3c00465cc93d2fdfe602c5d870523ae6ee033e3f75e61481585f86f89e4",
       "bytes": 15945,
       "gitBlob": "49c84bb5900a5eb98b057e9af76bbc1066c8d0b5"
     },
     {
       "path": "website/src/styles/index.css",
-      "commit": "735250ac02664b1d6cd4c5f6f63d63d1b38bf96e",
+      "commit": "f098176f8d642549acd9b699414df8adcf2c7b4d",
       "sha256": "f3aaf38823b91e63d08cf1e521ea606331be580a86e20cc9e2cadab38c1bd0fe",
       "bytes": 59111,
       "gitBlob": "e076e38179140bac537a75efaca75c356350a8a2"
     },
     {
       "path": "website/src/styles/gallery.css",
-      "commit": "735250ac02664b1d6cd4c5f6f63d63d1b38bf96e",
+      "commit": "f098176f8d642549acd9b699414df8adcf2c7b4d",
       "sha256": "a1c896cab6ca6f99baedb6d8d6a608e97e719b02bb763494bd58e3461f8c9eb1",
       "bytes": 23691,
       "gitBlob": "36adfa4eda35c948b0f07bd9fe144beb8ac66656"
@@ -78,7 +78,7 @@
         "height": 1400,
         "mime": "image/png",
         "caption": "完整 PR 的六个阅读声明与步骤；仅手写位置派生。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/dcedd53856b82d3e403a9651dca0e15840496942/experiments/task-review-map",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-task-review-map/experiments/task-review-map",
@@ -113,7 +113,7 @@
         "height": 1000,
         "mime": "image/png",
         "caption": "官方报告的局部依赖视图；其余记录仍在账目中。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/2be2ab55cc9134876158e557e5287ec1912ca718/experiments/dependency-map",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-dependency-map/experiments/dependency-map",
@@ -148,7 +148,7 @@
         "height": 1000,
         "mime": "image/png",
         "caption": "10 个真实采集操作区间；不推断调用树。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/8e65f150b8db6947c98f9b12e37d970014e0ea7e/experiments/trace-waterfall",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-trace-waterfall/experiments/trace-waterfall",
@@ -183,7 +183,7 @@
         "height": 5253,
         "mime": "image/png",
         "caption": "公开 CONTRIBUTING.md 标题投影的原生 PNG 导出。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/3f156e979476f068b1017eca7fe5539a0ddf11e1/experiments/markdown-outline",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-markdown-outline/experiments/markdown-outline",
@@ -218,7 +218,7 @@
         "height": 900,
         "mime": "image/png",
         "caption": "官方 36B 单表 A：一个 int 主键、零关系；不代表完整 DBML 兼容。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/358c77e05eb54a3f10ad3bcbb8f196eb8f277ccd/experiments/dbml-erd",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-dbml-erd/experiments/dbml-erd",
@@ -253,7 +253,7 @@
         "height": 1000,
         "mime": "image/png",
         "caption": "共变分数与原始计数，不代表调用或因果。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/44dc5cbc324f3aaeff2b8de582412566f1f8b8ab/experiments/change-coupling",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-change-coupling/experiments/change-coupling",
@@ -288,7 +288,7 @@
         "height": 1847,
         "mime": "image/png",
         "caption": "明确提供的 JSON 样本差异，不是流量捕获。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/823e8705aa0eeef90f46045f52e56651f0c81c1b/experiments/payload-delta",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-payload-delta/experiments/payload-delta",
@@ -323,7 +323,7 @@
         "height": 1288,
         "mime": "image/png",
         "caption": "决定、撤回和未解决异议均保留。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/bdbdf9a9b5b97c556c5f85547279021b7446a05c/experiments/decision-thread",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-decision-thread/experiments/decision-thread",
@@ -358,7 +358,7 @@
         "height": 2474,
         "mime": "image/png",
         "caption": "已有计划形状的阅读投影；没有执行 SQL。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/b9fe3b9b8cfd9e0819e4ae8ff23adc787ee132d0/experiments/migration-plan",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-migration-plan/experiments/migration-plan",
@@ -393,7 +393,7 @@
         "height": 1100,
         "mime": "image/png",
         "caption": "构造官方机器后 getDAG 实导出；两个 toggle 声明，未执行事件或回调。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/f7269e096ac1891b434842cf7e16b9ffdd54cdf6/experiments/state-contract",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-state-contract/experiments/state-contract",
@@ -428,7 +428,7 @@
         "height": 900,
         "mime": "image/png",
         "caption": "新 dev 同输入 API 查询同步显示画布匹配；保留既有选择与视图，非完整 camera 或效率证明。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/ed04916f33cca4cc6475eada7b4397694426f3f8/experiments/finder-highlights",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-finder-highlights/experiments/finder-highlights",
@@ -463,7 +463,7 @@
         "height": 1000,
         "mime": "image/png",
         "caption": "needs 与条件并读，不预测 job 执行结果。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/0ec0b8345fcfc97e49117b66fd7f99a198c96604/experiments/ci-conditions",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-ci-conditions/experiments/ci-conditions",
@@ -498,7 +498,7 @@
         "height": 1585,
         "mime": "image/png",
         "caption": "完整官方 fixture 的单资源 delete → create；未执行 Terraform。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/729d3a0374189234e1bdfe5d6fc7f7190c894e0e/experiments/plan-actions",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-plan-actions/experiments/plan-actions",
@@ -533,7 +533,7 @@
         "height": 1100,
         "mime": "image/png",
         "caption": "实际 Just dump：a 在空主体 b 前、c 在后；没有执行 recipe，自然完整示例仍拒绝。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/062dee5db6e10c1877427effff0d02b34699fbe1/experiments/recipe-stages",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-recipe-stages/experiments/recipe-stages",
@@ -568,7 +568,7 @@
         "height": 1000,
         "mime": "image/png",
         "caption": "新 Passport 引用当前 pinned 关系的原始方向与身份；复制为受控注入，非 OS 剪贴板或 AT。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/d5691a02f2dd77acd38b827e254249981bc142ee/experiments/relation-reference",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-relation-reference/experiments/relation-reference",
@@ -603,7 +603,7 @@
         "height": 1783,
         "mime": "image/png",
         "caption": "实际 context 观测矩阵，不自动选择测试。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/9d6b4e3a85f52f3f6c50ab30338358ebdb2597dd/experiments/test-context-map",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-test-context-map/experiments/test-context-map",
@@ -638,7 +638,7 @@
         "height": 3227,
         "mime": "image/png",
         "caption": "真实受控 setup / call / teardown 记录。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/bb5e7bdb2995e977eeaf12dd8d6187a3ca676db9/experiments/test-failure-map",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-test-failure-map/experiments/test-failure-map",
@@ -673,7 +673,7 @@
         "height": 1000,
         "mime": "image/png",
         "caption": "当前 exact row 显示 SQL→SQL tx；未知 receipt 字段不猜，public compare/check 非四阶段 finalize。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/a0a9ba77cb59e3e3a97be0713ca626df63a3234d/experiments/delta-values",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-delta-values/experiments/delta-values",
@@ -708,7 +708,7 @@
         "height": 1000,
         "mime": "image/png",
         "caption": "同五段源码按四个阅读问题组织。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/94d6a4d05bcc5c6bc86704692eef48b73fd53c25/experiments/source-question-tour",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-source-question-tour/experiments/source-question-tour",
@@ -743,7 +743,7 @@
         "height": 1000,
         "mime": "image/png",
         "caption": "三条同文诊断区分原有行号；text/JSON 均 exit 1、JSON 原字节不变，late-open 空 iframe 边界未修。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/b6679399ae688e9a6907e2eca4f222aaa964a975/experiments/diagnostic-locations",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-diagnostic-locations/experiments/diagnostic-locations",
@@ -778,7 +778,7 @@
         "height": 1000,
         "mime": "image/png",
         "caption": "新 dev 同名结果 UI 保持原样；8 个可访问描述来自实际 AX 记录，图片本身不证明发声或 AT 验收。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/e219bc5ba4fdf90f653c2fae7eadcc1ceeeda942/experiments/finder-context",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-finder-context/experiments/finder-context",
@@ -813,7 +813,7 @@
         "height": 1731,
         "mime": "image/png",
         "caption": "相同 msgId / 时间的两条投递仍各有身份。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/f2aa251e4e8f93cd6f409df0adaa1b11b368e2e1/experiments/delivery-witness",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-delivery-witness/experiments/delivery-witness",
@@ -848,7 +848,7 @@
         "height": 1000,
         "mime": "image/png",
         "caption": "新 dev 同一构造输入显示 Error / Cancelled；时间比例不是成功率，非真实操作记录。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/68311bb8461ddd4086af6f2e41ce60e9e6f7f5d4/experiments/waterfall-status",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-waterfall-status/experiments/waterfall-status",
@@ -883,7 +883,7 @@
         "height": 2091,
         "mime": "image/png",
         "caption": "165 B 自身 + 4 B 直接子项 = 169 B retained。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/a0c76fc8f090eb194915103e4fc7344ad2ae7184/experiments/retained-size",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-retained-size/experiments/retained-size",
@@ -918,7 +918,7 @@
         "height": 1646,
         "mime": "image/png",
         "caption": "三位置的有限前缀和无限 loop 闭合入口。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/900fe5a3b880328eab3ecd2d21e7864aa6d734c8/experiments/lasso-witness",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-lasso-witness/experiments/lasso-witness",
@@ -953,7 +953,7 @@
         "height": 1000,
         "mime": "image/png",
         "caption": "候选保留原始合法自环 pins；新 dev 基线验证失败且没有 HTML，不伪造 before 图。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/9578b8e4f2daf71b383704921d4df9cef19b8d13/experiments/workflow-self-loop",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-workflow-self-loop/experiments/workflow-self-loop",
@@ -988,7 +988,7 @@
         "height": 1904,
         "mime": "image/png",
         "caption": "每循环平均行数与累计输出分开解释。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/91e2ffadb5cd46fc72d5da978a4b83f8c7dfe521/experiments/plan-row-counts",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-plan-row-counts/experiments/plan-row-counts",
@@ -1023,7 +1023,7 @@
         "height": 1000,
         "mime": "image/png",
         "caption": "新 dev 同一真实 PR：三位行号保持单行，长代码仍可横滚；完整 browser gate 未跑。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/28f9f95dc207a90e2b7198e793315643e67c22aa/experiments/diff-line-numbers",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-diff-line-numbers/experiments/diff-line-numbers",
@@ -1058,7 +1058,7 @@
         "height": 900,
         "mime": "image/png",
         "caption": "同页真实 Tab 到尾，没有视觉改版；root task47/PR63 与 checker48/64 分列，不回写 Task 实验的16条失败。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/c96e8aa74ff5e309cdab07a1b70d0242f33bed75/experiments/keyboard-traversal",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-keyboard-traversal/experiments/keyboard-traversal",
@@ -1093,7 +1093,7 @@
         "height": 1000,
         "mime": "image/png",
         "caption": "新 dev 同一官方 plan：虚线文字、线与箭头同步使用阅读颜色；几何未改，旧 docs 仍属历史。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/ca4baa1d739b1a2e2c8b863a517383147952620d/experiments/preview-dashed-ink",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-preview-dashed-ink/experiments/preview-dashed-ink",
@@ -1128,7 +1128,7 @@
         "height": 1452,
         "mime": "image/png",
         "caption": "4 个变量、7 个列表、10 条引用；箭头是引用，不是拷贝时序。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/18d51b8950a9c3713c72044dd6af8e12c9f33e24/experiments/copy-identity",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-copy-identity/experiments/copy-identity",
@@ -1163,7 +1163,7 @@
         "height": 1100,
         "mime": "image/png",
         "caption": "三个 CLI 出口与 HTTP 内存 JSON 快照；静态阅读，不是运行 trace。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/1dff88d331679319442277a4ffc7cd3637bccee2/experiments/cli-reading-tour",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-cli-reading-tour/experiments/cli-reading-tour",
@@ -1198,7 +1198,7 @@
         "height": 1000,
         "mime": "image/png",
         "caption": "受控缺失 API 时保留完整消息供手工恢复；未写 OS 剪贴板，两页三阶段及同7条写作 warnings，自动 browser 未请求。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/0e4a2c71c9550905004d20bbadb3b33d6bd85f3d/experiments/clipboard-outcome",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-clipboard-outcome/experiments/clipboard-outcome",
@@ -1233,7 +1233,7 @@
         "height": 1100,
         "mime": "image/png",
         "caption": "IHDR 的 25B 物理字段与 type 内四个 bit 解释；未运行 fq、CRC 或解压。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/b844ecb2861c122d956dab971b376e2fcd2dc283/experiments/byte-views",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-byte-views/experiments/byte-views",
@@ -1268,7 +1268,7 @@
         "height": 1100,
         "mime": "image/png",
         "caption": "同一 CLI tour 节点用 Enter 打开已有原生图并聚焦 response；Tab 可达和焦点样式原本已存在。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/d81830d34fdd698992b39913eb3fa3cd55d66a32/experiments/source-keyboard",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-source-keyboard/experiments/source-keyboard",
@@ -1303,7 +1303,7 @@
         "height": 1100,
         "mime": "image/png",
         "caption": "六个 cell 按位置保留：source 改变与保存 output 改变分列；没有运行 notebook 或推断执行依赖。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/2090b0ff144b7bc3425d52821655f659858f5d6a/experiments/notebook-occurrences",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-notebook-occurrences/experiments/notebook-occurrences",
@@ -1338,7 +1338,7 @@
         "height": 1100,
         "mime": "image/png",
         "caption": "provider 声明、幸存字段与整体错误归属分开；join 的 max=20 没有修复该测试约束，未运行 Rust。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/14867942a81542c1ce1b0d4aae38c6e7b9ddddef/experiments/config-origins",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-config-origins/experiments/config-origins",
@@ -1373,7 +1373,7 @@
         "height": 1100,
         "mime": "image/png",
         "caption": "四个 median 与 CI/p/n/~ 邻表；上游历史材料，未重跑统计或 benchmark，不声称普遍性能收益。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/7b8258cdc3f7bc2d9c6a0277feaa5d31b1a70686/experiments/benchmark-reading",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-benchmark-reading/experiments/benchmark-reading",
@@ -1408,7 +1408,7 @@
         "height": 1100,
         "mime": "image/png",
         "caption": "11 个打印位置对应 10 个身份；两处 compileJava 共用目标，打印次数不是执行次数；解释页仍有 16 条键盘诊断。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/caffb4aabb13b04a77bb9475866ad65465d79b20/experiments/task-occurrences",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-task-occurrences/experiments/task-occurrences",
@@ -1443,7 +1443,7 @@
         "height": 2690,
         "mime": "image/png",
         "caption": "同一 urllib3 的入边 extras 与模式分开解释；未执行上游，Explainer 保留28条键盘失败。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/1db953a726b79f135187ee3cd2e12723717c7555/experiments/edge-extras",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-edge-extras/experiments/edge-extras",
@@ -1478,7 +1478,7 @@
         "height": 2112,
         "mime": "image/png",
         "caption": "源码行与作者解释往返；相同片段不串跳。仅实验 HTML 后处理，非共享产品或 normal finalize 候选。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/079d562915a701f8c76b6479e59622432f81ee79/experiments/line-notes",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-line-notes/experiments/line-notes",
@@ -1513,7 +1513,7 @@
         "height": 2068,
         "mime": "image/png",
         "caption": "7节点8条 use 边共享一个 IfExp；只是模块定义根投影，非完整 AST 或实际分支执行。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/7be0711da68d8db0dafaefef0b64894665f8609f/experiments/static-uses",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-static-uses/experiments/static-uses",
@@ -1548,7 +1548,7 @@
         "height": 2616,
         "mime": "image/png",
         "caption": "A→命名中间态 S→B 的两段声明；S 非第三 Git commit 或观测运行，未执行上游。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/8d698ceec15a2ea24012135632c4612e5a58e7b5/experiments/hintful-stages",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-hintful-stages/experiments/hintful-stages",
@@ -1583,7 +1583,7 @@
         "height": 1100,
         "mime": "image/png",
         "caption": "同一真实 Tab→Right 路径将 DOM 焦点从 Users 移到 CDN；不提交选择或移动 camera，非效率或 AT 验收。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/08af09117396b4d2b62774215bc48d8bd516386f/experiments/spatial-focus",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-spatial-focus/experiments/spatial-focus",
@@ -1618,7 +1618,7 @@
         "height": 2829,
         "mime": "image/png",
         "caption": "选中 v 的静态状态集合与读取 r 分开；未运行 RustOwl，保留48条键盘失败，窄屏代码仍可能横向裁切。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/61d43f93ee9d11d30d2a239f80e1b2976539d850/experiments/maybe-initialized",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-maybe-initialized/experiments/maybe-initialized",
@@ -1653,7 +1653,7 @@
         "height": 3072,
         "mime": "image/png",
         "caption": "enabled 名单只见 t2 不证明 t1 从未 load；来源为 URL metadata，未执行上游插件或发现安装环境。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/d2ff5f8c2cce954d5e20b6dd8970f027f52d46c0/experiments/load-filter",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-load-filter/experiments/load-filter",
@@ -1688,7 +1688,7 @@
         "height": 1855,
         "mime": "image/png",
         "caption": "Paris的三组替代见证与平面which名单分开；组内共同、组间替代，未运行数据库或推断现实因果。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/861ec02283bcd32c8315aa7b5f8b5ef9678dda27/experiments/witness-groups",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-witness-groups/experiments/witness-groups",
@@ -1723,7 +1723,7 @@
         "height": 1800,
         "mime": "image/png",
         "caption": "两个true表示补丁片段应用成功，不保证最终文本等于B；上游构造测试，未执行patch应用。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/b5f7d7b11482fb272fb88fbfdcb9e864407eabdf/experiments/patch-outcome",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-patch-outcome/experiments/patch-outcome",
@@ -1758,11 +1758,46 @@
         "height": 1903,
         "mime": "image/png",
         "caption": "同一2:13在GLB/LUB下指向不同原点；选段为静态源码解释，URL元数据不是verified excerpt，未运行mapper。",
-        "byteIdentity": "Working file bytes equal fixed HEAD Git blob; embedded unchanged."
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
       },
       "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/6d2b0312ebf011e3aa51835f52f9427125f0f2a3/experiments/segment-origins",
       "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-segment-origins/experiments/segment-origins",
       "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/6d2b0312ebf011e3aa51835f52f9427125f0f2a3/experiments/segment-origins/screenshots/desktop-light.png"
+    },
+    {
+      "id": "relation-search",
+      "commit": "e87a858d220c25c97aee4b5920cf59ab77723b41",
+      "branch": "codex/lab-relation-search",
+      "directory": "experiments/relation-search",
+      "group": "product",
+      "inputKind": "现成示例 / 关系文字查询",
+      "imagePath": "experiments/relation-search/screenshots/candidate-enqueue.png",
+      "imageCaption": "直接查找关系标签或 ID，并进入既有精确关系检查。",
+      "title": "Relation search",
+      "value": "按关系标签或ID查找，显示两端并精确pin已有关系",
+      "limits": "基线e837；独立READY，root5图/8原观察；enqueue从0节点到1关系、RAG三词精确ID、Route仍node-only；Finder9/FocusRoute22/locale37/core19，Semantic5pass1skip、generated/ZIP macOS通过；无手机/AT/全平台/效率证明，head Actions/checks均0；RAG生成15空白warning保留",
+      "readme": {
+        "path": "experiments/relation-search/README.md",
+        "commit": "e87a858d220c25c97aee4b5920cf59ab77723b41",
+        "sha256": "6e96c6bbfa37074752664f44ecb79b9a084ddba5fae11e8941be69444032416e",
+        "bytes": 8804,
+        "gitBlob": "5744c9d9bc23a11a55a6e633580a7ba1092a38a6"
+      },
+      "image": {
+        "path": "experiments/relation-search/screenshots/candidate-enqueue.png",
+        "commit": "e87a858d220c25c97aee4b5920cf59ab77723b41",
+        "sha256": "2b7038d42dfb472b75fd4642dcbe554e1670a368b81e5ea0878ad6e7455b907e",
+        "bytes": 141076,
+        "gitBlob": "1db6a4d19edb463453c4481cd3461757ff8e9cc5",
+        "width": 1440,
+        "height": 1100,
+        "mime": "image/png",
+        "caption": "直接查找关系标签或 ID，并进入既有精确关系检查。",
+        "byteIdentity": "Fixed commit Git blob read from source repository; embedded unchanged. Working file bytes not checked."
+      },
+      "fixedSourceUrl": "https://github.com/tt-a1i/archify/tree/e87a858d220c25c97aee4b5920cf59ab77723b41/experiments/relation-search",
+      "branchUrl": "https://github.com/tt-a1i/archify/tree/codex/lab-relation-search/experiments/relation-search",
+      "imageSourceUrl": "https://github.com/tt-a1i/archify/blob/e87a858d220c25c97aee4b5920cf59ab77723b41/experiments/relation-search/screenshots/candidate-enqueue.png"
     }
   ],
   "deferred": {
@@ -1773,11 +1808,11 @@
     "reason": "既有 Incoming 行已能一步回到来源；兼容测试通过没有证明额外 Back 按钮更好用。暂不引入额外状态，不计入已发布数量。"
   },
   "summary": {
-    "experiments": 49,
-    "images": 49,
-    "pngBytes": 12206403,
+    "experiments": 50,
+    "images": 50,
+    "pngBytes": 12347479,
     "groupCounts": {
-      "product": 13,
+      "product": 14,
       "offline": 15,
       "content": 21
     },

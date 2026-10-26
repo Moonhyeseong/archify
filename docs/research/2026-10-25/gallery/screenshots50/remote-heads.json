@@ -1,0 +1,358 @@
+{
+  "kind": "original remote head observation",
+  "checkedAtUTC": "2026-10-26T05:56:14.447312+00:00",
+  "items": [
+    {
+      "id": "task-review-map",
+      "branch": "codex/lab-task-review-map",
+      "expected": "dcedd53856b82d3e403a9651dca0e15840496942",
+      "actual": "dcedd53856b82d3e403a9651dca0e15840496942",
+      "matches": true
+    },
+    {
+      "id": "dependency-map",
+      "branch": "codex/lab-dependency-map",
+      "expected": "2be2ab55cc9134876158e557e5287ec1912ca718",
+      "actual": "2be2ab55cc9134876158e557e5287ec1912ca718",
+      "matches": true
+    },
+    {
+      "id": "trace-waterfall",
+      "branch": "codex/lab-trace-waterfall",
+      "expected": "8e65f150b8db6947c98f9b12e37d970014e0ea7e",
+      "actual": "8e65f150b8db6947c98f9b12e37d970014e0ea7e",
+      "matches": true
+    },
+    {
+      "id": "markdown-outline",
+      "branch": "codex/lab-markdown-outline",
+      "expected": "3f156e979476f068b1017eca7fe5539a0ddf11e1",
+      "actual": "3f156e979476f068b1017eca7fe5539a0ddf11e1",
+      "matches": true
+    },
+    {
+      "id": "dbml-erd",
+      "branch": "codex/lab-dbml-erd",
+      "expected": "358c77e05eb54a3f10ad3bcbb8f196eb8f277ccd",
+      "actual": "358c77e05eb54a3f10ad3bcbb8f196eb8f277ccd",
+      "matches": true
+    },
+    {
+      "id": "change-coupling",
+      "branch": "codex/lab-change-coupling",
+      "expected": "44dc5cbc324f3aaeff2b8de582412566f1f8b8ab",
+      "actual": "44dc5cbc324f3aaeff2b8de582412566f1f8b8ab",
+      "matches": true
+    },
+    {
+      "id": "payload-delta",
+      "branch": "codex/lab-payload-delta",
+      "expected": "823e8705aa0eeef90f46045f52e56651f0c81c1b",
+      "actual": "823e8705aa0eeef90f46045f52e56651f0c81c1b",
+      "matches": true
+    },
+    {
+      "id": "decision-thread",
+      "branch": "codex/lab-decision-thread",
+      "expected": "bdbdf9a9b5b97c556c5f85547279021b7446a05c",
+      "actual": "bdbdf9a9b5b97c556c5f85547279021b7446a05c",
+      "matches": true
+    },
+    {
+      "id": "migration-plan",
+      "branch": "codex/lab-migration-plan",
+      "expected": "b9fe3b9b8cfd9e0819e4ae8ff23adc787ee132d0",
+      "actual": "b9fe3b9b8cfd9e0819e4ae8ff23adc787ee132d0",
+      "matches": true
+    },
+    {
+      "id": "state-contract",
+      "branch": "codex/lab-state-contract",
+      "expected": "f7269e096ac1891b434842cf7e16b9ffdd54cdf6",
+      "actual": "f7269e096ac1891b434842cf7e16b9ffdd54cdf6",
+      "matches": true
+    },
+    {
+      "id": "finder-highlights",
+      "branch": "codex/lab-finder-highlights",
+      "expected": "ed04916f33cca4cc6475eada7b4397694426f3f8",
+      "actual": "ed04916f33cca4cc6475eada7b4397694426f3f8",
+      "matches": true
+    },
+    {
+      "id": "ci-conditions",
+      "branch": "codex/lab-ci-conditions",
+      "expected": "0ec0b8345fcfc97e49117b66fd7f99a198c96604",
+      "actual": "0ec0b8345fcfc97e49117b66fd7f99a198c96604",
+      "matches": true
+    },
+    {
+      "id": "plan-actions",
+      "branch": "codex/lab-plan-actions",
+      "expected": "729d3a0374189234e1bdfe5d6fc7f7190c894e0e",
+      "actual": "729d3a0374189234e1bdfe5d6fc7f7190c894e0e",
+      "matches": true
+    },
+    {
+      "id": "recipe-stages",
+      "branch": "codex/lab-recipe-stages",
+      "expected": "062dee5db6e10c1877427effff0d02b34699fbe1",
+      "actual": "062dee5db6e10c1877427effff0d02b34699fbe1",
+      "matches": true
+    },
+    {
+      "id": "relation-reference",
+      "branch": "codex/lab-relation-reference",
+      "expected": "d5691a02f2dd77acd38b827e254249981bc142ee",
+      "actual": "d5691a02f2dd77acd38b827e254249981bc142ee",
+      "matches": true
+    },
+    {
+      "id": "test-context-map",
+      "branch": "codex/lab-test-context-map",
+      "expected": "9d6b4e3a85f52f3f6c50ab30338358ebdb2597dd",
+      "actual": "9d6b4e3a85f52f3f6c50ab30338358ebdb2597dd",
+      "matches": true
+    },
+    {
+      "id": "test-failure-map",
+      "branch": "codex/lab-test-failure-map",
+      "expected": "bb5e7bdb2995e977eeaf12dd8d6187a3ca676db9",
+      "actual": "bb5e7bdb2995e977eeaf12dd8d6187a3ca676db9",
+      "matches": true
+    },
+    {
+      "id": "delta-values",
+      "branch": "codex/lab-delta-values",
+      "expected": "a0a9ba77cb59e3e3a97be0713ca626df63a3234d",
+      "actual": "a0a9ba77cb59e3e3a97be0713ca626df63a3234d",
+      "matches": true
+    },
+    {
+      "id": "source-question-tour",
+      "branch": "codex/lab-source-question-tour",
+      "expected": "94d6a4d05bcc5c6bc86704692eef48b73fd53c25",
+      "actual": "94d6a4d05bcc5c6bc86704692eef48b73fd53c25",
+      "matches": true
+    },
+    {
+      "id": "diagnostic-locations",
+      "branch": "codex/lab-diagnostic-locations",
+      "expected": "b6679399ae688e9a6907e2eca4f222aaa964a975",
+      "actual": "b6679399ae688e9a6907e2eca4f222aaa964a975",
+      "matches": true
+    },
+    {
+      "id": "finder-context",
+      "branch": "codex/lab-finder-context",
+      "expected": "e219bc5ba4fdf90f653c2fae7eadcc1ceeeda942",
+      "actual": "e219bc5ba4fdf90f653c2fae7eadcc1ceeeda942",
+      "matches": true
+    },
+    {
+      "id": "delivery-witness",
+      "branch": "codex/lab-delivery-witness",
+      "expected": "f2aa251e4e8f93cd6f409df0adaa1b11b368e2e1",
+      "actual": "f2aa251e4e8f93cd6f409df0adaa1b11b368e2e1",
+      "matches": true
+    },
+    {
+      "id": "waterfall-status",
+      "branch": "codex/lab-waterfall-status",
+      "expected": "68311bb8461ddd4086af6f2e41ce60e9e6f7f5d4",
+      "actual": "68311bb8461ddd4086af6f2e41ce60e9e6f7f5d4",
+      "matches": true
+    },
+    {
+      "id": "retained-size",
+      "branch": "codex/lab-retained-size",
+      "expected": "a0c76fc8f090eb194915103e4fc7344ad2ae7184",
+      "actual": "a0c76fc8f090eb194915103e4fc7344ad2ae7184",
+      "matches": true
+    },
+    {
+      "id": "lasso-witness",
+      "branch": "codex/lab-lasso-witness",
+      "expected": "900fe5a3b880328eab3ecd2d21e7864aa6d734c8",
+      "actual": "900fe5a3b880328eab3ecd2d21e7864aa6d734c8",
+      "matches": true
+    },
+    {
+      "id": "workflow-self-loop",
+      "branch": "codex/lab-workflow-self-loop",
+      "expected": "9578b8e4f2daf71b383704921d4df9cef19b8d13",
+      "actual": "9578b8e4f2daf71b383704921d4df9cef19b8d13",
+      "matches": true
+    },
+    {
+      "id": "plan-row-counts",
+      "branch": "codex/lab-plan-row-counts",
+      "expected": "91e2ffadb5cd46fc72d5da978a4b83f8c7dfe521",
+      "actual": "91e2ffadb5cd46fc72d5da978a4b83f8c7dfe521",
+      "matches": true
+    },
+    {
+      "id": "diff-line-numbers",
+      "branch": "codex/lab-diff-line-numbers",
+      "expected": "28f9f95dc207a90e2b7198e793315643e67c22aa",
+      "actual": "28f9f95dc207a90e2b7198e793315643e67c22aa",
+      "matches": true
+    },
+    {
+      "id": "keyboard-traversal",
+      "branch": "codex/lab-keyboard-traversal",
+      "expected": "c96e8aa74ff5e309cdab07a1b70d0242f33bed75",
+      "actual": "c96e8aa74ff5e309cdab07a1b70d0242f33bed75",
+      "matches": true
+    },
+    {
+      "id": "preview-dashed-ink",
+      "branch": "codex/lab-preview-dashed-ink",
+      "expected": "ca4baa1d739b1a2e2c8b863a517383147952620d",
+      "actual": "ca4baa1d739b1a2e2c8b863a517383147952620d",
+      "matches": true
+    },
+    {
+      "id": "copy-identity",
+      "branch": "codex/lab-copy-identity",
+      "expected": "18d51b8950a9c3713c72044dd6af8e12c9f33e24",
+      "actual": "18d51b8950a9c3713c72044dd6af8e12c9f33e24",
+      "matches": true
+    },
+    {
+      "id": "cli-reading-tour",
+      "branch": "codex/lab-cli-reading-tour",
+      "expected": "1dff88d331679319442277a4ffc7cd3637bccee2",
+      "actual": "1dff88d331679319442277a4ffc7cd3637bccee2",
+      "matches": true
+    },
+    {
+      "id": "clipboard-outcome",
+      "branch": "codex/lab-clipboard-outcome",
+      "expected": "0e4a2c71c9550905004d20bbadb3b33d6bd85f3d",
+      "actual": "0e4a2c71c9550905004d20bbadb3b33d6bd85f3d",
+      "matches": true
+    },
+    {
+      "id": "byte-views",
+      "branch": "codex/lab-byte-views",
+      "expected": "b844ecb2861c122d956dab971b376e2fcd2dc283",
+      "actual": "b844ecb2861c122d956dab971b376e2fcd2dc283",
+      "matches": true
+    },
+    {
+      "id": "source-keyboard",
+      "branch": "codex/lab-source-keyboard",
+      "expected": "d81830d34fdd698992b39913eb3fa3cd55d66a32",
+      "actual": "d81830d34fdd698992b39913eb3fa3cd55d66a32",
+      "matches": true
+    },
+    {
+      "id": "notebook-occurrences",
+      "branch": "codex/lab-notebook-occurrences",
+      "expected": "2090b0ff144b7bc3425d52821655f659858f5d6a",
+      "actual": "2090b0ff144b7bc3425d52821655f659858f5d6a",
+      "matches": true
+    },
+    {
+      "id": "config-origins",
+      "branch": "codex/lab-config-origins",
+      "expected": "14867942a81542c1ce1b0d4aae38c6e7b9ddddef",
+      "actual": "14867942a81542c1ce1b0d4aae38c6e7b9ddddef",
+      "matches": true
+    },
+    {
+      "id": "benchmark-reading",
+      "branch": "codex/lab-benchmark-reading",
+      "expected": "7b8258cdc3f7bc2d9c6a0277feaa5d31b1a70686",
+      "actual": "7b8258cdc3f7bc2d9c6a0277feaa5d31b1a70686",
+      "matches": true
+    },
+    {
+      "id": "task-occurrences",
+      "branch": "codex/lab-task-occurrences",
+      "expected": "caffb4aabb13b04a77bb9475866ad65465d79b20",
+      "actual": "caffb4aabb13b04a77bb9475866ad65465d79b20",
+      "matches": true
+    },
+    {
+      "id": "edge-extras",
+      "branch": "codex/lab-edge-extras",
+      "expected": "1db953a726b79f135187ee3cd2e12723717c7555",
+      "actual": "1db953a726b79f135187ee3cd2e12723717c7555",
+      "matches": true
+    },
+    {
+      "id": "line-notes",
+      "branch": "codex/lab-line-notes",
+      "expected": "079d562915a701f8c76b6479e59622432f81ee79",
+      "actual": "079d562915a701f8c76b6479e59622432f81ee79",
+      "matches": true
+    },
+    {
+      "id": "static-uses",
+      "branch": "codex/lab-static-uses",
+      "expected": "7be0711da68d8db0dafaefef0b64894665f8609f",
+      "actual": "7be0711da68d8db0dafaefef0b64894665f8609f",
+      "matches": true
+    },
+    {
+      "id": "hintful-stages",
+      "branch": "codex/lab-hintful-stages",
+      "expected": "8d698ceec15a2ea24012135632c4612e5a58e7b5",
+      "actual": "8d698ceec15a2ea24012135632c4612e5a58e7b5",
+      "matches": true
+    },
+    {
+      "id": "spatial-focus",
+      "branch": "codex/lab-spatial-focus",
+      "expected": "08af09117396b4d2b62774215bc48d8bd516386f",
+      "actual": "08af09117396b4d2b62774215bc48d8bd516386f",
+      "matches": true
+    },
+    {
+      "id": "maybe-initialized",
+      "branch": "codex/lab-maybe-initialized",
+      "expected": "61d43f93ee9d11d30d2a239f80e1b2976539d850",
+      "actual": "61d43f93ee9d11d30d2a239f80e1b2976539d850",
+      "matches": true
+    },
+    {
+      "id": "load-filter",
+      "branch": "codex/lab-load-filter",
+      "expected": "d2ff5f8c2cce954d5e20b6dd8970f027f52d46c0",
+      "actual": "d2ff5f8c2cce954d5e20b6dd8970f027f52d46c0",
+      "matches": true
+    },
+    {
+      "id": "witness-groups",
+      "branch": "codex/lab-witness-groups",
+      "expected": "861ec02283bcd32c8315aa7b5f8b5ef9678dda27",
+      "actual": "861ec02283bcd32c8315aa7b5f8b5ef9678dda27",
+      "matches": true
+    },
+    {
+      "id": "patch-outcome",
+      "branch": "codex/lab-patch-outcome",
+      "expected": "b5f7d7b11482fb272fb88fbfdcb9e864407eabdf",
+      "actual": "b5f7d7b11482fb272fb88fbfdcb9e864407eabdf",
+      "matches": true
+    },
+    {
+      "id": "segment-origins",
+      "branch": "codex/lab-segment-origins",
+      "expected": "6d2b0312ebf011e3aa51835f52f9427125f0f2a3",
+      "actual": "6d2b0312ebf011e3aa51835f52f9427125f0f2a3",
+      "matches": true
+    },
+    {
+      "id": "relation-search",
+      "branch": "codex/lab-relation-search",
+      "expected": "e87a858d220c25c97aee4b5920cf59ab77723b41",
+      "actual": "e87a858d220c25c97aee4b5920cf59ab77723b41",
+      "matches": true
+    }
+  ],
+  "count": 50,
+  "allMatch": true
+}

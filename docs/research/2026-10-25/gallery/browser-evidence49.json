@@ -1,0 +1,185 @@
+{
+  "kind": "derived browser evidence for fixed49-item gallery; not original raw observations or delivery receipt",
+  "status": "root-browser-observed-scoped-final-batch",
+  "hubSourceCommit": "735250ac02664b1d6cd4c5f6f63d63d1b38bf96e",
+  "hubReadme": {
+    "path": "docs/research/2026-10-25/README.md",
+    "commit": "735250ac02664b1d6cd4c5f6f63d63d1b38bf96e",
+    "sha256": "6835df53f0661492464e149233eeffc03d9c257fad0ec6d0f9ba6bc0e65d8b13",
+    "bytes": 61564,
+    "gitBlob": "20e5052817babd588fd6059fb842bed49c506a8f"
+  },
+  "artifacts": {
+    "index.html": {
+      "path": "index.html",
+      "sha256": "5d20fafcb518d59472a3466333bcbd9fb9940ac4229c364417301b9e4086c319",
+      "bytes": 16402027
+    },
+    "manifest.json": {
+      "path": "manifest.json",
+      "sha256": "d34a1861bd6186a467349c44c2cc7243f2db23a28f55322a9dec238d341755d9",
+      "bytes": 109692
+    },
+    "selection.json": {
+      "path": "selection.json",
+      "sha256": "e5a726f509915ff11bfb00ad1109d28d514fad2d670331a12efb43d23a6286d5",
+      "bytes": 24850
+    },
+    "verification.json": {
+      "path": "verification.json",
+      "sha256": "8aede2f8fe6a520b6b6bf2f6c77a2da88a1a1b7844e57394ed62c8468e91dd4b",
+      "bytes": 800
+    },
+    "README.md": {
+      "path": "README.md",
+      "sha256": "d72a9d434a694f5a6accfc43ffdec1b3b6c55262126ffc9805ba0e2b76d297cd",
+      "bytes": 26635
+    },
+    "template.html": {
+      "path": "template.html",
+      "sha256": "bc7d0445a2c11578de09b89afb0a3f57e468d8923dbfcc1d98978b203b7f5ce9",
+      "bytes": 16951
+    },
+    "screenshots49/observations-summary.json": {
+      "path": "screenshots49/observations-summary.json",
+      "sha256": "aebe39d33fc528c51bdc5b4f64d3a37873cd472ec564dee5552c0c162c39e5e8",
+      "bytes": 17877
+    }
+  },
+  "summary": {
+    "experiments": 49,
+    "images": 49,
+    "pngBytes": 12206403,
+    "groupCounts": {
+      "product": 13,
+      "offline": 15,
+      "content": 21
+    },
+    "deferredCountedAsPublished": false
+  },
+  "rawSources": [
+    {
+      "path": "desktop-observations.json",
+      "sha256": "a9592fe4cad591cf0b54b7a0e3dff7f96451c3e717cc76cae006d89b76df16c4",
+      "bytes": 10686
+    },
+    {
+      "path": "mobile-observations.json",
+      "sha256": "7351676c0384b030627823d1c9d07d94e52986b0b38731039bc3770217cbd0f7",
+      "bytes": 1250
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "screenshots49/desktop-overview-light.png",
+      "sha256": "172c3ccf1b480300dc74327a4bc57e2d4a514e01ff69af4ab5705b4611c6bdb4",
+      "bytes": 295303,
+      "width": 1440,
+      "height": 1100,
+      "boundHtmlSha256": "5d20fafcb518d59472a3466333bcbd9fb9940ac4229c364417301b9e4086c319",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged; dimensions read from IHDR, not inferred from viewport."
+    },
+    {
+      "path": "screenshots49/desktop-witness-dialog.png",
+      "sha256": "82c432a1eb0b21df33829c02ffc0cd87c06a7a79cbc169c23316cb578598a964",
+      "bytes": 196131,
+      "width": 1440,
+      "height": 1100,
+      "boundHtmlSha256": "5d20fafcb518d59472a3466333bcbd9fb9940ac4229c364417301b9e4086c319",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged; dimensions read from IHDR, not inferred from viewport."
+    },
+    {
+      "path": "screenshots49/desktop-patch-dialog.png",
+      "sha256": "d980de888ab5f6b1154bd493668fa8570798fc63a9aeb90d66d0ec4ef7842236",
+      "bytes": 188347,
+      "width": 1440,
+      "height": 1100,
+      "boundHtmlSha256": "5d20fafcb518d59472a3466333bcbd9fb9940ac4229c364417301b9e4086c319",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged; dimensions read from IHDR, not inferred from viewport."
+    },
+    {
+      "path": "screenshots49/mobile-segment-card-light.png",
+      "sha256": "363260826a3d4d8244f1739f90a8534840ac2171acd069049a9562e0e111de07",
+      "bytes": 180766,
+      "width": 390,
+      "height": 1682,
+      "boundHtmlSha256": "5d20fafcb518d59472a3466333bcbd9fb9940ac4229c364417301b9e4086c319",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged; dimensions read from IHDR, not inferred from viewport."
+    },
+    {
+      "path": "screenshots49/mobile-segment-dialog-dark.png",
+      "sha256": "ad1e00bd9ddbe5a43e9e2d747c12694d169dbbd2a0a3dd7dbc77d420b5fff4ae",
+      "bytes": 88083,
+      "width": 390,
+      "height": 844,
+      "boundHtmlSha256": "5d20fafcb518d59472a3466333bcbd9fb9940ac4229c364417301b9e4086c319",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged; dimensions read from IHDR, not inferred from viewport."
+    },
+    {
+      "path": "screenshots49/mobile-empty-dark.png",
+      "sha256": "40334c5892122a568202b79ae7d275df04d1ecc66cb75acca3ecf27c18865dd7",
+      "bytes": 118981,
+      "width": 390,
+      "height": 1185,
+      "boundHtmlSha256": "5d20fafcb518d59472a3466333bcbd9fb9940ac4229c364417301b9e4086c319",
+      "rootViewed": true,
+      "semantics": "Original PNG bytes copied unchanged; dimensions read from IHDR, not inferred from viewport."
+    }
+  ],
+  "observationSummary": "screenshots49/observations-summary.json",
+  "historical46": {
+    "path": "browser-evidence46.json",
+    "sha256": "35c3e639712c6cea5ef5376ac1d238717fecba9fa35c42f805efc1ec0bc7a6c9",
+    "bytes": 6194,
+    "sourceCommit": "89ecc847caa0dac61553e772081e0459cf16c2b6",
+    "semantics": "Exact original 46-version evidence, not reused as fresh49 interactions."
+  },
+  "limits": [
+    "Root captured and viewed six final PNGs; author only copied original bytes and checked static bindings.",
+    "Current 49-version evidence covers four filters and three new cards; it does not relabel old 46 interactions as new checks.",
+    "Full-page PNG height differs from viewport: mobile card390x1682 and mobile empty390x1185, while CSS viewport390x844.",
+    "No external-link navigation, AT, physical touch, full Tab traversal, upstream execution, OS clipboard or all49-item retest claim."
+  ],
+  "closeTiming": {
+    "desktopSegmentImmediate": {
+      "open": false,
+      "focus": "segment-origins",
+      "cleared": false
+    },
+    "mobileSegmentAfterWaitingForCloseClearAndFocus": {
+      "open": false,
+      "focus": "segment-origins",
+      "cleared": true
+    },
+    "semantics": "Different observation timing; immediate desktop cleared=false is retained. Do not claim all three desktop closes cleared the image source."
+  },
+  "measurementFailure": {
+    "record": {
+      "path": "first-mobile-attempt-failure.txt",
+      "sha256": "e5ba90b343533abc2b530bb500bc587c2bc385662307bfbe2f02153069640984",
+      "bytes": 418
+    },
+    "firstAttemptImage": {
+      "path": "first-attempt-mobile-segment-card-light.png",
+      "sha256": "363260826a3d4d8244f1739f90a8534840ac2171acd069049a9562e0e111de07",
+      "bytes": 180766
+    },
+    "semantics": "First mobile measurement failed at fetch(data URL). No final observation or dialog/empty capture was saved by that attempt. Second attempt directly decoded existing embedded data with atob and checked SHA. Product and frozen HTML unchanged. First-attempt image is not selected as final evidence, even though its bytes equal the later final card PNG."
+  },
+  "remoteHeadSnapshot": {
+    "checkedAtUTC": "2026-10-25T14:24:55.567535+00:00",
+    "count": 49,
+    "allMatch": true,
+    "raw": {
+      "path": "remote-49-final.json",
+      "sha256": "375cecedcbc6d16cc450d1d39c350ac02ac5a6f74a4282811b1be07eafdcd213",
+      "bytes": 11403
+    },
+    "semantics": "Root one read-only git ls-remote; all49 actual heads equal manifest fixed commits. Not CI or all49 behavior regression."
+  }
+}

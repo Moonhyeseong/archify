@@ -1,0 +1,53 @@
+{
+  "kind": "original browser observations",
+  "observedAt": "2026-10-26T05:54:54.096Z",
+  "identities": {
+    "index.html": {
+      "sha256": "9056e0331cb90a21be6913f5fef8920a8fad9d095cda6c251b0d89d5d65b793b",
+      "bytes": 16592477
+    },
+    "manifest.json": {
+      "sha256": "2d94130013febd67de7d7b3e101ffbfd09cbbdd66824ebc90c33a453c382e9a0",
+      "bytes": 113779
+    },
+    "selection.json": {
+      "sha256": "141165d55cb5381a5f9b893f4686cf5b4c0bb256beff1f06bd30f02b8f5fba0d",
+      "bytes": 25309
+    }
+  },
+  "filters": [
+    {
+      "active": "all",
+      "text": "显示 50 / 50 项",
+      "visible": 50
+    },
+    {
+      "active": "product",
+      "text": "显示 14 / 50 项",
+      "visible": 14
+    },
+    {
+      "active": "offline",
+      "text": "显示 15 / 50 项",
+      "visible": 15
+    },
+    {
+      "active": "content",
+      "text": "显示 21 / 50 项",
+      "visible": 21
+    }
+  ],
+  "search": {
+    "query": "Relation search",
+    "result": "显示 1 / 50 项",
+    "visible": [
+      "relation-search"
+    ],
+    "viewport": [
+      1440,
+      1100
+    ],
+    "pageWidth": 1425,
+    "theme": "light"
+  }
+}
