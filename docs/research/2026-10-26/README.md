@@ -95,4 +95,29 @@ Task-view 确认为 [`gtindo/task-view@f27b8bef63ec336b8e3487e90ccd484a2fa7a235`
 
 本轮继续保持目标 active。下一步先刷新已有 PR 的精确 head 与 CI，再筛选新的阅读缺口；不把重复调研、图能生成或 CI 绿灯当作用户价值证明。
 
+## 27 日第四批：筛掉重复表达，推进已有可验证修复
+
+本批开始执行 fetch/prune，研究 hub 为 `4671df2c`、dev 仍为 `e837dc4c`；当前候选分支也在更新前用 `ls-remote` 核为 `c96e8aa7`。没有把重新发现的候选复制成新远程分支。
+
+| 新来源与问题 | 本批决定 |
+| --- | --- |
+| [Git bisect / git-branchless](scouts/git-history-reading.md)：skip 后候选集合与已知 good/bad 的区别 | 官方固定测试提供了可复现实验方向，但 Git 原始输出已直接列候选。四节点线性图的额外阅读价值不足以支持本批实现，先保留研究与原创 fixture 协议。 |
+| [marimo / Observable](scouts/reactive-reading.md)：disabled、stale 与重新启用返回集合 | 与既有 notebook/state 阅读研究重叠；短表已能承载当前三节点案例。保留来源及对照协议，暂不实现 importer、通用状态模型或新的图版。 |
+
+### 已有 keyboard-traversal → Draft #1124
+
+[独立审查](audit/keyboard-draft-readiness.md)确认当前 dev 仍有初始控件数加三步的提前停止问题，没有查到同一修复的现有 PR。恢复隔离 validation worktree后，正常合入当前 dev；唯一 ZIP 冲突由合并后的源码规范重建解决，现有 crossing-budget 变更保留。
+
+原远程 `codex/lab-keyboard-traversal` 已从 `c96e8aa7` 正常推进至 [`9601c9b6e4b6addc2f348677d1c198bc6bc74192`](https://github.com/tt-a1i/archify/tree/9601c9b6e4b6addc2f348677d1c198bc6bc74192/experiments/keyboard-traversal/refresh-dev-e837)，创建 [Draft #1124](https://github.com/tt-a1i/archify/pull/1124)，附原始实际 Tab 图片。该算法继续真实键盘操作、冻结初始目标身份并限制总工作；真正的陷阱、隐藏/替身目标和预算耗尽仍失败，不改变 Reader 页面或成功条件。
+
+本次官方 Node 22.23.2 / canonical zlib 下，完整相关 Chrome 测试文件与 core smoke 各 19 通过、零跳过。当前 public CLI 对 Trace 冻结 HTML 的 authentic-provenance 检查通过，四臂 27/27、33 步，原 HTML SHA 不变。两次 canonical ZIP 与提交版本相同；235 成员与 dev 同名，只有 checker 内容改变，当前 dev 的 CLI/checker 入口保留。解包原生滚动正例 2/2 到达；真实 trap 正确失败。独立复核检查实际日志、源码身份、ZIP 成员与 CLI receipt；最后一笔只补可移植摘要和复现说明，不重复跑未受影响的测试。
+
+本次 runtime 与此前 Node 22.23.3 的三页面 API 比较分开记录。原始 receipt 未保存运行前哈希、初始 shell probe 和 ZIP 比对日志的缺口如实披露；没有把派生摘要当原始收据。历史失败与旧产物保持不变，图片复用原始身份，未声称新视觉设计、人类验收或 AT 支持。Draft 创建时 hosted CI 尚待完成。
+
+### Task-view CI 已完成
+
+同一 head 的 [run 40423164172](https://github.com/tt-a1i/archify/actions/runs/40423164172) attempt 2 于 00:31:02 UTC 成功结束：[精确检查快照](audit/task-flow-ci-attempt2.json)为 19 success、2 deployment skipped。只请求重跑失败的 browser job，依赖汇总随后运行，其余成功结果保留原执行时间。初次 `webm-decode` 已成功，`webm-artifact` 原红灯来自 browser 依赖汇总，不能说成第二个解码错误。首次 Sequence containment 失败和本地通过仍保留，[记录](audit/task-flow-ci-rerun.md)没有推断其根因。
+
+本轮没有合并、发布或安装。目标继续 active，下一批先检查 #1124 的精确 head CI，再依据实际阅读缺口筛选方向。
+
 AI assistance：Codex（GPT-6.1-Terra 与 GPT-6.1-Sol 子代理）参与调研、实验实现、验证和文档；本记录不声称维护者已完成个人审查或验收。
