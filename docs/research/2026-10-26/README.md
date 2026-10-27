@@ -141,4 +141,6 @@ Task-view 确认为 [`gtindo/task-view@f27b8bef63ec336b8e3487e90ccd484a2fa7a235`
 
 [#1124](https://github.com/tt-a1i/archify/pull/1124) 的最终 head `9601c9b6e4b6addc2f348677d1c198bc6bc74192` 已完成 [run 40427641788](https://github.com/tt-a1i/archify/actions/runs/40427641788)：[00:52:06 UTC 精确快照](audit/keyboard-final-ci.json)记录 19 success、2 deployment skipped，无分页遗漏。PR 说明已从 pending 更新为这一结果。CodeRabbit 的独立 status 只是 Draft 跳过通知，不计作实质审查或人类接受。没有合并、发布、部署或安装。
 
+收尾 `ls-remote` 发现 dev 已推进到 `500d4a65211ffe607fde6b3ce7505027b45bb59e`，随后只 fetch dev 复核：合入 #1031 的 SVG 块扫描修复，净变更为 `archify/scripts/check-render-output.mjs`、`test/render-output-checks.test.mjs`、`archify.zip`，键盘专用路径未变。本批起始基线记录不改写；#1124 的绿灯仍只绑定基于 `e837dc4c` 的 `9601c9b6`，不能证明与新 dev 组合后通过。已在 PR 披露此边界，最终集成前须更新组合并核验；本轮未再次 merge、rebase 或无差别重跑。
+
 AI assistance：Codex（GPT-6.1-Terra 与 GPT-6.1-Sol 子代理）参与调研、实验实现、验证和文档；本记录不声称维护者已完成个人审查或验收。
