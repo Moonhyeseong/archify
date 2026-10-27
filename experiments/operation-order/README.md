@@ -2,6 +2,8 @@
 
 [三句文字基线](baseline.html) · [文字加约束图](explanation.html) · [源稿](candidate.archify.md) · [独立复核](audit.py)
 
+当前图版已用现有原生字段把图例改为“操作”。下方八张实际截图与页面高度仍绑定旧版 `4d0d21c6`；新版本的四阶段自动检查和[独立静态复核](legend-label-review/review.md)已完成，尚无新手动交互截图。
+
 Porcupine README 的说明例中，一次长写覆盖两次读取，但实时顺序与寄存器模型无合法排列。两个页面共用同一六行事件、初态、模型、三句解释和三候选枚举；后者增加三节点约束图。图边表示必须先于，带实时或模型依据，不表示调用、死锁或因果。事件位置是 ordinal，不是时间。上游 README 声明 checker 返回 false；本轮未运行 Porcupine。
 
 这是固定内容实验，潜在价值是让读者一眼看到不同依据组成的矛盾；是否比三句文字更容易理解，尚未有读者比较。若无增益就保留文字，不主张新增共享功能。没有通用 parser、checker、上游依赖、schema 或 Viewer 修改。
@@ -20,7 +22,7 @@ python3 experiments/operation-order/audit.py
 /opt/homebrew/opt/node@22/bin/node archify/bin/archify.mjs browser-check experiments/operation-order/baseline.html --json --require-provenance
 ```
 
-两次 finalize 的 validate、deliver、check 均通过，未请求 browser-check；首稿未改，保存在 draft-1。图版有三条写作提示、基线有两条，限定说明刻意保留。自动检查不证明视觉质量或用户收益。
+以下验证及实际对照保留 `4d0d21c6` 的历史身份；当前图例修正见末节。两次 finalize 的 validate、deliver、check 均通过，未请求 browser-check；首稿未改，保存在 draft-1。图版有三条写作提示、基线有两条，限定说明刻意保留。自动检查不证明视觉质量或用户收益。
 
 单独对两个生成 HTML 执行 `browser-check --json --require-provenance`，均返回 pass、0 diagnostics、current provenance。图版 HTML SHA-256 `50127c55650797a2713ca2d09bcb74f0e14396db9fd9c9f4eb37da83918e459a`；基线 HTML SHA-256 `23f9b8bac86f37e888e6067f3ad4fa000d3de5a86797a4227f74c314faf58de6`。原始 receipts 含本机路径，留在 `/tmp/archify-operation-order-receipts/`；公开的[验证摘要与原件摘要](evidence/verification.json)是选字段派生记录，不冒充原始 receipt。
 
@@ -39,4 +41,6 @@ python3 experiments/operation-order/audit.py
 
 直接序列化简写编译器返回的单列 spec 时，finalize 失败：两条边标签与节点重叠。简写原流程还会尝试自动三列候选；此次显式指定旧图实际采用的三列位置，再明确中文 locale（外部 spec 不继承页面 locale）。以实际 `prepareExplainerDiagrams` 捕获旧图渲染输入：将新 JSON 的 output / quality 归一为运行时值、移除 legend 后，两份原生 spec 完全相同。最终 SVG 与旧图逐字比较，**仅图例文字及其 data 标签从“后端”变为“操作”**；原始编译 spec 与新文件并非只差图例，布局与 locale 也有差异。两版共同正文没有变化，基线 HTML 与源稿的 SHA-256 未变。首轮失败和中间缺少中文 locale 的成功产物证据均留在 `/tmp/operation-order-legend-evidence/`。
 
-最终图版的 finalize validate、deliver、check、browser-check 均通过；保留三条原有写作提示。固定模型 audit 通过，原始结果及浏览器 receipt 在同一临时证据目录；[派生验证摘要](legend-label-review/verification.json)记录最终文件摘要与检查，不冒充原始结果。尚待协调者实际检查交互图的图例与操作；图是否提升阅读效率仍无证据。
+最终图版的 finalize validate、deliver、check、browser-check 均通过；保留三条原有写作提示。固定模型 audit 通过，原始结果及浏览器 receipt 在同一临时证据目录；[派生验证摘要](legend-label-review/verification.json)记录最终文件摘要与检查，不冒充原始结果。[独立静态复核](legend-label-review/review.md)确认实际内嵌 SVG 只有两处标签值变化，外层标题与无障碍名称保持一致。当前图版为 537543 bytes，基线仍为 156572 bytes；旧页面高度不重新归因给新文件。
+
+原 Ego 研究空间 4 已不存在，未另开浏览器空间；重建许可已向用户询问，等待答复。尚待协调者实际检查新图例与操作，不以自动 browser-check 或旧截图替代这项观察。图是否提升阅读效率仍无证据，维持仅研究分支、暂不开 Draft PR 的决定。

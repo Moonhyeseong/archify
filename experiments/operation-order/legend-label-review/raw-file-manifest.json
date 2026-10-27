@@ -1,0 +1,46 @@
+{
+  "description": "Hashes of selected local raw files; not full receipts",
+  "localDirectory": "/tmp/operation-order-legend-evidence",
+  "files": [
+    {
+      "name": "finalize-stdout.json",
+      "bytes": 3123,
+      "sha256": "ee91857060445a00af900a43343a727dff5459d265158044e9116efa4467c36c"
+    },
+    {
+      "name": "finalize-2-stdout.json",
+      "bytes": 3134,
+      "sha256": "d8d3d1a6ed9275094cc3d549eb1f1edec0eeabb1d7c6134ee1129da0be5ebf59"
+    },
+    {
+      "name": "finalize-3-stdout.json",
+      "bytes": 3134,
+      "sha256": "d1bb8ff199acb07d739db62f3716fd946af89801177677d0803e2a7d542ba5e4"
+    },
+    {
+      "name": "final-delivery.json",
+      "bytes": 1143,
+      "sha256": "0cbad1fe7f85c6196df4ec25b127f899008311dd6f5952624f92f4abecde3b46"
+    },
+    {
+      "name": "old-compiled.json",
+      "bytes": 1105,
+      "sha256": "0b868df8d9ad9911773f5223738355187ebc35f02b2bb7823447e2a4285ce2dd"
+    },
+    {
+      "name": "prepared-candidate-1.json",
+      "bytes": 752,
+      "sha256": "6957564c0e72dbee90a802b1efdc8864ac28a2e080324bbc9b70bf66b8150c68"
+    },
+    {
+      "name": "old.svg",
+      "bytes": 12435,
+      "sha256": "241897a78f30c1dfec606d9972e98db95e944fd32a8bbfe4ef3ba2d96eb18413"
+    },
+    {
+      "name": "new.svg",
+      "bytes": 12435,
+      "sha256": "cd59025080269ec1a9be6765798ec7ad14b1c480947018d591e8b12b0257d9a4"
+    }
+  ]
+}
