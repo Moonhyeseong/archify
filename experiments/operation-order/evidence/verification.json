@@ -1,0 +1,232 @@
+{
+  "kind": "portable-derived-summary",
+  "productBase": "e837dc4cb83042d2b6c596e039692e25ec62c2da",
+  "implementationRevision": "ef3e751c1649be36dbf390c3b471c39572a9ea70",
+  "node": "22.23.3",
+  "rawManifest": [
+    {
+      "file": "baseline-finalize.json",
+      "bytes": 2540,
+      "sha256": "da39fb2e8257d50c09770e8e6dfeacc9796f9e907e867042b00cd321ab850226"
+    },
+    {
+      "file": "baseline.delivery.json",
+      "bytes": 765,
+      "sha256": "afe441d211640a7b42bb8e624ea602f8aa2b48b028d07c3219f93d3df8862b03"
+    },
+    {
+      "file": "baseline.finalize-summary.json",
+      "bytes": 3115,
+      "sha256": "a3b8013adca8d5f424fa4a2d52d629bac24bd6722318b628f84c2e8dacde8d71"
+    },
+    {
+      "file": "baseline.finalize.json",
+      "bytes": 10069,
+      "sha256": "a23e78a43e19f569bf09850509af94a1903bd575cc021251c22bfb8ca23965e0"
+    },
+    {
+      "file": "browser-baseline.json",
+      "bytes": 386579,
+      "sha256": "37c96d2a93a9de0255ae4f6f69633a4acbd3a71197306d6c493499e7a32b3845"
+    },
+    {
+      "file": "browser-explanation.json",
+      "bytes": 493073,
+      "sha256": "9ee4b2b46f2abca56fba75b7058db21937d3e2f43c85e2dafdb693c17fe05573"
+    },
+    {
+      "file": "explanation.delivery.json",
+      "bytes": 980,
+      "sha256": "8411f6a154040865238ce59a7d4d26c7ad9abf7415347e0f444ce69adfd40f3b"
+    },
+    {
+      "file": "explanation.finalize-summary.json",
+      "bytes": 3850,
+      "sha256": "7e2b87eea07754c7c987fb3a028f445d303b8c1620bc2c52fcd65f940575ede6"
+    },
+    {
+      "file": "explanation.finalize.json",
+      "bytes": 17985,
+      "sha256": "dbfde710757f9d02f6a54a3f4cc3abeb18b798faacbcc48c7423bcf96234d08e"
+    },
+    {
+      "file": "finalize.json",
+      "bytes": 3107,
+      "sha256": "7a4e8c66b53d64166b3cad70f9fb21faa08b0e6549d4223e9d6c5c385ff4831e"
+    }
+  ],
+  "arms": {
+    "baseline": {
+      "artifact": {
+        "file": "baseline.html",
+        "bytes": 156572,
+        "sha256": "23f9b8bac86f37e888e6067f3ad4fa000d3de5a86797a4227f74c314faf58de6"
+      },
+      "specification": {
+        "file": "baseline.archify.md",
+        "bytes": 2297,
+        "sha256": "e08d2c287766bdb9089ab3509aab78c025cda537f6b1313bb67e594befa3b14f"
+      },
+      "finalize": {
+        "status": "pass",
+        "gates": {
+          "validate": "pass",
+          "deliver": "pass",
+          "check": "pass",
+          "browser-check": "not-run"
+        },
+        "warnings": [
+          {
+            "code": "explainer/writing-de-chain",
+            "severity": "warning",
+            "message": "This sentence chains 3 “的” modifiers, so the head noun arrives late.",
+            "line": 26
+          },
+          {
+            "code": "explainer/writing-qualification",
+            "severity": "warning",
+            "message": "把限定条件写进 scope 或来源",
+            "line": 44
+          }
+        ]
+      },
+      "browserCheck": {
+        "status": "pass",
+        "provenance": "current",
+        "diagnostics": [],
+        "visualReview": "not-requested",
+        "viewports": [
+          {
+            "innerWidth": 1280,
+            "innerHeight": 900,
+            "scrollWidth": 1280,
+            "scrollHeight": 1527,
+            "controlCount": 17,
+            "keyboardIssues": [],
+            "overflowElements": [],
+            "smallText": []
+          },
+          {
+            "innerWidth": 1440,
+            "innerHeight": 900,
+            "scrollWidth": 1440,
+            "scrollHeight": 1527,
+            "controlCount": 17,
+            "keyboardIssues": [],
+            "overflowElements": [],
+            "smallText": []
+          },
+          {
+            "innerWidth": 1280,
+            "innerHeight": 900,
+            "scrollWidth": 1280,
+            "scrollHeight": 1527,
+            "controlCount": 17,
+            "keyboardIssues": [],
+            "overflowElements": [],
+            "smallText": []
+          },
+          {
+            "innerWidth": 1440,
+            "innerHeight": 900,
+            "scrollWidth": 1440,
+            "scrollHeight": 1527,
+            "controlCount": 17,
+            "keyboardIssues": [],
+            "overflowElements": [],
+            "smallText": []
+          }
+        ]
+      }
+    },
+    "explanation": {
+      "artifact": {
+        "file": "explanation.html",
+        "bytes": 541210,
+        "sha256": "50127c55650797a2713ca2d09bcb74f0e14396db9fd9c9f4eb37da83918e459a"
+      },
+      "specification": {
+        "file": "candidate.archify.md",
+        "bytes": 2826,
+        "sha256": "6af3f23af100a1f7d46d72547e9499f415883d3d4195a4fecd28e71af05b90cd"
+      },
+      "finalize": {
+        "status": "pass",
+        "gates": {
+          "validate": "pass",
+          "deliver": "pass",
+          "check": "pass",
+          "browser-check": "not-run"
+        },
+        "warnings": [
+          {
+            "code": "explainer/writing-de-chain",
+            "severity": "warning",
+            "message": "This sentence chains 3 “的” modifiers, so the head noun arrives late.",
+            "line": 26
+          },
+          {
+            "code": "explainer/writing-qualification",
+            "severity": "warning",
+            "message": "把限定条件写进 scope 或来源",
+            "line": 36
+          },
+          {
+            "code": "explainer/writing-qualification",
+            "severity": "warning",
+            "message": "把限定条件写进 scope 或来源",
+            "line": 56
+          }
+        ]
+      },
+      "browserCheck": {
+        "status": "pass",
+        "provenance": "current",
+        "diagnostics": [],
+        "visualReview": "not-requested",
+        "viewports": [
+          {
+            "innerWidth": 1280,
+            "innerHeight": 900,
+            "scrollWidth": 1280,
+            "scrollHeight": 1812,
+            "controlCount": 20,
+            "keyboardIssues": [],
+            "overflowElements": [],
+            "smallText": []
+          },
+          {
+            "innerWidth": 1440,
+            "innerHeight": 900,
+            "scrollWidth": 1440,
+            "scrollHeight": 1812,
+            "controlCount": 20,
+            "keyboardIssues": [],
+            "overflowElements": [],
+            "smallText": []
+          },
+          {
+            "innerWidth": 1280,
+            "innerHeight": 900,
+            "scrollWidth": 1280,
+            "scrollHeight": 1812,
+            "controlCount": 20,
+            "keyboardIssues": [],
+            "overflowElements": [],
+            "smallText": []
+          },
+          {
+            "innerWidth": 1440,
+            "innerHeight": 900,
+            "scrollWidth": 1440,
+            "scrollHeight": 1812,
+            "controlCount": 20,
+            "keyboardIssues": [],
+            "overflowElements": [],
+            "smallText": []
+          }
+        ]
+      }
+    }
+  }
+}

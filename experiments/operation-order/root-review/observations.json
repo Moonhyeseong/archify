@@ -1,0 +1,86 @@
+{
+  "kind": "actual-browser-observations",
+  "checkedAt": "2026-10-27T00:21:22Z",
+  "implementationRevision": "ef3e751c1649be36dbf390c3b471c39572a9ea70",
+  "browser": "Chrome/156.0.8078.48",
+  "artifacts": {
+    "baseline": {
+      "file": "baseline.html",
+      "bytes": 156572,
+      "sha256": "23f9b8bac86f37e888e6067f3ad4fa000d3de5a86797a4227f74c314faf58de6"
+    },
+    "explanation": {
+      "file": "explanation.html",
+      "bytes": 541210,
+      "sha256": "50127c55650797a2713ca2d09bcb74f0e14396db9fd9c9f4eb37da83918e459a"
+    }
+  },
+  "desktop": {
+    "viewport": [
+      1440,
+      900
+    ],
+    "baselineDocumentHeight": 1526,
+    "candidateDocumentHeight": 1805
+  },
+  "mobile": {
+    "viewport": [
+      390,
+      844
+    ],
+    "baselineScrollWidth": 390,
+    "candidateScrollWidth": 390
+  },
+  "escapeAfterOpeningDiagram": {
+    "openDialog": false,
+    "focusedButton": "打开交互图"
+  },
+  "screenshots": [
+    {
+      "file": "baseline-explanation-light.png",
+      "bytes": 126935,
+      "sha256": "1c73db34598c48abc9e71658369c5bee5e48114edcf685002b6a430ceab96e90"
+    },
+    {
+      "file": "baseline-mobile-dark.png",
+      "bytes": 87886,
+      "sha256": "3c8b863312134e0b458500c41ed8440498d2712721f2adfb0442a677a270fda8"
+    },
+    {
+      "file": "baseline-overview-light.png",
+      "bytes": 138096,
+      "sha256": "fd1d0bd868587daa9f195c71df8c862f8372e0acc537e614bd6727482a4defed"
+    },
+    {
+      "file": "candidate-constraints-dark.png",
+      "bytes": 136645,
+      "sha256": "5d97b8e1dca21a8da2cfe53ae466fd28fdd5f6a9d8360cc8a7aa9071eb951b31"
+    },
+    {
+      "file": "candidate-constraints-light.png",
+      "bytes": 137927,
+      "sha256": "958b008d1af447b27811b2ec84c2495a48df6611a53c395c02e40e279728c217"
+    },
+    {
+      "file": "candidate-mobile-dark.png",
+      "bytes": 92935,
+      "sha256": "4d010a11dc13490af6b8b509ffdd72b18ecf310fb6abc79dd6070de8da74791b"
+    },
+    {
+      "file": "candidate-modal-dark.png",
+      "bytes": 73112,
+      "sha256": "ad1f7a079b0b26203b917ecd34af4fd81572772e65ca501862a75370db9342bc"
+    },
+    {
+      "file": "candidate-overview-light.png",
+      "bytes": 138139,
+      "sha256": "04292b5c2373ee00f5d0082d513a3a6a8266fd0f4eb699cd919aea994539e4c6"
+    }
+  ],
+  "limitations": [
+    "No human reader comparison",
+    "No Porcupine execution",
+    "Mobile diagram zoom and assistive technology not tested",
+    "Native diagram retains generic backend legend"
+  ]
+}
