@@ -1,0 +1,122 @@
+1121	experiment: read authored behavior paths with explicit test associations	codex/lab-task-flow-tests
+1120	experiment: distinguish exception group identity from repeated traceback text	codex/lab-exception-identity
+1119	在语义护照中只读展示节点的任务清单（Task checklist）	feat/passport-task-checklist
+1117	fix: hide classic grid in SVG exports	fix/1111-classic-svg-grid-clean
+1110	fix(workflow): terminate finite port probing without floating-point progress	codex/upstream-finite-workflow-probe-1072
+1109	perf(dataflow): avoid repeated flow index scans	cookingwithvlad-del-performance-improvements
+1108	perf(explainer): index outgoing shorthand edges	perf/explainer-ranked-placement-adjacency
+1106	Improve workflow compilation performance	perf/workflow-node-step-index
+1103	Add an Atlas view to Code Analysis	claude/code-atlas
+1101	docs(readme): put install before showcase and trim agent-facing detail	docs/readme-restructure
+1086	修复 Workflow 受限分叉导致的路由交付失败	fix/workflow-controlled-fork-delivery-20261024
+1076	fix(explainer): keep mobile toolbar and Style/Export menus in view	codex/1068-upstream-p0
+1066	feat: add standalone artifact update notice	feat/1064-reader-feedback-update
+1063	feat: GitHub Enterprise source links for repository evidence	feat/1034-ghe-source-links
+1049	feat(compare): read Architecture snapshots from Git refs	codex/compare-git-ref-snapshots
+1042	fix(viewer): give default relationship labels readable light ink	fix/1017-edge-label-contrast
+1032	fix(timeline): keep the year on multi-year labels and the header in frame	fix/1019-timeline-multi-year-labels
+1031	fix(check): check the whole root svg, not just up to the first nested close	fix/1025-svg-block-extraction
+1030	fix(waterfall): key the incomplete legend only to open bars	fix/1022-waterfall-legend-status
+1029	fix(timeline): state sub-second break durations in milliseconds	fix/1023-timeline-subsecond-breaks
+1028	fix(waterfall): scale the timing tolerance to the value magnitude	fix/1021-waterfall-timing-tolerance
+1027	fix(viewer): mobile nav reachability, dock clearance and presentation scroll	fix/viewer-mobile-chrome
+1018	Add before after example	add-before-after-example
+1015	feat(explainer): improve visual hierarchy, KPI deltas, code focus, and interactive details	cursor/explainer-visual-comprehension-ed94
+1001	fix(viewer): camera viewport follows the container, not the narrower SVG box	fix/camera-viewport-container
+998	Code analysis Main branch	labs/code-analysis
+963	docs(license): relicense to AGPL-3.0 starting with 4.0.0 (draft)	docs/relicense-agpl
+960	feat(workflow): surface partialLayout on --layout-json when validation fails (#934)	archify/issue-934-partial-layout
+955	ci: add npmscan dependency security check	ci/add-npmscan-warn-mode
+923	fix(sequence): emit the whole ordered adjustment when a note reaches several messages	fix/sequence-note-overlap-adjustment
+895	feat: add processor architecture components	codex/processor-architecture
+891	fix(sequence): report canvas-level failures as typed diagnostics	fix/sequence-canvas-diagnostics
+884	community: add archify-index listing	community/archify-index
+875	fix(checker): preserve endpoint identity around quadratic curves	fix/checker-projected-endpoints
+874	fix(viewer): save exports through Artifact host	fix/733-claude-artifact-download
+863	fix(browser): preserve DevTools pipes during Windows browser startup	fix/windows-browser-pipe-relaunch
+861	fix(cards): retry interrupted public image verification reads	codex/archify-card-public-image-retry-20261010
+860	fix(site): require regular files for Cloudflare static assets	codex/archify-cloudflare-regular-assets-20261010
+859	fix(site): verify local assets inside deferred HTML templates	codex/archify-cloudflare-template-assets-20261010
+858	test(recovery): preserve publication on invalid CLI arguments	test/recovery-cli-invalid-arguments
+856	test(opener): protect complete preview URL restrictions	test/preview-opener-url-boundary
+855	fix(dsh): reject missing pack output values before staging	fix/dsh-pack-output-value
+854	test: protect card publisher truncated-tree boundary	codex/card-truncated-tree-regression-20261010
+853	test(geometry): assert rounded route containment on short segments	test/rounded-route-radius-containment
+852	fix(site): verify live canonical link metadata from parsed HTML	codex/archify-cloudflare-canonical-meta-20261010
+851	fix(site): inspect parsed robots metadata before sitemap publication	codex/archify-cloudflare-robots-meta-20261010
+848	test(text): protect the readable shrink-to-fit floor	test/text-fit-readable-floor
+845	fix(text): ignore supplementary variation selector advance	fix/text-supplementary-variation-selectors
+844	fix(doctor): require regular installation files	fix/doctor-required-file-types
+843	test(labels): protect fallback association with its own route	test/automatic-label-route-proximity
+842	fix(dsh): match complete transient network error codes	codex/archify-dsh-network-code-tokens-20261010
+841	fix(tooling): reject missing repository checker option values	codex/archify-checker-option-values-20261010
+840	fix(dsh): reject invalid transient retry budgets	codex/archify-dsh-retry-budget-20261010
+839	fix(tooling): stop star history publication on remote lookup errors	codex/archify-star-remote-failure-20261010
+838	fix(workflow): offer a member-preserving group placement for blocked routes	fix/821-group-label-route-clearance
+837	fix(tooling): clean completed star history snapshots	codex/archify-star-snapshot-cleanup-20261010
+835	test(geometry): retain exact grid-boundary contact candidates	test/spatial-grid-boundary-contact
+834	test(update): cover bounded checker output transport	test/update-checker-output-boundaries
+832	fix(cli): preserve browser-check review mode on directory failure	fix/browser-check-review-status
+831	test(timeline): protect repeated DST hour interpretation	test/timeline-dst-repeated-hour
+830	fix(dsh): do not retry terminated distribution commands	codex/archify-dsh-cancelled-retry-20261010
+829	fix(cli): parse inspect options before checking diagram type	fix/inspect-option-order
+828	fix(site): preserve literal replacement tokens in recipe builds	codex/archify-recipe-dollar-copy-20261010
+827	fix(ci): classify Japanese README as repository prose	codex/archify-ci-japanese-prose-20261010
+825	fix(dsh): resolve command shims from child environment	codex/archify-dsh-child-env-20261010
+824	test(waterfall): protect nested service attribution	test/waterfall-inherited-service
+822	fix(check): retain collinear quadratic route reversals	fix/svg-quadratic-backtracking-base
+809	prototype(workflow): narrower single-column canvases (#747)	prototype/747-single-column-canvas
+804	docs(authoring): explain measured viewport height budgets	fix/356-viewport-height-guidance
+795	fix(viewer): declare unavailable relationship queries honestly	fix/reader-query-availability
+765	fix: tolerate Win32 link-count inflation in post-publication checks	fix/windows-rename-publication
+732	feat(viewer): add GIF motion export alongside WebM	feat/gif-motion-export
+730	feat: add Tracks shared-axis interval canvas	paul/tracks-dev
+722	fix(output): require explicit replacement for unrelated HTML	fix/protect-implicit-html-output
+659	Authors: follow 	main
+653	feat(levels): add C4 leveled architecture generation	main
+652	fix(workflow): declare authored-height contract for explicit viewBox swimlanes (#616)	fix/workflow-explicit-viewbox-scroll-contract
+649	feat(workflow): add configurable typography with measured layout	codex/workflow-measured-typography
+573	Claude/repository explanation 4iapi2	claude/repository-explanation-4iapi2
+571	feat(sequence): support self-messages	feat/sequence-self-messages
+569	feat(validate): expose informational viewport projection	feat/validate-viewport-projection
+568	fix(sequence): keep segment headings clear of participant headers	fix/sequence-segment-header-clearance
+567	fix(workflow): reserve heading clearance for inferred straight ports	fix/workflow-inferred-header-clearance
+563	feat(icons): add monitoring and alert role symbols	feat/monitor-alert-node-icons
+559	feat(architecture): add vetted icon-first brand nodes	feat/546-architecture-icon-first
+551	fix(architecture): preserve semantics and reject perimeter detours	codex/semantic-stage-fidelity
+539	feat: support nested boundaries via wraps referencing boundary id	feat/nested-boundaries
+535	feat(architecture): allow right-aligned boundary titles	feat/boundary-label-align
+533	feat(packaging): prepare scoped @tt-a1i/archify CLI package	feature/npm-packaging-poc
+522	labs: port first-draft rework fixes from PR #510 onto the performance branch	codex/labs-first-draft-routing-floors
+508	feat: redesign website with a shared drafted-sheet interaction system	feat/website-visual-polish
+501	feat(check): reject boundary frames that enclose non-members	fix/395-boundary-membership
+482	feat(workflow): add in-memory renderWorkflow() library entrypoint	feat/workflow-render-api
+480	feat: open the renderer without changing a single existing artifact	feat/openness-seams
+478	feat: extend adaptive canvas and large-world browsing to five diagram types	labs/adaptive-workflow-canvas-pilot
+473	feat(viewer): add a fifth Blossom visual preset	feat/blossom-visual-preset
+472	feat(viewer): add Soft Cloud visual preset	feat/soft-cloud-preset
+461	Deferred: optional offline Atlas overview/detail reading	codex/atlas-deferred
+413	Draft: add experimental Architecture Atlas navigation	integration/architecture-atlas
+388	feat(import): add Mermaid stateDiagram importer for typed lifecycle IR	feat/mermaid-state-lifecycle-import
+387	feat(import): add Mermaid sequenceDiagram importer for typed sequence IR	feat/mermaid-sequence-import
+382	perf(template): drop backdrop-blur and filter transitions so viewer stays smooth	main
+367	feat: stable identity map — ownership sidecar, archify locate, drilldown bundles	feature/identity-map
+329	feat(viewer): add pointer-anchored wheel zoom	feat/viewer-wheel-zoom
+328	Add archify export svg for a standalone, styled SVG	feat/headless-svg-export
+317	feat(architecture): allow connections to named boundaries	codex/issue-284-boundary-endpoints
+308	feat(geometry): suggest a verified via elbow for clean-flow routing diagnostics	suggest-via-for-clean-flow-diagnostics
+289	feat(viewer): make story and journey autoplay dwell authorable	fix/issue-57-autoplay-dwell
+286	feat(workflow): preserve critical approval details	codex/issue-84-approval-details
+272	feat: add standalone SVG delivery	feat/standalone-svg-delivery
+260	fix: detect coincident routes in anti-parallel connections with labelAt	fix/issue-248-coincident-routes
+234	Retire Share Card exports and keep Copy diagram only	codex/fix-share-card-retina
+225	fix(viewer): stabilize relationship exploration	codex/221-viewer-relationship-exploration
+212	Add Termio to sponsors	chore/sponsor-termio
+208	perf: reduce multi-diagram generation latency without weakening quality gates	codex/issue-175-pipeline-performance
+197	fix(workflow): make phase ownership visible without hover (#81)	fix/81-phase-ownership-visible
+180	Add 'Full diagram page' export: title + diagram + cards in one PNG, without viewer chrome	main
+172	fix(architecture): prefer straight routes over unnecessary Port Spread doglegs	fix/137-straight-routes-over-port-spread-doglegs
+150	feat(cognition): add cognition diagram type for reasoning-route diagrams	feat/cognition-diagram-type
+140	feat(import): add Mermaid flowchart importer for typed architecture IR	feat/mermaid-flowchart-import
+87	Add Claude, Grok, Codex, and Pi plugin marketplaces	feat/host-plugin-marketplaces
+72	feat(drawio): export Archify diagrams as editable draw.io files	feat/drawio-export

@@ -1,0 +1,68 @@
+2026-10-27T00:00:53.6991965Z       duration_ms: 14615.344407
+2026-10-27T00:00:53.6992322Z       type: 'test'
+2026-10-27T00:00:53.6992568Z       ...
+2026-10-27T00:00:58.6070338Z     # Subtest: compact automatic Sequence fits the initial desktop stage without shrinking source text
+2026-10-27T00:00:58.6081785Z     not ok 11 - compact automatic Sequence fits the initial desktop stage without shrinking source text
+2026-10-27T00:00:58.6082428Z       ---
+2026-10-27T00:00:58.6082729Z       duration_ms: 4834.915922
+2026-10-27T00:00:58.6083063Z       type: 'test'
+2026-10-27T00:00:58.6084126Z       location: '/home/runner/work/archify/archify/test/reader-layout-browser.test.mjs:657:13'
+2026-10-27T00:00:58.6084786Z       failureType: 'testCodeFailure'
+2026-10-27T00:00:58.6086901Z       error: '{"svg":{"top":67,"bottom":557.5,"left":278,"right":1118},"stage":{"top":58,"bottom":626.5,"left":32,"right":1364},"controls":{"top":421.5,"bottom":463.5,"left":986.890625,"right":1347},"legend":{"corner":true,"bounds":{"top":504.5,"bottom":557.5,"left":47,"right":174.515625},"originalSvg":true,"count":1,"leftGap":0,"bottomGap":0,"navOverlap":0},"width":840,"sourceWidth":560,"minimumTextScale":1.5,"viewportWidth":1396,"viewportHeight":480,"geometry":["0 0 560 327",null,null]}'
+2026-10-27T00:00:58.6088923Z       code: 'ERR_ASSERTION'
+2026-10-27T00:00:58.6089434Z       name: 'AssertionError'
+2026-10-27T00:00:58.6089761Z       expected: true
+2026-10-27T00:00:58.6090046Z       actual: false
+2026-10-27T00:00:58.6090326Z       operator: '=='
+2026-10-27T00:00:58.6090630Z       stack: |-
+2026-10-27T00:00:58.6091243Z         fits (file:///home/runner/work/archify/archify/test/reader-layout-browser.test.mjs:705:18)
+2026-10-27T00:00:58.6092336Z         TestContext.<anonymous> (file:///home/runner/work/archify/archify/test/reader-layout-browser.test.mjs:811:7)
+2026-10-27T00:00:58.6093267Z         process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+2026-10-27T00:00:58.6093970Z         async Test.run (node:internal/test_runner/test:1054:7)
+2026-10-27T00:00:58.6120216Z         async TestContext.<anonymous> (file:///home/runner/work/archify/archify/test/reader-layout-browser.test.mjs:657:5)
+2026-10-27T00:00:58.6121407Z         async Test.run (node:internal/test_runner/test:1054:7)
+2026-10-27T00:00:58.6122277Z         async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+2026-10-27T00:00:58.6122950Z       ...
+2026-10-27T00:01:05.0875969Z     # Subtest: public renderers declare automatic reading width while undeclared canvases retain their fit
+2026-10-27T00:01:05.0877237Z     ok 12 - public renderers declare automatic reading width while undeclared canvases retain their fit
+2026-10-27T00:01:05.0877828Z       ---
+2026-10-27T00:01:05.0878331Z       duration_ms: 6747.922997
+2026-10-27T00:01:05.0878652Z       type: 'test'
+2026-10-27T00:01:05.0878907Z       ...
+2026-10-27T00:01:08.3076927Z     # Subtest: desktop budgets, extreme content and limited horizontal space preserve geometry
+2026-10-27T00:01:08.3078765Z     ok 13 - desktop budgets, extreme content and limited horizontal space preserve geometry
+2026-10-27T00:01:08.3080070Z       ---
+2026-10-27T00:01:18.5369915Z       duration_ms: 915.946009
+2026-10-27T00:01:18.5370245Z       type: 'test'
+2026-10-27T00:01:18.5370488Z       ...
+2026-10-27T00:01:18.5735442Z     1..17
+2026-10-27T00:01:18.5740485Z not ok 30 - Reader Layout preserves final-artifact behavior across its ownership boundaries
+2026-10-27T00:01:18.5741406Z   ---
+2026-10-27T00:01:18.5789818Z   duration_ms: 79736.226983
+2026-10-27T00:01:18.5801372Z   type: 'test'
+2026-10-27T00:01:18.5821508Z   location: '/home/runner/work/archify/archify/test/reader-layout-browser.test.mjs:25:1'
+2026-10-27T00:01:18.5822090Z   failureType: 'subtestsFailed'
+2026-10-27T00:01:18.5822406Z   error: '1 subtest failed'
+2026-10-27T00:01:18.5822682Z   code: 'ERR_TEST_FAILURE'
+2026-10-27T00:01:18.5822955Z   ...
+2026-10-27T00:01:18.5915960Z # Subtest: verified sources remain in Focus and Finder with accessible counts and no node badges
+2026-10-27T00:01:18.5935774Z ok 31 - verified sources remain in Focus and Finder with accessible counts and no node badges
+2026-10-27T00:01:18.5936524Z   ---
+2026-10-27T00:01:18.5937013Z   duration_ms: 11680.747169
+2026-10-27T00:01:18.5937578Z   type: 'test'
+2026-10-27T00:01:18.5938002Z   ...
+2026-10-27T00:01:18.5938663Z # Subtest: Route Probe preserves directed paths, Journey and export contracts
+2026-10-27T00:01:18.5940160Z     # Subtest: five modes initialize and trusted endpoint input preserves capture and error recovery
+2026-10-27T00:01:18.5941241Z     ok 1 - five modes initialize and trusted endpoint input preserves capture and error recovery
+2026-10-27T00:01:18.5941956Z       ---
+2026-10-27T00:01:18.5942387Z       duration_ms: 2757.446626
+2026-10-27T00:01:18.5942829Z       type: 'test'
+2026-10-27T00:01:18.5943238Z       ...
+2026-10-27T00:01:18.5943978Z     # Subtest: SVG graph fixtures preserve directed BFS order, parallel edges and strict export snapshots
+2026-10-27T00:01:18.5945042Z     ok 2 - SVG graph fixtures preserve directed BFS order, parallel edges and strict export snapshots
+2026-10-27T00:01:18.5945749Z       ---
+2026-10-27T00:01:18.5946144Z       duration_ms: 286.045359
+2026-10-27T00:01:18.5946597Z       type: 'test'
+2026-10-27T00:01:18.5946994Z       ...
+2026-10-27T00:01:18.5947674Z     # Subtest: native Journey controls, finite playback, pause and layered Escape preserve path state
+2026-10-27T00:01:18.5948664Z     ok 3 - native Journey controls, finite playback, pause and layered Escape preserve path state

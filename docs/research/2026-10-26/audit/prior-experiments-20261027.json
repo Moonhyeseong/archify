@@ -1,0 +1,408 @@
+{
+  "source": "origin/codex/research-lab-20261025",
+  "sourceCommit": "60342aa9e40618aeb7c33bdb8d65889fea3a588e",
+  "gallerySourceHub": "f098176f8d642549acd9b699414df8adcf2c7b4d",
+  "note": "Historical gallery evidence only, not rerun. Use current remote TSV for refs; this refresh adds relation-search to prior49.",
+  "items": [
+    {
+      "id": "task-review-map",
+      "branch": "codex/lab-task-review-map",
+      "commit": "dcedd53856b82d3e403a9651dca0e15840496942",
+      "directory": "experiments/task-review-map",
+      "value": "固定Git改动对应独立声明；真实PR #1097的5hunk已记账与ZIP未解析并列",
+      "limits": "原15 tests复用；新增完整4文件证据，映射exit1；只手工改9坐标修阅读性，原输出保留；3静态gate通过，仍30键盘诊断；未跑PR代码"
+    },
+    {
+      "id": "dependency-map",
+      "branch": "codex/lab-dependency-map",
+      "commit": "2be2ab55cc9134876158e557e5287ec1912ca718",
+      "directory": "experiments/dependency-map",
+      "value": "把 dependency-cruiser 已有报告变成局部原生图，保留未解析与视图外账目",
+      "limits": "6 tests；两图 finalize 四阶段通过；synthetic 的三条绕行建议仍保留"
+    },
+    {
+      "id": "trace-waterfall",
+      "branch": "codex/lab-trace-waterfall",
+      "commit": "8e65f150b8db6947c98f9b12e37d970014e0ea7e",
+      "directory": "experiments/trace-waterfall",
+      "value": "把真实采集的 Chrome X 格式操作区间变成可分享瀑布图",
+      "limits": "9 tests；四阶段通过；仅 X 子集，不推断调用树或关键路径"
+    },
+    {
+      "id": "markdown-outline",
+      "branch": "codex/lab-markdown-outline",
+      "commit": "3f156e979476f068b1017eca7fe5539a0ddf11e1",
+      "directory": "experiments/markdown-outline",
+      "value": "标题与源行号直接转原生 Tree，保留文档层级",
+      "limits": "8 tests；三样例四阶段通过；公开 CONTRIBUTING.md 17 节点，受限 Markdown 子集"
+    },
+    {
+      "id": "dbml-erd",
+      "branch": "codex/lab-dbml-erd",
+      "commit": "358c77e05eb54a3f10ad3bcbb8f196eb8f277ccd",
+      "directory": "experiments/dbml-erd",
+      "value": "保留键、关系方向和可空性；接受官方primary key同义写法",
+      "limits": "已纳新dev；49focused、旧parser两新例失败/新版本通过；完整36B官方输入接受与四阶段通过，127B simple-table仍拒绝；旧拒绝与4表证据不变；未执行数据库"
+    },
+    {
+      "id": "change-coupling",
+      "branch": "codex/lab-change-coupling",
+      "commit": "44dc5cbc324f3aaeff2b8de582412566f1f8b8ab",
+      "directory": "experiments/change-coupling",
+      "value": "解释 Code Maat CSV 的对称共变分数及原始计数",
+      "limits": "13 tests；原生图仅render，Explainer finalize通过/browser未请求；synthetic，非调用或因果网络"
+    },
+    {
+      "id": "payload-delta",
+      "branch": "codex/lab-payload-delta",
+      "commit": "823e8705aa0eeef90f46045f52e56651f0c81c1b",
+      "directory": "experiments/payload-delta",
+      "value": "借鉴 PR Lens；把明确提供的 JSON 样本差异放在调用旁，区分 null、missing、类型和数组身份",
+      "limits": "10 tests；render/finalize 通过，单独 Explainer browser 通过；保留一条段落长度建议，不推断 schema 兼容性"
+    },
+    {
+      "id": "decision-thread",
+      "branch": "codex/lab-decision-thread",
+      "commit": "bdbdf9a9b5b97c556c5f85547279021b7446a05c",
+      "directory": "experiments/decision-thread",
+      "value": "保留异议、撤回与单方决定；决定不会抹掉尚未解决的异议",
+      "limits": "8 tests；两种产物四阶段通过；原创虚构对话，颜色图例已修正，不推断群体共识"
+    },
+    {
+      "id": "migration-plan",
+      "branch": "codex/lab-migration-plan",
+      "commit": "b9fe3b9b8cfd9e0819e4ae8ff23adc787ee132d0",
+      "directory": "experiments/migration-plan",
+      "value": "阅读 pg-schema-diff 已有计划中的顺序、timeout 配置与原始 hazard",
+      "limits": "14 tests；Workflow仅render，Explainer finalize通过/browser未请求；无 SQL/数据库执行，synthetic；新提交仅澄清文案"
+    },
+    {
+      "id": "state-contract",
+      "branch": "codex/lab-state-contract",
+      "commit": "f7269e096ac1891b434842cf7e16b9ffdd54cdf6",
+      "directory": "experiments/state-contract",
+      "value": "固定官方机器定义实导出，再核两个观察到的toggle声明",
+      "limits": "补证基线67f；40focused、原版getDAG实导出2状态2边、两页四阶段通过；2declared/0undeclared仅观察事件集；没有运行事件/回调；旧synthetic/rich拒绝记录保留"
+    },
+    {
+      "id": "finder-highlights",
+      "branch": "codex/lab-finder-highlights",
+      "commit": "ed04916f33cca4cc6475eada7b4397694426f3f8",
+      "directory": "experiments/finder-highlights",
+      "value": "输入查询后，列表与画布同步显示匹配节点，保留既有选择与视图",
+      "limits": "基线10b4；19browser、22core/XML、1gallery及68golden通过；57新base/candidate SVG相同；235项ZIP/精确CLI四阶段0诊断；4实图/原DOM字段，非完整camera或效率证明，旧10文件不变"
+    },
+    {
+      "id": "ci-conditions",
+      "branch": "codex/lab-ci-conditions",
+      "commit": "0ec0b8345fcfc97e49117b66fd7f99a198c96604",
+      "directory": "experiments/ci-conditions",
+      "value": "固定真实 workflow 的 needs、原始 if、隐式 status 门槛与未知矩阵",
+      "limits": "10 tests；三份产物 finalize 四阶段通过；没有运行 CI 或预测 job 结果"
+    },
+    {
+      "id": "plan-actions",
+      "branch": "codex/lab-plan-actions",
+      "commit": "729d3a0374189234e1bdfe5d6fc7f7190c894e0e",
+      "directory": "experiments/plan-actions",
+      "value": "分别看两种 replacement 顺序，保留 unknown/sensitive/null 路径与 deferred/complete",
+      "limits": "原16tests复用；官方1资源delete→create完整输入通过，Workflow render/Explainer三阶段通过；before/after值不入输出模型，native字节扫描保留一处静态注释普通词重合；未执行Terraform"
+    },
+    {
+      "id": "recipe-stages",
+      "branch": "codex/lab-recipe-stages",
+      "commit": "062dee5db6e10c1877427effff0d02b34699fbe1",
+      "directory": "experiments/recipe-stages",
+      "value": "官方Just dump保留priors边界：a在空主体b前，c在后",
+      "limits": "补证基线67f；官方test有效输入实dump、10tests、两页四阶段通过；自然完整示例因assignments拒绝；公开副本只改/source并保留真实输入sha区别；无recipe执行，旧synthetic不变"
+    },
+    {
+      "id": "relation-reference",
+      "branch": "codex/lab-relation-reference",
+      "commit": "d5691a02f2dd77acd38b827e254249981bc142ee",
+      "directory": "experiments/relation-reference",
+      "value": "复制当前 pinned 关系的原始方向、标签、节点 ID 与明确身份，便于准确引用",
+      "limits": "基线10b4；57focused/19core/完整generated、235ZIP/解包通过；四页及抽包四阶段0诊断；6实图含390px，root未操作Explain；复制受控注入非OS/AT；旧14文件不变"
+    },
+    {
+      "id": "test-context-map",
+      "branch": "codex/lab-test-context-map",
+      "commit": "9d6b4e3a85f52f3f6c50ab30338358ebdb2597dd",
+      "directory": "experiments/test-context-map",
+      "value": "精确 context 映射到选择源码行，保留空标签、未知、缺失、排除和不可用",
+      "limits": "原18 tests复用；新增固定工具实跑原创fixture和逐字段复核；finalize通过，自动browser未请求；sidecar仍是声明，不补造缺失标签"
+    },
+    {
+      "id": "test-failure-map",
+      "branch": "codex/lab-test-failure-map",
+      "commit": "bb5e7bdb2995e977eeaf12dd8d6187a3ca676db9",
+      "directory": "experiments/test-failure-map",
+      "value": "分开 setup/call/teardown 与 collection，显示提供的行号和缺少的定义文件",
+      "limits": "11 tests；4旧例四阶段通过，新增2实跑页面finalize通过但自动browser未跑；故意失败exit1/2保留；reader文案收窄、投影不变"
+    },
+    {
+      "id": "delta-values",
+      "branch": "codex/lab-delta-values",
+      "commit": "a0a9ba77cb59e3e3a97be0713ca626df63a3234d",
+      "directory": "experiments/delta-values",
+      "value": "选中既有exact row读取receipt中的SQL→SQL tx、orders→fraud，未知字段不猜",
+      "limits": "基线10b4；5browser/73相关/19core及4checks、235ZIP/精确CLI通过；public compare+check而非四阶段finalize，provenance unknown；6实图含390横滚300/504，非触屏；旧22文件不变"
+    },
+    {
+      "id": "source-question-tour",
+      "branch": "codex/lab-source-question-tour",
+      "commit": "94d6a4d05bcc5c6bc86704692eef48b73fd53c25",
+      "directory": "experiments/source-question-tour",
+      "value": "同5段固定源码按文件/4个问题组织，解释源码版本与Escape条件",
+      "limits": "零共享代码；两页finalize通过，自动browser未跑；源码逐字/摘要一致，root实际hover/Tab/Escape与原生图跳转；无效率结论"
+    },
+    {
+      "id": "diagnostic-locations",
+      "branch": "codex/lab-diagnostic-locations",
+      "commit": "b6679399ae688e9a6907e2eca4f222aaa964a975",
+      "directory": "experiments/diagnostic-locations",
+      "value": "同文诊断显示已有行号/节点/路径，JSON保持原字节",
+      "limits": "基线10b4；29诊断/2preview/19core/generated及7Chrome、235ZIP/解包CLI通过；text/JSON两臂均exit1且JSON逐字相同；4实图，已挂载保rev1；late-open空iframe边界未修；旧18文件不变"
+    },
+    {
+      "id": "finder-context",
+      "branch": "codex/lab-finder-context",
+      "commit": "e219bc5ba4fdf90f653c2fae7eadcc1ceeeda942",
+      "directory": "experiments/finder-context",
+      "value": "8个同名结果使用既有ID/类型/耗时作为可访问描述",
+      "limits": "基线10b4；26browser/focus、19core、4generated及golden通过；31产物正常重生成、其余历史单列；235项ZIP与精确抽包四阶段；实际8AX及键盘选择、3图；非真人AT"
+    },
+    {
+      "id": "delivery-witness",
+      "branch": "codex/lab-delivery-witness",
+      "commit": "f2aa251e4e8f93cd6f409df0adaa1b11b368e2e1",
+      "directory": "experiments/delivery-witness",
+      "value": "同msgId、同t的两次投递保留seq/dup与原始patch，不以时间去重",
+      "limits": "零共享代码；固定官方模拟fixture选段；2页四阶段通过，独立源/语义复核；小字与错误图例已修，旧图保留；非本次运行/用户收益"
+    },
+    {
+      "id": "waterfall-status",
+      "branch": "codex/lab-waterfall-status",
+      "commit": "68311bb8461ddd4086af6f2e41ce60e9e6f7f5d4",
+      "directory": "experiments/waterfall-status",
+      "value": "已提供error/cancelled同时显示在行尾、节点说明和可访问名称",
+      "limits": "基线10b4；34focused/core，XML初缺依赖后单独3pass；原生/精确ZIP四阶段；无状态两例相同；7真实图/DOM与AX分列；构造输入、非真人AT"
+    },
+    {
+      "id": "retained-size",
+      "branch": "codex/lab-retained-size",
+      "commit": "a0c76fc8f090eb194915103e4fc7344ad2ae7184",
+      "directory": "experiments/retained-size",
+      "value": "Twiggy自身165B+直接支配子项4B=保留169B，避免跨层重复计数",
+      "limits": "零共享代码；固定上游golden；Tree四阶段、Explainer三阶段通过/自动browser未跑；单一模型绑定已修，旧图保留；非删减实测"
+    },
+    {
+      "id": "lasso-witness",
+      "branch": "codex/lab-lasso-witness",
+      "commit": "900fe5a3b880328eab3ecd2d21e7864aa6d734c8",
+      "directory": "experiments/lasso-witness",
+      "value": "三位置反例保留有限前缀和无限后缀的显式闭合入口",
+      "limits": "零共享代码；固定上游选段；3页四阶段通过；实际回环遮挡已通过输入修复，旧图保留；未运行checker/未验证用户收益"
+    },
+    {
+      "id": "workflow-self-loop",
+      "branch": "codex/lab-workflow-self-loop",
+      "commit": "9578b8e4f2daf71b383704921d4df9cef19b8d13",
+      "directory": "experiments/workflow-self-loop",
+      "value": "同节点双端接触保留合法自环，仍拒绝中段碰撞及立即折返",
+      "limits": "基线10b4真实拒绝且无HTML；候选/精确ZIP四阶段0诊断、148focused、4generated通过；4shipped SVG/receipt相同；3实图；构造几何回归，不称运行trace或作者节时"
+    },
+    {
+      "id": "plan-row-counts",
+      "branch": "codex/lab-plan-row-counts",
+      "commit": "91e2ffadb5cd46fc72d5da978a4b83f8c7dfe521",
+      "directory": "experiments/plan-row-counts",
+      "value": "每次平均3行×352循环≈1056次输出，保留局部估计差异",
+      "limits": "零共享代码；固定PEV2样例3节点；Tree四阶段、Explainer三阶段通过/自动browser未跑；非SQL执行/unique rows/调优证明"
+    },
+    {
+      "id": "diff-line-numbers",
+      "branch": "codex/lab-diff-line-numbers",
+      "commit": "28f9f95dc207a90e2b7198e793315643e67c22aa",
+      "directory": "experiments/diff-line-numbers",
+      "value": "diff行号保持完整单行，长代码仍可横向滚动",
+      "limits": "已整合10b4；单CSS、25focused/19core/generated、双ZIP/解包通过；8臂DOM 30拆行→0、4新图；两页3静态gate/同7writing warnings，完整browsergate未跑；4docs保留10b历史"
+    },
+    {
+      "id": "keyboard-traversal",
+      "branch": "codex/lab-keyboard-traversal",
+      "commit": "c96e8aa74ff5e309cdab07a1b70d0242f33bed75",
+      "directory": "experiments/keyboard-traversal",
+      "value": "QA按真实DOM身份继续Tab，避免原生滚动区和动态来源卡导致提前停止误报",
+      "limits": "同页PR30→0/task16→0诊断；19browser/19core/4checks、235项ZIP及正负例；root实际47/63 Tab与checker48/64步分列；不改HTML、不代表原PR/Gradle执行或AT"
+    },
+    {
+      "id": "preview-dashed-ink",
+      "branch": "codex/lab-preview-dashed-ink",
+      "commit": "ca4baa1d739b1a2e2c8b863a517383147952620d",
+      "directory": "experiments/preview-dashed-ink",
+      "value": "Explainer预览的虚线关系文字、线和箭头使用可读颜色，保留节点边框",
+      "limits": "已整合10b4；3CSS映射、2browser/57focused/core、4generatedchecks、基线失败、候选和抽包四阶段通过；4新浅深图，旧20实验/4docs保留36cc历史，不称当前docs已重生成"
+    },
+    {
+      "id": "copy-identity",
+      "branch": "codex/lab-copy-identity",
+      "commit": "18d51b8950a9c3713c72044dd6af8e12c9f33e24",
+      "directory": "experiments/copy-identity",
+      "value": "内容相等仍可能共享不同对象：别名、浅拷贝、深拷贝的引用对照",
+      "limits": "新dev3f95；标准库独立观察4变量/7list/10引用、6内容检查、两产物四阶段通过；3张实际图；上游教学构造，未运行上游工具/未观察整个heap"
+    },
+    {
+      "id": "cli-reading-tour",
+      "branch": "codex/lab-cli-reading-tour",
+      "commit": "1dff88d331679319442277a4ffc7cd3637bccee2",
+      "directory": "experiments/cli-reading-tour",
+      "value": "沿真实源码区分三个CLI出口、磁盘JSON、HTTP快照与用户启动",
+      "limits": "新dev3f95；7固定源、11SourceCards、10节点9边；三静态阶段通过/自动browser未请求；实际Walk、hover/Escape及3图；未运行上游服务或scanner"
+    },
+    {
+      "id": "clipboard-outcome",
+      "branch": "codex/lab-clipboard-outcome",
+      "commit": "0e4a2c71c9550905004d20bbadb3b33d6bd85f3d",
+      "directory": "experiments/clipboard-outcome",
+      "value": "复制API缺失/拒绝不误报成功，完整追问保留可手工复制，编辑全文后重试不再包装",
+      "limits": "基线10b4；8叶场景、32邻近/19core/generated/235ZIP+解包smoke；4docs正常刷新；3实图与受控API缺失/拒绝/恢复exact；静态3gate同7warnings/browser未跑，非OSclipboard/AT"
+    },
+    {
+      "id": "byte-views",
+      "branch": "codex/lab-byte-views",
+      "commit": "b844ecb2861c122d956dab971b376e2fcd2dc283",
+      "directory": "experiments/byte-views",
+      "value": "分清IHDR的25B物理字段与已有type内的4个bit解释，避免重复求和",
+      "limits": "固定67f；完整97B官方fixture/golden、独立字节观察8事实检查；Tree四阶段/Explainer三静态阶段通过，root四图及citation hover/Escape；未运行fq/CRC/解压"
+    },
+    {
+      "id": "source-keyboard",
+      "branch": "codex/lab-source-keyboard",
+      "commit": "d81830d34fdd698992b39913eb3fa3cd55d66a32",
+      "directory": "experiments/source-keyboard",
+      "value": "同一源码预览节点的Enter/Space执行已有鼠标开原图动作，AX提供button语义",
+      "limits": "基线10b4；6browser/15renderer/19core、生成/235项ZIP通过；真实前后AX/按键/返回与5图；Tab及focus原本已有，误判已撤回；4docs继承freshness单列，无AT接受"
+    },
+    {
+      "id": "notebook-occurrences",
+      "branch": "codex/lab-notebook-occurrences",
+      "commit": "2090b0ff144b7bc3425d52821655f659858f5d6a",
+      "directory": "experiments/notebook-occurrences",
+      "value": "六个重复文本cell按位置保留，分清源码改变与保存输出改变",
+      "limits": "内容限定固定nbdime三完整fixture；11事实审计，Tree四阶段/Explainer三阶段且browser未跑；4真实图/DOM字段核实；无kernel/nbdime执行、稳定ID或因果推断"
+    },
+    {
+      "id": "config-origins",
+      "branch": "codex/lab-config-origins",
+      "commit": "14867942a81542c1ce1b0d4aae38c6e7b9ddddef",
+      "directory": "experiments/config-origins",
+      "value": "区分provider声明、幸存字段与错误归属，解释join的max=20为何未修复整体约束",
+      "limits": "内容限定固定Figment完整测试；7原件/6源码摘录核对、3静态gate通过/browser未请求；3实图和hover/Escape；未执行Rust/provider或声称配置文件行号"
+    },
+    {
+      "id": "benchmark-reading",
+      "branch": "codex/lab-benchmark-reading",
+      "commit": "7b8258cdc3f7bc2d9c6a0277feaa5d31b1a70686",
+      "directory": "experiments/benchmark-reading",
+      "value": "四组median与CI/p/n/~并排，区分中心值变化与上游比较结论",
+      "limits": "固定benchstat完整old/new/CSV与40值；10事实审计、3静态gate通过/browser未跑、3实图；不重算统计、不称本轮benchmark或版本普遍收益"
+    },
+    {
+      "id": "task-occurrences",
+      "branch": "codex/lab-task-occurrences",
+      "commit": "caffb4aabb13b04a77bb9475866ad65465d79b20",
+      "directory": "experiments/task-occurrences",
+      "value": "11打印位置对应10身份，两个compileJava位置定位同一双父节点",
+      "limits": "固定Gradle完整8文件fixture/14原件/5源码；原生四阶段、解释页三阶段通过但16键盘诊断；5实图/两次pointer定位；未执行Gradle，打印数不当执行数"
+    },
+    {
+      "id": "edge-extras",
+      "branch": "codex/lab-edge-extras",
+      "commit": "1db953a726b79f135187ee3cd2e12723717c7555",
+      "directory": "experiments/edge-extras",
+      "value": "同一urllib3沿不同入边extras与显示模式可有不同可见后继",
+      "limits": "基线10b4；固定pipdeptree45c43受控fixture，未执行上游；native四阶段0诊断，Explainer前三阶段通过/28条keyboard失败；6root实图不抵消失败，非安装报告或收益验证"
+    },
+    {
+      "id": "line-notes",
+      "branch": "codex/lab-line-notes",
+      "commit": "079d562915a701f8c76b6479e59622432f81ee79",
+      "directory": "experiments/line-notes",
+      "value": "固定源码行→作者解释→同片段原行往返；相同源码两处不串跳",
+      "limits": "基线10b4，仅experiments后处理原型；源1965B逐字不变；baseline三阶段通过/4footer键盘失败；候选独立审计、5负例、作者四视口与root5图；非normal finalize或strict provenance，非OS clipboard/AT"
+    },
+    {
+      "id": "static-uses",
+      "branch": "codex/lab-static-uses",
+      "commit": "7be0711da68d8db0dafaefef0b64894665f8609f",
+      "directory": "experiments/static-uses",
+      "value": "7节点8use边解释Beniget模块定义根的局部静态投影，不是执行分支",
+      "limits": "基线10b4；固定官方fixture，未执行上游；native四阶段0诊断/页面三阶段通过且browser未请求，14事实审计/root4图；URL来源元数据非verified snippet，非完整AST/运行trace"
+    },
+    {
+      "id": "hintful-stages",
+      "branch": "codex/lab-hintful-stages",
+      "commit": "8d698ceec15a2ea24012135632c4612e5a58e7b5",
+      "directory": "experiments/hintful-stages",
+      "value": "区分A→命名中间态S→B两段声明，删3在第二段",
+      "limits": "基线10b4，仅25实验文件；固定diff-format826f50完整10Git文件及许可；normal CLI三阶段0诊断/browser未请求，HTML377646B、9审计/root5图；含2来源hover和mobile横向wheel100，非触屏/完整键盘/外链/上游执行"
+    },
+    {
+      "id": "spatial-focus",
+      "branch": "codex/lab-spatial-focus",
+      "commit": "08af09117396b4d2b62774215bc48d8bd516386f",
+      "directory": "experiments/spatial-focus",
+      "value": "屏内完整可见语义node用plain Arrow移动DOM焦点，保留选择/hash/camera，Tree及Route排除",
+      "limits": "基线10b4；当前Route+spatial16pass、exact包7pass/smoke/CLI四阶段，generated/235双ZIP通过；6root实图；先前Route抢键及Infinity词法失败保留，邻近/core复用scope单列，非overlay遮挡/效率保证"
+    },
+    {
+      "id": "maybe-initialized",
+      "branch": "codex/lab-maybe-initialized",
+      "commit": "61d43f93ee9d11d30d2a239f80e1b2976539d850",
+      "directory": "experiments/maybe-initialized",
+      "value": "RustOwl官方expected与概念I/U/union状态表分开，绿色波浪不表示一次执行状态",
+      "limits": "基线10b4，29实验文件/28public绑定，完整MPL-2.0源码/原snapshot与derived材料边界保留；normal finalize前三阶段pass/browser48keyboard失败；root4终版图，未编译/未执行上游，不抵消失败"
+    },
+    {
+      "id": "load-filter",
+      "branch": "codex/lab-load-filter",
+      "commit": "d2ff5f8c2cce954d5e20b6dd8970f027f52d46c0",
+      "directory": "experiments/load-filter",
+      "value": "enabled最终名单不证明先前未load/invoke，官方True expected与默认False源码推断分列",
+      "limits": "基线10b4；20staged/19public绑定、独立READY；normal finalize三阶段0诊断/browser未请求；4root图，手机两表局部横溢及pre长行保留，未运行Python/插件/metadata discovery，来源URL非verified excerpt"
+    },
+    {
+      "id": "witness-groups",
+      "branch": "codex/lab-witness-groups",
+      "commit": "861ec02283bcd32c8315aa7b5f8b5ef9678dda27",
+      "directory": "experiments/witness-groups",
+      "value": "同一输出的平面来源清单与共同/替代见证组合并排，组数不是执行数",
+      "limits": "基线10b4；32文件/31public/28raw，16MIT完整原件与9verified来源；normal三阶段0诊断/browser未请求，6事实/root4图；无DB/SQL/上游执行，非概率或现实因果"
+    },
+    {
+      "id": "patch-outcome",
+      "branch": "codex/lab-patch-outcome",
+      "commit": "b5f7d7b11482fb272fb88fbfdcb9e864407eabdf",
+      "directory": "experiments/patch-outcome",
+      "value": "官方两个true不证明结果等于最初目标B，A/B/I/E完整literal分列",
+      "limits": "基线10b4；19文件/18binding，完整Apache-2.0来源与固定literal位置；normal三阶段+1writing warning/browser未请求，10事实/root4图；无上游patch运行，不是任意补丁parser或等价证明"
+    },
+    {
+      "id": "segment-origins",
+      "branch": "codex/lab-segment-origins",
+      "commit": "6d2b0312ebf011e3aa51835f52f9427125f0f2a3",
+      "directory": "experiments/segment-origins",
+      "value": "同一source-map查询因GLB/LUB选择不同段原点，不补逐字符偏移",
+      "limits": "基线10b4；19文件/18ledger、独立READY；normal三阶段0诊断/browser未请求、7事实/root4图；仅来源元数据，未mapper运行；手机首表432/332横滚0→100后右name可读左query裁掉，完整source JSON未横滚"
+    },
+    {
+      "id": "relation-search",
+      "branch": "codex/lab-relation-search",
+      "commit": "e87a858d220c25c97aee4b5920cf59ab77723b41",
+      "directory": "experiments/relation-search",
+      "value": "按关系标签或ID查找，显示两端并精确pin已有关系",
+      "limits": "基线e837；独立READY，root5图/8原观察；enqueue从0节点到1关系、RAG三词精确ID、Route仍node-only；Finder9/FocusRoute22/locale37/core19，Semantic5pass1skip、generated/ZIP macOS通过；无手机/AT/全平台/效率证明，head Actions/checks均0；RAG生成15空白warning保留"
+    }
+  ]
+}
