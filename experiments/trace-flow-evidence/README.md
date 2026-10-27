@@ -57,3 +57,9 @@
 Focused test-value与simplification检查：原件是唯一事实来源，派生页不再维护第二套slice图；测试按身份、方向、原字段和数据保护选取，未增加渲染器全矩阵或复制X importer。源码diff-check与原字节生成产物分别处理；生成HTML的既有模板空白不会为通过diff-check而改写。
 
 ![两个原始flow端点及其证据边界](final/captures/review.visual-check.1280x900.light.png)
+
+## Coordinator browser observations · 2026-10-27
+
+Root actually inspected [final light](root-review/final-light.png), [dark](root-review/final-dark.png), [step 2](root-review/step-2.png), [source footer](root-review/raw-source.png), [Tab focus](root-review/footer-tab.png) and [390px dark](root-review/mobile-dark.png) screenshots. The fixed-source and gap-only limits remain visible in the first viewport. Start → Next reaches 2/2 and highlights record 2082; End exits; the source citation reaches its footer anchor.
+
+From a fresh page, actual Tab input without focus injection reaches the two source links at steps 31–32 and Archify at step 33; step 34 returns BODY. The [raw sequence](root-review/tab-traversal.json) and [artifact/image hashes](root-review/README.json) preserve this observation separately from the **12 failed keyboard diagnostics**. Desktop CSS viewport is 1440×900; mobile is 390×844 with document width 390. The mobile diagram remains a small preview with an open-diagram notice. This is bounded agent UI evidence, not human accessibility, comprehension or speed acceptance.
