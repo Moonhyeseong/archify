@@ -120,4 +120,25 @@ Task-view 确认为 [`gtindo/task-view@f27b8bef63ec336b8e3487e90ccd484a2fa7a235`
 
 本轮没有合并、发布或安装。目标继续 active，下一批先检查 #1124 的精确 head CI，再依据实际阅读缺口筛选方向。
 
+## 27 日第五批：保留原生阅读优势，修正内容标签
+
+开始先 fetch/prune，`dev` 仍为 `e837dc4c`，历史研究 hub 仍为 `60342aa9`。本批复用已有实验和修复分支，没有因为重新调研而新增重复实现。
+
+| 调研与已有能力 | 判断 |
+| --- | --- |
+| [fast-check 的收缩过程](scouts/counterexample-reading.md) | 固定 MIT 源码的 VeryVerbose 输出已保留缩进树与成功、失败、跳过状态。不能只拿最终反例作为弱对照；当前缺少比完整原生输出更好的阅读证据，暂不实现导入或图版。报告中的演示事件不是本轮实跑。 |
+| [关系阅读与返回](scouts/reading-handoff-followup.md) | 重新检查旧原型和当前四份内容例，没有找到新的自然阅读失败。旧例的 Back 与反向关系行都是一次操作；不能把假设的焦点或滚动问题当成已复现缺陷，不新增阅读历史状态。 |
+
+### Operation order：已有字段解决图例用词
+
+原分支正常推进至 [`90a32138da3f1202de5c36b2bddaeb6c06aa61de`](https://github.com/tt-a1i/archify/tree/90a32138da3f1202de5c36b2bddaeb6c06aa61de/experiments/operation-order)。用现有原生 `meta.legend.entries.backend.label` 将“后端”改为“操作”，没有共享代码改动。简写不能承载该字段，改为引用完整 68 行 JSON，显式保留原图实际采用的三列布局和中文 locale；这增加了内容维护成本。
+
+首次直接序列化单列 spec 的 finalize 失败于两处标签重叠；三列中间稿还遗漏中文 locale，均保留证据。最终四阶段检查通过，原有三条写作提示保留。[独立静态审查](https://github.com/tt-a1i/archify/blob/90a32138da3f1202de5c36b2bddaeb6c06aa61de/experiments/operation-order/legend-label-review/review.md)解码实际 HTML 内的原生图，确认只有图例文字和对应 data 值变化，标题、无障碍名称、正文、事件和约束未变；基线 HTML 与源稿字节一致。当前图版 537543 bytes，基线 156572 bytes，新增 380971 bytes；旧页面高度和八张截图继续绑定 `4d0d21c6`。
+
+新版手动交互观察尚未完成：Ego 研究空间 4 已不存在，库存也没有同名空间。按 browser skill 的运行指南，已询问用户是否允许重建，尚待答复；没有用其他浏览器或新空间绕过，也未升级 Ego。自动 browser-check 与静态比较不替代这项观察。此前“暂不开 Draft PR、尚未证明胜过三句文字”的决定保留。此处只影响新手动浏览器检查，目标仍 active，其他调研可继续。
+
+### Keyboard Draft 的最终 CI
+
+[#1124](https://github.com/tt-a1i/archify/pull/1124) 的最终 head `9601c9b6e4b6addc2f348677d1c198bc6bc74192` 已完成 [run 40427641788](https://github.com/tt-a1i/archify/actions/runs/40427641788)：[00:52:06 UTC 精确快照](audit/keyboard-final-ci.json)记录 19 success、2 deployment skipped，无分页遗漏。PR 说明已从 pending 更新为这一结果。CodeRabbit 的独立 status 只是 Draft 跳过通知，不计作实质审查或人类接受。没有合并、发布、部署或安装。
+
 AI assistance：Codex（GPT-6.1-Terra 与 GPT-6.1-Sol 子代理）参与调研、实验实现、验证和文档；本记录不声称维护者已完成个人审查或验收。
