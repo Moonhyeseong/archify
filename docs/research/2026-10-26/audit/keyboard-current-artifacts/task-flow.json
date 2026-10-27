@@ -1,0 +1,153 @@
+{
+  "kind": "portable-derived-summary-not-original-receipt",
+  "candidateHead": "c96e8aa74ff5e309cdab07a1b70d0242f33bed75",
+  "artifact": {
+    "name": "task-flow",
+    "sha256Before": "f8c908b1d9e4e2eccf127387d886eba425aa06106448fbd212eac931f6f4b17b",
+    "sha256After": "f8c908b1d9e4e2eccf127387d886eba425aa06106448fbd212eac931f6f4b17b",
+    "bytes": 554553,
+    "unchanged": true
+  },
+  "baselineDiagnostics": {
+    "count": 16,
+    "note": "Earlier product-base receipts; not rerun or overwritten in this check"
+  },
+  "command": {
+    "entry": "runBrowserCheck",
+    "module": "archify/bin/visual-check.mjs",
+    "options": {
+      "artifactPath": "<exact-finalized-artifact>",
+      "outDir": "<fresh-external-raw>/task-flow",
+      "chromePath": "existing Chrome"
+    },
+    "deliveryProvenance": "not supplied; no redelivery/current-provenance claim"
+  },
+  "startedAt": "2026-10-27T00:17:06.823Z",
+  "endedAt": "2026-10-27T00:17:10.480Z",
+  "node": "v22.23.3",
+  "exitCode": 0,
+  "error": null,
+  "result": {
+    "schemaVersion": 1,
+    "command": "browser-check",
+    "status": "pass",
+    "ok": true,
+    "diagnostics": [],
+    "diagnosticCount": 0,
+    "artifact": {
+      "sha256": "f8c908b1d9e4e2eccf127387d886eba425aa06106448fbd212eac931f6f4b17b",
+      "bytes": 554553
+    },
+    "checks": {
+      "containment": "pass",
+      "commonQa": "pass",
+      "interactions": "pass",
+      "references": "pass",
+      "noJavaScript": "pass",
+      "print": "pass",
+      "themeStates": "pass"
+    },
+    "observations": [
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "light",
+        "resolvedTheme": "light",
+        "ok": true,
+        "readabilityOk": true,
+        "viewerChromeOk": true,
+        "controlCount": 40,
+        "keyboardTraversal": {
+          "count": 40,
+          "reached": 40,
+          "missing": [],
+          "ok": true,
+          "steps": 47,
+          "stepLimit": 394,
+          "termination": "complete"
+        },
+        "keyboardIssueCount": 0,
+        "consoleErrorCount": 0,
+        "duplicateIdCount": 0,
+        "interactionFailureCount": 0,
+        "referenceFailureCount": 0
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "theme": "light",
+        "resolvedTheme": "light",
+        "ok": true,
+        "readabilityOk": true,
+        "viewerChromeOk": true,
+        "controlCount": 40,
+        "keyboardTraversal": {
+          "count": 40,
+          "reached": 40,
+          "missing": [],
+          "ok": true,
+          "steps": 47,
+          "stepLimit": 394,
+          "termination": "complete"
+        },
+        "keyboardIssueCount": 0,
+        "consoleErrorCount": 0,
+        "duplicateIdCount": 0,
+        "interactionFailureCount": 0,
+        "referenceFailureCount": 0
+      },
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "dark",
+        "resolvedTheme": "dark",
+        "ok": true,
+        "readabilityOk": true,
+        "viewerChromeOk": true,
+        "controlCount": 40,
+        "keyboardTraversal": {
+          "count": 40,
+          "reached": 40,
+          "missing": [],
+          "ok": true,
+          "steps": 47,
+          "stepLimit": 394,
+          "termination": "complete"
+        },
+        "keyboardIssueCount": 0,
+        "consoleErrorCount": 0,
+        "duplicateIdCount": 0,
+        "interactionFailureCount": 0,
+        "referenceFailureCount": 0
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "theme": "dark",
+        "resolvedTheme": "dark",
+        "ok": true,
+        "readabilityOk": true,
+        "viewerChromeOk": true,
+        "controlCount": 40,
+        "keyboardTraversal": {
+          "count": 40,
+          "reached": 40,
+          "missing": [],
+          "ok": true,
+          "steps": 47,
+          "stepLimit": 394,
+          "termination": "complete"
+        },
+        "keyboardIssueCount": 0,
+        "consoleErrorCount": 0,
+        "duplicateIdCount": 0,
+        "interactionFailureCount": 0,
+        "referenceFailureCount": 0
+      }
+    ]
+  },
+  "rawResult": {
+    "filename": "task-flow.result.json",
+    "sha256": "b2e2e3aee386dfe2587c5f97a2e9a43bebfd6b74bec8004ad06a154ff12721bd"
+  }
+}

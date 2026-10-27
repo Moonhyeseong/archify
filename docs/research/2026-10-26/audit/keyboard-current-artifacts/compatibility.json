@@ -1,0 +1,89 @@
+{
+  "kind": "source-compatibility-summary-not-integration",
+  "checkedAt": "2026-10-27T00:17:20.317Z",
+  "candidateHead": "c96e8aa74ff5e309cdab07a1b70d0242f33bed75",
+  "candidateLatestMergeBase": "10b4dd5c5f2264baa315ee65a9b4cc23c13ea5f0",
+  "currentDev": {
+    "sha": "e837dc4cb83042d2b6c596e039692e25ec62c2da",
+    "verification": "GitHub branches/dev read API"
+  },
+  "candidateChangesSinceBase": [
+    "archify/explainer/browser-check.mjs",
+    "test/explainer-browser.test.mjs"
+  ],
+  "modules": [
+    {
+      "file": "archify/explainer/browser-check.mjs",
+      "candidateSha256": "b4bdcd216e0436033ab892ebbb67ed091c7d735d33e2cdb48ff904cbd904a647",
+      "currentDevSha256": "cbbebfca2cb58cde0791f349e4f13490c0d085ce2f8653279139cf2aed334677",
+      "same": false
+    },
+    {
+      "file": "archify/bin/visual-check.mjs",
+      "candidateSha256": "8b2f7e31601998e96ae38c6930423eaae0e0f9f5b8f7e0fe95b962135700f4e2",
+      "currentDevSha256": "8b2f7e31601998e96ae38c6930423eaae0e0f9f5b8f7e0fe95b962135700f4e2",
+      "same": true
+    },
+    {
+      "file": "archify/explainer/check.mjs",
+      "candidateSha256": "151211edd6f1b842ee63b1aef8682cb68e6237ce3b9e7a81e09667420f2b9b3b",
+      "currentDevSha256": "151211edd6f1b842ee63b1aef8682cb68e6237ce3b9e7a81e09667420f2b9b3b",
+      "same": true
+    },
+    {
+      "file": "archify/bin/archify.mjs",
+      "candidateSha256": "314949450165ddd61a9892c3003a8a46f89b9333d0ba8b0965ee32437c77a6dd",
+      "currentDevSha256": "912f29fff393e6c9bae8f333881683e2ff77be2ae7fe71df6a53b33a9c53dc88",
+      "same": false
+    },
+    {
+      "file": "test/explainer-browser.test.mjs",
+      "candidateSha256": "3fbfe2b631ebc86da51a9f37a75b0642c4da01d8ca6fa6c4a84a9fa2f64fd08d",
+      "currentDevSha256": "05044c988f8e414fc99b9977b9bfbd47c25043568e2c523b0db0301efc4ee8c7",
+      "same": false
+    },
+    {
+      "file": "package.json",
+      "candidateSha256": "736ad9aa5ca0aefae1c60c11965fcbe8672597ac9e5e046d11d555f706066ed6",
+      "currentDevSha256": "736ad9aa5ca0aefae1c60c11965fcbe8672597ac9e5e046d11d555f706066ed6",
+      "same": true
+    },
+    {
+      "file": "package-lock.json",
+      "candidateSha256": "7cec877ea7be13bd585387e8707c1fc3fa00b60139fbbbdbd0314430e17d39f3",
+      "currentDevSha256": "7cec877ea7be13bd585387e8707c1fc3fa00b60139fbbbdbd0314430e17d39f3",
+      "same": true
+    },
+    {
+      "file": "archify/package.json",
+      "candidateSha256": "4a179cf9d217f921d3066e8fed5fc25c7f055574bc7cf002f8650cadb5e721b2",
+      "currentDevSha256": "4a179cf9d217f921d3066e8fed5fc25c7f055574bc7cf002f8650cadb5e721b2",
+      "same": true
+    },
+    {
+      "file": "archify/package-lock.json",
+      "candidateSha256": "5ee16783f03b92da1864f3c15435513d20844fe0436f7d840bd7301ba616015c",
+      "currentDevSha256": "5ee16783f03b92da1864f3c15435513d20844fe0436f7d840bd7301ba616015c",
+      "same": true
+    },
+    {
+      "file": "archify/scripts/check-render-output.mjs",
+      "candidateSha256": "dcfb6c8eccd08bd7ce4b9fc1928cd4c3a6794b49a512e0afa1aea87e1e332195",
+      "currentDevSha256": "bf2c3580f417b455e4cfbb34012628452ab514d3182232ccd6c6e608fb5592ce",
+      "same": false
+    }
+  ],
+  "notes": [
+    "Existing candidate is not rebased or merged to current dev by this validation.",
+    "Direct module API bypasses CLI archify.mjs; browser orchestrator visual-check.mjs is byte-identical.",
+    "Candidate checker and current-dev checker differ; current artifacts are unchanged inputs, not evidence of current-dev integration.",
+    "check-render-output.mjs also differs from current dev (crossing-budget implementation), but direct runBrowserCheck does not invoke that standalone checker."
+  ],
+  "environment": {
+    "node": "v22.23.3",
+    "platform": "darwin",
+    "architecture": "arm64",
+    "chromeExecutableVersionObservedImmediatelyAfterRun": "Google Chrome 156.0.8078.48",
+    "dependencyPreparation": "Root and archify npm ci --ignore-scripts --no-audit --no-fund; manifests/locks unchanged; no live Skill installation."
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "kind": "portable-derived-summary-not-original-receipt",
+  "candidateHead": "c96e8aa74ff5e309cdab07a1b70d0242f33bed75",
+  "artifact": {
+    "name": "oci-whiteouts",
+    "sha256Before": "5b4790c282740cf6d94e71e4b072ad7a3d2b5daab90228e73340c2d716815043",
+    "sha256After": "5b4790c282740cf6d94e71e4b072ad7a3d2b5daab90228e73340c2d716815043",
+    "bytes": 583634,
+    "unchanged": true
+  },
+  "baselineDiagnostics": {
+    "count": 16,
+    "note": "Earlier product-base receipts; not rerun or overwritten in this check"
+  },
+  "command": {
+    "entry": "runBrowserCheck",
+    "module": "archify/bin/visual-check.mjs",
+    "options": {
+      "artifactPath": "<exact-finalized-artifact>",
+      "outDir": "<fresh-external-raw>/oci-whiteouts",
+      "chromePath": "existing Chrome"
+    },
+    "deliveryProvenance": "not supplied; no redelivery/current-provenance claim"
+  },
+  "startedAt": "2026-10-27T00:17:13.901Z",
+  "endedAt": "2026-10-27T00:17:17.727Z",
+  "node": "v22.23.3",
+  "exitCode": 0,
+  "error": null,
+  "result": {
+    "schemaVersion": 1,
+    "command": "browser-check",
+    "status": "pass",
+    "ok": true,
+    "diagnostics": [],
+    "diagnosticCount": 0,
+    "artifact": {
+      "sha256": "5b4790c282740cf6d94e71e4b072ad7a3d2b5daab90228e73340c2d716815043",
+      "bytes": 583634
+    },
+    "checks": {
+      "containment": "pass",
+      "commonQa": "pass",
+      "interactions": "pass",
+      "references": "pass",
+      "noJavaScript": "pass",
+      "print": "pass",
+      "themeStates": "pass"
+    },
+    "observations": [
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "light",
+        "resolvedTheme": "light",
+        "ok": true,
+        "readabilityOk": true,
+        "viewerChromeOk": true,
+        "controlCount": 29,
+        "keyboardTraversal": {
+          "count": 29,
+          "reached": 29,
+          "missing": [],
+          "ok": true,
+          "steps": 36,
+          "stepLimit": 467,
+          "termination": "complete"
+        },
+        "keyboardIssueCount": 0,
+        "consoleErrorCount": 0,
+        "duplicateIdCount": 0,
+        "interactionFailureCount": 0,
+        "referenceFailureCount": 0
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "theme": "light",
+        "resolvedTheme": "light",
+        "ok": true,
+        "readabilityOk": true,
+        "viewerChromeOk": true,
+        "controlCount": 29,
+        "keyboardTraversal": {
+          "count": 29,
+          "reached": 29,
+          "missing": [],
+          "ok": true,
+          "steps": 36,
+          "stepLimit": 467,
+          "termination": "complete"
+        },
+        "keyboardIssueCount": 0,
+        "consoleErrorCount": 0,
+        "duplicateIdCount": 0,
+        "interactionFailureCount": 0,
+        "referenceFailureCount": 0
+      },
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "dark",
+        "resolvedTheme": "dark",
+        "ok": true,
+        "readabilityOk": true,
+        "viewerChromeOk": true,
+        "controlCount": 29,
+        "keyboardTraversal": {
+          "count": 29,
+          "reached": 29,
+          "missing": [],
+          "ok": true,
+          "steps": 36,
+          "stepLimit": 467,
+          "termination": "complete"
+        },
+        "keyboardIssueCount": 0,
+        "consoleErrorCount": 0,
+        "duplicateIdCount": 0,
+        "interactionFailureCount": 0,
+        "referenceFailureCount": 0
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "theme": "dark",
+        "resolvedTheme": "dark",
+        "ok": true,
+        "readabilityOk": true,
+        "viewerChromeOk": true,
+        "controlCount": 29,
+        "keyboardTraversal": {
+          "count": 29,
+          "reached": 29,
+          "missing": [],
+          "ok": true,
+          "steps": 36,
+          "stepLimit": 467,
+          "termination": "complete"
+        },
+        "keyboardIssueCount": 0,
+        "consoleErrorCount": 0,
+        "duplicateIdCount": 0,
+        "interactionFailureCount": 0,
+        "referenceFailureCount": 0
+      }
+    ]
+  },
+  "rawResult": {
+    "filename": "oci-whiteouts.result.json",
+    "sha256": "a0e5510225f5f7cf91750c974c857f3148a9711205a1b4defd8fd4c1a067c391"
+  }
+}

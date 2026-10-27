@@ -1,0 +1,153 @@
+{
+  "kind": "portable-derived-summary-not-original-receipt",
+  "candidateHead": "c96e8aa74ff5e309cdab07a1b70d0242f33bed75",
+  "artifact": {
+    "name": "trace-flow",
+    "sha256Before": "4cc2274999e58b9f75b717c053528a85964e3545b3cb0a8fe638b8cdf246dff1",
+    "sha256After": "4cc2274999e58b9f75b717c053528a85964e3545b3cb0a8fe638b8cdf246dff1",
+    "bytes": 545470,
+    "unchanged": true
+  },
+  "baselineDiagnostics": {
+    "count": 12,
+    "note": "Earlier product-base receipts; not rerun or overwritten in this check"
+  },
+  "command": {
+    "entry": "runBrowserCheck",
+    "module": "archify/bin/visual-check.mjs",
+    "options": {
+      "artifactPath": "<exact-finalized-artifact>",
+      "outDir": "<fresh-external-raw>/trace-flow",
+      "chromePath": "existing Chrome"
+    },
+    "deliveryProvenance": "not supplied; no redelivery/current-provenance claim"
+  },
+  "startedAt": "2026-10-27T00:17:10.484Z",
+  "endedAt": "2026-10-27T00:17:13.897Z",
+  "node": "v22.23.3",
+  "exitCode": 0,
+  "error": null,
+  "result": {
+    "schemaVersion": 1,
+    "command": "browser-check",
+    "status": "pass",
+    "ok": true,
+    "diagnostics": [],
+    "diagnosticCount": 0,
+    "artifact": {
+      "sha256": "4cc2274999e58b9f75b717c053528a85964e3545b3cb0a8fe638b8cdf246dff1",
+      "bytes": 545470
+    },
+    "checks": {
+      "containment": "pass",
+      "commonQa": "pass",
+      "interactions": "pass",
+      "references": "pass",
+      "noJavaScript": "pass",
+      "print": "pass",
+      "themeStates": "pass"
+    },
+    "observations": [
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "light",
+        "resolvedTheme": "light",
+        "ok": true,
+        "readabilityOk": true,
+        "viewerChromeOk": true,
+        "controlCount": 27,
+        "keyboardTraversal": {
+          "count": 27,
+          "reached": 27,
+          "missing": [],
+          "ok": true,
+          "steps": 33,
+          "stepLimit": 442,
+          "termination": "complete"
+        },
+        "keyboardIssueCount": 0,
+        "consoleErrorCount": 0,
+        "duplicateIdCount": 0,
+        "interactionFailureCount": 0,
+        "referenceFailureCount": 0
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "theme": "light",
+        "resolvedTheme": "light",
+        "ok": true,
+        "readabilityOk": true,
+        "viewerChromeOk": true,
+        "controlCount": 27,
+        "keyboardTraversal": {
+          "count": 27,
+          "reached": 27,
+          "missing": [],
+          "ok": true,
+          "steps": 33,
+          "stepLimit": 442,
+          "termination": "complete"
+        },
+        "keyboardIssueCount": 0,
+        "consoleErrorCount": 0,
+        "duplicateIdCount": 0,
+        "interactionFailureCount": 0,
+        "referenceFailureCount": 0
+      },
+      {
+        "width": 1280,
+        "height": 900,
+        "theme": "dark",
+        "resolvedTheme": "dark",
+        "ok": true,
+        "readabilityOk": true,
+        "viewerChromeOk": true,
+        "controlCount": 27,
+        "keyboardTraversal": {
+          "count": 27,
+          "reached": 27,
+          "missing": [],
+          "ok": true,
+          "steps": 33,
+          "stepLimit": 442,
+          "termination": "complete"
+        },
+        "keyboardIssueCount": 0,
+        "consoleErrorCount": 0,
+        "duplicateIdCount": 0,
+        "interactionFailureCount": 0,
+        "referenceFailureCount": 0
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "theme": "dark",
+        "resolvedTheme": "dark",
+        "ok": true,
+        "readabilityOk": true,
+        "viewerChromeOk": true,
+        "controlCount": 27,
+        "keyboardTraversal": {
+          "count": 27,
+          "reached": 27,
+          "missing": [],
+          "ok": true,
+          "steps": 33,
+          "stepLimit": 442,
+          "termination": "complete"
+        },
+        "keyboardIssueCount": 0,
+        "consoleErrorCount": 0,
+        "duplicateIdCount": 0,
+        "interactionFailureCount": 0,
+        "referenceFailureCount": 0
+      }
+    ]
+  },
+  "rawResult": {
+    "filename": "trace-flow.result.json",
+    "sha256": "d872b0e78e2a3c2a09d3f9a427de7a87044ce6e5e8d323e9ef60628b2ce824fd"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "kind": "portable-raw-file-manifest-no-raw-paths",
+  "note": "Original runBrowserCheck results/receipts remain unchanged in external raw directory; this manifest is not a new delivery receipt.",
+  "files": [
+    {
+      "file": "binding.json",
+      "bytes": 931,
+      "sha256": "b8e170fe45b34c92b565fa4f0097e0b6e8d753217f7bd96262a16f7627efcdf6"
+    },
+    {
+      "file": "oci-whiteouts/explainer.browser-check.json",
+      "bytes": 1083382,
+      "sha256": "622592a33af22648467ac2f70f3f994147df2ab34cf9846a3cee466ee4b60d76"
+    },
+    {
+      "file": "oci-whiteouts.result.json",
+      "bytes": 1099999,
+      "sha256": "a0e5510225f5f7cf91750c974c857f3148a9711205a1b4defd8fd4c1a067c391"
+    },
+    {
+      "file": "task-flow/review.browser-check.json",
+      "bytes": 1010796,
+      "sha256": "2224359354494e3271379605e1af512f38049b5922bd128c8d498bbf8197f07d"
+    },
+    {
+      "file": "task-flow.result.json",
+      "bytes": 1035189,
+      "sha256": "b2e2e3aee386dfe2587c5f97a2e9a43bebfd6b74bec8004ad06a154ff12721bd"
+    },
+    {
+      "file": "trace-flow/review.browser-check.json",
+      "bytes": 864041,
+      "sha256": "c18cbb63cdf9a315e876824f9cee4eeff427eb0910ff3c560a2b885c64650f77"
+    },
+    {
+      "file": "trace-flow.result.json",
+      "bytes": 881234,
+      "sha256": "d872b0e78e2a3c2a09d3f9a427de7a87044ce6e5e8d323e9ef60628b2ce824fd"
+    }
+  ]
+}

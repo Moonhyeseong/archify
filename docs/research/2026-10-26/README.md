@@ -72,4 +72,27 @@ Task-view 确认为 [`gtindo/task-view@f27b8bef63ec336b8e3487e90ccd484a2fa7a235`
 
 #1121 产品、测试、依赖与同样基线上的 #1120 对应路径相同，且测试不读实验输入。本地 exact-head 的 Reader Layout 文件 18/18 通过（17 个 nested subtests 加 parent）；这不能证明已知竞态或覆盖 hosted 红灯。仅尝试重跑失败 job 时远端返回 `job cannot be rerun`，workflow 的 webm-decode 仍在运行；未修改共享代码或启动全套重跑。后续刷新该 run 完成状态后再判断是否能执行单 job 重跑，不把未执行记作通过。
 
-AI assistance：Codex（GPT-6.1-Sol 子代理）参与调研、实验实现、验证和文档；本记录不声称维护者已完成个人审查或验收。
+## 27 日第三批：约束阅读与复用已有候选
+
+开始先刷新远程，`dev` 仍为 `e837dc4c`，历史 gallery 的第 50 项 Relation search 已计入排重。收尾时再次保存[306 条远程分支](audit/remote-branches-round3.tsv)、[124 个开放 PR](audit/open-prs-round3.tsv)和[122 个开放 issue](audit/open-issues-round3.tsv)。其中 56 条 `codex/lab-*` 包含历史候选与本批实验，不能当成 56 个已验收能力。
+
+| 调研 | 判断与实际交付 |
+| --- | --- |
+| [Porcupine / Knossos / Elle](scouts/operation-history-reading.md) | 选 Porcupine 固定 README 的三操作说明例做同源对照。区分实时先后和模型推导，不把区间重叠当因果，不将上游声明的 checker 结果称为本轮执行。 |
+| [ESLint Config Inspector / ripgrep ignore](scouts/rule-matching-reading.md) | 找到“匹配否定 glob，但最终没有配置”的具体问题；原工具已有相应阅读入口，目前没有额外价值证据，不新建实现。 |
+
+[操作顺序实验](https://github.com/tt-a1i/archify/tree/4d0d21c6db1530e274fc1b0487ce65329c4574de/experiments/operation-order)已推送到独立 `codex/lab-operation-order`，head `4d0d21c6db1530e274fc1b0487ce65329c4574de`。两版共享六事件、模型、三句解释与枚举表；图版只增加三条约束成环的面板。固定原文、MIT 许可、首稿、独立语义复核、可复现命令、两份 HTML、八张实际截图及便携证据均保留。
+
+两版 finalize 三静态门与独立 browser-check 通过，写作提示保留。实际 1440×900 比较：文字页高 1526px / 156572 bytes，图版 1805px / 541210 bytes；多出 279px 与 384638 bytes。390px 下文字直接可读，图预览需要打开交互图才能细看。原生图默认“后端”图例也不适合操作节点。图能表达矛盾，但没有证据表明它胜过三句文字；本轮保留对照分支，暂不开 Draft PR，不增加共享功能。独立审查绑定 `ef3e751c`，最后提交只添加证据和文档，HTML 字节保持一致。
+
+![三条不同依据的顺序约束组成矛盾](https://raw.githubusercontent.com/tt-a1i/archify/4d0d21c6db1530e274fc1b0487ce65329c4574de/experiments/operation-order/root-review/candidate-constraints-light.png)
+
+已有远程 `codex/lab-keyboard-traversal@c96e8aa7` 被用于[三份冻结 HTML 的限定验证](audit/keyboard-current-artifacts.md)：Task 40/40、Trace 27/27、OCI 29/29 必达目标均通过，四种视口/主题状态零诊断，原 HTML 前后相同。该结果证明旧候选能处理这些输入，不表示当前 dev 已集成；原来的 16/12/16 条失败继续保留。没有创建重复修复分支。临时 validation worktree 已归档，原始回执留在外部目录，公开的派生摘要和原件 SHA 已入库。
+
+### 精确 head 的 CI 与反馈
+
+[第二次完整快照](audit/ci-second-refresh-20261027.json)中，#1120、#1122、#1123 各有 19 项成功、2 个部署任务跳过。#1121 有 16 项成功、`browser-regression (2)` 失败、`webm-decode` 运行中。仅重跑失败 job 的先前请求未成功，此轮没有再次提交；继续等待 workflow 完成状态后再判断。四个 PR 的讨论均只有 CodeRabbit 的 Draft 跳过通知，没有新的人类反馈或实质审查结论。
+
+本轮继续保持目标 active。下一步先刷新已有 PR 的精确 head 与 CI，再筛选新的阅读缺口；不把重复调研、图能生成或 CI 绿灯当作用户价值证明。
+
+AI assistance：Codex（GPT-6.1-Terra 与 GPT-6.1-Sol 子代理）参与调研、实验实现、验证和文档；本记录不声称维护者已完成个人审查或验收。
