@@ -10,7 +10,7 @@ Porcupine README 的说明例中，一次长写覆盖两次读取，但实时顺
 
 ## 复核与运行
 
-基线 Archify `e837dc4cb83042d2b6c596e039692e25ec62c2da`，Node 22.23.3。`audit.py` 核对上游六事件字符串的相对顺序、模型关键字符串和结果声明，独立枚举硬编码模型的三个候选，以及图版源稿的限定语和三条边字符串。它不解析或绑定页面中的事件表、枚举表，也不校验基线共用段落；这些在本次独立源码复核中逐项核对。它不是通用模型检查器，也不执行上游。
+基线 Archify `e837dc4cb83042d2b6c596e039692e25ec62c2da`，Node 22.23.3。`audit.py` 核对上游六事件字符串的相对顺序、模型关键字符串和结果声明，独立枚举硬编码模型的三个候选，以及图版源稿的限定语、原生 JSON 中三条边和图例标签。它不解析或绑定页面中的事件表、枚举表，也不校验基线共用段落；这些在本次独立源码复核中逐项核对。它不是通用模型检查器，也不执行上游。
 
 ```sh
 python3 experiments/operation-order/audit.py
@@ -31,3 +31,12 @@ python3 experiments/operation-order/audit.py
 图把三条不同依据的约束画成可见环；三句文字与枚举表已能解释矛盾。390px 下文字基线仍直接可读，图版的小预览提示打开交互图。原生图的默认“后端”图例也不适合操作节点，应计为该表达复用的局限，不能据此扩展共享 schema。
 
 本轮保留独立实验分支供比较，暂不创建 Draft PR 或提出共享功能。没有读者实验、理解速度或偏好结论；后续只有在更复杂的真实阅读任务中出现具体缺口时再评估。AI assistance：GPT-6.1-Terra 制作与调研，GPT-6.1-Sol 独立复核及浏览器观察。
+
+
+## 图例标签修正
+
+历史截图绑定 `4d0d21c6`，其默认图例为“后端”。本次使用已有原生 `meta.legend.entries.backend.label` 将它改成“操作”；不修改共享 renderer 或 schema。简写不能表达这一字段，改用 `@diagram` 引用完整原生 JSON，作者需要维护更多内容（原来 7 行指令和节点/边，现在是完整 JSON），这是一项内容维护成本，不是新功能。
+
+直接序列化简写编译器返回的单列 spec 时，finalize 失败：两条边标签与节点重叠。简写原流程还会尝试自动三列候选；此次显式指定旧图实际采用的三列位置，再明确中文 locale（外部 spec 不继承页面 locale）。以实际 `prepareExplainerDiagrams` 捕获旧图渲染输入：将新 JSON 的 output / quality 归一为运行时值、移除 legend 后，两份原生 spec 完全相同。最终 SVG 与旧图逐字比较，**仅图例文字及其 data 标签从“后端”变为“操作”**；原始编译 spec 与新文件并非只差图例，布局与 locale 也有差异。两版共同正文没有变化，基线 HTML 与源稿的 SHA-256 未变。首轮失败和中间缺少中文 locale 的成功产物证据均留在 `/tmp/operation-order-legend-evidence/`。
+
+最终图版的 finalize validate、deliver、check、browser-check 均通过；保留三条原有写作提示。固定模型 audit 通过，原始结果及浏览器 receipt 在同一临时证据目录；[派生验证摘要](legend-label-review/verification.json)记录最终文件摘要与检查，不冒充原始结果。尚待协调者实际检查交互图的图例与操作；图是否提升阅读效率仍无证据。

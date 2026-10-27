@@ -1,5 +1,6 @@
 """Audit only the fixed README example and its three sequential candidates."""
 from itertools import permutations
+import json
 from pathlib import Path
 
 here = Path(__file__).resolve().parent
@@ -34,5 +35,7 @@ assert results == {('W', 'R200', 'R0'): ('R0', 200), ('R200', 'W', 'R0'): ('R200
 page = (here / 'candidate.archify.md').read_text()
 assert '不是时间、时长或测量' in page and '本页没有执行 Porcupine' in page
 assert '不是观察到的调用环、死锁或因果环' in page
-assert all(edge in page for edge in ('| write > read200 | 模型：读200 | |', '| read200 > read0 | 实时：先返回 | |', '| read0 > write | 模型：读0 | |'))
+spec = json.loads((here / 'order-map.architecture.json').read_text())
+assert [(e['from'], e['to'], e['label']) for e in spec['connections']] == [('write', 'read200', '模型：读200'), ('read200', 'read0', '实时：先返回'), ('read0', 'write', '模型：读0')]
+assert spec['meta']['legend']['entries']['backend']['label'] == '操作'
 print('PASS: six ordered upstream events, model, stated result, three candidates, boundaries and three edge labels')

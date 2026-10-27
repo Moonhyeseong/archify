@@ -35,13 +35,7 @@ W 是 C0 的 put；R200 是 C1 的 get；R0 是 C2 的 get。W 覆盖两个读�
 
 这是顺序约束环，不是观察到的调用环、死锁或因果环。模型边是对这个完整示例的推导，不是上游记录的消息或内部执行。
 
-@architecture id=order-map title="三个顺序要求不能同时成立"
-| write | W · put 200 | backend |
-| read200 | R200 · get 200 | backend |
-| read0 | R0 · get 0 | backend |
-| write > read200 | 模型：读200 | |
-| read200 > read0 | 实时：先返回 | |
-| read0 > write | 模型：读0 | |
+@diagram architecture id=order-map source=order-map.architecture.json
 
 ## 本实验独立枚举 {#enumeration span=12}
 

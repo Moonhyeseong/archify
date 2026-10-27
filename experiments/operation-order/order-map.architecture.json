@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "三个顺序要求不能同时成立",
+    "output": "order-map.html",
+    "quality_profile": "showcase",
+    "legend": {
+      "entries": {
+        "backend": {
+          "label": "操作"
+        }
+      }
+    },
+    "locale": "zh-CN"
+  },
+  "layout": {
+    "mode": "grid",
+    "cols": 3,
+    "cellW": 176,
+    "cellH": 76,
+    "gapX": 100,
+    "gapY": 110
+  },
+  "components": [
+    {
+      "id": "write",
+      "label": "W · put 200",
+      "type": "backend",
+      "row": 0,
+      "col": 0
+    },
+    {
+      "id": "read200",
+      "label": "R200 · get 200",
+      "type": "backend",
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": "read0",
+      "label": "R0 · get 0",
+      "type": "backend",
+      "row": 0,
+      "col": 2
+    }
+  ],
+  "connections": [
+    {
+      "id": "write-to-read200-1",
+      "from": "write",
+      "to": "read200",
+      "label": "模型：读200"
+    },
+    {
+      "id": "read200-to-read0-1",
+      "from": "read200",
+      "to": "read0",
+      "label": "实时：先返回"
+    },
+    {
+      "id": "read0-to-write-1",
+      "from": "read0",
+      "to": "write",
+      "label": "模型：读0"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "description": "Selected fields, not raw receipts",
+  "base": "4d0d21c6",
+  "candidate_sha256": "333e7d712c36eab34c17c0f63bee4c2ca5b9c5c1c6e4f66dda796c4c3cab4202",
+  "spec_sha256": "ecf2089be083f6e5cc20d9d6f0da50ff12b6a32c816ac5702855da1943738767",
+  "artifact": "65f0b87b6b230600971af7e2895f65cc227bfe875d972cc158c350ce8a84b3b2",
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "warnings": [
+    "explainer/writing-de-chain",
+    "explainer/writing-qualification",
+    "explainer/writing-qualification"
+  ],
+  "first_failure": "original serialized one-column layout: two label overlaps",
+  "intermediate": "explicit three columns passed but omitted inherited zh-CN locale; repaired",
+  "comparison": "old and final actual SVG differ only in legend label",
+  "baseline_sha256": "23f9b8bac86f37e888e6067f3ad4fa000d3de5a86797a4227f74c314faf58de6",
+  "prepared_native_comparison": "Captured real prepareExplainerDiagrams renderer input; equal to source JSON after runtime output/quality normalization and removing legend"
+}
