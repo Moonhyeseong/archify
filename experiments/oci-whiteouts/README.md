@@ -61,3 +61,9 @@ node ../../archify/bin/archify.mjs browser-check final/explainer.html --json --r
 实际 Ego 截图与人工操作由协调 agent 独立完成，文件归其 `root-review/` 责任范围，本次没有并行操作浏览器；本文不代替那些 observations 或提前宣称人类验收。小图是否帮助理解仍是内容假设，没有读者计时、生产工作负载或用户接受结论。
 
 AI 协助：Codex / gpt-6.1-sol 完成来源读取、原创固定输入、模型、原生图、解释页、聚焦验证与写作；另有独立 agent 复核。没有修改已有实验或产品运行时，也未创建 PR、push 或发布。
+
+## Coordinator browser observations · 2026-10-27
+
+Root inspected the [original native draft](root-review/draft-1-native-light.png), final [light](root-review/final-light.png), [dark](root-review/final-dark.png), [interactive modal](root-review/open-diagram-dark.png), [footer focus](root-review/footer-tab.png), and mobile [light](root-review/mobile-light.png)/[dark](root-review/mobile-dark.png) images. The first viewport states that archive inventory was measured and visibility was derived from the OCI specification. The same-layer survivor is visible; further diagram rows and inventory require scrolling.
+
+Actual Open interactive diagram and Escape return worked, with focus restored to the opener. Fresh Tab input without focus injection reached inventory/order copy controls at steps 32–33, source links 34–35 and the Archify footer 36; step 37 returned BODY. [Raw Tab observations](root-review/tab-traversal.json) and [artifact/image hashes](root-review/README.json) are separate evidence: the **16 automated keyboard diagnostics remain failed**. Desktop CSS viewport was 1440×900; mobile light/dark 390×844 had document width 390. No human accessibility, comprehension, container execution or speed acceptance is claimed.
