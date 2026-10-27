@@ -1,0 +1,14 @@
+# Keyboard traversal: refresh onto dev e837
+
+The original candidate `c96e8aa74ff5e309cdab07a1b70d0242f33bed75` was normally merged with `dev@e837dc4cb83042d2b6c596e039692e25ec62c2da` in merge commit `49413625`. The only conflict was `archify.zip`; it was rebuilt from the merged tracked source. The candidate's checker and browser test files are byte-identical to the original candidate. Current dev's crossing-budget source changes remain present. Historical experiment files were not rewritten.
+
+## Executed evidence
+
+- Official Node 22.23.2, bundled zlib `1.3.1-e00f703`. Both repository dependency sets installed with `npm ci --ignore-scripts --no-audit --no-fund` (the second with `--prefix archify`). This did not install a live Skill.
+- `ARCHIFY_EXPLAINER_BROWSER_TESTS=1 node scripts/run-tests.mjs --require-files test/explainer-browser.test.mjs`: real Google Chrome, **19 passed, 0 failed, 0 skipped**. The native-scroller success and real Tab-trap failure are among the executed cases.
+- `node scripts/run-tests.mjs --require-files test/core-smoke.test.mjs`: **19 passed, 0 failed, 0 skipped**.
+- Public CLI `browser-check` with `--require-provenance --out-dir <fresh external directory> --json` on the existing trace-flow `final/review.html`: exit 0, status pass, current provenance, zero diagnostics, four containment viewports. Its input SHA-256 remained `4cc2274999e58b9f75b717c053528a85964e3545b3cb0a8fe638b8cdf246dff1`, matching the supplied original identity. Authentic delivery receipt ID `c81d0864-2647-4db0-9dc8-38aac0ed5c80`; neither original input nor receipt was rewritten. This is browser QA, not visual or human acceptance.
+- Two independent canonical builds and the committed archive all have SHA-256 `307dde31eae4c66f518dcd022dcc7843bc17b0afd0b0f469bd594963cc1cd0ea`. CRC check passes; all 235 entry names match current dev's archive. Only `archify/explainer/browser-check.mjs` differs in content from dev's archive, and equals merged source. Packed `archify/bin/archify.mjs` and `archify/scripts/check-render-output.mjs` also equal merged source, preserving crossing-budget changes.
+- Using the extracted ZIP's `inspectPublicHtml` with Chrome and the existing regression fixture bodies, the native-scroller case reached 2/2 controls in 6 steps (limit 15); the real Tab trap correctly failed with last control missing after 2 steps (limit 12, `focus-cycle`).
+
+Raw command logs and fresh CLI output were kept outside the checkout under `/tmp/keyboard-refresh-e837/`; that machine-local directory is not a portable artifact. The historical fixed-page comparisons and their scope are recorded in [the previous refresh](../refresh-dev-10b4/README.md) and the separate readiness review, not relabeled as new runs. No full suite, hosted CI, Windows, assistive-technology or perceptual review is claimed. Required CI on the final remote head and review remain outstanding.
